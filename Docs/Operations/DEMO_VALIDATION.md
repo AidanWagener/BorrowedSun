@@ -36,7 +36,11 @@ Manual native input previously verified Enter continuation, Escape menu and Q ex
 
 ## Recovery and provenance
 
-The pre-demo committed foundation was restored from a Git bundle into a separate local checkout and actually rebuilt. A complete current-demo snapshot and fresh LFS restoration are the final delivery step; their result is recorded below when finished. All available recovery copies are on the same physical disk; independent-device loss protection is not established. No private remote or hosted runner has been created.
+The current playable source at commit `4e7accbeed2461d7b763416bcbb667187493af96` was backed up in snapshot `BorrowedSun-20261012T131114Z-b08ad644` with a verified Git bundle, 89 working-tree files and both LFS payloads. It was restored into task `work/recovery/demo-restore`, with every working-file hash checked against the manifest. A fresh Editor and Game build passed in `Artifacts/build/20261012T131223Z-4e3b1139/` inside that restored checkout; all ten Unreal tests passed in its `Artifacts/tests/20261012T131829Z-c9f2aef6/`. No restored package or separate rendered route was run there; those were qualified in the delivery checkout above.
+
+The restore exposed a Git index/line-ending normalization issue after copying the exact snapshot bytes over a new clone. `git add --renormalize .` refreshed that disposable clone's index; `git write-tree` exactly matched `HEAD^{tree}`, and clean preflight passed before the build. The LFS copy encountered already-created directory names, so the restored payloads and working-file hashes were verified explicitly. No source content was changed to obtain a pass. The fresh Game build slowed under memory pressure, then completed without intervention.
+
+All available recovery copies are on the same physical disk; independent-device loss protection is not established. No private remote or hosted runner has been created. The pre-demo foundation also has its earlier independently rebuilt local bundle. The portable ZIP includes materialized asset bytes, but intentionally excludes Git history, ignored configuration and generated build products.
 
 The first package was built from the reviewed working tree based on foundation commit `6bf65c61fb68e7688d2f05830d21f94c270befa3`; its build report honestly records a dirty source tree. Final source is committed after qualification. The delivery manifest records the actual packaged file hashes and the final source revision; documentation-only commits do not imply a rebuilt binary.
 

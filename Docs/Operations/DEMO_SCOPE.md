@@ -1,6 +1,6 @@
 # First Light — first playable demo
 
-The active goal is a reviewable Windows build of one small expedition. This is a prototype of Borrowed Sun's central promise: walking through a place, departing in a ship, making a consequential decision, and returning to see it persist.
+The delivered milestone is a reviewable Windows build of one small expedition. This is a prototype of Borrowed Sun's central promise: walking through a place, departing in a ship, making a consequential decision, and returning to see it persist. Actual qualification and remaining limits are recorded in [DEMO_VALIDATION.md](DEMO_VALIDATION.md).
 
 ## Observable acceptance
 
@@ -8,7 +8,7 @@ The packaged executable opens the authored Lower Quay map without Unreal Editor.
 
 The first demo uses a continuous, bounded map. The sky relay represents the outbound flight destination; it is not a physically simulated planet or a proof of interplanetary streaming. The district, ship and sound are original geometric/procedural prototype content. No marketplace entitlement or framework installation is required to build this slice.
 
-## Implemented contracts under qualification
+## Implemented contracts
 
 - A single progress subsystem owns stage, revision, custody and power choice. Five pure/memory regression tests supplement the five existing foundation tests.
 - Mission events are rejected out of order. State advances only after checkpoint persistence succeeds.
