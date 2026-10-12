@@ -51,6 +51,11 @@ private:
     bool bScreenshots = false;
     bool bNullRHIRequested = false;
     bool bCanRender = false;
+    bool bMeasureFrames = false;
+    bool bFrameSampleOverflow = false;
+    double PreviousFrameAt = 0;
+    TArray<double> GroundFrameMs;
+    TArray<double> FlightFrameMs;
     bool bHasWalkSample = false;
     int32 RouteIndex = 0;
     EPhase Phase = EPhase::Startup;
@@ -70,4 +75,5 @@ private:
     void Capture(const TCHAR* Milestone);
     void Finish(bool bSuccess);
     FString RouteLabel() const;
+    FString FrameReport() const;
 };

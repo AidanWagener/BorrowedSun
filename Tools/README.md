@@ -22,6 +22,8 @@ A monthly restore drill is a separate requirement: create a new empty directory 
 
 ## Tests and CI
 
+Player packages use `Tools/Build.ps1 -Mode Package -Configuration Shipping -Execute`; the Editor target remains Development. `Tools/Demo.ps1 -UserDirectory <isolated-root>` passes Unreal's player-data override and derives the correct validation report path for that root. This keeps QA preferences and checkpoints separate from normal play. For pacing measurement, use `-Mode Validate -MeasureFrames`; it requires the 60 FPS target and both routes, and rejects combining measurement with `-Screenshots`. The generated JSON includes sample counts and percentiles; it does not measure GPU work separately.
+
 `Tools/Demo.ps1 -Mode Launch -Execute` starts the compiled demo without imposing a session timeout. `-Mode Validate -Screenshots -Execute` runs both mission routes with rendering, isolated QA saves and strict report validation. For an existing package, supply `-PackageExecutable` and its actual `-ReportDirectory`; see `Get-Help ./Tools/Demo.ps1 -Full`. `-Mode AuthorMap -Execute` runs the editor commandlet; replacing existing owned map/material files also requires `-Force`. These operations never build automatically. Keep asset authoring and builds serial.
 
 `Tools/Tests/Run-DemoTests.ps1` checks the demo launcher and report validator without Unreal. Its fixtures do not replace the actual rendered acceptance run or a human playthrough.

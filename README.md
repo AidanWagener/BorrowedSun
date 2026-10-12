@@ -4,7 +4,7 @@ A local-first Unreal project for a solo city-to-orbit adventure. The first demo,
 
 ## Start here
 
-1. Read [the current demo validation](Docs/Operations/DEMO_VALIDATION.md) for the playable milestone and [the earlier foundation validation](Docs/Operations/VALIDATION.md) for setup history.
+1. Read [the current Shipping demo validation](Docs/Operations/DEMO_V02_VALIDATION.md), [the first playable milestone](Docs/Operations/DEMO_VALIDATION.md), and [the earlier foundation validation](Docs/Operations/VALIDATION.md) as needed.
 2. Read [local operations](Tools/README.md). The installed engine is pinned in [engine-lock.json](Config/engine-lock.json). Personal engine paths belong in ignored `Tools/Environment.local.json`.
 3. Run the doctor and preflight from this directory:
 
@@ -50,6 +50,10 @@ The full design remains in the accompanying Borrowed Sun game specification. Thi
 Compile first, then use `Tools/Demo.ps1 -Mode Launch -Execute` to launch the current source project. The script defaults to a dry run. `-Mode Validate -Screenshots -Execute` runs both mission outcomes with rendering and fresh isolated save slots, preserving JSON and screenshots. It exercises gameplay methods and movement; physical keyboard/controller feel still requires playtesting. See the script's help and [demo scope](Docs/Operations/DEMO_SCOPE.md).
 
 The loop is: take the sunseed, board Kestrel, fly to the sky relay, choose clinic or evacuation power, return, disembark and install it. **E** interacts, **G** toggles optional flight assist, **R** recovers a safe position, **F5/F9** save/load, and **ESC** opens the menu. A new expedition requires an explicit menu confirmation.
+
+The current player build is **v0.2.0 Shipping**. The adjacent `Play_Borrowed_Sun.cmd` starts it with persistent player data in `../BorrowedSunPlayer/`, outside the packaged build folder. **O** from the menu opens saved mouse sensitivity, vertical-look inversion and audio volume. The original Development package remains beside it for historical comparison.
+
+Use `Tools/Build.ps1 -Mode Package -Configuration Shipping -Execute` to reproduce a player package. `Tools/Demo.ps1 -Mode Validate -MeasureFrames -UserDirectory <isolated-root> -PackageExecutable <game-exe> -Execute` collects frame intervals at the required 60 FPS cap. Run screenshot validation separately. Frame intervals describe application pacing, not isolated CPU/GPU costs.
 
 ## Daily use
 

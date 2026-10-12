@@ -134,6 +134,28 @@
       "runOptions": {
         "instanceLimit": 1
       }
+    },
+    {
+      "label": "BS: package Shipping demo",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-File",
+        "${workspaceFolder}/Tools/Build.ps1",
+        "-Mode",
+        "Package",
+        "-Configuration",
+        "Shipping",
+        "-Execute"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "instanceLimit": 1
+      }
     }
   ]
 }

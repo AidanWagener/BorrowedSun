@@ -35,6 +35,8 @@ private:
     int32 AmbientSampleOffset = 0;
     float CueElapsed = -1.0f;
     bool bPendingCompletion = false;
+    float AppliedVolume = -1.f;
+    void ApplyVolume();
 
     void GenerateBuffers();
     void QueueAmbientSecond();

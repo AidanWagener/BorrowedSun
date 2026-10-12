@@ -1,10 +1,11 @@
 [CmdletBinding()]
-param([ValidateSet('Compile','Package')][string]$Mode='Compile', [Alias('UE_ROOT')][string]$EngineRoot, [string]$ConfigPath, [switch]$Execute)
+param([ValidateSet('Compile','Package')][string]$Mode='Compile', [ValidateSet('Development','Shipping')][string]$Configuration, [Alias('UE_ROOT')][string]$EngineRoot, [string]$ConfigPath, [switch]$Execute)
 . "$PSScriptRoot/Common.ps1"
 $ctx = Get-WorkspaceContext -ConfigPath $ConfigPath -EngineRoot $EngineRoot
 Assert-Project $ctx
 $maps = @(); if ($Mode -eq 'Package') { $maps = @(Get-CookMaps $ctx) }
 $cfg = $ctx.Config
+if ($Configuration) { $cfg.BuildConfiguration=$Configuration }
 $engine = $cfg.EngineRoot; if (-not $engine) { $engine = '<SET-ENGINE-ROOT>' }
 $build = Join-Path $engine 'Engine/Build/BatchFiles/Build.bat'
 $uat = Join-Path $engine 'Engine/Build/BatchFiles/RunUAT.bat'

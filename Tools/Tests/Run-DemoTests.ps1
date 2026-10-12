@@ -95,6 +95,50 @@ Expect-Rejection 'requested screenshots missing from disk' {
 Expect-Rejection 'Force outside AuthorMap' { & $scriptPath -Mode Launch -Force }
 Expect-Rejection 'packaged validation with unknown report directory' { & $scriptPath -Mode Validate -PackageExecutable 'C:\missing\BorrowedSun.exe' }
 
+function New-FrameReport {
+    $report=New-ValidDemoReport
+    $frames=[pscustomobject]@{overflow=$false;width=1280;height=720;frameCap=60;warmupSeconds=5;overall=$null;onFoot=$null;flight=$null}
+    foreach ($mode in @('overall','onFoot','flight')) {
+        $frames.$mode=[pscustomobject]@{sampleCount=120;sampleSeconds=2;meanMs=16.67;medianMs=16.67;p95Ms=17;p99Ms=18;maxMs=21}
+    }
+    $frames.overall.sampleCount=240
+    $frames.overall.sampleSeconds=4
+    $report | Add-Member NoteProperty frameIntervals $frames
+    return $report
+}
+function Invoke-FrameGate { Test-DemoRuntimeReport -ReportPath $reportPath -ExpectedNamespace 'QA_fixture' -StartedUtc $startedUtc -RequireFrameSamples }
+Save-Fixture (New-FrameReport)
+$null=Invoke-FrameGate
+$script:passed++
+Write-Host 'PASS accepts separately captured frame interval report'
+$report=New-FrameReport; $report.frameIntervals.frameCap=0; Save-Fixture $report
+Expect-Rejection 'uncapped run despite the 60 FPS player target' { Invoke-FrameGate }
+Save-Fixture (New-ValidDemoReport)
+Expect-Rejection 'requested frame sample report missing' { Invoke-FrameGate }
+$report=New-FrameReport; $report.frameIntervals.flight.sampleCount=0; Save-Fixture $report
+Expect-Rejection 'zero flight samples' { Invoke-FrameGate }
+$report=New-FrameReport; $report.frameIntervals.overall.p95Ms=30; Save-Fixture $report
+Expect-Rejection 'inconsistent frame interval percentiles' { Invoke-FrameGate }
+$report=New-FrameReport; $report.frameIntervals.overall.sampleCount=241; Save-Fixture $report
+Expect-Rejection 'inconsistent frame interval counts' { Invoke-FrameGate }
+$report=New-FrameReport; $report.frameIntervals.overflow=$true; Save-Fixture $report
+Expect-Rejection 'truncated frame measurement' { Invoke-FrameGate }
+Expect-Rejection 'frame measurement combined with screenshots' { & $scriptPath -Mode Validate -MeasureFrames -Screenshots }
+Expect-Rejection 'frame measurement in interactive launch' { & $scriptPath -Mode Launch -MeasureFrames }
+
+$preview=(& (Join-Path $toolsDirectory 'Build.ps1') -Configuration Shipping | Out-String | ConvertFrom-Json)
+if ($preview.Steps[0].Args[2] -ne 'Development' -or $preview.Steps[1].Args[2] -ne 'Shipping') { throw 'Shipping override did not preserve the Development editor target.' }
+$script:passed++
+Write-Host 'PASS Shipping override preserves Development editor target'
+
+Expect-Rejection 'player data override during map authoring' { & $scriptPath -Mode AuthorMap -UserDirectory $fixtureRoot }
+Expect-Rejection 'report path inconsistent with player data root' { & $scriptPath -Mode Validate -UserDirectory $fixtureRoot -ReportDirectory (Join-Path $fixtureRoot 'wrong') }
+$playerRoot=Join-Path $fixtureRoot 'isolated player'
+$preview=(& $scriptPath -Mode Validate -PackageExecutable (Get-Process -Id $PID).Path -UserDirectory $playerRoot | Out-String | ConvertFrom-Json)
+if ($preview.ExpectedReport -notlike ((Join-Path $playerRoot 'Saved/DemoValidation/Result-QA_')+'*.json') -or $preview.Arguments -notcontains ('-UserDir='+$playerRoot)) { throw 'Player data isolation did not map runtime and report paths together.' }
+$script:passed++
+Write-Host 'PASS explicit player root determines runtime and expected report paths'
+
 $childScript=Join-Path $fixtureRoot 'interactive child.ps1'
 $childOutput=Join-Path $fixtureRoot 'interactive arguments.json'
 $childSource=@'

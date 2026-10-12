@@ -8,10 +8,12 @@
 #include "Demo/BSKestrelPawn.h"
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
+#include "Engine/GameViewportClient.h"
 #include "Engine/World.h"
 #include "HAL/FileManager.h"
 #include "HAL/PlatformMisc.h"
 #include "HAL/PlatformTime.h"
+#include "HAL/IConsoleManager.h"
 #include "Misc/App.h"
 #include "Misc/CommandLine.h"
 #include "Misc/FileHelper.h"
@@ -89,6 +91,7 @@ void ABSDemoSmokeRunner::Start()
     bNullRHIRequested = FParse::Param(FCommandLine::Get(), TEXT("nullrhi"));
     bCanRender = FApp::CanEverRender();
     bScreenshots = FParse::Param(FCommandLine::Get(), TEXT("BSDemoScreenshots"));
+    bMeasureFrames = FParse::Param(FCommandLine::Get(), TEXT("BSDemoMeasureFrames"));
     FParse::Value(FCommandLine::Get(), TEXT("-BSDemoSaveNamespace="), SaveNamespace, false);
 
     // Invalid namespace values are ignored by the save subsystem, so the harness must refuse to proceed.
@@ -96,6 +99,8 @@ void ABSDemoSmokeRunner::Start()
         TEXT("Requires 1-48 ASCII letters, digits, underscores or hyphens before any gameplay/save mutation."))) return;
     if (!Check(TEXT("RenderedRuntimeRequired"), bCanRender && !bNullRHIRequested && GetWorld() && GetWorld()->IsGameWorld(),
         TEXT("Checks FApp::CanEverRender and command-line NullRHI request; this is not a visual-quality assertion."))) return;
+    if (bMeasureFrames && !Check(TEXT("FrameCaptureWithoutScreenshots"), !bScreenshots,
+        TEXT("Capture screenshots separately so image readback does not distort the frame interval sample."))) return;
     UE_LOG(LogTemp, Display, TEXT("BSDemoAutoTest: Starting isolated rendered routes, namespace=%s"), *SaveNamespace);
 }
 
@@ -202,6 +207,16 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
 
     ABSDemoGameMode* Mode = GetWorld()->GetAuthGameMode<ABSDemoGameMode>();
     ABSDemoPlayerController* Controller = Cast<ABSDemoPlayerController>(GetWorld()->GetFirstPlayerController());
+    if (bMeasureFrames)
+    {
+        if (PreviousFrameAt > 0 && Now - StartedAt >= 5.0 && Mode && Controller && !Controller->IsOverlayOpen())
+        {
+            if (GroundFrameMs.Num() + FlightFrameMs.Num() < 120000)
+                (Mode->IsFlying(Controller)?FlightFrameMs:GroundFrameMs).Add((Now-PreviousFrameAt)*1000.0);
+            else bFrameSampleOverflow=true;
+        }
+        PreviousFrameAt=Now;
+    }
     if (Phase == EPhase::Startup)
     {
         if (Now - StartedAt < 2.0) return;
@@ -361,7 +376,9 @@ void ABSDemoSmokeRunner::Finish(bool bSuccess)
             *JsonString(Entry.Name), Entry.bPassed ? TEXT("true") : TEXT("false"), Entry.Seconds, *JsonString(Entry.Details),
             Index + 1 < Checks.Num() ? TEXT(",") : TEXT(""));
     }
-    Report += TEXT("  ]\n}\n");
+    Report += TEXT("  ]");
+    if (bMeasureFrames) Report += TEXT(",\n  \"frameIntervals\": ") + FrameReport();
+    Report += TEXT("\n}\n");
     IFileManager::Get().MakeDirectory(*ReportDirectory, true);
     const FString SafeReportName = IsSafeNamespace(SaveNamespace) ? SaveNamespace : TEXT("invalid-namespace");
     const FString ReportPath = ReportDirectory / FString::Printf(TEXT("Result-%s.json"), *SafeReportName);
@@ -372,4 +389,25 @@ void ABSDemoSmokeRunner::Finish(bool bSuccess)
     }
     UE_LOG(LogTemp, Display, TEXT("BSDemoAutoTest: %s. Report: %s"), bSuccess ? TEXT("PASS") : TEXT("FAIL"), *ReportPath);
     FPlatformMisc::RequestExitWithStatus(false, bSuccess ? 0 : 1);
+}
+
+FString ABSDemoSmokeRunner::FrameReport() const
+{
+    auto Summary=[](TArray<double> Samples)
+    {
+        if(Samples.IsEmpty()) return FString(TEXT("{\"sampleCount\":0}"));
+        Samples.Sort();
+        double Total=0;
+        int32 Over33=0,Over50=0,Over100=0;
+        for(double Ms:Samples) { Total+=Ms; Over33+=Ms>33.333; Over50+=Ms>50; Over100+=Ms>100; }
+        auto Percentile=[&](double P) { return Samples[FMath::Clamp(FMath::CeilToInt(P*Samples.Num())-1,0,Samples.Num()-1)]; };
+        return FString::Printf(TEXT("{\"sampleCount\":%d,\"sampleSeconds\":%.3f,\"meanMs\":%.3f,\"medianMs\":%.3f,\"p95Ms\":%.3f,\"p99Ms\":%.3f,\"maxMs\":%.3f,\"over33Ms\":%d,\"over50Ms\":%d,\"over100Ms\":%d}"),
+            Samples.Num(),Total/1000.0,Total/Samples.Num(),Percentile(.5),Percentile(.95),Percentile(.99),Samples.Last(),Over33,Over50,Over100);
+    };
+    TArray<double> All=GroundFrameMs;
+    All.Append(FlightFrameMs);
+    const FIntPoint Size=GEngine && GEngine->GameViewport && GEngine->GameViewport->Viewport?GEngine->GameViewport->Viewport->GetSizeXY():FIntPoint::ZeroValue;
+    const auto* Cap=IConsoleManager::Get().FindConsoleVariable(TEXT("t.MaxFPS"));
+    return FString::Printf(TEXT("{\"method\":\"Wall-clock interval between rendered game ticks; includes pacing and scheduling, not isolated CPU or GPU cost\",\"warmupSeconds\":5,\"screenshotsExcluded\":true,\"overflow\":%s,\"width\":%d,\"height\":%d,\"frameCap\":%.1f,\"overall\":%s,\"onFoot\":%s,\"flight\":%s}"),
+        bFrameSampleOverflow?TEXT("true"):TEXT("false"),Size.X,Size.Y,Cap?Cap->GetFloat():0.f,*Summary(All),*Summary(GroundFrameMs),*Summary(FlightFrameMs));
 }

@@ -47,7 +47,16 @@ void ABSDemoHUD::DrawHUD()
         Text(TEXT("ORISON / A FIRST PLAYABLE EXPEDITION"),X+30,90,18,Mint);
         Text(TEXT("BORROWED SUN"),X+25,132,66,Paper);
         Text(PC->bWelcome?TEXT("The city rents its daylight. Tonight, you decide who gets it."):TEXT("EXPEDITION PAUSED"),X+30,227,25,Amber);
-        if(PC->bConfirmRestart)
+        if(PC->bSettings)
+        {
+            Text(TEXT("PREFERENCES"),X+30,288,30,Mint);
+            Text(FString::Printf(TEXT("[ / ]    Mouse sensitivity: %.2f"),PC->LookSensitivity),X+30,341,23,Paper);
+            Text(FString::Printf(TEXT("I          Invert vertical look: %s"),PC->bInvertLook?TEXT("ON"):TEXT("OFF")),X+30,385,23,Paper);
+            Text(FString::Printf(TEXT("- / =    Audio volume: %.0f%%"),PC->MasterVolume*100),X+30,429,23,Paper);
+            Text(TEXT("Preferences save automatically and survive a new expedition."),X+30,484,18,Muted);
+            Text(TEXT("ESC / ENTER  BACK"),X+30,535,23,Mint);
+        }
+        else if(PC->bConfirmRestart)
         {
             Text(TEXT("START A NEW EXPEDITION?"),X+30,310,30,Paper);
             Text(TEXT("This replaces this demo's current and backup checkpoints."),X+30,362,20,Muted);
@@ -60,7 +69,7 @@ void ABSDemoHUD::DrawHUD()
             Text(TEXT("WASD move  /  MOUSE look  /  E interact  /  SPACE jump or ascend"),X+30,400,18,Muted);
             Text(TEXT("IN FLIGHT   C descend  /  SHIFT boost  /  CTRL brake  /  G flight assist"),X+30,431,18,Muted);
             Text(TEXT("ENTER / A  CONTINUE"),X+30,495,29,Mint);
-            Text(TEXT("N new expedition   /   F9 restore checkpoint   /   Q quit"),X+30,548,17,Muted);
+            Text(TEXT("O preferences   /   N new expedition   /   F9 restore checkpoint   /   Q quit"),X+30,548,17,Muted);
         }
         Text(TEXT("FIRST LIGHT  |  Original prototype  |  Auto-checkpoints at each mission step"),X+30,H-63,16,Muted);
         return;

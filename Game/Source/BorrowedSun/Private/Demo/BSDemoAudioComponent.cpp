@@ -1,4 +1,5 @@
 #include "Demo/BSDemoAudioComponent.h"
+#include "Demo/BSDemoUserSettings.h"
 
 #include "Components/AudioComponent.h"
 #include "Engine/World.h"
@@ -68,6 +69,7 @@ void UBSDemoAudioComponent::BeginPlay()
     CueWave = CreateWave(this, TEXT("DemoCueWave"));
     AmbientAudio = CreatePlayer(AmbientWave, TEXT("DemoAmbientPlayer"), 0.28f);
     CueAudio = CreatePlayer(CueWave, TEXT("DemoCuePlayer"), 0.30f);
+    ApplyVolume();
     QueueAmbientSecond();
     AmbientAudio->FadeIn(1.0f);
 }
@@ -139,6 +141,7 @@ void UBSDemoAudioComponent::TickComponent(float DeltaTime, ELevelTick TickType,
     FActorComponentTickFunction* ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+    ApplyVolume();
     if (AmbientWave && AmbientWave->GetAvailableAudioByteCount() < LowWaterBytes)
     {
         // One copy at most per tick: the queued PCM stays below 1.25 seconds, even after a hitch.
@@ -176,6 +179,16 @@ void UBSDemoAudioComponent::PlayCue(bool bSuccess)
     CueWave->QueueAudio(reinterpret_cast<const uint8*>(PCM.GetData()), BytesPerSecond);
     CueElapsed = 0.0f;
     CueAudio->Play();
+}
+
+void UBSDemoAudioComponent::ApplyVolume()
+{
+    const auto* Settings=UBSDemoUserSettings::Get();
+    const float Volume=Settings?Settings->GetMasterVolume():.8f;
+    if(FMath::IsNearlyEqual(Volume,AppliedVolume)) return;
+    AppliedVolume=Volume;
+    if(AmbientAudio) AmbientAudio->SetVolumeMultiplier(.28f*Volume);
+    if(CueAudio) CueAudio->SetVolumeMultiplier(.30f*Volume);
 }
 
 void UBSDemoAudioComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)

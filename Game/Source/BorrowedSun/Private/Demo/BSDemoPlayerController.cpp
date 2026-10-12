@@ -2,6 +2,7 @@
 #include "Demo/BSDemoGameMode.h"
 #include "Demo/BSExplorerCharacter.h"
 #include "Demo/BSKestrelPawn.h"
+#include "Demo/BSDemoUserSettings.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputAction.h"
@@ -17,6 +18,12 @@ ABSDemoPlayerController::ABSDemoPlayerController()
 void ABSDemoPlayerController::BeginPlay()
 {
     Super::BeginPlay();
+    if(auto* Settings=UBSDemoUserSettings::Get())
+    {
+        LookSensitivity=Settings->GetLookSensitivity();
+        MasterVolume=Settings->GetMasterVolume();
+        bInvertLook=Settings->IsLookInverted();
+    }
     SetInputMode(FInputModeGameOnly());
     if(auto* Sub=ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
         if(Mapping) Sub->AddMappingContext(Mapping,0);
@@ -86,6 +93,10 @@ void ABSDemoPlayerController::SetupInputComponent()
     Bind(TEXT("Guidance"),EKeys::G,EKeys::Gamepad_FaceButton_Top,&ThisClass::Guidance);
     Bind(TEXT("SensitivityDown"),EKeys::LeftBracket,FKey(),&ThisClass::SensitivityDown);
     Bind(TEXT("SensitivityUp"),EKeys::RightBracket,FKey(),&ThisClass::SensitivityUp);
+    Bind(TEXT("Settings"),EKeys::O,FKey(),&ThisClass::Settings);
+    Bind(TEXT("InvertLook"),EKeys::I,FKey(),&ThisClass::InvertLook);
+    Bind(TEXT("VolumeDown"),EKeys::Hyphen,FKey(),&ThisClass::VolumeDown);
+    Bind(TEXT("VolumeUp"),EKeys::Equals,FKey(),&ThisClass::VolumeUp);
     if(auto* Sub=ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer())) Sub->AddMappingContext(Mapping,0);
 }
 
@@ -117,7 +128,7 @@ void ABSDemoPlayerController::LookYaw(const FInputActionValue& V)
 void ABSDemoPlayerController::LookPitch(const FInputActionValue& V)
 {
     if(IsOverlayOpen() || bGuidance) return;
-    const float D=-V.Get<float>()*LookSensitivity;
+    const float D=V.Get<float>()*LookSensitivity*(bInvertLook?1.f:-1.f);
     if(auto* P=Cast<ABSExplorerCharacter>(GetPawn())) P->LookPitch(D);
     if(auto* P=Cast<ABSKestrelPawn>(GetPawn())) P->LookPitch(D);
 }
@@ -131,7 +142,7 @@ void ABSDemoPlayerController::PadYaw(const FInputActionValue& V)
 void ABSDemoPlayerController::PadPitch(const FInputActionValue& V)
 {
     if(IsOverlayOpen() || bGuidance) return;
-    const float D=V.Get<float>()*80*GetWorld()->GetDeltaSeconds();
+    const float D=V.Get<float>()*80*GetWorld()->GetDeltaSeconds()*(bInvertLook?-1.f:1.f);
     if(auto* P=Cast<ABSExplorerCharacter>(GetPawn())) P->LookPitch(D);
     if(auto* P=Cast<ABSKestrelPawn>(GetPawn())) P->LookPitch(D);
 }
@@ -179,6 +190,7 @@ void ABSDemoPlayerController::PlayerTick(float Dt)
 
 void ABSDemoPlayerController::Confirm()
 {
+    if(bSettings) { bSettings=false; return; }
     if(bConfirmRestart)
     { if(auto* G=GetWorld()->GetAuthGameMode<ABSDemoGameMode>()) G->NewExpedition(this); bConfirmRestart=false; }
     bWelcome=false; bMenu=false;
@@ -186,6 +198,7 @@ void ABSDemoPlayerController::Confirm()
 }
 void ABSDemoPlayerController::ToggleMenu()
 {
+    if(bSettings) { bSettings=false; return; }
     if(bConfirmRestart) { bConfirmRestart=false; return; }
     bWelcome=false; bMenu=!bMenu;
     bGuidance=false;
@@ -197,7 +210,7 @@ void ABSDemoPlayerController::SelectEvacuation() { if(!IsOverlayOpen()) if(auto*
 void ABSDemoPlayerController::Save() { if(auto* G=GetWorld()->GetAuthGameMode<ABSDemoGameMode>()) G->Save(this); }
 void ABSDemoPlayerController::Load() { bGuidance=false; if(auto* G=GetWorld()->GetAuthGameMode<ABSDemoGameMode>()) G->Load(this); }
 void ABSDemoPlayerController::Recover() { bGuidance=false; if(!IsOverlayOpen()) if(auto* G=GetWorld()->GetAuthGameMode<ABSDemoGameMode>()) G->Recover(this); }
-void ABSDemoPlayerController::Restart() { if(IsOverlayOpen()) bConfirmRestart=true; }
+void ABSDemoPlayerController::Restart() { if(IsOverlayOpen() && !bSettings) bConfirmRestart=true; }
 void ABSDemoPlayerController::Quit() { if(IsOverlayOpen()) UKismetSystemLibrary::QuitGame(this,this,EQuitPreference::Quit,false); }
 void ABSDemoPlayerController::Help() { bShowHelp=!bShowHelp; }
 void ABSDemoPlayerController::Guidance()
@@ -209,5 +222,19 @@ void ABSDemoPlayerController::Guidance()
     if(!bGuidance) Cast<ABSKestrelPawn>(GetPawn())->StopFlight();
     G->Say(bGuidance?TEXT("KESTREL  //  Flight assist engaged. G or CTRL returns manual control."):TEXT("KESTREL  //  Manual flight."),5);
 }
-void ABSDemoPlayerController::SensitivityDown() { LookSensitivity=FMath::Max(.15f,LookSensitivity-.1f); }
-void ABSDemoPlayerController::SensitivityUp() { LookSensitivity=FMath::Min(2.f,LookSensitivity+.1f); }
+void ABSDemoPlayerController::SensitivityDown() { LookSensitivity=FMath::Max(.15f,LookSensitivity-.1f); SavePreferences(); }
+void ABSDemoPlayerController::SensitivityUp() { LookSensitivity=FMath::Min(2.f,LookSensitivity+.1f); SavePreferences(); }
+void ABSDemoPlayerController::Settings() { if(IsOverlayOpen() && !bConfirmRestart) bSettings=!bSettings; }
+void ABSDemoPlayerController::InvertLook() { if(bSettings) { bInvertLook=!bInvertLook; SavePreferences(); } }
+void ABSDemoPlayerController::VolumeDown() { if(bSettings) { MasterVolume=FMath::Max(0.f,MasterVolume-.1f); SavePreferences(); } }
+void ABSDemoPlayerController::VolumeUp() { if(bSettings) { MasterVolume=FMath::Min(1.f,MasterVolume+.1f); SavePreferences(); } }
+void ABSDemoPlayerController::SavePreferences()
+{
+    if(auto* Preferences=UBSDemoUserSettings::Get())
+    {
+        Preferences->SetLookSensitivity(LookSensitivity);
+        Preferences->SetMasterVolume(MasterVolume);
+        Preferences->SetLookInverted(bInvertLook);
+        Preferences->SaveSettings();
+    }
+}

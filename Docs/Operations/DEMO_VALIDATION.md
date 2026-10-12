@@ -1,5 +1,7 @@
 # First Light playable milestone — 12 October 2026
 
+Historical v0.1 Development milestone. The current Shipping build, persistent preferences and measured frame intervals are recorded in [DEMO_V02_VALIDATION.md](DEMO_V02_VALIDATION.md).
+
 First Light is a Windows Development demo built with installed Unreal 5.8.2, changelist 56702186. It uses an original, stylized prototype city and ship in one continuous map. Spending remains EUR 0. This record qualifies the first playable loop, not the complete game specification.
 
 ## Delivered behavior

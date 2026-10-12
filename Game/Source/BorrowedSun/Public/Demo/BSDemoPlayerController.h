@@ -22,6 +22,9 @@ public:
     bool bConfirmRestart = false;
     bool bShowHelp = false;
     bool bGuidance = false;
+    bool bSettings = false;
+    bool bInvertLook = false;
+    float MasterVolume = 0.8f;
     float LookSensitivity = 0.65f;
     bool IsOverlayOpen() const { return bWelcome || bMenu; }
     void Confirm();
@@ -52,4 +55,9 @@ private:
     void Guidance();
     void SensitivityDown();
     void SensitivityUp();
+    void Settings();
+    void InvertLook();
+    void VolumeDown();
+    void VolumeUp();
+    void SavePreferences();
 };

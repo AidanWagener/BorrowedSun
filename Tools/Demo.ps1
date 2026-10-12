@@ -9,11 +9,17 @@ both complete mission routes and their checkpoint checks in a fresh, rendered-ru
 .PARAMETER PackageExecutable
 Existing packaged game executable. Supported for Launch and Validate only.
 .PARAMETER ReportDirectory
-For packaged Validate, REQUIRED: the game's actual ProjectSavedDir/DemoValidation directory.
+For packaged Validate without UserDirectory, REQUIRED: the game's actual ProjectSavedDir/DemoValidation directory.
 This selects where to READ the harness report; it does not redirect the game's output.
 Editor validation defaults to Game/Saved/DemoValidation beside the configured project.
+.PARAMETER UserDirectory
+Optional player-data root for Launch or Validate, passed to Unreal as -UserDir. Saves and preferences
+then live under its Saved subdirectory. Validate derives ReportDirectory from this root when omitted.
 .PARAMETER Screenshots
 Validate only: request and require all six route milestone PNGs. Images still need visual review.
+.PARAMETER MeasureFrames
+Validate only: collect application frame intervals after five seconds of warmup. Cannot be
+combined with Screenshots because screenshot readback distorts timing. This is not GPU profiling.
 .PARAMETER Force
 AuthorMap only: explicitly permit the commandlet to replace its owned demo map and material.
 .PARAMETER TimeoutSeconds
@@ -45,15 +51,17 @@ param(
     [string]$ConfigPath,
     [string]$PackageExecutable,
     [string]$ReportDirectory,
+    [string]$UserDirectory,
     [ValidateRange(10,420)][int]$TimeoutSeconds=420,
     [switch]$Screenshots,
+    [switch]$MeasureFrames,
     [switch]$Force,
     [switch]$Execute
 )
 . "$PSScriptRoot/Common.ps1"
 
 function Test-DemoRuntimeReport {
-    param([string]$ReportPath,[string]$ExpectedNamespace,[datetime]$StartedUtc,[switch]$RequireScreenshots)
+    param([string]$ReportPath,[string]$ExpectedNamespace,[datetime]$StartedUtc,[switch]$RequireScreenshots,[switch]$RequireFrameSamples)
     if (-not (Test-Path -LiteralPath $ReportPath -PathType Leaf)) { throw 'Demo validation report is missing; native exit zero is insufficient.' }
     Assert-NoReparsePoint $ReportPath
     $reportFile=Get-Item -LiteralPath $ReportPath
@@ -86,6 +94,23 @@ function Test-DemoRuntimeReport {
         if (@($report.checks | Where-Object { $_.name -ceq $name }).Count -ne 1) { throw ('Required demo check absent or duplicated: ' + $name) }
     }
     $screenshotCount=0
+    if ($RequireFrameSamples) {
+        if ($report.PSObject.Properties.Name -cnotcontains 'frameIntervals') { throw 'Requested frame interval report is missing.' }
+        $frames=$report.frameIntervals
+        if ($null -eq $frames.frameCap -or [math]::Abs([double]$frames.frameCap-60.0) -gt .01) { throw 'Frame measurement did not use the required 60 FPS player target.' }
+        if ($frames.overflow -isnot [bool] -or $frames.overflow -ne $false -or $report.screenshotsRequested -ne $false) { throw 'Frame samples overflowed or include screenshot capture.' }
+        if ($frames.width -lt 640 -or $frames.height -lt 360 -or $frames.warmupSeconds -lt 5) { throw 'Frame samples lack valid viewport/warmup metadata.' }
+        foreach ($mode in @('overall','onFoot','flight')) {
+            $sample=$frames.$mode
+            if ($sample.sampleCount -lt 60) { throw ('Insufficient frame interval samples for ' + $mode) }
+            foreach ($field in @('sampleSeconds','meanMs','medianMs','p95Ms','p99Ms','maxMs')) {
+                $number=$sample.$field
+                if ($null -eq $number -or $number -is [string] -or $number -is [bool] -or [double]::IsNaN([double]$number) -or [double]::IsInfinity([double]$number) -or $number -le 0) { throw ('Invalid frame interval statistic: ' + $field) }
+            }
+            if ($sample.medianMs -gt $sample.p95Ms -or $sample.p95Ms -gt $sample.p99Ms -or $sample.p99Ms -gt $sample.maxMs) { throw 'Frame interval percentiles are inconsistent.' }
+        }
+        if ($frames.overall.sampleCount -ne ($frames.onFoot.sampleCount + $frames.flight.sampleCount)) { throw 'Frame interval sample counts do not reconcile.' }
+    }
     if ($RequireScreenshots) {
         if ($report.PSObject.Properties.Name -cnotcontains 'screenshotsRequested' -or $report.screenshotsRequested -isnot [bool] -or $report.screenshotsRequested -ne $true) { throw 'Screenshot capture was not enabled in the runtime report.' }
         foreach ($route in @('Clinic','Evacuation')) {
@@ -126,9 +151,20 @@ function Start-DemoInteractiveProcess {
 
 if ($Force -and $Mode -ne 'AuthorMap') { throw '-Force is supported only by AuthorMap.' }
 if ($Screenshots -and $Mode -ne 'Validate') { throw '-Screenshots is supported only by Validate.' }
+if ($MeasureFrames -and ($Mode -ne 'Validate' -or $Screenshots)) { throw '-MeasureFrames requires Validate without Screenshots.' }
 if ($ReportDirectory -and $Mode -ne 'Validate') { throw '-ReportDirectory is supported only by Validate.' }
 if ($PackageExecutable -and $Mode -eq 'AuthorMap') { throw 'AuthorMap requires the installed editor, not a packaged game.' }
-if ($PackageExecutable -and $Mode -eq 'Validate' -and -not $ReportDirectory) { throw 'Packaged Validate requires -ReportDirectory set to its actual ProjectSavedDir/DemoValidation directory.' }
+if ($UserDirectory) {
+    if ($Mode -eq 'AuthorMap') { throw '-UserDirectory is only supported by Launch or Validate.' }
+    $UserDirectory=[IO.Path]::GetFullPath($UserDirectory)
+    Assert-NoReparsePoint $UserDirectory
+    if ($Mode -eq 'Validate') {
+        $derivedReport=Join-Path $UserDirectory 'Saved/DemoValidation'
+        if ($ReportDirectory -and [IO.Path]::GetFullPath($ReportDirectory) -ine [IO.Path]::GetFullPath($derivedReport)) { throw 'ReportDirectory does not match the selected UserDirectory.' }
+        $ReportDirectory=$derivedReport
+    }
+}
+if ($PackageExecutable -and $Mode -eq 'Validate' -and -not $ReportDirectory) { throw 'Packaged Validate requires -ReportDirectory or -UserDirectory identifying its actual saved-data directory.' }
 $ctx=Get-WorkspaceContext -ConfigPath $ConfigPath -EngineRoot $EngineRoot
 Assert-Project $ctx
 $projectDirectory=Split-Path $ctx.Project -Parent
@@ -153,6 +189,7 @@ if ($PackageExecutable) {
     $arguments=@($ctx.Project,'-game',$map)
 }
 $arguments += @('-nop4','-nosplash')
+if ($UserDirectory) { $arguments += '-UserDir=' + $UserDirectory }
 if ($Mode -ne 'Launch') { $arguments += @('-stdout','-FullStdOutLogOutput') }
 if ($Mode -ne 'AuthorMap') { $arguments += @('-windowed','-ResX=1280','-ResY=720') }
 $saveNamespace=$null; $reportPath=$null
@@ -164,11 +201,12 @@ if ($Mode -eq 'Validate') {
     $reportPath=Join-Path $ReportDirectory ('Result-' + $saveNamespace + '.json')
     $arguments += @('-unattended','-BSDemoAutoTest',('-BSDemoSaveNamespace=' + $saveNamespace))
     if ($Screenshots) { $arguments += '-BSDemoScreenshots' }
+    if ($MeasureFrames) { $arguments += '-BSDemoMeasureFrames' }
 }
 if (-not $Execute) {
     [pscustomobject]@{DryRun=$true; Mode=$Mode; Executable=$executable; Arguments=$arguments;
         TimeoutSeconds=$(if ($Mode -eq 'Launch') { $null } else { $TimeoutSeconds }); SaveNamespace=$saveNamespace; ExpectedReport=$reportPath;
-        Screenshots=[bool]$Screenshots; Force=[bool]$Force;
+        Screenshots=[bool]$Screenshots; MeasureFrames=[bool]$MeasureFrames; Force=[bool]$Force;
         Note='Nothing executed or written. Execute records fresh local Artifacts/demo evidence; Validate requires both rendered routes.'} | ConvertTo-Json -Depth 6
     return
 }
@@ -186,7 +224,7 @@ if ($reportPath -and (Test-Path -LiteralPath $reportPath)) { throw 'Fresh namesp
 $run=New-RunDirectory $ctx 'demo'
 $arguments += '-abslog=' + (Join-Path $run 'engine.log')
 $result=@{SchemaVersion=1; Status='Running'; Mode=$Mode; Packaged=[bool]$PackageExecutable;
-    SaveNamespace=$saveNamespace; Engine=$engineIdentity; ScreenshotsRequested=[bool]$Screenshots;
+    SaveNamespace=$saveNamespace; Engine=$engineIdentity; ScreenshotsRequested=[bool]$Screenshots; FrameSamplesRequested=[bool]$MeasureFrames;
     Force=[bool]$Force; Git=(Get-GitIdentity $ctx.Root); StartedUtc=[DateTime]::UtcNow.ToString('o')}
 $startedUtc=[DateTime]::UtcNow
 try {
@@ -200,7 +238,7 @@ try {
     }
     $null=Invoke-CheckedProcess -FilePath $executable -Arguments $arguments -WorkingDirectory $workingDirectory -TimeoutSeconds $TimeoutSeconds -LogPath (Join-Path $run 'process.log')
     if ($Mode -eq 'Validate') {
-        $validated=Test-DemoRuntimeReport -ReportPath $reportPath -ExpectedNamespace $saveNamespace -StartedUtc $startedUtc -RequireScreenshots:$Screenshots
+        $validated=Test-DemoRuntimeReport -ReportPath $reportPath -ExpectedNamespace $saveNamespace -StartedUtc $startedUtc -RequireScreenshots:$Screenshots -RequireFrameSamples:$MeasureFrames
         Copy-Item -LiteralPath $reportPath -Destination (Join-Path $run 'runtime-result.json')
         $result.CheckCount=$validated.Count
         $result.RequiredCheckCount=$validated.RequiredCount
