@@ -10,6 +10,7 @@
 #include "Engine/Engine.h"
 #include "Engine/ExponentialHeightFog.h"
 #include "Engine/SkyLight.h"
+#include "Engine/PostProcessVolume.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerStart.h"
 #include "GameFramework/WorldSettings.h"
@@ -88,7 +89,10 @@ namespace BSDemoMapAuthoring
         UMaterialExpressionMultiply* Emissive = AddExpression<UMaterialExpressionMultiply>(
             Material, TEXT("DemoEmissive"), -200, 100);
         Emissive->A.Connect(0, Tint);
-        Emissive->B.Connect(0, Glow);
+        auto* DaylightGlow = AddExpression<UMaterialExpressionMultiply>(Material, TEXT("DaylightEmission"), -320, 240);
+        DaylightGlow->A.Connect(0, Glow);
+        DaylightGlow->ConstB = 2000.0f;
+        Emissive->B.Connect(0, DaylightGlow);
 
         UMaterialEditorOnlyData* Data = Material->GetEditorOnlyData();
         Data->BaseColor.Connect(0, Tint);
@@ -240,13 +244,16 @@ int32 UBSDemoCreateMapCommandlet::Main(const FString& Params)
     APlayerStart* PlayerStart = SpawnAuthoredActor<APlayerStart>(
         World, TEXT("DemoPlayerStart"), FVector(-2200.0, -600.0, 160.0), FRotator(0.0, 25.0, 0.0));
     ADirectionalLight* Sun = SpawnAuthoredActor<ADirectionalLight>(
-        World, TEXT("DemoGoldenHourSun"), FVector(0.0, 0.0, 3000.0), FRotator(-18.0, -35.0, 0.0));
+        World, TEXT("DemoGoldenHourSun"), FVector(0.0, 0.0, 3000.0), FRotator(-27.0, -35.0, 0.0));
+    ADirectionalLight* Fill = SpawnAuthoredActor<ADirectionalLight>(
+        World, TEXT("CityCoolSkyFill"), FVector(0.0, 0.0, 3500.0), FRotator(-65.0, 140.0, 0.0));
     ASkyLight* Sky = SpawnAuthoredActor<ASkyLight>(World, TEXT("DemoSkyLight"), FVector(0.0, 0.0, 1500.0));
     ASkyAtmosphere* Atmosphere = SpawnAuthoredActor<ASkyAtmosphere>(World, TEXT("DemoSkyAtmosphere"), FVector::ZeroVector);
     AExponentialHeightFog* Fog = SpawnAuthoredActor<AExponentialHeightFog>(
         World, TEXT("DemoHeightFog"), FVector(0.0, 0.0, -300.0));
+    APostProcessVolume* Exposure = SpawnAuthoredActor<APostProcessVolume>(World, TEXT("CityDaylightExposure"), FVector::ZeroVector);
 
-    if (!Demo || !PlayerStart || !Sun || !Sky || !Atmosphere || !Fog)
+    if (!Demo || !PlayerStart || !Sun || !Fill || !Sky || !Atmosphere || !Fog || !Exposure)
     {
         UE_LOG(LogBSDemoCreateMap, Error, TEXT("An authored demo actor failed to spawn; packages were not saved."));
         return 4;
@@ -257,15 +264,28 @@ int32 UBSDemoCreateMapCommandlet::Main(const FString& Params)
 
     UDirectionalLightComponent* SunComponent = Sun->GetComponent();
     SunComponent->SetMobility(EComponentMobility::Movable);
-    SunComponent->SetIntensity(8.0f);
-    SunComponent->SetLightColor(FLinearColor(1.0f, 0.76f, 0.48f));
+    SunComponent->SetIntensity(35000.0f);
+    SunComponent->SetLightColor(FLinearColor(1.0f, 0.91f, 0.76f));
     SunComponent->SetAtmosphereSunLight(true);
+    // Broad artistic sky fill keeps shaded interaction spaces readable without extra shadow passes.
+    Fill->GetComponent()->SetMobility(EComponentMobility::Movable);
+    Fill->GetComponent()->SetIntensity(8000.0f);
+    Fill->GetComponent()->SetLightColor(FLinearColor(.65f,.78f,1.0f));
+    Fill->GetComponent()->SetCastShadows(false);
+    Fill->GetComponent()->SetAtmosphereSunLight(false);
     Sky->GetLightComponent()->SetMobility(EComponentMobility::Movable);
-    Sky->GetLightComponent()->SetIntensity(0.85f);
+    Sky->GetLightComponent()->SetIntensity(2.5f);
     Sky->GetLightComponent()->SetRealTimeCaptureEnabled(true);
     Fog->GetComponent()->SetFogDensity(0.012f);
     Fog->GetComponent()->SetFogHeightFalloff(0.2f);
     Fog->GetComponent()->SetFogInscatteringColor(FLinearColor(0.16f, 0.19f, 0.24f));
+    Exposure->bUnbound=true;
+    Exposure->Settings.bOverride_AutoExposureMinBrightness=true;
+    Exposure->Settings.bOverride_AutoExposureMaxBrightness=true;
+    Exposure->Settings.AutoExposureMinBrightness=10.8f;
+    Exposure->Settings.AutoExposureMaxBrightness=12.0f;
+    Exposure->Settings.bOverride_AutoExposureBias=true;
+    Exposure->Settings.AutoExposureBias=0.0f;
 
     World->UpdateWorldComponents(false, false);
     if (!SaveAsset(SurfaceMaterial.Get(), MaterialFilename))

@@ -21,6 +21,7 @@ public:
     void SetSurfaceMaterial(UMaterialInterface* InSurface) { Surface = InSurface; }
     void ApplyConsequence(uint8 Choice, bool bComplete);
     void SetSeedAvailable(bool bAvailable);
+    bool HasCityArt() const { return CityMeshes.Num() == 14 && CityMaterials.Num() == 7; }
     static FVector SeedLocation() { return FVector(-1100, 0, 150); }
     static FVector DockLocation() { return FVector(1800, 0, 220); }
     static FVector RelayLocation() { return FVector(18000, 0, 15000); }
@@ -33,6 +34,8 @@ private:
     UPROPERTY() TObjectPtr<UStaticMesh> Cylinder;
     UPROPERTY() TObjectPtr<UStaticMesh> Sphere;
     UPROPERTY() TArray<TObjectPtr<UHierarchicalInstancedStaticMeshComponent>> Groups;
+    UPROPERTY() TMap<FName, TObjectPtr<UStaticMesh>> CityMeshes;
+    UPROPERTY() TMap<FName, TObjectPtr<UMaterialInterface>> CityMaterials;
     UPROPERTY() TObjectPtr<UTextRenderComponent> ClinicStatus;
     UPROPERTY() TObjectPtr<UTextRenderComponent> EvacStatus;
     UPROPERTY(Transient) TObjectPtr<UStaticMeshComponent> SeedVisual;
@@ -42,7 +45,12 @@ private:
     uint8 AppliedChoice = 0;
     bool bConsequenceComplete = false;
     TMap<FString, int32> GroupIndices;
-    void Shape(UStaticMesh* Mesh, FVector Position, FVector Scale, FLinearColor Tint, float Glow = 0, bool bCollision = true, FRotator Rotation = FRotator::ZeroRotator);
+    void Shape(UStaticMesh* Mesh, FVector Position, FVector Scale, FLinearColor Tint, float Glow = 0, bool bCollision = true, FRotator Rotation = FRotator::ZeroRotator, UMaterialInterface* Override = nullptr);
+    void LoadCityArt();
+    void CityPart(FName Mesh, FVector P, FVector S, FName Material, FLinearColor Tint, FRotator Rotation = FRotator::ZeroRotator);
+    void CityBox(FVector P, FVector S, FName Material, FLinearColor Tint, bool Collision = true);
+    void Beam(FVector A, FVector B, float Radius, FLinearColor Tint);
+    void BuildLanternKeeper();
     void Box(FVector P, FVector S, FLinearColor C, float Glow = 0, bool bCollision = true);
     UTextRenderComponent* Sign(const FString& Text, FVector Position, float Size, FColor Color, FRotator Rotation = FRotator(0, -90, 0));
     void BuildDistrict();

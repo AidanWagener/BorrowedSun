@@ -1,0 +1,224 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "AIDANS-LAPTOP",
+			"instance": "D35369344728D8BB289D6D93371E54CD",
+			"instanceName": "AIDANS-LAPTOP-43004",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (25H2) [10.0.26200.9457] ",
+			"model": "Default",
+			"gPU": "NVIDIA GeForce RTX 4070 Laptop GPU",
+			"cPUModel": "AMD Ryzen 7 7435HS                             ",
+			"rAMInGB": 16,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.12-19.24.20",
+	"succeeded": 13,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.21361991763114929,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "ExclusiveLeaseChoice",
+			"fullTestPath": "BorrowedSun.Smoke.Demo.ExclusiveLeaseChoice",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016066499054431915,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OrderingAndCustody",
+			"fullTestPath": "BorrowedSun.Smoke.Demo.OrderingAndCustody",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016829501837491989,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RejectedEventsPreserveState",
+			"fullTestPath": "BorrowedSun.Smoke.Demo.RejectedEventsPreserveState",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016642700880765915,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RejectsInvalidProgress",
+			"fullTestPath": "BorrowedSun.Smoke.Demo.RejectsInvalidProgress",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.01584470272064209,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SerializationRoundTrip",
+			"fullTestPath": "BorrowedSun.Smoke.Demo.SerializationRoundTrip",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016345899552106857,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "CanonicalAndDistinct",
+			"fullTestPath": "BorrowedSun.Smoke.Identity.CanonicalAndDistinct",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016659196466207504,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RejectsAmbiguity",
+			"fullTestPath": "BorrowedSun.Smoke.Identity.RejectsAmbiguity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016430098563432693,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "CityPresetMigration",
+			"fullTestPath": "BorrowedSun.Smoke.Settings.CityPresetMigration",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016406498849391937,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IsolatedConfigRoundTrip",
+			"fullTestPath": "BorrowedSun.Smoke.Settings.IsolatedConfigRoundTrip",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016370400786399841,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RejectsUnsafeValues",
+			"fullTestPath": "BorrowedSun.Smoke.Settings.RejectsUnsafeValues",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016413699835538864,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RejectsScaleWithoutMutation",
+			"fullTestPath": "BorrowedSun.Smoke.Travel.RejectsScaleWithoutMutation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016503199934959412,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RigidMappingConservesMotion",
+			"fullTestPath": "BorrowedSun.Smoke.Travel.RigidMappingConservesMotion",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016632102429866791,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RoundTrip",
+			"fullTestPath": "BorrowedSun.Smoke.Travel.RoundTrip",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"D35369344728D8BB289D6D93371E54CD"
+			],
+			"duration": 0.016475401818752289,
+			"dateTime": "2026.10.12-19.24.20",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

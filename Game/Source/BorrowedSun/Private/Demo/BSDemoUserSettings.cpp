@@ -11,9 +11,20 @@ void UBSDemoUserSettings::SetToDefaults()
     SetFrameRateLimit(60.f);
     SetScreenResolution(FIntPoint(1280,720));
     SetFullscreenMode(EWindowMode::Windowed);
+    SetGlobalIlluminationQuality(2);
+    SetReflectionQuality(2);
+    VisualPresetVersion=1;
     LookSensitivity=0.65f;
     MasterVolume=0.8f;
     bInvertLook=false;
+}
+bool UBSDemoUserSettings::UpgradeCityVisualPreset()
+{
+    if(VisualPresetVersion>=1)return false;
+    SetGlobalIlluminationQuality(2);
+    SetReflectionQuality(2);
+    VisualPresetVersion=1;
+    return true;
 }
 float UBSDemoUserSettings::GetLookSensitivity() const
 {

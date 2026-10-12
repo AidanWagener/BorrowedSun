@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "status": "approved",
+  "approval": "User explicitly approved Brass Sanctuary with Indigo Monsoon rain and night lighting on 2026-10-12.",
+  "primaryDirection": "Brass Sanctuary",
+  "secondaryDirection": "Indigo Monsoon for rain and night lighting",
+  "visualIdentity": "Sunlit industrial fantasy with monumental civic energy infrastructure and intimate working streets.",
+  "references": [
+    "../Art/References/BrassSanctuary.png",
+    "../Art/References/IndigoMonsoon.png"
+  ],
+  "palette": {
+    "chalkPlaster": "#DCCCAF",
+    "warmStone": "#B99463",
+    "indigoFabric": "#25395E",
+    "oxidizedCopper": "#568277",
+    "darkStructure": "#26323C",
+    "amberEnergy": "#FFBE66"
+  },
+  "shapeRules": [
+    "Broad quiet plaster planes, deep shaded arches and repeated courtyard balconies.",
+    "Perforated lattice screens, stepped masonry terraces and curved textile shade.",
+    "Copper domes, repaired pipework and visible maintenance access.",
+    "Original moth guardian, captive artificial sun and broken wing-shaped solar halo.",
+    "Human-scale workspaces and a clearly readable walking route beneath the skyline."
+  ],
+  "detailBudget": "A small number of bespoke hero silhouettes; shared modular meshes and world-scale material tiling elsewhere.",
+  "avoid": ["Universal neon", "Mirror-smooth clean buildings", "Unrelated cultural decoration used as random filler", "Dense micro-detail on every surface", "Recognizable BGE2 characters, deities or vehicle replicas"],
+  "firstBlock": {
+    "name": "Orison Lower Quay",
+    "playableFootprintMeters": [84, 64],
+    "acceptance": "A packaged art pass with textured arcades, lattice, shade sails, copper roofs and a Lantern Keeper skyline; both existing mission routes remain completable.",
+    "lightingInThisPass": "Golden daytime only. Indigo Monsoon is a future lighting reference, not a promised implemented weather system.",
+    "preserve": ["Existing mission anchors and saved IDs", "Dock approach", "Clinic and evacuation access", "Isolated validation saves"]
+  }
+}

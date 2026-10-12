@@ -20,6 +20,7 @@ void ABSDemoPlayerController::BeginPlay()
     Super::BeginPlay();
     if(auto* Settings=UBSDemoUserSettings::Get())
     {
+        if(Settings->UpgradeCityVisualPreset())Settings->ApplySettings(false);
         LookSensitivity=Settings->GetLookSensitivity();
         MasterVolume=Settings->GetMasterVolume();
         bInvertLook=Settings->IsLookInverted();

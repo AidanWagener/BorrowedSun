@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "reviewedDate": "2026-10-12",
+  "provider": "Poly Haven",
+  "licenseDecision": "CC0 permits commercial use, modification and redistribution; imported source maps retain original bytes.",
+  "apiTerms": "https://github.com/Poly-Haven/Public-API/blob/master/ToS.md",
+  "assets": [
+    {
+      "id": "plastered_wall_02",
+      "name": "Plastered Wall 02",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "source": "https://polyhaven.com/a/plastered_wall_02",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "resolution": "2k",
+      "costEUR": 0,
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "path": "SourceArt/PolyHaven/plastered_wall_02/plastered_wall_02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plastered_wall_02/plastered_wall_02_diff_2k.jpg",
+          "bytes": 1713014,
+          "sha256": "caa72056d9157f08912a4c86c844296f93f323f8b30f418895625b052c837d0c",
+          "sourceMD5": "927533b695ab50bbbdfeaf6f0519fa3f"
+        },
+        {
+          "kind": "nor_dx",
+          "path": "SourceArt/PolyHaven/plastered_wall_02/plastered_wall_02_nor_dx_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plastered_wall_02/plastered_wall_02_nor_dx_2k.jpg",
+          "bytes": 3824446,
+          "sha256": "7b9479d0023274e6eace016ab7bf18134f33cde7974bf64aef265b05f605f5c6",
+          "sourceMD5": "00fc144427f23dd4a3ba1b639c4336ac"
+        },
+        {
+          "kind": "Rough",
+          "path": "SourceArt/PolyHaven/plastered_wall_02/plastered_wall_02_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/plastered_wall_02/plastered_wall_02_rough_2k.jpg",
+          "bytes": 812325,
+          "sha256": "01b41c22151f7b3d7d6e78720205a6df9b36ed11ae36bbe6ea35994fba0c1d82",
+          "sourceMD5": "346ae12db0d37287eb7df2be1848ab0e"
+        }
+      ]
+    },
+    {
+      "id": "seaworn_sandstone_brick",
+      "name": "Seaworn Sandstone Brick",
+      "authors": {
+        "Dimitrios Savva": "All"
+      },
+      "source": "https://polyhaven.com/a/seaworn_sandstone_brick",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "resolution": "2k",
+      "costEUR": 0,
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "path": "SourceArt/PolyHaven/seaworn_sandstone_brick/seaworn_sandstone_brick_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/seaworn_sandstone_brick/seaworn_sandstone_brick_diff_2k.jpg",
+          "bytes": 2106724,
+          "sha256": "40d17218ab4fc3d3ac701318d2ce732a6131ecdf79725e0e6ef0935cdfa25826",
+          "sourceMD5": "536402f78ecdde2e794beb7ddf639620"
+        },
+        {
+          "kind": "nor_dx",
+          "path": "SourceArt/PolyHaven/seaworn_sandstone_brick/seaworn_sandstone_brick_nor_dx_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/seaworn_sandstone_brick/seaworn_sandstone_brick_nor_dx_2k.jpg",
+          "bytes": 3892545,
+          "sha256": "316e4658af3b931959546e3029ab88d042eeb77b40279d9b10f3a86dbdd89a2b",
+          "sourceMD5": "52dfbd746b49e26408b586edb643e61f"
+        },
+        {
+          "kind": "Rough",
+          "path": "SourceArt/PolyHaven/seaworn_sandstone_brick/seaworn_sandstone_brick_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/seaworn_sandstone_brick/seaworn_sandstone_brick_rough_2k.jpg",
+          "bytes": 1206054,
+          "sha256": "ab819d14a4fb7e8ccdb5e80de9f3e126ab7257b1c1a444cc214ca9c253046f3d",
+          "sourceMD5": "654941a6f01a070e269e00cf19fe7717"
+        }
+      ]
+    },
+    {
+      "id": "cobblestone_floor_08",
+      "name": "Cobblestone Floor 08",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "source": "https://polyhaven.com/a/cobblestone_floor_08",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "resolution": "2k",
+      "costEUR": 0,
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "path": "SourceArt/PolyHaven/cobblestone_floor_08/cobblestone_floor_08_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_08/cobblestone_floor_08_diff_2k.jpg",
+          "bytes": 2289909,
+          "sha256": "9aaf7db7f660f03d0c5c129c11e83caa828fb8bca63f8cd5154d450ffc4c340f",
+          "sourceMD5": "56404e8a3cdf04c8697dbbc7f9ddd65c"
+        },
+        {
+          "kind": "nor_dx",
+          "path": "SourceArt/PolyHaven/cobblestone_floor_08/cobblestone_floor_08_nor_dx_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_08/cobblestone_floor_08_nor_dx_2k.jpg",
+          "bytes": 4022387,
+          "sha256": "5940965fd9e468b40916fde03634f6ef39a77e7a23c9f4d4c7bcd2bb94e0e111",
+          "sourceMD5": "44842d657ff90c71db8313b7d16858c1"
+        },
+        {
+          "kind": "Rough",
+          "path": "SourceArt/PolyHaven/cobblestone_floor_08/cobblestone_floor_08_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cobblestone_floor_08/cobblestone_floor_08_rough_2k.jpg",
+          "bytes": 1657928,
+          "sha256": "3bc645ec45543c704fe1042f7b81f9bad4f88a8567760c4898c82bc2a134e093",
+          "sourceMD5": "caae39f3ea47e2c09ca897d8dffa00ea"
+        }
+      ]
+    },
+    {
+      "id": "denmin_fabric_02",
+      "name": "Denim Fabric 02",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "source": "https://polyhaven.com/a/denmin_fabric_02",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "resolution": "2k",
+      "costEUR": 0,
+      "maps": [
+        {
+          "kind": "Diffuse",
+          "path": "SourceArt/PolyHaven/denmin_fabric_02/denmin_fabric_02_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/denmin_fabric_02/denmin_fabric_02_diff_2k.jpg",
+          "bytes": 4732095,
+          "sha256": "735c5845b8618ee88ca1b5b2aa9e859cead29a657c3f8c7c4498a2b9919587dc",
+          "sourceMD5": "31c2f1bba041ea5609524c25ff30820e"
+        },
+        {
+          "kind": "nor_dx",
+          "path": "SourceArt/PolyHaven/denmin_fabric_02/denmin_fabric_02_nor_dx_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/denmin_fabric_02/denmin_fabric_02_nor_dx_2k.jpg",
+          "bytes": 3604392,
+          "sha256": "2bdc32e3f770714be344982ccd33ca5f0f17a1a141f68a1cb9462483eb639ab1",
+          "sourceMD5": "7116c2b96296efaeb9eddbb42b2d8777"
+        },
+        {
+          "kind": "Rough",
+          "path": "SourceArt/PolyHaven/denmin_fabric_02/denmin_fabric_02_rough_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/denmin_fabric_02/denmin_fabric_02_rough_2k.jpg",
+          "bytes": 3475986,
+          "sha256": "a8c13fb98f04b4214522e4307bd71929ffc928dcc409bd37c3fff61a0bbd78f4",
+          "sourceMD5": "9e2a7071aae2248fe45dc6873757ab4d"
+        }
+      ]
+    }
+  ]
+}

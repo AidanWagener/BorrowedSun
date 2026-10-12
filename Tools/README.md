@@ -10,6 +10,21 @@ Windows PowerShell 5.1 and PowerShell 7 are supported. Run from the workspace ro
 
 Dry runs of Build and Test validate the project and show the plan, but do not write artifacts or run the engine. Successful real runs create fresh directories beneath `Artifacts/`. The scripts throw on failure; `powershell -File` or `pwsh -File` returns a nonzero exit. Logs can contain local paths and should remain private. Compact JSON summaries exclude environment dumps and remote URLs. Do not use shell metacharacters such as `&` or `%` in engine or workspace paths: the batch runner rejects them.
 
+## City art authoring
+
+The approved art direction is in `Docs/Art/ART_DIRECTION.md`. Reviewed CC0 source maps and FBX files are in `SourceArt/PolyHaven`, tracked with LFS; their hashes are in the two city intake registers. Fetch scripts use the public Poly Haven API with an identifying user agent and verify source checksums. No live asset API is used by the game.
+
+```powershell
+python Tools/Fetch-CityMaterials.py
+python Tools/Fetch-CityProps.py
+powershell -NoProfile -File Tools/Build.ps1 -Execute
+powershell -NoProfile -File Tools/Author-CityArt.ps1 -Execute
+```
+
+`Author-CityArt` is a dry run without `-Execute` and refuses existing output unless `-Force` is deliberate. It verifies all 23 source files, then creates 42 real Unreal packages through editor APIs. Keep Unreal closed. The two scanned meshes retain native UVs; the modular architecture uses world-scale tiling. LFS lockable files can be read-only; make only the exact owned packages being deliberately regenerated writable. Do not recursively clear asset permissions.
+
+Rendered screenshot validation now also captures four clean city review views after both mission routes finish. Frame measurement remains a separate run without screenshots or camera tours.
+
 ## Backup and restore
 
 The First Light delivery has a verified local snapshot, with current LFS payloads. See [demo validation](../Docs/Operations/DEMO_VALIDATION.md) for the observed restoration result and remaining off-device requirement.

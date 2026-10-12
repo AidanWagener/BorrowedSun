@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "reviewedDate": "2026-10-12",
+  "provider": "Poly Haven",
+  "assets": [
+    {
+      "id": "brass_pot_01",
+      "name": "Brass Pot 01",
+      "authors": {
+        "Rico Cilliers": "All"
+      },
+      "source": "https://polyhaven.com/a/brass_pot_01",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "costEUR": 0,
+      "textureResolution": "1k",
+      "files": [
+        {
+          "kind": "mesh",
+          "path": "SourceArt/PolyHaven/brass_pot_01/brass_pot_01_1k.fbx",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/brass_pot_01/brass_pot_01_1k.fbx",
+          "bytes": 180540,
+          "sha256": "5590b5c9f3ae3d7798b222b5a44ce3666388a420eb58a50d780e2680ce01cfcc",
+          "sourceMD5": "784ad6347260c037f535b31dbd4c158a"
+        },
+        {
+          "kind": "Diffuse",
+          "path": "SourceArt/PolyHaven/brass_pot_01/brass_pot_01_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_pot_01/brass_pot_01_diff_1k.jpg",
+          "bytes": 648842,
+          "sha256": "6694da42ed8df023265a8245e125fb5048ea6ff998fdc8fc0ece6d61ca359780",
+          "sourceMD5": "dd37598e39de2c9415329868e6d5c8dd"
+        },
+        {
+          "kind": "nor_dx",
+          "path": "SourceArt/PolyHaven/brass_pot_01/brass_pot_01_nor_dx_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_pot_01/brass_pot_01_nor_dx_1k.jpg",
+          "bytes": 314129,
+          "sha256": "d8d3bfecbfc0ac4ea0afa54913bce174667aabbaf99970203ee215554367a190",
+          "sourceMD5": "c44138d6fc97cac3abf46df2986f1293"
+        },
+        {
+          "kind": "Rough",
+          "path": "SourceArt/PolyHaven/brass_pot_01/brass_pot_01_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_pot_01/brass_pot_01_rough_1k.jpg",
+          "bytes": 402876,
+          "sha256": "66d7de7924a2f4ac1da89fff55eceb48f8cc572187fe8dbb43c3cd035f28f35d",
+          "sourceMD5": "035083825f5fbe22328bffae6fd272cc"
+        },
+        {
+          "kind": "Metal",
+          "path": "SourceArt/PolyHaven/brass_pot_01/brass_pot_01_metal_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_pot_01/brass_pot_01_metal_1k.jpg",
+          "bytes": 46399,
+          "sha256": "400f23fbe995972d41f05288b5e0d4943016628b1cdac1ea3b4e8ec234a29e77",
+          "sourceMD5": "fb17cd1673041403016b784a0d4bd1b3"
+        }
+      ]
+    },
+    {
+      "id": "brass_diya_lantern",
+      "name": "Brass Diya Lantern",
+      "authors": {
+        "Bhargav Kubal": "All"
+      },
+      "source": "https://polyhaven.com/a/brass_diya_lantern",
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "costEUR": 0,
+      "textureResolution": "1k",
+      "files": [
+        {
+          "kind": "mesh",
+          "path": "SourceArt/PolyHaven/brass_diya_lantern/brass_diya_lantern_1k.fbx",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/fbx/1k/brass_diya_lantern/brass_diya_lantern_1k.fbx",
+          "bytes": 405596,
+          "sha256": "6b59060a422883768c104308702310114f5d425e6a08b22b6a02c8082c966741",
+          "sourceMD5": "0a209feef57c5fe9bdd55e6e6ea6037a"
+        },
+        {
+          "kind": "Diffuse",
+          "path": "SourceArt/PolyHaven/brass_diya_lantern/brass_diya_lantern_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_diya_lantern/brass_diya_lantern_diff_1k.jpg",
+          "bytes": 536573,
+          "sha256": "b7d308d1950640e5d0160df5c948e44b3367f7f916922c27715b2a3fb2d19a54",
+          "sourceMD5": "322aec4839a32604193352a4a55616c6"
+        },
+        {
+          "kind": "nor_dx",
+          "path": "SourceArt/PolyHaven/brass_diya_lantern/brass_diya_lantern_nor_dx_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_diya_lantern/brass_diya_lantern_nor_dx_1k.jpg",
+          "bytes": 264388,
+          "sha256": "91183daff9f4bf5f3ff619363416d3a266eeb06319c190447d8b9d773319324f",
+          "sourceMD5": "17ceed1b81b9180d8f0933ba225aee13"
+        },
+        {
+          "kind": "Rough",
+          "path": "SourceArt/PolyHaven/brass_diya_lantern/brass_diya_lantern_rough_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_diya_lantern/brass_diya_lantern_rough_1k.jpg",
+          "bytes": 545777,
+          "sha256": "9a4263e39752cbdbac4d9fe18cd87d333f75faade97810ea234f6a10479b16df",
+          "sourceMD5": "5e2eb607bb82a09c6a0641c6b2101148"
+        },
+        {
+          "kind": "Metal",
+          "path": "SourceArt/PolyHaven/brass_diya_lantern/brass_diya_lantern_metal_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_diya_lantern/brass_diya_lantern_metal_1k.jpg",
+          "bytes": 160135,
+          "sha256": "95ab3388f14485d59382bded540d15218667105298b37ba6b138c4553df9b873",
+          "sourceMD5": "3b5f5bbbb9a85934e409dce1927b522b"
+        },
+        {
+          "kind": "opacity",
+          "path": "SourceArt/PolyHaven/brass_diya_lantern/brass_diya_lantern_opacity_1k.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/1k/brass_diya_lantern/brass_diya_lantern_opacity_1k.png",
+          "bytes": 286310,
+          "sha256": "659ece6debcf6b288e27caa96c6b3cb6d51b97b93560c2e68580c5c768701fd2",
+          "sourceMD5": "8368bac757207a1084b675f7b29ed528"
+        }
+      ]
+    }
+  ]
+}

@@ -34,7 +34,8 @@ private:
         WalkToService,
         CompletionPause,
         VerifyCheckpoint,
-        RouteFinished
+        RouteFinished,
+        ArtTour
     };
 
     struct FCheck
@@ -58,6 +59,10 @@ private:
     TArray<double> FlightFrameMs;
     bool bHasWalkSample = false;
     int32 RouteIndex = 0;
+    int32 StartupFrames = 0;
+    int32 ArtViewIndex = 0;
+    bool bArtViewCaptured = false;
+    UPROPERTY(Transient) TObjectPtr<class ACameraActor> ArtCamera;
     EPhase Phase = EPhase::Startup;
     double StartedAt = 0;
     double RouteStartedAt = 0;
@@ -76,4 +81,5 @@ private:
     void Finish(bool bSuccess);
     FString RouteLabel() const;
     FString FrameReport() const;
+    void SetArtView(ABSDemoPlayerController* Controller);
 };

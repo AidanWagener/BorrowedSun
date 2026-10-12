@@ -32,7 +32,7 @@ void ABSDemoHUD::Panel(float X,float Y,float W,float H,FLinearColor C)
 void ABSDemoHUD::DrawHUD()
 {
     Super::DrawHUD();
-    if(!Canvas || !GEngine) return;
+    if(!bShowHUD || !Canvas || !GEngine) return;
     auto* PC=Cast<ABSDemoPlayerController>(GetOwningPlayerController());
     auto* G=GetWorld()->GetAuthGameMode<ABSDemoGameMode>();
     if(!PC || !G) return;

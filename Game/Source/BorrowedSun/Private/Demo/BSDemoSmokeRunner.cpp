@@ -10,6 +10,10 @@
 #include "Engine/GameInstance.h"
 #include "Engine/GameViewportClient.h"
 #include "Engine/World.h"
+#include "EngineUtils.h"
+#include "Camera/CameraActor.h"
+#include "Camera/CameraComponent.h"
+#include "GameFramework/HUD.h"
 #include "HAL/FileManager.h"
 #include "HAL/PlatformMisc.h"
 #include "HAL/PlatformTime.h"
@@ -219,13 +223,16 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
     }
     if (Phase == EPhase::Startup)
     {
-        if (Now - StartedAt < 2.0) return;
+        // Time spent loading does not count as rendered warmup for the first screenshot.
+        if (++StartupFrames < 120 || Now - StartedAt < 2.0) return;
         if (!Mode || !Controller || !Controller->GetPawn() || !Mode->Ship || !GEngine || !GEngine->GameViewport)
         {
             if (Now - StartedAt > 15.0) Check(TEXT("RuntimeReady"), false, TEXT("Missing mode, controller, pawn, ship or game viewport."));
             return;
         }
         if (!Check(TEXT("RuntimeReady"), true)) return;
+        TActorIterator<ABSDemoWorld> City(GetWorld());
+        if (!Check(TEXT("CityArtReady"), City && City->HasCityArt(), TEXT("All 14 city meshes and seven PBR materials loaded in this runtime."))) return;
         BeginRoute(Mode, Controller);
         return;
     }
@@ -344,11 +351,40 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
                 ++RouteIndex;
                 BeginRoute(Mode, Controller);
             }
+            else if(bScreenshots)
+            {
+                ArtCamera=GetWorld()->SpawnActor<ACameraActor>();
+                if(!Check(TEXT("CityReviewCamera"),ArtCamera!=nullptr))return;
+                if(auto* Hud=Controller->GetHUD())Hud->bShowHUD=false;
+                SetArtView(Controller);
+            }
             else Finish(true);
+        }
+        break;
+    case EPhase::ArtTour:
+        if(!bArtViewCaptured && Now-PhaseStartedAt>3.0)
+        {
+            const TCHAR* Names[]={TEXT("city-overview"),TEXT("market-arcade"),TEXT("lantern-keeper"),TEXT("dock-courtyard")};
+            Capture(Names[ArtViewIndex]); bArtViewCaptured=true;
+        }
+        if(Now-PhaseStartedAt>3.6)
+        {
+            if(++ArtViewIndex>=4)Finish(true);
+            else SetArtView(Controller);
         }
         break;
     default: break;
     }
+}
+
+void ABSDemoSmokeRunner::SetArtView(ABSDemoPlayerController* Controller)
+{
+    const FVector Eye[]={{-6500,-7900,5100},{-3000,-460,245},{4800,400,2200},{3700,-750,420}};
+    const FVector Target[]={{0,400,1000},{-1000,-1420,410},{11200,6500,4200},{1200,800,250}};
+    ArtCamera->SetActorLocation(Eye[ArtViewIndex]);
+    ArtCamera->SetActorRotation((Target[ArtViewIndex]-Eye[ArtViewIndex]).Rotation());
+    ArtCamera->GetCameraComponent()->SetFieldOfView(ArtViewIndex==0?68.f:74.f);
+    Controller->SetViewTarget(ArtCamera); bArtViewCaptured=false; SetPhase(EPhase::ArtTour);
 }
 
 void ABSDemoSmokeRunner::Capture(const TCHAR* Milestone)

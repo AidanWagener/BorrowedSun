@@ -49,6 +49,12 @@
       "decision": "AI assists production; no runtime generative backend",
       "reason": "Offline game, deterministic saves, asset rights and controlled scope",
       "revisit": "Specific funded design need with cost, safety and rights review"
+    },
+    {
+      "id": "ADR-009",
+      "decision": "Brass Sanctuary art direction with Indigo Monsoon rain and night reference",
+      "reason": "Explicit user approval on 2026-10-12; original moth guardian and material palette tie the city to rented daylight",
+      "revisit": "Only after user review of the representative in-game block"
     }
   ]
 }

@@ -4,7 +4,7 @@ A local-first Unreal project for a solo city-to-orbit adventure. The first demo,
 
 ## Start here
 
-1. Read [the current Shipping demo validation](Docs/Operations/DEMO_V02_VALIDATION.md), [the first playable milestone](Docs/Operations/DEMO_VALIDATION.md), and [the earlier foundation validation](Docs/Operations/VALIDATION.md) as needed.
+1. Read [the current city build validation](Docs/Operations/DEMO_V03_VALIDATION.md) and [approved art direction](Docs/Art/ART_DIRECTION.md). Earlier [v0.2](Docs/Operations/DEMO_V02_VALIDATION.md), [first playable](Docs/Operations/DEMO_VALIDATION.md), and [foundation](Docs/Operations/VALIDATION.md) records remain historical evidence.
 2. Read [local operations](Tools/README.md). The installed engine is pinned in [engine-lock.json](Config/engine-lock.json). Personal engine paths belong in ignored `Tools/Environment.local.json`.
 3. Run the doctor and preflight from this directory:
 
@@ -35,6 +35,7 @@ Do not mistake a headless smoke test for a rendering, gameplay, cook or Shipping
 | Path | Purpose |
 |---|---|
 | Game | Unreal project, source modules, owned config and future content |
+| SourceArt | Reviewed CC0 source maps and props with hashes in the intake registers |
 | Config | Reviewed engine/plugin pin |
 | Tools | Build, test, doctor, preflight, backup and tooling regression commands |
 | Docs/Registers | Backlog, decisions, asset candidates, budget and machine observation |
@@ -43,7 +44,7 @@ Do not mistake a headless smoke test for a rendering, gameplay, cook or Shipping
 | Artifacts | Ignored logs, test fixtures and build output |
 | Vault | Optional ignored private license evidence; requires independent backup |
 
-The full design remains in the accompanying Borrowed Sun game specification. This workspace contains the demo source and development workflow. The first demo uses one continuous map and original procedural prototype content; broader streaming, combat, NPCs and vendor-kit production remain later work. Remote CI is not enabled.
+The full design remains in the accompanying Borrowed Sun game specification. This workspace contains the demo source and development workflow. The first city block combines original modular geometry with reviewed CC0 textures and two scanned props in one continuous map. Broader streaming, combat, NPCs and paid vendor-kit production remain later work. Remote CI is not enabled.
 
 ## Play and validate First Light
 
@@ -51,7 +52,9 @@ Compile first, then use `Tools/Demo.ps1 -Mode Launch -Execute` to launch the cur
 
 The loop is: take the sunseed, board Kestrel, fly to the sky relay, choose clinic or evacuation power, return, disembark and install it. **E** interacts, **G** toggles optional flight assist, **R** recovers a safe position, **F5/F9** save/load, and **ESC** opens the menu. A new expedition requires an explicit menu confirmation.
 
-The current player build is **v0.2.0 Shipping**. The adjacent `Play_Borrowed_Sun.cmd` starts it with persistent player data in `../BorrowedSunPlayer/`, outside the packaged build folder. **O** from the menu opens saved mouse sensitivity, vertical-look inversion and audio volume. The original Development package remains beside it for historical comparison.
+The current player build is **v0.3.0 Shipping**, in the adjacent `BorrowedSunCity` folder. `Play_Borrowed_Sun.cmd` starts it with persistent player data in `../BorrowedSunPlayer/`, outside the packaged build folder. **O** from the menu opens saved mouse sensitivity, vertical-look inversion and audio volume. Earlier v0.1 Development and v0.2 Shipping packages remain beside it for historical comparison.
+
+The first Orison block implements the approved Brass Sanctuary direction: warm masonry, indigo awnings, copper roofs, market props and the Lantern Keeper silhouette. [Asset provenance and authoring instructions](Docs/Art/ART_DIRECTION.md) distinguish imported scans from original meshes. Night and rain are future Indigo Monsoon studies. Screenshot validation also captures four clean city review views after both mission routes.
 
 Use `Tools/Build.ps1 -Mode Package -Configuration Shipping -Execute` to reproduce a player package. `Tools/Demo.ps1 -Mode Validate -MeasureFrames -UserDirectory <isolated-root> -PackageExecutable <game-exe> -Execute` collects frame intervals at the required 60 FPS cap. Run screenshot validation separately. Frame intervals describe application pacing, not isolated CPU/GPU costs.
 
@@ -65,10 +68,10 @@ The additional [framework research](Docs/Research/Framework_Research.md) assesse
 
 ## Source control and portability
 
-This delivered workspace is locally initialized with Git and repository-local LFS configuration when indicated by the validation record. No remote is created. The portable ZIP excludes `.git`, local environment settings, artifacts, engine binaries and third-party downloads. After unpacking, run `git init -b main` then `git lfs install --local`; create your first reviewed commit. Fill local engine configuration from the example before execution.
+This delivered workspace is locally initialized with Git and repository-local LFS configuration when indicated by the validation record. No remote is created. The portable ZIP includes materialized game assets and the reviewed CC0 source files; it excludes `.git`, local environment settings, artifacts and engine binaries. After unpacking, run `git init -b main` then `git lfs install --local`; create your first reviewed commit. Fill local engine configuration from the example before execution.
 
 For sustained production prefer a short path such as `C:\Dev\BorrowedSun` on a suitable disk. Clone/copy deliberately; do not run the same game project in two editors. Do not put the active source checkout inside consumer file sync. Keep off-device backups and practice restoring the actual LFS payloads, not just Git pointers.
 
 `.github/manual-windows.yml.example` is intentionally inactive. Local automation is the baseline; remote runners and paid services require deliberate account setup and a trusted execution environment.
 
-No third-party game assets are redistributed in this workspace. Licenses of future imports and dependencies remain separate. Keep the initial budget gross of tax, currency conversion and recurring costs.
+Poly Haven CC0 assets are redistributed with their provenance in the [material](Docs/Registers/city-material-intake.json) and [prop](Docs/Registers/city-prop-intake.json) intake registers. No paid kit or third-party framework is included. Licenses of future imports and dependencies remain separate. Keep the initial budget gross of tax, currency conversion and recurring costs.

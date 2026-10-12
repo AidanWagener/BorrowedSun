@@ -1,0 +1,22 @@
+{
+    "Git":  {
+                "Dirty":  true,
+                "Commit":  "a9aaafb7b4323b659dd9c82e62a25037a3f7a591",
+                "Repository":  true
+            },
+    "ScreenshotsRequested":  false,
+    "SchemaVersion":  1,
+    "RuntimeReport":  "C:\\Users\\aidan\\Documents\\Codex\\2026-10-12\\plea\\work\\qa-v03\\shipping-frames\\Saved\\DemoValidation\\Result-QA_20261012T193336Z_510d300f5b3e4dac.json",
+    "CheckCount":  34,
+    "Packaged":  true,
+    "SaveNamespace":  "QA_20261012T193336Z_510d300f5b3e4dac",
+    "RequiredCheckCount":  29,
+    "StartedUtc":  "2026-10-12T19:33:36.9585866Z",
+    "FinishedUtc":  "2026-10-12T19:35:02.4055065Z",
+    "ScreenshotCount":  0,
+    "Status":  "Passed",
+    "Mode":  "Validate",
+    "Engine":  null,
+    "Force":  false,
+    "FrameSamplesRequested":  true
+}
