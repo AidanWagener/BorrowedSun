@@ -1,0 +1,18 @@
+{
+    "FinishedUtc":  "2026-10-12T21:49:26.7341042Z",
+    "Count":  13,
+    "NullRHI":  true,
+    "Filter":  "BorrowedSun.Smoke",
+    "Status":  "Passed",
+    "Git":  {
+                "Dirty":  true,
+                "Commit":  "5ab555d325eb3ed873d347a58b8fec2e120e7c16",
+                "Repository":  true
+            },
+    "Engine":  {
+                   "Version":  "5.8.2",
+                   "Changelist":  56702186
+               },
+    "SchemaVersion":  1,
+    "StartedUtc":  "2026-10-12T21:49:04.2387401Z"
+}

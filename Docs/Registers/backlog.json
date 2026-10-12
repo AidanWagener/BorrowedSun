@@ -237,7 +237,7 @@
     {
       "id": "BS-015",
       "title": "Approved market block recipe",
-      "status": "proposed",
+      "status": "in_progress",
       "owner": "creator",
       "dependsOn": [
         "BS-014",
@@ -249,7 +249,11 @@
       ],
       "confidence": "medium",
       "acceptance": "One recipe supports walking, mission sightlines and ship approach; costs captured in packaged route.",
-      "evidence": []
+      "evidence": [
+        "Docs/Operations/DEMO_V04_VALIDATION.md",
+        "Docs/Art/STARTING_MARKET_BENCHMARK.md"
+      ],
+      "progressNote": "Packaged walking/flight/return checks and 1080p pacing passed. User-approved generated visual target remains unmet; retain this as active art work."
     },
     {
       "id": "BS-016",

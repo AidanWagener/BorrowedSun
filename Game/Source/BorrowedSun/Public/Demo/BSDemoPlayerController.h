@@ -17,6 +17,7 @@ public:
     virtual void BeginPlay() override;
     virtual void SetupInputComponent() override;
     virtual void PlayerTick(float DeltaTime) override;
+    virtual void ProcessPlayerInput(float DeltaTime, bool bGamePaused) override;
     bool bWelcome = true;
     bool bMenu = false;
     bool bConfirmRestart = false;
@@ -30,6 +31,7 @@ public:
     void Confirm();
     void ToggleMenu();
 private:
+    bool bAutomatedInput = false;
     UPROPERTY() TObjectPtr<UInputMappingContext> Mapping;
     UPROPERTY() TArray<TObjectPtr<UInputAction>> Actions;
     UInputAction* Axis(const TCHAR* Name, FKey Positive, FKey Negative, FKey Gamepad);

@@ -46,7 +46,7 @@ void ABSDemoWorld::BuildDistrict()
     CityBox({0,0,-125},{86,68,2.5},TEXT("M_CityStone"),Ochre);
     CityBox({0,0,-19},{82,64,.38},TEXT("M_CityPaving"),Pale);
     // Brass guide inlays leave the ground readable without a neon runway.
-    for(int I=-16;I<=16;++I)
+    for(int I=-16;I<=(HasMarketArt()?-17:16);++I)
     {
         CityBox({I*220.,-520,2},{1.1,.055,.035},TEXT("M_CityCopper"),Brass,false);
         CityBox({I*220.,520,2},{1.1,.055,.035},TEXT("M_CityCopper"),Brass,false);
@@ -112,7 +112,7 @@ void ABSDemoWorld::BuildDistrict()
         }
     }
     // Draped market canopies occupy the edge, with open clearance down the mission promenade.
-    for(int I=0;I<5;++I)
+    for(int I=0;I<(HasMarketArt()?0:5);++I)
     {
         const double X=-2950+I*870;
         CityPart(TEXT("SM_ShadeSail"),{X,-1060,495},{7.9,8,1.9},TEXT("M_CityCloth"),I%3==0?FLinearColor(1.2,.80,.33):FLinearColor(.55,.85,1.3),FRotator(0,0,I%2?4:-4));
@@ -130,7 +130,7 @@ void ABSDemoWorld::BuildDistrict()
         Light->SetWorldLocation({X,-1150,310});Light->SetLightColor(FLinearColor(1,.68,.34));Light->SetIntensity(1100);Light->SetAttenuationRadius(650);Light->SetCastShadows(false);Light->RegisterComponent();
     }
     // Two high shade sails produce a strong indigo frame over the market approach.
-    for(int I=0;I<2;++I)
+    for(int I=0;I<(HasMarketArt()?0:2);++I)
     {
         const double X=-2600+I*1100;
         CityPart(TEXT("SM_ShadeSail"),{X,-220,780.+I*120},{10,18,4},TEXT("M_CityCloth"),FLinearColor(.55,.8,1.25),FRotator(0,-12+I*24,0));
@@ -151,15 +151,19 @@ void ABSDemoWorld::BuildDistrict()
     // Palms are a small shared mesh kit, no foliage simulation or individual ticking actors.
     for(FVector P:{FVector(-3600,1080,0),FVector(-450,1280,0),FVector(3450,1150,0),FVector(3550,-1100,0)})
     {
+        if(HasMarketArt())continue;
         CityPart(TEXT("SM_Planter"),P,{2.5,2.5,1.6},TEXT("M_CityStone"),Ivory);
         Beam(P+FVector(0,0,80),P+FVector(25,0,610),17,Ochre);
         for(int I=0;I<9;++I)CityPart(TEXT("SM_PalmFrond"),P+FVector(25,0,580),{3.8,3.8,3.8},TEXT("M_CityCloth"),FLinearColor(.30,.50,.15),FRotator(12+(I%3)*9,I*40,0));
     }
     // Relic plinth and the original docking footprint.
-    Shape(Cylinder,SeedLocation()-FVector(0,0,105),{1.6,1.6,.9},Ivory,0,true,FRotator::ZeroRotator,CityMaterials.FindRef(TEXT("M_CityStone")));
-    Shape(Cylinder,SeedLocation()-FVector(0,0,50),{1.8,1.8,.15},Brass,0,false);
+    if(!HasMarketArt())
+    {
+        Shape(Cylinder,SeedLocation()-FVector(0,0,105),{1.6,1.6,.9},Ivory,0,true,FRotator::ZeroRotator,CityMaterials.FindRef(TEXT("M_CityStone")));
+        Shape(Cylinder,SeedLocation()-FVector(0,0,50),{1.8,1.8,.15},Brass,0,false);
+    }
     for(int I=0;I<8;++I){double A=I*PI/4;Shape(Sphere,SeedLocation()+FVector(FMath::Cos(A)*90,FMath::Sin(A)*90,-120),{.10,.10,.10},Amber,2,false);}
-    Sign(TEXT("SUNSEED / RECLAIMED LIGHT"),{-1100,190,190},26,FColor(255,217,150));
+    if(!HasMarketArt())Sign(TEXT("SUNSEED / RECLAIMED LIGHT"),{-1100,190,190},26,FColor(255,217,150));
     Shape(Cylinder,{1800,0,6},{11,11,.12},Copper,0,true,FRotator::ZeroRotator,CityMaterials.FindRef(TEXT("M_CityCopper")));
     Shape(Cylinder,{1800,0,15},{9.6,9.6,.08},Ink,0,false);
     for(int I=0;I<24;++I){double A=I*PI/12;Shape(Cube,{1800+FMath::Cos(A)*510,FMath::Sin(A)*510,20},{.35,.10,.08},Amber,1.5,false,FRotator(0,FMath::RadiansToDegrees(A)+90,0));}
@@ -195,6 +199,21 @@ void ABSDemoWorld::BuildDistrict()
 
 void ABSDemoWorld::BuildLanternKeeper()
 {
+    if(HasMarketArt())
+    {
+        const FVector O(15500,0,-1800);
+        MarketPart(TEXT("SM_KeeperSculpt"),O,FVector(7.5),FRotator(0,90,0));
+        MarketPart(TEXT("SM_SolarHalo"),O,FVector(7.5),FRotator(0,90,0));
+        for(int Step=0;Step<6;++Step)MarketBox(O+FVector(0,0,Step*135.),{40.-Step*3,43.-Step*3,1.4},TEXT("M_MarketStone"));
+        Shape(Sphere,O+FVector(-1800,0,3750),FVector(5.5),Amber,4,false);
+        for(int Ring=0;Ring<3;++Ring)for(int I=0;I<64;++I)
+        {
+            const double A=I*2*PI/64,B=(I+1)*2*PI/64;
+            auto Point=[&](double T){const FVector P=Ring==0?FVector(0,FMath::Cos(T)*310,FMath::Sin(T)*310):Ring==1?FVector(FMath::Cos(T)*310,0,FMath::Sin(T)*310):FVector(FMath::Cos(T)*310,FMath::Sin(T)*310,0);return O+FVector(-1800,0,3750)+P;};
+            Beam(Point(A),Point(B),8,Brass);
+        }
+        return;
+    }
     const FVector O(11200,6500,-2100);
     CityBox(O+FVector(0,0,1000),{30,24,20},TEXT("M_CityStone"),Ivory,false);
     for(int I=0;I<5;++I)CityBox(O+FVector(0,0,I*260.),{49.-I*4,40.-I*3,2.6},TEXT("M_CityStone"),Pale,false);
@@ -237,11 +256,41 @@ void ABSDemoWorld::BuildSky()
     {
         const double A=I*2*PI/48, Radius=R.FRandRange(12000,24500), H=R.FRandRange(1700,4600);
         const FVector P(FMath::Cos(A)*Radius,FMath::Sin(A)*Radius,H*.5-3400);
-        CityBox(P,{R.FRandRange(9,19),R.FRandRange(9,17),H/100},TEXT("M_CityPlaster"),I%3?Ivory:Ochre,false);
-        CityBox(P+FVector(0,0,H*.5),{16,15,.8},TEXT("M_CityStone"),Pale,false);
+        const double WX=R.FRandRange(9,19),WY=R.FRandRange(9,17);
+        CityBox(P,{WX,WY,H/100},TEXT("M_CityPlaster"),I%3?Ivory:Ochre,false);
+        CityBox(P+FVector(0,0,H*.5),{WX+.6,WY+.6,.8},TEXT("M_CityStone"),Pale,false);
+        // Buildings meet a harbor foundation instead of terminating above the water plane.
+        CityBox({P.X,P.Y,-4140},{19,18,16},TEXT("M_CityStone"),Ivory,false);
+        if(HasMarketArt())for(int Floor=0;Floor<3;++Floor)for(double DX:{-320.,320.})
+        {
+            const double Z=-3200+Floor*550;if(Z+420>P.Z+H*.5)continue;
+            MarketPart(TEXT("SM_MarketWindow"),{P.X+DX,P.Y-WY*50-15,Z},{1.3,1.3,1.3},FRotator(0,180,0));
+            MarketPart(TEXT("SM_MarketWindow"),{P.X-WX*50-15,P.Y+DX,Z},{1.3,1.3,1.3},FRotator(0,90,0));
+        }
         if(I%3==0)CityPart(TEXT("SM_CopperDome"),P+FVector(0,0,H*.5+50),{6,6,4},TEXT("M_CityCopper"),Copper);
     }
     BuildLanternKeeper();
+    if(HasMarketArt())
+    {
+        // Terraced harbor neighborhoods establish a real middle distance behind the market.
+        FRandomStream Harbor(70412);
+        for(int Row=0;Row<4;++Row)for(int I=-5;I<=5;++I)
+        {
+            if(FMath::Abs(I)<2&&Row<2)continue;
+            const double X=10200+Row*2300+Harbor.FRandRange(-350,350),Y=I*1400.+Harbor.FRandRange(-220,220);
+            const double H=Harbor.FRandRange(1700,4100),Base=-1950+Row*150;
+            MarketBox({X,Y,(Base-4800)*.5},{16.,18.,(Base+4800)/100},TEXT("M_MarketStone"));
+            MarketBox({X,Y,Base+H*.5},{10.,11.,H/100},TEXT("M_MarketPlaster"));
+            for(double Z:{Base+500,Base+1100,Base+H-40})MarketBox({X,Y,Z},{10.6,11.6,.35},TEXT("M_MarketStone"));
+            for(int Floor=0;Floor<4;++Floor)for(double DY:{-300.,300.})
+            {
+                const double Z=Base+200+Floor*560;if(Z+380>Base+H)continue;
+                MarketPart(TEXT("SM_MarketWindow"),{X-515,Y+DY,Z},{1.3,1.3,1.3},FRotator(0,90,0));
+            }
+            if(I%2==0)CityPart(TEXT("SM_CopperDome"),{X,Y,Base+H+20},{5.3,5.3,4},TEXT("M_CityCopper"),Copper);
+            else for(int C=-4;C<=4;++C)MarketBox({X-505,Y+C*112,Base+H+65},{.50,.65,1.1},TEXT("M_MarketStone"));
+        }
+    }
     const FVector Relay=RelayLocation();
     Shape(Cylinder,Relay-FVector(0,0,2500),{30,30,1.5},Ink);
     Shape(Cylinder,Relay-FVector(0,0,2420),{27,27,.12},Copper,0,false,FRotator::ZeroRotator,CityMaterials.FindRef(TEXT("M_CityCopper")));
@@ -251,6 +300,13 @@ void ABSDemoWorld::BuildSky()
     for(int I=1;I<8;++I)
     {
         const FVector P=FMath::Lerp(DockLocation()+FVector(0,0,650),Relay,I/8.);
-        for(double S:{-1.,1.}){Shape(Sphere,P+FVector(0,S*850,0),{.9,.9,.9},Amber,4,false);Beam(P+FVector(0,S*850,-240),P+FVector(0,S*850,-50),5,Copper);}
+        for(int Side=0;Side<2;++Side)
+        {
+            const FVector Offset(0,Side?850:-850,0);
+            FlightBeacons.Add(StateVisual(FName(*FString::Printf(TEXT("FlightBeacon_%d_%d"),I,Side)),Sphere,P+Offset,{.9,.9,.9},Amber,4));
+            FlightBeacons.Add(StateVisual(FName(*FString::Printf(TEXT("FlightBeaconStem_%d_%d"),I,Side)),Cylinder,P+Offset-FVector(0,0,145),{.1,.1,1.9},Copper,0));
+        }
     }
+    // Navigation is an on-board aid; floating guide symbols do not intrude on the walking view.
+    SetFlightBeaconsVisible(false);
 }

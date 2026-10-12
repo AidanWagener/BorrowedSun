@@ -31,6 +31,12 @@ Twelve original reusable meshes are authored through Unreal's editor APIs: arcad
 
 The daylight pass uses Lumen, virtual shadow maps and a bounded physical exposure range. A one-time graphics preset migration enables the intended illumination and reflection quality while retaining input, audio, display and mission preferences. Later launches retain subsequent quality choices. Night and rain remain reference directions.
 
+## Starting market production
+
+The v0.4 starting market adds the [approved benchmark](STARTING_MARKET_BENCHMARK.md), a pinned Blender authoring pipeline and 21 exported architectural, textile, paving and sculpture meshes. [The market intake register](../Registers/market-asset-intake.json) retains exact authors, source links and checksums for nine CC0 models (crate, basket, pomegranate, potted plant, vase, stool, bowl, pan and tree) and four surface sets. These are additions to the earlier city assets above. Generated indigo fabric has separate prompt and hash provenance in `SourceArt/Generated`.
+
+The Blender source and exports are editable production assets; the generated benchmark remains a reference image. Source triangle counts, package counts and successful tests do not establish that its visual quality has been reached. Actual runtime captures and the corresponding validation report are the review evidence.
+
 ## Kit purchasing decision
 
 [KitBash3D Shangri-La](https://kitbash3d.com/products/shangri-la) is a candidate for selected roof and distant monastery forms, subject to an exact asset/version and gameplay suitability review. [Neo City](https://kitbash3d.com/products/mini-kit-neo-city) is a candidate for industrial details; its broad cyberpunk façades do not establish this city's primary identity. Neither kit is purchased or imported by this pass. The first block uses the reviewed CC0 maps and original reusable geometry; asset spending remains EUR 0.

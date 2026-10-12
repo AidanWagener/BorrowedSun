@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "version": "4.5.14 LTS",
+  "platform": "windows-x64",
+  "portable": true,
+  "archiveURL": "https://download.blender.org/release/Blender4.5/blender-4.5.14-windows-x64.zip",
+  "sha256": "b9533d2397ac1984db4466fb23a7a4649391cca93f6e84209f9bcc60d071c8b9",
+  "archiveBytes": 398661046,
+  "observedBuildHash": "62c1db4208e8",
+  "purpose": "Original market mesh authoring, editable source and FBX export. No runtime dependency.",
+  "verification": "Full archive SHA256 matched the publisher checksum before extraction or execution."
+}

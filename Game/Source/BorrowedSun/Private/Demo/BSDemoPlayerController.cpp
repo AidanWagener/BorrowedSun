@@ -9,6 +9,8 @@
 #include "InputMappingContext.h"
 #include "InputModifiers.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Misc/CommandLine.h"
+#include "Misc/Parse.h"
 
 ABSDemoPlayerController::ABSDemoPlayerController()
 {
@@ -18,6 +20,7 @@ ABSDemoPlayerController::ABSDemoPlayerController()
 void ABSDemoPlayerController::BeginPlay()
 {
     Super::BeginPlay();
+    bAutomatedInput=FParse::Param(FCommandLine::Get(),TEXT("BSDemoAutoTest"));
     if(auto* Settings=UBSDemoUserSettings::Get())
     {
         if(Settings->UpgradeCityVisualPreset())Settings->ApplySettings(false);
@@ -28,6 +31,13 @@ void ABSDemoPlayerController::BeginPlay()
     SetInputMode(FInputModeGameOnly());
     if(auto* Sub=ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer()))
         if(Mapping) Sub->AddMappingContext(Mapping,0);
+}
+
+void ABSDemoPlayerController::ProcessPlayerInput(float DeltaTime, bool bGamePaused)
+{
+    // The explicit QA harness drives gameplay methods. Desktop/controller input must
+    // not move its camera or invoke save/menu actions while the machine is in use.
+    if(!bAutomatedInput)Super::ProcessPlayerInput(DeltaTime,bGamePaused);
 }
 
 UInputAction* ABSDemoPlayerController::Axis(const TCHAR* Name,FKey Positive,FKey Negative,FKey Pad)

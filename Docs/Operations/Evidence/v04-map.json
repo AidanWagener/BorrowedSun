@@ -1,0 +1,21 @@
+{
+    "Mode":  "AuthorMap",
+    "Packaged":  false,
+    "StartedUtc":  "2026-10-12T21:38:20.5184745Z",
+    "FinishedUtc":  "2026-10-12T21:38:40.3869659Z",
+    "Engine":  {
+                   "Version":  "5.8.2",
+                   "Changelist":  56702186
+               },
+    "SaveNamespace":  null,
+    "FrameSamplesRequested":  false,
+    "Force":  true,
+    "ScreenshotsRequested":  false,
+    "Status":  "Passed",
+    "SchemaVersion":  1,
+    "Git":  {
+                "Dirty":  true,
+                "Commit":  "5ab555d325eb3ed873d347a58b8fec2e120e7c16",
+                "Repository":  true
+            }
+}

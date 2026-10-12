@@ -53,6 +53,8 @@ param(
     [string]$ReportDirectory,
     [string]$UserDirectory,
     [ValidateRange(10,420)][int]$TimeoutSeconds=420,
+    [ValidateRange(640,3840)][int]$Width=1280,
+    [ValidateRange(360,2160)][int]$Height=720,
     [switch]$Screenshots,
     [switch]$MeasureFrames,
     [switch]$Force,
@@ -191,7 +193,7 @@ if ($PackageExecutable) {
 $arguments += @('-nop4','-nosplash')
 if ($UserDirectory) { $arguments += '-UserDir=' + $UserDirectory }
 if ($Mode -ne 'Launch') { $arguments += @('-stdout','-FullStdOutLogOutput') }
-if ($Mode -ne 'AuthorMap') { $arguments += @('-windowed','-ResX=1280','-ResY=720') }
+if ($Mode -ne 'AuthorMap') { $arguments += @('-windowed',('-ResX='+$Width),('-ResY='+$Height)) }
 $saveNamespace=$null; $reportPath=$null
 if ($Mode -eq 'Validate') {
     $saveNamespace='QA_' + [DateTime]::UtcNow.ToString('yyyyMMddTHHmmssZ') + '_' + [Guid]::NewGuid().ToString('N').Substring(0,16)
@@ -199,7 +201,7 @@ if ($Mode -eq 'Validate') {
     $ReportDirectory=[IO.Path]::GetFullPath($ReportDirectory)
     Assert-NoReparsePoint $ReportDirectory
     $reportPath=Join-Path $ReportDirectory ('Result-' + $saveNamespace + '.json')
-    $arguments += @('-unattended','-BSDemoAutoTest',('-BSDemoSaveNamespace=' + $saveNamespace))
+    $arguments += @('-unattended','-ForceRes','-BSDemoAutoTest',('-BSDemoSaveNamespace=' + $saveNamespace),('-BSDemoQAWidth='+$Width),('-BSDemoQAHeight='+$Height))
     if ($Screenshots) { $arguments += '-BSDemoScreenshots' }
     if ($MeasureFrames) { $arguments += '-BSDemoMeasureFrames' }
 }

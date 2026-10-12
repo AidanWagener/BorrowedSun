@@ -21,7 +21,9 @@ public:
     void SetSurfaceMaterial(UMaterialInterface* InSurface) { Surface = InSurface; }
     void ApplyConsequence(uint8 Choice, bool bComplete);
     void SetSeedAvailable(bool bAvailable);
+    void SetFlightBeaconsVisible(bool bVisible);
     bool HasCityArt() const { return CityMeshes.Num() == 14 && CityMaterials.Num() == 7; }
+    bool HasMarketArt() const { return MarketMeshes.Num() == 30 && MarketMaterials.Num() == 9; }
     static FVector SeedLocation() { return FVector(-1100, 0, 150); }
     static FVector DockLocation() { return FVector(1800, 0, 220); }
     static FVector RelayLocation() { return FVector(18000, 0, 15000); }
@@ -36,16 +38,23 @@ private:
     UPROPERTY() TArray<TObjectPtr<UHierarchicalInstancedStaticMeshComponent>> Groups;
     UPROPERTY() TMap<FName, TObjectPtr<UStaticMesh>> CityMeshes;
     UPROPERTY() TMap<FName, TObjectPtr<UMaterialInterface>> CityMaterials;
+    UPROPERTY() TMap<FName, TObjectPtr<UStaticMesh>> MarketMeshes;
+    UPROPERTY() TMap<FName, TObjectPtr<UMaterialInterface>> MarketMaterials;
     UPROPERTY() TObjectPtr<UTextRenderComponent> ClinicStatus;
     UPROPERTY() TObjectPtr<UTextRenderComponent> EvacStatus;
     UPROPERTY(Transient) TObjectPtr<UStaticMeshComponent> SeedVisual;
     UPROPERTY(Transient) TArray<TObjectPtr<UStaticMeshComponent>> ClinicLights;
     UPROPERTY(Transient) TArray<TObjectPtr<UStaticMeshComponent>> EvacLights;
+    UPROPERTY(Transient) TArray<TObjectPtr<UStaticMeshComponent>> FlightBeacons;
     bool bSeedAvailable = true;
     uint8 AppliedChoice = 0;
     bool bConsequenceComplete = false;
     TMap<FString, int32> GroupIndices;
-    void Shape(UStaticMesh* Mesh, FVector Position, FVector Scale, FLinearColor Tint, float Glow = 0, bool bCollision = true, FRotator Rotation = FRotator::ZeroRotator, UMaterialInterface* Override = nullptr);
+    void Shape(UStaticMesh* Mesh, FVector Position, FVector Scale, FLinearColor Tint, float Glow = 0, bool bCollision = true, FRotator Rotation = FRotator::ZeroRotator, UMaterialInterface* Override = nullptr, bool bMeshMaterials = false);
+    void LoadMarketArt();
+    void BuildStartingMarket();
+    void MarketPart(FName Mesh, FVector P, FVector S = FVector(1), FRotator Rotation = FRotator::ZeroRotator);
+    void MarketBox(FVector P, FVector S, FName Material, bool bCollision = false);
     void LoadCityArt();
     void CityPart(FName Mesh, FVector P, FVector S, FName Material, FLinearColor Tint, FRotator Rotation = FRotator::ZeroRotator);
     void CityBox(FVector P, FVector S, FName Material, FLinearColor Tint, bool Collision = true);

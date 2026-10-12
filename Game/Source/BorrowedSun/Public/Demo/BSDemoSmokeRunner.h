@@ -23,6 +23,7 @@ private:
     enum class EPhase : uint8
     {
         Startup,
+        StreetStartPause,
         WalkToSeed,
         LeavePlinth,
         WalkToDock,
@@ -60,6 +61,8 @@ private:
     bool bHasWalkSample = false;
     int32 RouteIndex = 0;
     int32 StartupFrames = 0;
+    int32 StartupVisualReadyFrames = 0;
+    FIntPoint RequestedViewport = FIntPoint::ZeroValue;
     int32 ArtViewIndex = 0;
     bool bArtViewCaptured = false;
     UPROPERTY(Transient) TObjectPtr<class ACameraActor> ArtCamera;

@@ -4,7 +4,7 @@ A local-first Unreal project for a solo city-to-orbit adventure. The first demo,
 
 ## Start here
 
-1. Read [the current city build validation](Docs/Operations/DEMO_V03_VALIDATION.md) and [approved art direction](Docs/Art/ART_DIRECTION.md). Earlier [v0.2](Docs/Operations/DEMO_V02_VALIDATION.md), [first playable](Docs/Operations/DEMO_VALIDATION.md), and [foundation](Docs/Operations/VALIDATION.md) records remain historical evidence.
+1. Read [the current market build validation](Docs/Operations/DEMO_V04_VALIDATION.md) and [approved art direction](Docs/Art/ART_DIRECTION.md). Earlier [v0.3](Docs/Operations/DEMO_V03_VALIDATION.md), [v0.2](Docs/Operations/DEMO_V02_VALIDATION.md), [first playable](Docs/Operations/DEMO_VALIDATION.md), and [foundation](Docs/Operations/VALIDATION.md) records remain historical evidence.
 2. Read [local operations](Tools/README.md). The installed engine is pinned in [engine-lock.json](Config/engine-lock.json). Personal engine paths belong in ignored `Tools/Environment.local.json`.
 3. Run the doctor and preflight from this directory:
 
@@ -44,7 +44,7 @@ Do not mistake a headless smoke test for a rendering, gameplay, cook or Shipping
 | Artifacts | Ignored logs, test fixtures and build output |
 | Vault | Optional ignored private license evidence; requires independent backup |
 
-The full design remains in the accompanying Borrowed Sun game specification. This workspace contains the demo source and development workflow. The first city block combines original modular geometry with reviewed CC0 textures and two scanned props in one continuous map. Broader streaming, combat, NPCs and paid vendor-kit production remain later work. Remote CI is not enabled.
+The full design remains in the accompanying Borrowed Sun game specification. This workspace contains the demo source and development workflow. The first city block combines original modular geometry with reviewed CC0 textures and scanned market props in one continuous map. Broader streaming, combat, NPCs and paid vendor-kit production remain later work. Remote CI is not enabled.
 
 ## Play and validate First Light
 

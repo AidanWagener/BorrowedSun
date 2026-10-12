@@ -6,6 +6,7 @@
 #include "Components/ExponentialHeightFogComponent.h"
 #include "Components/SkyAtmosphereComponent.h"
 #include "Components/SkyLightComponent.h"
+#include "Components/VolumetricCloudComponent.h"
 #include "Engine/DirectionalLight.h"
 #include "Engine/Engine.h"
 #include "Engine/ExponentialHeightFog.h"
@@ -249,11 +250,12 @@ int32 UBSDemoCreateMapCommandlet::Main(const FString& Params)
         World, TEXT("CityCoolSkyFill"), FVector(0.0, 0.0, 3500.0), FRotator(-65.0, 140.0, 0.0));
     ASkyLight* Sky = SpawnAuthoredActor<ASkyLight>(World, TEXT("DemoSkyLight"), FVector(0.0, 0.0, 1500.0));
     ASkyAtmosphere* Atmosphere = SpawnAuthoredActor<ASkyAtmosphere>(World, TEXT("DemoSkyAtmosphere"), FVector::ZeroVector);
+    AVolumetricCloud* Clouds = SpawnAuthoredActor<AVolumetricCloud>(World, TEXT("HarborCumulusClouds"), FVector::ZeroVector);
     AExponentialHeightFog* Fog = SpawnAuthoredActor<AExponentialHeightFog>(
         World, TEXT("DemoHeightFog"), FVector(0.0, 0.0, -300.0));
     APostProcessVolume* Exposure = SpawnAuthoredActor<APostProcessVolume>(World, TEXT("CityDaylightExposure"), FVector::ZeroVector);
 
-    if (!Demo || !PlayerStart || !Sun || !Fill || !Sky || !Atmosphere || !Fog || !Exposure)
+    if (!Demo || !PlayerStart || !Sun || !Fill || !Sky || !Atmosphere || !Clouds || !Fog || !Exposure)
     {
         UE_LOG(LogBSDemoCreateMap, Error, TEXT("An authored demo actor failed to spawn; packages were not saved."));
         return 4;
@@ -267,18 +269,28 @@ int32 UBSDemoCreateMapCommandlet::Main(const FString& Params)
     SunComponent->SetIntensity(35000.0f);
     SunComponent->SetLightColor(FLinearColor(1.0f, 0.91f, 0.76f));
     SunComponent->SetAtmosphereSunLight(true);
+    SunComponent->SetForwardShadingPriority(1);
     // Broad artistic sky fill keeps shaded interaction spaces readable without extra shadow passes.
     Fill->GetComponent()->SetMobility(EComponentMobility::Movable);
-    Fill->GetComponent()->SetIntensity(8000.0f);
+    Fill->GetComponent()->SetIntensity(3000.0f);
     Fill->GetComponent()->SetLightColor(FLinearColor(.65f,.78f,1.0f));
     Fill->GetComponent()->SetCastShadows(false);
     Fill->GetComponent()->SetAtmosphereSunLight(false);
     Sky->GetLightComponent()->SetMobility(EComponentMobility::Movable);
-    Sky->GetLightComponent()->SetIntensity(2.5f);
+    Sky->GetLightComponent()->SetIntensity(1.5f);
     Sky->GetLightComponent()->SetRealTimeCaptureEnabled(true);
-    Fog->GetComponent()->SetFogDensity(0.012f);
-    Fog->GetComponent()->SetFogHeightFalloff(0.2f);
-    Fog->GetComponent()->SetFogInscatteringColor(FLinearColor(0.16f, 0.19f, 0.24f));
+    auto* CloudMaterial=LoadObject<UMaterialInterface>(nullptr,TEXT("/Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud_Inst.m_SimpleVolumetricCloud_Inst"));
+    auto* CloudComponent=Clouds->FindComponentByClass<UVolumetricCloudComponent>();
+    if(!CloudMaterial||!CloudComponent)return 4;
+    CloudComponent->SetMaterial(CloudMaterial);
+    CloudComponent->SetLayerBottomAltitude(1.4f);
+    CloudComponent->SetLayerHeight(2.5f);
+    CloudComponent->SetViewSampleCountScale(.6f);
+    CloudComponent->SetReflectionViewSampleCountScale(.2f);
+    Fog->GetComponent()->SetFogDensity(0.028f);
+    Fog->GetComponent()->SetFogHeightFalloff(0.05f);
+    Fog->GetComponent()->SetFogInscatteringColor(FLinearColor(0.33f, 0.40f, 0.46f));
+    Fog->GetComponent()->SetVolumetricFog(true);
     Exposure->bUnbound=true;
     Exposure->Settings.bOverride_AutoExposureMinBrightness=true;
     Exposure->Settings.bOverride_AutoExposureMaxBrightness=true;

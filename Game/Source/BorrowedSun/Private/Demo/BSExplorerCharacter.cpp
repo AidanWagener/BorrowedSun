@@ -17,7 +17,7 @@ ABSExplorerCharacter::ABSExplorerCharacter()
     ViewCamera->SetupAttachment(GetCapsuleComponent());
     ViewCamera->SetRelativeLocation(FVector(0.0, 0.0, 72.0));
     ViewCamera->bUsePawnControlRotation = true;
-    ViewCamera->SetFieldOfView(90.0f);
+    ViewCamera->SetFieldOfView(80.0f);
 
     UCharacterMovementComponent* Movement = GetCharacterMovement();
     Movement->MaxWalkSpeed = WalkSpeed;

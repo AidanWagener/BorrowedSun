@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Create a square 2048x2048 seamless tileable BASE COLOR TEXTURE for a physically based 3D game fabric material, viewed perfectly orthographically from above, completely flat, unlit, no folds, no lighting, no vignette, no drop shadows, no perspective, no text. Fill the entire image edge to edge with dark but richly colored indigo handwoven cotton, not black, visible fine woven fibers. A restrained repeating geometric embroidery in old warm gold: small eight-petal sun rosettes connected by very fine angular vines, tiny diamond lozenges and dots, inspired by the original sun-powered civic city of Borrowed Sun. Intricate yet readable pattern, symmetrically constructed motifs, thin gold thread occupies about 15 percent of the surface, quiet indigo fields between motifs, with subtle wear in the gold and almost imperceptible irregularities in the weave. Consistent scale, roughly eight sun motifs across and eight down. Match opposite edges seamlessly. This will be UV tiled on market shade cloth and banners in a real time Unreal game. Absolutely no surrounding scene, no fabric draping, no borders around the entire image, no symbols of an existing religion, no logos. Texture only.",
+  "kind": "Generated albedo texture. Seam quality and material response require in-engine review.",
+  "generated": "2026-10-12",
+  "sha256": "79e9fe5ceb2e98fa4733524924e9768e1017fb375e8e0e0932ef98255e247571"
+}

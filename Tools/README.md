@@ -25,6 +25,14 @@ powershell -NoProfile -File Tools/Author-CityArt.ps1 -Execute
 
 Rendered screenshot validation now also captures four clean city review views after both mission routes finish. Frame measurement remains a separate run without screenshots or camera tours.
 
+## Starting market authoring
+
+The approved generated target and visual acceptance criteria are in `Docs/Art/STARTING_MARKET_BENCHMARK.md`. Use the portable Blender version and checksum in `Config/blender-lock.json`; record its executable path locally. Run Blender with `--background --factory-startup --python Tools/Art/Build-MarketKit.py` from the repository root. It creates 21 FBX meshes: original architecture, textiles, lantern and Keeper sculpture, plus paving relief derived from a reviewed CC0 height scan. The editable `.blend` source and manifest retain dimensions, material slots, triangle counts and file hashes. Keep exports at centimetre scale. The FBX importer flips Y to Unreal's handedness: authored front faces become +Y; the scan relief compensates for this conversion.
+
+`Tools/Fetch-MarketAssets.py` downloads the reviewed Poly Haven CC0 source set. `Docs/Registers/market-asset-intake.json` retains authors, URLs, license decisions and original file hashes. The generated cloth albedo has separate prompt provenance. After building the editor, run `Tools/Author-MarketArt.ps1 -Execute`; use `-Force` only when deliberately replacing this owned Market asset directory. The wrapper verifies source hashes and a fresh complete authoring report. The commandlet imports real assets, matches whole material-slot suffixes, handles the plant's separate masked leaf material and flips its OpenGL normal map. Opaque detail meshes and the tree use Nanite (tree shape preservation enabled); cloth and potted foliage retain ordinary mesh rendering. Windows explicitly targets DX12 Shader Model 6. Actual rendering and performance still require separate qualification.
+
+For a 1080p comparison, use `Tools/Demo.ps1 -Mode Validate -Screenshots -Width 1920 -Height 1080 -UserDirectory <fresh-root> -Execute`. The harness verifies actual viewport dimensions, waits for editor asset/shader compilation and lets the opening dialogue fade before recording the idle starting pose. DPI-aware rendering and the validation-only `-ForceRes` flag prevent desktop scaling from silently reducing the requested resolution. Explicit automated runs ignore physical input; ordinary play retains it. The harness still exercises actual character movement and interactions, and does not certify physical keyboard or gamepad behavior.
+
 ## Backup and restore
 
 The First Light delivery has a verified local snapshot, with current LFS payloads. See [demo validation](../Docs/Operations/DEMO_VALIDATION.md) for the observed restoration result and remaining off-device requirement.

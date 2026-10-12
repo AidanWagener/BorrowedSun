@@ -30,17 +30,19 @@ void ABSDemoWorld::BeginPlay()
     Super::BeginPlay();
     if (!Surface) Surface = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/BorrowedSun/Art/M_DemoSurface.M_DemoSurface"));
     LoadCityArt();
+    LoadMarketArt();
     BuildDistrict();
+    BuildStartingMarket();
     BuildSky();
     BuildStateVisuals();
     SetSeedAvailable(bSeedAvailable);
     ApplyConsequence(AppliedChoice, bConsequenceComplete);
 }
 
-void ABSDemoWorld::Shape(UStaticMesh* Mesh, FVector Position, FVector S, FLinearColor Tint, float Glow, bool bCollision, FRotator Rotation, UMaterialInterface* Override)
+void ABSDemoWorld::Shape(UStaticMesh* Mesh, FVector Position, FVector S, FLinearColor Tint, float Glow, bool bCollision, FRotator Rotation, UMaterialInterface* Override, bool bMeshMaterials)
 {
     if (!Mesh) return;
-    const FString Key = FString::Printf(TEXT("%s_%s_%s_%.1f_%d"), *Mesh->GetName(), Override ? *Override->GetName() : TEXT("Demo"), *Tint.ToString(), Glow, bCollision);
+    const FString Key = FString::Printf(TEXT("%s_%s_%s_%.1f_%d_%d"), *Mesh->GetName(), Override ? *Override->GetName() : TEXT("Demo"), *Tint.ToString(), Glow, bCollision, bMeshMaterials);
     int32 Index = INDEX_NONE;
     if (const int32* Found = GroupIndices.Find(Key)) Index = *Found;
     if (Index == INDEX_NONE)
@@ -52,7 +54,7 @@ void ABSDemoWorld::Shape(UStaticMesh* Mesh, FVector Position, FVector S, FLinear
         Group->SetCollisionEnabled(bCollision ? ECollisionEnabled::QueryAndPhysics : ECollisionEnabled::NoCollision);
         Group->SetCollisionResponseToAllChannels(ECR_Block);
         Group->SetCanEverAffectNavigation(false);
-        if (Override || Surface)
+        if (!bMeshMaterials && (Override || Surface))
         {
             auto* Material = UMaterialInstanceDynamic::Create(Override ? Override : Surface.Get(), this);
             Material->SetVectorParameterValue(TEXT("Tint"), Tint);
@@ -64,6 +66,11 @@ void ABSDemoWorld::Shape(UStaticMesh* Mesh, FVector Position, FVector S, FLinear
         GroupIndices.Add(Key, Index);
     }
     Groups[Index]->AddInstance(FTransform(Rotation, Position, S), true);
+}
+
+void ABSDemoWorld::SetFlightBeaconsVisible(bool bVisible)
+{
+    for(const auto& Visual:FlightBeacons)if(Visual)Visual->SetVisibility(bVisible);
 }
 
 void ABSDemoWorld::Box(FVector P, FVector S, FLinearColor C, float Glow, bool Collision)
@@ -114,6 +121,20 @@ void ABSDemoWorld::BuildStateVisuals()
     // Create stateful geometry once. Checkpoint refreshes only toggle these components.
     if (SeedVisual) return;
     SeedVisual = StateVisual(TEXT("Sunseed"), Sphere, SeedLocation(), FVector(.6f), Gold, 5);
+    if(auto* Metal=MarketMaterials.FindRef(TEXT("M_MarketBrass")).Get())
+    {
+        auto* Cage=NewObject<UHierarchicalInstancedStaticMeshComponent>(this,TEXT("SunseedArmillary"));
+        Cage->SetStaticMesh(Cylinder);Cage->SetMaterial(0,Metal);Cage->SetMobility(EComponentMobility::Movable);
+        Cage->SetCollisionEnabled(ECollisionEnabled::NoCollision);Cage->SetCanEverAffectNavigation(false);
+        Cage->AttachToComponent(SeedVisual,FAttachmentTransformRules::KeepWorldTransform);Cage->RegisterComponent();
+        // A single instanced child follows the seed's visibility on collection and checkpoint load.
+        for(int Ring=0;Ring<3;++Ring)for(int I=0;I<48;++I)
+        {
+            auto Point=[&](double T){return SeedLocation()+(Ring==0?FVector(0,FMath::Cos(T)*34,FMath::Sin(T)*34):Ring==1?FVector(FMath::Cos(T)*34,0,FMath::Sin(T)*34):FVector(FMath::Cos(T)*34,FMath::Sin(T)*34,0));};
+            const FVector A=Point(I*2*PI/48),B=Point((I+1)*2*PI/48),D=B-A;
+            Cage->AddInstance(FTransform(FRotationMatrix::MakeFromZ(D).Rotator(),(A+B)*.5,FVector(.013,.013,D.Size()/100)),true);
+        }
+    }
     for (int32 ServiceIndex = 0; ServiceIndex < 2; ++ServiceIndex)
     {
         const FVector Service = ServiceIndex == 0 ? ClinicLocation() : EvacuationLocation();

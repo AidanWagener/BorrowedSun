@@ -9,6 +9,7 @@
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
 #include "Engine/GameViewportClient.h"
+#include "GameFramework/GameUserSettings.h"
 #include "Engine/World.h"
 #include "EngineUtils.h"
 #include "Camera/CameraActor.h"
@@ -24,6 +25,10 @@
 #include "Misc/Parse.h"
 #include "Misc/Paths.h"
 #include "UnrealClient.h"
+#if WITH_EDITOR
+#include "AssetCompilingManager.h"
+#include "ShaderCompiler.h"
+#endif
 
 namespace
 {
@@ -105,6 +110,16 @@ void ABSDemoSmokeRunner::Start()
         TEXT("Checks FApp::CanEverRender and command-line NullRHI request; this is not a visual-quality assertion."))) return;
     if (bMeasureFrames && !Check(TEXT("FrameCaptureWithoutScreenshots"), !bScreenshots,
         TEXT("Capture screenshots separately so image readback does not distort the frame interval sample."))) return;
+    int32 Width=0,Height=0;
+    const bool WidthSet=FParse::Value(FCommandLine::Get(),TEXT("BSDemoQAWidth="),Width);
+    const bool HeightSet=FParse::Value(FCommandLine::Get(),TEXT("BSDemoQAHeight="),Height);
+    if(WidthSet||HeightSet)
+    {
+        if(!Check(TEXT("RequestedViewportValid"),WidthSet&&HeightSet&&Width>=640&&Width<=3840&&Height>=360&&Height<=2160&&GEngine&&GEngine->GetGameUserSettings()))return;
+        RequestedViewport=FIntPoint(Width,Height);
+        auto* Settings=GEngine->GetGameUserSettings();Settings->SetScreenResolution(RequestedViewport);
+        Settings->SetFullscreenMode(EWindowMode::Windowed);Settings->ApplyResolutionSettings(true);
+    }
     UE_LOG(LogTemp, Display, TEXT("BSDemoAutoTest: Starting isolated rendered routes, namespace=%s"), *SaveNamespace);
 }
 
@@ -141,8 +156,7 @@ void ABSDemoSmokeRunner::BeginRoute(ABSDemoGameMode* Mode, ABSDemoPlayerControll
         && Progress.Choice == EBSDemoChoice::None && !Progress.bSunseedOwned
         && Cast<ABSExplorerCharacter>(Controller->GetPawn()) != nullptr && !Controller->IsOverlayOpen())) return;
     RouteStartedAt = FPlatformTime::Seconds();
-    Capture(TEXT("street-start"));
-    SetPhase(EPhase::WalkToSeed);
+    SetPhase(bScreenshots?EPhase::StreetStartPause:EPhase::WalkToSeed);
 }
 
 bool ABSDemoSmokeRunner::WalkTo(ABSDemoPlayerController* Controller, const FVector& Target, float Tolerance, float DeltaSeconds)
@@ -225,14 +239,27 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
     {
         // Time spent loading does not count as rendered warmup for the first screenshot.
         if (++StartupFrames < 120 || Now - StartedAt < 2.0) return;
+#if WITH_EDITOR
+        // Editor gameplay can render fallback materials while asynchronous compilation runs.
+        // Wait for the real assets and another settled second before the first art capture.
+        if(bScreenshots)
+        {
+            if((GShaderCompilingManager&&GShaderCompilingManager->IsCompiling())||FAssetCompilingManager::Get().GetNumRemainingAssets()>0)
+            {StartupVisualReadyFrames=0;return;}
+            if(++StartupVisualReadyFrames<60)return;
+        }
+#endif
         if (!Mode || !Controller || !Controller->GetPawn() || !Mode->Ship || !GEngine || !GEngine->GameViewport)
         {
             if (Now - StartedAt > 15.0) Check(TEXT("RuntimeReady"), false, TEXT("Missing mode, controller, pawn, ship or game viewport."));
             return;
         }
         if (!Check(TEXT("RuntimeReady"), true)) return;
+        const FIntPoint Actual=GEngine->GameViewport->Viewport?GEngine->GameViewport->Viewport->GetSizeXY():FIntPoint::ZeroValue;
+        if(RequestedViewport.X>0&&!Check(TEXT("RequestedViewportApplied"),Actual==RequestedViewport,FString::Printf(TEXT("Requested %dx%d; actual %dx%d."),RequestedViewport.X,RequestedViewport.Y,Actual.X,Actual.Y)))return;
         TActorIterator<ABSDemoWorld> City(GetWorld());
         if (!Check(TEXT("CityArtReady"), City && City->HasCityArt(), TEXT("All 14 city meshes and seven PBR materials loaded in this runtime."))) return;
+        if (!Check(TEXT("MarketArtReady"), City && City->HasMarketArt(), TEXT("All 30 market meshes and nine architectural materials loaded in this runtime."))) return;
         BeginRoute(Mode, Controller);
         return;
     }
@@ -246,6 +273,17 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
     const FVector Service = RouteIndex == 0 ? ABSDemoWorld::ClinicLocation() : ABSDemoWorld::EvacuationLocation();
     switch (Phase)
     {
+    case EPhase::StreetStartPause:
+        // Capture the real idle gameplay view after the opening dialogue naturally fades.
+        if(Mode->MessageSeconds<=0)
+        {
+            const FVector P=Controller->GetPawn()->GetActorLocation();
+            if(!Check(TEXT("IdleStartPose"),FVector::Dist2D(P,ABSDemoWorld::StartLocation())<5.f&&FMath::Abs(Controller->GetControlRotation().Yaw)<1.f,
+                FString::Printf(TEXT("Idle pose %s; view %s"),*P.ToString(),*Controller->GetControlRotation().ToString())))return;
+            Capture(TEXT("street-start"));
+            SetPhase(EPhase::WalkToSeed);
+        }
+        break;
     case EPhase::WalkToSeed:
         if (WalkTo(Controller, ABSDemoWorld::SeedLocation() - FVector(280, 0, 0), 25.f, DeltaSeconds))
         {
@@ -256,11 +294,11 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
         }
         break;
     case EPhase::LeavePlinth:
-        if (WalkTo(Controller, ABSDemoWorld::SeedLocation() - FVector(280, 350, 0), 30.f, DeltaSeconds))
+        if (WalkTo(Controller, ABSDemoWorld::SeedLocation() - FVector(280, 250, 0), 30.f, DeltaSeconds))
             SetPhase(EPhase::WalkToDock);
         break;
     case EPhase::WalkToDock:
-        if (WalkTo(Controller, ABSDemoWorld::DockLocation() + FVector(-600, -350, 0), 30.f, DeltaSeconds))
+        if (WalkTo(Controller, ABSDemoWorld::DockLocation() + FVector(-600, -250, 0), 30.f, DeltaSeconds))
         {
             Mode->Interact(Controller);
             if (!Check(TEXT("BoardThroughInteraction"), Mode->IsFlying(Controller)
@@ -301,11 +339,11 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
         }
         break;
     case EPhase::LeaveDock:
-        if (WalkTo(Controller, ABSDemoWorld::DockLocation() + FVector(-650, -350, 0), 30.f, DeltaSeconds))
+        if (WalkTo(Controller, ABSDemoWorld::DockLocation() + FVector(-650, -250, 0), 30.f, DeltaSeconds))
             SetPhase(EPhase::CrossStreet);
         break;
     case EPhase::CrossStreet:
-        if (WalkTo(Controller, FVector(Service.X, -350, Service.Z), 30.f, DeltaSeconds))
+        if (WalkTo(Controller, FVector(Service.X, -250, Service.Z), 30.f, DeltaSeconds))
             SetPhase(EPhase::WalkToService);
         break;
     case EPhase::WalkToService:
@@ -379,8 +417,8 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
 
 void ABSDemoSmokeRunner::SetArtView(ABSDemoPlayerController* Controller)
 {
-    const FVector Eye[]={{-6500,-7900,5100},{-3000,-460,245},{4800,400,2200},{3700,-750,420}};
-    const FVector Target[]={{0,400,1000},{-1000,-1420,410},{11200,6500,4200},{1200,800,250}};
+    const FVector Eye[]={{-6500,-7900,5100},{-3120,-160,215},{11500,-6500,1600},{3700,-750,420}};
+    const FVector Target[]={{0,400,1000},{-1800,-500,300},{15500,0,3000},{1200,800,250}};
     ArtCamera->SetActorLocation(Eye[ArtViewIndex]);
     ArtCamera->SetActorRotation((Target[ArtViewIndex]-Eye[ArtViewIndex]).Rotation());
     ArtCamera->GetCameraComponent()->SetFieldOfView(ArtViewIndex==0?68.f:74.f);

@@ -75,16 +75,25 @@ void ABSDemoHUD::DrawHUD()
         return;
     }
 
-    Panel(28,24,760,108,Ink);
-    Panel(28,24,4,108,Amber);
-    Text(TEXT("BORROWED SUN  /  FIRST LIGHT"),48,37,17,Mint);
-    Text(G->Objective(),48,72,21,Paper);
-    Text(FString::Printf(TEXT("SUNSEED  %s     |     LEASE  %s"),G->Progress().bSunseedOwned?TEXT("IN CUSTODY"):G->Progress().Stage==EBSDemoStage::Complete?TEXT("INSTALLED"):TEXT("UNCLAIMED"),G->Progress().Choice==EBSDemoChoice::Clinic?TEXT("CLINIC"):G->Progress().Choice==EBSDemoChoice::Evacuation?TEXT("EVACUATION"):TEXT("UNASSIGNED")),48,106,13,Muted);
-    Panel(W-247,24,219,66,Ink);
-    Text(G->IsFlying(PC)?TEXT("KESTREL / FLIGHT"):TEXT("LOWER QUAY / ON FOOT"),W-231,36,16,Amber);
+    FString Objective=G->Objective(),SecondLine;
+    if(Objective.Len()>48)
+    {
+        int32 Cut=48;while(Cut>24&&Objective[Cut]!=TCHAR(' '))--Cut;
+        SecondLine=Objective.Mid(Cut+1);Objective=Objective.Left(Cut);
+    }
+    const float Extra=SecondLine.IsEmpty()?0:22;
+    Panel(22,20,393,88+Extra,Ink);
+    Panel(22,20,2,88+Extra,Amber);
+    Text(TEXT("BORROWED SUN  /  FIRST LIGHT"),38,30,14,Mint);
+    Text(Objective,38,55,18,Paper);
+    if(!SecondLine.IsEmpty())Text(SecondLine,38,77,18,Paper);
+    FString Custody=FString::Printf(TEXT("SUNSEED %s"),G->Progress().bSunseedOwned?TEXT("IN CUSTODY"):G->Progress().Stage==EBSDemoStage::Complete?TEXT("INSTALLED"):TEXT("UNCLAIMED"));
+    if(G->Progress().Choice!=EBSDemoChoice::None)Custody+=G->Progress().Choice==EBSDemoChoice::Clinic?TEXT("   /   CLINIC"):TEXT("   /   EVACUATION");
+    Text(Custody,38,83+Extra,11,Muted);
+    Panel(W-235,20,213,G->IsFlying(PC)?61:38,Ink);
+    Text(G->IsFlying(PC)?TEXT("KESTREL / FLIGHT"):TEXT("ORISON / LOWER QUAY"),W-220,31,14,Amber);
     if(G->IsFlying(PC) && G->Ship)
         Text(FString::Printf(TEXT("%03.0f km/h   /   %s"),G->Ship->GetSpeed()*.036f,PC->bGuidance?TEXT("ASSIST"):TEXT("MANUAL")),W-231,62,16,Paper);
-    else Text(TEXT("F1 controls   /   ESC menu"),W-231,62,15,Muted);
 
     if(PC->GetPawn())
     {
@@ -97,9 +106,9 @@ void ABSDemoHUD::DrawHUD()
         Screen.X=FMath::Clamp(Screen.X,170.f,W-210);
         Screen.Y=FMath::Clamp(Screen.Y,165.f,H-205);
         Panel(Screen.X-3,Screen.Y-3,6,6,Amber);
-        Panel(Screen.X-110,Screen.Y+12,245,44,Ink);
-        Text(FString::Printf(TEXT("%s%s"),Front?TEXT(""):TEXT("TURN / "),*G->ObjectiveLabel()),Screen.X-99,Screen.Y+17,14,Amber);
-        Text(FString::Printf(TEXT("%.0f m"),Distance),Screen.X-99,Screen.Y+36,13,Paper);
+        Panel(Screen.X-80,Screen.Y+12,180,39,Ink);
+        Text(FString::Printf(TEXT("%s%s"),Front?TEXT(""):TEXT("TURN / "),*G->ObjectiveLabel()),Screen.X-70,Screen.Y+17,12,Amber);
+        Text(FString::Printf(TEXT("%.0f m"),Distance),Screen.X-70,Screen.Y+34,11,Paper);
     }
     Panel(W*.5f-1,H*.5f-5,2,10,Paper*.6f);
     Panel(W*.5f-5,H*.5f-1,10,2,Paper*.6f);
@@ -122,9 +131,9 @@ void ABSDemoHUD::DrawHUD()
         Text(First,48,H-130,17,Paper);
         if(!Second.IsEmpty()) Text(Second,48,H-104,17,Paper);
     }
-    Panel(0,H-51,W,51,Ink);
-    Text(G->IsFlying(PC)?TEXT("WASD thrust / strafe    SPACE / C altitude    SHIFT boost    CTRL brake    G assist    E dock"):TEXT("WASD move    MOUSE look    SPACE jump    SHIFT sprint    E interact"),30,H-36,16,Paper);
-    Text(TEXT("F5 save   F9 load   R recover   ESC menu"),W-365,H-16,12,Muted);
+    Panel(22,H-49,G->IsFlying(PC)?650:410,29,Ink);
+    Text(G->IsFlying(PC)?TEXT("WASD thrust   SPACE / C altitude   SHIFT boost   CTRL brake   G assist   E dock"):TEXT("WASD move    E interact    SPACE jump    SHIFT sprint"),34,H-41,12,Paper);
+    Text(TEXT("F1 controls   F5 save   F9 load   R recover   ESC menu"),W-364,H-37,11,Paper);
 
     if(G->Progress().Stage==EBSDemoStage::AtRelay)
     {

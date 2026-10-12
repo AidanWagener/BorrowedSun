@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "author": "Original Borrowed Sun architecture and sculpture; CC0 scan-derived paving",
+  "blenderVersion": "4.5.14 LTS",
+  "units": "centimetres",
+  "assetCount": 21,
+  "assets": [
+    {
+      "name": "SM_MarketArch_Round",
+      "path": "SourceArt/MarketKit/SM_MarketArch_Round.fbx",
+      "sha256": "e735154099a5d6771b48d6aea23c41684622629f592576a1b25c54217a16bbac",
+      "dimensionsCm": [
+        478.0,
+        126.0,
+        507.0
+      ],
+      "triangles": 28924,
+      "materials": [
+        "Stone",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_MarketArch_Tall",
+      "path": "SourceArt/MarketKit/SM_MarketArch_Tall.fbx",
+      "sha256": "4740c2c5c45e374903639bcb990d0d0fedbc639f61c62a70535a371e9f74976d",
+      "dimensionsCm": [
+        478.0,
+        126.0,
+        562.0
+      ],
+      "triangles": 28924,
+      "materials": [
+        "Stone",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_MarketDoor",
+      "path": "SourceArt/MarketKit/SM_MarketDoor.fbx",
+      "sha256": "f358450e537a4405ef54e3ce443386e5d01119234116611f70494c556d583254",
+      "dimensionsCm": [
+        305.9975891113281,
+        42.30000305175781,
+        435.0
+      ],
+      "triangles": 25848,
+      "materials": [
+        "Wood",
+        "Shadow",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_MarketWindow",
+      "path": "SourceArt/MarketKit/SM_MarketWindow.fbx",
+      "sha256": "3056eb1af8d3c89a7b24d0448d7aa7aea9e19846397e22adb295f14beb514568",
+      "dimensionsCm": [
+        280.0,
+        65.0,
+        377.0
+      ],
+      "triangles": 47012,
+      "materials": [
+        "Wood",
+        "Brass",
+        "Copper",
+        "Shadow",
+        "Stone"
+      ]
+    },
+    {
+      "name": "SM_MarketCorbel",
+      "path": "SourceArt/MarketKit/SM_MarketCorbel.fbx",
+      "sha256": "c70b60212e214f3d24e2139b31ae4eed4e1595997282281329ee40f50ddc1374",
+      "dimensionsCm": [
+        96.76023864746094,
+        54.5,
+        109.17261505126953
+      ],
+      "triangles": 3452,
+      "materials": [
+        "Stone",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_MarketBalcony",
+      "path": "SourceArt/MarketKit/SM_MarketBalcony.fbx",
+      "sha256": "7688a2223d8ef8858e1c33adb97f87a5ceb67ff078b10774014fa627076e9e79",
+      "dimensionsCm": [
+        395.0,
+        133.0,
+        154.0
+      ],
+      "triangles": 7156,
+      "materials": [
+        "Stone",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_MarketCanopy",
+      "path": "SourceArt/MarketKit/SM_MarketCanopy.fbx",
+      "sha256": "98ad47bfa07b8930c99070d7645ff6501ad488c5293c65c8771bb57819cf1081",
+      "dimensionsCm": [
+        562.4229125976562,
+        391.83270263671875,
+        63.53630447387695
+      ],
+      "triangles": 9952,
+      "materials": [
+        "Cloth",
+        "Wood"
+      ]
+    },
+    {
+      "name": "SM_MarketBanner",
+      "path": "SourceArt/MarketKit/SM_MarketBanner.fbx",
+      "sha256": "6533b5fe93b47d310254cb91f8687d9c416ca8da9ffff75cd80c0e9d5214fb4d",
+      "dimensionsCm": [
+        170.0,
+        40.83317565917969,
+        516.3626098632812
+      ],
+      "triangles": 3344,
+      "materials": [
+        "Cloth",
+        "Brass",
+        "Wood"
+      ]
+    },
+    {
+      "name": "SM_MarketTable",
+      "path": "SourceArt/MarketKit/SM_MarketTable.fbx",
+      "sha256": "9e5565d9a0564d5f0c40bce50ef384908eb295379f2138ebea49b76786960566",
+      "dimensionsCm": [
+        274.0,
+        115.0,
+        100.0
+      ],
+      "triangles": 4712,
+      "materials": [
+        "Wood",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_SunseedReliquary",
+      "path": "SourceArt/MarketKit/SM_SunseedReliquary.fbx",
+      "sha256": "646ce92f5e3f826c0ac1b3fe3989bc75961a2f90cab27c447adc111d7d67145f",
+      "dimensionsCm": [
+        208.0,
+        208.0,
+        96.0
+      ],
+      "triangles": 12768,
+      "materials": [
+        "Stone",
+        "Brass",
+        "Copper"
+      ]
+    },
+    {
+      "name": "SM_FlagstonePatch_0",
+      "path": "SourceArt/MarketKit/SM_FlagstonePatch_0.fbx",
+      "sha256": "d70d68d918b07e69f531f8695847570568ead475ca8bc76c6ea0f9b2b7502c57",
+      "dimensionsCm": [
+        400.0,
+        400.0,
+        5.203404426574707
+      ],
+      "triangles": 51200,
+      "materials": [
+        "Stone"
+      ]
+    },
+    {
+      "name": "SM_FlagstonePatch_1",
+      "path": "SourceArt/MarketKit/SM_FlagstonePatch_1.fbx",
+      "sha256": "b3e861924fb83b4d56569c9692bfd37916d9564862be9bcafea437031cf22a90",
+      "dimensionsCm": [
+        400.0,
+        400.0,
+        5.203404426574707
+      ],
+      "triangles": 51200,
+      "materials": [
+        "Stone"
+      ]
+    },
+    {
+      "name": "SM_FlagstonePatch_2",
+      "path": "SourceArt/MarketKit/SM_FlagstonePatch_2.fbx",
+      "sha256": "ec01fed1c9773c9f0f5cca0aed6ff8c9e67c77cf2f3243034a00d3b2dbdcd3cc",
+      "dimensionsCm": [
+        400.0,
+        400.0,
+        5.203404426574707
+      ],
+      "triangles": 51200,
+      "materials": [
+        "Stone"
+      ]
+    },
+    {
+      "name": "SM_CopperDownpipe",
+      "path": "SourceArt/MarketKit/SM_CopperDownpipe.fbx",
+      "sha256": "fff45353bcd195fd42eec5cce29d242797a81170e27ea56fe04d8082cdc21746",
+      "dimensionsCm": [
+        25.0,
+        83.27977752685547,
+        406.9944152832031
+      ],
+      "triangles": 2364,
+      "materials": [
+        "Copper",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_DrainStrip",
+      "path": "SourceArt/MarketKit/SM_DrainStrip.fbx",
+      "sha256": "4f103739555778ae9ef212ec75e5795d6791c554133ed8a4b35d1e65b849159e",
+      "dimensionsCm": [
+        33.0,
+        200.0,
+        9.5
+      ],
+      "triangles": 5088,
+      "materials": [
+        "Stone",
+        "Shadow",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_CarvedPlanter",
+      "path": "SourceArt/MarketKit/SM_CarvedPlanter.fbx",
+      "sha256": "5b6f3672da3fc9d5c29f4dda30b4fcebb58497eb4bbfd83101e78f010d14819d",
+      "dimensionsCm": [
+        133.25,
+        133.25,
+        113.0
+      ],
+      "triangles": 3456,
+      "materials": [
+        "Stone",
+        "Brass",
+        "Shadow"
+      ]
+    },
+    {
+      "name": "SM_WovenSackCluster",
+      "path": "SourceArt/MarketKit/SM_WovenSackCluster.fbx",
+      "sha256": "4d5b69a74b132ee23ec6e1761992e5a00ed7bc3efbf9c9813874b96e00cc0ec5",
+      "dimensionsCm": [
+        107.33680725097656,
+        80.96954345703125,
+        81.0
+      ],
+      "triangles": 8496,
+      "materials": [
+        "Cloth",
+        "Wood"
+      ]
+    },
+    {
+      "name": "SM_KeeperSculpt",
+      "path": "SourceArt/MarketKit/SM_KeeperSculpt.fbx",
+      "sha256": "d2bc35d0051436fe10182ac94faa7e359990343798deeb25763af123ebd39841",
+      "dimensionsCm": [
+        445.086669921875,
+        354.3687438964844,
+        1008.5921020507812
+      ],
+      "triangles": 109792,
+      "materials": [
+        "Copper",
+        "Brass",
+        "Shadow"
+      ]
+    },
+    {
+      "name": "SM_SolarHalo",
+      "path": "SourceArt/MarketKit/SM_SolarHalo.fbx",
+      "sha256": "6e239cfe9b524e5f56920fdf546b2cc209586669a8d5079bb0aff230b7ca8350",
+      "dimensionsCm": [
+        897.9892578125,
+        34.0,
+        888.0252685546875
+      ],
+      "triangles": 37480,
+      "materials": [
+        "Copper",
+        "Brass"
+      ]
+    },
+    {
+      "name": "SM_MarketDrape",
+      "path": "SourceArt/MarketKit/SM_MarketDrape.fbx",
+      "sha256": "724c25a3a8221fdf8417e3cc1f7db106639f5a46e8b77bfcb640501e1c5d0ea9",
+      "dimensionsCm": [
+        380.0,
+        152.0,
+        80.95697021484375
+      ],
+      "triangles": 7168,
+      "materials": [
+        "Cloth"
+      ]
+    },
+    {
+      "name": "SM_MarketLantern",
+      "path": "SourceArt/MarketKit/SM_MarketLantern.fbx",
+      "sha256": "0cf313f8d021304821f8ce9e518821ca8fd43d3ff001a6504ce40a8e1dece6ca",
+      "dimensionsCm": [
+        51.25,
+        51.25,
+        92.19999694824219
+      ],
+      "triangles": 3680,
+      "materials": [
+        "Brass"
+      ]
+    }
+  ]
+}

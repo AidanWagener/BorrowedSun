@@ -105,6 +105,8 @@ void ABSDemoGameMode::RestorePose(APlayerController* PC)
     else
     {
         Ship->ResetFlight(FTransform(FRotator::ZeroRotator,ABSDemoWorld::DockLocation()));
+        Ground->ConsumeMovementInputVector();
+        Ground->GetCharacterMovement()->StopMovementImmediately();
         Ground->SetActorLocation(Stage==EBSDemoStage::Complete?ABSDemoWorld::DockLocation()+FVector(-600,0,-100):ABSDemoWorld::StartLocation(),false,nullptr,ETeleportType::TeleportPhysics);
         Ground->SetActorHiddenInGame(false);
         Ground->SetActorEnableCollision(true);
@@ -112,6 +114,7 @@ void ABSDemoGameMode::RestorePose(APlayerController* PC)
         PC->Possess(Ground);
         PC->SetControlRotation(FRotator::ZeroRotator);
     }
+    if(District)District->SetFlightBeaconsVisible(IsFlying(PC));
     RefreshConsequence();
 }
 
@@ -131,6 +134,7 @@ bool ABSDemoGameMode::Board(APlayerController* PC)
     Ground->SetActorEnableCollision(false);
     Ground->GetCharacterMovement()->DisableMovement();
     PC->SetControlRotation(Ship->GetActorRotation());
+    if(District)District->SetFlightBeaconsVisible(true);
     Say(TEXT("KESTREL  //  W/S thrust. A/D strafe. SPACE/C altitude. SHIFT boost. CTRL brake. G toggles flight assist."),12);
     return true;
 }
@@ -148,6 +152,7 @@ bool ABSDemoGameMode::Disembark(APlayerController* PC)
     PC->Possess(Ground);
     if(PC->GetPawn()!=Ground) return false;
     PC->SetControlRotation(FRotator(0,90,0));
+    if(District)District->SetFlightBeaconsVisible(false);
     if(auto* DemoPC=Cast<ABSDemoPlayerController>(PC)) DemoPC->bGuidance=false;
     Say(Progress().Stage==EBSDemoStage::Returning?TEXT("IONA  //  You're home. Install the seed at the service you chose. Let them see the light."):TEXT("KESTREL  //  Dock secure. Your expedition can continue whenever you're ready."));
     return true;
