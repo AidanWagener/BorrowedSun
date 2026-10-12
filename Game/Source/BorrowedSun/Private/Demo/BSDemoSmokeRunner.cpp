@@ -260,6 +260,7 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
         TActorIterator<ABSDemoWorld> City(GetWorld());
         if (!Check(TEXT("CityArtReady"), City && City->HasCityArt(), TEXT("All 14 city meshes and seven PBR materials loaded in this runtime."))) return;
         if (!Check(TEXT("MarketArtReady"), City && City->HasMarketArt(), TEXT("All 30 market meshes and nine architectural materials loaded in this runtime."))) return;
+        if (!Check(TEXT("WorkshopArtReady"), City && City->HasWorkshopArt(), TEXT("The editable Second Dawn assembly and every referenced mesh loaded and passed validation."))) return;
         BeginRoute(Mode, Controller);
         return;
     }

@@ -2,7 +2,7 @@
 Import the reviewed starting-market assets through the pinned Unreal editor.
 #>
 [CmdletBinding()]
-param([switch]$Execute,[switch]$Force,[string]$ConfigPath)
+param([switch]$Execute,[switch]$Force,[switch]$WorkshopOnly,[string]$ConfigPath)
 . "$PSScriptRoot/Common.ps1"
 $ctx=Get-WorkspaceContext -ConfigPath $ConfigPath
 Assert-Project $ctx
@@ -13,6 +13,8 @@ $kit=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/MarketKit/market-k
 $sources+=@($kit.assets)
 $cloth=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/Generated/IndigoSunWeave.provenance.json') -Raw | ConvertFrom-Json
 $sources+=@([pscustomobject]@{path='SourceArt/Generated/IndigoSunWeave.png';sha256=$cloth.sha256})
+$workshop=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/LanternWorkshop/workshop-manifest.json') -Raw | ConvertFrom-Json
+$sources+=@($workshop.assets)+@($workshop.files)
 foreach($source in $sources) {
     $file=Resolve-ContainedPath $ctx.Root $source.path
     Assert-NoReparsePoint $file
@@ -21,6 +23,7 @@ foreach($source in $sources) {
 $executable=Join-Path $ctx.Config.EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe'
 $arguments=@($ctx.Project,'-run=BSMarketArt','-NullRHI','-unattended','-nop4','-nosplash','-stdout','-FullStdOutLogOutput')
 if($Force){$arguments+='-Force'}
+if($WorkshopOnly){$arguments+='-WorkshopOnly'}
 if(-not $Execute){[pscustomobject]@{DryRun=$true;SourceFiles=$sources.Count;Force=[bool]$Force;Executable=$executable;Arguments=$arguments}|ConvertTo-Json;return}
 $run=New-RunDirectory $ctx 'market-art'
 $arguments+='-abslog='+(Join-Path $run 'engine.log')
@@ -33,12 +36,18 @@ try {
     $report=Get-Content -LiteralPath $reportPath -Raw | ConvertFrom-Json
     $expected=1+9+$kit.assetCount
     foreach($asset in $register.assets){foreach($mat in $asset.materials){$expected+=@($mat.maps.PSObject.Properties).Count;if($asset.type -eq 'model'){$expected++}};if($asset.type -eq 'model'){$expected++}}
-    $content=Join-Path (Split-Path $ctx.Project -Parent) 'Content/BorrowedSun/Market'
-    $assets=@(Get-ChildItem -LiteralPath $content -Recurse -File -Filter '*.uasset')
-    if($report.success -ne $true -or $report.assetCount -ne $expected -or $assets.Count -ne $expected){throw ('Market package set is incomplete. Expected '+$expected+'; found '+$assets.Count)}
-    foreach($asset in $assets){Assert-MaterializedAsset $asset.FullName}
+    if($WorkshopOnly){$expected=0}
+    $expected+=5+$workshop.assetCount
+    $paths=@($report.assets | Sort-Object -Unique)
+    if($report.success -ne $true -or $report.assetCount -ne $expected -or $paths.Count -ne $expected){throw ('Market report is incomplete. Expected '+$expected+'; found '+$paths.Count)}
+    $content=Join-Path (Split-Path $ctx.Project -Parent) 'Content'
+    foreach($path in $paths){
+        if(-not $path.StartsWith('/Game/BorrowedSun/Market/')){throw 'Authoring report escaped its owned content directory.'}
+        $package=$path.Split('.')[0].Substring(6)+'.uasset'
+        Assert-MaterializedAsset (Resolve-ContainedPath $content $package)
+    }
     Copy-Item -LiteralPath $reportPath -Destination (Join-Path $run 'market-assets.json')
-    $result.Status='Passed';$result.AuthoredPackages=$assets.Count
+    $result.Status='Passed';$result.AuthoredPackages=$paths.Count;$result.WorkshopOnly=[bool]$WorkshopOnly
     Write-Host ('Market art authored and source hashes verified: '+$run)
 } catch {$result.Status='Failed';throw}
 finally {$result.FinishedUtc=[DateTime]::UtcNow.ToString('o');Write-JsonFile (Join-Path $run 'market-art-result.json') $result}

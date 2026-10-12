@@ -11,7 +11,7 @@
   "MaxParallelActions": 2,
   "TimeoutMinutes": 60,
   "TestFilter": "BorrowedSun.Smoke",
-  "MinimumTests": 13,
+  "MinimumTests": 14,
   "ExpectedTests": [
     "BorrowedSun.Smoke.Identity.CanonicalAndDistinct",
     "BorrowedSun.Smoke.Identity.RejectsAmbiguity",
@@ -25,7 +25,8 @@
     "BorrowedSun.Smoke.Demo.SerializationRoundTrip",
     "BorrowedSun.Smoke.Settings.RejectsUnsafeValues",
     "BorrowedSun.Smoke.Settings.IsolatedConfigRoundTrip",
-    "BorrowedSun.Smoke.Settings.CityPresetMigration"
+    "BorrowedSun.Smoke.Settings.CityPresetMigration",
+    "BorrowedSun.Smoke.Content.WorkshopAssembly"
   ],
   "MapsToCook": [
     "/Game/BorrowedSun/Maps/L_BorrowedSunDemo"

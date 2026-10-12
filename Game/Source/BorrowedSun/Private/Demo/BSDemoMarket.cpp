@@ -1,4 +1,5 @@
 #include "Demo/BSDemoWorld.h"
+#include "Demo/BSMarketAssembly.h"
 #include "Engine/StaticMesh.h"
 #include "Materials/MaterialInterface.h"
 #include "Components/PointLightComponent.h"
@@ -29,6 +30,9 @@ void ABSDemoWorld::MarketBox(FVector P,FVector S,FName Material,bool Collision)
 void ABSDemoWorld::BuildStartingMarket()
 {
     if(!HasMarketArt())return;
+    const auto* Workshop=LoadObject<UBSMarketAssembly>(nullptr,TEXT("/Game/BorrowedSun/Market/Assemblies/DA_SecondDawnWorkshop.DA_SecondDawnWorkshop"));
+    FString WorkshopError;
+    const bool bValidWorkshop=Workshop&&Workshop->Validate(WorkshopError);
     const FLinearColor Brass(.65f,.40f,.14f),Rope(.08f,.055f,.03f);
     // A narrower street establishes human scale. The north break leads to the unchanged clinic.
     for(int Row=0;Row<2;++Row)for(int I=0;I<4;++I)
@@ -103,6 +107,20 @@ void ABSDemoWorld::BuildStartingMarket()
             Beam({X+DX,Y+Out*172,477},Lamp+FVector(0,0,100),1.1,Brass);
             auto* Light=NewObject<UPointLightComponent>(this);Light->SetupAttachment(RootComponent);Light->SetMobility(EComponentMobility::Movable);
             Light->SetWorldLocation(Lamp+FVector(0,0,36));Light->SetLightColor(FLinearColor(1,.65,.30));Light->SetIntensity(320);Light->SetAttenuationRadius(190);Light->SetCastShadows(false);Light->RegisterComponent();
+        }
+        if(Row==0&&I==1&&bValidWorkshop)
+        {
+            const FTransform Anchor(R,FVector(X,Y,8));
+            for(const auto& Part:Workshop->Parts)
+            {
+                const FTransform World=Part.LocalTransform*Anchor;
+                Shape(Part.Mesh,World.GetLocation(),World.GetScale3D(),FLinearColor::White,0,Part.bCollision,World.Rotator(),nullptr,true);
+            }
+            // The trade sign's bracket returns to an existing canopy post.
+            Beam({X+302,Y+110,425},{X+405,Y+170,425},2.5,Brass);
+            bWorkshopReady=true;
+            UE_LOG(LogTemp,Display,TEXT("Second Dawn assembly placed: %d parts"),Workshop->Parts.Num());
+            continue;
         }
         MarketPart(TEXT("SM_MarketTable"),{X,Y,8},{1.45,1.25,1},R);
         MarketPart(TEXT("SM_MarketDrape"),{X,Y,112},{1,1,1},R);

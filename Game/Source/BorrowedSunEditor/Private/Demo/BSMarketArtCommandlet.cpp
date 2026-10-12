@@ -1,4 +1,5 @@
 #include "Demo/BSMarketArtCommandlet.h"
+#include "Demo/BSMarketAssembly.h"
 #include "AssetImportTask.h"
 #include "Engine/StaticMesh.h"
 #include "Engine/Texture2D.h"
@@ -143,7 +144,7 @@ return col*Tint.rgb;
         auto* Task=NewObject<UAssetImportTask>();Task->bAutomated=true;Factory->SetAssetImportTask(Task);
         auto* UI=Factory->ImportUI.Get();UI->MeshTypeToImport=FBXIT_StaticMesh;UI->bAutomatedImportShouldDetectType=false;UI->bImportMaterials=false;UI->bImportTextures=false;
         UI->StaticMeshImportData->bCombineMeshes=true;
-        UI->StaticMeshImportData->bAutoGenerateCollision=Name==TEXT("SM_MarketTable")||Name==TEXT("SM_CarvedPlanter")||Name==TEXT("SM_wooden_crate_02")||Name==TEXT("SM_wooden_stool_01");
+        UI->StaticMeshImportData->bAutoGenerateCollision=Name==TEXT("SM_MarketTable")||Name==TEXT("SM_CarvedPlanter")||Name==TEXT("SM_wooden_crate_02")||Name==TEXT("SM_wooden_stool_01")||Name==TEXT("SM_WorkshopBench")||Name==TEXT("SM_WorkshopRack");
         UI->StaticMeshImportData->NormalImportMethod=FBXNIM_ImportNormals;
         auto* SM=Cast<UStaticMesh>(UFactory::StaticImportObject(UStaticMesh::StaticClass(),P,*Name,RF_Public|RF_Standalone,*Source(Relative),nullptr,Factory));
         if(!SM)return false;
@@ -161,6 +162,68 @@ return col*Tint.rgb;
         UE_LOG(LogTemp,Display,TEXT("Market mesh %s: bounds cm %s; Nanite %d"),*Name,*SM->GetBoundingBox().GetSize().ToString(),Nanite);
         return Save(SM);
     }
+
+    bool ImportWorkshop()
+    {
+        const auto Manifest=Read(TEXT("SourceArt/LanternWorkshop/workshop-manifest.json"));
+        if(!Manifest)return false;
+        TMap<FString,UMaterial*> Materials;
+        for(const TCHAR* Key:{TEXT("Wood"),TEXT("Brass"),TEXT("Copper"),TEXT("Shadow")})
+        {
+            const FString Name=FString(TEXT("M_Market"))+Key;
+            auto* M=LoadObject<UMaterial>(nullptr,*(Base+TEXT("Materials/")+Name+TEXT(".")+Name));
+            if(!M)return false;Materials.Add(Key,M);
+        }
+        Materials.Add(TEXT("Enamel"),Solid(TEXT("M_WorkshopEnamel"),FLinearColor(.026f,.12f,.16f),.25f,.31f));
+        Materials.Add(TEXT("Iron"),Solid(TEXT("M_WorkshopIron"),FLinearColor(.075f,.085f,.085f),.8f,.52f));
+        Materials.Add(TEXT("Ivory"),Solid(TEXT("M_WorkshopIvory"),FLinearColor(.72f,.60f,.36f),0,.57f));
+        Materials.Add(TEXT("MilkGlass"),Solid(TEXT("M_WorkshopMilkGlass"),FLinearColor(.82f,.68f,.39f),0,.25f));
+        for(const auto& Pair:Materials)if(!Pair.Value)return false;
+        for(const auto& Entry:Manifest->GetArrayField(TEXT("assets")))
+        {
+            const auto A=Entry->AsObject();
+            if(!ImportMesh(A->GetStringField(TEXT("name")),A->GetStringField(TEXT("path")),Materials,true))return false;
+        }
+        const auto Definition=Read(Manifest->GetStringField(TEXT("assembly")));
+        if(!Definition)return false;
+        const FString Name=Definition->GetStringField(TEXT("name"));
+        if(Name!=TEXT("DA_SecondDawnWorkshop"))return false;
+        auto* Package=CreatePackage(*(Base+TEXT("Assemblies/")+Name));
+        auto* Assembly=NewObject<UBSMarketAssembly>(Package,*Name,RF_Public|RF_Standalone);
+        Assembly->AssemblyId=FName(*Definition->GetStringField(TEXT("id")));
+        for(const auto& Entry:Definition->GetArrayField(TEXT("parts")))
+        {
+            const auto P=Entry->AsObject();FBSMarketAssemblyPart Part;
+            auto ReadVector=[&](const TCHAR* Field,FVector& Out)
+            {
+                const TArray<TSharedPtr<FJsonValue>>* Array=nullptr;
+                if(!P->TryGetArrayField(Field,Array)||Array->Num()!=3)return false;
+                double V[3];for(int I=0;I<3;++I)if(!(*Array)[I]->TryGetNumber(V[I])||!FMath::IsFinite(V[I]))return false;
+                Out=FVector(V[0],V[1],V[2]);return true;
+            };
+            FVector Position,Scale,Rotation;
+            if(!ReadVector(TEXT("position"),Position)||!ReadVector(TEXT("scale"),Scale)||!ReadVector(TEXT("rotation"),Rotation))return false;
+            const FString Mesh=P->GetStringField(TEXT("mesh"));
+            Part.Key=FName(*P->GetStringField(TEXT("key")));
+            Part.Mesh=LoadObject<UStaticMesh>(nullptr,*(Base+TEXT("Meshes/")+Mesh+TEXT(".")+Mesh));
+            Part.LocalTransform=FTransform(FRotator(Rotation.X,Rotation.Y,Rotation.Z),Position,Scale);
+            Part.bCollision=P->GetBoolField(TEXT("collision"));Assembly->Parts.Add(Part);
+        }
+        FString Reason;
+        if(!Assembly->Validate(Reason)){UE_LOG(LogTemp,Error,TEXT("Workshop rejected: %s"),*Reason);return false;}
+        UE_LOG(LogTemp,Display,TEXT("Second Dawn workshop: %d validated editable parts"),Assembly->Parts.Num());
+        return Save(Assembly);
+    }
+
+    int32 WriteReport()
+    {
+        TArray<TSharedPtr<FJsonValue>> Paths;for(const auto& Path:SavedAssets)Paths.Add(MakeShared<FJsonValueString>(Path));
+        TSharedPtr<FJsonObject> Result=MakeShared<FJsonObject>();Result->SetArrayField(TEXT("assets"),Paths);Result->SetNumberField(TEXT("assetCount"),SavedAssets.Num());Result->SetBoolField(TEXT("success"),true);
+        FString Text;FJsonSerializer::Serialize(Result.ToSharedRef(),TJsonWriterFactory<>::Create(&Text));
+        IFileManager::Get().MakeDirectory(*(FPaths::ProjectSavedDir()/TEXT("MarketAuthoring")),true);
+        if(!FFileHelper::SaveStringToFile(Text,*(FPaths::ProjectSavedDir()/TEXT("MarketAuthoring/market-assets.json"))))return 9;
+        UE_LOG(LogTemp,Display,TEXT("Market authoring complete: %d packages"),SavedAssets.Num());return 0;
+    }
 }
 
 UBSMarketArtCommandlet::UBSMarketArtCommandlet(){IsClient=false;IsServer=false;IsEditor=true;LogToConsole=true;ShowErrorCount=true;}
@@ -168,6 +231,7 @@ int32 UBSMarketArtCommandlet::Main(const FString& Params)
 {
     using namespace BSMarketArt;SavedAssets.Reset();
     if(IFileManager::Get().DirectoryExists(*(FPaths::ProjectContentDir()/TEXT("BorrowedSun/Market")))&&!FParse::Param(*Params,TEXT("Force")))return 2;
+    if(FParse::Param(*Params,TEXT("WorkshopOnly")))return ImportWorkshop()?WriteReport():10;
     const auto Intake=Read(TEXT("Docs/Registers/market-asset-intake.json"));const auto Kit=Read(TEXT("SourceArt/MarketKit/market-kit-manifest.json"));
     if(!Intake||!Kit)return 3;
     TMap<FString,TMap<FString,UTexture2D*>> Surfaces;TMap<FString,UMaterial*> KitMats;
@@ -215,10 +279,6 @@ int32 UBSMarketArtCommandlet::Main(const FString& Params)
         const bool Nanite=!Name.Contains(TEXT("Canopy"))&&!Name.Contains(TEXT("Banner"))&&!Name.Contains(TEXT("Sack"))&&!Name.Contains(TEXT("Drape"));
         if(!ImportMesh(Name,Asset->GetStringField(TEXT("path")),Materials,Nanite))return 8;
     }
-    TArray<TSharedPtr<FJsonValue>> Paths;for(const auto& Path:SavedAssets)Paths.Add(MakeShared<FJsonValueString>(Path));
-    TSharedPtr<FJsonObject> Result=MakeShared<FJsonObject>();Result->SetArrayField(TEXT("assets"),Paths);Result->SetNumberField(TEXT("assetCount"),SavedAssets.Num());Result->SetBoolField(TEXT("success"),true);
-    FString Text;FJsonSerializer::Serialize(Result.ToSharedRef(),TJsonWriterFactory<>::Create(&Text));
-    IFileManager::Get().MakeDirectory(*(FPaths::ProjectSavedDir()/TEXT("MarketAuthoring")),true);
-    if(!FFileHelper::SaveStringToFile(Text,*(FPaths::ProjectSavedDir()/TEXT("MarketAuthoring/market-assets.json"))))return 9;
-    UE_LOG(LogTemp,Display,TEXT("Market authoring complete: %d packages"),SavedAssets.Num());return 0;
+    if(!ImportWorkshop())return 10;
+    return WriteReport();
 }
