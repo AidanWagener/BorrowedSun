@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "planningDate": "2026-10-12",
+  "capacityHoursPerWeek": 20,
+  "estimatesAre": "focused-hour planning ranges, not commitments",
+  "workInProgressLimit": {
+    "gameplay": 1,
+    "independentResearchOrReview": 1
+  },
+  "tasks": [
+    {
+      "id": "BS-001",
+      "title": "Qualify workspace and engine",
+      "status": "done",
+      "owner": "creator",
+      "dependsOn": [],
+      "estimateHours": [
+        2,
+        5
+      ],
+      "confidence": "high",
+      "acceptance": "Doctor and preflight run; actual Editor and Game build result saved; missing prerequisites explicit.",
+      "evidence": [
+        "Docs/Operations/VALIDATION.md",
+        "Docs/Operations/engine-validation.json"
+      ]
+    },
+    {
+      "id": "BS-002",
+      "title": "Prove independent recovery",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-001"
+      ],
+      "estimateHours": [
+        1,
+        3
+      ],
+      "confidence": "medium",
+      "acceptance": "Backup restored into a separate directory with LFS payloads, hashes verified, project can build.",
+      "evidence": []
+    },
+    {
+      "id": "BS-003",
+      "title": "Own and package a test map",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-001"
+      ],
+      "estimateHours": [
+        2,
+        5
+      ],
+      "confidence": "medium",
+      "acceptance": "An authored .umap is the configured startup map; staged Win64 executable starts without editor.",
+      "evidence": []
+    },
+    {
+      "id": "BS-004",
+      "title": "Ground control and camera route",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-003"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "medium",
+      "acceptance": "Keyboard and controller cross a doorway/stair/ledge route; camera handles obstruction; rebind path exists.",
+      "evidence": []
+    },
+    {
+      "id": "BS-005",
+      "title": "Unified interaction contract",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-004"
+      ],
+      "estimateHours": [
+        4,
+        8
+      ],
+      "confidence": "medium",
+      "acceptance": "Door and console use one focus/prompt contract; cancel/range loss/unload consume no action.",
+      "evidence": []
+    },
+    {
+      "id": "BS-006",
+      "title": "Mission state and stable IDs",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-005"
+      ],
+      "estimateHours": [
+        5,
+        10
+      ],
+      "confidence": "medium",
+      "acceptance": "An authored job completes once, its IDs survive relaunch, duplicate reward request is harmless.",
+      "evidence": []
+    },
+    {
+      "id": "BS-007",
+      "title": "Save checkpoint and schema recovery",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-006"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "medium",
+      "acceptance": "Save roundtrip, corrupted latest save fallback, supported migration and unsupported version message tested.",
+      "evidence": []
+    },
+    {
+      "id": "BS-008",
+      "title": "Sunseed custody and charges",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-007"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "medium",
+      "acceptance": "Exactly one custodian survives interrupted transfer, death, reload; lease allocation separate from charges.",
+      "evidence": []
+    },
+    {
+      "id": "BS-009",
+      "title": "Free flight donor experiment",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-003"
+      ],
+      "estimateHours": [
+        2,
+        4
+      ],
+      "confidence": "low",
+      "acceptance": "Evaluate one candidate in isolation; record controller gap, license/AI restrictions, packaged behavior and removal path.",
+      "evidence": []
+    },
+    {
+      "id": "BS-010",
+      "title": "Owned assisted-flight controller",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-009"
+      ],
+      "estimateHours": [
+        8,
+        16
+      ],
+      "confidence": "low",
+      "acceptance": "Hover, strafe, brake and boost feel usable; collision recovery cannot strand the mission; controller supported.",
+      "evidence": []
+    },
+    {
+      "id": "BS-011",
+      "title": "Board and disembark safely",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-008",
+        "BS-010"
+      ],
+      "estimateHours": [
+        5,
+        10
+      ],
+      "confidence": "medium",
+      "acceptance": "Possession succeeds before input context changes; failed boarding preserves character and cargo state.",
+      "evidence": []
+    },
+    {
+      "id": "BS-012",
+      "title": "Sector transition readiness protocol",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-011"
+      ],
+      "estimateHours": [
+        10,
+        20
+      ],
+      "confidence": "low",
+      "acceptance": "Destination collision ready before commit; transforms, velocity and cargo preserved; timeout returns to safe state.",
+      "evidence": []
+    },
+    {
+      "id": "BS-013",
+      "title": "Orbit docking and return",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-012"
+      ],
+      "estimateHours": [
+        5,
+        10
+      ],
+      "confidence": "medium",
+      "acceptance": "City-to-orbit-to-city route survives repeated travel, save and interrupted handoff.",
+      "evidence": []
+    },
+    {
+      "id": "BS-014",
+      "title": "Free art intake pilot",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-004"
+      ],
+      "estimateHours": [
+        3,
+        6
+      ],
+      "confidence": "medium",
+      "acceptance": "One small asset selection passes scale/collision/material/license/memory and package checks.",
+      "evidence": []
+    },
+    {
+      "id": "BS-015",
+      "title": "Approved market block recipe",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-014",
+        "BS-011"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "medium",
+      "acceptance": "One recipe supports walking, mission sightlines and ship approach; costs captured in packaged route.",
+      "evidence": []
+    },
+    {
+      "id": "BS-016",
+      "title": "Service lease and return consequence",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-008",
+        "BS-015"
+      ],
+      "estimateHours": [
+        5,
+        10
+      ],
+      "confidence": "medium",
+      "acceptance": "Clinic versus evacuation lift decision is understandable; chosen outcome persists after returning and reload.",
+      "evidence": []
+    },
+    {
+      "id": "BS-017",
+      "title": "Guard perception and recoverable pursuit",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-005"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "medium",
+      "acceptance": "Sight/noise/evidence drive one guard; lost target is searched; detection leaves a valid completion route.",
+      "evidence": []
+    },
+    {
+      "id": "BS-018",
+      "title": "Single combat and flight interception",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-017",
+        "BS-010"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "low",
+      "acceptance": "One legible attack/counter and one flight interception can be completed with accessibility assists.",
+      "evidence": []
+    },
+    {
+      "id": "BS-019",
+      "title": "Accessible interaction and flight UI",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-011"
+      ],
+      "estimateHours": [
+        4,
+        8
+      ],
+      "confidence": "medium",
+      "acceptance": "Subtitles, remap, sensitivity, hold-toggle and reduced motion work across both control contexts.",
+      "evidence": []
+    },
+    {
+      "id": "BS-020",
+      "title": "Audio readability and crew presence",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-016"
+      ],
+      "estimateHours": [
+        4,
+        8
+      ],
+      "confidence": "medium",
+      "acceptance": "Dialogue, warning and power cues are intelligible; captions and volume categories work; source rights recorded.",
+      "evidence": []
+    },
+    {
+      "id": "BS-021",
+      "title": "Ten-minute expedition integration",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-013",
+        "BS-016",
+        "BS-018",
+        "BS-019",
+        "BS-020"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "low",
+      "acceptance": "One packaged route connects ground, sunseed, ship, orbit and mandatory return with no progress blocker.",
+      "evidence": []
+    },
+    {
+      "id": "BS-022",
+      "title": "Performance and failure capture",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-021"
+      ],
+      "estimateHours": [
+        4,
+        8
+      ],
+      "confidence": "medium",
+      "acceptance": "Fixed market/flight/return captures use documented settings; save/transfer failures recover; dominant bottleneck known.",
+      "evidence": []
+    },
+    {
+      "id": "BS-023",
+      "title": "External playtest and revision",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-022"
+      ],
+      "estimateHours": [
+        6,
+        12
+      ],
+      "confidence": "low",
+      "acceptance": "Unfamiliar players attempt route without coaching; observed problems drive one revision; no sales inference.",
+      "evidence": []
+    },
+    {
+      "id": "BS-024",
+      "title": "Prototype continuation decision",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": [
+        "BS-023",
+        "BS-002"
+      ],
+      "estimateHours": [
+        2,
+        4
+      ],
+      "confidence": "medium",
+      "acceptance": "Review enjoyment, performance, content throughput and remaining cost; choose repair, slice, smaller prologue or stop.",
+      "evidence": []
+    }
+  ]
+}

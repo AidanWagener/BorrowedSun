@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-12",
+  "decisions": [
+    {
+      "id": "ADR-001",
+      "decision": "Qualify installed Launcher UE5.8.2 before any upgrade",
+      "reason": "Existing installation and Cargo compatibility reduce initial friction",
+      "revisit": "Pinned-engine blocker or proven upgrade benefit with rollback"
+    },
+    {
+      "id": "ADR-002",
+      "decision": "Git LFS locally first; private remote only after binary/storage forecast",
+      "reason": "Solo code workflow, existing tools, no required service spend",
+      "revisit": "Multi-artist locking pain or measured storage/transfer cost"
+    },
+    {
+      "id": "ADR-003",
+      "decision": "Two modules, runtime and editor; no large gameplay framework by default",
+      "reason": "Own narrow contracts and avoid integration overhead",
+      "revisit": "Framework qualification proves net time saved for central mechanic"
+    },
+    {
+      "id": "ADR-004",
+      "decision": "One active gameplay change, parallel isolated research/review",
+      "reason": "Protect binary assets and integration attention",
+      "revisit": "Measured independent streams and adequate hardware"
+    },
+    {
+      "id": "ADR-005",
+      "decision": "Free selective asset intake before paid basket",
+      "reason": "Budget below EUR500 and limited RAM/storage",
+      "revisit": "Documented missing capability with favorable total integration cost"
+    },
+    {
+      "id": "ADR-006",
+      "decision": "Local builds/tests; hosted self-runner template inactive",
+      "reason": "Keep machine access and recurring costs explicit",
+      "revisit": "Need remote unattended dispatch and runner isolation is ready"
+    },
+    {
+      "id": "ADR-007",
+      "decision": "Authored city/orbit sectors and persistent contracts",
+      "reason": "Preserve core fantasy within solo scope",
+      "revisit": "Funded full-planet gate passes"
+    },
+    {
+      "id": "ADR-008",
+      "decision": "AI assists production; no runtime generative backend",
+      "reason": "Offline game, deterministic saves, asset rights and controlled scope",
+      "revisit": "Specific funded design need with cost, safety and rights review"
+    }
+  ]
+}

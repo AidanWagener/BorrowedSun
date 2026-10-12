@@ -1,0 +1,33 @@
+# Generated Unreal and IDE state. Authored Config and Content stay tracked.
+**/Binaries/
+**/Intermediate/
+**/Saved/
+**/DerivedDataCache/
+**/.vs/
+*.sln
+*.suo
+*.VC.db
+*.VC.opendb
+*.opensdf
+*.sdf
+*.xcodeproj/
+*.xcworkspace/
+*.code-workspace.local
+# Project-specific machine settings, secrets and produced artifacts.
+/Artifacts/
+/Cache/
+/Sandbox/
+/Vault/
+/Backups/
+/Tools/Environment.local.json
+*.local.json
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+__pycache__/
+*.pyc
+# Keep vendor binary-only plugins out until an explicit exception is reviewed.
+# Do not ignore Game/Build: it can contain authored platform resources.

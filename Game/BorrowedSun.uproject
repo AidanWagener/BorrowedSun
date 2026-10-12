@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.8",
+  "Category": "Games",
+  "Description": "Borrowed Sun: offline single-player production foundation.",
+  "Modules": [
+    { "Name": "BorrowedSun", "Type": "Runtime", "LoadingPhase": "Default" },
+    { "Name": "BorrowedSunEditor", "Type": "Editor", "LoadingPhase": "PostEngineInit" }
+  ],
+  "Plugins": [
+    { "Name": "EnhancedInput", "Enabled": true },
+    { "Name": "AndroidFileServer", "Enabled": false }
+  ],
+  "TargetPlatforms": [ "Windows" ]
+}

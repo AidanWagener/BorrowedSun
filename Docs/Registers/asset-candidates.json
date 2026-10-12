@@ -1,0 +1,1294 @@
+{
+  "schemaVersion": "1.0",
+  "researchedAt": "2026-10-12",
+  "project": "Borrowed Sun",
+  "purpose": "Decision register, not an installer or purchase order",
+  "budget": {
+    "authoritativeRegister": "Docs/Registers/budget.json",
+    "currency": "EUR",
+    "userCeilingExclusive": 500,
+    "planningEnvelope": 480,
+    "spentDuringSetup": 0,
+    "allowances": [
+      {
+        "category": "memory-storage-independent-backup",
+        "ceiling": 240
+      },
+      {
+        "category": "qualified-asset-or-production-aid",
+        "ceiling": 120
+      },
+      {
+        "category": "operations-or-testing",
+        "ceiling": 40
+      },
+      {
+        "category": "uncommitted-buffer",
+        "ceiling": 80
+      }
+    ],
+    "initialRecommendedSpendEur": 0,
+    "recurringRecommendedSpendEur": 0,
+    "scope": "Shared initial envelope; no separate asset budget or reserve. Existing AI access assumed. Reconcile all purchases against budget.json.",
+    "rule": "Include tax and payment-provider FX in actual checkout. Larger city kits require recorded reallocation after machine capacity and independent recovery needs are confirmed and funded or resolved."
+  },
+  "firstBasket": {
+    "immediate": [],
+    "nextWhenNeeded": [
+      "C08",
+      "C12",
+      "C23",
+      "C26",
+      "C28",
+      "C31",
+      "C33",
+      "C35"
+    ],
+    "isolatedEvaluations": [
+      "C20",
+      "C14"
+    ],
+    "optionalPaidPriority": [
+      "C07",
+      "C27"
+    ],
+    "mutuallyExclusive": [
+      [
+        "C05",
+        "C06"
+      ],
+      [
+        "C08",
+        "C09",
+        "C10"
+      ],
+      [
+        "C31",
+        "C32"
+      ],
+      [
+        "C36",
+        "C37"
+      ]
+    ],
+    "nextMovementDonor": [
+      "C01"
+    ],
+    "whenAssetIntakeStarts": [
+      "C02",
+      "C03",
+      "C04",
+      "C22"
+    ],
+    "deferredCityKitsAfterReallocation": [
+      "C05",
+      "C06"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "C01",
+      "name": "Unreal Third Person template",
+      "vendor": "Epic Games",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/third-person-template-in-unreal-engine?lang=en-US",
+      "category": "movement-donor",
+      "decision": "next-movement-step-donor",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Engine license; record accepted Unreal terms",
+      "version": "UE 5.8 docs; pin exact Launcher patch",
+      "integrationRisk": "Low-medium: migrate selected content from a separate template intake project into the owned two-module C++ scaffold; no template content currently integrated.",
+      "replacement": "Own minimal Character/Pawn",
+      "testGate": "First qualify a doorway/stair/ledge movement route with keyboard and controller in a package. Later interaction, custody, boarding and reload are separate owned steps.",
+      "sourceIds": [
+        "A01"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C02",
+      "name": "Cargo",
+      "vendor": "KitBash3D",
+      "url": "https://help.kitbash3d.com/en/articles/7833635-cargo-supported-3d-software-and-render-engines",
+      "category": "asset-intake",
+      "decision": "first-basket",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Cargo/platform terms plus each asset's Usage Rights",
+      "version": "3.2.1 listed; Launcher UE 5.2–5.8; Blender.org 4.2–5.2",
+      "integrationRisk": "Medium: importer/assembly dependency and version mismatch",
+      "replacement": "Vendor native package/manual approved import",
+      "testGate": "Import one Neo City model into disposable project, then package without editor-only dependencies.",
+      "sourceIds": [
+        "A02",
+        "A03",
+        "A04",
+        "A48"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C03",
+      "name": "Neo City",
+      "vendor": "KitBash3D",
+      "url": "https://kitbash3d.com/products/mini-kit-neo-city",
+      "category": "city",
+      "decision": "first-basket",
+      "priceObserved": {
+        "display": "$0",
+        "amount": 0,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "KitBash EULA; record free-offering rights and entity tier",
+      "version": "Exact kit revision/engine package to record",
+      "integrationRisk": "Medium: nine models are limited building blocks",
+      "replacement": "Own blockout and Blender facade modules",
+      "testGate": "One playable corner, roof, entrance and altered material palette; measured packaged frame capture.",
+      "sourceIds": [
+        "A07",
+        "A06",
+        "A47"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C04",
+      "name": "Mission to Minerva",
+      "vendor": "KitBash3D",
+      "url": "https://kitbash3d.com/products/mission-to-minerva",
+      "category": "industrial-space",
+      "decision": "first-basket",
+      "priceObserved": {
+        "display": "$0",
+        "amount": 0,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "KitBash EULA; free-offering rights require retention",
+      "version": "Gameplay Ready shown; exact acquired revision pending",
+      "integrationRisk": "Medium: large source kit; art direction and texture residency",
+      "replacement": "Primitive orbital structures and own proxy ship",
+      "testGate": "Import only landing pad, habitat, gantry and ship proxy; test high-speed collision and orbit silhouette.",
+      "sourceIds": [
+        "A08",
+        "A06",
+        "A47"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C05",
+      "name": "CyberPunk",
+      "vendor": "KitBash3D",
+      "url": "https://kitbash3d.com/products/cyberpunk",
+      "category": "city",
+      "decision": "deferred-budget-reallocation-required",
+      "priceObserved": {
+        "display": "$245 direct store display",
+        "amount": 245,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Perpetual KitBash Usage Rights; organization tier at checkout",
+      "version": "Gameplay Ready listing; exact revision pending",
+      "integrationRisk": "Medium: runtime-ready label does not design routes/interiors",
+      "replacement": "C03 plus own facade modules",
+      "testGate": "Not initial shopping within EUR120 assets allowance. Require identified block pieces, confirmed and funded/resolved machine and recovery needs, recorded reallocation within EUR480 total, and inclusive EUR checkout.",
+      "sourceIds": [
+        "A09",
+        "A05",
+        "A47"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C06",
+      "name": "Cyber District",
+      "vendor": "KitBash3D",
+      "url": "https://kitbash3d.com/products/cyber-district",
+      "category": "city",
+      "decision": "deferred-alternative-budget-reallocation-required",
+      "priceObserved": {
+        "display": "$245 direct store display",
+        "amount": 245,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Perpetual KitBash Usage Rights; organization tier at checkout",
+      "version": "Gameplay Ready listing; exact revision pending",
+      "integrationRisk": "Medium: stylistic overlap and duplicate architecture spend",
+      "replacement": "C05 OR C03",
+      "testGate": "Same budget gate as C05: machine/recovery resolved, recorded reallocation and inclusive checkout. Select at most one primary city kit by route-serving shapes.",
+      "sourceIds": [
+        "A10",
+        "A05"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C07",
+      "name": "Cyber Streets",
+      "vendor": "KitBash3D",
+      "url": "https://kitbash3d.com/products/cyber-streets",
+      "category": "street-props",
+      "decision": "paid-conditional",
+      "priceObserved": {
+        "display": "$95 direct store display",
+        "amount": 95,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Perpetual KitBash Usage Rights; organization tier at checkout",
+      "version": "Gameplay Ready listing; exact revision pending",
+      "integrationRisk": "Medium: visual clutter and repeated signs",
+      "replacement": "C03 props plus original stalls/awnings",
+      "testGate": "Inclusive checkout must fit remaining EUR120 qualified-assets allowance. Demonstrate ten specific missing useful props; preserve approach/cover/collision readability.",
+      "sourceIds": [
+        "A11",
+        "A05"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C08",
+      "name": "Modular Scifi Season 2 Starter Bundle",
+      "vendor": "Jonathon Frederick",
+      "url": "https://www.fab.com/listings/cb3c4494-4060-4a80-b079-e46936cb8dd0",
+      "category": "ship-interior",
+      "decision": "first-basket-trial",
+      "priceObserved": {
+        "display": "Free",
+        "amount": 0,
+        "currency": null,
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Exact Fab acquisition/legacy license pending; do not assume Standard",
+      "version": "UE4-era description; UE5.8 compatibility unverified",
+      "integrationRisk": "Medium-high: old shaders, grid scale, collisions and migrated dependencies",
+      "replacement": "Own simple docked interior; C09 fallback",
+      "testGate": "Build one doorway, station and cargo cradle in pinned UE; package and traverse at third-person camera distance.",
+      "sourceIds": [
+        "A13",
+        "A46"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C09",
+      "name": "Modular SciFi Season 1 Starter Bundle",
+      "vendor": "Jonathon Frederick",
+      "url": "https://www.fab.com/listings/86913335-3c75-42bf-8404-54fe9d9d7396",
+      "category": "ship-interior",
+      "decision": "free-fallback",
+      "priceObserved": {
+        "display": "Free",
+        "amount": 0,
+        "currency": null,
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Exact Fab acquisition/legacy license pending",
+      "version": "UE4-era description; UE5.8 compatibility unverified",
+      "integrationRisk": "Medium-high: redundant import if Season2 succeeds",
+      "replacement": "C08 or own modular interior",
+      "testGate": "Try only if C08 fails visual/collision gate; migrate one room rather than demo maps.",
+      "sourceIds": [
+        "A12",
+        "A46"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C10",
+      "name": "Spaceship Interior Environment Set",
+      "vendor": "Denys Rutkovskyi",
+      "url": "https://www.fab.com/listings/e55bb035-8720-487f-8a36-4ce50d16f344?lang=en",
+      "category": "ship-interior",
+      "decision": "defer",
+      "priceObserved": {
+        "display": "Not observed",
+        "amount": null,
+        "currency": null,
+        "billing": "unknown",
+        "observedAt": "2026-10-12",
+        "confidence": "not-observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Exact Fab license and tier pending",
+      "version": "Listing mentions 4.18 update; current engine support unknown",
+      "integrationRisk": "High until current price/license/version clarified",
+      "replacement": "C08 free bundle",
+      "testGate": "No purchase until free interior fails, vendor compatibility confirmed, and room shell test possible.",
+      "sourceIds": [
+        "A14"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C11",
+      "name": "Spaceships: Armada individual vehicle",
+      "vendor": "KitBash3D",
+      "url": "https://kitbash3d.com/collections/vehicles",
+      "category": "ship-art",
+      "decision": "defer",
+      "priceObserved": {
+        "display": "$75 each catalog display",
+        "amount": 75,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "KitBash perpetual terms/tier for chosen SKU",
+      "version": "Exact model revision and UE support pending",
+      "integrationRisk": "Medium: decorative model does not supply handling/interior",
+      "replacement": "C04 placeholder or original Blender silhouette",
+      "testGate": "Buy at most one enemy silhouette after combat exists; inspect attachment points, collision and memory.",
+      "sourceIds": [
+        "A15",
+        "A05"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C12",
+      "name": "Poly Haven selected materials/HDRI",
+      "vendor": "Poly Haven",
+      "url": "https://polyhaven.com/license",
+      "category": "materials",
+      "decision": "first-basket-as-needed",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "CC0 downloadable assets; website terms separate",
+      "version": "Resolution/asset revision per download",
+      "integrationRisk": "Low-medium: texture-size and color-space mistakes",
+      "replacement": "Own flat material and trim sheet",
+      "testGate": "Limit initial palette to five assets; compare 1K/2K/4K in target camera; store map packing settings.",
+      "sourceIds": [
+        "A16"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C13",
+      "name": "ambientCG",
+      "vendor": "ambientCG",
+      "url": "https://docs.ambientcg.com/license/",
+      "category": "materials",
+      "decision": "free-fallback",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "CC0",
+      "version": "Resolution/revision per asset",
+      "integrationRisk": "Low-medium: duplicate libraries and inconsistent texel density",
+      "replacement": "C12",
+      "testGate": "Acquire only a named missing surface; license and file hash recorded.",
+      "sourceIds": [
+        "A17"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C14",
+      "name": "Game Animation Sample Project",
+      "vendor": "Epic Games",
+      "url": "https://www.unrealengine.com/tech-blog/download-the-latest-game-animation-sample-project-now-updated-for-ue-5-8",
+      "category": "animation",
+      "decision": "free-donor-trial",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Acquired Epic/Fab license; keep records",
+      "version": "Official UE5.8 update 2026-08-12",
+      "integrationRisk": "High if used wholesale: animation/movement dependency coupling",
+      "replacement": "Future selected C01 animation donor or owned simple state machine; no imported animation baseline currently claimed.",
+      "testGate": "Migrate one stop/turn/mantle subset; test input interruption, saved-state restore and target-frame cost.",
+      "sourceIds": [
+        "A18",
+        "A49"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C15",
+      "name": "Lyra Starter Game",
+      "vendor": "Epic Games",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/lyra-sample-game-in-unreal-engine?lang=en-US",
+      "category": "systems-reference",
+      "decision": "reference-only",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Acquired Epic sample license; inspect each component",
+      "version": "Match exact engine/sample revision",
+      "integrationRisk": "High: modular gameplay/GAS/network architecture exceeds initial need",
+      "replacement": "C01 plus project-owned systems",
+      "testGate": "Study one focused implementation; no base-project switch without time comparison and packaging.",
+      "sourceIds": [
+        "A19",
+        "A49"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C16",
+      "name": "City Sample",
+      "vendor": "Epic Games",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/city-sample-project-unreal-engine-demonstration?lang=en-US",
+      "category": "city-reference",
+      "decision": "reference-only",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Acquired Epic content license; no blanket cross-engine permission",
+      "version": "Match compatible version; local sample untested",
+      "integrationRisk": "High storage/hardware/integration burden",
+      "replacement": "C03/C04 small authored block",
+      "testGate": "Use docs first; if acquired separately profile one technique; never migrate entire city/crowd stack.",
+      "sourceIds": [
+        "A20",
+        "A49"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C17",
+      "name": "Content Examples",
+      "vendor": "Epic Games",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/content-examples-sample-project-for-unreal-engine",
+      "category": "learning-reference",
+      "decision": "on-demand-reference",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Listing says Unreal Engine-based products only",
+      "version": "Match compatible sample/engine version",
+      "integrationRisk": "Low-medium: teaching examples require production adaptation",
+      "replacement": "Small self-contained experiment",
+      "testGate": "Reproduce one needed feature in an empty map, then package only relevant assets.",
+      "sourceIds": [
+        "A21",
+        "A49",
+        "A51"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C18",
+      "name": "MetaHuman",
+      "vendor": "Epic Games",
+      "url": "https://www.metahuman.com/license?lang=en-US",
+      "category": "characters",
+      "decision": "defer-to-hero-trial",
+      "priceObserved": {
+        "display": "No extra upfront charge for qualifying use",
+        "amount": 0,
+        "currency": null,
+        "billing": "conditional",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Current standard Unreal license and AI restrictions apply",
+      "version": "Current engine-integrated toolchain; exact build pending",
+      "integrationRisk": "High: hair/face/material/rig cost and visual mismatch",
+      "replacement": "Manny/Quinn plus original shared-rig character",
+      "testGate": "One hero at conversation and gameplay distance; LOD transitions, skin/hair cost and wardrobe animation.",
+      "sourceIds": [
+        "A22"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C19",
+      "name": "Mixamo",
+      "vendor": "Adobe",
+      "url": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+      "category": "animation",
+      "decision": "free-gap-filler",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Adobe General + Mixamo Additional Terms; no raw-file redistribution",
+      "version": "Web service; export settings captured",
+      "integrationRisk": "Medium: skeleton, root motion and foot sliding",
+      "replacement": "C01/C14 or authored Control Rig motion",
+      "testGate": "Retarget a single use case; verify contacts, root, rotations and packaged behavior before batch imports.",
+      "sourceIds": [
+        "A23",
+        "A24"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C20",
+      "name": "Arghanion's Space Ship Flight System",
+      "vendor": "Arghanion's Puzzlebox",
+      "url": "https://www.fab.com/listings/62a69df5-b447-415d-8d91-82f9f1a46894",
+      "category": "flight",
+      "decision": "free-evaluation-first",
+      "priceObserved": {
+        "display": "Free",
+        "amount": 0,
+        "currency": null,
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Fab terms pending; included Corinth ship CC BY4.0; listing NoAI",
+      "version": "Vendor explicitly UE5.8; local test not performed",
+      "integrationRisk": "High: physics/controller/save/custody adaptation; NoAI terms",
+      "replacement": "Owned minimal flight Pawn",
+      "testGate": "Timebox standalone trial; disable midflight exit; test pad docking, controller, 30/60/120fps, save/travel; keep sunseed state separate.",
+      "sourceIds": [
+        "A50"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C21",
+      "name": "SixDOF Movement",
+      "vendor": "mookie",
+      "url": "https://www.fab.com/listings/01288642-e34b-408e-816d-f6a5a31944bc",
+      "category": "flight",
+      "decision": "paid-fallback",
+      "priceObserved": {
+        "display": "From $19.99 seller catalog; exact tier unverified",
+        "amount": 19.99,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "catalog-from-price",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Fab code-plugin license/tier pending",
+      "version": "Exact current UE5.8 binary/source support not exposed",
+      "integrationRisk": "High until rebuild/package and maintenance verified",
+      "replacement": "C20 or owned flight component",
+      "testGate": "Require compile/package on pinned engine and demonstrable tuning savings before purchase.",
+      "sourceIds": [
+        "A25",
+        "A26"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C22",
+      "name": "Blender 4.5 LTS",
+      "vendor": "Blender Foundation",
+      "url": "https://www.blender.org/releases/4-5/",
+      "category": "dcc",
+      "decision": "first-basket",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "GPL application; artwork rights separate",
+      "version": "4.5.14 listed 2026-09-15; pin tested patch",
+      "integrationRisk": "Low-medium: units, axes, normals and UV export",
+      "replacement": "Unreal Modeling tools for temporary primitives",
+      "testGate": "One custom sunseed and ship proxy round trip; centimeter scale, pivot, collision and material validation.",
+      "sourceIds": [
+        "A27",
+        "A28",
+        "A02"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C23",
+      "name": "Krita",
+      "vendor": "Krita Foundation",
+      "url": "https://krita.org/en/about/license/",
+      "category": "2d-authoring",
+      "decision": "first-basket-as-needed",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "GPLv3 application; creator artwork unaffected",
+      "version": "Pin official stable download revision when installed",
+      "integrationRisk": "Low: excessive unique textures or rasterized unreadable signs",
+      "replacement": "Own UMG text and simple material masks",
+      "testGate": "Create one sign/decalsheet; test mip readability under daylight/twilight and two output resolutions.",
+      "sourceIds": [
+        "A29"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C24",
+      "name": "Substance 3D Painter / Collection",
+      "vendor": "Adobe",
+      "url": "https://www.adobe.com/products/substance3d/plans.html",
+      "category": "texturing",
+      "decision": "defer",
+      "priceObserved": {
+        "display": "US Collection individual $59.99/month displayed",
+        "amount": 59.99,
+        "currency": "USD",
+        "billing": "subscription",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Plan contract/assets terms; education noncommercial version unsuitable",
+      "version": "Current purchased build/plan not selected",
+      "integrationRisk": "Medium: recurring spend; plan lock-in; separate asset terms",
+      "replacement": "Blender + Krita + Unreal material instances",
+      "testGate": "Consider only after a repeated unique-texturing task is measured; confirm full contract cost, not monthly headline.",
+      "sourceIds": [
+        "A30",
+        "A54"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C25",
+      "name": "Houdini Indie",
+      "vendor": "SideFX",
+      "url": "https://www.sidefx.com/products/houdini-indie/",
+      "category": "procedural-dcc",
+      "decision": "defer",
+      "priceObserved": {
+        "display": "$299/1yr or $449/2yrs displayed",
+        "amount": 299,
+        "currency": "USD",
+        "billing": "annual",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Indie revenue/funding/entity/file-format restrictions",
+      "version": "Exact UE plugin/Houdini build compatibility pending",
+      "integrationRisk": "High: another authoring runtime and pipeline",
+      "replacement": "UE PCG/Blueprint construction + Blender",
+      "testGate": "Require a repeated production task and demonstrated saved authoring time; bake outputs and package without live dependency.",
+      "sourceIds": [
+        "A31"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C26",
+      "name": "Audacity",
+      "vendor": "Muse Group / Audacity contributors",
+      "url": "https://manual.audacityteam.org/man/faq_about_audacity.html",
+      "category": "audio-editing",
+      "decision": "first-basket-as-needed",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "GPL application; rights to recordings remain separate",
+      "version": "Pin official stable revision when acquired",
+      "integrationRisk": "Low: destructive source edits, inconsistent exports",
+      "replacement": "Unreal basic sound assets; own recordings",
+      "testGate": "Trim/crossfade a loop and export consistent WAV; retain original file and compare in game.",
+      "sourceIds": [
+        "A32"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C27",
+      "name": "REAPER",
+      "vendor": "Cockos",
+      "url": "https://www.cockos.com/reaper/purchase.php?l=1",
+      "category": "audio-editing",
+      "decision": "paid-conditional",
+      "priceObserved": {
+        "display": "$60 qualifying discounted; otherwise $225, tax extra",
+        "amount": 60,
+        "currency": "USD",
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "eligibility-dependent",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Discount requires qualifying use including commercial revenue threshold; evaluation 60 days",
+      "version": "New license upgrades through v8.99 per current page",
+      "integrationRisk": "Low-medium: license eligibility and project/plugin portability",
+      "replacement": "C26",
+      "testGate": "Buy only after multitrack/stem work justifies it and inclusive checkout fits remaining EUR120 qualified-assets allowance; render self-contained stems and reopen from backup.",
+      "sourceIds": [
+        "A33"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C28",
+      "name": "GDC 2026 Game Audio Bundle",
+      "vendor": "Sonniss / credited publishers",
+      "url": "https://gdc.sonniss.com/",
+      "category": "sfx",
+      "decision": "first-basket-selected-files",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Sonniss GDC bundle license; no AI training; no standalone library distribution",
+      "version": "2026 bundle; track-level source/metadata",
+      "integrationRisk": "Medium: large library, uneven specificity, music/voices incidental",
+      "replacement": "Original recordings or C29 vetted files",
+      "testGate": "Select about twenty useful sounds; log provenance, noise/loop edits, peaks, subtitle/event mapping.",
+      "sourceIds": [
+        "A34",
+        "A35"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C29",
+      "name": "Freesound selected recordings",
+      "vendor": "Individual uploaders / Freesound",
+      "url": "https://freesound.org/help/faq/",
+      "category": "sfx",
+      "decision": "free-fallback",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Per-file CC0 or CC BY accepted; exclude BY-NC/unclear/legacy initially",
+      "version": "Per-file revision and source date",
+      "integrationRisk": "Medium-high: uploader provenance and attribution",
+      "replacement": "C28 or own recordings",
+      "testGate": "Record author/license/source for each file; reject recognizable borrowed music/voices and unclear recordings.",
+      "sourceIds": [
+        "A36"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C30",
+      "name": "Incompetech selected music",
+      "vendor": "Kevin MacLeod",
+      "url": "https://incompetech.com/music/royalty-free/faq.html",
+      "category": "music",
+      "decision": "temporary-music-option",
+      "priceObserved": {
+        "display": "Free attribution route; optional no-credit price not observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "one-time",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Per-track Creative Commons terms; visible attribution and modification notes",
+      "version": "Track/version must be selected before use",
+      "integrationRisk": "Medium: temp-track attachment; no guaranteed stems/exclusivity",
+      "replacement": "Own scratch motif; later commissioned original score",
+      "testGate": "Try one cue in context; export credits and test capture/streaming claim process before public trailer.",
+      "sourceIds": [
+        "A37"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C31",
+      "name": "Unreal audio / MetaSounds",
+      "vendor": "Epic Games",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/metasounds-in-unreal-engine",
+      "category": "audio-runtime",
+      "decision": "first-basket",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Unreal Engine license; source audio separately licensed",
+      "version": "Pinned engine version",
+      "integrationRisk": "Medium: overengineered graphs and sound concurrency",
+      "replacement": "Simple SoundWave/Cue/component playback",
+      "testGate": "Ship hover/cruise/boost layers, dialogue ducking and pause/load without stacked loops.",
+      "sourceIds": [
+        "A38"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C32",
+      "name": "FMOD Studio / Engine",
+      "vendor": "Firelight Technologies",
+      "url": "https://fmod.com/legal",
+      "category": "audio-runtime",
+      "decision": "defer",
+      "priceObserved": {
+        "display": "Free only if all limited-commercial criteria satisfied",
+        "amount": 0,
+        "currency": null,
+        "billing": "conditional",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Budget <USD600k; developer gross revenue/funding <USD200k/year; registration/attribution and full EULA",
+      "version": "Plugin/bank/runtime versions must match",
+      "integrationRisk": "Medium-high: second build pipeline and license eligibility",
+      "replacement": "C31",
+      "testGate": "Add only when native audio demonstrably blocks required music behavior; package/clean-machine bank test.",
+      "sourceIds": [
+        "A39"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C33",
+      "name": "Input Prompts",
+      "vendor": "Kenney",
+      "url": "https://kenney.nl/assets/input-prompts",
+      "category": "ui",
+      "decision": "first-basket-as-needed",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "CC0 included artwork; retain license record",
+      "version": "Downloaded revision/PNG size pending",
+      "integrationRisk": "Low: incorrect remapping/device state",
+      "replacement": "Own text labels",
+      "testGate": "Prompt reflects remapped key/controller and remains legible at large UI scale.",
+      "sourceIds": [
+        "A40"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C34",
+      "name": "Lucide",
+      "vendor": "Lucide contributors",
+      "url": "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
+      "category": "ui-icons",
+      "decision": "free-small-subset",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "ISC; preserve full license including applicable inherited notices",
+      "version": "Pin downloaded icon revision",
+      "integrationRisk": "Low: generic icons can be ambiguous",
+      "replacement": "Original gameplay symbols",
+      "testGate": "Test eight needed icons at small sizes; label critical meaning and verify light/dark contrast.",
+      "sourceIds": [
+        "A41"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C35",
+      "name": "Inter",
+      "vendor": "Rasmus Andersson / contributors",
+      "url": "https://rsms.me/inter/",
+      "category": "font",
+      "decision": "first-basket-as-needed",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "SIL Open Font License 1.1; preserve license and reserved-name conditions",
+      "version": "Pin actual font release; choose static weights",
+      "integrationRisk": "Low-medium: missing scripts and text shaping",
+      "replacement": "Engine font temporarily; licensed script fallback later",
+      "testGate": "Cook offline fonts; subtitle size, accents, numbers and longest localized labels at 720p/1080p.",
+      "sourceIds": [
+        "A42"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C36",
+      "name": "ink / Inky",
+      "vendor": "inkle",
+      "url": "https://www.inklestudios.com/ink/",
+      "category": "narrative-authoring",
+      "decision": "free-authoring-option",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "MIT tools; separate Unreal integration must be audited",
+      "version": "Pin editor/compiler version; Inkpot not qualified",
+      "integrationRisk": "Medium: compiled Ink JSON is not arbitrary Unreal data",
+      "replacement": "Project-owned bounded dialogue DataAssets/JSON",
+      "testGate": "Play complete opening decision in text; compile/export; manually map explicit effects and test valid-state exits.",
+      "sourceIds": [
+        "A43"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C37",
+      "name": "articy:draft X FREE",
+      "vendor": "Articy",
+      "url": "https://www.articy.com/en/articydraft/free/",
+      "category": "narrative-authoring",
+      "decision": "alternative-not-additive",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Free commercial rights; 700-object/project cap; vendor terms",
+      "version": "Current X version; Unreal importer not qualified",
+      "integrationRisk": "Medium: object cap and importer dependence",
+      "replacement": "C36 plus project-owned data",
+      "testGate": "Count opening chapter objects; export and reconstruct one dialogue without proprietary-only runtime dependency.",
+      "sourceIds": [
+        "A44"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    },
+    {
+      "id": "C38",
+      "name": "Unreal PCG",
+      "vendor": "Epic Games",
+      "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/procedural-content-generation-overview",
+      "category": "world-authoring",
+      "decision": "later-free-automation",
+      "priceObserved": {
+        "display": "Free / no separate upfront charge observed",
+        "amount": 0,
+        "currency": null,
+        "billing": "none",
+        "observedAt": "2026-10-12",
+        "confidence": "observed",
+        "taxIncluded": null,
+        "checkoutVerified": false
+      },
+      "license": "Unreal Engine license; spawned content separately licensed",
+      "version": "Pinned UE version; enable only needed plugin",
+      "integrationRisk": "Medium: nondeterministic regeneration or blocked paths",
+      "replacement": "Hand-authored modules and Blueprint construction",
+      "testGate": "Generate one roof-prop strip with fixed seed/exclusion volumes; verify save/load and package; bake where practical.",
+      "sourceIds": [
+        "A45"
+      ],
+      "status": "researched_not_acquired",
+      "installed": false,
+      "purchased": false,
+      "localTestStatus": "not_run",
+      "approval": "No purchase authorized by this register"
+    }
+  ],
+  "existingFoundation": "Delivered owned minimal C++ scaffold with runtime and editor modules; no Third Person template content imported."
+}

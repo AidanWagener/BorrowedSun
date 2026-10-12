@@ -1,0 +1,828 @@
+[
+  {
+    "id": "A01",
+    "title": "Epic Games: Third Person template",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/third-person-template-in-unreal-engine?lang=en-US",
+    "accessed": "2026-10-12",
+    "evidence": "UE 5.8 documentation; template includes controllable mannequin and elementary geometry."
+  },
+  {
+    "id": "A02",
+    "title": "KitBash3D: Cargo software compatibility",
+    "url": "https://help.kitbash3d.com/en/articles/7833635-cargo-supported-3d-software-and-render-engines",
+    "accessed": "2026-10-12",
+    "evidence": "Launcher UE 5.2–5.8; Blender.org 4.2–5.2; source-built Unreal unsupported."
+  },
+  {
+    "id": "A04",
+    "title": "KitBash3D: Access purchased kits",
+    "url": "https://help.kitbash3d.com/en/articles/7833678-how-to-access-purchased-kits",
+    "accessed": "2026-10-12",
+    "evidence": "Purchased-kit individual imports do not require a paid Cargo subscription."
+  },
+  {
+    "id": "A05",
+    "title": "KitBash3D: Licensing overview",
+    "url": "https://kitbash3d.com/pages/licenses",
+    "accessed": "2026-10-12",
+    "evidence": "Commercial larger works, perpetual versus subscription, organization tier."
+  },
+  {
+    "id": "A07",
+    "title": "KitBash3D: Neo City",
+    "url": "https://kitbash3d.com/products/mini-kit-neo-city",
+    "accessed": "2026-10-12",
+    "evidence": "Direct page $0; 9 models; 60 materials."
+  },
+  {
+    "id": "A08",
+    "title": "KitBash3D: Mission to Minerva",
+    "url": "https://kitbash3d.com/products/mission-to-minerva",
+    "accessed": "2026-10-12",
+    "evidence": "Direct page $0; industrial/space settlement content and cargo ship."
+  },
+  {
+    "id": "A09",
+    "title": "KitBash3D: CyberPunk",
+    "url": "https://kitbash3d.com/products/cyberpunk",
+    "accessed": "2026-10-12",
+    "evidence": "Direct page $245; Gameplay Ready badge; 198 models."
+  },
+  {
+    "id": "A10",
+    "title": "KitBash3D: Cyber District",
+    "url": "https://kitbash3d.com/products/cyber-district",
+    "accessed": "2026-10-12",
+    "evidence": "Direct page $245; Gameplay Ready badge; 241 models."
+  },
+  {
+    "id": "A11",
+    "title": "KitBash3D: Cyber Streets",
+    "url": "https://kitbash3d.com/products/cyber-streets",
+    "accessed": "2026-10-12",
+    "evidence": "Direct page $95; Gameplay Ready badge; street props."
+  },
+  {
+    "id": "A12",
+    "title": "Jonathon Frederick: Modular SciFi Season 1 Starter Bundle",
+    "url": "https://www.fab.com/listings/86913335-3c75-42bf-8404-54fe9d9d7396",
+    "accessed": "2026-10-12",
+    "evidence": "Fab Free; legacy modular hallways/interiors/props/command center."
+  },
+  {
+    "id": "A13",
+    "title": "Jonathon Frederick: Modular Scifi Season 2 Starter Bundle",
+    "url": "https://www.fab.com/listings/cb3c4494-4060-4a80-b079-e46936cb8dd0",
+    "accessed": "2026-10-12",
+    "evidence": "Fab Free; Engineer Hallways, Props, Interiors; current UE revision not exposed."
+  },
+  {
+    "id": "A14",
+    "title": "Denys Rutkovskyi: Spaceship Interior Environment Set",
+    "url": "https://www.fab.com/listings/e55bb035-8720-487f-8a36-4ce50d16f344?lang=en",
+    "accessed": "2026-10-12",
+    "evidence": "Modular ship interior; listing references UE 4.18 update; current price not exposed."
+  },
+  {
+    "id": "A15",
+    "title": "KitBash3D: Vehicles / Spaceships Armada",
+    "url": "https://kitbash3d.com/collections/vehicles",
+    "accessed": "2026-10-12",
+    "evidence": "Catalog displays $75 each for individual Armada vehicles; not a whole-pack price."
+  },
+  {
+    "id": "A16",
+    "title": "Poly Haven: Asset license",
+    "url": "https://polyhaven.com/license",
+    "accessed": "2026-10-12",
+    "evidence": "CC0 downloadable assets; website content and access terms separate."
+  },
+  {
+    "id": "A17",
+    "title": "ambientCG: License",
+    "url": "https://docs.ambientcg.com/license/",
+    "accessed": "2026-10-12",
+    "evidence": "CC0 assets, commercial use, no mandatory credit."
+  },
+  {
+    "id": "A18",
+    "title": "Epic Games: GASP UE 5.8 update",
+    "url": "https://www.unrealengine.com/tech-blog/download-the-latest-game-animation-sample-project-now-updated-for-ue-5-8",
+    "accessed": "2026-10-12",
+    "evidence": "2026-08-12 update; UE 5.8 compatibility and experimental Look-At example."
+  },
+  {
+    "id": "A19",
+    "title": "Epic Games: Lyra documentation",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/lyra-sample-game-in-unreal-engine?lang=en-US",
+    "accessed": "2026-10-12",
+    "evidence": "Modular learning sample with multiple gameplay systems."
+  },
+  {
+    "id": "A20",
+    "title": "Epic Games: City Sample documentation",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/city-sample-project-unreal-engine-demonstration?lang=en-US",
+    "accessed": "2026-10-12",
+    "evidence": "Systems reference; vendor recommendation includes 64GB RAM and powerful GPU."
+  },
+  {
+    "id": "A21",
+    "title": "Epic Games: Content Examples",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/content-examples-sample-project-for-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Focused engine examples; compatible engine acquisition required."
+  },
+  {
+    "id": "A22",
+    "title": "Epic Games: MetaHuman license",
+    "url": "https://www.metahuman.com/license?lang=en-US",
+    "accessed": "2026-10-12",
+    "evidence": "Current MetaHuman included under standard Unreal license; threshold and AI terms must be reviewed."
+  },
+  {
+    "id": "A23",
+    "title": "Adobe: Mixamo FAQ",
+    "url": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+    "accessed": "2026-10-12",
+    "evidence": "Free with Adobe ID; royalty-free characters/animation for games; bipedal scope."
+  },
+  {
+    "id": "A24",
+    "title": "Adobe: Mixamo Additional Terms",
+    "url": "https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Mixamo-Addl-Terms-en_US-20210623.pdf",
+    "accessed": "2026-10-12",
+    "evidence": "Binding additional terms dated 2021-06-23, subject to general terms."
+  },
+  {
+    "id": "A25",
+    "title": "mookie: SixDOF Movement",
+    "url": "https://www.fab.com/listings/01288642-e34b-408e-816d-f6a5a31944bc",
+    "accessed": "2026-10-12",
+    "evidence": "Movement component; transform or physics force modes; current exact engine compatibility not exposed."
+  },
+  {
+    "id": "A26",
+    "title": "mookie: Fab seller catalog",
+    "url": "https://www.fab.com/sellers/mookie?lang=fr",
+    "accessed": "2026-10-12",
+    "evidence": "Catalog search result shows SixDOF Movement from $19.99, not a checked-out tier price."
+  },
+  {
+    "id": "A27",
+    "title": "Blender Foundation: Blender 4.5 LTS",
+    "url": "https://www.blender.org/releases/4-5/",
+    "accessed": "2026-10-12",
+    "evidence": "4.5.14 listed 2026-09-15; support until July 2027."
+  },
+  {
+    "id": "A28",
+    "title": "Blender Foundation: License",
+    "url": "https://www.blender.org/about/license/",
+    "accessed": "2026-10-12",
+    "evidence": "GPL software; creator artwork and exported data are not forced under GPL."
+  },
+  {
+    "id": "A29",
+    "title": "Krita Foundation: License",
+    "url": "https://krita.org/en/about/license/",
+    "accessed": "2026-10-12",
+    "evidence": "GPLv3 application; commercial artwork allowed; official free distribution."
+  },
+  {
+    "id": "A30",
+    "title": "Adobe: Substance 3D plans",
+    "url": "https://www.adobe.com/products/substance3d/plans.html",
+    "accessed": "2026-10-12",
+    "evidence": "Observed US Collection individual $59.99/month; local/contract pricing must be checked."
+  },
+  {
+    "id": "A31",
+    "title": "SideFX: Houdini Indie",
+    "url": "https://www.sidefx.com/products/houdini-indie/",
+    "accessed": "2026-10-12",
+    "evidence": "$299 one year / $449 two years displayed; revenue/funding/entity constraints."
+  },
+  {
+    "id": "A32",
+    "title": "Audacity: Application FAQ",
+    "url": "https://manual.audacityteam.org/man/faq_about_audacity.html",
+    "accessed": "2026-10-12",
+    "evidence": "Free open-source audio editor available for commercial work."
+  },
+  {
+    "id": "A33",
+    "title": "Cockos: REAPER purchase",
+    "url": "https://www.cockos.com/reaper/purchase.php?l=1",
+    "accessed": "2026-10-12",
+    "evidence": "$60 qualifying discounted / $225 commercial; 60-day evaluation; tax extra."
+  },
+  {
+    "id": "A34",
+    "title": "Sonniss: GDC 2026 Game Audio Bundle",
+    "url": "https://gdc.sonniss.com/",
+    "accessed": "2026-10-12",
+    "evidence": "Free commercial-media audio collection with no attribution requirement."
+  },
+  {
+    "id": "A35",
+    "title": "Sonniss: GDC bundle license",
+    "url": "https://sonniss.com/gdc-bundle-license/",
+    "accessed": "2026-10-12",
+    "evidence": "Separate bundle license; AI training prohibition; embedded-media use."
+  },
+  {
+    "id": "A36",
+    "title": "Freesound: FAQ and licenses",
+    "url": "https://freesound.org/help/faq/",
+    "accessed": "2026-10-12",
+    "evidence": "Per-file CC0, BY, BY-NC and legacy licenses; provenance varies."
+  },
+  {
+    "id": "A37",
+    "title": "Kevin MacLeod: Incompetech music FAQ",
+    "url": "https://incompetech.com/music/royalty-free/faq.html",
+    "accessed": "2026-10-12",
+    "evidence": "Attribution music pathway and credit guidance including games."
+  },
+  {
+    "id": "A38",
+    "title": "Epic Games: MetaSounds",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/metasounds-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Built-in procedural sound authoring examples and reference."
+  },
+  {
+    "id": "A39",
+    "title": "Firelight Technologies: FMOD legal",
+    "url": "https://fmod.com/legal",
+    "accessed": "2026-10-12",
+    "evidence": "Limited-commercial free license criteria, registration and attribution."
+  },
+  {
+    "id": "A40",
+    "title": "Kenney: Input Prompts",
+    "url": "https://kenney.nl/assets/input-prompts",
+    "accessed": "2026-10-12",
+    "evidence": "Free CC0 input symbols; asset license must accompany local acquisition."
+  },
+  {
+    "id": "A41",
+    "title": "Lucide contributors: License",
+    "url": "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
+    "accessed": "2026-10-12",
+    "evidence": "ISC and notices for Feather-derived icons; retain bundled notices."
+  },
+  {
+    "id": "A42",
+    "title": "Rasmus Andersson: Inter",
+    "url": "https://rsms.me/inter/",
+    "accessed": "2026-10-12",
+    "evidence": "Free font under SIL Open Font License 1.1."
+  },
+  {
+    "id": "A43",
+    "title": "inkle: ink and Inky",
+    "url": "https://www.inklestudios.com/ink/",
+    "accessed": "2026-10-12",
+    "evidence": "MIT narrative tools; JSON/web export; Unreal integration link is separate project."
+  },
+  {
+    "id": "A44",
+    "title": "Articy: articy:draft X FREE",
+    "url": "https://www.articy.com/en/articydraft/free/",
+    "accessed": "2026-10-12",
+    "evidence": "Free commercial use with 700 objects/project; exports available."
+  },
+  {
+    "id": "A45",
+    "title": "Epic Games: PCG overview",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/procedural-content-generation-overview",
+    "accessed": "2026-10-12",
+    "evidence": "In-engine procedural graphs; enabled plugin; points/instances and authoring."
+  },
+  {
+    "id": "A46",
+    "title": "Epic Games: Fab license overview",
+    "url": "https://www.fab.com/eula",
+    "accessed": "2026-10-12",
+    "evidence": "Standard-license summary, source/reference distinction; actual acquired license controls."
+  },
+  {
+    "id": "A47",
+    "title": "KitBash3D: License agreement",
+    "url": "https://kitbash3d.com/pages/license-text",
+    "accessed": "2026-10-12",
+    "evidence": "Current 18-page EULA; 3.2.7 AI-input wording; free offerings 3.2.22; USD/tax sections."
+  },
+  {
+    "id": "A48",
+    "title": "KitBash3D: Product updates",
+    "url": "https://kitbash3d.com/pages/product-updates",
+    "accessed": "2026-10-12",
+    "evidence": "2026-09-11 Cargo 3.2.1; standard Blueprint versus Packed Level Actor option."
+  },
+  {
+    "id": "A49",
+    "title": "Epic Games: Fab examples catalog",
+    "url": "https://www.fab.com/category/tutorials-examples?lang=en",
+    "accessed": "2026-10-12",
+    "evidence": "GASP, City Sample, Lyra, Content Examples displayed Free."
+  },
+  {
+    "id": "A50",
+    "title": "Arghanion's Puzzlebox: Space Ship Flight System",
+    "url": "https://www.fab.com/listings/62a69df5-b447-415d-8d91-82f9f1a46894",
+    "accessed": "2026-10-12",
+    "evidence": "Free UE5.8 Blueprint flight tutorial; ship CC BY4.0; listing NoAI tag; local qualification pending."
+  },
+  {
+    "id": "A51",
+    "title": "Epic Games: Content Examples Fab license notice",
+    "url": "https://www.fab.com/listings/4d251261-d98c-48e2-baee-8f4e47c67091",
+    "accessed": "2026-10-12",
+    "evidence": "Explicit Unreal Engine-based products restriction on listing."
+  },
+  {
+    "id": "A52",
+    "title": "KitBash3D: Subscription FAQ",
+    "url": "https://help.kitbash3d.com/en/articles/16635224-subscription-faqs",
+    "accessed": "2026-10-12",
+    "evidence": "2026-08-25 FAQ on entity scope and post-subscription project rights."
+  },
+  {
+    "id": "A53",
+    "title": "KitBash3D: Fab seller Cyber results",
+    "url": "https://www.fab.com/sellers/KitBash3D?q=cyber",
+    "accessed": "2026-10-12",
+    "evidence": "Observed channel differences: CyberPunk from $249.99, CyberStreets from $94.99."
+  },
+  {
+    "id": "A54",
+    "title": "Adobe: Substance pricing announcement",
+    "url": "https://blog.adobe.com/en/publish/2025/02/20/substance-3d-innovations-pricing-updates",
+    "accessed": "2026-10-12",
+    "evidence": "Historical US Texturing $24.99/month announcement; not a current local checkout quote."
+  },
+  {
+    "id": "D01",
+    "title": "GitHub: Git Large File Storage billing",
+    "url": "https://docs.github.com/en/billing/concepts/product-billing/git-lfs",
+    "date": "2026-10-12",
+    "note": "Free quotas; full changed-file versions count; zero-budget stop behavior. Checked 2026-10-12; terms can change."
+  },
+  {
+    "id": "D02",
+    "title": "GitHub: GitHub Actions billing",
+    "url": "https://docs.github.com/en/billing/concepts/product-billing/github-actions",
+    "date": "2026-10-12",
+    "note": "Private Free account allowances and current self-hosted billing; verify before enabling infrastructure."
+  },
+  {
+    "id": "D03",
+    "title": "GitHub: Secure use reference",
+    "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+    "date": "2026-10-12",
+    "note": "Self-hosted runner compromise, untrusted code and action SHA pinning."
+  },
+  {
+    "id": "D04",
+    "title": "Perforce: P4 pricing and plans",
+    "url": "https://www.perforce.com/resources/vcs/helix-core-pricing",
+    "date": "2026-10-12",
+    "note": "Free self-hosted five users/twenty workspaces; hosted price differs. Vendor primary source, not independent performance evidence."
+  },
+  {
+    "id": "D05",
+    "title": "Git LFS: locking configuration",
+    "url": "https://github.com/git-lfs/git-lfs/blob/main/docs/man/git-lfs-config.adoc",
+    "date": "2026-10-12",
+    "note": "locksverify true/false/default semantics and custom LFS storage."
+  },
+  {
+    "id": "D06",
+    "title": "Git LFS: git-lfs-lock manual",
+    "url": "https://github.com/git-lfs/git-lfs/blob/main/docs/man/git-lfs-lock.adoc",
+    "date": "2026-10-12",
+    "note": "Lock behavior and prerequisites; server capability must be checked."
+  },
+  {
+    "id": "D07",
+    "title": "GitHub: About Git Large File Storage",
+    "url": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage",
+    "date": "2026-10-12",
+    "note": "Pointer model, per-file limits and source archive settings."
+  },
+  {
+    "id": "D08",
+    "title": "GitHub: About large files",
+    "url": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+    "date": "2026-10-12",
+    "note": "50 MiB warning, 100 MiB ordinary Git block, repository size guidance."
+  },
+  {
+    "id": "D09",
+    "title": "Git: git-bundle documentation",
+    "url": "https://git-scm.com/docs/git-bundle",
+    "date": "2026-10-12",
+    "note": "Full Git bundles, verification, clone/restore semantics; does not include external LFS payloads."
+  },
+  {
+    "id": "D10",
+    "title": "Epic: Build operations",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/build-operations-cooking-packaging-deploying-and-running-projects-in-unreal-engine",
+    "date": "2026-10-12",
+    "note": "BuildCookRun stages and Project Launcher generated command approach."
+  },
+  {
+    "id": "D11",
+    "title": "Epic: Run automation tests",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/run-automation-tests-in-unreal-engine",
+    "date": "2026-10-12",
+    "note": "Command execution and ReportExportPath output. Script report schema is additionally checked against installed engine."
+  },
+  {
+    "id": "D12",
+    "title": "GitHub: About releases",
+    "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases",
+    "date": "2026-10-12",
+    "note": "Release/tag and binary asset restrictions; verify immediately before publication."
+  },
+  {
+    "id": "D13",
+    "title": "GitHub: Removing sensitive data from a repository",
+    "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository",
+    "date": "2026-10-12",
+    "note": "Rotate/revoke exposed credentials first; history rewriting has consequences."
+  },
+  {
+    "id": "D14",
+    "title": "GitHub: 2026 Actions pricing changes",
+    "url": "https://github.com/resources/insights/2026-pricing-changes-for-github-actions",
+    "date": "2026-10-12",
+    "note": "Previously announced self-hosted billing postponed; do not repeat superseded announcement as current price."
+  },
+  {
+    "id": "D15",
+    "title": "Epic: Derived Data Cache",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/using-derived-data-cache-in-unreal-engine?lang=en-US",
+    "date": "2026-10-12",
+    "note": "Regenerable derived data and cache hierarchy; exclude DDC from authored source history."
+  },
+  {
+    "id": "D16",
+    "title": "Epic: One File Per Actor",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/one-file-per-actor-in-unreal-engine",
+    "date": "2026-10-12",
+    "note": "External actor files and submission completeness; editor changelist support caveats."
+  },
+  {
+    "id": "D17",
+    "title": "Microsoft: PowerShell execution policies",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies",
+    "date": "2026-10-12",
+    "note": "Execution policy is not a security boundary; do not globally bypass policies."
+  },
+  {
+    "id": "D18",
+    "title": "GitHub: Pricing calculator",
+    "url": "https://github.com/pricing/calculator",
+    "date": "2026-10-12",
+    "note": "Prices depend on plan and purchase conditions; use current account checkout for estimates, not old LFS packs."
+  },
+  {
+    "id": "D19",
+    "title": "Epic: Unreal Engine directory structure",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-directory-structure",
+    "date": "2026-10-12",
+    "note": "Distinguishes authored configuration/source from generated caches and outputs."
+  },
+  {
+    "id": "E01",
+    "title": "Unreal Engine 5.8 is now available",
+    "url": "https://www.unrealengine.com/news/unreal-engine-5-8-is-now-available",
+    "accessed": "2026-10-12",
+    "evidence": "Official June 2026 major-release announcement; roadmap statements are intentions, not a guarantee.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E02",
+    "title": "5.8.3 Hotfix Released",
+    "url": "https://forums.unrealengine.com/t/5-8-3-hotfix-released/2833315",
+    "accessed": "2026-10-12",
+    "evidence": "Epic staff announcement dated 2026-09-22 verifies released 5.8.3; does not qualify the project or prove every plugin compatible.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E03",
+    "title": "Setting Up Visual Studio",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "5.8 compatibility table: VS2022 17.14+ or VS2026 18.0+; MSVC14.38 minimum/14.50 recommended; SDK22621 minimum/26100 recommended. Current docs may change.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E04",
+    "title": "Unreal Engine Modules",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-modules",
+    "accessed": "2026-10-12",
+    "evidence": "Build.cs and Target.cs govern UBT; runtime/editor module types and public/private dependencies. Project architecture is our proposal.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E05",
+    "title": "Enhanced Input",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/enhanced-input-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Input actions, mapping contexts, priorities and local-player subsystem. Does not implement the game's possession or UI policy.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E06",
+    "title": "Gameplay Ability System",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/gameplay-ability-system-for-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Abilities, attributes, effects and tasks. Deferring GAS is a scope recommendation, not an Epic requirement.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E07",
+    "title": "StateTree Overview",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-state-tree-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Hierarchical states and concurrent tasks; first task completion may trigger transition. No claim that it automatically supplies NPC behavior.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E08",
+    "title": "Behavior Tree Overview",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/behavior-tree-in-unreal-engine---overview",
+    "accessed": "2026-10-12",
+    "evidence": "Event-driven Unreal Behavior Trees and Blackboard-driven decisions; selection between frameworks is project-specific.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E09",
+    "title": "World Partition",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Streaming sources, actor references and cell streaming. Readiness for the project's collision/gameplay still needs testing.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E10",
+    "title": "One File Per Actor",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/one-file-per-actor-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "External actor files reduce edit overlap; editor-only storage, actors embedded at cook; special changelist support is Perforce-specific.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E11",
+    "title": "World Partition Data Layers",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition---data-layers-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Editor/runtime layer organization and state management; cannot infer collision readiness solely from Loaded state.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E12",
+    "title": "World Partition HLOD",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition---hierarchical-level-of-detail-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Instancing/merged/simplified representation for unloaded cells; must qualify actual materials and build memory.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E13",
+    "title": "PCG Generation Modes",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/using-pcg-generation-modes-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Partitioned, hierarchical and runtime generation; persistent placement identity is project responsibility.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E14",
+    "title": "World Partitioned Navigation Mesh",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partitioned-navigation-mesh",
+    "accessed": "2026-10-12",
+    "evidence": "Current page labels feature Experimental. Fallback and packaged pathfinding gates are proposed project requirements.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E15",
+    "title": "Nanite Virtualized Geometry",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/nanite-virtualized-geometry-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Current5.8 docs include skeletal support but explicitly exclude Morph Target deformation; material support and scene limits still apply.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E16",
+    "title": "Lumen Performance Guide",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-performance-guide-for-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "High/Epic60/30 console goals and approximate4/8ms lighting budgets at1080p internal; not laptop or whole-frame guarantees. Medium behavior has changed in5.8.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E17",
+    "title": "Lumen Technical Details",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-technical-details-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Scene representation, rapid-movement update limits, material/geometry constraints and hardware RT overlap costs.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E18",
+    "title": "IK Rig Animation Retargeting",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/ik-rig-animation-retargeting-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Chain mapping, goals and retarget setup; contact quality must be checked in project animations.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E19",
+    "title": "Asset Management",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/asset-management-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Primary assets, IDs, bundles and loading. Stable logical IDs must be separated from mutable asset paths.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E20",
+    "title": "Scripting Unreal Editor Using Python",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/scripting-the-unreal-editor-using-python",
+    "accessed": "2026-10-12",
+    "evidence": "Python editor automation; not packaged gameplay. Plugin/API availability must be checked on pinned version.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E21",
+    "title": "World Partition Builder Commandlet Reference",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-builder-commandlet-reference",
+    "accessed": "2026-10-12",
+    "evidence": "HLOD/nav/PCG builders; PCG normally loads complete world, iterative cell option bounds scope. Verify command names and output on actual content.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E22",
+    "title": "Derived Data Cache",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/using-derived-data-cache-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Local Zen default since5.4; cache regenerable; unauthenticated Zen requires trusted network boundaries.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E23",
+    "title": "Horde UBA and Remote Compilation",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/horde-unreal-build-accelerator-and-remote-compilation-tutorial-for-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Explains distributed compiler execution and prerequisites. Page retains5.5 platform wording; not used to claim current5.8 platform coverage.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E24",
+    "title": "Build Configuration",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "UBT executor and parallelism controls. Actual local build confirms -MaxParallelActions=2 recognized.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E25",
+    "title": "Unreal Insights",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-insights-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Timing, memory and asset-loading analysis; measurement depends on trace channels and build configuration.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E26",
+    "title": "Automation Test Framework",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/automation-test-framework-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "C++ unit/feature/content/visual tests; smoke intended under1second. Test names alone are not proof of execution.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E27",
+    "title": "Run Automation Tests",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/run-automation-tests-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Command-line run filters and ReportExportPath JSON; project runner must detect missing/zero-test reports.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E28",
+    "title": "Gauntlet Automation Framework",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/gauntlet-automation-framework-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Session-level orchestration; project gameplay tests/controllers are still required.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E29",
+    "title": "Packaging Unreal Projects",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/packaging-your-project",
+    "accessed": "2026-10-12",
+    "evidence": "Build/cook/stage/package distinction, GameDefaultMap and UAT BuildCookRun. Generic prerequisite wording does not replace C++ toolchain requirements.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E30",
+    "title": "PSO Precaching",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/pso-precaching-for-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Automatic asynchronous precaching and validation. Coverage is not a promise that every first-use stall disappears.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E31",
+    "title": "Saving and Loading Your Game",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/saving-and-loading-your-game-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "USaveGame and async saves. Atomic custody, revisions, journaling and migrations are proposed application contracts.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E32",
+    "title": "Large World Coordinates",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/large-world-coordinates-in-unreal-engine-5",
+    "accessed": "2026-10-12",
+    "evidence": "Double-precision changes and float conversion risks; page retains Beta label. Does not provide planetary gameplay.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E33",
+    "title": "Cargo Supported Software and Engines",
+    "url": "https://help.kitbash3d.com/en/articles/7833635-cargo-supported-3d-software-and-render-engines",
+    "accessed": "2026-10-12",
+    "evidence": "Launcher5.2–5.8 only; source builds unsupported. Current vendor minimum32GBRAM,8GBVRAM,15GBfree perkit.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E34",
+    "title": "Exclude Cargo from Unreal Builds",
+    "url": "https://help.kitbash3d.com/en/articles/12689467-exclude-kitbash3d-cargo-plugin-from-unreal-engine-builds",
+    "accessed": "2026-10-12",
+    "evidence": "Vendor guidance for editor connector exclusion; actual imported runtime dependencies must be checked.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "E35",
+    "title": "MassEntity Overview",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-mass-entity-in-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Data-oriented fragments/processors; no evidence that adopting it is necessary for the first small district.",
+    "limitations": "Documentation describes engine capability, not an implemented or benchmarked Borrowed Sun feature."
+  },
+  {
+    "id": "O01",
+    "title": "Epic hardware and software specifications",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/hardware-and-software-specifications-for-unreal-engine",
+    "accessed": "2026-10-12",
+    "evidence": "Current development hardware recommendations; not a benchmark for this project."
+  },
+  {
+    "id": "O02",
+    "title": "Microsoft maximum path length limitation",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation",
+    "accessed": "2026-10-12",
+    "evidence": "Long path behavior also depends on application opt-in."
+  },
+  {
+    "id": "O03",
+    "title": "OpenAI AGENTS.md guidance",
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "accessed": "2026-10-12",
+    "evidence": "Repository instruction discovery and layering."
+  },
+  {
+    "id": "O04",
+    "title": "OpenAI rethinking skills and prompts",
+    "url": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+    "accessed": "2026-10-12",
+    "evidence": "Current guidance on concise task-scoped instructions, not a benchmark claim."
+  },
+  {
+    "id": "O05",
+    "title": "OpenAI worktrees documentation",
+    "url": "https://learn.chatgpt.com/docs/environments/git-worktrees",
+    "accessed": "2026-10-12",
+    "evidence": "Worktree workflows and isolation in the app."
+  },
+  {
+    "id": "O06",
+    "title": "Git worktree reference",
+    "url": "https://git-scm.com/docs/git-worktree.html",
+    "accessed": "2026-10-12",
+    "evidence": "Shared repository metadata and worktree administration."
+  },
+  {
+    "id": "O07",
+    "title": "CISA StopRansomware Guide",
+    "url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+    "accessed": "2026-10-12",
+    "evidence": "Offline protected backups and restore testing."
+  }
+]

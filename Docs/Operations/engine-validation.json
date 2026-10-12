@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-12",
+  "engine": { "version": "5.8.2", "changelist": 56702186, "distribution": "Launcher" },
+  "toolchain": { "msvcReported": "14.44.35217", "msvcDirectory": "14.44.35207", "windowsSdk": "10.0.26100.0", "dotnetBundled": "10.0" },
+  "editorBuild": {
+    "status": "Passed",
+    "target": "BorrowedSunEditor Win64 Development",
+    "maxParallelActions": 2,
+    "elapsedSeconds": 185.58,
+    "exitCode": 0,
+    "log": "Artifacts/qualification/scaffold-build.log"
+  },
+  "gameBuild": {
+    "status": "Passed",
+    "target": "BorrowedSun Win64 Development",
+    "maxParallelActions": 2,
+    "elapsedSeconds": 69.56,
+    "exitCode": 0,
+    "log": "Artifacts/qualification/scaffold-game-build.log"
+  },
+  "automation": {
+    "status": "Passed",
+    "filter": "BorrowedSun",
+    "mode": "Editor commandlet with NullRHI",
+    "succeeded": 5,
+    "succeededWithWarnings": 0,
+    "failed": 0,
+    "notRun": 0,
+    "testExecutionSeconds": 0.0822720006108284,
+    "exitCode": 0,
+    "report": "Artifacts/qualification/scaffold-tests.json",
+    "expectedTestsVerified": [
+      "BorrowedSun.Smoke.Identity.CanonicalAndDistinct",
+      "BorrowedSun.Smoke.Identity.RejectsAmbiguity",
+      "BorrowedSun.Smoke.Travel.RejectsScaleWithoutMutation",
+      "BorrowedSun.Smoke.Travel.RigidMappingConservesMotion",
+      "BorrowedSun.Smoke.Travel.RoundTrip"
+    ]
+  },
+  "buildArguments": [ "-WaitMutex", "-NoHotReloadFromIDE", "-MaxParallelActions=2" ],
+  "automationArguments": [ "-Unattended", "-NoP4", "-NullRHI", "-NoSound", "-ExecCmds=Automation RunTests BorrowedSun;Quit", "-TestExit=Automation Test Queue Empty", "-ReportExportPath=<fresh-report-directory>", "-stdout", "-FullStdOutLogOutput" ],
+  "limits": [
+    "No project-owned binary map exists.",
+    "No cook or package has been performed.",
+    "No gameplay, rendering, performance, input, save or streaming behavior has been validated.",
+    "Direct engine commands were executed; this record does not by itself prove the separate Tools wrapper scripts.",
+    "These initial direct build/test runs preceded the explicit AndroidFileServer disable. See VALIDATION.md for final wrapper verification of the delivered configuration.",
+    "Generated binaries, full logs and automation reports are ignored local artifacts."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "engine": {
+    "distribution": "Epic Games Launcher",
+    "association": "5.8",
+    "version": "5.8.2",
+    "changelist": 56702186,
+    "compatibleChangelist": 55116800,
+    "branch": "++UE5+Release-5.8"
+  },
+  "platform": "Win64",
+  "candidateUpgrade": {
+    "version": "5.8.3",
+    "status": "review-only; not authorized for automatic installation",
+    "releaseDate": "2026-09-22"
+  },
+  "policy": "Read Engine/Build/Build.version before build. Fail on version or changelist mismatch unless a reviewed lock update exists. EngineAssociation is only a minor-version locator, not the exact lock.",
+  "verifiedAt": "2026-10-12"
+}

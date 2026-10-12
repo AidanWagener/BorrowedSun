@@ -1,0 +1,24 @@
+{
+  "SchemaVersion": 1,
+  "EngineRoot": "",
+  "ProjectPath": "Game/BorrowedSun.uproject",
+  "ArtifactRoot": "Artifacts",
+  "BackupRoot": "",
+  "BuildPlatform": "Win64",
+  "BuildConfiguration": "Development",
+  "GameTarget": "BorrowedSun",
+  "EditorTarget": "BorrowedSunEditor",
+  "MaxParallelActions": 2,
+  "TimeoutMinutes": 60,
+  "TestFilter": "BorrowedSun.Smoke",
+  "MinimumTests": 5,
+  "ExpectedTests": [
+    "BorrowedSun.Smoke.Identity.CanonicalAndDistinct",
+    "BorrowedSun.Smoke.Identity.RejectsAmbiguity",
+    "BorrowedSun.Smoke.Travel.RigidMappingConservesMotion",
+    "BorrowedSun.Smoke.Travel.RoundTrip",
+    "BorrowedSun.Smoke.Travel.RejectsScaleWithoutMutation"
+  ],
+  "MapsToCook": [],
+  "GitRemoteName": "origin"
+}

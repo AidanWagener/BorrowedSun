@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "currency": "EUR",
+  "userCeilingExclusive": 500,
+  "planningEnvelope": 480,
+  "spentDuringSetup": 0,
+  "allowances": [
+    {
+      "category": "memory-storage-independent-backup",
+      "ceiling": 240
+    },
+    {
+      "category": "qualified-asset-or-production-aid",
+      "ceiling": 120
+    },
+    {
+      "category": "operations-or-testing",
+      "ceiling": 40
+    },
+    {
+      "category": "uncommitted-buffer",
+      "ceiling": 80
+    }
+  ],
+  "notes": [
+    "Allowances are not quotes",
+    "Include taxes and FX in gross price",
+    "Current AI access assumed; new recurring costs must fit",
+    "No purchases authorized by this file"
+  ],
+  "purchases": []
+}

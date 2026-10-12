@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "BS: doctor",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-File",
+        "${workspaceFolder}/Tools/Doctor.ps1"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "BS: preflight",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-File",
+        "${workspaceFolder}/Tools/Preflight.ps1"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "BS: preview build command",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-File",
+        "${workspaceFolder}/Tools/Build.ps1"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "BS: preview test command",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-File",
+        "${workspaceFolder}/Tools/Test.ps1"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

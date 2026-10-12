@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "explicitProjectPlugins": [
+    { "name": "EnhancedInput", "source": "engine-bundled", "pin": "engine-lock.json", "required": true }
+  ],
+  "explicitlyDisabledPlugins": [
+    { "name": "AndroidFileServer", "reason": "Windows-only project; prevent unused Android file-server configuration and generated token from entering tracked defaults." }
+  ],
+  "policy": "Engine defaults remain engine-pinned. Add a plugin only with provenance, exact revision, supported engine, license evidence, runtime/editor classification, cook proof and rollback instructions.",
+  "deferred": [ "Cargo intake connector", "PCG", "StateTree", "GameplayAbilities", "MassEntity", "PythonScriptPlugin", "EditorScriptingUtilities" ]
+}

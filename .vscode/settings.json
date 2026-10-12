@@ -1,0 +1,20 @@
+{
+  "files.exclude": {
+    "**/Intermediate": true,
+    "**/Binaries": true,
+    "**/Saved": true,
+    "**/DerivedDataCache": true
+  },
+  "search.exclude": {
+    "**/Intermediate": true,
+    "**/Binaries": true,
+    "**/Saved": true,
+    "**/DerivedDataCache": true,
+    "Artifacts": true,
+    "Vault": true
+  },
+  "files.associations": {
+    "*.uproject": "json",
+    "*.uplugin": "json"
+  }
+}

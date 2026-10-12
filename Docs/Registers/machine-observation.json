@@ -1,0 +1,28 @@
+{
+  "observedDate": "2026-10-12",
+  "purpose": "Development planning, not player minimum specification",
+  "cpu": "AMD Ryzen 7 7435HS",
+  "physicalCores": 8,
+  "logicalProcessors": 16,
+  "usableRamGiB": 15.7,
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "vramGiB": null,
+  "workingDriveFreeGiBApprox": 70,
+  "workingDriveTotalGiBApprox": 952,
+  "engineObserved": {
+    "version": "5.8.2",
+    "changelist": 56702186,
+    "compatibleChangelist": 55116800
+  },
+  "visualStudioBuildTools": "17.14.16",
+  "msvcDirectory": "14.44.35207",
+  "windowsSdkDirectory": "10.0.26100.0",
+  "git": "2.55.0.windows.1",
+  "gitLfs": "3.7.1",
+  "limitations": [
+    "VRAM not measured",
+    "Hardware capacity is not a benchmark",
+    "Current free space will change",
+    "Installed directories do not prove successful build"
+  ]
+}

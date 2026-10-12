@@ -1,0 +1,13 @@
+# First owned map and packaged executable
+
+This is the first remaining editor milestone, not a claim that the map already exists.
+
+1. Compile the project successfully and open Game/BorrowedSun.uproject with the pinned engine.
+2. Create a small basic level for the first packaging proof. Save it as `/Game/BorrowedSun/Maps/Tests/L_Test_Startup`. Add an owned floor, lighting and an appropriate PlayerStart/default pawn. Keep it small; a World Partition city is a later map.
+3. In project Maps & Modes, set Game Default Map and Editor Startup Map to the saved test level. Inspect the resulting tracked DefaultEngine.ini change. Choose the actual tested GameMode, not an invented class path.
+4. Set `MapsToCook` in ignored Tools/Environment.local.json to `["/Game/BorrowedSun/Maps/Tests/L_Test_Startup"]`.
+5. Run `Tools/Preflight.ps1 -ForPackage`, then `Tools/Build.ps1 -Mode Package -Execute`. An existing map path is a precondition, not proof that the asset is valid.
+6. Launch the staged executable from its package folder. Confirm the expected map appears, inputs work, exit works, and relaunch works without an editor running. Keep all staged dependencies together.
+7. Record commit, engine, build-result path, launch result, machine/settings and any warnings in the task evidence. Commit the authored map and config with LFS active. Do not commit the package, caches or local environment file.
+
+Next create separate small feature-test maps for interaction, flight and save/travel. Migrate the approved parts into the city/orbit vertical slice after each contract works. Avoid turning the first test map into a permanent catch-all level.

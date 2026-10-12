@@ -1,0 +1,42 @@
+# DISABLED TEMPLATE. No workflow exists until YOU review this file and move a copy
+# into .github/workflows/manual-windows.yml in a private repository.
+# Never add pull_request, pull_request_target, issue_comment, or public triggers.
+# No checkout action: owner deliberately prepares a trusted local checkout first.
+name: Owner-approved local Unreal validation
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: Full trusted commit SHA already present in the local checkout
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: borrowed-sun-local-runner
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.event_name == 'workflow_dispatch' && github.event.repository.private == true && vars.ENABLE_TRUSTED_UNREAL_RUNNER == 'true'
+    runs-on: [self-hosted, Windows, X64, borrowed-sun-trusted]
+    timeout-minutes: 120
+    env:
+      EXPECTED_COMMIT: ${{ inputs.commit }}
+      TRUSTED_CHECKOUT: ${{ vars.BORROWED_SUN_TRUSTED_CHECKOUT }}
+    steps:
+      - name: Validate explicitly prepared trusted checkout
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:EXPECTED_COMMIT -notmatch '^[0-9a-fA-F]{40}$') { throw 'Use a full commit SHA.' }
+          if (-not (Test-Path -LiteralPath $env:TRUSTED_CHECKOUT -PathType Container)) { throw 'Trusted checkout missing.' }
+          Set-Location -LiteralPath $env:TRUSTED_CHECKOUT
+          $actual = git rev-parse HEAD
+          if ($LASTEXITCODE -ne 0 -or $actual.Trim() -ne $env:EXPECTED_COMMIT) { throw 'Unexpected commit.' }
+          if (git status --porcelain) { throw 'Trusted checkout must be clean.' }
+          if ($LASTEXITCODE -ne 0) { throw 'Git status failed.' }
+          & .\Tools\Preflight.ps1 -RequireClean
+          & .\Tools\Build.ps1 -Execute
+          & .\Tools\Test.ps1 -Execute
+# Evidence remains in local Artifacts/. This template uploads no licensed assets,
+# logs, secrets or executables. Review and sanitize before any separate publication.
