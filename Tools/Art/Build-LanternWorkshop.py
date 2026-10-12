@@ -256,11 +256,11 @@ put('floor-reel','SM_WorkshopCableReel',(-270,-30,0),s=1.9,yaw=38)
 put('spare-lamp','SM_WorkshopDeskLamp',(-289,45,0),s=1.15,yaw=34)
 put('mechanic-stool','SM_wooden_stool_01',(-274,-117,0),s=1.2,yaw=21,collision=True)
 definition=OUT/'SecondDawn.assembly.json'
-definition.write_text(json.dumps(dict(schemaVersion=1,id='orison.second-dawn',name='DA_SecondDawnWorkshop',parts=recipe),indent=2)+'\n',encoding='utf-8')
+definition.write_text(json.dumps(dict(schemaVersion=1,id='orison.second-dawn',name='DA_SecondDawnWorkshop',parts=recipe),indent=2)+'\n',encoding='utf-8',newline='\n')
 bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'LanternWorkshop.blend'))
 files=[dict(path=p.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in [definition,OUT/'LanternWorkshop.blend']]
 (OUT/'workshop-manifest.json').write_text(json.dumps(dict(schemaVersion=1,author='Original Borrowed Sun Second Dawn workshop',
     blenderVersion=bpy.app.version_string,units='centimetres',assetCount=len(assets),assets=assets,files=files,
-    assembly=definition.relative_to(ROOT).as_posix(),assemblyPartCount=len(recipe)),indent=2)+'\n',encoding='utf-8')
+    assembly=definition.relative_to(ROOT).as_posix(),assemblyPartCount=len(recipe)),indent=2)+'\n',encoding='utf-8',newline='\n')
 print('WORKSHOP COMPLETE',len(assets),'meshes',len(recipe),'parts',flush=True)
