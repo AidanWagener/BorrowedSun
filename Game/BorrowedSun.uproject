@@ -5,7 +5,7 @@
   "Description": "Borrowed Sun: offline single-player production foundation.",
   "Modules": [
     { "Name": "BorrowedSun", "Type": "Runtime", "LoadingPhase": "Default" },
-    { "Name": "BorrowedSunEditor", "Type": "Editor", "LoadingPhase": "PostEngineInit" }
+    { "Name": "BorrowedSunEditor", "Type": "Editor", "LoadingPhase": "Default" }
   ],
   "Plugins": [
     { "Name": "EnhancedInput", "Enabled": true },

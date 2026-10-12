@@ -31,3 +31,4 @@ __pycache__/
 *.pyc
 # Keep vendor binary-only plugins out until an explicit exception is reviewed.
 # Do not ignore Game/Build: it can contain authored platform resources.
+**/Build/**/FileOpenOrder/

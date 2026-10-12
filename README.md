@@ -1,10 +1,10 @@
 # Borrowed Sun workspace
 
-A local-first Unreal foundation for a solo city-to-orbit adventure. Start with a small playable expedition. Initial tool/asset spending ceiling: under EUR 500; setup purchases: EUR 0.
+A local-first Unreal project for a solo city-to-orbit adventure. The first demo, **First Light**, implements a compact walking/flight expedition with two persistent outcomes. See [demo scope](Docs/Operations/DEMO_SCOPE.md) for acceptance and limits; qualification results belong in the validation records. Initial tool/asset spending ceiling: under EUR 500; setup purchases: EUR 0.
 
 ## Start here
 
-1. Read [the actual delivery validation](Docs/Operations/VALIDATION.md) to distinguish completed checks from remaining engine and gameplay work.
+1. Read [the current demo validation](Docs/Operations/DEMO_VALIDATION.md) for the playable milestone and [the earlier foundation validation](Docs/Operations/VALIDATION.md) for setup history.
 2. Read [local operations](Tools/README.md). The installed engine is pinned in [engine-lock.json](Config/engine-lock.json). Personal engine paths belong in ignored `Tools/Environment.local.json`.
 3. Run the doctor and preflight from this directory:
 
@@ -21,7 +21,7 @@ powershell -NoProfile -File Tools/Build.ps1 -Execute
 powershell -NoProfile -File Tools/Test.ps1 -Execute -NullRHI
 ```
 
-5. Prove independent recovery in BS-002, then continue with BS-003: create an owned map in the Unreal editor, set the default map, add its package path to `MapsToCook`, then package. No binary map has been fabricated by a text generator. See [first-map runbook](Docs/Operations/FIRST_MAP.md).
+5. The authored demo map is now `/Game/BorrowedSun/Maps/L_BorrowedSunDemo`; its map and material were created and saved through Unreal's commandlet APIs. `MapsToCook` and the default map are configured. See [first-map runbook](Docs/Operations/FIRST_MAP.md) for provenance and regeneration. A bundle restore was rebuilt in a separate local checkout; independent-device recovery remains an operational requirement.
 
 ```powershell
 powershell -NoProfile -File Tools/Preflight.ps1 -ForPackage
@@ -43,7 +43,13 @@ Do not mistake a headless smoke test for a rendering, gameplay, cook or Shipping
 | Artifacts | Ignored logs, test fixtures and build output |
 | Vault | Optional ignored private license evidence; requires independent backup |
 
-The full design remains in the accompanying Borrowed Sun game specification. This workspace contains the development operating system; it is not a complete game or a finished CI service.
+The full design remains in the accompanying Borrowed Sun game specification. This workspace contains the demo source and development workflow. The first demo uses one continuous map and original procedural prototype content; broader streaming, combat, NPCs and vendor-kit production remain later work. Remote CI is not enabled.
+
+## Play and validate First Light
+
+Compile first, then use `Tools/Demo.ps1 -Mode Launch -Execute` to launch the current source project. The script defaults to a dry run. `-Mode Validate -Screenshots -Execute` runs both mission outcomes with rendering and fresh isolated save slots, preserving JSON and screenshots. It exercises gameplay methods and movement; physical keyboard/controller feel still requires playtesting. See the script's help and [demo scope](Docs/Operations/DEMO_SCOPE.md).
+
+The loop is: take the sunseed, board Kestrel, fly to the sky relay, choose clinic or evacuation power, return, disembark and install it. **E** interacts, **G** toggles optional flight assist, **R** recovers a safe position, **F5/F9** save/load, and **ESC** opens the menu. A new expedition requires an explicit menu confirmation.
 
 ## Daily use
 

@@ -1,5 +1,7 @@
 # Delivery validation - 12 October 2026
 
+Historical foundation record. The later authored map, packaged playable demo, persistence and rendered checks are recorded in [DEMO_VALIDATION.md](DEMO_VALIDATION.md). Statements below describe the earlier foundation milestone only.
+
 This record describes the delivered foundation, not the full game. No third-party assets were acquired, no paid service was enabled and no remote repository was created.
 
 ## Completed

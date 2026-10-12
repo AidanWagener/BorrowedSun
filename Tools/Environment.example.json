@@ -11,14 +11,21 @@
   "MaxParallelActions": 2,
   "TimeoutMinutes": 60,
   "TestFilter": "BorrowedSun.Smoke",
-  "MinimumTests": 5,
+  "MinimumTests": 10,
   "ExpectedTests": [
     "BorrowedSun.Smoke.Identity.CanonicalAndDistinct",
     "BorrowedSun.Smoke.Identity.RejectsAmbiguity",
     "BorrowedSun.Smoke.Travel.RigidMappingConservesMotion",
     "BorrowedSun.Smoke.Travel.RoundTrip",
-    "BorrowedSun.Smoke.Travel.RejectsScaleWithoutMutation"
+    "BorrowedSun.Smoke.Travel.RejectsScaleWithoutMutation",
+    "BorrowedSun.Smoke.Demo.OrderingAndCustody",
+    "BorrowedSun.Smoke.Demo.ExclusiveLeaseChoice",
+    "BorrowedSun.Smoke.Demo.RejectsInvalidProgress",
+    "BorrowedSun.Smoke.Demo.RejectedEventsPreserveState",
+    "BorrowedSun.Smoke.Demo.SerializationRoundTrip"
   ],
-  "MapsToCook": [],
+  "MapsToCook": [
+    "/Game/BorrowedSun/Maps/L_BorrowedSunDemo"
+  ],
   "GitRemoteName": "origin"
 }
