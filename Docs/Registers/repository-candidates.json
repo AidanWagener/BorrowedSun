@@ -1,0 +1,2795 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-10-12",
+  "purpose": "Candidate research, not installed dependencies or an installation plan. Preserve per-candidate exceptions in assessment.",
+  "assessmentCount": 41,
+  "uniqueCandidateCount": 40,
+  "candidates": [
+    {
+      "id": "EDI-01",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "Epic Unreal MCP and owned editor validation",
+      "url": "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor",
+      "inspectedCommit": null,
+      "decision": "FIRST CONTROLLED TRIAL; NO SERVER STARTED IN RESEARCH",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Installed code inspected only; no plug-in enabled or connection created; runtime functionality not exercised.",
+      "assessment": {
+        "id": "ER00",
+        "name": "Epic Unreal MCP and owned editor validation",
+        "canonicalUrl": "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor",
+        "repoUrl": null,
+        "inspectedAt": "2026-10-12",
+        "headSha": null,
+        "headCommittedAt": null,
+        "kind": "Installed native engine plug-ins and project-owned editor code",
+        "pinLimitation": "Launcher engine build, not a publicly pinned Git repository. Build.version and local file SHA256 evidence establish inspected bytes.",
+        "license": {
+          "spdx": null,
+          "status": "Epic engine component; do not label MIT. Descriptors contain NoRedist=true. Applicable engine terms and distribution permissions remain separate from third-party repository licenses.",
+          "verifiedOpenSourceLicense": false
+        },
+        "engineCompatibility": {
+          "installedVersion": "5.8.2",
+          "changelist": 56702186,
+          "compatibleChangelist": 55116800,
+          "branchName": "++UE5+Release-5.8",
+          "testedOnBorrowedSun582": false,
+          "evidenceType": "read-only installed descriptors, settings and source; no server or tools executed"
+        },
+        "defaults": {
+          "pluginIdentifier": "ModelContextProtocol",
+          "pluginVersion": "1.0",
+          "experimental": true,
+          "enabledByDefault": false,
+          "allToolsetsEnabledByDefault": false,
+          "autoStartServer": false,
+          "port": 8000,
+          "toolSearch": true,
+          "httpServerDefaultBindAddress": "localhost",
+          "authentication": "No authentication layer documented",
+          "originValidation": "Local-origin validation in source; requests without Origin permitted; not authentication",
+          "runtimeModules": [
+            "ModelContextProtocol",
+            "ModelContextProtocolEngine"
+          ],
+          "editorModule": "ModelContextProtocolEditor"
+        },
+        "projectObservation": "BorrowedSun.uproject does not declare MCP/AllToolsets enabled; no matching override in inspected project Config/Saved Config. Static configuration observation, not a claim about all processes or global user preferences.",
+        "localEvidence": [
+          {
+            "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Build\\Build.version",
+            "sha256": "FF99FC3DD98E7C7FD2F5700334BC792DFB7BACED3828CDEE32940BB69581A6A4"
+          },
+          {
+            "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Plugins\\Experimental\\ModelContextProtocol\\ModelContextProtocol.uplugin",
+            "sha256": "74420534EDCD6BAAFCB48E0AF919D53B84891BDADE7B97869B0EF485C3EA1518"
+          },
+          {
+            "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Plugins\\Experimental\\ModelContextProtocol\\Source\\ModelContextProtocolEngine\\Public\\ModelContextProtocolSettings.h",
+            "sha256": "589492FD7156C9B21E5CFA8E60787B45B0464801565A07657F35A995559FBDCF"
+          },
+          {
+            "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Plugins\\Experimental\\Toolsets\\AllToolsets\\AllToolsets.uplugin",
+            "sha256": "0A0FECADED0EF2F88BFE235B96EEDF211ACC6BC27F4684A116942ECE2892CEC3"
+          },
+          {
+            "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Source\\Runtime\\Online\\HTTPServer\\Private\\HttpServerConfig.h",
+            "sha256": "F2D73ACBEE3A8E7B12E12CA994D4B6A4882C6250E7A57AECC7D7D5E502728769"
+          },
+          {
+            "path": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Plugins\\Experimental\\Toolsets\\EditorToolset\\Source\\EditorToolset\\Private\\EditorAppToolset.h",
+            "sha256": "16CF1E9E18A29737CC48DF5CD84B0B926A638FF484045A10973D9300387E64BF"
+          }
+        ],
+        "decision": "FIRST CONTROLLED TRIAL; NO SERVER STARTED IN RESEARCH",
+        "potentialValue": "Inspect editor state and automate bounded repeat tasks through one first-party route; native Data Validation covers project-owned QA.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            2,
+            4
+          ],
+          "adoptionIfQualified": null,
+          "basis": "Original planning estimate; ten bounded operations and restart/recovery checks. No measured savings.",
+          "illustrativeNet": {
+            "successfulRepetitions": 100,
+            "savedMinutesEach": 1,
+            "grossHours": 1.6667,
+            "netHoursRange": [
+              -2.3333,
+              -0.3333
+            ],
+            "excludes": "Additional repair and ongoing maintenance, which reduce net savings"
+          }
+        },
+        "actionAccessModel": "Enable only needed toolsets in disposable test target; read-only first session is operating policy, not an enforced sandbox. Calls serial on game thread. Inspect advertised operations before mutations.",
+        "undo": "No generic protocol-level undo assumed; qualify each edit, saved packages and restoration independently.",
+        "logging": "Native LogModelContextProtocol plus reviewed before/after state and explicit changed-package report; telemetry toggle is separate from task audit.",
+        "builtInAlternatives": [
+          "Editor Data Validation",
+          "Remote Control transactional property calls",
+          "Editor Utility Widgets",
+          "Reviewed local commandlets and owned C++ tools"
+        ],
+        "spikePlan": "Project/build/map identity, five observations, bounded edits, re-read, invalid-input failure, actual undo and saved-file recovery, ten successful operations across two launches.",
+        "risks": [
+          "Experimental incomplete API",
+          "No authentication",
+          "Tool search is not authorization",
+          "Broad AllToolsets aggregation",
+          "Runtime modules can exist outside editor; exclude from offline shipping game"
+        ],
+        "localQualification": "Installed code inspected only; no plug-in enabled or connection created; runtime functionality not exercised.",
+        "sourceURLs": [
+          "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor",
+          "https://dev.epicgames.com/documentation/unreal-engine/data-validation-in-unreal-engine",
+          "https://dev.epicgames.com/documentation/en-us/unreal-engine/remote-control-api-http-reference-for-unreal-engine",
+          "https://dev.epicgames.com/documentation/en-us/unreal-engine/editor-utility-widgets-in-unreal-engine"
+        ]
+      }
+    },
+    {
+      "id": "EDI-02",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "EpicGames/BlenderTools",
+      "url": "https://github.com/EpicGames/BlenderTools",
+      "inspectedCommit": "04cae45d71874a37d75522f4a694a5d4aae32147",
+      "decision": "REFERENCE / FALLBACK",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER01",
+        "name": "EpicGames/BlenderTools",
+        "canonicalUrl": "https://github.com/EpicGames/BlenderTools",
+        "inspectedAt": "2026-10-12",
+        "headSha": "04cae45d71874a37d75522f4a694a5d4aae32147",
+        "headCommittedAt": "2026-09-03T14:29:05Z",
+        "headAuthorAt": "2026-09-03T14:29:05Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "Update documentation URLs to the current Pages host (#788)",
+        "commitUrl": "https://github.com/EpicGames/BlenderTools/commit/04cae45d71874a37d75522f4a694a5d4aae32147",
+        "apiEvidenceUrl": "https://api.github.com/repos/EpicGames/BlenderTools/commits/04cae45d71874a37d75522f4a694a5d4aae32147",
+        "archiveFlagVerified": false,
+        "kind": "Blender add-ons; Send to Unreal and UE to Rigify",
+        "license": {
+          "spdx": "MIT",
+          "observedLicense": "MIT",
+          "pinnedPath": "LICENSE.md",
+          "pinnedUrl": "https://github.com/EpicGames/BlenderTools/blob/04cae45d71874a37d75522f4a694a5d4aae32147/LICENSE.md",
+          "sha256": "9CDB2679FECDF224797A354BF81022E377D58490BDE08FCDCCA4247CE6734D16",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records."
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Release 2.4.3 reports Blender 3.3/3.6 and UE 5.3 tests; no exact 5.8.2 proof.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "HEAD updates documentation URLs, not a new exporter release; latest displayed Send to Unreal 2.4.3 is from 2023-11-09.",
+        "decision": "REFERENCE / FALLBACK",
+        "potentialValue": "Repeated source-asset export and import.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            3,
+            6
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Blender add-on plus Unreal Python remote execution; live editor mutation and configured export paths.",
+        "undo": "No comprehensive cross-application rollback verified; snapshot source and destination independently.",
+        "logging": "Console/import feedback; durable task-level changed-package manifest not verified.",
+        "builtInOrLeanAlternative": "Native FBX/glTF import; BFU trial.",
+        "risks": [
+          "Older published test matrix, wrong editor target, remote Python and importer settings."
+        ],
+        "replacementAndExit": "Keep blend source, ordinary interchange files and settings manifest; stop using add-on without gameplay migration.",
+        "spikePlan": "Measured mesh, collision, pivot, material and socket round trips; repeat reimport to stable asset paths.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/EpicGames/BlenderTools",
+          "https://github.com/EpicGames/BlenderTools/commit/04cae45d71874a37d75522f4a694a5d4aae32147",
+          "https://api.github.com/repos/EpicGames/BlenderTools/commits/04cae45d71874a37d75522f4a694a5d4aae32147",
+          "https://github.com/EpicGames/BlenderTools/blob/04cae45d71874a37d75522f4a694a5d4aae32147/README.md",
+          "https://github.com/EpicGames/BlenderTools/blob/04cae45d71874a37d75522f4a694a5d4aae32147/LICENSE.md",
+          "https://github.com/EpicGames/BlenderTools/blob/04cae45d71874a37d75522f4a694a5d4aae32147/send2ue/__init__.py",
+          "https://github.com/EpicGames/BlenderTools/blob/04cae45d71874a37d75522f4a694a5d4aae32147/docs/send2ue/introduction/quickstart.md",
+          "https://github.com/EpicGames/BlenderTools/releases/tag/20231109043947"
+        ],
+        "observedRelease": {
+          "name": "Send to Unreal 2.4.3",
+          "date": "2023-11-09",
+          "url": "https://github.com/EpicGames/BlenderTools/releases/tag/20231109043947"
+        }
+      }
+    },
+    {
+      "id": "EDI-03",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "poly-hammer/BlenderTools",
+      "url": "https://github.com/poly-hammer/BlenderTools",
+      "inspectedCommit": "470b0218f6cc4578b79ea367c508211b02b41ba8",
+      "decision": "FALLBACK ONLY IF BFU FAILS",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER02",
+        "name": "poly-hammer/BlenderTools",
+        "canonicalUrl": "https://github.com/poly-hammer/BlenderTools",
+        "inspectedAt": "2026-10-12",
+        "headSha": "470b0218f6cc4578b79ea367c508211b02b41ba8",
+        "headCommittedAt": "2026-05-27T20:28:05Z",
+        "headAuthorAt": "2026-05-27T20:28:05Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "Send2UE - Fix combined mesh export transforms and child selection (#188) (#194)",
+        "commitUrl": "https://github.com/poly-hammer/BlenderTools/commit/470b0218f6cc4578b79ea367c508211b02b41ba8",
+        "apiEvidenceUrl": "https://api.github.com/repos/poly-hammer/BlenderTools/commits/470b0218f6cc4578b79ea367c508211b02b41ba8",
+        "archiveFlagVerified": false,
+        "kind": "Community BlenderTools fork",
+        "license": {
+          "spdx": "MIT",
+          "observedLicense": "MIT",
+          "pinnedPath": "LICENSE.md",
+          "pinnedUrl": "https://github.com/poly-hammer/BlenderTools/blob/470b0218f6cc4578b79ea367c508211b02b41ba8/LICENSE.md",
+          "sha256": "9CDB2679FECDF224797A354BF81022E377D58490BDE08FCDCCA4247CE6734D16",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records."
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Release 2.6.7 reports UE 5.3/5.4 tests; Blender 5.0 preferences fix. Exact UE 5.8.2 untested locally.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "HEAD fixes combined mesh transforms/child selection; latest displayed release 2.6.7 dated 2025-11-23.",
+        "decision": "FALLBACK ONLY IF BFU FAILS",
+        "potentialValue": "Maintained Send to Unreal alternative for iterative assets.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            3,
+            6
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Python remote execution; pinned quick start recommends legacy FBX importer on UE 5.5+.",
+        "undo": "No universal export/import undo verified; restore baseline project settings after a failed trial.",
+        "logging": "Import/export console feedback; add own manifest and property readback.",
+        "builtInOrLeanAlternative": "BFU or native file import.",
+        "risks": [
+          "Global importer choice, remote execution, second concurrent exporter causing ambiguity."
+        ],
+        "replacementAndExit": "Ordinary mesh outputs; source assets and settings remain independent.",
+        "spikePlan": "Same fixture as BFU; isolate any importer toggle and prove no regression to other intake assets.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/poly-hammer/BlenderTools",
+          "https://github.com/poly-hammer/BlenderTools/commit/470b0218f6cc4578b79ea367c508211b02b41ba8",
+          "https://api.github.com/repos/poly-hammer/BlenderTools/commits/470b0218f6cc4578b79ea367c508211b02b41ba8",
+          "https://github.com/poly-hammer/BlenderTools/blob/470b0218f6cc4578b79ea367c508211b02b41ba8/README.md",
+          "https://github.com/poly-hammer/BlenderTools/blob/470b0218f6cc4578b79ea367c508211b02b41ba8/LICENSE.md",
+          "https://github.com/poly-hammer/BlenderTools/blob/470b0218f6cc4578b79ea367c508211b02b41ba8/docs/send2ue/introduction/quickstart.md",
+          "https://github.com/poly-hammer/BlenderTools/releases/tag/20251123002929"
+        ],
+        "observedRelease": {
+          "name": "Send to Unreal 2.6.7",
+          "date": "2025-11-23",
+          "url": "https://github.com/poly-hammer/BlenderTools/releases/tag/20251123002929"
+        }
+      }
+    },
+    {
+      "id": "EDI-04",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "xavier150/Blender-For-UnrealEngine-Addons",
+      "url": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons",
+      "inspectedCommit": "780d9217fc8271f946f358559dbbb2ebbf989175",
+      "decision": "TRIAL WHEN FIRST CUSTOM PROP EXISTS",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER03",
+        "name": "xavier150/Blender-For-UnrealEngine-Addons",
+        "canonicalUrl": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons",
+        "inspectedAt": "2026-10-12",
+        "headSha": "780d9217fc8271f946f358559dbbb2ebbf989175",
+        "headCommittedAt": "2026-10-08T02:01:39Z",
+        "headAuthorAt": "2026-10-08T02:01:39Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "New category prop than using sub folder",
+        "commitUrl": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/commit/780d9217fc8271f946f358559dbbb2ebbf989175",
+        "apiEvidenceUrl": "https://api.github.com/repos/xavier150/Blender-For-UnrealEngine-Addons/commits/780d9217fc8271f946f358559dbbb2ebbf989175",
+        "archiveFlagVerified": false,
+        "kind": "Blender asset export and generated Unreal import scripts",
+        "license": {
+          "spdx": null,
+          "observedLicense": "GPL-3.0 text",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/blob/780d9217fc8271f946f358559dbbb2ebbf989175/LICENSE",
+          "sha256": "3972DC9744F6499F0F9B2DBF76696F2AE7AD8AF9B23DDE66D6AF86C9DFB36986",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records."
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Release history adds UE 5.8 support in 4.4.6; v4.4.8 selected for trial. No local qualification.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "2026 releases address UE 5.8, child transforms and static/skeletal socket issues; HEAD is newer development work.",
+        "decision": "TRIAL WHEN FIRST CUSTOM PROP EXISTS",
+        "potentialValue": "One reproducible prop, modular piece and socket export pipeline.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            3,
+            5
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled.",
+          "illustrativeNet": {
+            "repetitions": 100,
+            "savedMinutesEach": 3,
+            "grossHours": 5,
+            "netHoursRange": [
+              0,
+              2
+            ],
+            "basis": "Unmeasured example; further repair lowers net"
+          }
+        },
+        "actionAccessModel": "Export to explicit files; generated Python executes with editor privileges when deliberately run. No persistent remote server required by proposed trial.",
+        "undo": "Blender source and imported Unreal packages require separate snapshots; no cross-application transaction assumed.",
+        "logging": "Retain export/import console outputs, script and expected destination manifest.",
+        "builtInOrLeanAlternative": "Native FBX/glTF import; poly-hammer as fallback.",
+        "risks": [
+          "Generated code privileges, importer regressions, transforms, license obligations for tool redistribution distinct from asset rights."
+        ],
+        "replacementAndExit": "Retain blend source and interchange files; imported ordinary assets do not require this add-on to play.",
+        "spikePlan": "Two round trips for measured object, hinged door, railing collision and ship socket; restart and package fixture.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/xavier150/Blender-For-UnrealEngine-Addons",
+          "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/commit/780d9217fc8271f946f358559dbbb2ebbf989175",
+          "https://api.github.com/repos/xavier150/Blender-For-UnrealEngine-Addons/commits/780d9217fc8271f946f358559dbbb2ebbf989175",
+          "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/blob/780d9217fc8271f946f358559dbbb2ebbf989175/README.md",
+          "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/blob/780d9217fc8271f946f358559dbbb2ebbf989175/LICENSE",
+          "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/releases/tag/v4.4.8",
+          "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/blob/ea415063a014ac519e9f9f80e5e7a4458b2356a2/LICENSE"
+        ],
+        "observedRelease": {
+          "name": "v4.4.8",
+          "date": "2026-07-22",
+          "sha": "ea415063a014ac519e9f9f80e5e7a4458b2356a2",
+          "url": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/releases/tag/v4.4.8",
+          "licenseUrl": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/blob/ea415063a014ac519e9f9f80e5e7a4458b2356a2/LICENSE"
+        }
+      }
+    },
+    {
+      "id": "EDI-05",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "PCGEx/PCGExtendedToolkit",
+      "url": "https://github.com/PCGEx/PCGExtendedToolkit",
+      "inspectedCommit": "5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5",
+      "decision": "CONDITIONAL TRIAL AFTER REPEATABLE MANUAL SEGMENT",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER04",
+        "name": "PCGEx/PCGExtendedToolkit",
+        "canonicalUrl": "https://github.com/PCGEx/PCGExtendedToolkit",
+        "inspectedAt": "2026-10-12",
+        "headSha": "5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5",
+        "headCommittedAt": "2026-10-11T20:51:50Z",
+        "headAuthorAt": "2026-10-11T20:51:50Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "[Collections] Gate legacy schema migrations",
+        "commitUrl": "https://github.com/PCGEx/PCGExtendedToolkit/commit/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5",
+        "apiEvidenceUrl": "https://api.github.com/repos/PCGEx/PCGExtendedToolkit/commits/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5",
+        "archiveFlagVerified": false,
+        "kind": "C++ procedural-content node ecosystem with runtime and editor modules",
+        "license": {
+          "spdx": "MIT",
+          "observedLicense": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/PCGEx/PCGExtendedToolkit/blob/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5/LICENSE",
+          "sha256": "9CBB6565662ACDBA217A8DB15C950619450D5BA7F121C6BF4BA13B71265BCD7A",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records.",
+          "additionalNotices": [
+            "Source/ThirdParty/Delaunator/LICENSE: MIT, separately retained"
+          ]
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "README supports 5.8/5.7; inspected descriptor EngineVersion 5.8.0. Main explicitly unstable; observed 5.8 branch is trial candidate, not qualified build.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Active collection/schema and path work; 2026-10-09 release notes report editor level-export memory leak fix. Latest release label and tag differ.",
+        "decision": "CONDITIONAL TRIAL AFTER REPEATABLE MANUAL SEGMENT",
+        "potentialValue": "Connected support geometry, path processing and spatial selection where native PCG/splines prove insufficient.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            4,
+            6
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled.",
+          "illustrativeNet": {
+            "repetitions": 12,
+            "savedMinutesEach": 30,
+            "grossHours": 6,
+            "netHoursRange": [
+              0,
+              2
+            ],
+            "basis": "Unmeasured repeated-assembly example; first manual recipe excluded because required either way"
+          }
+        },
+        "actionAccessModel": "C++ plug-in runs inside editor and may runtime; avoid separate MCP branch and paid extensions during test.",
+        "undo": "Generated graphs/settings can remain dependencies; baking does not automatically remove runtime references.",
+        "logging": "Capture generation time, seed/settings, output count and references; no general rollback guarantee established.",
+        "builtInOrLeanAlternative": "Native PCG, splines and manual placement.",
+        "risks": [
+          "Fast-moving schema, unstable main, dependency retention and procedural layouts obscuring authored gameplay."
+        ],
+        "replacementAndExit": "Prove bake/remove/reopen/package in disposable copy or acknowledge continuing dependency.",
+        "spikePlan": "Repeat fixed recipe deterministically, modify input once without duplicates, profile then package/remove test.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/PCGEx/PCGExtendedToolkit",
+          "https://github.com/PCGEx/PCGExtendedToolkit/commit/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5",
+          "https://api.github.com/repos/PCGEx/PCGExtendedToolkit/commits/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5",
+          "https://github.com/PCGEx/PCGExtendedToolkit/blob/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5/README.md",
+          "https://github.com/PCGEx/PCGExtendedToolkit/blob/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5/LICENSE",
+          "https://github.com/PCGEx/PCGExtendedToolkit/blob/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5/PCGExtendedToolkit.uplugin",
+          "https://github.com/PCGEx/PCGExtendedToolkit/blob/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5/Source/ThirdParty/Delaunator/LICENSE",
+          "https://github.com/PCGEx/PCGExtendedToolkit/releases/tag/v0.79.4-hotfix.1",
+          "https://github.com/PCGEx/PCGExtendedToolkit/blob/8072735a81eca04e4cee61d0a06a5c3f6a3f6da5/LICENSE"
+        ],
+        "observedRelease": {
+          "name": "Latest-marked title PCGEx 0.79.1 hotfix; tag v0.79.4-hotfix.1",
+          "date": "2026-10-09",
+          "url": "https://github.com/PCGEx/PCGExtendedToolkit/releases/tag/v0.79.4-hotfix.1"
+        },
+        "otherObservedRef": {
+          "name": "5.8 branch snapshot",
+          "sha": "8072735a81eca04e4cee61d0a06a5c3f6a3f6da5",
+          "observedBy": "git ls-remote",
+          "commitDate": null,
+          "descriptorVersion": "0.79.2",
+          "licenseUrl": "https://github.com/PCGEx/PCGExtendedToolkit/blob/8072735a81eca04e4cee61d0a06a5c3f6a3f6da5/LICENSE"
+        }
+      }
+    },
+    {
+      "id": "EDI-06",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "chongdashu/unreal-mcp",
+      "url": "https://github.com/chongdashu/unreal-mcp",
+      "inspectedCommit": "4e5f00da50733190481311e254d16d137a84ef33",
+      "decision": "REJECT FOR BASELINE",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER05",
+        "name": "chongdashu/unreal-mcp",
+        "canonicalUrl": "https://github.com/chongdashu/unreal-mcp",
+        "inspectedAt": "2026-10-12",
+        "headSha": "4e5f00da50733190481311e254d16d137a84ef33",
+        "headCommittedAt": "2025-04-22T02:01:56Z",
+        "headAuthorAt": "2025-04-22T02:01:56Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "Revert to state of commit fa7a84add6b414e3078ffd7d65033622eb28791f",
+        "commitUrl": "https://github.com/chongdashu/unreal-mcp/commit/4e5f00da50733190481311e254d16d137a84ef33",
+        "apiEvidenceUrl": "https://api.github.com/repos/chongdashu/unreal-mcp/commits/4e5f00da50733190481311e254d16d137a84ef33",
+        "archiveFlagVerified": false,
+        "kind": "Python MCP front end and C++ TCP editor bridge",
+        "license": {
+          "spdx": null,
+          "observedLicense": null,
+          "pinnedPath": null,
+          "pinnedUrl": null,
+          "sha256": null,
+          "verifiedFile": false,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records.",
+          "declaredByReadme": "MIT",
+          "status": "README MIT declaration only. Complete pinned Git tree has no LICENSE/COPYING file; common root license paths returned 404. Resolve notice/permission documentation before integration; not a definitive legal conclusion.",
+          "treeEvidenceUrl": "https://api.github.com/repos/chongdashu/unreal-mcp/git/trees/4e5f00da50733190481311e254d16d137a84ef33?recursive=1"
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "UE 5.5+ README claim and 5.5 sample; exact 5.8.2 compatibility unknown.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD 2025-04-22 is a revert; README advises against production use.",
+        "decision": "REJECT FOR BASELINE",
+        "potentialValue": "Basic actor and Blueprint command routing; overlaps native MCP.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            4,
+            8
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Inspected bridge auto-starts on subsystem initialization at 127.0.0.1:55557; named command dispatch. Universal Python execution not established.",
+        "undo": "Comprehensive transaction and recovery behavior not established.",
+        "logging": "Bridge/server logging observed; durable per-action audit contract not established.",
+        "builtInOrLeanAlternative": "Installed Epic MCP toolsets, owned editor functions.",
+        "risks": [
+          "Old base, unsupported local engine, extra bridge and unresolved license notice documentation."
+        ],
+        "replacementAndExit": "Do not replace owned scaffold with bundled demo; no installation now.",
+        "spikePlan": "Would need missing native task, license notice resolution, build, bounded edits and recovery test before reconsideration.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/chongdashu/unreal-mcp",
+          "https://github.com/chongdashu/unreal-mcp/commit/4e5f00da50733190481311e254d16d137a84ef33",
+          "https://api.github.com/repos/chongdashu/unreal-mcp/commits/4e5f00da50733190481311e254d16d137a84ef33",
+          "https://github.com/chongdashu/unreal-mcp/blob/4e5f00da50733190481311e254d16d137a84ef33/README.md",
+          "https://github.com/chongdashu/unreal-mcp/blob/4e5f00da50733190481311e254d16d137a84ef33/MCPGameProject/Plugins/UnrealMCP/Source/UnrealMCP/Private/UnrealMCPBridge.cpp",
+          "https://github.com/chongdashu/unreal-mcp/blob/4e5f00da50733190481311e254d16d137a84ef33/MCPGameProject/Plugins/UnrealMCP/Source/UnrealMCP/Private/MCPServerRunnable.cpp"
+        ]
+      }
+    },
+    {
+      "id": "EDI-07",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "flopperam/unreal-engine-mcp",
+      "url": "https://github.com/flopperam/unreal-engine-mcp",
+      "inspectedCommit": "b1b495b7c396002108ecf5fed7853e5799be834c",
+      "decision": "REJECT OVERLAPPING LOCAL BRIDGE; NO HOSTED PURCHASE",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER06",
+        "name": "flopperam/unreal-engine-mcp",
+        "canonicalUrl": "https://github.com/flopperam/unreal-engine-mcp",
+        "inspectedAt": "2026-10-12",
+        "headSha": "b1b495b7c396002108ecf5fed7853e5799be834c",
+        "headCommittedAt": "2026-06-26T17:35:48Z",
+        "headAuthorAt": "2026-06-26T17:35:48Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "Merge pull request #31 from flopperam/readme-aura-banner-top",
+        "commitUrl": "https://github.com/flopperam/unreal-engine-mcp/commit/b1b495b7c396002108ecf5fed7853e5799be834c",
+        "apiEvidenceUrl": "https://api.github.com/repos/flopperam/unreal-engine-mcp/commits/b1b495b7c396002108ecf5fed7853e5799be834c",
+        "archiveFlagVerified": false,
+        "kind": "Local Python MCP/C++ bridge; separate hosted product promoted",
+        "license": {
+          "spdx": null,
+          "observedLicense": null,
+          "pinnedPath": null,
+          "pinnedUrl": null,
+          "sha256": null,
+          "verifiedFile": false,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records.",
+          "declaredByReadme": "MIT",
+          "status": "README MIT declaration only. Complete pinned Git tree has no LICENSE/COPYING file; common root license paths returned 404. Resolve notice/permission documentation before integration; not a definitive legal conclusion.",
+          "treeEvidenceUrl": "https://api.github.com/repos/flopperam/unreal-engine-mcp/git/trees/b1b495b7c396002108ecf5fed7853e5799be834c?recursive=1"
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Local README claims 5.5+; separate Flop AI lists 5.5/5.6/5.7; neither proves 5.8.2.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "HEAD is June 2026 Aura banner merge. Hosted features explicitly share no code with local Python server.",
+        "decision": "REJECT OVERLAPPING LOCAL BRIDGE; NO HOSTED PURCHASE",
+        "potentialValue": "Local scene/actor tools; hosted capabilities cannot be credited to pinned local code.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            4,
+            8
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Inspected local bridge uses 127.0.0.1:55557 and game-thread command dispatch; hosted service a distinct access model.",
+        "undo": "No comprehensive local undo/recovery contract verified.",
+        "logging": "Dispatched command logging observed; durable audit and changed-package proof unverified.",
+        "builtInOrLeanAlternative": "Epic native MCP; Claireon if a named native gap persists.",
+        "risks": [
+          "Marketing/local conflation, overlapping port, uncertain 5.8.2 and unresolved license notice file."
+        ],
+        "replacementAndExit": "No adoption or subscription; retain current project.",
+        "spikePlan": "Specify exact local/hosted product and missing task, resolve license and validate compile/recovery before trial.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/flopperam/unreal-engine-mcp",
+          "https://github.com/flopperam/unreal-engine-mcp/commit/b1b495b7c396002108ecf5fed7853e5799be834c",
+          "https://api.github.com/repos/flopperam/unreal-engine-mcp/commits/b1b495b7c396002108ecf5fed7853e5799be834c",
+          "https://github.com/flopperam/unreal-engine-mcp/blob/b1b495b7c396002108ecf5fed7853e5799be834c/README.md",
+          "https://github.com/flopperam/unreal-engine-mcp/blob/b1b495b7c396002108ecf5fed7853e5799be834c/UnrealMCP/Source/UnrealMCP/Private/EpicUnrealMCPBridge.cpp",
+          "https://github.com/flopperam/unreal-engine-mcp/blob/b1b495b7c396002108ecf5fed7853e5799be834c/UnrealMCP/Source/UnrealMCP/Private/MCPServerRunnable.cpp"
+        ]
+      }
+    },
+    {
+      "id": "EDI-08",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "believer-oss/Claireon",
+      "url": "https://github.com/believer-oss/Claireon",
+      "inspectedCommit": "89bee2f4c62d1df625cca71ae66e7c81a415a009",
+      "decision": "RESERVE ALTERNATE AFTER DOCUMENTED NATIVE GAP",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER07",
+        "name": "believer-oss/Claireon",
+        "canonicalUrl": "https://github.com/believer-oss/Claireon",
+        "inspectedAt": "2026-10-12",
+        "headSha": "89bee2f4c62d1df625cca71ae66e7c81a415a009",
+        "headCommittedAt": "2026-09-15T01:25:31Z",
+        "headAuthorAt": "2026-09-14T20:15:54Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "release: 2.2.0",
+        "commitUrl": "https://github.com/believer-oss/Claireon/commit/89bee2f4c62d1df625cca71ae66e7c81a415a009",
+        "apiEvidenceUrl": "https://api.github.com/repos/believer-oss/Claireon/commits/89bee2f4c62d1df625cca71ae66e7c81a415a009",
+        "archiveFlagVerified": false,
+        "kind": "C++ editor MCP with Python, asset tools, audit and transaction helpers",
+        "license": {
+          "spdx": "MIT",
+          "observedLicense": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/LICENSE",
+          "sha256": "F4B7EBB7B96703DDF1C03592CE545BF13FF8D2C69F9B664959424E6765BCCB9F",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records.",
+          "additionalNotices": [
+            "Resources/Models/bge-small-en-v1.5-int8/LICENSE.txt: MIT, copyright BAAI 2023"
+          ]
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Maintainer changelog claims stock 5.5-5.8 builds and selected 5.8.2 regression observations; none run locally.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Release 2.2.0 dated 2026-09-14, committed 2026-09-15, includes substantive recovery and PCG correctness work.",
+        "decision": "RESERVE ALTERNATE AFTER DOCUMENTED NATIVE GAP",
+        "potentialValue": "Asset/Blueprint operations with inspected persistent Python audit and explicit rollback failure handling.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            4,
+            8
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Unauthenticated privileged local HTTP and unrestricted Python. Publisher bind warning requires effective-address verification on this engine; not locally observed running.",
+        "undo": "Source reports rollback failures and transaction identity; arbitrary external file writes remain outside universal recovery.",
+        "logging": "Python script/output files persisted under Saved/MCP/PythonAuditLog; retention/rotation code inspected.",
+        "builtInOrLeanAlternative": "Native MCP and narrow owned tools.",
+        "risks": [
+          "Broad Python access, network configuration, optional assistant/model surface and additional maintenance."
+        ],
+        "replacementAndExit": "Replace alternate MCP route if accepted; avoid simultaneous broad editor writers.",
+        "spikePlan": "One native gap, stock 5.8.2 build, failure injection, transaction and saved-file recovery, audit review.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/believer-oss/Claireon",
+          "https://github.com/believer-oss/Claireon/commit/89bee2f4c62d1df625cca71ae66e7c81a415a009",
+          "https://api.github.com/repos/believer-oss/Claireon/commits/89bee2f4c62d1df625cca71ae66e7c81a415a009",
+          "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/README.md",
+          "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/LICENSE",
+          "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/SECURITY.md",
+          "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/CHANGELOG.md",
+          "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/Source/Claireon/Private/ClaireonPythonAuditLog.cpp",
+          "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/Source/Claireon/Private/Tools/ClaireonTool_TransactionRollbackGroup.cpp",
+          "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/Resources/Models/bge-small-en-v1.5-int8/LICENSE.txt"
+        ],
+        "observedRelease": {
+          "name": "2.2.0",
+          "date": "2026-09-14",
+          "url": "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/CHANGELOG.md"
+        }
+      }
+    },
+    {
+      "id": "EDI-09",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "db-lyon/ue-mcp",
+      "url": "https://github.com/db-lyon/ue-mcp",
+      "inspectedCommit": "f4433cb8e1070a99cac2d0f03edd8c7768b2c9da",
+      "decision": "DEFER UNTIL MULTIPLE STABLE FLOWS NEED ORCHESTRATION",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER08",
+        "name": "db-lyon/ue-mcp",
+        "canonicalUrl": "https://github.com/db-lyon/ue-mcp",
+        "inspectedAt": "2026-10-12",
+        "headSha": "f4433cb8e1070a99cac2d0f03edd8c7768b2c9da",
+        "headCommittedAt": "2026-10-11T22:34:22Z",
+        "headAuthorAt": "2026-10-11T22:34:22Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "chore(release): 1.4.0-beta.3 (#1360)",
+        "commitUrl": "https://github.com/db-lyon/ue-mcp/commit/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da",
+        "apiEvidenceUrl": "https://api.github.com/repos/db-lyon/ue-mcp/commits/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da",
+        "archiveFlagVerified": false,
+        "kind": "Node MCP orchestration and C++ WebSocket bridge",
+        "license": {
+          "spdx": "MIT",
+          "observedLicense": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/LICENSE",
+          "sha256": "00D730E86FCB6F691065A11E10136BA4F6BE2F569EF2987C2764E483FDE0BE49",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records."
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Claims UE 5.4-5.8 on Windows; Epic toolset route requires 5.8; no local build.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "HEAD release 1.4.0-beta.3 on 2026-10-11; detailed guard and architecture documentation.",
+        "decision": "DEFER UNTIL MULTIPLE STABLE FLOWS NEED ORCHESTRATION",
+        "potentialValue": "Repeatable flows and configurable pre/post-call guards; potential later orchestration.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            5,
+            10
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Loopback WebSocket bridge without authentication; Python/console/reflected escape hatches and shell flow steps must be separately controlled.",
+        "undo": "Flow rollback and guard mechanisms are claims requiring configured failure tests; writes scope alone misses mutations/new objects.",
+        "logging": "After-call hooks can audit; actual restrictive policy and durable log configuration not qualified.",
+        "builtInOrLeanAlternative": "Owned deterministic scripts plus native MCP.",
+        "risks": [
+          "Large package/bridge surface, beta changes, unpinned latest setup recipes, external feedback posting."
+        ],
+        "replacementAndExit": "Keep recipes independently runnable where possible; no plugin-owned gameplay foundation.",
+        "spikePlan": "Pin exact package, disable external feedback, test one flow with injected failure and complete restoration.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/db-lyon/ue-mcp",
+          "https://github.com/db-lyon/ue-mcp/commit/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da",
+          "https://api.github.com/repos/db-lyon/ue-mcp/commits/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da",
+          "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/README.md",
+          "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/LICENSE",
+          "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/SECURITY.md",
+          "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/docs/architecture.md",
+          "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/docs/plugins-guards.md",
+          "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/plugin/ue_mcp_bridge/Source/UE_MCP_Bridge/Private/BridgeServer.cpp"
+        ]
+      }
+    },
+    {
+      "id": "EDI-10",
+      "category": "editor",
+      "categories": [
+        "editor"
+      ],
+      "name": "timargv/UnrealMCPToolkit",
+      "url": "https://github.com/timargv/UnrealMCPToolkit",
+      "inspectedCommit": "2d2d9e63d4d2defa19693bf79a56e1b738d45318",
+      "decision": "DO NOT ADD WITHOUT A SPECIFIC MISSING FUNCTION",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER09",
+        "name": "timargv/UnrealMCPToolkit",
+        "canonicalUrl": "https://github.com/timargv/UnrealMCPToolkit",
+        "inspectedAt": "2026-10-12",
+        "headSha": "2d2d9e63d4d2defa19693bf79a56e1b738d45318",
+        "headCommittedAt": "2026-06-28T07:01:05Z",
+        "headAuthorAt": "2026-06-28T07:01:05Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "docs: add precompiled release download to README (EN/RU)",
+        "commitUrl": "https://github.com/timargv/UnrealMCPToolkit/commit/2d2d9e63d4d2defa19693bf79a56e1b738d45318",
+        "apiEvidenceUrl": "https://api.github.com/repos/timargv/UnrealMCPToolkit/commits/2d2d9e63d4d2defa19693bf79a56e1b738d45318",
+        "archiveFlagVerified": false,
+        "kind": "C++ extension of Epic MCP with universal Python/console tools",
+        "license": {
+          "spdx": "MIT",
+          "observedLicense": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/timargv/UnrealMCPToolkit/blob/2d2d9e63d4d2defa19693bf79a56e1b738d45318/LICENSE",
+          "sha256": "A9CE81CD72C41A489B9CD35FAAD6D94134D2645EEB8EFBAC2AF3BD7276D20991",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records."
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Claims UE 5.8 Win64; no exact build qualification. README native-tool limitation is stale against installed 5.8.2 toolsets.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "HEAD documentation update on 2026-06-28; not evidence of newer engine-tested code.",
+        "decision": "DO NOT ADD WITHOUT A SPECIFIC MISSING FUNCTION",
+        "potentialValue": "Convenience universal scripting over existing MCP transport.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            2,
+            4
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Arbitrary Python and console execution with full editor privileges; inherits native MCP transport.",
+        "undo": "No comprehensive undo/asset scope guarantee verified; save_all can persist unrelated work.",
+        "logging": "README claims captured output/ring-buffer logs; no full audit qualification.",
+        "builtInOrLeanAlternative": "Reviewed local Python script/commandlet or narrow owned toolset.",
+        "risks": [
+          "Outdated comparison, universal interpreter and exact binary compatibility unknown."
+        ],
+        "replacementAndExit": "No baseline install; source build if future test justified, exclude from shipped game.",
+        "spikePlan": "Demonstrate unique missing task and bounded recovery; existing native methods checked first.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/timargv/UnrealMCPToolkit",
+          "https://github.com/timargv/UnrealMCPToolkit/commit/2d2d9e63d4d2defa19693bf79a56e1b738d45318",
+          "https://api.github.com/repos/timargv/UnrealMCPToolkit/commits/2d2d9e63d4d2defa19693bf79a56e1b738d45318",
+          "https://github.com/timargv/UnrealMCPToolkit/blob/2d2d9e63d4d2defa19693bf79a56e1b738d45318/README.md",
+          "https://github.com/timargv/UnrealMCPToolkit/blob/2d2d9e63d4d2defa19693bf79a56e1b738d45318/LICENSE"
+        ]
+      }
+    },
+    {
+      "id": "EDI-11",
+      "category": "editor",
+      "categories": [
+        "editor",
+        "devops"
+      ],
+      "name": "Allar/ue5-style-guide",
+      "url": "https://github.com/Allar/ue5-style-guide",
+      "inspectedCommit": "198a8550947de91f19362dabf57fbd1f1cdf0904",
+      "decision": "REFERENCE SELECTED RULES ONLY",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+      "assessment": {
+        "id": "ER10",
+        "name": "Allar/ue5-style-guide",
+        "canonicalUrl": "https://github.com/Allar/ue5-style-guide",
+        "inspectedAt": "2026-10-12",
+        "headSha": "198a8550947de91f19362dabf57fbd1f1cdf0904",
+        "headCommittedAt": "2022-03-07T11:55:58Z",
+        "headAuthorAt": "2022-03-07T11:55:58Z",
+        "commitDateType": "UTC GitHub commit.committer.date",
+        "commitMessage": "Merge pull request #71 from yhsb2k/main",
+        "commitUrl": "https://github.com/Allar/ue5-style-guide/commit/198a8550947de91f19362dabf57fbd1f1cdf0904",
+        "apiEvidenceUrl": "https://api.github.com/repos/Allar/ue5-style-guide/commits/198a8550947de91f19362dabf57fbd1f1cdf0904",
+        "archiveFlagVerified": false,
+        "kind": "Written style reference, not a compiled plug-in",
+        "license": {
+          "spdx": "MIT",
+          "observedLicense": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/LICENSE",
+          "sha256": "F03EA44889442D9C7BEBD457060B33442D735A5FF76E2280D85736A9A6C65304",
+          "verifiedFile": true,
+          "scopeLimit": "Applies to inspected tool source; assets, services, models and vendored dependencies require their own rights records."
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Default README identifies UE4 guide; observed v2 branch is explicitly draft. No engine compatibility test applicable to prose.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD 2022-03-07; do not infer modern validation plug-in from repository name.",
+        "decision": "REFERENCE SELECTED RULES ONLY",
+        "potentialValue": "Naming/root-content principles to adapt into small owned validators.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            0.5,
+            1
+          ],
+          "adoptionIfQualified": null,
+          "allocatedNow": 0,
+          "basis": "Original planning estimate, not measurement or vendor promise. Extra migration/upstream repair unknown; trial is conditional, not all candidates scheduled."
+        },
+        "actionAccessModel": "Read-only documentation until project chooses rules; no executable linter installed.",
+        "undo": "Not applicable to reading; bulk rename proposals still need preview/mapping/reference checks.",
+        "logging": "Owned validation report should record rule, asset, observed value and fix.",
+        "builtInOrLeanAlternative": "Epic Data Validation and current project conventions.",
+        "risks": [
+          "Over-applying rules to vendor assets and confusing reference document with supported automation."
+        ],
+        "replacementAndExit": "Keep concise local conventions; no runtime dependency.",
+        "spikePlan": "Adopt only rules preventing concrete mistakes; leave vendor package paths intact.",
+        "cashCost": "No purchase made or new recurring service selected. Free source availability is distinct from integration time and existing AI usage. Any future service cost needs current gross checkout quote.",
+        "localQualification": "Public metadata, pinned text/code and license inspection only. Not installed, enabled, built, imported, cooked or executed in this research sprint.",
+        "sourceURLs": [
+          "https://github.com/Allar/ue5-style-guide",
+          "https://github.com/Allar/ue5-style-guide/commit/198a8550947de91f19362dabf57fbd1f1cdf0904",
+          "https://api.github.com/repos/Allar/ue5-style-guide/commits/198a8550947de91f19362dabf57fbd1f1cdf0904",
+          "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/README.md",
+          "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/LICENSE",
+          "https://github.com/Allar/ue5-style-guide/blob/2127e9ab3ef740d5df3e2546205f2fcce7bc430e/LICENSE"
+        ],
+        "otherObservedRef": {
+          "name": "v2 draft snapshot",
+          "sha": "2127e9ab3ef740d5df3e2546205f2fcce7bc430e",
+          "observedBy": "git ls-remote",
+          "commitDate": null,
+          "licenseUrl": "https://github.com/Allar/ue5-style-guide/blob/2127e9ab3ef740d5df3e2546205f2fcce7bc430e/LICENSE"
+        }
+      },
+      "additionalAssessments": [
+        {
+          "category": "devops",
+          "assessment": {
+            "id": "DEV04",
+            "name": "ue5-style-guide",
+            "canonicalUrl": "https://github.com/Allar/ue5-style-guide",
+            "inspectedAt": "2026-10-12",
+            "headSha": "198a8550947de91f19362dabf57fbd1f1cdf0904",
+            "headCommittedAt": "2022-03-07T11:55:58Z",
+            "commitUrl": "https://github.com/Allar/ue5-style-guide/commit/198a8550947de91f19362dabf57fbd1f1cdf0904",
+            "archiveFlagVerified": false,
+            "kind": "Instruction/reference documentation; not a game framework",
+            "license": {
+              "spdx": "MIT",
+              "pinnedPath": "LICENSE",
+              "pinnedUrl": "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/LICENSE",
+              "verifiedFile": true
+            },
+            "engineCompatibility": {
+              "declaredOrObserved": "Default README calls itself UE4; v2 branch is a draft and also retains UE4 wording. No exact5.8 validation.",
+              "testedOnBorrowedSun582": false
+            },
+            "maintenance": "Default and v2 latest commits both2022-03-07; useful stable conventions, stale engine positioning.",
+            "decision": "ADOPT SELECTED IDEAS: one-page project conventions",
+            "potentialValue": "Consistent names/folders reduce search and AI ambiguity; not automatic code correctness.",
+            "estimatedHours": {
+              "qualificationSpike": [
+                0.5,
+                1
+              ],
+              "adoptionIfQualified": [
+                1,
+                2
+              ],
+              "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+            },
+            "costAndRuntime": "MIT documentation; no runtime dependency. Any separate linter has separate intake.",
+            "risks": [
+              "Repository name can be mistaken for current5.8 guidance.",
+              "Wholesale convention changes can create asset redirectors and unnecessary churn."
+            ],
+            "spikePlan": "Compare naming/folder rules with existing project conventions; choose only necessary rules. Apply to new sample assets and generated classes, not a bulk rename.",
+            "sourceURLs": [
+              "https://github.com/Allar/ue5-style-guide",
+              "https://github.com/Allar/ue5-style-guide/commit/198a8550947de91f19362dabf57fbd1f1cdf0904",
+              "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/README.md",
+              "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/LICENSE",
+              "https://github.com/Allar/ue5-style-guide/commit/2127e9ab3ef740d5df3e2546205f2fcce7bc430e",
+              "https://github.com/Allar/ue5-style-guide/blob/2127e9ab3ef740d5df3e2546205f2fcce7bc430e/README.md",
+              "https://github.com/Allar/ue5-style-guide/blob/2127e9ab3ef740d5df3e2546205f2fcce7bc430e/LICENSE"
+            ],
+            "executedOrInstalled": false,
+            "additionalInspectedRef": {
+              "head": "2127e9ab3ef740d5df3e2546205f2fcce7bc430e",
+              "committed_at": "2022-03-07T11:56:15Z",
+              "commit_url": "https://github.com/Allar/ue5-style-guide/commit/2127e9ab3ef740d5df3e2546205f2fcce7bc430e",
+              "name": "v2",
+              "licenseUrl": "https://github.com/Allar/ue5-style-guide/blob/2127e9ab3ef740d5df3e2546205f2fcce7bc430e/LICENSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "GAM-01",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "Lyra Starter Game",
+      "url": "https://fab.com/s/3fe3f994dd6d",
+      "inspectedCommit": null,
+      "decision": "reference",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not downloaded, installed, compiled, cooked or run in this research sprint.",
+      "assessment": {
+        "id": "G01",
+        "name": "Lyra Starter Game",
+        "repoUrl": null,
+        "distributionUrl": "https://fab.com/s/3fe3f994dd6d",
+        "observedDate": "2026-10-12",
+        "defaultBranch": null,
+        "commitSha": null,
+        "commitDate": null,
+        "commitDateType": null,
+        "pinLimitation": "No canonical publicly readable Epic Lyra Git repository/default-branch SHA was verified. Official documentation distributes the sample through Fab/Launcher. No mirror substituted and no sample downloaded.",
+        "license": {
+          "spdx": null,
+          "file": null,
+          "url": null,
+          "status": "Exact distributed license/notice file not accessed; must record from official package before reuse. Do not classify as MIT based on third-party mirrors.",
+          "scopeLimit": "Epic engine licensing and separately distributed content rights are distinct; Fab access itself is not a license audit."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Current Epic UE 5.8 documentation describes Lyra and version-matched Fab/Launcher distribution, but a 5.8.2 sample package has not been downloaded or built.",
+            "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/lyra-sample-game-in-unreal-engine"
+          }
+        ],
+        "decision": "reference",
+        "rationale": "Study modular input, pawn possession, settings and GAS patterns. Avoid rebasing the existing small game on the full multiplayer shooter experience architecture.",
+        "estimatedHours": {
+          "spike": [
+            4,
+            8
+          ],
+          "integration": [
+            40,
+            100
+          ],
+          "basis": "Original planning estimate for evaluating selected systems / a wider foundation transplant respectively; not measured and not a whole-game estimate.",
+          "confidence": "low"
+        },
+        "runtimeImplications": "Whole-project adoption brings Game Features, experiences, customized GAS, UI and multiplayer conventions. Reading documentation adds no dependency.",
+        "overlap": [
+          "ALS movement/camera",
+          "GAS examples",
+          "owned project foundation"
+        ],
+        "localQualification": "Not downloaded, installed, compiled, cooked or run in this research sprint.",
+        "sourceURLs": [
+          "https://dev.epicgames.com/documentation/en-us/unreal-engine/lyra-sample-game-in-unreal-engine",
+          "https://fab.com/s/3fe3f994dd6d",
+          "https://www.unrealengine.com/eula/unreal"
+        ]
+      }
+    },
+    {
+      "id": "GAM-02",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "ALS Refactored",
+      "url": "https://github.com/Sixze/ALS-Refactored",
+      "inspectedCommit": "b754d6f0f2bb03741d301f8fb88077ebfe561e17",
+      "decision": "trial",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G02",
+        "name": "ALS Refactored",
+        "repoUrl": "https://github.com/Sixze/ALS-Refactored",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "main",
+        "commitSha": "b754d6f0f2bb03741d301f8fb88077ebfe561e17",
+        "commitDate": "2026-08-12T22:18:23Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Expose virtual RefreshRotation to make extensions more viable w/ other locomotion modes",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/Sixze/ALS-Refactored/b754d6f0f2bb03741d301f8fb88077ebfe561e17/LICENSE.md",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Pinned ALS.uplugin declares VersionName 4.18 and EngineVersion 5.8.0. README release table stops at 4.17 / UE 5.7; descriptor is the stronger current evidence. Windows is the maintainer's principal development/test platform.",
+            "urls": [
+              "https://github.com/Sixze/ALS-Refactored/blob/b754d6f0f2bb03741d301f8fb88077ebfe561e17/README.md",
+              "https://raw.githubusercontent.com/Sixze/ALS-Refactored/b754d6f0f2bb03741d301f8fb88077ebfe561e17/ALS.uplugin",
+              "https://github.com/Sixze/ALS-Refactored/discussions/646"
+            ]
+          }
+        ],
+        "decision": "trial",
+        "rationale": "Useful if grounded locomotion and camera polish impede the slice. Keep walking as a replaceable presentation/movement adapter; do not combine full ALS and Lyra pawn hierarchies.",
+        "estimatedHours": {
+          "spike": [
+            8,
+            16
+          ],
+          "integration": [
+            24,
+            60
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Runtime ALS, ALSCamera and ALSExtras plus uncooked editor module; enables ACLPlugin, ControlRig, EnhancedInput, EngineCameras, MetaSound and other engine plugins. Retargeting, pawn possession, animation costs and cook remain to be qualified.",
+        "overlap": [
+          "Lyra pawn/input/camera",
+          "ground character movement",
+          "animation and skeleton"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/Sixze/ALS-Refactored/commit/b754d6f0f2bb03741d301f8fb88077ebfe561e17",
+          "https://github.com/Sixze/ALS-Refactored/blob/b754d6f0f2bb03741d301f8fb88077ebfe561e17/README.md",
+          "https://raw.githubusercontent.com/Sixze/ALS-Refactored/b754d6f0f2bb03741d301f8fb88077ebfe561e17/LICENSE.md",
+          "https://raw.githubusercontent.com/Sixze/ALS-Refactored/b754d6f0f2bb03741d301f8fb88077ebfe561e17/ALS.uplugin",
+          "https://github.com/Sixze/ALS-Refactored/discussions/646"
+        ]
+      }
+    },
+    {
+      "id": "GAM-03",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "GASDocumentation",
+      "url": "https://github.com/tranek/GASDocumentation",
+      "inspectedCommit": "8f76c5780bdea69e0ea2cc161ab2f435f04182eb",
+      "decision": "reference",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G03",
+        "name": "GASDocumentation",
+        "repoUrl": "https://github.com/tranek/GASDocumentation",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "master",
+        "commitSha": "8f76c5780bdea69e0ea2cc161ab2f435f04182eb",
+        "commitDate": "2024-04-06T07:07:55Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Remove GDAssetManager\n\nIt is no longer needed since UAbilitySystemGlobals::InitGlobalData() is automatically called starting in UE 5.3.",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/tranek/GASDocumentation/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "README explicitly describes documentation/sample as UE 5.3; GASDocumentation.uproject EngineAssociation 5.3. No 5.8 declaration verified.",
+            "urls": [
+              "https://github.com/tranek/GASDocumentation/blob/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/README.md",
+              "https://raw.githubusercontent.com/tranek/GASDocumentation/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/GASDocumentation.uproject",
+              "https://dev.epicgames.com/documentation/en-us/unreal-engine/understanding-the-unreal-engine-gameplay-ability-system"
+            ]
+          }
+        ],
+        "decision": "reference",
+        "rationale": "Strong conceptual reference with explicit unofficial/accuracy caveat. Compare patterns against installed 5.8 headers and Epic 5.8 docs; do not migrate the whole sample as a game foundation.",
+        "estimatedHours": {
+          "spike": [
+            2,
+            6
+          ],
+          "integration": [
+            8,
+            20
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Reading adds no runtime. Copying example systems adds GAS setup and historical assumptions that require local adaptation.",
+        "overlap": [
+          "Epic GAS documentation",
+          "Lyra GAS",
+          "Narxim GAS example",
+          "GASShooter"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/tranek/GASDocumentation/commit/8f76c5780bdea69e0ea2cc161ab2f435f04182eb",
+          "https://github.com/tranek/GASDocumentation/blob/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/README.md",
+          "https://raw.githubusercontent.com/tranek/GASDocumentation/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/LICENSE",
+          "https://raw.githubusercontent.com/tranek/GASDocumentation/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/GASDocumentation.uproject",
+          "https://dev.epicgames.com/documentation/en-us/unreal-engine/understanding-the-unreal-engine-gameplay-ability-system"
+        ]
+      }
+    },
+    {
+      "id": "GAM-04",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "GASShooter",
+      "url": "https://github.com/tranek/GASShooter",
+      "inspectedCommit": "26295c548a19f221917e4a7232c12e763db64cb1",
+      "decision": "reference",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G04",
+        "name": "GASShooter",
+        "repoUrl": "https://github.com/tranek/GASShooter",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "master",
+        "commitSha": "26295c548a19f221917e4a7232c12e763db64cb1",
+        "commitDate": "2021-12-03T23:11:27Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Fixed typo in AGSGATA_Trace::SetDestroyOnConfirmation\n\nResolves #30",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/tranek/GASShooter/26295c548a19f221917e4a7232c12e763db64cb1/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "README and GASShooter.uproject explicitly target UE 4.27. No current UE 5.8 compatibility evidence verified.",
+            "urls": [
+              "https://github.com/tranek/GASShooter/blob/26295c548a19f221917e4a7232c12e763db64cb1/README.md",
+              "https://raw.githubusercontent.com/tranek/GASShooter/26295c548a19f221917e4a7232c12e763db64cb1/GASShooter.uproject"
+            ]
+          }
+        ],
+        "decision": "reference",
+        "rationale": "Read narrowly for advanced weapon/targeting patterns. Avoid adopting as the UE 5.8.2 project base; Borrowed Sun is not primarily a replicated shooter.",
+        "estimatedHours": {
+          "spike": [
+            2,
+            4
+          ],
+          "integration": [
+            40,
+            100
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Sample is an advanced replicated FPS/TPS system. Integration estimate is only a highly uncertain port allowance, not endorsement or a complete production estimate.",
+        "overlap": [
+          "Lyra shooter systems",
+          "GASDocumentation",
+          "Narxim GAS example"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/tranek/GASShooter/commit/26295c548a19f221917e4a7232c12e763db64cb1",
+          "https://github.com/tranek/GASShooter/blob/26295c548a19f221917e4a7232c12e763db64cb1/README.md",
+          "https://raw.githubusercontent.com/tranek/GASShooter/26295c548a19f221917e4a7232c12e763db64cb1/LICENSE",
+          "https://raw.githubusercontent.com/tranek/GASShooter/26295c548a19f221917e4a7232c12e763db64cb1/GASShooter.uproject"
+        ]
+      }
+    },
+    {
+      "id": "GAM-05",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "Narxim GAS Example",
+      "url": "https://github.com/Narxim/Narxim-GAS-Example",
+      "inspectedCommit": "6a676a3d0436c55e4ba8dc83b12ab86ac61eae87",
+      "decision": "reference",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G05",
+        "name": "Narxim GAS Example",
+        "repoUrl": "https://github.com/Narxim/Narxim-GAS-Example",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "master",
+        "commitSha": "6a676a3d0436c55e4ba8dc83b12ab86ac61eae87",
+        "commitDate": "2025-10-26T14:37:41Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Merge pull request #13 from Laavenx/patch-1\n\nFixed Packaging problem",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/Narxim/Narxim-GAS-Example/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/LICENSE.md",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Pinned GAS_Example.uproject declares EngineAssociation 5.6; README contains older badge/5.4 text and a 5.6 migration entry. It enables AGRPRO with a Marketplace URL, alongside GameplayAbilities, CommonUI and ModelViewViewModel.",
+            "urls": [
+              "https://github.com/Narxim/Narxim-GAS-Example/blob/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/README.md",
+              "https://raw.githubusercontent.com/Narxim/Narxim-GAS-Example/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/GAS_Example.uproject"
+            ]
+          }
+        ],
+        "decision": "reference",
+        "rationale": "Useful concrete GAS patterns if abilities justify GAS. Do not present whole project as self-contained or free of external plugin/license work; AGRPRO provenance and availability were not qualified.",
+        "estimatedHours": {
+          "spike": [
+            4,
+            8
+          ],
+          "integration": [
+            16,
+            40
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Persistent character/ship attributes, input binding, ability tasks and UI adaptations must be reconciled. README also identifies separate icon license in Content/UI/Icons; root MIT does not replace nested asset rights.",
+        "overlap": [
+          "Lyra GAS/input/UI",
+          "GASDocumentation",
+          "owned health/action components"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/Narxim/Narxim-GAS-Example/commit/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87",
+          "https://github.com/Narxim/Narxim-GAS-Example/blob/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/README.md",
+          "https://raw.githubusercontent.com/Narxim/Narxim-GAS-Example/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/LICENSE.md",
+          "https://raw.githubusercontent.com/Narxim/Narxim-GAS-Example/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/GAS_Example.uproject"
+        ]
+      }
+    },
+    {
+      "id": "GAM-06",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "SimpleGAS (strayTrain)",
+      "url": "https://github.com/strayTrain/SimpleGameplayAbilitySystem",
+      "inspectedCommit": "953f8c2bc8dad3598d210ccefab7f79c4e388b5f",
+      "decision": "defer",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G06",
+        "name": "SimpleGAS (strayTrain)",
+        "repoUrl": "https://github.com/strayTrain/SimpleGameplayAbilitySystem",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "main",
+        "commitSha": "953f8c2bc8dad3598d210ccefab7f79c4e388b5f",
+        "commitDate": "2025-05-21T10:14:16Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Added GetActiveGameplayTags function to USimpleAbility component which converts the internal gameplay tag counter objects to an FGameplayTagContainer for easier querying",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/strayTrain/SimpleGameplayAbilitySystem/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Maintainer installation docs state UE 5.2 or later and no Mac/Linux testing. Descriptor has no EngineVersion; declares version 1.0 and StructUtils dependency. This is not evidence of a local or maintainer-specific 5.8.2 build.",
+            "urls": [
+              "https://github.com/strayTrain/SimpleGameplayAbilitySystem/blob/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/README.md",
+              "https://raw.githubusercontent.com/strayTrain/SimpleGameplayAbilitySystem/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/SimpleGameplayAbilitySystem.uplugin",
+              "https://straytrain.github.io/SimpleGameplayAbilitySystem/pages/installation/installation.html",
+              "https://straytrain.github.io/SimpleGameplayAbilitySystem/"
+            ]
+          }
+        ],
+        "decision": "defer",
+        "rationale": "A real alternative framework, not a drop-in Epic GAS wrapper. Native components already suit the small slice; if complex abilities emerge, compare one ability system at a time.",
+        "estimatedHours": {
+          "spike": [
+            6,
+            12
+          ],
+          "integration": [
+            20,
+            50
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Own ability/attribute/event semantics and source maintenance burden. Runtime and editor modules; evaluate cancellation, effects, save restoration and cook before choosing over built-in GAS.",
+        "overlap": [
+          "Epic GAS",
+          "custom gameplay components",
+          "Lyra/Narxim ability systems"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/strayTrain/SimpleGameplayAbilitySystem/commit/953f8c2bc8dad3598d210ccefab7f79c4e388b5f",
+          "https://github.com/strayTrain/SimpleGameplayAbilitySystem/blob/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/README.md",
+          "https://raw.githubusercontent.com/strayTrain/SimpleGameplayAbilitySystem/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/LICENSE",
+          "https://raw.githubusercontent.com/strayTrain/SimpleGameplayAbilitySystem/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/SimpleGameplayAbilitySystem.uplugin",
+          "https://straytrain.github.io/SimpleGameplayAbilitySystem/pages/installation/installation.html",
+          "https://straytrain.github.io/SimpleGameplayAbilitySystem/"
+        ]
+      }
+    },
+    {
+      "id": "GAM-07",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "FlowGraph",
+      "url": "https://github.com/MothCocoon/FlowGraph",
+      "inspectedCommit": "8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061",
+      "decision": "trial",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G07",
+        "name": "FlowGraph",
+        "repoUrl": "https://github.com/MothCocoon/FlowGraph",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "5.x",
+        "commitSha": "8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061",
+        "commitDate": "2026-10-07T14:51:02Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Update Version24.md",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Default 5.x HEAD descriptor is 2.4 without EngineVersion. Official 2.4 notes describe work in progress and first UE 5.9 release. For UE 5.8 trial use official v2.3-5.8 tag, not observed default HEAD; v2.3 notes explicitly state first UE 5.8 release.",
+            "urls": [
+              "https://github.com/MothCocoon/FlowGraph/blob/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061/README.md",
+              "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061/Flow.uplugin",
+              "https://mothcocoon.github.io/FlowGraph/Releases/Version23",
+              "https://mothcocoon.github.io/FlowGraph/Releases/Version24",
+              "https://mothcocoon.github.io/FlowGraph/Features/SaveGameSupport",
+              "https://mothcocoon.github.io/FlowGraph/Overview/GettingStarted"
+            ]
+          }
+        ],
+        "decision": "trial",
+        "rationale": "Good bounded mission/sequence orchestration candidate after custom graph authoring repeats. Keep authoritative campaign state, request journal and reward ledger outside graph nodes.",
+        "estimatedHours": {
+          "spike": [
+            8,
+            12
+          ],
+          "integration": [
+            20,
+            40
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Runtime Flow plus DeveloperTool debugger and editor module. Save requires project integration; loading an already active world and custom graph owners requires explicit restoration. Runtime/cook/save compatibility is unqualified locally.",
+        "overlap": [
+          "SimpleQuest mission flow",
+          "level script orchestration",
+          "dialogue side-effect dispatch"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/MothCocoon/FlowGraph/commit/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061",
+          "https://github.com/MothCocoon/FlowGraph/blob/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061/README.md",
+          "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061/LICENSE",
+          "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061/Flow.uplugin",
+          "https://mothcocoon.github.io/FlowGraph/Releases/Version23",
+          "https://mothcocoon.github.io/FlowGraph/Releases/Version24",
+          "https://mothcocoon.github.io/FlowGraph/Features/SaveGameSupport",
+          "https://mothcocoon.github.io/FlowGraph/Overview/GettingStarted"
+        ],
+        "proposedTrialPin": {
+          "tag": "v2.3-5.8",
+          "commitSha": "8211b25999068407cb7b40b8c97e18b52d4832ca",
+          "commitDate": "2026-07-11T11:48:51Z",
+          "commitDateType": "author date from GitHub commit patch; committer date not independently queried",
+          "license": {
+            "spdx": "MIT",
+            "url": "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8211b25999068407cb7b40b8c97e18b52d4832ca/LICENSE",
+            "status": "Exact file read"
+          },
+          "sourceURLs": [
+            "https://github.com/MothCocoon/FlowGraph/releases/tag/v2.3-5.8",
+            "https://github.com/MothCocoon/FlowGraph/commit/8211b25999068407cb7b40b8c97e18b52d4832ca",
+            "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8211b25999068407cb7b40b8c97e18b52d4832ca/Flow.uplugin",
+            "https://mothcocoon.github.io/FlowGraph/Releases/Version23"
+          ],
+          "localQualification": "Not compiled or run; candidate for a bounded UE 5.8.2 spike."
+        }
+      }
+    },
+    {
+      "id": "GAM-08",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "DlgSystem",
+      "url": "https://github.com/NotYetGames/DlgSystem",
+      "inspectedCommit": "d705231216bd64558d437b87a57928689b1e7fef",
+      "decision": "trial",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G08",
+        "name": "DlgSystem",
+        "repoUrl": "https://github.com/NotYetGames/DlgSystem",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "master",
+        "commitSha": "d705231216bd64558d437b87a57928689b1e7fef",
+        "commitDate": "2026-06-22T17:59:41Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Increase version number to 18.0.8",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE.txt",
+          "url": "https://raw.githubusercontent.com/NotYetGames/DlgSystem/d705231216bd64558d437b87a57928689b1e7fef/LICENSE.txt",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Pinned README lists UE 5.6, 5.7, 5.8. Descriptor version 18.0.8 uses EngineVersion ANY_VERSION; this placeholder is not proof of all-version compatibility.",
+            "urls": [
+              "https://github.com/NotYetGames/DlgSystem/blob/d705231216bd64558d437b87a57928689b1e7fef/README.md",
+              "https://raw.githubusercontent.com/NotYetGames/DlgSystem/d705231216bd64558d437b87a57928689b1e7fef/DlgSystem.uplugin"
+            ]
+          }
+        ],
+        "decision": "trial",
+        "rationale": "First dialogue trial if authoring in Unreal graphs is preferred. A relatively focused dialogue boundary suits the slice better than replacing campaign progression.",
+        "estimatedHours": {
+          "spike": [
+            6,
+            10
+          ],
+          "integration": [
+            12,
+            28
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Runtime DlgSystem and uncooked editor module. GitHub MIT source is available separately from paid binary/support distribution. UI, participant IDs, localization, voice and save integration remain project responsibilities.",
+        "overlap": [
+          "Inkpot dialogue branching",
+          "SimpleQuest broader progression",
+          "Flow scene flow"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/NotYetGames/DlgSystem/commit/d705231216bd64558d437b87a57928689b1e7fef",
+          "https://github.com/NotYetGames/DlgSystem/blob/d705231216bd64558d437b87a57928689b1e7fef/README.md",
+          "https://raw.githubusercontent.com/NotYetGames/DlgSystem/d705231216bd64558d437b87a57928689b1e7fef/LICENSE.txt",
+          "https://raw.githubusercontent.com/NotYetGames/DlgSystem/d705231216bd64558d437b87a57928689b1e7fef/DlgSystem.uplugin"
+        ]
+      }
+    },
+    {
+      "id": "GAM-09",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "Inkpot",
+      "url": "https://github.com/The-Chinese-Room/Inkpot",
+      "inspectedCommit": "6ae21952f4510106c76b5d6b513a92e1873b2925",
+      "decision": "trial",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G09",
+        "name": "Inkpot",
+        "repoUrl": "https://github.com/The-Chinese-Room/Inkpot",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "release",
+        "commitSha": "6ae21952f4510106c76b5d6b513a92e1873b2925",
+        "commitDate": "2026-10-02T07:48:52Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Update README.md",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/The-Chinese-Room/Inkpot/6ae21952f4510106c76b5d6b513a92e1873b2925/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Pinned README/plugin version 1.41.21 supports UE 5.7 or later; changelog 1.40.21 explicitly updates build for 5.8. README warns HEAD is work in progress. Import instructions still require Inklecate .NET 5; imported runtime uses C++ InkPlusPlus.",
+            "urls": [
+              "https://github.com/The-Chinese-Room/Inkpot/blob/6ae21952f4510106c76b5d6b513a92e1873b2925/README.md",
+              "https://raw.githubusercontent.com/The-Chinese-Room/Inkpot/6ae21952f4510106c76b5d6b513a92e1873b2925/Inkpot.uplugin",
+              "https://github.com/The-Chinese-Room/InkpotDemo"
+            ]
+          }
+        ],
+        "decision": "trial",
+        "rationale": "Alternative to DlgSystem when text-first narrative and diffable writing are priorities. Prove import/compile toolchain and native packaged execution before using it for production dialogue.",
+        "estimatedHours": {
+          "spike": [
+            6,
+            12
+          ],
+          "integration": [
+            16,
+            36
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Runtime Inkpot and InkPlusPlus, editor import module. Old .NET 5 import prerequisite must be resolved deliberately; do not infer .NET runtime is required by the packaged game or automatically install it. Story variables must not duplicate campaign authority.",
+        "overlap": [
+          "DlgSystem dialogue",
+          "Flow mission orchestration",
+          "custom narrative state"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/The-Chinese-Room/Inkpot/commit/6ae21952f4510106c76b5d6b513a92e1873b2925",
+          "https://github.com/The-Chinese-Room/Inkpot/blob/6ae21952f4510106c76b5d6b513a92e1873b2925/README.md",
+          "https://raw.githubusercontent.com/The-Chinese-Room/Inkpot/6ae21952f4510106c76b5d6b513a92e1873b2925/LICENSE",
+          "https://raw.githubusercontent.com/The-Chinese-Room/Inkpot/6ae21952f4510106c76b5d6b513a92e1873b2925/Inkpot.uplugin",
+          "https://github.com/The-Chinese-Room/InkpotDemo"
+        ]
+      }
+    },
+    {
+      "id": "GAM-10",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "SimpleQuest + SimpleCore",
+      "url": "https://github.com/TheGeebus/SimpleQuest",
+      "inspectedCommit": "9536c7de39cf6c8484f7ee334a9194905989eae7",
+      "decision": "defer",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G10",
+        "name": "SimpleQuest + SimpleCore",
+        "repoUrl": "https://github.com/TheGeebus/SimpleQuest",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "main",
+        "commitSha": "9536c7de39cf6c8484f7ee334a9194905989eae7",
+        "commitDate": "2026-10-11T19:16:29Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "roadmap updated\n\nSigned-off-by: TheGeebus <mr.geebus@gmail.com>",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/TheGeebus/SimpleQuest/9536c7de39cf6c8484f7ee334a9194905989eae7/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "README targets UE 5.6 and says maintainer verified 5.7/5.8. Pinned two plugin descriptors are version 0.9.0 with no EngineVersion. ElectronicNodes is optional and disabled, not a mandatory paid dependency.",
+            "urls": [
+              "https://github.com/TheGeebus/SimpleQuest/blob/9536c7de39cf6c8484f7ee334a9194905989eae7/README.md",
+              "https://raw.githubusercontent.com/TheGeebus/SimpleQuest/9536c7de39cf6c8484f7ee334a9194905989eae7/Plugins/SimpleQuest/SimpleQuest.uplugin",
+              "https://raw.githubusercontent.com/TheGeebus/SimpleQuest/9536c7de39cf6c8484f7ee334a9194905989eae7/Plugins/SimpleCore/SimpleCore.uplugin"
+            ]
+          }
+        ],
+        "decision": "defer",
+        "rationale": "Substantive framework with useful progression, snapshots and text authoring, but overlaps existing world-state ownership. Trial only if quest authoring cost outweighs integration and migration of this ownership boundary.",
+        "estimatedHours": {
+          "spike": [
+            8,
+            16
+          ],
+          "integration": [
+            24,
+            60
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "SimpleCore event bus/persistent fact store and SimpleQuest quest state, runtime managers and generated tags. Snapshot/catch-up guarantees are maintainer claims until save/streaming/reward tests pass. Two required source plugins.",
+        "overlap": [
+          "owned campaign facts",
+          "request/reward ledger",
+          "FlowGraph missions",
+          "dialogue progression"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/TheGeebus/SimpleQuest/commit/9536c7de39cf6c8484f7ee334a9194905989eae7",
+          "https://github.com/TheGeebus/SimpleQuest/blob/9536c7de39cf6c8484f7ee334a9194905989eae7/README.md",
+          "https://raw.githubusercontent.com/TheGeebus/SimpleQuest/9536c7de39cf6c8484f7ee334a9194905989eae7/LICENSE",
+          "https://raw.githubusercontent.com/TheGeebus/SimpleQuest/9536c7de39cf6c8484f7ee334a9194905989eae7/Plugins/SimpleQuest/SimpleQuest.uplugin",
+          "https://raw.githubusercontent.com/TheGeebus/SimpleQuest/9536c7de39cf6c8484f7ee334a9194905989eae7/Plugins/SimpleCore/SimpleCore.uplugin"
+        ]
+      }
+    },
+    {
+      "id": "GAM-11",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "UnrealSharp",
+      "url": "https://github.com/UnrealSharp/UnrealSharp",
+      "inspectedCommit": "51a1397aaf56319f390d7431d23001af11dae0d2",
+      "decision": "defer",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G11",
+        "name": "UnrealSharp",
+        "repoUrl": "https://github.com/UnrealSharp/UnrealSharp",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "main",
+        "commitSha": "51a1397aaf56319f390d7431d23001af11dae0d2",
+        "commitDate": "2026-10-11T13:46:44Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "Merge pull request #772 from Edenlia/feature/engine-level-plugin\n\nFeature/engine level plugin",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/UnrealSharp/UnrealSharp/51a1397aaf56319f390d7431d23001af11dae0d2/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Pinned README lists UE 5.6–5.8 and .NET 10.0.5+. Descriptor is marked IsBetaVersion true and declares Win64/Mac. Main branch SHA is a real pin; descriptor version 0.1 alone is inadequate.",
+            "urls": [
+              "https://github.com/UnrealSharp/UnrealSharp/blob/51a1397aaf56319f390d7431d23001af11dae0d2/README.md",
+              "https://raw.githubusercontent.com/UnrealSharp/UnrealSharp/51a1397aaf56319f390d7431d23001af11dae0d2/UnrealSharp.uplugin",
+              "https://www.unrealsharp.com/",
+              "https://www.unrealsharp.com/getting-started-and-fundamentals/packaging/packaging-via-ci-cd-command-line"
+            ]
+          }
+        ],
+        "decision": "defer",
+        "rationale": "Native C++ scaffold already compiles and the solo creator has not established a C# productivity advantage. Introducing another language runtime and packaging path before the slice would add qualification work.",
+        "estimatedHours": {
+          "spike": [
+            8,
+            16
+          ],
+          "integration": [
+            30,
+            80
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "Generated C# reflection bindings, runtime bridge, managed assemblies and explicit packaging scripts need qualification. Current docs show custom UAT PackageProject flow; ordinary existing BuildCookRun alone must not be assumed sufficient.",
+        "overlap": [
+          "native C++ gameplay implementation",
+          "project build/package scripts",
+          "AI-assisted coding toolchain"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/UnrealSharp/UnrealSharp/commit/51a1397aaf56319f390d7431d23001af11dae0d2",
+          "https://github.com/UnrealSharp/UnrealSharp/blob/51a1397aaf56319f390d7431d23001af11dae0d2/README.md",
+          "https://raw.githubusercontent.com/UnrealSharp/UnrealSharp/51a1397aaf56319f390d7431d23001af11dae0d2/LICENSE",
+          "https://raw.githubusercontent.com/UnrealSharp/UnrealSharp/51a1397aaf56319f390d7431d23001af11dae0d2/UnrealSharp.uplugin",
+          "https://www.unrealsharp.com/",
+          "https://www.unrealsharp.com/getting-started-and-fundamentals/packaging/packaging-via-ci-cd-command-line"
+        ]
+      }
+    },
+    {
+      "id": "GAM-12",
+      "category": "gameplay",
+      "categories": [
+        "gameplay"
+      ],
+      "name": "MassSample / MassCommunitySample",
+      "url": "https://github.com/Megafunk/MassSample",
+      "inspectedCommit": "ca9825861f35ab4f8e152351de2adb893b51ca70",
+      "decision": "reference",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+      "assessment": {
+        "id": "G12",
+        "name": "MassSample / MassCommunitySample",
+        "repoUrl": "https://github.com/Megafunk/MassSample",
+        "observedDate": "2026-10-12",
+        "defaultBranch": "main",
+        "commitSha": "ca9825861f35ab4f8e152351de2adb893b51ca70",
+        "commitDate": "2026-06-27T11:40:04Z",
+        "commitDateType": "committer UTC from GitHub REST commits response",
+        "commitMessage": "(5.8) Fix missing comments",
+        "archived": false,
+        "license": {
+          "spdx": "MIT",
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/Megafunk/MassSample/ca9825861f35ab4f8e152351de2adb893b51ca70/LICENSE",
+          "status": "Exact root license read at this commit; MIT grant, notice retention and disclaimer present.",
+          "scopeLimit": "Root license verification is not a recursive audit of imported content, bundled third-party dependencies, trademarks or Epic content."
+        },
+        "engineEvidence": [
+          {
+            "statement": "Pinned MassSampleProject.uproject declares 5.8; HEAD commit mentions 5.8. README retains 5.7 update and 5.6 prerequisite text and warns pre-5.6 examples may be outdated. MassCommunitySample plugin version 0.6 is beta.",
+            "urls": [
+              "https://github.com/Megafunk/MassSample/blob/ca9825861f35ab4f8e152351de2adb893b51ca70/README.md",
+              "https://raw.githubusercontent.com/Megafunk/MassSample/ca9825861f35ab4f8e152351de2adb893b51ca70/MassSampleProject.uproject",
+              "https://raw.githubusercontent.com/Megafunk/MassSample/ca9825861f35ab4f8e152351de2adb893b51ca70/Plugins/MassCommunitySample/MassCommunitySample.uplugin",
+              "https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-mass-gameplay-in-unreal-engine"
+            ]
+          }
+        ],
+        "decision": "reference",
+        "rationale": "Useful community code reference for Mass; not a complete city pedestrian system. Start with bounded actors/schedules and introduce Mass only after profiling a representative crowd proves the need.",
+        "estimatedHours": {
+          "spike": [
+            12,
+            24
+          ],
+          "integration": [
+            30,
+            80
+          ],
+          "basis": "Original planning range for a narrow evaluation and bounded feature integration; not benchmarked, not additive, excludes full game/art production.",
+          "confidence": "low-to-medium"
+        },
+        "runtimeImplications": "MassCommunitySample runtime depends on MassGameplay, MassAI, MassCrowd and CodeView. Git LFS assets are required per maintainer. Named character persistence and narrative authority must not depend on transient entity handles.",
+        "overlap": [
+          "existing NPC actors",
+          "StateTree tasks",
+          "crowd representation and path logic"
+        ],
+        "localQualification": "Read-only source/doc research. No third-party repository was installed, compiled, cooked, packaged or run.",
+        "sourceURLs": [
+          "https://github.com/Megafunk/MassSample/commit/ca9825861f35ab4f8e152351de2adb893b51ca70",
+          "https://github.com/Megafunk/MassSample/blob/ca9825861f35ab4f8e152351de2adb893b51ca70/README.md",
+          "https://raw.githubusercontent.com/Megafunk/MassSample/ca9825861f35ab4f8e152351de2adb893b51ca70/LICENSE",
+          "https://raw.githubusercontent.com/Megafunk/MassSample/ca9825861f35ab4f8e152351de2adb893b51ca70/MassSampleProject.uproject",
+          "https://raw.githubusercontent.com/Megafunk/MassSample/ca9825861f35ab4f8e152351de2adb893b51ca70/Plugins/MassCommunitySample/MassCommunitySample.uplugin",
+          "https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-mass-gameplay-in-unreal-engine"
+        ]
+      }
+    },
+    {
+      "id": "DEV-01",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "OpenUnrealAutomationTools",
+      "url": "https://github.com/JonasReich/OpenUnrealAutomationTools",
+      "inspectedCommit": "254b040fffc06e239ea73807c5a1e1e564975419",
+      "decision": "SPIKE: log parsing only; retain project gate scripts",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV01",
+        "name": "OpenUnrealAutomationTools",
+        "canonicalUrl": "https://github.com/JonasReich/OpenUnrealAutomationTools",
+        "inspectedAt": "2026-10-12",
+        "headSha": "254b040fffc06e239ea73807c5a1e1e564975419",
+        "headCommittedAt": "2026-10-07T00:26:28Z",
+        "commitUrl": "https://github.com/JonasReich/OpenUnrealAutomationTools/commit/254b040fffc06e239ea73807c5a1e1e564975419",
+        "archiveFlagVerified": false,
+        "kind": "Runnable Python automation library and scripts",
+        "license": {
+          "spdx": "MIT",
+          "pinnedPath": "LICENSE.md",
+          "pinnedUrl": "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/LICENSE.md",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Targets UE4/UE5 broadly; no exact UE5.8.2 certification in inspected README. Test helper source contains version-specific handling.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Recent default-branch commit on 2026-10-07; README says contributions not currently open.",
+        "decision": "SPIKE: log parsing only; retain project gate scripts",
+        "potentialValue": "Could shorten diagnosis of noisy Unreal logs; no measured savings yet.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            3,
+            4
+          ],
+          "adoptionIfQualified": [
+            4,
+            8
+          ],
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT tool code; Python dependencies and upkeep. No expected game runtime dependency.",
+        "risks": [
+          "Automatic NullRHI and native-exit-code return in test helper differ from project gates.",
+          "Optional prior-report reuse and report-viewer dependency installation need review.",
+          "Newest asset-header engine-version patcher must not bypass compatibility checks."
+        ],
+        "spikePlan": "On a pinned copy and isolated environment, parse three existing sanitized logs; seed a blueprint compile error and missing cook package. Require correct detection and original-line links. Do not use its runner, asset patcher or service integrations.",
+        "sourceURLs": [
+          "https://github.com/JonasReich/OpenUnrealAutomationTools",
+          "https://github.com/JonasReich/OpenUnrealAutomationTools/commit/254b040fffc06e239ea73807c5a1e1e564975419",
+          "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/README.md",
+          "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/LICENSE.md",
+          "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/python/openunrealautomation/automationtest.py",
+          "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/python/openunrealautomation/unrealengine.py",
+          "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/python/openunrealautomation/logparse.py"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-02",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "ue4cli",
+      "url": "https://github.com/adamrehn/ue4cli",
+      "inspectedCommit": "fed71c1af4cffe3fed9358b08430068ad9454b77",
+      "decision": "DEFER: cross-platform need only",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV02",
+        "name": "ue4cli",
+        "canonicalUrl": "https://github.com/adamrehn/ue4cli",
+        "inspectedAt": "2026-10-12",
+        "headSha": "fed71c1af4cffe3fed9358b08430068ad9454b77",
+        "headCommittedAt": "2024-03-13T08:54:22Z",
+        "commitUrl": "https://github.com/adamrehn/ue4cli/commit/fed71c1af4cffe3fed9358b08430068ad9454b77",
+        "archiveFlagVerified": false,
+        "kind": "Runnable Python command-line wrapper",
+        "license": {
+          "spdx": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/adamrehn/ue4cli/blob/fed71c1af4cffe3fed9358b08430068ad9454b77/LICENSE",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "README states UE4.19+ and Python3.5+; that broad minimum is not an exact5.8.2 test.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Inspected default HEAD dated2024-03-13; no recent default-branch activity evidenced.",
+        "decision": "DEFER: cross-platform need only",
+        "potentialValue": "Could unify Linux/macOS build invocation; little immediate value on current Windows-only workflow.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            1,
+            2
+          ],
+          "adoptionIfQualified": [
+            4,
+            8
+          ],
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT package, Python environment and dependencies; no game runtime dependency.",
+        "risks": [
+          "Wrapper can choose different defaults from project controls.",
+          "Adds a second configuration authority and command vocabulary."
+        ],
+        "spikePlan": "Only after a second host/platform exists, compare engine selection and emitted build arguments against current scripts. Require exact engine lock and preservation of five-test fail-closed contract.",
+        "sourceURLs": [
+          "https://github.com/adamrehn/ue4cli",
+          "https://github.com/adamrehn/ue4cli/commit/fed71c1af4cffe3fed9358b08430068ad9454b77",
+          "https://github.com/adamrehn/ue4cli/blob/fed71c1af4cffe3fed9358b08430068ad9454b77/README.md",
+          "https://github.com/adamrehn/ue4cli/blob/fed71c1af4cffe3fed9358b08430068ad9454b77/LICENSE",
+          "https://github.com/adamrehn/ue4cli/blob/fed71c1af4cffe3fed9358b08430068ad9454b77/setup.py"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-03",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "ue4-docker",
+      "url": "https://github.com/adamrehn/ue4-docker",
+      "inspectedCommit": "7f1eccc538b39097f1f196609642cf640d87226e",
+      "decision": "DEFER: funded dedicated builder",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV03",
+        "name": "ue4-docker",
+        "canonicalUrl": "https://github.com/adamrehn/ue4-docker",
+        "inspectedAt": "2026-10-12",
+        "headSha": "7f1eccc538b39097f1f196609642cf640d87226e",
+        "headCommittedAt": "2026-08-17T07:35:01Z",
+        "commitUrl": "https://github.com/adamrehn/ue4-docker/commit/7f1eccc538b39097f1f196609642cf640d87226e",
+        "archiveFlagVerified": false,
+        "kind": "Runnable container image build infrastructure",
+        "license": {
+          "spdx": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/adamrehn/ue4-docker/blob/7f1eccc538b39097f1f196609642cf640d87226e/LICENSE",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Release0.0.124 explicitly fixes a UE5.8.1 LinuxUBA issue. Exact5.8.2 BorrowedSun build not tested.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD2026-08-17; release0.0.124 same day; active engine-specific changes evidenced.",
+        "decision": "DEFER: funded dedicated builder",
+        "potentialValue": "Potential repeatable build environments when multiple machines justify image upkeep.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            4,
+            6
+          ],
+          "adoptionIfQualified": [
+            16,
+            40
+          ],
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT wrappers; Unreal engine access/licensing, Docker/OS/toolchain terms, disk, compute and registry storage remain separate.",
+        "risks": [
+          "Source-engine/container resource footprint exceeds current cheap local workflow.",
+          "Engine and commercial plugin image redistribution must be separately authorized.",
+          "Container layers/caches can create large storage growth."
+        ],
+        "spikePlan": "First perform a design-only resource and rights review. Actual image qualification only on funded isolated hardware: exact engine commit, bounded cache/storage, source+package test, credential scan and repeat build.",
+        "sourceURLs": [
+          "https://github.com/adamrehn/ue4-docker",
+          "https://github.com/adamrehn/ue4-docker/commit/7f1eccc538b39097f1f196609642cf640d87226e",
+          "https://github.com/adamrehn/ue4-docker/blob/7f1eccc538b39097f1f196609642cf640d87226e/README.md",
+          "https://github.com/adamrehn/ue4-docker/blob/7f1eccc538b39097f1f196609642cf640d87226e/LICENSE",
+          "https://github.com/adamrehn/ue4-docker/releases/tag/v0.0.124",
+          "https://unrealcontainers.com/docs/use-cases/continuous-integration"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-05",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "UnrealEnginePython",
+      "url": "https://github.com/20tab/UnrealEnginePython",
+      "inspectedCommit": "4b5da5bf4ca598e8d0f67eb938749bc381a67d6c",
+      "decision": "REJECT for this baseline; historical reference only",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV05",
+        "name": "UnrealEnginePython",
+        "canonicalUrl": "https://github.com/20tab/UnrealEnginePython",
+        "inspectedAt": "2026-10-12",
+        "headSha": "4b5da5bf4ca598e8d0f67eb938749bc381a67d6c",
+        "headCommittedAt": "2020-04-17T07:38:21Z",
+        "commitUrl": "https://github.com/20tab/UnrealEnginePython/commit/4b5da5bf4ca598e8d0f67eb938749bc381a67d6c",
+        "archiveFlagVerified": false,
+        "kind": "Legacy runnable editor/runtime Python embedding plugin",
+        "license": {
+          "spdx": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/20tab/UnrealEnginePython/blob/4b5da5bf4ca598e8d0f67eb938749bc381a67d6c/LICENSE",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "README latest supported4.23; discusses4.24 forks and porting from4.25. No5.8 support evidence.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD2020-04-17; README seeks maintainers.",
+        "decision": "REJECT for this baseline; historical reference only",
+        "potentialValue": "Historical pipeline examples; not a safe present-day shortcut to Python gameplay.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            0,
+            0
+          ],
+          "adoptionIfQualified": null,
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT plugin code, embeddedPython licensing/dependencies and substantial possible porting cost.",
+        "risks": [
+          "Major reflection and engine API gap.",
+          "Runtime plugin expands packaged dependencies and patch responsibility."
+        ],
+        "spikePlan": "No implementation spike approved. Reuse ideas through current official editor Python APIs when needed; do not add this plugin.",
+        "sourceURLs": [
+          "https://github.com/20tab/UnrealEnginePython",
+          "https://github.com/20tab/UnrealEnginePython/commit/4b5da5bf4ca598e8d0f67eb938749bc381a67d6c",
+          "https://github.com/20tab/UnrealEnginePython/blob/4b5da5bf4ca598e8d0f67eb938749bc381a67d6c/README.md",
+          "https://github.com/20tab/UnrealEnginePython/blob/4b5da5bf4ca598e8d0f67eb938749bc381a67d6c/LICENSE"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-06",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "git-lfs",
+      "url": "https://github.com/git-lfs/git-lfs",
+      "inspectedCommit": "0043a645047926f4bd7f7091299095528253d575",
+      "decision": "KEEP: use supported release; qualify actual host",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV06",
+        "name": "git-lfs",
+        "canonicalUrl": "https://github.com/git-lfs/git-lfs",
+        "inspectedAt": "2026-10-12",
+        "headSha": "0043a645047926f4bd7f7091299095528253d575",
+        "headCommittedAt": "2026-09-22T20:34:18Z",
+        "commitUrl": "https://github.com/git-lfs/git-lfs/commit/0043a645047926f4bd7f7091299095528253d575",
+        "archiveFlagVerified": false,
+        "kind": "Runnable source-control infrastructure",
+        "license": {
+          "spdx": "MIT plus BSD/dependency notices",
+          "pinnedPath": "LICENSE.md",
+          "pinnedUrl": "https://github.com/git-lfs/git-lfs/blob/0043a645047926f4bd7f7091299095528253d575/LICENSE.md",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Engine-neutral; works on binary files. Unreal editor integration and remote lock service are separate.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD2026-09-22; contemporary source activity evidenced.",
+        "decision": "KEEP: use supported release; qualify actual host",
+        "potentialValue": "Essential binary versioning; avoids growing ordinaryGit with large art history.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            1,
+            2
+          ],
+          "adoptionIfQualified": [
+            1,
+            3
+          ],
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT with Go-derived BSD notices and dependency licenses; hosting storage/egress separate.",
+        "risks": [
+          "Git clone/bundle alone may have only pointers.",
+          "Lock verification requires host support/configuration.",
+          "Development HEAD is research reference, not recommended installer build."
+        ],
+        "spikePlan": "Use a supported installed release and harmless sample asset: verify attributes, pointer inGit, materialized working copy and backup. Test locks only after an explicitly configured private remote exists.",
+        "sourceURLs": [
+          "https://github.com/git-lfs/git-lfs",
+          "https://github.com/git-lfs/git-lfs/commit/0043a645047926f4bd7f7091299095528253d575",
+          "https://github.com/git-lfs/git-lfs/blob/0043a645047926f4bd7f7091299095528253d575/README.md",
+          "https://github.com/git-lfs/git-lfs/blob/0043a645047926f4bd7f7091299095528253d575/LICENSE.md"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-07",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "gitignore",
+      "url": "https://github.com/github/gitignore",
+      "inspectedCommit": "0e5d690153ca3da8a4a1aef2d053406f408f531c",
+      "decision": "COMPARE: retain project-specific ignore rules",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV07",
+        "name": "gitignore",
+        "canonicalUrl": "https://github.com/github/gitignore",
+        "inspectedAt": "2026-10-12",
+        "headSha": "0e5d690153ca3da8a4a1aef2d053406f408f531c",
+        "headCommittedAt": "2026-10-02T20:59:38Z",
+        "commitUrl": "https://github.com/github/gitignore/commit/0e5d690153ca3da8a4a1aef2d053406f408f531c",
+        "archiveFlagVerified": false,
+        "kind": "Reference templates; not a backup or LFS solution",
+        "license": {
+          "spdx": "CC0-1.0",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/github/gitignore/blob/0e5d690153ca3da8a4a1aef2d053406f408f531c/LICENSE",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "GenericUnreal template, not an exact5.8 project policy.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Repository default HEAD2026-10-02; this does not date the Unreal template itself.",
+        "decision": "COMPARE: retain project-specific ignore rules",
+        "potentialValue": "Checklist for generated artifacts; local adaptation prevents accidentally omitted source.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            0.5,
+            1
+          ],
+          "adoptionIfQualified": [
+            0.5,
+            1
+          ],
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "CC0-1.0 template collection; no runtime dependency.",
+        "risks": [
+          "Unreal template ignores Build broadly and built-data/assets/binaries that can be required.",
+          "NestedGame layout needs scoped rules; binary-onlyplugins need explicit exceptions."
+        ],
+        "spikePlan": "Use git check-ignore against representative authoredConfig, platformicon/resource, compiledoutput, map, externalactor, binary-onlyplugin fixture and local config. No wholesale overwrite.",
+        "sourceURLs": [
+          "https://github.com/github/gitignore",
+          "https://github.com/github/gitignore/commit/0e5d690153ca3da8a4a1aef2d053406f408f531c",
+          "https://github.com/github/gitignore/blob/0e5d690153ca3da8a4a1aef2d053406f408f531c/README.md",
+          "https://github.com/github/gitignore/blob/0e5d690153ca3da8a4a1aef2d053406f408f531c/LICENSE",
+          "https://github.com/github/gitignore/blob/0e5d690153ca3da8a4a1aef2d053406f408f531c/UnrealEngine.gitignore"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-08",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "unity-builder",
+      "url": "https://github.com/game-ci/unity-builder",
+      "inspectedCommit": "ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e",
+      "decision": "REJECT for Unreal; CI concepts only",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV08",
+        "name": "unity-builder",
+        "canonicalUrl": "https://github.com/game-ci/unity-builder",
+        "inspectedAt": "2026-10-12",
+        "headSha": "ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e",
+        "headCommittedAt": "2026-09-16T15:25:16Z",
+        "commitUrl": "https://github.com/game-ci/unity-builder/commit/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e",
+        "archiveFlagVerified": false,
+        "kind": "Runnable Unity GitHub Action",
+        "license": {
+          "spdx": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/game-ci/unity-builder/blob/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e/LICENSE",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Explicitly Unity; action inputs include unityVersion. No Unreal support demonstrated.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD2026-09-16; active workflow work evidenced, irrelevant to engine fit.",
+        "decision": "REJECT for Unreal; CI concepts only",
+        "potentialValue": "General CI patterns can inform research; action does not build this game.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            0,
+            0
+          ],
+          "adoptionIfQualified": null,
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT action, Unity/environment/runner costs separate; no reason to add here.",
+        "risks": [
+          "Game-CI name mistaken for universal engine adapter.",
+          "External action and credentials introduced without solvingUnreal need."
+        ],
+        "spikePlan": "None. Keep UnrealBuildTool/UAT and the existing manual-only workflow.",
+        "sourceURLs": [
+          "https://github.com/game-ci/unity-builder",
+          "https://github.com/game-ci/unity-builder/commit/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e",
+          "https://github.com/game-ci/unity-builder/blob/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e/README.md",
+          "https://github.com/game-ci/unity-builder/blob/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e/LICENSE",
+          "https://github.com/game-ci/unity-builder/blob/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e/action.yml"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-09",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "ue4-test-automation",
+      "url": "https://github.com/DaedalicEntertainment/ue4-test-automation",
+      "inspectedCommit": "d8bfd91fdd448860b596753339c7ce9f1f503438",
+      "decision": "REFERENCE ONLY: use built-in tests first",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV09",
+        "name": "ue4-test-automation",
+        "canonicalUrl": "https://github.com/DaedalicEntertainment/ue4-test-automation",
+        "inspectedAt": "2026-10-12",
+        "headSha": "d8bfd91fdd448860b596753339c7ce9f1f503438",
+        "headCommittedAt": "2022-05-15T05:22:38Z",
+        "commitUrl": "https://github.com/DaedalicEntertainment/ue4-test-automation/commit/d8bfd91fdd448860b596753339c7ce9f1f503438",
+        "archiveFlagVerified": false,
+        "kind": "Runnable legacy Blueprint integration-test plugin with Gauntlet extensions",
+        "license": {
+          "spdx": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/DaedalicEntertainment/ue4-test-automation/blob/d8bfd91fdd448860b596753339c7ce9f1f503438/LICENSE",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "README supports4.23–4.27; pinneduplugin EngineVersion4.23.0. No5.8 evidence.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD2022-05-15; historical production-oriented design, current port not established.",
+        "decision": "REFERENCE ONLY: use built-in tests first",
+        "potentialValue": "Arrange/Act/Assert and input-driven test-suite patterns useful for future functional tests.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            1,
+            2
+          ],
+          "adoptionIfQualified": null,
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT plugin; actual adoption requires unestimated5.8 porting and maintenance.",
+        "risks": [
+          "Old engine/reflection/input APIs.",
+          "Timeout behavior differs from strict project failure policy.",
+          "Gauntlet source-engine requirements in README are its integration requirements, not universal currentGauntlet fact."
+        ],
+        "spikePlan": "Read one test example and design the equivalent with currentUnrealFunctionalTesting; implement no dependency. Require timeout=fail and reproducible named result.",
+        "sourceURLs": [
+          "https://github.com/DaedalicEntertainment/ue4-test-automation",
+          "https://github.com/DaedalicEntertainment/ue4-test-automation/commit/d8bfd91fdd448860b596753339c7ce9f1f503438",
+          "https://github.com/DaedalicEntertainment/ue4-test-automation/blob/d8bfd91fdd448860b596753339c7ce9f1f503438/README.md",
+          "https://github.com/DaedalicEntertainment/ue4-test-automation/blob/d8bfd91fdd448860b596753339c7ce9f1f503438/LICENSE",
+          "https://github.com/DaedalicEntertainment/ue4-test-automation/blob/d8bfd91fdd448860b596753339c7ce9f1f503438/DaedalicTestAutomationPlugin/DaedalicTestAutomationPlugin.uplugin"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "DEV-10",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "UnrealEngine-Angelscript",
+      "url": "https://github.com/Hazelight/UnrealEngine-Angelscript",
+      "inspectedCommit": null,
+      "decision": "DEFER/REJECT for Launcher5.8.2+Cargo baseline",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV10",
+        "name": "UnrealEngine-Angelscript",
+        "canonicalUrl": "https://github.com/Hazelight/UnrealEngine-Angelscript",
+        "inspectedAt": "2026-10-12",
+        "headSha": null,
+        "headCommittedAt": null,
+        "commitUrl": null,
+        "archiveFlagVerified": false,
+        "kind": "Source-engine fork and runtime scripting integration",
+        "license": {
+          "spdx": "Mixed; pinned file unverified",
+          "pinnedPath": null,
+          "pinnedUrl": null,
+          "verifiedFile": false
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "Official docs require direct engine changes and source-built plugins. Exact5.8.2 branch inaccessible/unverified.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Official site describes studio use; publicAPI404 prevents independentHEAD/date inspection. Do not call dead.",
+        "decision": "DEFER/REJECT for Launcher5.8.2+Cargo baseline",
+        "potentialValue": "Potential gameplay iteration benefit for a separately staffed source-engine strategy.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            0,
+            0
+          ],
+          "adoptionIfQualified": null,
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "Engine proprietaryEpic license; AngelScriptlibrary zlib; pluginMIT per officialdocs. PinnedLICENSE.md inaccessible.",
+        "risks": [
+          "Changes engine distribution and invalidates current exactengine qualification.",
+          "Prebuiltbinaryplugins incompatible per officialdocs.",
+          "Conflicts with existingCargoLauncher-only intake policy."
+        ],
+        "spikePlan": "No current migration spike. A future engine strategy review first needs authorized source access, pinnedcommit/license inspection, plugin inventory and fundedengine support.",
+        "sourceURLs": [
+          "https://github.com/Hazelight/UnrealEngine-Angelscript",
+          "https://angelscript.hazelight.se/getting-started/installation/",
+          "https://angelscript.hazelight.se/project/license/",
+          "https://angelscript.hazelight.se/project/development-status/"
+        ],
+        "executedOrInstalled": false,
+        "accessLimitation": "Unauthenticated GitHub commits endpoint returned404; no credentials or source access attempted."
+      }
+    },
+    {
+      "id": "DEV-11",
+      "category": "devops",
+      "categories": [
+        "devops"
+      ],
+      "name": "ue-docker-ng",
+      "url": "https://github.com/slonopotamus/ue-docker-ng",
+      "inspectedCommit": "5b98e864cdb8f53c326107c04f16971722a9f1c7",
+      "decision": "WATCH: future isolated builder only",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Read-only research; not installed, built or executed in this sprint.",
+      "assessment": {
+        "id": "DEV11",
+        "name": "ue-docker-ng",
+        "canonicalUrl": "https://github.com/slonopotamus/ue-docker-ng",
+        "inspectedAt": "2026-10-12",
+        "headSha": "5b98e864cdb8f53c326107c04f16971722a9f1c7",
+        "headCommittedAt": "2026-09-21T07:01:26Z",
+        "commitUrl": "https://github.com/slonopotamus/ue-docker-ng/commit/5b98e864cdb8f53c326107c04f16971722a9f1c7",
+        "archiveFlagVerified": false,
+        "kind": "Runnable DockerBake/Buildx engine-image pipeline",
+        "license": {
+          "spdx": "MIT",
+          "pinnedPath": "LICENSE",
+          "pinnedUrl": "https://github.com/slonopotamus/ue-docker-ng/blob/5b98e864cdb8f53c326107c04f16971722a9f1c7/LICENSE",
+          "verifiedFile": true
+        },
+        "engineCompatibility": {
+          "declaredOrObserved": "README supportsUE5.4+ and defaults source-tag5.8.1-release; not5.8.2 qualification.",
+          "testedOnBorrowedSun582": false
+        },
+        "maintenance": "Default HEAD2026-09-21; recent container pipeline work evidenced.",
+        "decision": "WATCH: future isolated builder only",
+        "potentialValue": "Alternative modern image pipeline for future dedicated infrastructure.",
+        "estimatedHours": {
+          "qualificationSpike": [
+            2,
+            3
+          ],
+          "adoptionIfQualified": [
+            16,
+            40
+          ],
+          "basis": "Planning allowances, not measured savings or vendor quotes; unknown migrations intentionally null."
+        },
+        "costAndRuntime": "MIT scripts; sourceengine credentials, Docker/Windows/toolchain/storage costs remain.",
+        "risks": [
+          "Windows instructions require containerd changes or temporaryfork and a very large configuredrootfs.",
+          "README example disables aBuildx policy; do not transplant to personalworkstation.",
+          "Image build and publishedimage licensing separate fromMIT scripts."
+        ],
+        "spikePlan": "Design-onlycomparison with ue4-docker. Reject for currentlaptop; actual trial requires disposablehost, compatibleengine/source rights, revieweddaemon changes and boundedstorage.",
+        "sourceURLs": [
+          "https://github.com/slonopotamus/ue-docker-ng",
+          "https://github.com/slonopotamus/ue-docker-ng/commit/5b98e864cdb8f53c326107c04f16971722a9f1c7",
+          "https://github.com/slonopotamus/ue-docker-ng/blob/5b98e864cdb8f53c326107c04f16971722a9f1c7/README.adoc",
+          "https://github.com/slonopotamus/ue-docker-ng/blob/5b98e864cdb8f53c326107c04f16971722a9f1c7/LICENSE"
+        ],
+        "executedOrInstalled": false
+      }
+    },
+    {
+      "id": "AI-01",
+      "category": "ai",
+      "categories": [
+        "ai"
+      ],
+      "name": "Repomix",
+      "url": "https://github.com/yamadashy/repomix",
+      "inspectedCommit": "55c6de6aebde4c38877fbcaf005c4cc396bf6e2d",
+      "decision": "optional-trial",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not installed or executed",
+      "assessment": {
+        "repository": "yamadashy/repomix",
+        "url": "https://github.com/yamadashy/repomix",
+        "observedDate": "2026-10-12",
+        "localQualification": "Not installed or executed",
+        "commitSha": "55c6de6aebde4c38877fbcaf005c4cc396bf6e2d",
+        "commitDate": "2026-10-11T15:58:43Z",
+        "commitMessage": "Merge pull request #1932 from yamadashy/dependabot/npm_and_yarn/npm_and_yarn-ba560aac11",
+        "files": {
+          "LICENSE": "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/LICENSE",
+          "README.md": "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/README.md",
+          "package.json": "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/package.json"
+        },
+        "name": "Repomix",
+        "category": "AI workflow",
+        "decision": "optional-trial",
+        "estimatedHours": [
+          1,
+          2
+        ],
+        "estimateBasis": "Planning range, not measured installation time",
+        "rationale": "Bounded code handoff; normal local editing already has direct file access.",
+        "license": "MIT",
+        "engineEvidence": "External developer tool; no local Unreal qualification",
+        "sourceUrls": [
+          "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/LICENSE",
+          "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/README.md",
+          "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/package.json",
+          "https://github.com/yamadashy/repomix/commit/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d"
+        ],
+        "licenseUrl": "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/LICENSE"
+      }
+    },
+    {
+      "id": "AI-02",
+      "category": "ai",
+      "categories": [
+        "ai"
+      ],
+      "name": "Serena",
+      "url": "https://github.com/oraios/serena",
+      "inspectedCommit": "0d4258ea7ad0000fd37882e3be5dc1ab2965700c",
+      "decision": "defer",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not installed or executed",
+      "assessment": {
+        "repository": "oraios/serena",
+        "url": "https://github.com/oraios/serena",
+        "observedDate": "2026-10-12",
+        "localQualification": "Not installed or executed",
+        "commitSha": "0d4258ea7ad0000fd37882e3be5dc1ab2965700c",
+        "commitDate": "2026-10-12T10:54:31Z",
+        "commitMessage": "Merge pull request #2155 from dafyy321-pixel/fix/stale-replacement-occurrence-ids",
+        "files": {
+          "LICENSE": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/LICENSE",
+          "README.md": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/README.md",
+          "pyproject.toml": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/pyproject.toml"
+        },
+        "name": "Serena",
+        "category": "AI workflow",
+        "decision": "defer",
+        "estimatedHours": [
+          3,
+          6
+        ],
+        "estimateBasis": "Planning range, not measured installation time",
+        "rationale": "Semantic retrieval trial after code growth; Unreal compile database and memory overhead need measurement.",
+        "license": "GPL-3.0-or-later application; MIT SolidLSP",
+        "engineEvidence": "External developer tool; no local Unreal qualification",
+        "sourceUrls": [
+          "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/LICENSE",
+          "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/README.md",
+          "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/pyproject.toml",
+          "https://github.com/oraios/serena/commit/0d4258ea7ad0000fd37882e3be5dc1ab2965700c"
+        ],
+        "licenseUrl": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/LICENSE"
+      }
+    },
+    {
+      "id": "AI-03",
+      "category": "ai",
+      "categories": [
+        "ai"
+      ],
+      "name": "Context7",
+      "url": "https://github.com/upstash/context7",
+      "inspectedCommit": "522c4db4fa2e1e31f1b320f09fa8c8fab376987a",
+      "decision": "optional-trial",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not installed or executed",
+      "assessment": {
+        "repository": "upstash/context7",
+        "url": "https://github.com/upstash/context7",
+        "observedDate": "2026-10-12",
+        "localQualification": "Not installed or executed",
+        "commitSha": "522c4db4fa2e1e31f1b320f09fa8c8fab376987a",
+        "commitDate": "2026-10-09T15:36:19Z",
+        "commitMessage": "chore(release): version packages (#3369)",
+        "files": {
+          "LICENSE": "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/LICENSE",
+          "README.md": "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/README.md",
+          "package.json": "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/package.json"
+        },
+        "name": "Context7",
+        "category": "AI workflow",
+        "decision": "optional-trial",
+        "estimatedHours": [
+          1,
+          2
+        ],
+        "estimateBasis": "Planning range, not measured installation time",
+        "rationale": "Benchmark exact Unreal version coverage against official docs and installed headers.",
+        "license": "MIT",
+        "engineEvidence": "External developer tool; no local Unreal qualification",
+        "sourceUrls": [
+          "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/LICENSE",
+          "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/README.md",
+          "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/package.json",
+          "https://github.com/upstash/context7/commit/522c4db4fa2e1e31f1b320f09fa8c8fab376987a"
+        ],
+        "licenseUrl": "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/LICENSE"
+      }
+    },
+    {
+      "id": "AI-04",
+      "category": "ai",
+      "categories": [
+        "ai"
+      ],
+      "name": "GitHub Spec Kit",
+      "url": "https://github.com/github/spec-kit",
+      "inspectedCommit": "0443760542e7e5269724744a2ac55c4bd386d095",
+      "decision": "reference",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not installed or executed",
+      "assessment": {
+        "repository": "github/spec-kit",
+        "url": "https://github.com/github/spec-kit",
+        "observedDate": "2026-10-12",
+        "localQualification": "Not installed or executed",
+        "commitSha": "0443760542e7e5269724744a2ac55c4bd386d095",
+        "commitDate": "2026-10-10T01:32:34Z",
+        "commitMessage": "feat: add maintainer-triggered PR description assessment (#4902)",
+        "files": {
+          "LICENSE": "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/LICENSE",
+          "README.md": "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/README.md",
+          "pyproject.toml": "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/pyproject.toml"
+        },
+        "name": "GitHub Spec Kit",
+        "category": "AI workflow",
+        "decision": "reference",
+        "estimatedHours": [
+          2,
+          3
+        ],
+        "estimateBasis": "Planning range, not measured installation time",
+        "rationale": "Compare on a complex task only if existing task templates prove insufficient.",
+        "license": "MIT",
+        "engineEvidence": "External developer tool; no local Unreal qualification",
+        "sourceUrls": [
+          "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/LICENSE",
+          "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/README.md",
+          "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/pyproject.toml",
+          "https://github.com/github/spec-kit/commit/0443760542e7e5269724744a2ac55c4bd386d095"
+        ],
+        "licenseUrl": "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/LICENSE"
+      }
+    },
+    {
+      "id": "AI-05",
+      "category": "ai",
+      "categories": [
+        "ai"
+      ],
+      "name": "Superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "inspectedCommit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "decision": "reference",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not installed or executed",
+      "assessment": {
+        "repository": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "observedDate": "2026-10-12",
+        "localQualification": "Not installed or executed",
+        "commitSha": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+        "commitDate": "2026-10-10T00:28:04Z",
+        "commitMessage": "Release v7.0.0: rebuilt brainstorming, Antigravity Marketplace manifest, Windows hook fixes (#2489)",
+        "files": {
+          "LICENSE": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+          "README.md": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/README.md",
+          "package.json": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/package.json"
+        },
+        "name": "Superpowers",
+        "category": "AI workflow",
+        "decision": "reference",
+        "estimatedHours": [
+          1,
+          2
+        ],
+        "estimateBasis": "Planning range, not measured installation time",
+        "rationale": "Select useful debugging/review practices without competing global workflow hooks.",
+        "license": "MIT",
+        "engineEvidence": "External developer tool; no local Unreal qualification",
+        "sourceUrls": [
+          "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE",
+          "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/README.md",
+          "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/package.json",
+          "https://github.com/obra/superpowers/commit/bb92a77741419a4ab5f06e711a283343f1ada0c3"
+        ],
+        "licenseUrl": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE"
+      }
+    },
+    {
+      "id": "AI-06",
+      "category": "ai",
+      "categories": [
+        "ai"
+      ],
+      "name": "BMAD Method",
+      "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+      "inspectedCommit": "9f1987169a2e5626e5ccb31bb9cee051fdb3df20",
+      "decision": "defer",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not installed or executed",
+      "assessment": {
+        "repository": "bmad-code-org/BMAD-METHOD",
+        "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+        "observedDate": "2026-10-12",
+        "localQualification": "Not installed or executed",
+        "commitSha": "9f1987169a2e5626e5ccb31bb9cee051fdb3df20",
+        "commitDate": "2026-10-11T21:12:30Z",
+        "commitMessage": "docs: put the stable v6.12 install first and mark the skills route as a preview (#3076)",
+        "files": {
+          "LICENSE": "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/LICENSE",
+          "README.md": "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/README.md",
+          "pyproject.toml": "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/pyproject.toml"
+        },
+        "name": "BMAD Method",
+        "category": "AI workflow",
+        "decision": "defer",
+        "estimatedHours": [
+          2,
+          4
+        ],
+        "estimateBasis": "Planning range, not measured installation time",
+        "rationale": "Current default branch is a changing preview; existing planning already sufficient.",
+        "license": "MIT",
+        "engineEvidence": "External developer tool; no local Unreal qualification",
+        "sourceUrls": [
+          "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/LICENSE",
+          "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/README.md",
+          "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/pyproject.toml",
+          "https://github.com/bmad-code-org/BMAD-METHOD/commit/9f1987169a2e5626e5ccb31bb9cee051fdb3df20"
+        ],
+        "licenseUrl": "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/LICENSE"
+      }
+    },
+    {
+      "id": "AI-07",
+      "category": "ai",
+      "categories": [
+        "ai"
+      ],
+      "name": "BMAD Game Dev Studio",
+      "url": "https://github.com/bmad-code-org/bmad-module-game-dev-studio",
+      "inspectedCommit": "ff8870955203e1665f4bf75a64049078e6d4080c",
+      "decision": "optional-trial",
+      "productionApprovedByThisSprint": false,
+      "localQualification": "Not installed or executed",
+      "assessment": {
+        "repository": "bmad-code-org/bmad-module-game-dev-studio",
+        "url": "https://github.com/bmad-code-org/bmad-module-game-dev-studio",
+        "observedDate": "2026-10-12",
+        "localQualification": "Not installed or executed",
+        "commitSha": "ff8870955203e1665f4bf75a64049078e6d4080c",
+        "commitDate": "2026-09-25T10:18:14Z",
+        "commitMessage": "Resolve {project-root} by walking up to the nearest _bmad/ (#38)",
+        "files": {
+          "LICENSE": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/LICENSE",
+          "README.md": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/README.md",
+          "package.json": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/package.json"
+        },
+        "name": "BMAD Game Dev Studio",
+        "category": "AI workflow",
+        "decision": "optional-trial",
+        "estimatedHours": [
+          2,
+          3
+        ],
+        "estimateBasis": "Planning range, not measured installation time",
+        "rationale": "Game-specific critique of one existing mission; preserve one authoritative specification.",
+        "license": "MIT",
+        "engineEvidence": "External developer tool; no local Unreal qualification",
+        "sourceUrls": [
+          "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/LICENSE",
+          "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/README.md",
+          "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/package.json",
+          "https://github.com/bmad-code-org/bmad-module-game-dev-studio/commit/ff8870955203e1665f4bf75a64049078e6d4080c"
+        ],
+        "licenseUrl": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/LICENSE"
+      }
+    }
+  ]
+}

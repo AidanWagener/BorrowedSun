@@ -21,7 +21,7 @@ powershell -NoProfile -File Tools/Build.ps1 -Execute
 powershell -NoProfile -File Tools/Test.ps1 -Execute -NullRHI
 ```
 
-5. Continue with BS-003: create an owned map in the Unreal editor, set the default map, add its package path to `MapsToCook`, then package. No binary map has been fabricated by a text generator. See [first-map runbook](Docs/Operations/FIRST_MAP.md).
+5. Prove independent recovery in BS-002, then continue with BS-003: create an owned map in the Unreal editor, set the default map, add its package path to `MapsToCook`, then package. No binary map has been fabricated by a text generator. See [first-map runbook](Docs/Operations/FIRST_MAP.md).
 
 ```powershell
 powershell -NoProfile -File Tools/Preflight.ps1 -ForPackage
@@ -39,7 +39,7 @@ Do not mistake a headless smoke test for a rendering, gameplay, cook or Shipping
 | Tools | Build, test, doctor, preflight, backup and tooling regression commands |
 | Docs/Registers | Backlog, decisions, asset candidates, budget and machine observation |
 | Docs/Templates | Task, asset intake, dependency qualification, playtest and decision templates |
-| Docs/Research | Detailed development handbook and source register |
+| Docs/Research | Development handbook, additional framework research and source registers |
 | Artifacts | Ignored logs, test fixtures and build output |
 | Vault | Optional ignored private license evidence; requires independent backup |
 
@@ -50,6 +50,8 @@ The full design remains in the accompanying Borrowed Sun game specification. Thi
 Pick one acceptance condition from [the backlog](Docs/Registers/backlog.json). Work on that outcome, run relevant checks, play the affected route, review the diff, then commit a coherent state. Keep one active gameplay item and one independent research/review item. Follow [AGENTS.md](AGENTS.md) for assisted development and [daily operations](Docs/Operations/DAILY.md) for integration.
 
 The recommended free tools and assets are recorded in [the asset candidate register](Docs/Registers/asset-candidates.json). Candidate status does not mean installed, licensed to this account, or qualified for this engine. Do not import the entire list. Use [asset intake](Docs/Templates/asset-intake.json) for one selected candidate at a time.
+
+The additional [framework research](Docs/Research/Framework_Research.md) assesses gameplay, editor/content, DevOps and AI repositories. Its [candidate register](Docs/Registers/repository-candidates.json) preserves exact revisions and qualifications; the [experiment queue](Docs/Registers/framework-spikes.json) defines bounded next trials. None of those third-party candidates is installed by this delivery. The native Unreal MCP plugin was inspected but remains disabled.
 
 ## Source control and portability
 

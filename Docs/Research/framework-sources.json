@@ -1,0 +1,622 @@
+[
+  {
+    "title": "EB01: Epic Unreal MCP documentation",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor"
+  },
+  {
+    "title": "EB02: Data Validation",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/data-validation-in-unreal-engine"
+  },
+  {
+    "title": "EB03: Remote Control HTTP reference",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/remote-control-api-http-reference-for-unreal-engine"
+  },
+  {
+    "title": "EB04: Editor Utility Widgets",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/editor-utility-widgets-in-unreal-engine"
+  },
+  {
+    "title": "EpicGames/BlenderTools",
+    "url": "https://github.com/EpicGames/BlenderTools"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://github.com/EpicGames/BlenderTools/blob/04cae45d71874a37d75522f4a694a5d4aae32147/LICENSE.md"
+  },
+  {
+    "title": "Release evidence",
+    "url": "https://github.com/EpicGames/BlenderTools/releases/tag/20231109043947"
+  },
+  {
+    "title": "Pinned setup",
+    "url": "https://github.com/EpicGames/BlenderTools/blob/04cae45d71874a37d75522f4a694a5d4aae32147/docs/send2ue/introduction/quickstart.md"
+  },
+  {
+    "title": "poly-hammer/BlenderTools",
+    "url": "https://github.com/poly-hammer/BlenderTools"
+  },
+  {
+    "title": "MIT file",
+    "url": "https://github.com/poly-hammer/BlenderTools/blob/470b0218f6cc4578b79ea367c508211b02b41ba8/LICENSE.md"
+  },
+  {
+    "title": "Release evidence",
+    "url": "https://github.com/poly-hammer/BlenderTools/releases/tag/20251123002929"
+  },
+  {
+    "title": "Setup evidence",
+    "url": "https://github.com/poly-hammer/BlenderTools/blob/470b0218f6cc4578b79ea367c508211b02b41ba8/docs/send2ue/introduction/quickstart.md"
+  },
+  {
+    "title": "xavier150/Blender-For-UnrealEngine-Addons",
+    "url": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons"
+  },
+  {
+    "title": "pinned license",
+    "url": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/blob/ea415063a014ac519e9f9f80e5e7a4458b2356a2/LICENSE"
+  },
+  {
+    "title": "Release evidence",
+    "url": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/releases/tag/v4.4.8"
+  },
+  {
+    "title": "pinned feature description",
+    "url": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons/blob/780d9217fc8271f946f358559dbbb2ebbf989175/README.md"
+  },
+  {
+    "title": "PCGEx/PCGExtendedToolkit",
+    "url": "https://github.com/PCGEx/PCGExtendedToolkit"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/PCGEx/PCGExtendedToolkit/blob/5bcfbbf5fb0bfe1a3de65421e9cc8c27be3d69e5/README.md"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://github.com/PCGEx/PCGExtendedToolkit/blob/8072735a81eca04e4cee61d0a06a5c3f6a3f6da5/LICENSE"
+  },
+  {
+    "title": "Release evidence",
+    "url": "https://github.com/PCGEx/PCGExtendedToolkit/releases"
+  },
+  {
+    "title": "chongdashu/unreal-mcp",
+    "url": "https://github.com/chongdashu/unreal-mcp"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/chongdashu/unreal-mcp/blob/4e5f00da50733190481311e254d16d137a84ef33/README.md"
+  },
+  {
+    "title": "Pinned bridge",
+    "url": "https://github.com/chongdashu/unreal-mcp/blob/4e5f00da50733190481311e254d16d137a84ef33/MCPGameProject/Plugins/UnrealMCP/Source/UnrealMCP/Private/UnrealMCPBridge.cpp"
+  },
+  {
+    "title": "flopperam/unreal-engine-mcp",
+    "url": "https://github.com/flopperam/unreal-engine-mcp"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/flopperam/unreal-engine-mcp/blob/b1b495b7c396002108ecf5fed7853e5799be834c/README.md"
+  },
+  {
+    "title": "Pinned bridge",
+    "url": "https://github.com/flopperam/unreal-engine-mcp/blob/b1b495b7c396002108ecf5fed7853e5799be834c/UnrealMCP/Source/UnrealMCP/Private/EpicUnrealMCPBridge.cpp"
+  },
+  {
+    "title": "believer-oss/Claireon",
+    "url": "https://github.com/believer-oss/Claireon"
+  },
+  {
+    "title": "MIT notice",
+    "url": "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/LICENSE"
+  },
+  {
+    "title": "Pinned changelog",
+    "url": "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/CHANGELOG.md"
+  },
+  {
+    "title": "Audit source",
+    "url": "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/Source/Claireon/Private/ClaireonPythonAuditLog.cpp"
+  },
+  {
+    "title": "security policy",
+    "url": "https://github.com/believer-oss/Claireon/blob/89bee2f4c62d1df625cca71ae66e7c81a415a009/SECURITY.md"
+  },
+  {
+    "title": "db-lyon/ue-mcp",
+    "url": "https://github.com/db-lyon/ue-mcp"
+  },
+  {
+    "title": "MIT file",
+    "url": "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/README.md"
+  },
+  {
+    "title": "Guard contract",
+    "url": "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/docs/plugins-guards.md"
+  },
+  {
+    "title": "security policy",
+    "url": "https://github.com/db-lyon/ue-mcp/blob/f4433cb8e1070a99cac2d0f03edd8c7768b2c9da/SECURITY.md"
+  },
+  {
+    "title": "timargv/UnrealMCPToolkit",
+    "url": "https://github.com/timargv/UnrealMCPToolkit"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://github.com/timargv/UnrealMCPToolkit/blob/2d2d9e63d4d2defa19693bf79a56e1b738d45318/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/timargv/UnrealMCPToolkit/blob/2d2d9e63d4d2defa19693bf79a56e1b738d45318/README.md"
+  },
+  {
+    "title": "Allar/ue5-style-guide",
+    "url": "https://github.com/Allar/ue5-style-guide"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/LICENSE"
+  },
+  {
+    "title": "Default reference",
+    "url": "https://github.com/Allar/ue5-style-guide/blob/198a8550947de91f19362dabf57fbd1f1cdf0904/README.md"
+  },
+  {
+    "title": "v2 reference",
+    "url": "https://github.com/Allar/ue5-style-guide/blob/2127e9ab3ef740d5df3e2546205f2fcce7bc430e/README.md"
+  },
+  {
+    "title": "Epic GAS overview",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/understanding-the-unreal-engine-gameplay-ability-system"
+  },
+  {
+    "title": "Epic StateTree quick start",
+    "url": "https://dev.epicgames.com/documentation/unreal-engine/statetree-quick-start-guide"
+  },
+  {
+    "title": "Official Lyra documentation and distribution link",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/lyra-sample-game-in-unreal-engine"
+  },
+  {
+    "title": "Epic EULA, section 1",
+    "url": "https://www.unrealengine.com/eula/unreal"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/Sixze/ALS-Refactored/b754d6f0f2bb03741d301f8fb88077ebfe561e17/LICENSE.md"
+  },
+  {
+    "title": "ALS.uplugin",
+    "url": "https://github.com/Sixze/ALS-Refactored/blob/b754d6f0f2bb03741d301f8fb88077ebfe561e17/ALS.uplugin"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/Sixze/ALS-Refactored/blob/b754d6f0f2bb03741d301f8fb88077ebfe561e17/README.md"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/tranek/GASDocumentation/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/LICENSE"
+  },
+  {
+    "title": "project descriptor",
+    "url": "https://github.com/tranek/GASDocumentation/blob/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/GASDocumentation.uproject"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/tranek/GASDocumentation/blob/8f76c5780bdea69e0ea2cc161ab2f435f04182eb/README.md"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/tranek/GASShooter/26295c548a19f221917e4a7232c12e763db64cb1/LICENSE"
+  },
+  {
+    "title": "README",
+    "url": "https://github.com/tranek/GASShooter/blob/26295c548a19f221917e4a7232c12e763db64cb1/README.md"
+  },
+  {
+    "title": "project descriptor",
+    "url": "https://github.com/tranek/GASShooter/blob/26295c548a19f221917e4a7232c12e763db64cb1/GASShooter.uproject"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/Narxim/Narxim-GAS-Example/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/LICENSE.md"
+  },
+  {
+    "title": "GAS_Example.uproject",
+    "url": "https://github.com/Narxim/Narxim-GAS-Example/blob/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/GAS_Example.uproject"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/Narxim/Narxim-GAS-Example/blob/6a676a3d0436c55e4ba8dc83b12ab86ac61eae87/README.md"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/strayTrain/SimpleGameplayAbilitySystem/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/strayTrain/SimpleGameplayAbilitySystem/blob/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/README.md"
+  },
+  {
+    "title": "descriptor",
+    "url": "https://github.com/strayTrain/SimpleGameplayAbilitySystem/blob/953f8c2bc8dad3598d210ccefab7f79c4e388b5f/SimpleGameplayAbilitySystem.uplugin"
+  },
+  {
+    "title": "Maintainer installation requirements",
+    "url": "https://straytrain.github.io/SimpleGameplayAbilitySystem/pages/installation/installation.html"
+  },
+  {
+    "title": "HEAD MIT license",
+    "url": "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8c20e8f6cd28ce32d4a56f13a2cdeaa67b415061/LICENSE"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/MothCocoon/FlowGraph/8211b25999068407cb7b40b8c97e18b52d4832ca/LICENSE"
+  },
+  {
+    "title": "2.3 notes",
+    "url": "https://mothcocoon.github.io/FlowGraph/Releases/Version23"
+  },
+  {
+    "title": "2.4 notes",
+    "url": "https://mothcocoon.github.io/FlowGraph/Releases/Version24"
+  },
+  {
+    "title": "Save support",
+    "url": "https://mothcocoon.github.io/FlowGraph/Features/SaveGameSupport"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/NotYetGames/DlgSystem/d705231216bd64558d437b87a57928689b1e7fef/LICENSE.txt"
+  },
+  {
+    "title": "README",
+    "url": "https://github.com/NotYetGames/DlgSystem/blob/d705231216bd64558d437b87a57928689b1e7fef/README.md"
+  },
+  {
+    "title": "descriptor",
+    "url": "https://github.com/NotYetGames/DlgSystem/blob/d705231216bd64558d437b87a57928689b1e7fef/DlgSystem.uplugin"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/The-Chinese-Room/Inkpot/6ae21952f4510106c76b5d6b513a92e1873b2925/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/The-Chinese-Room/Inkpot/blob/6ae21952f4510106c76b5d6b513a92e1873b2925/README.md"
+  },
+  {
+    "title": "runtime/editor descriptor",
+    "url": "https://github.com/The-Chinese-Room/Inkpot/blob/6ae21952f4510106c76b5d6b513a92e1873b2925/Inkpot.uplugin"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/TheGeebus/SimpleQuest/9536c7de39cf6c8484f7ee334a9194905989eae7/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/TheGeebus/SimpleQuest/blob/9536c7de39cf6c8484f7ee334a9194905989eae7/README.md"
+  },
+  {
+    "title": "SimpleQuest descriptor",
+    "url": "https://github.com/TheGeebus/SimpleQuest/blob/9536c7de39cf6c8484f7ee334a9194905989eae7/Plugins/SimpleQuest/SimpleQuest.uplugin"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/UnrealSharp/UnrealSharp/51a1397aaf56319f390d7431d23001af11dae0d2/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/UnrealSharp/UnrealSharp/blob/51a1397aaf56319f390d7431d23001af11dae0d2/README.md"
+  },
+  {
+    "title": "descriptor",
+    "url": "https://github.com/UnrealSharp/UnrealSharp/blob/51a1397aaf56319f390d7431d23001af11dae0d2/UnrealSharp.uplugin"
+  },
+  {
+    "title": "Command-line packaging",
+    "url": "https://www.unrealsharp.com/getting-started-and-fundamentals/packaging/packaging-via-ci-cd-command-line"
+  },
+  {
+    "title": "MIT license",
+    "url": "https://raw.githubusercontent.com/Megafunk/MassSample/ca9825861f35ab4f8e152351de2adb893b51ca70/LICENSE"
+  },
+  {
+    "title": "project descriptor",
+    "url": "https://github.com/Megafunk/MassSample/blob/ca9825861f35ab4f8e152351de2adb893b51ca70/MassSampleProject.uproject"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/Megafunk/MassSample/blob/ca9825861f35ab4f8e152351de2adb893b51ca70/README.md"
+  },
+  {
+    "title": "Plugin descriptor",
+    "url": "https://github.com/Megafunk/MassSample/blob/ca9825861f35ab4f8e152351de2adb893b51ca70/Plugins/MassCommunitySample/MassCommunitySample.uplugin"
+  },
+  {
+    "title": "Epic MassGameplay overview",
+    "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-mass-gameplay-in-unreal-engine"
+  },
+  {
+    "title": "JonasReich/OpenUnrealAutomationTools",
+    "url": "https://github.com/JonasReich/OpenUnrealAutomationTools"
+  },
+  {
+    "title": "pinned license",
+    "url": "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/LICENSE.md"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/README.md"
+  },
+  {
+    "title": "Pinned automation helper",
+    "url": "https://github.com/JonasReich/OpenUnrealAutomationTools/blob/254b040fffc06e239ea73807c5a1e1e564975419/python/openunrealautomation/automationtest.py"
+  },
+  {
+    "title": "Inspected commit",
+    "url": "https://github.com/JonasReich/OpenUnrealAutomationTools/commit/254b040fffc06e239ea73807c5a1e1e564975419"
+  },
+  {
+    "title": "adamrehn/ue4cli",
+    "url": "https://github.com/adamrehn/ue4cli"
+  },
+  {
+    "title": "Pinned license: MIT",
+    "url": "https://github.com/adamrehn/ue4cli/blob/fed71c1af4cffe3fed9358b08430068ad9454b77/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/adamrehn/ue4cli/blob/fed71c1af4cffe3fed9358b08430068ad9454b77/README.md"
+  },
+  {
+    "title": "adamrehn/ue4-docker",
+    "url": "https://github.com/adamrehn/ue4-docker"
+  },
+  {
+    "title": "Pinned license: MIT",
+    "url": "https://github.com/adamrehn/ue4-docker/blob/7f1eccc538b39097f1f196609642cf640d87226e/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/adamrehn/ue4-docker/blob/7f1eccc538b39097f1f196609642cf640d87226e/README.md"
+  },
+  {
+    "title": "Release 0.0.124",
+    "url": "https://github.com/adamrehn/ue4-docker/releases/tag/v0.0.124"
+  },
+  {
+    "title": "Unreal Containers CI guide",
+    "url": "https://unrealcontainers.com/docs/use-cases/continuous-integration"
+  },
+  {
+    "title": "v2 license",
+    "url": "https://github.com/Allar/ue5-style-guide/blob/2127e9ab3ef740d5df3e2546205f2fcce7bc430e/LICENSE"
+  },
+  {
+    "title": "20tab/UnrealEnginePython",
+    "url": "https://github.com/20tab/UnrealEnginePython"
+  },
+  {
+    "title": "Pinned license: MIT",
+    "url": "https://github.com/20tab/UnrealEnginePython/blob/4b5da5bf4ca598e8d0f67eb938749bc381a67d6c/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/20tab/UnrealEnginePython/blob/4b5da5bf4ca598e8d0f67eb938749bc381a67d6c/README.md"
+  },
+  {
+    "title": "git-lfs/git-lfs",
+    "url": "https://github.com/git-lfs/git-lfs"
+  },
+  {
+    "title": "pinned LICENSE.md",
+    "url": "https://github.com/git-lfs/git-lfs/blob/0043a645047926f4bd7f7091299095528253d575/LICENSE.md"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/git-lfs/git-lfs/blob/0043a645047926f4bd7f7091299095528253d575/README.md"
+  },
+  {
+    "title": "github/gitignore",
+    "url": "https://github.com/github/gitignore"
+  },
+  {
+    "title": "Pinned license: CC0 1.0 Universal",
+    "url": "https://github.com/github/gitignore/blob/0e5d690153ca3da8a4a1aef2d053406f408f531c/LICENSE"
+  },
+  {
+    "title": "Pinned UnrealEngine.gitignore",
+    "url": "https://github.com/github/gitignore/blob/0e5d690153ca3da8a4a1aef2d053406f408f531c/UnrealEngine.gitignore"
+  },
+  {
+    "title": "game-ci/unity-builder",
+    "url": "https://github.com/game-ci/unity-builder"
+  },
+  {
+    "title": "Pinned license: MIT",
+    "url": "https://github.com/game-ci/unity-builder/blob/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/game-ci/unity-builder/blob/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e/README.md"
+  },
+  {
+    "title": "Pinned action definition",
+    "url": "https://github.com/game-ci/unity-builder/blob/ae0171202cd8b5ea3fc3f87b03bb6e676e4ea17e/action.yml"
+  },
+  {
+    "title": "DaedalicEntertainment/ue4-test-automation",
+    "url": "https://github.com/DaedalicEntertainment/ue4-test-automation"
+  },
+  {
+    "title": "Pinned license: MIT",
+    "url": "https://github.com/DaedalicEntertainment/ue4-test-automation/blob/d8bfd91fdd448860b596753339c7ce9f1f503438/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/DaedalicEntertainment/ue4-test-automation/blob/d8bfd91fdd448860b596753339c7ce9f1f503438/README.md"
+  },
+  {
+    "title": "Pinned descriptor",
+    "url": "https://github.com/DaedalicEntertainment/ue4-test-automation/blob/d8bfd91fdd448860b596753339c7ce9f1f503438/DaedalicTestAutomationPlugin/DaedalicTestAutomationPlugin.uplugin"
+  },
+  {
+    "title": "Hazelight/UnrealEngine-Angelscript",
+    "url": "https://github.com/Hazelight/UnrealEngine-Angelscript"
+  },
+  {
+    "title": "Installation",
+    "url": "https://angelscript.hazelight.se/getting-started/installation/"
+  },
+  {
+    "title": "Licensing",
+    "url": "https://angelscript.hazelight.se/project/license/"
+  },
+  {
+    "title": "Development status",
+    "url": "https://angelscript.hazelight.se/project/development-status/"
+  },
+  {
+    "title": "slonopotamus/ue-docker-ng",
+    "url": "https://github.com/slonopotamus/ue-docker-ng"
+  },
+  {
+    "title": "Pinned license: MIT",
+    "url": "https://github.com/slonopotamus/ue-docker-ng/blob/5b98e864cdb8f53c326107c04f16971722a9f1c7/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/slonopotamus/ue-docker-ng/blob/5b98e864cdb8f53c326107c04f16971722a9f1c7/README.adoc"
+  },
+  {
+    "title": "Official customization documentation",
+    "url": "https://learn.chatgpt.com/docs/customization/overview"
+  },
+  {
+    "title": "official worktree documentation",
+    "url": "https://learn.chatgpt.com/docs/environments/git-worktrees"
+  },
+  {
+    "title": "`55c6de6aebde`",
+    "url": "https://github.com/yamadashy/repomix/commit/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d"
+  },
+  {
+    "title": "MIT",
+    "url": "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/README.md"
+  },
+  {
+    "title": "package metadata",
+    "url": "https://github.com/yamadashy/repomix/blob/55c6de6aebde4c38877fbcaf005c4cc396bf6e2d/package.json"
+  },
+  {
+    "title": "`0d4258ea7ad0`",
+    "url": "https://github.com/oraios/serena/commit/0d4258ea7ad0000fd37882e3be5dc1ab2965700c"
+  },
+  {
+    "title": "GPL-3.0-or-later application; MIT SolidLSP",
+    "url": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/README.md"
+  },
+  {
+    "title": "package metadata",
+    "url": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/pyproject.toml"
+  },
+  {
+    "title": "Pinned Unreal setup guide",
+    "url": "https://github.com/oraios/serena/blob/0d4258ea7ad0000fd37882e3be5dc1ab2965700c/docs/03-special-guides/unreal_engine_setup_guide_for_serena.md"
+  },
+  {
+    "title": "`522c4db4fa2e`",
+    "url": "https://github.com/upstash/context7/commit/522c4db4fa2e1e31f1b320f09fa8c8fab376987a"
+  },
+  {
+    "title": "MIT",
+    "url": "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/README.md"
+  },
+  {
+    "title": "package metadata",
+    "url": "https://github.com/upstash/context7/blob/522c4db4fa2e1e31f1b320f09fa8c8fab376987a/package.json"
+  },
+  {
+    "title": "`0443760542e7`",
+    "url": "https://github.com/github/spec-kit/commit/0443760542e7e5269724744a2ac55c4bd386d095"
+  },
+  {
+    "title": "MIT",
+    "url": "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/README.md"
+  },
+  {
+    "title": "package metadata",
+    "url": "https://github.com/github/spec-kit/blob/0443760542e7e5269724744a2ac55c4bd386d095/pyproject.toml"
+  },
+  {
+    "title": "`bb92a7774141`",
+    "url": "https://github.com/obra/superpowers/commit/bb92a77741419a4ab5f06e711a283343f1ada0c3"
+  },
+  {
+    "title": "MIT",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/README.md"
+  },
+  {
+    "title": "package metadata",
+    "url": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/package.json"
+  },
+  {
+    "title": "`9f1987169a2e`",
+    "url": "https://github.com/bmad-code-org/BMAD-METHOD/commit/9f1987169a2e5626e5ccb31bb9cee051fdb3df20"
+  },
+  {
+    "title": "MIT",
+    "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/README.md"
+  },
+  {
+    "title": "package metadata",
+    "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/9f1987169a2e5626e5ccb31bb9cee051fdb3df20/pyproject.toml"
+  },
+  {
+    "title": "`ff8870955203`",
+    "url": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/commit/ff8870955203e1665f4bf75a64049078e6d4080c"
+  },
+  {
+    "title": "MIT",
+    "url": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/LICENSE"
+  },
+  {
+    "title": "Pinned README",
+    "url": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/README.md"
+  },
+  {
+    "title": "package metadata",
+    "url": "https://github.com/bmad-code-org/bmad-module-game-dev-studio/blob/ff8870955203e1665f4bf75a64049078e6d4080c/package.json"
+  }
+]

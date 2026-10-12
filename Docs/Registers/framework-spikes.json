@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "proposedToolingHoursPer20HourWeek": 4,
+  "oneActiveSpikeAtATime": true,
+  "spikes": [
+    {
+      "id": "X-001",
+      "title": "Native editor automation",
+      "status": "proposed",
+      "timeboxFocusedHours": [
+        2,
+        4
+      ],
+      "trigger": "First saved test map and independent recovery exist; repeated editor work is a bottleneck.",
+      "prerequisiteBacklogIds": [
+        "BS-002",
+        "BS-003"
+      ],
+      "candidateAlternatives": [
+        "Native Unreal MCP"
+      ],
+      "runbook": "Docs/Research/Framework_Research.md",
+      "acceptanceLocation": "X-001 section",
+      "note": "Planning allowance; do not run all trials by default. Select one only when its trigger exists."
+    },
+    {
+      "id": "X-002",
+      "title": "One repeatable art import",
+      "status": "proposed",
+      "timeboxFocusedHours": [
+        3,
+        5
+      ],
+      "trigger": "Original or modified Blender models are being iterated repeatedly.",
+      "prerequisiteBacklogIds": [
+        "BS-002",
+        "BS-003"
+      ],
+      "candidateAlternatives": [
+        "Blender For Unreal Engine",
+        "Send to Unreal"
+      ],
+      "runbook": "Docs/Research/Framework_Research.md",
+      "acceptanceLocation": "X-002 section",
+      "note": "Planning allowance; do not run all trials by default. Select one only when its trigger exists."
+    },
+    {
+      "id": "X-003",
+      "title": "Deterministic district dressing",
+      "status": "proposed",
+      "timeboxFocusedHours": [
+        4,
+        6
+      ],
+      "trigger": "Hand-authored alley establishes visual rules; native PCG has a demonstrated gap.",
+      "prerequisiteBacklogIds": [
+        "BS-002",
+        "BS-003"
+      ],
+      "candidateAlternatives": [
+        "PCG Extended Toolkit"
+      ],
+      "runbook": "Docs/Research/Framework_Research.md",
+      "acceptanceLocation": "X-003 section",
+      "note": "Planning allowance; do not run all trials by default. Select one only when its trigger exists."
+    },
+    {
+      "id": "X-004",
+      "title": "Mission graph and interrupted progress",
+      "status": "proposed",
+      "timeboxFocusedHours": [
+        8,
+        12
+      ],
+      "trigger": "Two small missions work, but repeated sequencing has become slow.",
+      "prerequisiteBacklogIds": [
+        "BS-002",
+        "BS-003"
+      ],
+      "candidateAlternatives": [
+        "FlowGraph v2.3-5.8"
+      ],
+      "runbook": "Docs/Research/Framework_Research.md",
+      "acceptanceLocation": "X-004 section",
+      "note": "Planning allowance; do not run all trials by default. Select one only when its trigger exists."
+    },
+    {
+      "id": "X-005",
+      "title": "One dialogue authoring choice",
+      "status": "proposed",
+      "timeboxFocusedHours": [
+        6,
+        12
+      ],
+      "trigger": "Repeated branching/localization work justifies a dedicated authoring tool.",
+      "prerequisiteBacklogIds": [
+        "BS-002",
+        "BS-003"
+      ],
+      "candidateAlternatives": [
+        "DlgSystem",
+        "Inkpot"
+      ],
+      "runbook": "Docs/Research/Framework_Research.md",
+      "acceptanceLocation": "X-005 section",
+      "note": "Planning allowance; do not run all trials by default. Select one only when its trigger exists."
+    },
+    {
+      "id": "X-006",
+      "title": "One AI workflow improvement",
+      "status": "proposed",
+      "timeboxFocusedHours": [
+        2,
+        2
+      ],
+      "trigger": "A retrieval or planning failure has recurred.",
+      "prerequisiteBacklogIds": [
+        "BS-002",
+        "BS-003"
+      ],
+      "candidateAlternatives": [
+        "Repomix",
+        "Context7",
+        "BMAD Game Dev Studio"
+      ],
+      "runbook": "Docs/Research/Framework_Research.md",
+      "acceptanceLocation": "X-006 section",
+      "note": "Planning allowance; do not run all trials by default. Select one only when its trigger exists."
+    }
+  ]
+}
