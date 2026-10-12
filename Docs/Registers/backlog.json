@@ -405,6 +405,50 @@
       "confidence": "medium",
       "acceptance": "Review enjoyment, performance, content throughput and remaining cost; choose repair, slice, smaller prologue or stop.",
       "evidence": []
+    },
+    {
+      "id": "BS-025",
+      "title": "Define world library and source kit candidates",
+      "status": "done",
+      "owner": "creator",
+      "dependsOn": [],
+      "estimateHours": [4, 12],
+      "confidence": "medium",
+      "acceptance": "World specification, at least 4000 planned briefs, sourced kit shortlist and physical-object/destruction contracts saved and reviewable.",
+      "evidence": ["Docs/Art/WORLD_ASSET_SPEC.md", "Docs/Registers/world-asset-catalog.json", "Docs/Art/WORLD_KIT_SHORTLIST.md", "Docs/Operations/WORLD_LIBRARY_PLAN_VALIDATION.md"]
+    },
+    {
+      "id": "BS-026",
+      "title": "Review and finish Second Dawn workshop frontage",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": ["BS-025"],
+      "estimateHours": [8, 30],
+      "confidence": "low",
+      "acceptance": "Actual matched in-game captures show coherent construction, materials and grounded objects; mission routes and packaged performance remain qualified.",
+      "evidence": ["Docs/Operations/WORLD_LIBRARY_PLAN_VALIDATION.md"]
+    },
+    {
+      "id": "BS-027",
+      "title": "Prove ten movable objects and persistent collection transfers",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": ["BS-025"],
+      "estimateHours": [24, 80],
+      "confidence": "low",
+      "acceptance": "Ten props carry, rotate, drop, throw, settle and save without duplication; a collection stub accepts or rejects transfers atomically; sunseed custody remains protected.",
+      "evidence": []
+    },
+    {
+      "id": "BS-028",
+      "title": "Qualify bounded prop and panel destruction",
+      "status": "proposed",
+      "owner": "creator",
+      "dependsOn": ["BS-027"],
+      "estimateHours": [24, 100],
+      "confidence": "low",
+      "acceptance": "Six material-specific breakables and one panel prove damage, bounded debris, content custody, persistent aftermath and performance; no citywide collapse commitment.",
+      "evidence": []
     }
   ]
 }

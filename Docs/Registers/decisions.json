@@ -55,6 +55,24 @@
       "decision": "Brass Sanctuary art direction with Indigo Monsoon rain and night reference",
       "reason": "Explicit user approval on 2026-10-12; original moth guardian and material palette tie the city to rented daylight",
       "revisit": "Only after user review of the representative in-game block"
+    },
+    {
+      "id": "ADR-010",
+      "decision": "Plan at least 4000 accepted geometric assets through a 4200-brief hybrid library",
+      "reason": "User requested a comprehensive worldbuilding and modular asset strategy; planned records are distinct from accepted models",
+      "revisit": "Measured content needs and exemplar throughput; merge redundant designs without counting recolors or LODs"
+    },
+    {
+      "id": "ADR-011",
+      "decision": "Keep AI-restricted kits in artistic and technical comparisons and record their published terms separately",
+      "reason": "Explicit user direction on 2026-10-13; shortlist inclusion does not change vendor terms",
+      "revisit": "Actual acquisition terms and operation-specific processing decision"
+    },
+    {
+      "id": "ADR-012",
+      "decision": "Author loose props for carrying, throwing and collection; stage later destruction",
+      "reason": "Stable identity, complete geometry and component boundaries are cheaper to establish before large-scale dressing",
+      "revisit": "After ten-object persistence proof and a bounded breakage prototype"
     }
   ]
 }

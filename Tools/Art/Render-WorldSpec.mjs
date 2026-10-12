@@ -1,0 +1,24 @@
+// Render the existing Markdown specifications as portable, searchable HTML.
+// Pass a directory containing the installed marked module as the first argument.
+import fs from 'node:fs';
+import path from 'node:path';
+import { createRequire } from 'node:module';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+const require=createRequire(import.meta.url);
+const modules=process.argv[2];
+if(!modules)throw new Error('Pass the bundled node_modules directory.');
+const {marked}=await import(pathToFileURL(require.resolve('marked',{paths:[modules]})).href);
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),out=path.resolve(root,'..');
+const pages=[['WORLD_ASSET_SPEC.md','Borrowed_Sun_Worldbuilding_Asset_Spec','Worldbuilding and asset specification'],['WORLD_KIT_SHORTLIST.md','Borrowed_Sun_Kit_Shortlist','Download and purchase shortlist']];
+const css=`:root{--bg:#f3efdf;--ink:#21343a;--accent:#80522b;--line:#d5d1c0}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 system-ui,Segoe UI,sans-serif}a{color:#186370;text-underline-offset:3px}header{background:#102831;color:#f3e9ce;padding:42px max(28px,calc((100vw - 1200px)/2)) 38px}header a{color:#edc682}header p{max-width:800px}.eyebrow{font-size:12px;letter-spacing:.19em;text-transform:uppercase;color:#edc682}header h1{font:400 clamp(32px,4vw,54px)/1.13 Georgia,serif;max-width:1050px;margin:15px 0}.layout{max-width:1320px;margin:auto;display:grid;grid-template-columns:260px minmax(0,1fr);gap:45px;padding:36px 35px}nav{font-size:12px;position:sticky;top:20px;max-height:90vh;overflow:auto;align-self:start}nav a{display:block;padding:5px 0;color:#48616a;text-decoration:none}nav a:hover{text-decoration:underline}article{min-width:0}article h1{display:none}h2{font:400 31px/1.2 Georgia,serif;margin:45px 0 18px;padding-top:15px;border-top:1px solid var(--line);scroll-margin-top:20px}h3{font-size:20px;margin-top:28px}p{margin:0 0 18px}table{border-collapse:collapse;font-size:13px;line-height:1.5;width:100%;margin:22px 0 30px}th{text-align:left;background:#183641;color:#f5ecd4}th,td{padding:11px 12px;vertical-align:top;border-bottom:1px solid var(--line)}tbody tr:nth-child(even){background:#eae7d8}td:first-child{font-weight:600}code{font-size:.84em;background:#e5e0ce;padding:2px 4px;border-radius:3px;overflow-wrap:anywhere}li{margin:9px 0}footer{max-width:1200px;margin:35px auto;padding:25px;border-top:1px solid var(--line);font-size:13px;color:#586c72}.table-wrap{overflow:auto} @media(max-width:950px){.layout{display:block;padding:20px}nav{position:static;max-height:none;columns:2;margin-bottom:25px}header{padding:30px 20px}}@media(max-width:600px){nav{columns:1}body{font-size:16px}table{min-width:600px}h2{font-size:27px}}@media print{nav,header .links{display:none}.layout{display:block;padding:0}header{padding:20px;background:white;color:black}.eyebrow{color:black}body{font-size:10pt;background:white}h2{font-size:17pt}table{font-size:8pt}a{color:inherit}thead{display:table-header-group}tr{break-inside:avoid}h2,h3{break-after:avoid}}`;
+for(const [source,stem,title] of pages){
+ const md=fs.readFileSync(path.join(root,'Docs/Art',source),'utf8');
+ const sections=[];
+ let body=marked.parse(md);
+ body=body.replace(/<h2>(.*?)<\/h2>/g,(_,text)=>{const id=text.replace(/<[^>]+>/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');sections.push({text,id});return `<h2 id="${id}">${text}</h2>`});
+ body=body.replace(/<table>/g,'<div class="table-wrap"><table>').replace(/<\/table>/g,'</table></div>');
+ const toc=sections.map(s=>`<a href="#${s.id}">${s.text}</a>`).join('');
+ const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Borrowed Sun ${title}</title><style>${css}</style></head><body><header><div class="eyebrow">Borrowed Sun · Orison · Production reference</div><h1>${title}</h1><p>Original worldbuilding, reusable assets and physical objects for a city shaped by rationed daylight.</p><p class="links"><a href="Borrowed_Sun_Asset_Catalog.html">Search the 4,200 asset briefs</a> · <a href="Borrowed_Sun_Worldbuilding_Asset_Spec.html">World specification</a> · <a href="Borrowed_Sun_Kit_Shortlist.html">Kit shortlist</a></p></header><div class="layout"><nav aria-label="Contents">${toc}</nav><article>${body}</article></div><footer>Revision 13 October 2026. Proposed systems and planned assets are distinguished from implemented game behavior. Source links accompany researched claims.</footer></body></html>`;
+ fs.writeFileSync(path.join(out,stem+'.html'),html);fs.writeFileSync(path.join(out,stem+'.md'),md);
+ console.log(JSON.stringify({file:stem+'.html',sections:sections.length,words:md.split(/\s+/).length}));
+}

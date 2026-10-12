@@ -1,5 +1,7 @@
 # Borrowed Sun approved art direction
 
+The [worldbuilding and asset specification](WORLD_ASSET_SPEC.md) expands this direction into district grammar, a 4,200-entry planned geometry catalog, collection and physical-object contracts, and future destruction tiers. The [kit shortlist](WORLD_KIT_SHORTLIST.md) retains technically and artistically relevant candidates regardless of AI labels, while recording published terms separately. These planning records do not certify finished models or implement the proposed interactions.
+
 The user approved **Brass Sanctuary** as the architectural and material direction, with **Indigo Monsoon** as the reference for rain and night lighting. This decision governs new asset selection and the first Orison city block.
 
 ![Approved daytime reference](References/BrassSanctuary.png)

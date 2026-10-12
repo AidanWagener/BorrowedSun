@@ -43,7 +43,15 @@ Run `Tools/VerifyBackup.ps1 -SnapshotPath <snapshot>`. It checks every manifest 
 
 A monthly restore drill is a separate requirement: create a new empty directory on a spare disk, temporarily set `GIT_LFS_SKIP_SMUDGE=1` for a local `git clone <snapshot>/repository.bundle <new-directory>`, restore `LfsObjects/` into the new clone's `.git/lfs/objects/`, then materialize the current working snapshot from `WorkingTree/` and check its hashes. Restore local environment configuration manually. Note that the working snapshot is authoritative for uncommitted additions/edits/deletions; a naive overlay on a clone can resurrect deleted files, so compare the manifest and remove only individually reviewed extra files. Run preflight, editor/game compile, tests and a playable package. Disable network while checking that the current snapshot works. Historical commits require their own LFS completeness check. Record date, snapshot ID, restore duration and failures. Do not call a checksum pass a restore drill.
 
-## Tests and CI
+## World library planning tools
+
+`Tools/Art/Build-WorldCatalog.py` generates 4,200 planned geometry briefs, `Docs/Registers/world-asset-catalog.json`, the family index and the adjacent offline catalog. It generates planning data, not 3D models. Definition IDs derive from family, form and construction keys. The tool refuses to regenerate a register containing mapped or accepted production progress so that qualification work cannot be silently erased. Reconcile progress and ID migrations before changing an active register.
+
+`Tools/Art/Render-WorldSpec.mjs <node_modules-directory>` renders the two Markdown documents in `Docs/Art` using the existing `marked` module. It copies readable Markdown and standalone HTML deliverables beside the workspace. Use the configured Node runtime; no hosted service or network is required. The offline catalog reads embedded data and exports filtered JSON locally.
+
+The Second Dawn source generator is `Tools/Art/Build-LanternWorkshop.py`, run with the pinned Blender executable in background mode from the repository root. It creates 11 meshes, the editable source, assembly recipe and hashes. After compiling the editor, `Tools/Author-MarketArt.ps1 -WorkshopOnly -Force -Execute` imports the 16 workshop packages while retaining the existing market content. A full market import now includes the workshop. Source-only checks do not replace a rendered and packaged review.
+
+## Gameplay and tooling tests
 
 Player packages use `Tools/Build.ps1 -Mode Package -Configuration Shipping -Execute`; the Editor target remains Development. `Tools/Demo.ps1 -UserDirectory <isolated-root>` passes Unreal's player-data override and derives the correct validation report path for that root. This keeps QA preferences and checkpoints separate from normal play. For pacing measurement, use `-Mode Validate -MeasureFrames`; it requires the 60 FPS target and both routes, and rejects combining measurement with `-Screenshots`. The generated JSON includes sample counts and percentiles; it does not measure GPU work separately.
 

@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-13",
+  "tool": "Headless Edge / Playwright on local HTML",
+  "checks": [
+    {
+      "name": "catalog has 4200 records",
+      "passed": true
+    },
+    {
+      "name": "W0 has 160 records",
+      "passed": true
+    },
+    {
+      "name": "search yields entries",
+      "passed": true
+    },
+    {
+      "name": "detail dialog opens",
+      "passed": true
+    },
+    {
+      "name": "detail has stable ID",
+      "passed": true
+    },
+    {
+      "name": "domain has 480 records",
+      "passed": true
+    },
+    {
+      "name": "filtered JSON matches domain",
+      "passed": true
+    },
+    {
+      "name": "empty state visible",
+      "passed": true
+    },
+    {
+      "name": "pagination changes",
+      "passed": true
+    },
+    {
+      "name": "mobile catalog has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Borrowed_Sun_Worldbuilding_Asset_Spec anchors resolve",
+      "passed": true
+    },
+    {
+      "name": "Borrowed_Sun_Worldbuilding_Asset_Spec tables present",
+      "passed": true
+    },
+    {
+      "name": "Borrowed_Sun_Worldbuilding_Asset_Spec no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "Borrowed_Sun_Kit_Shortlist anchors resolve",
+      "passed": true
+    },
+    {
+      "name": "Borrowed_Sun_Kit_Shortlist tables present",
+      "passed": true
+    },
+    {
+      "name": "Borrowed_Sun_Kit_Shortlist no horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "no browser script errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

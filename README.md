@@ -4,6 +4,8 @@ A local-first Unreal project for a solo city-to-orbit adventure. The first demo,
 
 ## Start here
 
+The new [worldbuilding and asset specification](Docs/Art/WORLD_ASSET_SPEC.md) defines Orison's construction language, 4,200 planned geometry briefs, physical-object contracts and staged destruction. Use the [kit shortlist](Docs/Art/WORLD_KIT_SHORTLIST.md), [complete family index](Docs/Art/WORLD_ASSET_FAMILIES.md) and [catalog register](Docs/Registers/world-asset-catalog.json) for production planning. The adjacent `Borrowed_Sun_Asset_Catalog.html` is a searchable offline review artifact. Planned entries are not completed models.
+
 1. Read [the current market build validation](Docs/Operations/DEMO_V04_VALIDATION.md) and [approved art direction](Docs/Art/ART_DIRECTION.md). Earlier [v0.3](Docs/Operations/DEMO_V03_VALIDATION.md), [v0.2](Docs/Operations/DEMO_V02_VALIDATION.md), [first playable](Docs/Operations/DEMO_VALIDATION.md), and [foundation](Docs/Operations/VALIDATION.md) records remain historical evidence.
 2. Read [local operations](Tools/README.md). The installed engine is pinned in [engine-lock.json](Config/engine-lock.json). Personal engine paths belong in ignored `Tools/Environment.local.json`.
 3. Run the doctor and preflight from this directory:
@@ -52,7 +54,7 @@ Compile first, then use `Tools/Demo.ps1 -Mode Launch -Execute` to launch the cur
 
 The loop is: take the sunseed, board Kestrel, fly to the sky relay, choose clinic or evacuation power, return, disembark and install it. **E** interacts, **G** toggles optional flight assist, **R** recovers a safe position, **F5/F9** save/load, and **ESC** opens the menu. A new expedition requires an explicit menu confirmation.
 
-The current player build is **v0.3.0 Shipping**, in the adjacent `BorrowedSunCity` folder. `Play_Borrowed_Sun.cmd` starts it with persistent player data in `../BorrowedSunPlayer/`, outside the packaged build folder. **O** from the menu opens saved mouse sensitivity, vertical-look inversion and audio volume. Earlier v0.1 Development and v0.2 Shipping packages remain beside it for historical comparison.
+The current verified player build is **v0.4.0 Shipping**, in the adjacent `BorrowedSunMarket` folder. `Play_Borrowed_Sun.cmd` starts it with persistent player data in `../BorrowedSunPlayer/`, outside the packaged build folder. **O** from the menu opens saved mouse sensitivity, vertical-look inversion and audio volume. Earlier packages remain beside it for historical comparison. The newer Second Dawn assembly is source work and has not replaced the verified package.
 
 The first Orison block implements the approved Brass Sanctuary direction: warm masonry, indigo awnings, copper roofs, market props and the Lantern Keeper silhouette. [Asset provenance and authoring instructions](Docs/Art/ART_DIRECTION.md) distinguish imported scans from original meshes. Night and rain are future Indigo Monsoon studies. Screenshot validation also captures four clean city review views after both mission routes.
 
