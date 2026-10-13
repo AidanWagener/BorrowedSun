@@ -4,6 +4,22 @@
 
 Read [canon reconciliation](CANON_RECONCILIATION.md) and the [initial research ledger](RESEARCH_FOUNDATIONS.md) next. The unchanged [original game specification](Sources/Original_Game_Specification_2026-10-12.md) is preserved as a historical design source, not presented as newly written planet lore.
 
+## Current reading edition
+
+Open the [living planet reader](Living_Planet_Reader.html) for the current seven-chapter authoring edition. It combines working canon with explicitly labeled research and lore drafts. [Authoring counts](AUTHORING_COUNTS.json) report source words, including research and review notes; they do not report completed pages or certify quality. The historical specification is excluded from that count.
+
+| Current material | State |
+|---|---|
+| [00 — Canon and orientation](00_CANON_AND_ORIENTATION.md) | Working physical/social frame, narrative commitments and continuity rules |
+| [01 — Physical foundation review](Drafts/PHYSICAL_FOUNDATION_REVIEW.md) | Checked arithmetic and source research; formation, climate and long-term dynamics remain open |
+| [03 — Ecology foundation](Drafts/ECOLOGY_FOUNDATION.md) | 24 species dossiers, food webs, disruptions and conditional regional ranges; further regional taxa required |
+| [04 — History](04_HISTORY_OF_NACRE.md) | Connected settlement chronology through 742 AL; detailed archival and regional histories still expanding |
+| [05 — Societies](Drafts/SOCIETIES_FOUNDATION.md) | Eight overlapping traditions, institutions, twelve human-scale stories and archival voices |
+| [05b — Everyday pleasures](Drafts/PLEASURES_AND_EVERYDAY_LIFE.md) | Games, music, fashion, cuisine, relationships and eight pleasant encounters; specific proposals awaiting integration |
+| [07 — Regional atlas](07_REGIONAL_ATLAS.md) | 24 regional foundations, twelve city anchors and geographic concept; detailed relief and city maps pending |
+
+The [concept map](Atlas/nacre_geographic_concept.svg) and [route arithmetic](Atlas/ATLAS_ARITHMETIC.md) are generated from [coordinate data](Atlas/nacre_atlas.json). Coastline separation, city containment, descending river-trunk elevations, unique IDs and route endpoints are checked. These checks do not validate terrain, drainage catchments, climate, transport feasibility or a playable world. See [authoring handoff and next work](AUTHORING_HANDOFF_2026-10-13.md).
+
 The world must make exploration compelling at street, regional and planetary scales. Its geography, societies, wildlife and histories must explain one another. A place should offer more than a view: something to understand, a person or creature with an independent purpose, an opportunity to act, or a reason to return when circumstances change. Distance must communicate a large inhabited world while journeys offer decisions and discoveries.
 
 ## The requested outcome
@@ -20,7 +36,7 @@ The planet-scale setting includes multiple distinct cities, climatic regions and
 4. Implemented prototype behavior is evidence of the build, not automatic truth about every place on the future planet.
 5. New fiction becomes the working canon through explicit decisions recorded with their dependencies. Research supports plausibility; it does not establish that a fictional civilization or planet exists.
 
-The original specification locates Orison on a tidally locked moon. The initial reconciliation retains an inhabited world at planetary scale and investigates its host-planet relationship before fixing astronomical parameters. The user used "planet" to describe the full explorable world; that does not by itself require silently deleting the earlier moon setting. The star, parent body, radius, gravity, calendars and climate remain open until their combined model is checked.
+The original specification locates Orison on a tidally locked moon. Working edition 0.1 now names that world Nacre, its giant parent Rauth and its star Ilex. The checked reference model adopts a 5,900 km radius, 0.88 Earth gravity, a 136.755-hour natural solar cycle and a 325.191-Earth-day orbital year. A 24-hour civil turn supports human schedules. Detailed calendar intercalation, climate and long-term orbital evolution remain open; the physical review states the assumptions and limits. The user's word "planet" describes the full explorable world without requiring deletion of the earlier moon setting.
 
 ## Volume architecture
 

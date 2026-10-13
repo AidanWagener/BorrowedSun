@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+<title id="title">Nacre geographic concept, edition 0.1</title>
+<desc id="desc">Equirectangular concept map of four continents, two island arcs and twelve city anchors. Coastlines are schematic; no terrain or biome boundaries are surveyed.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#e8e2d4;font-size:15px}.small{font-size:12px}.land{fill:#b8aa86;stroke:#d4c9a9;stroke-width:1}.river{fill:none;stroke:#315f73;stroke-width:2}.grid{stroke:#63838d;stroke-width:.7;opacity:.36}</style>
+<rect width="1200" height="840" fill="#122e38"/>
+<text x="60" y="32" style="font-size:24px">NACRE · GEOGRAPHIC CONCEPT 0.1</text>
+<text x="60" y="54" class="small">742 AL · Radius 5,900 km · Equirectangular · Coastlines and regional placement remain under development</text>
+<line class="grid" x1="60" y1="70" x2="60" y2="610"/>
+<text x="60" y="633" text-anchor="middle" class="small">-180°</text>
+<line class="grid" x1="150" y1="70" x2="150" y2="610"/>
+<text x="150" y="633" text-anchor="middle" class="small">-150°</text>
+<line class="grid" x1="240" y1="70" x2="240" y2="610"/>
+<text x="240" y="633" text-anchor="middle" class="small">-120°</text>
+<line class="grid" x1="330" y1="70" x2="330" y2="610"/>
+<text x="330" y="633" text-anchor="middle" class="small">-90°</text>
+<line class="grid" x1="420" y1="70" x2="420" y2="610"/>
+<text x="420" y="633" text-anchor="middle" class="small">-60°</text>
+<line class="grid" x1="510" y1="70" x2="510" y2="610"/>
+<text x="510" y="633" text-anchor="middle" class="small">-30°</text>
+<line class="grid" x1="600" y1="70" x2="600" y2="610"/>
+<text x="600" y="633" text-anchor="middle" class="small">0°</text>
+<line class="grid" x1="690" y1="70" x2="690" y2="610"/>
+<text x="690" y="633" text-anchor="middle" class="small">30°</text>
+<line class="grid" x1="780" y1="70" x2="780" y2="610"/>
+<text x="780" y="633" text-anchor="middle" class="small">60°</text>
+<line class="grid" x1="870" y1="70" x2="870" y2="610"/>
+<text x="870" y="633" text-anchor="middle" class="small">90°</text>
+<line class="grid" x1="960" y1="70" x2="960" y2="610"/>
+<text x="960" y="633" text-anchor="middle" class="small">120°</text>
+<line class="grid" x1="1050" y1="70" x2="1050" y2="610"/>
+<text x="1050" y="633" text-anchor="middle" class="small">150°</text>
+<line class="grid" x1="1140" y1="70" x2="1140" y2="610"/>
+<text x="1140" y="633" text-anchor="middle" class="small">180°</text>
+<line class="grid" x1="60" y1="610" x2="1140" y2="610"/>
+<text x="49" y="614" text-anchor="end" class="small">-90°</text>
+<line class="grid" x1="60" y1="520" x2="1140" y2="520"/>
+<text x="49" y="524" text-anchor="end" class="small">-60°</text>
+<line class="grid" x1="60" y1="430" x2="1140" y2="430"/>
+<text x="49" y="434" text-anchor="end" class="small">-30°</text>
+<line class="grid" x1="60" y1="340" x2="1140" y2="340"/>
+<text x="49" y="344" text-anchor="end" class="small">0°</text>
+<line class="grid" x1="60" y1="250" x2="1140" y2="250"/>
+<text x="49" y="254" text-anchor="end" class="small">30°</text>
+<line class="grid" x1="60" y1="160" x2="1140" y2="160"/>
+<text x="49" y="164" text-anchor="end" class="small">60°</text>
+<line class="grid" x1="60" y1="70" x2="1140" y2="70"/>
+<text x="49" y="74" text-anchor="end" class="small">90°</text>
+<path class="land" d="M336.0,178.0 L408.0,145.0 L489.0,136.0 L567.0,160.0 L624.0,169.0 L681.0,205.0 L702.0,256.0 L708.0,316.0 L684.0,367.0 L651.0,406.0 L630.0,460.0 L573.0,481.0 L513.0,454.0 L462.0,406.0 L420.0,343.0 L366.0,280.0 L336.0,178.0 Z"/>
+<path class="land" d="M846.0,196.0 L915.0,160.0 L996.0,145.0 L1056.0,184.0 L1110.0,256.0 L1104.0,337.0 L1077.0,391.0 L1074.0,445.0 L1008.0,505.0 L933.0,517.0 L879.0,469.0 L855.0,400.0 L825.0,355.0 L855.0,298.0 L846.0,196.0 Z"/>
+<path class="land" d="M114.0,148.0 L168.0,112.0 L243.0,91.0 L336.0,112.0 L339.0,139.0 L297.0,172.0 L240.0,187.0 L195.0,190.0 L114.0,148.0 Z"/>
+<path class="land" d="M150.0,460.0 L222.0,439.0 L288.0,448.0 L348.0,469.0 L411.0,514.0 L366.0,562.0 L288.0,574.0 L201.0,535.0 L159.0,493.0 L150.0,460.0 Z"/>
+<path class="land" d="M756.0,292.0 L774.0,274.0 L789.0,292.0 L789.0,316.0 L777.0,331.0 L756.0,319.0 L756.0,292.0 Z"/>
+<path class="land" d="M753.0,349.0 L774.0,340.0 L789.0,364.0 L774.0,388.0 L756.0,370.0 L753.0,349.0 Z"/>
+<path class="land" d="M753.0,244.0 L768.0,223.0 L783.0,235.0 L777.0,259.0 L759.0,265.0 L753.0,244.0 Z"/>
+<path class="land" d="M765.0,418.0 L789.0,412.0 L798.0,436.0 L786.0,457.0 L771.0,448.0 L765.0,418.0 Z"/>
+<path class="land" d="M72.0,295.0 L84.0,277.0 L102.0,292.0 L96.0,319.0 L75.0,319.0 L72.0,295.0 Z"/>
+<path class="land" d="M93.0,343.0 L111.0,340.0 L123.0,364.0 L108.0,379.0 L93.0,361.0 L93.0,343.0 Z"/>
+<path class="land" d="M1119.0,382.0 L1137.0,388.0 L1137.0,409.0 L1122.0,415.0 L1110.0,400.0 L1119.0,382.0 Z"/>
+<path class="river" d="M636.0,271.0 L657.0,295.0 L675.0,313.0 L687.0,328.0 L696.0,337.0"/>
+<path class="river" d="M657.0,265.0 L672.0,277.0 L681.0,286.0 L690.0,292.0"/>
+<path class="river" d="M618.0,262.0 L591.0,271.0 L567.0,280.0 L549.0,286.0"/>
+<path class="river" d="M981.0,211.0 L978.0,235.0 L972.0,256.0 L1017.0,262.0 L1065.0,271.0 L1107.0,280.0"/>
+<path class="river" d="M975.0,307.0 L1023.0,319.0 L1071.0,325.0 L1098.0,328.0 L1104.0,331.0"/>
+<path class="river" d="M1008.0,397.0 L1035.0,415.0 L1053.0,424.0 L1074.0,430.0 L1075.5,433.0"/>
+<text x="522" y="220" text-anchor="middle" style="fill:#102f37;font-size:16px">KESH</text>
+<text x="969" y="196" text-anchor="middle" style="fill:#102f37;font-size:16px">MORROW</text>
+<text x="231" y="124" text-anchor="middle" style="fill:#102f37;font-size:16px">PALE REACH</text>
+<text x="270" y="526" text-anchor="middle" style="fill:#102f37;font-size:16px">SERE</text>
+<text x="768" y="400" text-anchor="middle" style="fill:#e8e2d4;font-size:16px">ASTER</text>
+<text x="102" y="262" text-anchor="middle" style="fill:#e8e2d4;font-size:16px">NERAL</text>
+<path d="M595,340H605 M600,335V345" stroke="#102f37"/>
+<text x="591" y="359" text-anchor="end" class="small" style="fill:#102f37">Reference sub-Rauth point</text>
+<circle cx="684" cy="289" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="684" y="293" text-anchor="middle" class="small">1</text>
+<text x="60" y="680">01  Orison · 17°, 28°</text>
+<circle cx="687" cy="328" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="687" y="332" text-anchor="middle" class="small">2</text>
+<text x="60" y="708">02  Marroway · 4°, 29°</text>
+<circle cx="549" cy="286" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="549" y="290" text-anchor="middle" class="small">3</text>
+<text x="60" y="736">03  Hesh · 18°, -17°</text>
+<circle cx="381" cy="232" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="381" y="236" text-anchor="middle" class="small">4</text>
+<text x="60" y="764">04  Serein · 36°, -73°</text>
+<circle cx="972" cy="256" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="972" y="260" text-anchor="middle" class="small">5</text>
+<text x="425" y="680">05  Talweir · 28°, 124°</text>
+<circle cx="930" cy="376" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="930" y="380" text-anchor="middle" class="small">6</text>
+<text x="425" y="708">06  Aven · -12°, 110°</text>
+<circle cx="1098" cy="328" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="1098" y="332" text-anchor="middle" class="small">7</text>
+<text x="425" y="736">07  Dhal · 4°, 166°</text>
+<circle cx="1074" cy="430" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="1074" y="434" text-anchor="middle" class="small">8</text>
+<text x="425" y="764">08  Merrow · -30°, 158°</text>
+<circle cx="306" cy="487" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="306" y="491" text-anchor="middle" class="small">9</text>
+<text x="790" y="680">09  Tern · -49°, -98°</text>
+<circle cx="219" cy="454" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="219" y="458" text-anchor="middle" class="small">10</text>
+<text x="790" y="708">10  Velis · -38°, -127°</text>
+<circle cx="243" cy="157" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="243" y="161" text-anchor="middle" class="small">11</text>
+<text x="790" y="736">11  Brin · 61°, -119°</text>
+<circle cx="774" cy="307" r="10" fill="#143541" stroke="#efe4c9"/>
+<text x="774" y="311" text-anchor="middle" class="small">12</text>
+<text x="790" y="764">12  Sola · 11°, 58°</text>
+<text x="60" y="807" class="small">Ocean separation, city containment and downhill trunk elevations checked. This map is not a climate model or a playable planet.</text>
+</svg>

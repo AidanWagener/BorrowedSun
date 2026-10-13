@@ -80,6 +80,13 @@
       "reason": "Explicit user redirection on 2026-10-13 and newly created active goal. Requires deep lore, coherent mapped regions/cities, ecology, cultures, weather, exploration, people, events and asset production requirements. The Development mechanics handoff passed 20 smoke tests and 57 rendered checks.",
       "revisit": "After the complete bible, atlas and lore have passed coherence review; earlier bounded-release proposals do not limit this world-authoring scope",
       "evidence": ["Docs/World/README.md", "Docs/World/CANON_RECONCILIATION.md", "Docs/Operations/CITY_OBJECTS_2026-10-13.md"]
+    },
+    {
+      "id": "ADR-014",
+      "decision": "Adopt Nacre/Rauth/Ilex and edition 0.1 as the working planet frame, with explicit physical assumptions and draft boundaries",
+      "reason": "Authorial decisions under the user's full-world goal preserve the moon setting, real day/night and Orison while establishing a 5900 km world, a checked orbital candidate, 742 AL chronology and geographic concept. These are working canon decisions, not additional claimed user approvals or a constructed planet.",
+      "revisit": "Coupled physical/climate review, detailed regional authoring and full-bible coherence review; preserve stable IDs and record changes",
+      "evidence": ["Docs/World/00_CANON_AND_ORIENTATION.md", "Docs/World/Drafts/PHYSICAL_FOUNDATION_REVIEW.md", "Docs/World/04_HISTORY_OF_NACRE.md", "Docs/World/07_REGIONAL_ATLAS.md", "Docs/World/AUTHORING_HANDOFF_2026-10-13.md"]
     }
   ]
 }

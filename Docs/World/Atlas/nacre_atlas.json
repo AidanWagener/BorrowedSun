@@ -1,0 +1,1135 @@
+{
+  "edition": "0.1",
+  "status": "working geographic concept; not surveyed terrain or playable content",
+  "radius_km": 5900,
+  "coordinate_system": "body-fixed spherical latitude; east-positive longitude; zero longitude at reference sub-Rauth point",
+  "present_year_AL": 742,
+  "projection": "equirectangular; area and distance distort away from equator",
+  "regions": [
+    {
+      "id": "REG-001",
+      "name": "Saffron Escarpment",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": 17,
+        "lon_deg": 28
+      },
+      "city": "Orison",
+      "character": "Seasonally wet crater coast",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-002",
+      "name": "Nine-River Lowlands",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": 4,
+        "lon_deg": 29
+      },
+      "city": "Marroway",
+      "character": "Managed floodplains and native wetlands",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-003",
+      "name": "Glassback Range",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": 15,
+        "lon_deg": 9
+      },
+      "city": null,
+      "character": "Uplifted watershed and cloud slopes",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-004",
+      "name": "Red Ledger Basin",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": 18,
+        "lon_deg": -17
+      },
+      "city": "Hesh",
+      "character": "Dry interior basin with mountain-fed water",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-005",
+      "name": "Foldwood Marches",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": -13,
+        "lon_deg": -29
+      },
+      "city": null,
+      "character": "Seasonal folding woodland and grazing mosaics",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-006",
+      "name": "Serein Fog Coast",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": 36,
+        "lon_deg": -73
+      },
+      "city": "Serein",
+      "character": "Cool coastal fog and terraces",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-007",
+      "name": "Cairn Steppe",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": 45,
+        "lon_deg": -28
+      },
+      "city": null,
+      "character": "Cool continental grasslike cover and migratory life",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-008",
+      "name": "North Gate Sounds",
+      "landmass": "Kesh",
+      "anchor": {
+        "lat_deg": 60,
+        "lon_deg": -30
+      },
+      "city": null,
+      "character": "Indented seasonal harbors and sheltered channels",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-009",
+      "name": "Talweir Lake Country",
+      "landmass": "Morrow",
+      "anchor": {
+        "lat_deg": 28,
+        "lon_deg": 124
+      },
+      "city": "Talweir",
+      "character": "Connected freshwater lakes and wooded catchments",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-010",
+      "name": "Aven Uplands",
+      "landmass": "Morrow",
+      "anchor": {
+        "lat_deg": -12,
+        "lon_deg": 110
+      },
+      "city": "Aven",
+      "character": "High basins, managed agriculture and passes",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-011",
+      "name": "Green Vault",
+      "landmass": "Morrow",
+      "anchor": {
+        "lat_deg": 3,
+        "lon_deg": 143
+      },
+      "city": "Dhal",
+      "character": "Wet lowland canopy and river corridors",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-012",
+      "name": "Merrow Estuaries",
+      "landmass": "Morrow",
+      "anchor": {
+        "lat_deg": -30,
+        "lon_deg": 158
+      },
+      "city": "Merrow",
+      "character": "Tidal nursery mosaics and cultivated margins",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-013",
+      "name": "White Reed Savannas",
+      "landmass": "Morrow",
+      "anchor": {
+        "lat_deg": -37,
+        "lon_deg": 111
+      },
+      "city": null,
+      "character": "Seasonal open vegetation and flood-fed corridors",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-014",
+      "name": "Morrow Crown",
+      "landmass": "Morrow",
+      "anchor": {
+        "lat_deg": 55,
+        "lon_deg": 125
+      },
+      "city": null,
+      "character": "Cool uplands and snow-fed river origins",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-015",
+      "name": "Tern Storm Coast",
+      "landmass": "Sere",
+      "anchor": {
+        "lat_deg": -49,
+        "lon_deg": -98
+      },
+      "city": "Tern",
+      "character": "Exposed maritime coast and protected industrial inlets",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-016",
+      "name": "Velis Cold Gardens",
+      "landmass": "Sere",
+      "anchor": {
+        "lat_deg": -38,
+        "lon_deg": -127
+      },
+      "city": "Velis",
+      "character": "Cool estuary agriculture and managed shelters",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-017",
+      "name": "Ember Fault",
+      "landmass": "Sere",
+      "anchor": {
+        "lat_deg": -63,
+        "lon_deg": -112
+      },
+      "city": null,
+      "character": "Rift valleys, geothermal systems and cold uplands",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-018",
+      "name": "Brin Long Shore",
+      "landmass": "Pale Reach",
+      "anchor": {
+        "lat_deg": 61,
+        "lon_deg": -119
+      },
+      "city": "Brin",
+      "character": "Seasonal coastal access and research settlements",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-019",
+      "name": "Pale Interior",
+      "landmass": "Pale Reach",
+      "anchor": {
+        "lat_deg": 72,
+        "lon_deg": -119
+      },
+      "city": null,
+      "character": "Sparse cold uplands and ice margins",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-020",
+      "name": "Split Cape",
+      "landmass": "Pale Reach",
+      "anchor": {
+        "lat_deg": 55,
+        "lon_deg": -144
+      },
+      "city": null,
+      "character": "Rocky islands, seabird analogues and tidal passages",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-021",
+      "name": "Aster Chain",
+      "landmass": "Aster",
+      "anchor": {
+        "lat_deg": 11,
+        "lon_deg": 58
+      },
+      "city": "Sola",
+      "character": "Island arc with wet slopes and dry lee harbors",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-022",
+      "name": "Neral Arc",
+      "landmass": "Neral",
+      "anchor": {
+        "lat_deg": 10,
+        "lon_deg": -171
+      },
+      "city": null,
+      "character": "Remote volcanic and biological island shelves",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-023",
+      "name": "Pelagic Roads",
+      "landmass": "Ocean",
+      "anchor": {
+        "lat_deg": -8,
+        "lon_deg": -115
+      },
+      "city": null,
+      "character": "Open-ocean ecosystems and mobile human routes",
+      "boundary_status": "regional focus, not surveyed boundary"
+    },
+    {
+      "id": "REG-024",
+      "name": "Southern Blue",
+      "landmass": "Ocean",
+      "anchor": {
+        "lat_deg": -82,
+        "lon_deg": 20
+      },
+      "city": null,
+      "character": "Seasonal ice, deep water and sparse stations",
+      "boundary_status": "regional focus, not surveyed boundary"
+    }
+  ],
+  "cities": [
+    {
+      "id": "CITY-001",
+      "name": "Orison",
+      "region_id": "REG-001",
+      "lat_deg": 17,
+      "lon_deg": 28,
+      "population_core_estimate": 420000,
+      "role": "crater harbor",
+      "landmass": "Kesh"
+    },
+    {
+      "id": "CITY-002",
+      "name": "Marroway",
+      "region_id": "REG-002",
+      "lat_deg": 4,
+      "lon_deg": 29,
+      "population_core_estimate": 670000,
+      "role": "river confluence",
+      "landmass": "Kesh"
+    },
+    {
+      "id": "CITY-003",
+      "name": "Hesh",
+      "region_id": "REG-004",
+      "lat_deg": 18,
+      "lon_deg": -17,
+      "population_core_estimate": 310000,
+      "role": "closed basin transfer city",
+      "landmass": "Kesh"
+    },
+    {
+      "id": "CITY-004",
+      "name": "Serein",
+      "region_id": "REG-006",
+      "lat_deg": 36,
+      "lon_deg": -73,
+      "population_core_estimate": 530000,
+      "role": "fog coast port",
+      "landmass": "Kesh"
+    },
+    {
+      "id": "CITY-005",
+      "name": "Talweir",
+      "region_id": "REG-009",
+      "lat_deg": 28,
+      "lon_deg": 124,
+      "population_core_estimate": 780000,
+      "role": "lake strait city",
+      "landmass": "Morrow"
+    },
+    {
+      "id": "CITY-006",
+      "name": "Aven",
+      "region_id": "REG-010",
+      "lat_deg": -12,
+      "lon_deg": 110,
+      "population_core_estimate": 450000,
+      "role": "upland transfer city",
+      "landmass": "Morrow"
+    },
+    {
+      "id": "CITY-007",
+      "name": "Dhal",
+      "region_id": "REG-011",
+      "lat_deg": 4,
+      "lon_deg": 166,
+      "population_core_estimate": 160000,
+      "role": "forest river port",
+      "landmass": "Morrow"
+    },
+    {
+      "id": "CITY-008",
+      "name": "Merrow",
+      "region_id": "REG-012",
+      "lat_deg": -30,
+      "lon_deg": 158,
+      "population_core_estimate": 610000,
+      "role": "estuary city",
+      "landmass": "Morrow"
+    },
+    {
+      "id": "CITY-009",
+      "name": "Tern",
+      "region_id": "REG-015",
+      "lat_deg": -49,
+      "lon_deg": -98,
+      "population_core_estimate": 360000,
+      "role": "repair and refuge port",
+      "landmass": "Sere"
+    },
+    {
+      "id": "CITY-010",
+      "name": "Velis",
+      "region_id": "REG-016",
+      "lat_deg": -38,
+      "lon_deg": -127,
+      "population_core_estimate": 120000,
+      "role": "cool estuary port",
+      "landmass": "Sere"
+    },
+    {
+      "id": "CITY-011",
+      "name": "Brin",
+      "region_id": "REG-018",
+      "lat_deg": 61,
+      "lon_deg": -119,
+      "population_core_estimate": 180000,
+      "role": "seasonal service port",
+      "landmass": "Pale Reach"
+    },
+    {
+      "id": "CITY-012",
+      "name": "Sola",
+      "region_id": "REG-021",
+      "lat_deg": 11,
+      "lon_deg": 58,
+      "population_core_estimate": 290000,
+      "role": "linked island harbors",
+      "landmass": "Aster"
+    }
+  ],
+  "landmasses": [
+    {
+      "name": "Kesh",
+      "coordinates_lon_lat": [
+        [
+          -88,
+          54
+        ],
+        [
+          -64,
+          65
+        ],
+        [
+          -37,
+          68
+        ],
+        [
+          -11,
+          60
+        ],
+        [
+          8,
+          57
+        ],
+        [
+          27,
+          45
+        ],
+        [
+          34,
+          28
+        ],
+        [
+          36,
+          8
+        ],
+        [
+          28,
+          -9
+        ],
+        [
+          17,
+          -22
+        ],
+        [
+          10,
+          -40
+        ],
+        [
+          -9,
+          -47
+        ],
+        [
+          -29,
+          -38
+        ],
+        [
+          -46,
+          -22
+        ],
+        [
+          -60,
+          -1
+        ],
+        [
+          -78,
+          20
+        ],
+        [
+          -88,
+          54
+        ]
+      ]
+    },
+    {
+      "name": "Morrow",
+      "coordinates_lon_lat": [
+        [
+          82,
+          48
+        ],
+        [
+          105,
+          60
+        ],
+        [
+          132,
+          65
+        ],
+        [
+          152,
+          52
+        ],
+        [
+          170,
+          28
+        ],
+        [
+          168,
+          1
+        ],
+        [
+          159,
+          -17
+        ],
+        [
+          158,
+          -35
+        ],
+        [
+          136,
+          -55
+        ],
+        [
+          111,
+          -59
+        ],
+        [
+          93,
+          -43
+        ],
+        [
+          85,
+          -20
+        ],
+        [
+          75,
+          -5
+        ],
+        [
+          85,
+          14
+        ],
+        [
+          82,
+          48
+        ]
+      ]
+    },
+    {
+      "name": "Pale Reach",
+      "coordinates_lon_lat": [
+        [
+          -162,
+          64
+        ],
+        [
+          -144,
+          76
+        ],
+        [
+          -119,
+          83
+        ],
+        [
+          -88,
+          76
+        ],
+        [
+          -87,
+          67
+        ],
+        [
+          -101,
+          56
+        ],
+        [
+          -120,
+          51
+        ],
+        [
+          -135,
+          50
+        ],
+        [
+          -162,
+          64
+        ]
+      ]
+    },
+    {
+      "name": "Sere",
+      "coordinates_lon_lat": [
+        [
+          -150,
+          -40
+        ],
+        [
+          -126,
+          -33
+        ],
+        [
+          -104,
+          -36
+        ],
+        [
+          -84,
+          -43
+        ],
+        [
+          -63,
+          -58
+        ],
+        [
+          -78,
+          -74
+        ],
+        [
+          -104,
+          -78
+        ],
+        [
+          -133,
+          -65
+        ],
+        [
+          -147,
+          -51
+        ],
+        [
+          -150,
+          -40
+        ]
+      ]
+    },
+    {
+      "name": "Aster",
+      "coordinates_lon_lat": [
+        [
+          52,
+          16
+        ],
+        [
+          58,
+          22
+        ],
+        [
+          63,
+          16
+        ],
+        [
+          63,
+          8
+        ],
+        [
+          59,
+          3
+        ],
+        [
+          52,
+          7
+        ],
+        [
+          52,
+          16
+        ]
+      ]
+    },
+    {
+      "name": "Aster",
+      "coordinates_lon_lat": [
+        [
+          51,
+          -3
+        ],
+        [
+          58,
+          0
+        ],
+        [
+          63,
+          -8
+        ],
+        [
+          58,
+          -16
+        ],
+        [
+          52,
+          -10
+        ],
+        [
+          51,
+          -3
+        ]
+      ]
+    },
+    {
+      "name": "Aster",
+      "coordinates_lon_lat": [
+        [
+          51,
+          32
+        ],
+        [
+          56,
+          39
+        ],
+        [
+          61,
+          35
+        ],
+        [
+          59,
+          27
+        ],
+        [
+          53,
+          25
+        ],
+        [
+          51,
+          32
+        ]
+      ]
+    },
+    {
+      "name": "Aster",
+      "coordinates_lon_lat": [
+        [
+          55,
+          -26
+        ],
+        [
+          63,
+          -24
+        ],
+        [
+          66,
+          -32
+        ],
+        [
+          62,
+          -39
+        ],
+        [
+          57,
+          -36
+        ],
+        [
+          55,
+          -26
+        ]
+      ]
+    },
+    {
+      "name": "Neral",
+      "coordinates_lon_lat": [
+        [
+          -176,
+          15
+        ],
+        [
+          -172,
+          21
+        ],
+        [
+          -166,
+          16
+        ],
+        [
+          -168,
+          7
+        ],
+        [
+          -175,
+          7
+        ],
+        [
+          -176,
+          15
+        ]
+      ]
+    },
+    {
+      "name": "Neral",
+      "coordinates_lon_lat": [
+        [
+          -169,
+          -1
+        ],
+        [
+          -163,
+          0
+        ],
+        [
+          -159,
+          -8
+        ],
+        [
+          -164,
+          -13
+        ],
+        [
+          -169,
+          -7
+        ],
+        [
+          -169,
+          -1
+        ]
+      ]
+    },
+    {
+      "name": "Neral",
+      "coordinates_lon_lat": [
+        [
+          173,
+          -14
+        ],
+        [
+          179,
+          -16
+        ],
+        [
+          179,
+          -23
+        ],
+        [
+          174,
+          -25
+        ],
+        [
+          170,
+          -20
+        ],
+        [
+          173,
+          -14
+        ]
+      ]
+    }
+  ],
+  "rivers": [
+    {
+      "id": "RIV-001",
+      "name": "Neris",
+      "points_lon_lat_elevation_m": [
+        [
+          12,
+          23,
+          2800
+        ],
+        [
+          19,
+          15,
+          1050
+        ],
+        [
+          25,
+          9,
+          190
+        ],
+        [
+          29,
+          4,
+          18
+        ],
+        [
+          32,
+          1,
+          0
+        ]
+      ],
+      "status": "conceptual downhill trunk, tributaries and terrain model pending"
+    },
+    {
+      "id": "RIV-002",
+      "name": "Orison feeder",
+      "points_lon_lat_elevation_m": [
+        [
+          19,
+          25,
+          1700
+        ],
+        [
+          24,
+          21,
+          540
+        ],
+        [
+          27,
+          18,
+          95
+        ],
+        [
+          30,
+          16,
+          0
+        ]
+      ],
+      "status": "conceptual downhill trunk, tributaries and terrain model pending"
+    },
+    {
+      "id": "RIV-003",
+      "name": "Hesh inflow",
+      "points_lon_lat_elevation_m": [
+        [
+          6,
+          26,
+          2400
+        ],
+        [
+          -3,
+          23,
+          1200
+        ],
+        [
+          -11,
+          20,
+          410
+        ],
+        [
+          -17,
+          18,
+          270
+        ]
+      ],
+      "status": "conceptual downhill trunk, tributaries and terrain model pending"
+    },
+    {
+      "id": "RIV-004",
+      "name": "Talweir outflow",
+      "points_lon_lat_elevation_m": [
+        [
+          127,
+          43,
+          1900
+        ],
+        [
+          126,
+          35,
+          410
+        ],
+        [
+          124,
+          28,
+          180
+        ],
+        [
+          139,
+          26,
+          90
+        ],
+        [
+          155,
+          23,
+          12
+        ],
+        [
+          169,
+          20,
+          0
+        ]
+      ],
+      "status": "conceptual downhill trunk, tributaries and terrain model pending"
+    },
+    {
+      "id": "RIV-005",
+      "name": "Dhal water",
+      "points_lon_lat_elevation_m": [
+        [
+          125,
+          11,
+          1800
+        ],
+        [
+          141,
+          7,
+          280
+        ],
+        [
+          157,
+          5,
+          35
+        ],
+        [
+          166,
+          4,
+          8
+        ],
+        [
+          168,
+          3,
+          0
+        ]
+      ],
+      "status": "conceptual downhill trunk, tributaries and terrain model pending"
+    },
+    {
+      "id": "RIV-006",
+      "name": "Merrow water",
+      "points_lon_lat_elevation_m": [
+        [
+          136,
+          -19,
+          2100
+        ],
+        [
+          145,
+          -25,
+          410
+        ],
+        [
+          151,
+          -28,
+          80
+        ],
+        [
+          158,
+          -30,
+          10
+        ],
+        [
+          158.5,
+          -31,
+          0
+        ]
+      ],
+      "status": "conceptual downhill trunk, tributaries and terrain model pending"
+    }
+  ],
+  "routes": [
+    {
+      "id": "ROUTE-001",
+      "from": "CITY-001",
+      "to": "CITY-002",
+      "purpose": "Coastal freight and passenger corridor",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-002",
+      "from": "CITY-001",
+      "to": "CITY-003",
+      "purpose": "Glassback passes; ground route requires relief survey",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-003",
+      "from": "CITY-003",
+      "to": "CITY-004",
+      "purpose": "Interior-to-fog-coast transfer corridor",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-004",
+      "from": "CITY-001",
+      "to": "CITY-012",
+      "purpose": "Aster crossing",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-005",
+      "from": "CITY-012",
+      "to": "CITY-006",
+      "purpose": "Morrow gateway",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-006",
+      "from": "CITY-006",
+      "to": "CITY-005",
+      "purpose": "Upland and lake connections",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-007",
+      "from": "CITY-005",
+      "to": "CITY-007",
+      "purpose": "Eastern forest watershed",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-008",
+      "from": "CITY-007",
+      "to": "CITY-008",
+      "purpose": "Morrow coastal route",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-009",
+      "from": "CITY-008",
+      "to": "CITY-009",
+      "purpose": "Southern intercontinental crossing",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-010",
+      "from": "CITY-009",
+      "to": "CITY-010",
+      "purpose": "Sere coast",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-011",
+      "from": "CITY-010",
+      "to": "CITY-004",
+      "purpose": "Western ocean crossing",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-012",
+      "from": "CITY-004",
+      "to": "CITY-011",
+      "purpose": "Northern service route",
+      "status": "connection intent; geodesic is only a lower bound"
+    },
+    {
+      "id": "ROUTE-013",
+      "from": "CITY-001",
+      "to": "CITY-005",
+      "purpose": "Long-range air corridor",
+      "status": "connection intent; geodesic is only a lower bound"
+    }
+  ]
+}

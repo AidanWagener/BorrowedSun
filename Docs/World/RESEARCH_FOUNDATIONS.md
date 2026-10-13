@@ -2,6 +2,8 @@
 
 Checked 13 October 2026. This is an initial research ledger, not the completed research sprint. It records what a source actually establishes, its limits, and the original design question it helps answer. Fictional choices and production hypotheses remain distinct from researched facts.
 
+The subsequent [physical foundation review](Drafts/PHYSICAL_FOUNDATION_REVIEW.md) extends the astronomical investigation with equations, numerical checks and additional primary sources. The [ecology](Drafts/ECOLOGY_FOUNDATION.md) and [societies](Drafts/SOCIETIES_FOUNDATION.md) foundations provide their own bounded research ledgers. The initial abstract-only notes below are historical scope statements, not a claim that the later review stopped there.
+
 ## Astronomy and time
 
 **NASA — tidal locking.** Synchronous rotation describes a body's rotation relative to its orbital partner. It does not mean the body has stopped rotating. Use this to define the moon's coordinate frame and parent-facing hemisphere. It does not establish our fictional orbit, atmosphere or habitability. [Source](https://science.nasa.gov/moon/tidal-locking/)

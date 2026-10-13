@@ -1,0 +1,56 @@
+{
+  "edition": "0.1",
+  "scope": "Current new foundations including research/review notes; not pages, completion or quality certification",
+  "words": 49549,
+  "chapters": [
+    {
+      "id": "orientation",
+      "source": "00_CANON_AND_ORIENTATION.md",
+      "title": "00 · Canon and orientation",
+      "status": "Working canon",
+      "words": 2635
+    },
+    {
+      "id": "physics",
+      "source": "Drafts/PHYSICAL_FOUNDATION_REVIEW.md",
+      "title": "01 · Physical foundation",
+      "status": "Checked design candidate; open physical questions remain",
+      "words": 6296
+    },
+    {
+      "id": "ecology",
+      "source": "Drafts/ECOLOGY_FOUNDATION.md",
+      "title": "03 · Ecology foundation",
+      "status": "Draft; limited food compatibility adopted, regional ranges conditional",
+      "words": 15597
+    },
+    {
+      "id": "history",
+      "source": "04_HISTORY_OF_NACRE.md",
+      "title": "04 · History",
+      "status": "Working canon",
+      "words": 3879
+    },
+    {
+      "id": "societies",
+      "source": "Drafts/SOCIETIES_FOUNDATION.md",
+      "title": "05 · Societies",
+      "status": "Draft reconciled to the historical spine",
+      "words": 10327
+    },
+    {
+      "id": "pleasures",
+      "source": "Drafts/PLEASURES_AND_EVERYDAY_LIFE.md",
+      "title": "05b · Everyday pleasures",
+      "status": "Draft",
+      "words": 6709
+    },
+    {
+      "id": "atlas",
+      "source": "07_REGIONAL_ATLAS.md",
+      "title": "07 · Regional atlas",
+      "status": "Geographic concept; terrain and climate development pending",
+      "words": 4106
+    }
+  ]
+}
