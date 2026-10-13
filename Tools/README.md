@@ -98,6 +98,8 @@ If submission returns no confirmed ID, the state remains `unknown`; never resubm
 
 ## Gameplay and tooling tests
 
+The expected smoke suite now contains 17 tests. Three object-ledger tests cover real isolated SaveGame slots, collection custody, repeated placement/reload, failed writes, stale sessions and malformed checkpoint recovery. Run `Tools/Test.ps1 -Execute -NullRHI` after compiling. They qualify the [persistence foundation](../Docs/Operations/OBJECT_LEDGER_2026-10-13.md), not physical carrying or rendered object behavior.
+
 Player packages use `Tools/Build.ps1 -Mode Package -Configuration Shipping -Execute`; the Editor target remains Development. `Tools/Demo.ps1 -UserDirectory <isolated-root>` passes Unreal's player-data override and derives the correct validation report path for that root. This keeps QA preferences and checkpoints separate from normal play. For pacing measurement, use `-Mode Validate -MeasureFrames`; it requires the 60 FPS target and both routes, and rejects combining measurement with `-Screenshots`. The generated JSON includes sample counts and percentiles; it does not measure GPU work separately.
 
 `Tools/Demo.ps1 -Mode Launch -Execute` starts the compiled demo without imposing a session timeout. `-Mode Validate -Screenshots -Execute` runs both mission routes with rendering, isolated QA saves and strict report validation. For an existing package, supply `-PackageExecutable` and its actual `-ReportDirectory`; see `Get-Help ./Tools/Demo.ps1 -Full`. `-Mode AuthorMap -Execute` runs the editor commandlet; replacing existing owned map/material files also requires `-Force`. These operations never build automatically. Keep asset authoring and builds serial.

@@ -431,13 +431,13 @@
     {
       "id": "BS-027",
       "title": "Prove ten movable objects and persistent collection transfers",
-      "status": "proposed",
+      "status": "in_progress",
       "owner": "creator",
       "dependsOn": ["BS-025"],
       "estimateHours": [24, 80],
       "confidence": "low",
       "acceptance": "Ten props carry, rotate, drop, throw, settle and save without duplication; a collection stub accepts or rejects transfers atomically; sunseed custody remains protected.",
-      "evidence": []
+      "evidence": ["Docs/Operations/OBJECT_LEDGER_2026-10-13.md"]
     },
     {
       "id": "BS-028",

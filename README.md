@@ -58,6 +58,8 @@ The current verified player build is the **Second Dawn workshop Shipping preview
 
 The newer [workshop surface pass](Docs/Operations/WORKSHOP_SURFACES_2026-10-13.md) has a committed source checkpoint and a hash-verified Shipping candidate in `../BorrowedSunWorkshopSurfaces`. It corrects wood grain and adds authored contact polish and dirt. Final packaged visual, route and pacing qualification are pending; the player launchers still select the verified build above.
 
+Source development also includes an [ordinary-prop persistence foundation](Docs/Operations/OBJECT_LEDGER_2026-10-13.md), with 17 smoke tests passing. Saved movement and collection custody have been tested using ten distinct data records and actual disk reloads. Actor reconstruction, pickup, throwing and player-facing collection are still to be implemented; this foundation is not in the delivered player packages.
+
 The first Orison block implements the approved Brass Sanctuary direction: warm masonry, indigo awnings, copper roofs, market props and the Lantern Keeper silhouette. [Asset provenance and authoring instructions](Docs/Art/ART_DIRECTION.md) distinguish imported scans from original meshes. Night and rain are future Indigo Monsoon studies. Screenshot validation also captures six art review views after both mission routes, including the workshop frontage and counter.
 
 Use `Tools/Build.ps1 -Mode Package -Configuration Shipping -Execute` to reproduce a player package. `Tools/Demo.ps1 -Mode Validate -MeasureFrames -UserDirectory <isolated-root> -PackageExecutable <game-exe> -Execute` collects frame intervals at the required 60 FPS cap. Run screenshot validation separately. Frame intervals describe application pacing, not isolated CPU/GPU costs.
