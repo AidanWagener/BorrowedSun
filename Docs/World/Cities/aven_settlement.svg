@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1570" viewBox="0 0 1560 1570" role="img" aria-labelledby="title desc">
+<title id="title">Aven authored settlement plan</title>
+<desc id="desc">Twenty-four named places and district envelopes. Lines represent service dependencies, not surveyed routes. No constructed city is claimed.</desc>
+<rect width="1560" height="1570" fill="#f3efe2"/>
+<style>text{font-family:Arial,sans-serif;fill:#233e47;font-size:16px}.small{font-size:13px}.tiny{font-size:12px}</style>
+<text x="60.00" y="47.00" style="font-size:29px">AVEN / A PLACE TO ARRIVE</text>
+<text x="60.00" y="79.00" >CITY-006 · 742 AL · 450,000 core residents, authored estimate · settlement proposal v1</text>
+<text x="60.00" y="105.00" class="small">North is up · coordinates in kilometers · z is planning sea-level altitude · no surveyed terrain or operating service capacity</text>
+<rect x="115.0" y="145.0" width="925.0" height="800.0" fill="#e3dfce" stroke="#8ca6aa"/>
+<polygon points="772.08,150.85 727.29,261.01 677.41,366.33 617.64,461.42 568.10,570.96 552.94,670.60 524.91,780.65 487.16,910.62 482.84,909.38 520.09,779.35 547.06,669.40 561.90,569.04 612.36,458.58 672.59,363.67 722.71,258.99 767.92,149.15 772.08,150.85" fill="#bdd9df" stroke="#477f90" stroke-width="1.2"/>
+<line x1="165.0" y1="145.0" x2="165.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="165.00" y="968.00" class="tiny" text-anchor="middle">-8</text>
+<line x1="265.0" y1="145.0" x2="265.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="265.00" y="968.00" class="tiny" text-anchor="middle">-6</text>
+<line x1="365.0" y1="145.0" x2="365.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="365.00" y="968.00" class="tiny" text-anchor="middle">-4</text>
+<line x1="465.0" y1="145.0" x2="465.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="465.00" y="968.00" class="tiny" text-anchor="middle">-2</text>
+<line x1="565.0" y1="145.0" x2="565.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="565.00" y="968.00" class="tiny" text-anchor="middle">0</text>
+<line x1="665.0" y1="145.0" x2="665.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="665.00" y="968.00" class="tiny" text-anchor="middle">2</text>
+<line x1="765.0" y1="145.0" x2="765.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="765.00" y="968.00" class="tiny" text-anchor="middle">4</text>
+<line x1="865.0" y1="145.0" x2="865.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="865.00" y="968.00" class="tiny" text-anchor="middle">6</text>
+<line x1="965.0" y1="145.0" x2="965.0" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="965.00" y="968.00" class="tiny" text-anchor="middle">8</text>
+<line x1="115.0" y1="870.0" x2="1040.0" y2="870.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="874.00" class="tiny" text-anchor="end">-6</text>
+<line x1="115.0" y1="770.0" x2="1040.0" y2="770.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="774.00" class="tiny" text-anchor="end">-4</text>
+<line x1="115.0" y1="670.0" x2="1040.0" y2="670.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="674.00" class="tiny" text-anchor="end">-2</text>
+<line x1="115.0" y1="570.0" x2="1040.0" y2="570.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="574.00" class="tiny" text-anchor="end">0</text>
+<line x1="115.0" y1="470.0" x2="1040.0" y2="470.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="474.00" class="tiny" text-anchor="end">2</text>
+<line x1="115.0" y1="370.0" x2="1040.0" y2="370.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="374.00" class="tiny" text-anchor="end">4</text>
+<line x1="115.0" y1="270.0" x2="1040.0" y2="270.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="274.00" class="tiny" text-anchor="end">6</text>
+<line x1="115.0" y1="170.0" x2="1040.0" y2="170.0" stroke="#aebfb8" opacity=".35"/>
+<text x="106.00" y="174.00" class="tiny" text-anchor="end">8</text>
+<text x="115.00" y="135.00" class="tiny">y north / km</text>
+<text x="1040.00" y="988.00" class="tiny" text-anchor="end">x east / km</text>
+<ellipse data-district="AVE-D01" cx="500.0" cy="550.0" rx="85.0" ry="70.0" fill="#bd9355" fill-opacity=".12" stroke="#bd9355" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D02" cx="415.0" cy="425.0" rx="105.0" ry="100.0" fill="#ad7464" fill-opacity=".12" stroke="#ad7464" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D03" cx="720.0" cy="450.0" rx="125.0" ry="85.0" fill="#767da1" fill-opacity=".12" stroke="#767da1" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D04" cx="835.0" cy="615.0" rx="125.0" ry="95.0" fill="#b69a3b" fill-opacity=".12" stroke="#b69a3b" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D05" cx="405.0" cy="700.0" rx="115.0" ry="90.0" fill="#648c66" fill-opacity=".12" stroke="#648c66" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D06" cx="655.0" cy="740.0" rx="125.0" ry="110.0" fill="#527d89" fill-opacity=".12" stroke="#527d89" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D07" cx="830.0" cy="285.0" rx="130.0" ry="110.0" fill="#a78163" fill-opacity=".12" stroke="#a78163" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D08" cx="265.0" cy="560.0" rx="100.0" ry="140.0" fill="#4c917e" fill-opacity=".12" stroke="#4c917e" stroke-opacity=".75"/>
+<ellipse data-district="AVE-D09" cx="590.0" cy="290.0" rx="95.0" ry="105.0" fill="#7c90a1" fill-opacity=".12" stroke="#7c90a1" stroke-opacity=".75"/>
+<line x1="500.0" y1="537.5" x2="415.0" y2="440.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="415.0" y1="440.0" x2="270.0" y2="565.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="270.0" y1="565.0" x2="415.0" y2="680.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="415.0" y1="680.0" x2="500.0" y2="537.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="500.0" y1="537.5" x2="720.0" y2="470.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="720.0" y1="470.0" x2="845.0" y2="620.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="845.0" y1="620.0" x2="655.0" y2="790.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="655.0" y1="790.0" x2="415.0" y2="680.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="415.0" y1="440.0" x2="595.0" y2="305.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="595.0" y1="305.0" x2="805.0" y2="300.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="805.0" y1="300.0" x2="720.0" y2="470.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="805.0" y1="300.0" x2="845.0" y2="620.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="145.0" y1="595.0" x2="270.0" y2="565.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="270.0" y1="565.0" x2="415.0" y2="680.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="415.0" y1="680.0" x2="655.0" y2="790.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="655.0" y1="790.0" x2="845.0" y2="620.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="500.0" y1="537.5" x2="415.0" y2="440.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="415.0" y1="440.0" x2="595.0" y2="305.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="595.0" y1="305.0" x2="805.0" y2="300.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="805.0" y1="300.0" x2="720.0" y2="470.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="720.0" y1="470.0" x2="500.0" y2="537.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="415.0" y1="680.0" x2="500.0" y2="537.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="270.0" y1="565.0" x2="415.0" y2="440.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="145.0" y1="595.0" x2="270.0" y2="565.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="476.20000000000005" y1="494.0" x2="502.70000000000005" y2="493.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="486.20000000000005" y="481.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="502.70" y="498.00" class="small" text-anchor="middle" style="fill:#fff9e9">D01</text>
+<line x1="385.6" y1="345.0" x2="412.1" y2="344.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="395.6" y="332.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="412.10" y="349.00" class="small" text-anchor="middle" style="fill:#fff9e9">D02</text>
+<line x1="685.0" y1="382.0" x2="711.5" y2="381.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="695.0" y="369.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="711.50" y="386.00" class="small" text-anchor="middle" style="fill:#fff9e9">D03</text>
+<line x1="800.0" y1="539.0" x2="826.5" y2="538.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="810.0" y="526.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="826.50" y="543.00" class="small" text-anchor="middle" style="fill:#fff9e9">D04</text>
+<line x1="372.8" y1="628.0" x2="399.3" y2="627.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="382.8" y="615.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="399.30" y="632.00" class="small" text-anchor="middle" style="fill:#fff9e9">D05</text>
+<line x1="620.0" y1="652.0" x2="646.5" y2="651.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="630.0" y="639.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="646.50" y="656.00" class="small" text-anchor="middle" style="fill:#fff9e9">D06</text>
+<line x1="793.6" y1="197.0" x2="820.1" y2="196.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="803.6" y="184.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="820.10" y="201.00" class="small" text-anchor="middle" style="fill:#fff9e9">D07</text>
+<line x1="237.0" y1="448.0" x2="263.5" y2="447.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="247.0" y="435.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="263.50" y="452.00" class="small" text-anchor="middle" style="fill:#fff9e9">D08</text>
+<line x1="563.4000000000001" y1="206.0" x2="589.9000000000001" y2="205.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="573.4000000000001" y="193.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="589.90" y="210.00" class="small" text-anchor="middle" style="fill:#fff9e9">D09</text>
+<circle data-poi="AVE-POI-001" cx="472.5" cy="527.5" r="3.5" fill="#345863"/>
+<line x1="472.5" y1="527.5" x2="496.0" y2="526.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="482.5" y="514.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="496.00" y="531.50" class="small" text-anchor="middle" style="fill:#233e47">01</text>
+<circle data-poi="AVE-POI-002" cx="517.5" cy="537.5" r="3.5" fill="#345863"/>
+<line x1="517.5" y1="537.5" x2="541.0" y2="536.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="527.5" y="524.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="541.00" y="541.50" class="small" text-anchor="middle" style="fill:#233e47">02</text>
+<circle data-poi="AVE-POI-003" cx="564.0" cy="568.0" r="3.5" fill="#345863"/>
+<line x1="564.0" y1="568.0" x2="587.5" y2="567.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="574.0" y="555.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="587.50" y="572.00" class="small" text-anchor="middle" style="fill:#233e47">03</text>
+<circle data-poi="AVE-POI-004" cx="460.0" cy="595.0" r="3.5" fill="#345863"/>
+<line x1="460.0" y1="595.0" x2="483.5" y2="594.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="470.0" y="582.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="483.50" y="599.00" class="small" text-anchor="middle" style="fill:#233e47">04</text>
+<circle data-poi="AVE-POI-005" cx="390.0" cy="470.0" r="3.5" fill="#345863"/>
+<line x1="390.0" y1="470.0" x2="413.5" y2="469.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="400.0" y="457.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="413.50" y="474.00" class="small" text-anchor="middle" style="fill:#233e47">05</text>
+<circle data-poi="AVE-POI-006" cx="445.0" cy="410.0" r="3.5" fill="#345863"/>
+<line x1="445.0" y1="410.0" x2="468.5" y2="409.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="455.0" y="397.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="468.50" y="414.00" class="small" text-anchor="middle" style="fill:#233e47">06</text>
+<circle data-poi="AVE-POI-007" cx="400.0" cy="355.0" r="3.5" fill="#345863"/>
+<line x1="400.0" y1="355.0" x2="376.5" y2="354.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="363.0" y="342.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="376.50" y="359.00" class="small" text-anchor="middle" style="fill:#233e47">07</text>
+<circle data-poi="AVE-POI-008" cx="685.0" cy="455.0" r="3.5" fill="#345863"/>
+<line x1="685.0" y1="455.0" x2="708.5" y2="454.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="695.0" y="442.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="708.50" y="459.00" class="small" text-anchor="middle" style="fill:#233e47">08</text>
+<circle data-poi="AVE-POI-009" cx="760.0" cy="415.0" r="3.5" fill="#345863"/>
+<line x1="760.0" y1="415.0" x2="783.5" y2="414.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="770.0" y="402.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="783.50" y="419.00" class="small" text-anchor="middle" style="fill:#233e47">09</text>
+<circle data-poi="AVE-POI-010" cx="780.0" cy="390.0" r="3.5" fill="#345863"/>
+<line x1="780.0" y1="390.0" x2="793.5" y2="362.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="780.0" y="350.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="793.50" y="367.00" class="small" text-anchor="middle" style="fill:#233e47">10</text>
+<circle data-poi="AVE-POI-011" cx="795.0" cy="600.0" r="3.5" fill="#345863"/>
+<line x1="795.0" y1="600.0" x2="818.5" y2="599.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="805.0" y="587.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="818.50" y="604.00" class="small" text-anchor="middle" style="fill:#233e47">11</text>
+<circle data-poi="AVE-POI-012" cx="875.0" cy="580.0" r="3.5" fill="#345863"/>
+<line x1="875.0" y1="580.0" x2="898.5" y2="579.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="885.0" y="567.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="898.50" y="584.00" class="small" text-anchor="middle" style="fill:#233e47">12</text>
+<circle data-poi="AVE-POI-013" cx="905.0" cy="680.0" r="3.5" fill="#345863"/>
+<line x1="905.0" y1="680.0" x2="928.5" y2="679.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="915.0" y="667.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="928.50" y="684.00" class="small" text-anchor="middle" style="fill:#233e47">13</text>
+<circle data-poi="AVE-POI-014" cx="380.0" cy="710.0" r="3.5" fill="#345863"/>
+<line x1="380.0" y1="710.0" x2="403.5" y2="709.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="390.0" y="697.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="403.50" y="714.00" class="small" text-anchor="middle" style="fill:#233e47">14</text>
+<circle data-poi="AVE-POI-015" cx="465.0" cy="660.0" r="3.5" fill="#345863"/>
+<line x1="465.0" y1="660.0" x2="488.5" y2="659.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="475.0" y="647.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="488.50" y="664.00" class="small" text-anchor="middle" style="fill:#233e47">15</text>
+<circle data-poi="AVE-POI-016" cx="335.0" cy="735.0" r="3.5" fill="#345863"/>
+<line x1="335.0" y1="735.0" x2="358.5" y2="734.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="345.0" y="722.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="358.50" y="739.00" class="small" text-anchor="middle" style="fill:#233e47">16</text>
+<circle data-poi="AVE-POI-017" cx="655.0" cy="815.0" r="3.5" fill="#345863"/>
+<line x1="655.0" y1="815.0" x2="678.5" y2="814.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="665.0" y="802.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="678.50" y="819.00" class="small" text-anchor="middle" style="fill:#233e47">17</text>
+<circle data-poi="AVE-POI-018" cx="539.0" cy="745.0" r="3.5" fill="#345863"/>
+<line x1="539.0" y1="745.0" x2="562.5" y2="744.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="549.0" y="732.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="562.50" y="749.00" class="small" text-anchor="middle" style="fill:#233e47">18</text>
+<circle data-poi="AVE-POI-019" cx="855.0" cy="245.0" r="3.5" fill="#345863"/>
+<line x1="855.0" y1="245.0" x2="878.5" y2="244.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="865.0" y="232.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="878.50" y="249.00" class="small" text-anchor="middle" style="fill:#233e47">19</text>
+<circle data-poi="AVE-POI-020" cx="790.0" cy="315.0" r="3.5" fill="#345863"/>
+<line x1="790.0" y1="315.0" x2="813.5" y2="314.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="800.0" y="302.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="813.50" y="319.00" class="small" text-anchor="middle" style="fill:#233e47">20</text>
+<circle data-poi="AVE-POI-021" cx="910.0" cy="260.0" r="3.5" fill="#345863"/>
+<line x1="910.0" y1="260.0" x2="933.5" y2="259.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="920.0" y="247.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="933.50" y="264.00" class="small" text-anchor="middle" style="fill:#233e47">21</text>
+<circle data-poi="AVE-POI-022" cx="230.0" cy="515.0" r="3.5" fill="#345863"/>
+<line x1="230.0" y1="515.0" x2="253.5" y2="514.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="240.0" y="502.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="253.50" y="519.00" class="small" text-anchor="middle" style="fill:#233e47">22</text>
+<circle data-poi="AVE-POI-023" cx="245.0" cy="650.0" r="3.5" fill="#345863"/>
+<line x1="245.0" y1="650.0" x2="268.5" y2="649.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="255.0" y="637.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="268.50" y="654.00" class="small" text-anchor="middle" style="fill:#233e47">23</text>
+<circle data-poi="AVE-POI-024" cx="580.0" cy="260.0" r="3.5" fill="#345863"/>
+<line x1="580.0" y1="260.0" x2="603.5" y2="259.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="590.0" y="247.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="603.50" y="264.00" class="small" text-anchor="middle" style="fill:#233e47">24</text>
+<text x="1140.00" y="161.00" style="font-size:20px;font-weight:bold">DISTRICTS</text>
+<text x="1140.00" y="198.00" >D01 Crossing Rooms</text>
+<text x="1140.00" y="217.00" class="small">60,000 residents · 1653–1710 m</text>
+<text x="1140.00" y="252.00" >D02 Long Eaves</text>
+<text x="1140.00" y="271.00" class="small">65,000 residents · 1690–1760 m</text>
+<text x="1140.00" y="306.00" >D03 Lensfield</text>
+<text x="1140.00" y="325.00" class="small">60,000 residents · 1660–1760 m</text>
+<text x="1140.00" y="360.00" >D04 Clayfold</text>
+<text x="1140.00" y="379.00" class="small">50,000 residents · 1668–1760 m</text>
+<text x="1140.00" y="414.00" >D05 Soft Roof</text>
+<text x="1140.00" y="433.00" class="small">65,000 residents · 1663–1735 m</text>
+<text x="1140.00" y="468.00" >D06 South Assembly</text>
+<text x="1140.00" y="487.00" class="small">45,000 residents · 1648–1708 m</text>
+<text x="1140.00" y="522.00" >D07 Far Bench</text>
+<text x="1140.00" y="541.00" class="small">35,000 residents · 1720–1835 m</text>
+<text x="1140.00" y="576.00" >D08 West Reach</text>
+<text x="1140.00" y="595.00" class="small">45,000 residents · 1735–1840 m</text>
+<text x="1140.00" y="630.00" >D09 Three Shelters</text>
+<text x="1140.00" y="649.00" class="small">25,000 residents · 1680–1800 m</text>
+<text x="1140.00" y="702.00" style="font-size:18px;font-weight:bold">SURFACE CONTROLS</text>
+<text x="1140.00" y="728.00" class="small">Aven southern spill local reach</text>
+<text x="1140.00" y="852.00" style="font-size:18px;font-weight:bold">READING THE PLAN</text>
+<text x="1140.00" y="880.00" class="small">Cream labels: places. Dark labels: district</text>
+<text x="1140.00" y="898.00" class="small">envelopes. Dotted lines: transport</text>
+<text x="1140.00" y="916.00" class="small">dependencies, not route alignments. Ferry</text>
+<text x="1140.00" y="934.00" class="small">points are dry interchanges; actual berths</text>
+<text x="1140.00" y="952.00" class="small">and access legs remain to be designed.</text>
+<text x="60.00" y="1016.00" style="font-size:22px;font-weight:bold">PLACES WORTH FINDING</text>
+<text x="60.00" y="1055.00" >01  House of the Second Door</text>
+<text x="60.00" y="1102.00" >02  A Table for a Misfit</text>
+<text x="60.00" y="1149.00" >03  Bridge Understudy</text>
+<text x="60.00" y="1196.00" >04  The Last Sheet Shop</text>
+<text x="60.00" y="1243.00" >05  The Easy Phrase Room</text>
+<text x="60.00" y="1290.00" >06  The Forty-Meter Garden</text>
+<text x="60.00" y="1337.00" >07  School of Unfinished Measures</text>
+<text x="60.00" y="1384.00" >08  The Unbought Bench</text>
+<text x="550.00" y="1055.00" >09  The Exhibition of Bad Chairs</text>
+<text x="550.00" y="1102.00" >10  The Roof Without a Giant</text>
+<text x="550.00" y="1149.00" >11  Kiln Interval</text>
+<text x="550.00" y="1196.00" >12  Pattern Cutting Room</text>
+<text x="550.00" y="1243.00" >13  Quiet Delivery</text>
+<text x="550.00" y="1290.00" >14  Apron Theater</text>
+<text x="550.00" y="1337.00" >15  Dinner for Two More</text>
+<text x="550.00" y="1384.00" >16  The Loan Cupboard</text>
+<text x="1040.00" y="1055.00" >17  South Return Station</text>
+<text x="1040.00" y="1102.00" >18  The Low Walk</text>
+<text x="1040.00" y="1149.00" >19  Library of Empty Bowls</text>
+<text x="1040.00" y="1196.00" >20  Weather Lunch</text>
+<text x="1040.00" y="1243.00" >21  Practice Horizon</text>
+<text x="1040.00" y="1290.00" >22  The Folded Roof Household</text>
+<text x="1040.00" y="1337.00" >23  Two Substrates</text>
+<text x="1040.00" y="1384.00" >24  The Third Shelter</text>
+<text x="60.00" y="1456.00" class="small">99 km² gross allocation; district ellipses overlap and are not measured parcel areas.</text>
+<text x="60.00" y="1480.00" class="small">Local surfaces and heights are authored controls. Floods, depths, gradients, structures and service capacity require separate work.</text>
+<text x="60.00" y="1504.00" class="small">Source: aven_settlement.json · spherical AEQD at -12° latitude, 110° longitude</text>
+<text x="60.00" y="1528.00" class="small">This plate locates a proposal; it does not show a built or simulated city.</text>
+</svg>

@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-012",
+  "city_name": "Sola",
+  "region_id": "REG-021",
+  "status": "authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "SOLA.md",
+  "frame": {
+    "origin_lon_deg": 58,
+    "origin_lat_deg": 11,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -12000,
+      -11000,
+      15500,
+      13500
+    ]
+  },
+  "population": 290000,
+  "gross_area_allowance_km2": 90,
+  "base_surface": "water",
+  "surface_polygons": [
+    {
+      "id": "SOL-ISL-01",
+      "name": "Orrel",
+      "kind": "land",
+      "points_xy_m": [
+        [
+          -8500,
+          -1000
+        ],
+        [
+          -7800,
+          -2200
+        ],
+        [
+          -3000,
+          -2700
+        ],
+        [
+          -800,
+          -1800
+        ],
+        [
+          500,
+          800
+        ],
+        [
+          300,
+          3500
+        ],
+        [
+          -2000,
+          7300
+        ],
+        [
+          -5200,
+          8500
+        ],
+        [
+          -8200,
+          6200
+        ],
+        [
+          -9300,
+          2500
+        ],
+        [
+          -8500,
+          -1000
+        ]
+      ],
+      "surface_m": 0,
+      "status": "authored island shore control at nominal sea reference; interior elevations are separate, no surveyed coast or bathymetry"
+    },
+    {
+      "id": "SOL-ISL-02",
+      "name": "Veya",
+      "kind": "land",
+      "points_xy_m": [
+        [
+          2200,
+          1200
+        ],
+        [
+          3500,
+          300
+        ],
+        [
+          7500,
+          400
+        ],
+        [
+          9500,
+          2300
+        ],
+        [
+          9000,
+          5500
+        ],
+        [
+          6800,
+          7100
+        ],
+        [
+          4000,
+          6500
+        ],
+        [
+          2200,
+          4300
+        ],
+        [
+          2200,
+          1200
+        ]
+      ],
+      "surface_m": 0,
+      "status": "authored island shore control at nominal sea reference; interior elevations are separate, no surveyed coast or bathymetry"
+    },
+    {
+      "id": "SOL-ISL-03",
+      "name": "Meren",
+      "kind": "land",
+      "points_xy_m": [
+        [
+          1800,
+          -3000
+        ],
+        [
+          3000,
+          -1700
+        ],
+        [
+          6100,
+          -1200
+        ],
+        [
+          8800,
+          -2800
+        ],
+        [
+          9000,
+          -5600
+        ],
+        [
+          7400,
+          -7600
+        ],
+        [
+          4200,
+          -8000
+        ],
+        [
+          2500,
+          -6500
+        ],
+        [
+          1800,
+          -3000
+        ]
+      ],
+      "surface_m": 0,
+      "status": "authored island shore control at nominal sea reference; interior elevations are separate, no surveyed coast or bathymetry"
+    },
+    {
+      "id": "SOL-ISL-04",
+      "name": "Neri",
+      "kind": "land",
+      "points_xy_m": [
+        [
+          -9400,
+          -5600
+        ],
+        [
+          -8200,
+          -4000
+        ],
+        [
+          -6000,
+          -3500
+        ],
+        [
+          -3900,
+          -4700
+        ],
+        [
+          -3700,
+          -6400
+        ],
+        [
+          -5800,
+          -8300
+        ],
+        [
+          -8300,
+          -7900
+        ],
+        [
+          -9400,
+          -5600
+        ]
+      ],
+      "surface_m": 0,
+      "status": "authored island shore control at nominal sea reference; interior elevations are separate, no surveyed coast or bathymetry"
+    },
+    {
+      "id": "SOL-ISL-05",
+      "name": "Oru",
+      "kind": "land",
+      "points_xy_m": [
+        [
+          8500,
+          9600
+        ],
+        [
+          9500,
+          8100
+        ],
+        [
+          11700,
+          7800
+        ],
+        [
+          13700,
+          9300
+        ],
+        [
+          13200,
+          11300
+        ],
+        [
+          11200,
+          12400
+        ],
+        [
+          9200,
+          11400
+        ],
+        [
+          8500,
+          9600
+        ]
+      ],
+      "surface_m": 0,
+      "status": "authored island shore control at nominal sea reference; interior elevations are separate, no surveyed coast or bathymetry"
+    }
+  ],
+  "source_river_id": null,
+  "channels": [],
+  "districts": [
+    {
+      "id": "SOL-D01",
+      "name": "First Steps",
+      "center_xyz_m": [
+        -5500,
+        1500,
+        30
+      ],
+      "radii_m": [
+        2200,
+        1700
+      ],
+      "altitude_range_m": [
+        8,
+        90
+      ],
+      "population": 48000,
+      "area_allowance_km2": 12,
+      "character": "Arrival rooms, longstanding homes and the first harbor court"
+    },
+    {
+      "id": "SOL-D02",
+      "name": "Upper Courts",
+      "center_xyz_m": [
+        -4000,
+        5100,
+        125
+      ],
+      "radii_m": [
+        2300,
+        1800
+      ],
+      "altitude_range_m": [
+        45,
+        240
+      ],
+      "population": 43000,
+      "area_allowance_km2": 13,
+      "character": "Ridged neighborhoods, language rooms and shaded upper lanes"
+    },
+    {
+      "id": "SOL-D03",
+      "name": "Three Bays",
+      "center_xyz_m": [
+        -3600,
+        -800,
+        24
+      ],
+      "radii_m": [
+        2700,
+        1250
+      ],
+      "altitude_range_m": [
+        6,
+        90
+      ],
+      "population": 35000,
+      "area_allowance_km2": 10,
+      "character": "The southern historic landing, collective stores and departure work"
+    },
+    {
+      "id": "SOL-D04",
+      "name": "Patch Reach",
+      "center_xyz_m": [
+        5500,
+        4400,
+        32
+      ],
+      "radii_m": [
+        2500,
+        1700
+      ],
+      "altitude_range_m": [
+        8,
+        100
+      ],
+      "population": 34000,
+      "area_allowance_km2": 12,
+      "character": "Repair courts and maritime manufacture on Veya"
+    },
+    {
+      "id": "SOL-D05",
+      "name": "Evening Side",
+      "center_xyz_m": [
+        5300,
+        1750,
+        25
+      ],
+      "radii_m": [
+        2400,
+        1300
+      ],
+      "altitude_range_m": [
+        6,
+        90
+      ],
+      "population": 30000,
+      "area_allowance_km2": 9,
+      "character": "Performance, baths and ordinary houses on Veya"
+    },
+    {
+      "id": "SOL-D06",
+      "name": "Meren Rooms",
+      "center_xyz_m": [
+        4600,
+        -3000,
+        32
+      ],
+      "radii_m": [
+        2300,
+        1700
+      ],
+      "altitude_range_m": [
+        8,
+        120
+      ],
+      "population": 29000,
+      "area_allowance_km2": 10,
+      "character": "Household cultivation, shared meals and long-stay accommodation"
+    },
+    {
+      "id": "SOL-D07",
+      "name": "Kiln Margins",
+      "center_xyz_m": [
+        5700,
+        -5700,
+        60
+      ],
+      "radii_m": [
+        2100,
+        1200
+      ],
+      "altitude_range_m": [
+        15,
+        150
+      ],
+      "population": 26000,
+      "area_allowance_km2": 8,
+      "character": "Ceramic craft, recovery yards and quiet dry terraces"
+    },
+    {
+      "id": "SOL-D08",
+      "name": "Neri Fold",
+      "center_xyz_m": [
+        -6600,
+        -5800,
+        42
+      ],
+      "radii_m": [
+        2100,
+        1500
+      ],
+      "altitude_range_m": [
+        8,
+        150
+      ],
+      "population": 25000,
+      "area_allowance_km2": 9,
+      "character": "Outer-island civic life and sheltered domestic routes"
+    },
+    {
+      "id": "SOL-D09",
+      "name": "Outer Word",
+      "center_xyz_m": [
+        10800,
+        9550,
+        30
+      ],
+      "radii_m": [
+        1600,
+        1100
+      ],
+      "altitude_range_m": [
+        8,
+        100
+      ],
+      "population": 20000,
+      "area_allowance_km2": 7,
+      "character": "Oru relay rooms, visitor households and protected observation paths"
+    }
+  ],
+  "places": [
+    {
+      "id": "SOL-POI-001",
+      "name": "The Third Cup House",
+      "district_id": "SOL-D01",
+      "xyz_m": [
+        -6200,
+        1900,
+        25
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-002",
+      "name": "Pocket Harbor",
+      "district_id": "SOL-D01",
+      "xyz_m": [
+        -4800,
+        2300,
+        38
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-003",
+      "name": "The Room for No Arrival",
+      "district_id": "SOL-D01",
+      "xyz_m": [
+        -5700,
+        450,
+        21
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-004",
+      "name": "Windback Stairs",
+      "district_id": "SOL-D02",
+      "xyz_m": [
+        -5200,
+        5700,
+        175
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-005",
+      "name": "The Long Table Lesson",
+      "district_id": "SOL-D02",
+      "xyz_m": [
+        -3700,
+        5900,
+        145
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-006",
+      "name": "The Unfinished Portrait",
+      "district_id": "SOL-D02",
+      "xyz_m": [
+        -2800,
+        4400,
+        105
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-007",
+      "name": "Three Receipts",
+      "district_id": "SOL-D03",
+      "xyz_m": [
+        -5100,
+        -1150,
+        18
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-008",
+      "name": "The Departing Wardrobe",
+      "district_id": "SOL-D03",
+      "xyz_m": [
+        -3500,
+        -1750,
+        16
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-009",
+      "name": "The Western Well Room",
+      "district_id": "SOL-D03",
+      "xyz_m": [
+        -2200,
+        -700,
+        35
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-010",
+      "name": "The Hull That Stayed",
+      "district_id": "SOL-D04",
+      "xyz_m": [
+        4300,
+        4400,
+        23
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-011",
+      "name": "Two Owners of a Blue Panel",
+      "district_id": "SOL-D04",
+      "xyz_m": [
+        5900,
+        5250,
+        50
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-012",
+      "name": "The Tuning Yard",
+      "district_id": "SOL-D04",
+      "xyz_m": [
+        6800,
+        3800,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-013",
+      "name": "The Wrong House Theatre",
+      "district_id": "SOL-D05",
+      "xyz_m": [
+        4300,
+        1800,
+        20
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-014",
+      "name": "The Warm Rail Baths",
+      "district_id": "SOL-D05",
+      "xyz_m": [
+        5700,
+        1250,
+        16
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-015",
+      "name": "The Last Return Board",
+      "district_id": "SOL-D05",
+      "xyz_m": [
+        6800,
+        2100,
+        26
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-016",
+      "name": "The Glass Supper",
+      "district_id": "SOL-D06",
+      "xyz_m": [
+        3600,
+        -3100,
+        31
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-017",
+      "name": "A Bed with a Drawer",
+      "district_id": "SOL-D06",
+      "xyz_m": [
+        4600,
+        -2200,
+        48
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-018",
+      "name": "The Garden That Closes",
+      "district_id": "SOL-D06",
+      "xyz_m": [
+        5900,
+        -3600,
+        40
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-019",
+      "name": "The Saltless Kiln",
+      "district_id": "SOL-D07",
+      "xyz_m": [
+        5100,
+        -5900,
+        65
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-020",
+      "name": "The Unthrown Bowl",
+      "district_id": "SOL-D07",
+      "xyz_m": [
+        6600,
+        -5400,
+        70
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-021",
+      "name": "Neri After the Meeting",
+      "district_id": "SOL-D08",
+      "xyz_m": [
+        -7300,
+        -5400,
+        48
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-022",
+      "name": "The Folded Shore",
+      "district_id": "SOL-D08",
+      "xyz_m": [
+        -5400,
+        -6000,
+        26
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-023",
+      "name": "The Window Beside Rauth",
+      "district_id": "SOL-D09",
+      "xyz_m": [
+        10000,
+        9700,
+        32
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SOL-POI-024",
+      "name": "The Shelf of Departures",
+      "district_id": "SOL-D09",
+      "xyz_m": [
+        11500,
+        10000,
+        45
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "SOL-T01",
+      "name": "First Steps interchange",
+      "district_id": "SOL-D01",
+      "xyz_m": [
+        -5500,
+        1500,
+        30
+      ],
+      "regional_gateway": true,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T02",
+      "name": "Upper Courts interchange",
+      "district_id": "SOL-D02",
+      "xyz_m": [
+        -4000,
+        5100,
+        125
+      ],
+      "regional_gateway": false,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T03",
+      "name": "Three Bays interchange",
+      "district_id": "SOL-D03",
+      "xyz_m": [
+        -3600,
+        -800,
+        24
+      ],
+      "regional_gateway": true,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T04",
+      "name": "Patch Reach interchange",
+      "district_id": "SOL-D04",
+      "xyz_m": [
+        5500,
+        4400,
+        32
+      ],
+      "regional_gateway": true,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T05",
+      "name": "Evening Side interchange",
+      "district_id": "SOL-D05",
+      "xyz_m": [
+        5300,
+        1750,
+        25
+      ],
+      "regional_gateway": false,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T06",
+      "name": "Meren Rooms interchange",
+      "district_id": "SOL-D06",
+      "xyz_m": [
+        4600,
+        -3000,
+        32
+      ],
+      "regional_gateway": false,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T07",
+      "name": "Kiln Margins interchange",
+      "district_id": "SOL-D07",
+      "xyz_m": [
+        5700,
+        -5700,
+        60
+      ],
+      "regional_gateway": false,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T08",
+      "name": "Neri Fold interchange",
+      "district_id": "SOL-D08",
+      "xyz_m": [
+        -6600,
+        -5800,
+        42
+      ],
+      "regional_gateway": false,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    },
+    {
+      "id": "SOL-T09",
+      "name": "Outer Word interchange",
+      "district_id": "SOL-D09",
+      "xyz_m": [
+        10800,
+        9550,
+        30
+      ],
+      "regional_gateway": false,
+      "status": "dry land interchange; any water service requires a separate shore approach and berth"
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "SOL-L01",
+      "from": "SOL-T01",
+      "to": "SOL-T02",
+      "mode": "bus",
+      "status": "on-island service dependency; surveyed route, grades and capacity unresolved"
+    },
+    {
+      "id": "SOL-L02",
+      "from": "SOL-T01",
+      "to": "SOL-T03",
+      "mode": "walking",
+      "status": "on-island service dependency; surveyed route, grades and capacity unresolved"
+    },
+    {
+      "id": "SOL-L03",
+      "from": "SOL-T02",
+      "to": "SOL-T03",
+      "mode": "bus",
+      "status": "on-island service dependency; surveyed route, grades and capacity unresolved"
+    },
+    {
+      "id": "SOL-L04",
+      "from": "SOL-T04",
+      "to": "SOL-T05",
+      "mode": "walking",
+      "status": "on-island service dependency; surveyed route, grades and capacity unresolved"
+    },
+    {
+      "id": "SOL-L05",
+      "from": "SOL-T06",
+      "to": "SOL-T07",
+      "mode": "bus",
+      "status": "on-island service dependency; surveyed route, grades and capacity unresolved"
+    },
+    {
+      "id": "SOL-L06",
+      "from": "SOL-T01",
+      "to": "SOL-T04",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L07",
+      "from": "SOL-T03",
+      "to": "SOL-T06",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L08",
+      "from": "SOL-T03",
+      "to": "SOL-T08",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L09",
+      "from": "SOL-T04",
+      "to": "SOL-T09",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L10",
+      "from": "SOL-T05",
+      "to": "SOL-T06",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L11",
+      "from": "SOL-T08",
+      "to": "SOL-T06",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L12",
+      "from": "SOL-T01",
+      "to": "SOL-T05",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L13",
+      "from": "SOL-T03",
+      "to": "SOL-T04",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    },
+    {
+      "id": "SOL-L14",
+      "from": "SOL-T01",
+      "to": "SOL-T09",
+      "mode": "ferry",
+      "status": "service dependency; alignment and capacity unresolved; dry interchanges require actual berths and traversable water legs"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 110,
+    "other_potable_m3_per_turn": 20100,
+    "delivered_potable_m3_per_turn": 52000,
+    "edible_product_kg_per_person_per_turn": 1.65,
+    "edible_product_tonnes_per_turn": 478.5,
+    "electric_average_mw": 360,
+    "electric_peak_mw": 620,
+    "scope": "24-hour civil-turn demand assumptions. Food covers 290000 core residents; temporary occupants and departing vessel stores are additional. Water includes separate temporary occupancy and other allowances. Network input is treated mixed supply BEFORE 20 percent distribution loss but AFTER desalination and other source treatment; seawater intake and brine are additional upstream quantities in SOLA.md. Productive yield, reliability and nutrition unverified.",
+    "network_loss_fraction": 0.2,
+    "network_input_m3_per_turn": 65000
+  },
+  "unresolved": [
+    "All five islands refine the coarse Aster concept outline; no surveyed shore, uplift, bathymetry, tidal range, storm surge or continuous terrain is established.",
+    "Land polygons have a zero sea-reference contour, not a flat zero-height island surface. POI elevations are authored planning altitudes.",
+    "Ferry graph endpoints are dry land interchanges. Actual shore approaches, ramps, berths, traversable water legs, weather limits, landing rights and capacity remain separately required.",
+    "No two islands are joined by an implied bridge or land route. On-island links still need slopes and accessible alignments.",
+    "The three 147 AL landing grounds are proposed on Orrel; subsequent island settlement dates in the dossier are local authoring proposals.",
+    "Rainfall, catchment yield, aquifer storage and sustainable groundwater abstraction remain unverified. The network-input field excludes upstream treatment losses and desalination rejects; do not read it as total seawater intake.",
+    "Food product mass is not caloric adequacy; the small native fraction is conditional on tissue/process qualification and has an introduced-oil replacement allowance.",
+    "Average/peak electrical demand and storage targets are not installed, firm or tested supply capacity.",
+    "Island-native taxa remain an ecology authoring gap; scenic introductions and visitor sightings require separate documented range decisions."
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "edition": "0.3",
+  "edition": "0.4",
   "scope": "Current new foundations including research/review notes; not pages, completion or quality certification",
-  "words": 131350,
+  "words": 177409,
   "chapters": [
     {
       "id": "orientation",
@@ -92,7 +92,7 @@
       "source": "07_REGIONAL_ATLAS.md",
       "title": "07 · Regional atlas",
       "status": "Geographic concept; terrain and climate development pending",
-      "words": 4129
+      "words": 4280
     },
     {
       "id": "orison",
@@ -102,11 +102,39 @@
       "words": 11344
     },
     {
+      "id": "marroway",
+      "source": "Cities/MARROWAY.md",
+      "title": "08b · Marroway",
+      "status": "Authored inland river city: nine districts and 24 places; sources and service capacity remain open",
+      "words": 12125
+    },
+    {
       "id": "talweir",
       "source": "Cities/TALWEIR.md",
-      "title": "08b · Talweir",
+      "title": "08c · Talweir",
       "status": "Authored lake city proposal: nine districts, 24 places and level-controlled navigation; not constructed",
       "words": 12983
+    },
+    {
+      "id": "aven",
+      "source": "Cities/AVEN.md",
+      "title": "08d · Aven",
+      "status": "Authored upland city: broad terraces, nine districts and 24 places; no terrain or services implemented",
+      "words": 12033
+    },
+    {
+      "id": "sola",
+      "source": "Cities/SOLA.md",
+      "title": "08e · Sola",
+      "status": "Authored island city: five islands, nine districts and 24 places; no navigation or source yield proved",
+      "words": 13216
+    },
+    {
+      "id": "journeys",
+      "source": "09_ROADS_SKIES_AND_EXPLORATION.md",
+      "title": "09 · Roads, skies and exploration",
+      "status": "Travel culture, thirteen route intentions and adventure requirements; no new movement or time systems implemented",
+      "words": 8534
     }
   ]
 }

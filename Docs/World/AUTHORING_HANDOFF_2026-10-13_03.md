@@ -1,5 +1,7 @@
 # Planet authoring handoff — edition 0.3
 
+**Historical snapshot.** The [edition 0.4 handoff](AUTHORING_HANDOFF_2026-10-13_04.md) records later city and travel work. Reader links now open the current compiled edition; the counts below describe edition 0.3.
+
 **13 October 2026. The full-world goal remains active.** The already-started mechanics have their Development handoff. This pass changes original world documentation, maps, data and authoring tools; it adds no Unreal levels, meshes, creatures or runtime systems. The complete canon and lore still precede planet construction.
 
 ## Current reading edition

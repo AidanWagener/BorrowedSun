@@ -7,10 +7,13 @@ const { chromium } = require('playwright');
   const root=path.resolve(__dirname,'../..');
   const sources={
     food:{file:'Exchange/orison_food_allowance.svg',counts:{'[data-value]':11}},
-    talweir:{file:'Cities/talweir_city_plan.svg',counts:{'[data-poi]':24,'[data-district]':9}}
+    talweir:{file:'Cities/talweir_city_plan.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    marroway:{file:'Cities/marroway_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    aven:{file:'Cities/aven_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    sola:{file:'Cities/sola_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}}
   };
   const config=sources[process.argv[3]];
-  if(!process.argv[2] || !config) throw new Error('Supply browser executable and plate key: food or talweir.');
+  if(!process.argv[2] || !config) throw new Error('Supply browser executable and a known plate key: '+Object.keys(sources).join(', '));
   const source=await fs.readFile(path.join(root,'Docs/World',config.file),'utf8');
   const browser=await chromium.launch({executablePath:process.argv[2],headless:true,args:['--disable-gpu']});
   try {

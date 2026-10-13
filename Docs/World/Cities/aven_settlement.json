@@ -1,0 +1,1204 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-006",
+  "city_name": "Aven",
+  "region_id": "REG-010",
+  "status": "Authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "AVEN.md",
+  "present_year_AL": 742,
+  "frame": {
+    "origin_lon_deg": 110,
+    "origin_lat_deg": -12,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -9000,
+      -7500,
+      9500,
+      8500
+    ]
+  },
+  "population": 450000,
+  "gross_area_allowance_km2": 99,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "AVE-WATER-01",
+      "name": "Aven southern spill local reach",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          4141.65,
+          8382.962
+        ],
+        [
+          3245.734,
+          6179.792
+        ],
+        [
+          2248.192,
+          4073.494
+        ],
+        [
+          1052.87,
+          2171.631
+        ],
+        [
+          62.094,
+          -19.219
+        ],
+        [
+          -241.192,
+          -2011.902
+        ],
+        [
+          -801.739,
+          -4213.071
+        ],
+        [
+          -1556.763,
+          -6812.472
+        ],
+        [
+          -1643.237,
+          -6787.528
+        ],
+        [
+          -898.261,
+          -4186.929
+        ],
+        [
+          -358.808,
+          -1988.098
+        ],
+        [
+          -62.094,
+          19.219
+        ],
+        [
+          947.13,
+          2228.369
+        ],
+        [
+          2151.808,
+          4126.506
+        ],
+        [
+          3154.266,
+          6220.208
+        ],
+        [
+          4058.35,
+          8417.038
+        ],
+        [
+          4141.65,
+          8382.962
+        ]
+      ],
+      "surface_m": 1650,
+      "status": "Authored variable-width flowing reach; surface_m is reference only, local heights follow channel interpolation; not bathymetry or flood extent"
+    }
+  ],
+  "source_river_id": "RIV-007",
+  "channels": [
+    {
+      "id": "AVE-CH01",
+      "name": "Aven southern spill through city",
+      "points_xyz_m": [
+        [
+          4100,
+          8400,
+          1669
+        ],
+        [
+          3200,
+          6200,
+          1663
+        ],
+        [
+          2200,
+          4100,
+          1658
+        ],
+        [
+          1000,
+          2200,
+          1654
+        ],
+        [
+          0,
+          0,
+          1650
+        ],
+        [
+          -300,
+          -2000,
+          1647
+        ],
+        [
+          -850,
+          -4200,
+          1643
+        ],
+        [
+          -1600,
+          -6800,
+          1640
+        ]
+      ],
+      "surface_polygon_ids": [
+        "AVE-WATER-01"
+      ],
+      "status": "Authored nonrising nominal controls, not hydraulics; preserves northeast arrival, fixed1650m origin and southward departure"
+    }
+  ],
+  "districts": [
+    {
+      "id": "AVE-D01",
+      "name": "Crossing Rooms",
+      "center_xyz_m": [
+        -1300,
+        400,
+        1682
+      ],
+      "radii_m": [
+        1700,
+        1400
+      ],
+      "altitude_range_m": [
+        1653,
+        1710
+      ],
+      "population": 60000,
+      "area_allowance_km2": 9,
+      "character": "Older inhabited central bench, receiving households, shops and public exhibitions"
+    },
+    {
+      "id": "AVE-D02",
+      "name": "Long Eaves",
+      "center_xyz_m": [
+        -3000,
+        2900,
+        1720
+      ],
+      "radii_m": [
+        2100,
+        2000
+      ],
+      "altitude_range_m": [
+        1690,
+        1760
+      ],
+      "population": 65000,
+      "area_allowance_km2": 12,
+      "character": "Homes, ordinary schools, care, covered routes and neighborhood music"
+    },
+    {
+      "id": "AVE-D03",
+      "name": "Lensfield",
+      "center_xyz_m": [
+        3100,
+        2400,
+        1725
+      ],
+      "radii_m": [
+        2500,
+        1700
+      ],
+      "altitude_range_m": [
+        1660,
+        1760
+      ],
+      "population": 60000,
+      "area_allowance_km2": 11,
+      "character": "Calibration, teaching, competitive exhibitions and mixed housing"
+    },
+    {
+      "id": "AVE-D04",
+      "name": "Clayfold",
+      "center_xyz_m": [
+        5400,
+        -900,
+        1708
+      ],
+      "radii_m": [
+        2500,
+        1900
+      ],
+      "altitude_range_m": [
+        1668,
+        1760
+      ],
+      "population": 50000,
+      "area_allowance_km2": 12,
+      "character": "Ceramics, garment workshops, clean assembly, worker homes and service yards"
+    },
+    {
+      "id": "AVE-D05",
+      "name": "Soft Roof",
+      "center_xyz_m": [
+        -3200,
+        -2600,
+        1695
+      ],
+      "radii_m": [
+        2300,
+        1800
+      ],
+      "altitude_range_m": [
+        1663,
+        1735
+      ],
+      "population": 65000,
+      "area_allowance_km2": 13,
+      "character": "Household courts, dining, care, repair and amateur performance"
+    },
+    {
+      "id": "AVE-D06",
+      "name": "South Assembly",
+      "center_xyz_m": [
+        1800,
+        -3400,
+        1668
+      ],
+      "radii_m": [
+        2500,
+        2200
+      ],
+      "altitude_range_m": [
+        1648,
+        1708
+      ],
+      "population": 45000,
+      "area_allowance_km2": 10,
+      "character": "Rail and road transfer, housing, service yards and lower river access"
+    },
+    {
+      "id": "AVE-D07",
+      "name": "Far Bench",
+      "center_xyz_m": [
+        5300,
+        5700,
+        1778
+      ],
+      "radii_m": [
+        2600,
+        2200
+      ],
+      "altitude_range_m": [
+        1720,
+        1835
+      ],
+      "population": 35000,
+      "area_allowance_km2": 12,
+      "character": "Inhabited upland edge, walking circuits, native hollows and picnic services"
+    },
+    {
+      "id": "AVE-D08",
+      "name": "West Reach",
+      "center_xyz_m": [
+        -6000,
+        200,
+        1788
+      ],
+      "radii_m": [
+        2000,
+        2800
+      ],
+      "altitude_range_m": [
+        1735,
+        1840
+      ],
+      "population": 45000,
+      "area_allowance_km2": 12,
+      "character": "Higher homes, propagation, native husbandry, utilities and western transfer"
+    },
+    {
+      "id": "AVE-D09",
+      "name": "Three Shelters",
+      "center_xyz_m": [
+        500,
+        5600,
+        1738
+      ],
+      "radii_m": [
+        1900,
+        2100
+      ],
+      "altitude_range_m": [
+        1680,
+        1800
+      ],
+      "population": 25000,
+      "area_allowance_km2": 8,
+      "character": "Refuge neighborhood, northern approach, households and route services"
+    }
+  ],
+  "places": [
+    {
+      "id": "AVE-POI-001",
+      "name": "House of the Second Door",
+      "district_id": "AVE-D01",
+      "xyz_m": [
+        -1850,
+        850,
+        1688
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-001",
+        "name": "Eren Tav"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-002",
+      "name": "A Table for a Misfit",
+      "district_id": "AVE-D01",
+      "xyz_m": [
+        -950,
+        650,
+        1681
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-002",
+        "name": "Iven Sorr"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-003",
+      "name": "Bridge Understudy",
+      "district_id": "AVE-D01",
+      "xyz_m": [
+        -20,
+        40,
+        1655
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 1650.046575,
+      "shore_access_xyz_m": [
+        -140,
+        40,
+        1656
+      ],
+      "primary_person": {
+        "id": "AVE-PER-003",
+        "name": "Nera Doss"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt",
+      "water_level_basis": "Nearest local channel-segment interpolation; no flood or hydraulic solution"
+    },
+    {
+      "id": "AVE-POI-004",
+      "name": "The Last Sheet Shop",
+      "district_id": "AVE-D01",
+      "xyz_m": [
+        -2100,
+        -500,
+        1678
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-004",
+        "name": "Toma Vell"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-005",
+      "name": "The Easy Phrase Room",
+      "district_id": "AVE-D02",
+      "xyz_m": [
+        -3500,
+        2000,
+        1716
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-005",
+        "name": "Del Ressi",
+        "birth_year_AL": 685,
+        "standard_age_years_approx": 51,
+        "continuity": "LEI-05 in PLEASURES_AND_EVERYDAY_LIFE.md"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-006",
+      "name": "The Forty-Meter Garden",
+      "district_id": "AVE-D02",
+      "xyz_m": [
+        -2400,
+        3200,
+        1722
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-006",
+        "name": "Vessa Dren"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-007",
+      "name": "School of Unfinished Measures",
+      "district_id": "AVE-D02",
+      "xyz_m": [
+        -3300,
+        4300,
+        1740
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-007",
+        "name": "Daro Vell"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-008",
+      "name": "The Unbought Bench",
+      "district_id": "AVE-D03",
+      "xyz_m": [
+        2400,
+        2300,
+        1718
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-008",
+        "name": "Sera Pell",
+        "continuity": "EX-S05 in06_POWER_AND_EXCHANGE.md"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-009",
+      "name": "The Exhibition of Bad Chairs",
+      "district_id": "AVE-D03",
+      "xyz_m": [
+        3900,
+        3100,
+        1731
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-009",
+        "name": "Sena Arl"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-010",
+      "name": "The Roof Without a Giant",
+      "district_id": "AVE-D03",
+      "xyz_m": [
+        4300,
+        3600,
+        1740
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-010",
+        "name": "Nemi Orven"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-011",
+      "name": "Kiln Interval",
+      "district_id": "AVE-D04",
+      "xyz_m": [
+        4600,
+        -600,
+        1700
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-011",
+        "name": "Rova Mett"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-012",
+      "name": "Pattern Cutting Room",
+      "district_id": "AVE-D04",
+      "xyz_m": [
+        6200,
+        -200,
+        1720
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-012",
+        "name": "Telli Mett"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-013",
+      "name": "Quiet Delivery",
+      "district_id": "AVE-D04",
+      "xyz_m": [
+        6800,
+        -2200,
+        1698
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-013",
+        "name": "Omin Darel"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-014",
+      "name": "Apron Theater",
+      "district_id": "AVE-D05",
+      "xyz_m": [
+        -3700,
+        -2800,
+        1699
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-014",
+        "name": "Bera Noll"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-015",
+      "name": "Dinner for Two More",
+      "district_id": "AVE-D05",
+      "xyz_m": [
+        -2000,
+        -1800,
+        1685
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-015",
+        "name": "Vara Tem"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-016",
+      "name": "The Loan Cupboard",
+      "district_id": "AVE-D05",
+      "xyz_m": [
+        -4600,
+        -3300,
+        1707
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-016",
+        "name": "Asha Verr"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-017",
+      "name": "South Return Station",
+      "district_id": "AVE-D06",
+      "xyz_m": [
+        1800,
+        -4900,
+        1658
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-017",
+        "name": "Lerin Vos"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-018",
+      "name": "The Low Walk",
+      "district_id": "AVE-D06",
+      "xyz_m": [
+        -520,
+        -3500,
+        1650
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-018",
+        "name": "Senra Kett"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-019",
+      "name": "Library of Empty Bowls",
+      "district_id": "AVE-D07",
+      "xyz_m": [
+        5800,
+        6500,
+        1792
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-019",
+        "name": "Orel Min"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-020",
+      "name": "Weather Lunch",
+      "district_id": "AVE-D07",
+      "xyz_m": [
+        4500,
+        5100,
+        1769
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-020",
+        "name": "Nali Res"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-021",
+      "name": "Practice Horizon",
+      "district_id": "AVE-D07",
+      "xyz_m": [
+        6900,
+        6200,
+        1814
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-021",
+        "name": "Etan Rell"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-022",
+      "name": "The Folded Roof Household",
+      "district_id": "AVE-D08",
+      "xyz_m": [
+        -6700,
+        1100,
+        1810
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-022",
+        "name": "Ora Drem"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-023",
+      "name": "Two Substrates",
+      "district_id": "AVE-D08",
+      "xyz_m": [
+        -6400,
+        -1600,
+        1776
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-023",
+        "name": "Varo Linn"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    },
+    {
+      "id": "AVE-POI-024",
+      "name": "The Third Shelter",
+      "district_id": "AVE-D09",
+      "xyz_m": [
+        300,
+        6200,
+        1750
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "primary_person": {
+        "id": "AVE-PER-024",
+        "name": "Iri Senn"
+      },
+      "status": "Authored focal position; footprint, detailed circulation, schedule and runtime unbuilt"
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "AVE-T01",
+      "name": "Crossing interchange",
+      "district_id": "AVE-D01",
+      "xyz_m": [
+        -1300,
+        650,
+        1684
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "AVE-T02",
+      "name": "Long Eaves stop",
+      "district_id": "AVE-D02",
+      "xyz_m": [
+        -3000,
+        2600,
+        1719
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "AVE-T03",
+      "name": "Lensfield stop",
+      "district_id": "AVE-D03",
+      "xyz_m": [
+        3100,
+        2000,
+        1720
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "AVE-T04",
+      "name": "Clayfold transfer",
+      "district_id": "AVE-D04",
+      "xyz_m": [
+        5600,
+        -1000,
+        1708
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "AVE-T05",
+      "name": "Soft Roof stop",
+      "district_id": "AVE-D05",
+      "xyz_m": [
+        -3000,
+        -2200,
+        1694
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "AVE-T06",
+      "name": "South regional station",
+      "district_id": "AVE-D06",
+      "xyz_m": [
+        1800,
+        -4400,
+        1664
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "AVE-T07",
+      "name": "Far Bench departure",
+      "district_id": "AVE-D07",
+      "xyz_m": [
+        4800,
+        5400,
+        1771
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "AVE-T08",
+      "name": "West Reach transfer",
+      "district_id": "AVE-D08",
+      "xyz_m": [
+        -5900,
+        100,
+        1786
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "AVE-T09",
+      "name": "Northern route interchange",
+      "district_id": "AVE-D09",
+      "xyz_m": [
+        600,
+        5300,
+        1736
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "AVE-T10",
+      "name": "Western regional freight approach",
+      "district_id": null,
+      "xyz_m": [
+        -8400,
+        -500,
+        1810
+      ],
+      "regional_gateway": true
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "AVE-L01",
+      "from": "AVE-T01",
+      "to": "AVE-T02",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L02",
+      "from": "AVE-T02",
+      "to": "AVE-T08",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L03",
+      "from": "AVE-T08",
+      "to": "AVE-T05",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L04",
+      "from": "AVE-T05",
+      "to": "AVE-T01",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L05",
+      "from": "AVE-T01",
+      "to": "AVE-T03",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L06",
+      "from": "AVE-T03",
+      "to": "AVE-T04",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L07",
+      "from": "AVE-T04",
+      "to": "AVE-T06",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L08",
+      "from": "AVE-T06",
+      "to": "AVE-T05",
+      "mode": "tram",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L09",
+      "from": "AVE-T02",
+      "to": "AVE-T09",
+      "mode": "bus",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L10",
+      "from": "AVE-T09",
+      "to": "AVE-T07",
+      "mode": "bus",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L11",
+      "from": "AVE-T07",
+      "to": "AVE-T03",
+      "mode": "bus",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L12",
+      "from": "AVE-T07",
+      "to": "AVE-T04",
+      "mode": "bus",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L13",
+      "from": "AVE-T10",
+      "to": "AVE-T08",
+      "mode": "rail",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L14",
+      "from": "AVE-T08",
+      "to": "AVE-T05",
+      "mode": "rail",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L15",
+      "from": "AVE-T05",
+      "to": "AVE-T06",
+      "mode": "rail",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L16",
+      "from": "AVE-T06",
+      "to": "AVE-T04",
+      "mode": "rail",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L17",
+      "from": "AVE-T01",
+      "to": "AVE-T02",
+      "mode": "walking",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L18",
+      "from": "AVE-T02",
+      "to": "AVE-T09",
+      "mode": "walking",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L19",
+      "from": "AVE-T09",
+      "to": "AVE-T07",
+      "mode": "walking",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L20",
+      "from": "AVE-T07",
+      "to": "AVE-T03",
+      "mode": "walking",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L21",
+      "from": "AVE-T03",
+      "to": "AVE-T01",
+      "mode": "walking",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L22",
+      "from": "AVE-T05",
+      "to": "AVE-T01",
+      "mode": "walking",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L23",
+      "from": "AVE-T08",
+      "to": "AVE-T02",
+      "mode": "walking",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    },
+    {
+      "id": "AVE-L24",
+      "from": "AVE-T10",
+      "to": "AVE-T08",
+      "mode": "road",
+      "status": "Service dependency; alignment, bridge support, clearances, gradients and capacity unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 140,
+    "other_potable_m3_per_turn": 27000,
+    "delivered_potable_m3_per_turn": 90000,
+    "network_loss_fraction": 0.15,
+    "network_input_m3_per_turn": 105882.35294117648,
+    "edible_product_kg_per_person_per_turn": 1.65,
+    "edible_product_tonnes_per_turn": 742.5,
+    "electric_average_mw": 420,
+    "electric_peak_mw": 740,
+    "scope": "24-hour civil-turn demand assumptions; productive yield, reliability, nutrition and actual capacity unverified"
+  },
+  "unresolved": [
+    "Terrain survey, foundations, local slopes and flood reference levels",
+    "River discharge, bathymetry, seasonal range, native habitat and abstraction yield",
+    "Off-frame raw reservoir site, catchment rights and storage losses",
+    "Treatment envelopes, raw rejects, wastewater quality and one-train-out resilience",
+    "Supply and sewer alignments, reservoir pressure zones and powered transfers",
+    "Agricultural land, crop yields, diet composition and protein adequacy",
+    "Firm electricity contracts, dispatch fuel, charging surplus, peak and long-night outages",
+    "Rail and road approach engineering, bridge loading and passenger or freight capacities",
+    "Housing costs, census definitions, individual building interiors and detailed household history",
+    "Original music, animations, schedule representation, object persistence and playable construction"
+  ],
+  "source_contract": {
+    "atlas": "../Atlas/nacre_atlas.json",
+    "geography": "../Atlas/nacre_geography.json",
+    "river_upstream_lon_lat_m": [
+      112,
+      -7,
+      3200
+    ],
+    "river_city_lon_lat_m": [
+      110,
+      -12,
+      1650
+    ],
+    "river_downstream_lon_lat_m": [
+      109,
+      -21,
+      1200
+    ],
+    "projection": "Spherical azimuthal equidistant; eastx,northy; z planning sea-level altitude, not tangent offset",
+    "refinement": "Intermediate local channel and district geometry proposed, not projected continental bends or surveyed terrain"
+  },
+  "housing_screen": {
+    "dwellings": 173000,
+    "occupied_fraction": 0.95,
+    "residents_per_occupied_dwelling": 2.74,
+    "implied_population": 450319.00000000006,
+    "residential_parcel_km2": 27,
+    "building_coverage": 0.25,
+    "effective_floors": 2.9,
+    "usable_fraction": 0.8,
+    "gross_floor_m2": 19575000,
+    "usable_floor_m2": 15660000,
+    "usable_floor_m2_per_dwelling": 90.52023121387283,
+    "land_allocation_km2": {
+      "residential": 27,
+      "employment": 18,
+      "education_civic": 9,
+      "streets_transport": 17,
+      "parks_native_growing": 16,
+      "river_margins": 5,
+      "other_reserves": 7
+    }
+  },
+  "water_screen": {
+    "raw_treatment_recovery_fraction": 0.96,
+    "raw_abstraction_m3_per_turn": 110294.11764705884,
+    "raw_treatment_reject_m3_per_turn": 4411.764705882364,
+    "distribution_loss_m3_per_turn": 15882.352941176476,
+    "off_frame_raw_storage_m3": 3600000,
+    "raw_storage_nominal_turns": 32.63999999999999,
+    "nominal_treated_production_m3_per_turn": 120000,
+    "treated_storage_m3": 360000,
+    "treated_storage_nominal_turns": 3.4,
+    "proposed_reservoir_surfaces_m": [
+      1805,
+      1870
+    ],
+    "reservoir_transfer": "Powered lift from upper service area; local boosters and pressure regulation unresolved",
+    "sewer_collection_m3_per_turn": 70000,
+    "nominal_sewer_capacity_m3_per_turn": 90000,
+    "sewer_works_count": 2,
+    "reclaimed_delivery_m3_per_turn": 12000,
+    "gross_end_use_delivery_m3_per_turn": 102000,
+    "net_consumed_or_uncollected_m3_per_turn": 32000,
+    "final_treated_residual_m3_per_turn_before_separate_losses": 58000,
+    "accounting": "Internal reuse cancels in external balance; not every loss is permanent hydrological consumption; no yield or water-quality proof"
+  },
+  "food_screen": {
+    "kcal_per_person_per_turn": 2400,
+    "core_kcal_per_turn": 1080000000,
+    "dry_equivalent_kcal_per_kg": 3200,
+    "dry_calorie_equivalent_tonnes_per_turn": 337.5,
+    "protein_g_per_person_per_turn": 75,
+    "protein_tonnes_per_turn": 33.75,
+    "calorie_origin_shares": {
+      "wider_Aven_basins": 0.62,
+      "other_connected_Morrow": 0.36,
+      "core_primary_production": 0.02
+    },
+    "reserve_turns": 60,
+    "reserve_dry_equivalent_tonnes": 20250,
+    "scope": "Edible mass, calorie equivalent and protein are different views of one diet; no double-counted deliveries, proven yields or complete nutrient basket"
+  },
+  "power_screen": {
+    "regional_connection_mw": 300,
+    "regional_connection_count": 2,
+    "local_dispatchable_nameplate_mw": 150,
+    "regional_wind_nameplate_mw": 160,
+    "solar_candidate_mwp": 400,
+    "usable_storage_gwh": 18,
+    "storage_discharge_mw": 220,
+    "reference_longest_night_hours": 70.7,
+    "deficit_150mw_gwh_before_further_losses": 10.605,
+    "deficit_260mw_gwh_before_further_losses": 18.382,
+    "local_hydro_credited_mw": 0,
+    "firm_coverage_verified": false,
+    "thermal": "Separate useful-heat accounting; no duplicated electricity credit"
+  },
+  "waste_freight_screen": {
+    "municipal_waste_kg_per_person_per_turn": 0.75,
+    "municipal_waste_tonnes_per_turn": 337.5,
+    "gross_freight_study_tonnes_per_turn": [
+      4500,
+      7000
+    ],
+    "river_freight_credited": false,
+    "scope": "Waste excludes major industrial and construction streams; freight includes imports,exports and handling with definition unresolved"
+  },
+  "sky_contract": {
+    "natural_solar_cycle_hours": 136.755,
+    "civil_turn_hours": 24,
+    "northern_solstice_daylight_hours": 66.1,
+    "equinox_daylight_hours": 68.4,
+    "southern_solstice_daylight_hours": 70.7,
+    "longest_reference_night_hours": 70.7,
+    "rauth": "Entire parent disc below ordinary city-center horizon; do not add it to scenic views",
+    "limits": "Nominal latitude model; terrain, refraction, weather and ephemeris refinements unresolved"
+  }
+}

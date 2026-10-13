@@ -28,6 +28,8 @@ The escarpment includes farms, smaller ports and inland communities that resent 
 
 Marroway sits near 4° N, 29° E within a large river network south of Orison. The name Nine-River is historical: different authorities count branches, tributaries and seasonal channels differently. The Neris trunk is the first mapped drainage concept, descending from the Glassback uplands toward the coastal lowland. Detailed tributary catchments remain to be drawn.
 
+The [Marroway dossier](Cities/MARROWAY.md) maps nine districts and a local confluence while preserving the Neris city control at 18 m. The city remains inland: its authored river mouth is about 437 km away even by direct spherical comparison. Sea freight requires river passage or an explicit transfer.
+
 Settlements occupy natural levees, raised foundations and engineered platforms. Some channels carry freight; others are protected native nurseries or domestic water sources. Imported food production uses managed substrates and treatment networks among extensive native wetlands. Human cultivation does not replace every marsh with familiar reeds and rice.
 
 Marroway's civic character is conversational and spatially distributed. Markets meet boats; schools serve moving households; celebrations travel between banks. A visitor can learn why two houses facing each other across water belong to different jurisdictions while cousins living a day's travel apart share a provisioning account. The region's central tension concerns who may alter a flow whose consequences arrive elsewhere later. Its pleasures include floating performance courts, elaborate boat interiors and competitive cooking at transfer landings.
@@ -94,13 +96,15 @@ Talweir is a place of public performance, long meals and exacting small-boat des
 
 Aven, at 12° S, 110° E, connects several high basins and routes across Morrow. Elevation moderates conditions relative to nearby lowlands, but precise temperatures and precipitation remain design targets. Managed agriculture, transport services and specialized manufacture support the city.
 
+The [Aven dossier](Cities/AVEN.md) develops nine districts on broad occupied benches around the southern spill's established 1,650 m city control. Its local river geometry and service assumptions remain an authored proposal; the city is not a coastal terminus or a navigable extension of Talweir's northern lake system.
+
 Its urban form follows terraces and transfer spaces, with more horizontal plateaus than Orison's crater section. Long roof edges shelter public movement. Aven's identity includes education, walking clubs, competitive design exhibitions and families whose members work in several basins. The Passage cases made route access a civic subject without turning every resident into a lawyer.
 
 The surrounding country offers difficult approaches and generous places to stop. A refuge may contain a serious lending library; a freight depot may host a celebrated amateur orchestra. Mountain travel should reveal society at intervals, with real stretches of exposure between. The pleasures of arrival depend on experiencing those intervals.
 
 ### REG-011 — Green Vault
 
-The Green Vault is a wet lowland and river system east of Morrow's interior uplands. Dhal lies near its coastal river mouth at 4° N, 166° E. A large native canopy provides several vertically separated habitats. Light below it is filtered by biology as well as weather.
+The Green Vault is a wet lowland and river system east of Morrow's interior uplands. Dhal lies at 4° N, 166° E along the lower river, inland of its separately mapped coastal mouth. A large native canopy provides several vertically separated habitats. Light below it is filtered by biology as well as weather.
 
 Human knowledge is uneven. Some river corridors are familiar workplaces; nearby canopy interiors can remain poorly studied. This is not evidence that residents are ignorant or the land untouched. Knowledge can be precise, local, deliberately restricted, or difficult to translate into a planetary database.
 
@@ -188,6 +192,8 @@ Routes through the cape reward knowledge of changing water, shelter and colony b
 
 Sola's linked harbors occupy the Aster island arc near 11° N, 58° E. Relief separates wet slopes and sheltered lee settlements. Freshwater storage, erosion and harbor capacity limit growth even where the surrounding sea appears endless.
 
+The [Sola dossier](Cities/SOLA.md) proposes five distinct islands and nine districts, retaining three 147 AL landing grounds on Orrel before later expansion. Local island outlines refine the coarse concept; they are not surveyed shores. Resident, guest, ship and transfer demand are accounted for separately.
+
 The city is polycentric. Ferries connect schools, markets, workshops and performance spaces across several islands. A resident's daily route can cross water repeatedly without being an expedition. The city should have recognizably different islands rather than repeated copies of one tropical port.
 
 Long-distance traffic supports multilingual neighborhoods and a strong culture of temporary residence. Hospitality has institutions and prices, but also genuine pleasure in arrivals. Away from the main harbors, the chain offers native shelves, old survey sites, small farms and quiet communities that do not exist solely to supply pirates. Sola makes intercontinental travel tangible by being a place worth remaining in.
@@ -220,4 +226,4 @@ Exploration focuses on rare access, environmental observation, native seasonal l
 
 Each region now needs detailed relief and catchments; coast and lake geometry; ecological ranges with dispersal history; settlement and transport networks; seasonal weather assumptions; district-level city maps; and individually authored POIs. The existing 24 anchors and twelve cities are a framework for that depth, not substitutes for it.
 
-The route arithmetic deliberately exposes large distances. Physical scale remains intact in the bible. Future travel design must offer satisfying close exploration, meaningful regional journeys and legible intercontinental movement without silently shrinking Nacre or promising that players will enjoy hours of empty real-time transit. That design decision follows the world and will require actual playable evidence.
+The route arithmetic deliberately exposes large distances. Physical scale remains intact in the bible. [Roads, skies and exploration](09_ROADS_SKIES_AND_EXPLORATION.md) now develops the thirteen connections, close exploration, travel knowledge, adventure opportunities and optional advancement of represented passage time. Actual routes, vehicles and playable pacing still require evidence; the chapter does not silently shrink Nacre or implement transit.

@@ -1,0 +1,1550 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-002",
+  "city_name": "Marroway",
+  "region_id": "REG-002",
+  "status": "authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "MARROWAY.md",
+  "authored_date": "2026-10-13",
+  "present_year_AL": 742,
+  "frame": {
+    "origin_lon_deg": 29,
+    "origin_lat_deg": 4,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -11000,
+      -11000,
+      12000,
+      11000
+    ],
+    "projection": "spherical azimuthal equidistant",
+    "x_axis": "east",
+    "y_axis": "north",
+    "z_datum": "altitude above planning mean sea level; not tangent-plane displacement"
+  },
+  "population": 670000,
+  "gross_area_allowance_km2": 110,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "MAR-WATER-01",
+      "name": "Neris, Serrit and Low Cut joined planning water",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          -9800,
+          10500
+        ],
+        [
+          -6100,
+          6500
+        ],
+        [
+          -3900,
+          4200
+        ],
+        [
+          -1300,
+          2050
+        ],
+        [
+          400,
+          300
+        ],
+        [
+          2600,
+          -900
+        ],
+        [
+          5250,
+          -3500
+        ],
+        [
+          7800,
+          -5500
+        ],
+        [
+          11600,
+          -9900
+        ],
+        [
+          10800,
+          -10500
+        ],
+        [
+          7200,
+          -6100
+        ],
+        [
+          4650,
+          -4150
+        ],
+        [
+          3900,
+          -3410
+        ],
+        [
+          1000,
+          -4400
+        ],
+        [
+          -2200,
+          -5300
+        ],
+        [
+          -4400,
+          -5750
+        ],
+        [
+          -10000,
+          -6000
+        ],
+        [
+          -10000,
+          -5700
+        ],
+        [
+          -4400,
+          -5400
+        ],
+        [
+          -2200,
+          -4960
+        ],
+        [
+          1000,
+          -4070
+        ],
+        [
+          3400,
+          -2920
+        ],
+        [
+          2000,
+          -1550
+        ],
+        [
+          -250,
+          -400
+        ],
+        [
+          -650,
+          -200
+        ],
+        [
+          -2000,
+          -650
+        ],
+        [
+          -4200,
+          -900
+        ],
+        [
+          -6500,
+          -850
+        ],
+        [
+          -10000,
+          -1550
+        ],
+        [
+          -10000,
+          -950
+        ],
+        [
+          -6500,
+          -350
+        ],
+        [
+          -4200,
+          -400
+        ],
+        [
+          -2000,
+          -150
+        ],
+        [
+          -600,
+          250
+        ],
+        [
+          -1850,
+          1350
+        ],
+        [
+          -4700,
+          3500
+        ],
+        [
+          -6900,
+          5700
+        ],
+        [
+          -10300,
+          9800
+        ],
+        [
+          -9800,
+          10500
+        ]
+      ],
+      "surface_m": 18,
+      "status": "One connected nonoverlapping authored local polygon;18m is city-center reference, not flat flowing-water elevation; banks and bathymetry unsurveyed"
+    }
+  ],
+  "source_river_id": "RIV-001",
+  "channels": [
+    {
+      "id": "MAR-CH-01",
+      "name": "Neris urban reach",
+      "points_xyz_m": [
+        [
+          -10000,
+          10000,
+          18.9
+        ],
+        [
+          -6500,
+          6100,
+          18.6
+        ],
+        [
+          -4300,
+          3800,
+          18.4
+        ],
+        [
+          -1600,
+          1700,
+          18.15
+        ],
+        [
+          0,
+          0,
+          18
+        ],
+        [
+          2300,
+          -1200,
+          17.9
+        ],
+        [
+          4900,
+          -3800,
+          17.7
+        ],
+        [
+          7500,
+          -5800,
+          17.5
+        ],
+        [
+          11000,
+          -10000,
+          17.2
+        ]
+      ],
+      "surface_polygon_ids": [
+        "MAR-WATER-01"
+      ],
+      "status": "Authored nonrising nominal surface controls; preserves source[0,0,18] and NW-to-SE direction; no hydraulic solution"
+    },
+    {
+      "id": "MAR-CH-02",
+      "name": "Serrit branch",
+      "points_xyz_m": [
+        [
+          -10000,
+          -1250,
+          18.55
+        ],
+        [
+          -6500,
+          -600,
+          18.4
+        ],
+        [
+          -4200,
+          -650,
+          18.3
+        ],
+        [
+          -2000,
+          -400,
+          18.15
+        ],
+        [
+          -600,
+          20,
+          18.03
+        ],
+        [
+          0,
+          0,
+          18
+        ]
+      ],
+      "surface_polygon_ids": [
+        "MAR-WATER-01"
+      ],
+      "status": "New local tributary proposal joining origin; catchment, discharge, banks and low-flow behavior unresolved"
+    },
+    {
+      "id": "MAR-CH-03",
+      "name": "Low Cut",
+      "points_xyz_m": [
+        [
+          -10000,
+          -5850,
+          18.28
+        ],
+        [
+          -4400,
+          -5575,
+          18.07
+        ],
+        [
+          -2200,
+          -5130,
+          17.99
+        ],
+        [
+          1000,
+          -4235,
+          17.9
+        ],
+        [
+          3650,
+          -3100,
+          17.8
+        ],
+        [
+          3900,
+          -2800,
+          17.776923
+        ]
+      ],
+      "surface_polygon_ids": [
+        "MAR-WATER-01"
+      ],
+      "status": "New local lowland branch proposal joining Neris downstream at[3900,-2800,17.776923]; no independently mapped regional catchment"
+    }
+  ],
+  "districts": [
+    {
+      "id": "MAR-D01",
+      "name": "Paired Banks",
+      "center_xyz_m": [
+        1600,
+        1500,
+        29
+      ],
+      "radii_m": [
+        2200,
+        1800
+      ],
+      "altitude_range_m": [
+        23,
+        38
+      ],
+      "population": 90000,
+      "area_allowance_km2": 11,
+      "character": "Central confluence civic rooms, passenger interchange and mixed housing",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D02",
+      "name": "Return Rooms",
+      "center_xyz_m": [
+        -2300,
+        600,
+        28
+      ],
+      "radii_m": [
+        2400,
+        1400
+      ],
+      "altitude_range_m": [
+        22,
+        38
+      ],
+      "population": 85000,
+      "area_allowance_km2": 12,
+      "character": "Berth households, river schooling, private interiors and furniture work",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D03",
+      "name": "High Sills",
+      "center_xyz_m": [
+        -4200,
+        2700,
+        33
+      ],
+      "radii_m": [
+        2300,
+        2000
+      ],
+      "altitude_range_m": [
+        28,
+        47
+      ],
+      "population": 95000,
+      "area_allowance_km2": 14,
+      "character": "Raised housing, hospital, schools, pressure-storage approaches and recreation",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D04",
+      "name": "Potters' Turn",
+      "center_xyz_m": [
+        3500,
+        3200,
+        31
+      ],
+      "radii_m": [
+        2500,
+        2300
+      ],
+      "altitude_range_m": [
+        26,
+        43
+      ],
+      "population": 90000,
+      "area_allowance_km2": 13,
+      "character": "Ceramics, domestic ornament, art teaching and mixed housing",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D05",
+      "name": "Grain Reach",
+      "center_xyz_m": [
+        -2700,
+        -2600,
+        29
+      ],
+      "radii_m": [
+        2500,
+        2300
+      ],
+      "altitude_range_m": [
+        24,
+        42
+      ],
+      "population": 85000,
+      "area_allowance_km2": 14,
+      "character": "Food consolidation, preparation, warehouses, recreation and homes",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D06",
+      "name": "Trellis End",
+      "center_xyz_m": [
+        -6500,
+        -2300,
+        30
+      ],
+      "radii_m": [
+        2500,
+        2300
+      ],
+      "altitude_range_m": [
+        25,
+        44
+      ],
+      "population": 75000,
+      "area_allowance_km2": 14,
+      "character": "Crop propagation, managed native fodder, husbandry and western transfer",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D07",
+      "name": "Skein Yard",
+      "center_xyz_m": [
+        4600,
+        -900,
+        28
+      ],
+      "radii_m": [
+        2500,
+        3600
+      ],
+      "altitude_range_m": [
+        22,
+        39
+      ],
+      "population": 60000,
+      "area_allowance_km2": 12,
+      "character": "Shallow-draft craft, domestic room modules, fiber fittings and housing",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D08",
+      "name": "Low Walks",
+      "center_xyz_m": [
+        -2500,
+        -5750,
+        26
+      ],
+      "radii_m": [
+        2800,
+        1800
+      ],
+      "altitude_range_m": [
+        20,
+        37
+      ],
+      "population": 50000,
+      "area_allowance_km2": 10,
+      "character": "Raised homes, lowland habitat margins, care and quiet public routes",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    },
+    {
+      "id": "MAR-D09",
+      "name": "Far Landing",
+      "center_xyz_m": [
+        7600,
+        -4000,
+        26
+      ],
+      "radii_m": [
+        2600,
+        2300
+      ],
+      "altitude_range_m": [
+        22,
+        37
+      ],
+      "population": 40000,
+      "area_allowance_km2": 10,
+      "character": "Downstream river passenger/freight gateway and settled inland courts",
+      "envelope_status": "Approximate overlapping planning extent; area allocation is not ellipse area or legal boundary"
+    }
+  ],
+  "places": [
+    {
+      "id": "MAR-POI-001",
+      "name": "Two Arrivals Court",
+      "district_id": "MAR-D01",
+      "xyz_m": [
+        1500,
+        900,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "meeting_and_public_life",
+      "resident_contact": {
+        "id": "MAR-PER-001",
+        "name": "Ira Senet"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-002",
+      "name": "The Cupboard of Rain",
+      "district_id": "MAR-D01",
+      "xyz_m": [
+        2100,
+        1800,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "private_home_and_joinery",
+      "resident_contact": {
+        "id": "MAR-PER-002",
+        "name": "Sera Dov"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-003",
+      "name": "Underroof Exchange",
+      "district_id": "MAR-D01",
+      "xyz_m": [
+        650,
+        1400,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "shopping_and_languages",
+      "resident_contact": {
+        "id": "MAR-PER-003",
+        "name": "Jori Vell"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-004",
+      "name": "Kept Room Number Seven",
+      "district_id": "MAR-D02",
+      "xyz_m": [
+        -2400,
+        650,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "household_and_archive",
+      "resident_contact": {
+        "id": "MAR-PER-004",
+        "name": "Meren Oss"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-005",
+      "name": "The School That Stays",
+      "district_id": "MAR-D02",
+      "xyz_m": [
+        -3400,
+        100,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "education_and_continuity",
+      "resident_contact": {
+        "id": "MAR-PER-005",
+        "name": "Tarin Mev"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-006",
+      "name": "The Blue Latch Boatroom",
+      "district_id": "MAR-D02",
+      "xyz_m": [
+        -2100,
+        -210,
+        22
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 18.155278,
+      "shore_access_xyz_m": [
+        -2200,
+        -40,
+        28
+      ],
+      "encounter_type": "moored_home_and_theater",
+      "resident_contact": {
+        "id": "MAR-PER-006",
+        "name": "Dara Ruun",
+        "proposed_relationship": "Pella Ruun's sister; separate household and performance work"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented",
+      "support_type": "moored buoyant household vessel",
+      "water_surface_source_channel": "MAR-CH-02",
+      "water_level_method": "Nearest centerline segment linear nominal-height interpolation",
+      "navigation_separation_note": "Near northern Serrit margin, outside intended through lane; final berth clearance and current/mooring engineering unresolved"
+    },
+    {
+      "id": "MAR-POI-007",
+      "name": "High Sill Kitchen",
+      "district_id": "MAR-D03",
+      "xyz_m": [
+        -4500,
+        2600,
+        34
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "shared_cooking_and_friendship",
+      "resident_contact": {
+        "id": "MAR-PER-007",
+        "name": "Nela Torren",
+        "birth_year_AL": 697,
+        "approx_age_earth_standard_years": 40
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-008",
+      "name": "Quiet Height Garden",
+      "district_id": "MAR-D03",
+      "xyz_m": [
+        -5000,
+        3600,
+        36
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "rest_and_care",
+      "resident_contact": {
+        "id": "MAR-PER-008",
+        "name": "Ola Denn"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-009",
+      "name": "Practice Return Hall",
+      "district_id": "MAR-D03",
+      "xyz_m": [
+        -3700,
+        1900,
+        33
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "dance_and_consent",
+      "resident_contact": {
+        "id": "MAR-PER-009",
+        "name": "Kessa Arven"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-010",
+      "name": "Four Glazes Studio",
+      "district_id": "MAR-D04",
+      "xyz_m": [
+        4000,
+        3200,
+        31
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "ceramics_and_taste",
+      "resident_contact": {
+        "id": "MAR-PER-010",
+        "name": "Emra Solt"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-011",
+      "name": "The Deliberately Ugly Shelf",
+      "district_id": "MAR-D04",
+      "xyz_m": [
+        2800,
+        4100,
+        33
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "collecting_and_comedy",
+      "resident_contact": {
+        "id": "MAR-PER-011",
+        "name": "Vessa Irl"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-012",
+      "name": "Taste of the Landing",
+      "district_id": "MAR-D04",
+      "xyz_m": [
+        3000,
+        1900,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "competitive_cooking",
+      "resident_contact": {
+        "id": "MAR-PER-012",
+        "name": "Rovo Tenn"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-013",
+      "name": "The Patient Grain Room",
+      "district_id": "MAR-D05",
+      "xyz_m": [
+        -2800,
+        -1700,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "food_work_and_continuing_story",
+      "resident_contact": {
+        "id": "MAR-PER-013",
+        "name": "Pella Ruun",
+        "continuity_reference": "Pella Ruun in06_POWER_AND_EXCHANGE.md, EX-S02"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-014",
+      "name": "Sixth Bowl Counter",
+      "district_id": "MAR-D05",
+      "xyz_m": [
+        -1400,
+        -2300,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "meal_and_company",
+      "resident_contact": {
+        "id": "MAR-PER-014",
+        "name": "Omi Ressel"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-015",
+      "name": "Empty Sack Court",
+      "district_id": "MAR-D05",
+      "xyz_m": [
+        -3800,
+        -2900,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "sport_and_adaptive_reuse",
+      "resident_contact": {
+        "id": "MAR-PER-015",
+        "name": "Len Aris"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-016",
+      "name": "The Listening Yard",
+      "district_id": "MAR-D06",
+      "xyz_m": [
+        -7100,
+        -2000,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "managed_kettlebarrel_husbandry",
+      "resident_contact": {
+        "id": "MAR-PER-016",
+        "name": "Tessa Mol"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-017",
+      "name": "One Growing Window",
+      "district_id": "MAR-D06",
+      "xyz_m": [
+        -6000,
+        -2700,
+        31
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "household_cultivation",
+      "resident_contact": {
+        "id": "MAR-PER-017",
+        "name": "Fen Oret"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-018",
+      "name": "Warp House",
+      "district_id": "MAR-D06",
+      "xyz_m": [
+        -6500,
+        -3500,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "fiber_and_original_pattern",
+      "resident_contact": {
+        "id": "MAR-PER-018",
+        "name": "Eri Mav"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-019",
+      "name": "The Traveling Room",
+      "district_id": "MAR-D07",
+      "xyz_m": [
+        5000,
+        -200,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "interior_design_and_making",
+      "resident_contact": {
+        "id": "MAR-PER-019",
+        "name": "Rae Ilven"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-020",
+      "name": "Low Wake Slip",
+      "district_id": "MAR-D07",
+      "xyz_m": [
+        5650,
+        -3900,
+        22
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 17.660037,
+      "shore_access_xyz_m": [
+        5900,
+        -3900,
+        28
+      ],
+      "encounter_type": "boat_handling_and_design",
+      "resident_contact": {
+        "id": "MAR-PER-020",
+        "name": "Naro Pell"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented",
+      "support_type": "engineered fixed or articulated slip-side platform; final design unresolved",
+      "water_surface_source_channel": "MAR-CH-01",
+      "water_level_method": "Nearest centerline segment linear nominal-height interpolation"
+    },
+    {
+      "id": "MAR-POI-021",
+      "name": "Skein Evening Room",
+      "district_id": "MAR-D07",
+      "xyz_m": [
+        5800,
+        -1300,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "music_and_friendship",
+      "resident_contact": {
+        "id": "MAR-PER-021",
+        "name": "Ren Orrel"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-022",
+      "name": "Combwater Hide",
+      "district_id": "MAR-D08",
+      "xyz_m": [
+        -3400,
+        -5160,
+        20.5
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "freshwater_native_observation",
+      "resident_contact": {
+        "id": "MAR-PER-022",
+        "name": "Yari Doss"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-023",
+      "name": "The Gentle Dark Garden",
+      "district_id": "MAR-D08",
+      "xyz_m": [
+        -1600,
+        -5800,
+        26
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "habitat_and_intimacy",
+      "resident_contact": {
+        "id": "MAR-PER-023",
+        "name": "Sann Orel"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    },
+    {
+      "id": "MAR-POI-024",
+      "name": "Not the Sea Terrace",
+      "district_id": "MAR-D09",
+      "xyz_m": [
+        7600,
+        -4300,
+        27
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "encounter_type": "travel_reading_and_scale",
+      "resident_contact": {
+        "id": "MAR-PER-024",
+        "name": "Dema Tor"
+      },
+      "implementation_status": "Authored content; no runtime placement, interaction, ownership or schedule implemented"
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "MAR-T01",
+      "name": "Paired Banks interchange",
+      "district_id": "MAR-D01",
+      "xyz_m": [
+        1800,
+        1200,
+        30
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T02",
+      "name": "Return Rooms interchange",
+      "district_id": "MAR-D02",
+      "xyz_m": [
+        -2100,
+        800,
+        29
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T03",
+      "name": "High Sills center",
+      "district_id": "MAR-D03",
+      "xyz_m": [
+        -4500,
+        2800,
+        35
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T04",
+      "name": "Potters' Turn center",
+      "district_id": "MAR-D04",
+      "xyz_m": [
+        3900,
+        3000,
+        32
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T05",
+      "name": "Grain Reach transfer",
+      "district_id": "MAR-D05",
+      "xyz_m": [
+        -3000,
+        -2300,
+        30
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T06",
+      "name": "Trellis End center",
+      "district_id": "MAR-D06",
+      "xyz_m": [
+        -7200,
+        -1900,
+        31
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T07",
+      "name": "Skein Yard interchange",
+      "district_id": "MAR-D07",
+      "xyz_m": [
+        4900,
+        -800,
+        30
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T08",
+      "name": "Low Walks raised-route interchange",
+      "district_id": "MAR-D08",
+      "xyz_m": [
+        -2500,
+        -5700,
+        27
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T09",
+      "name": "Far Landing downstream river gateway",
+      "district_id": "MAR-D09",
+      "xyz_m": [
+        7800,
+        -4200,
+        28
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T10",
+      "name": "Upstream river approach interchange",
+      "district_id": "MAR-D03",
+      "xyz_m": [
+        -5400,
+        3900,
+        37
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T11",
+      "name": "Western regional road and rail gateway",
+      "district_id": "MAR-D06",
+      "xyz_m": [
+        -8800,
+        -2700,
+        35
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    },
+    {
+      "id": "MAR-T12",
+      "name": "Outer Skein urgent-parts apron",
+      "district_id": "MAR-D07",
+      "xyz_m": [
+        6500,
+        -1000,
+        32
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "land_based_interchange",
+      "berth_position": false,
+      "access_note": "Ferry connection requires a real shore route, accessible transfer and navigable berth; node itself is land-based"
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "MAR-L01",
+      "from": "MAR-T03",
+      "to": "MAR-T02",
+      "mode": "tram",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L02",
+      "from": "MAR-T02",
+      "to": "MAR-T01",
+      "mode": "tram",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L03",
+      "from": "MAR-T01",
+      "to": "MAR-T04",
+      "mode": "tram",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L04",
+      "from": "MAR-T01",
+      "to": "MAR-T07",
+      "mode": "tram",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L05",
+      "from": "MAR-T07",
+      "to": "MAR-T09",
+      "mode": "tram",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L06",
+      "from": "MAR-T02",
+      "to": "MAR-T05",
+      "mode": "tram",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L07",
+      "from": "MAR-T05",
+      "to": "MAR-T06",
+      "mode": "tram",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L08",
+      "from": "MAR-T05",
+      "to": "MAR-T08",
+      "mode": "bus",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L09",
+      "from": "MAR-T08",
+      "to": "MAR-T09",
+      "mode": "bus",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L10",
+      "from": "MAR-T03",
+      "to": "MAR-T10",
+      "mode": "road",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L11",
+      "from": "MAR-T06",
+      "to": "MAR-T11",
+      "mode": "road",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L12",
+      "from": "MAR-T11",
+      "to": "MAR-T05",
+      "mode": "rail",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L13",
+      "from": "MAR-T05",
+      "to": "MAR-T09",
+      "mode": "rail",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L14",
+      "from": "MAR-T09",
+      "to": "MAR-T07",
+      "mode": "rail",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L15",
+      "from": "MAR-T07",
+      "to": "MAR-T12",
+      "mode": "road",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L16",
+      "from": "MAR-T10",
+      "to": "MAR-T02",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved",
+      "berth_and_access_legs_required": true,
+      "line_is_navigable_geometry": false
+    },
+    {
+      "id": "MAR-L17",
+      "from": "MAR-T02",
+      "to": "MAR-T01",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved",
+      "berth_and_access_legs_required": true,
+      "line_is_navigable_geometry": false
+    },
+    {
+      "id": "MAR-L18",
+      "from": "MAR-T01",
+      "to": "MAR-T09",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved",
+      "berth_and_access_legs_required": true,
+      "line_is_navigable_geometry": false
+    },
+    {
+      "id": "MAR-L19",
+      "from": "MAR-T02",
+      "to": "MAR-T05",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved",
+      "berth_and_access_legs_required": true,
+      "line_is_navigable_geometry": false
+    },
+    {
+      "id": "MAR-L20",
+      "from": "MAR-T03",
+      "to": "MAR-T04",
+      "mode": "bus",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L21",
+      "from": "MAR-T06",
+      "to": "MAR-T08",
+      "mode": "bus",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L22",
+      "from": "MAR-T01",
+      "to": "MAR-T04",
+      "mode": "walking",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    },
+    {
+      "id": "MAR-L23",
+      "from": "MAR-T07",
+      "to": "MAR-T09",
+      "mode": "walking",
+      "status": "Service dependency; alignment, capacity, bridge clearance and accessible gradients unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 145,
+    "other_potable_m3_per_turn": 42850,
+    "delivered_potable_m3_per_turn": 140000,
+    "network_loss_fraction": 0.2,
+    "network_input_m3_per_turn": 175000,
+    "edible_product_kg_per_person_per_turn": 1.7,
+    "edible_product_tonnes_per_turn": 1139,
+    "electric_average_mw": 460,
+    "electric_peak_mw": 840,
+    "scope": "Demand assumptions in24-hour civil turns; productive yield, reliability and nutrition unverified; network input is treated water entering distribution, raw treatment separate"
+  },
+  "unresolved": [
+    "Surveyed terrain, bank slopes, bathymetry and bed elevations",
+    "Serrit and Low Cut catchments and seasonal flow",
+    "Neris discharge, flood probabilities, levee/raised-ground performance and erosion",
+    "Bridge positions, vessel clearances, berth capacity and ferry access legs",
+    "Raw-source yield, treatment envelope and upstream/downstream discharge influence",
+    "Pressure zones, pumps, elevated storage engineering and failure cases",
+    "Nutrition, crop yields, processing losses, supplier capacities and reserve funding",
+    "Regional generating contracts, fuel supply and long-night dispatch reliability",
+    "Freight unique-tonne versus repeated-handling definitions",
+    "POI access permissions, household schedules and native habitat conditions",
+    "All runtime construction, interaction, object ownership and persistence"
+  ],
+  "housing_screen": {
+    "dwellings": 260000,
+    "occupied_fraction": 0.96,
+    "persons_per_occupied_dwelling": 2.68,
+    "implied_residents": 668928,
+    "residential_parcels_km2": 27,
+    "building_coverage_fraction": 0.3,
+    "effective_residential_floors": 3.2,
+    "gross_residential_floor_m2": 25920000,
+    "usable_fraction": 0.8,
+    "usable_floor_m2": 20736000,
+    "usable_m2_per_dwelling": 79.753846,
+    "status": "Screening assumptions only; household boats count in dwellings rather than adding free capacity"
+  },
+  "land_allocation_km2": {
+    "residential": 27,
+    "employment_freight": 17,
+    "civic": 8,
+    "streets_transit": 20,
+    "parks_recreation_growing": 18,
+    "water_berths": 8,
+    "reserves_other_open": 12
+  },
+  "water_accounting": {
+    "domestic_delivered_m3_per_turn": 97150,
+    "network_input_is_treated_water": true,
+    "illustrative_raw_to_treated_recovery_fraction": 0.95,
+    "illustrative_raw_abstraction_m3_per_turn": 184210.526316,
+    "illustrative_treatment_residual_m3_per_turn": 9210.526316,
+    "network_loss_m3_per_turn": 35000,
+    "reclaimed_reuse_m3_per_turn": 35000,
+    "gross_end_use_delivery_m3_per_turn": 175000,
+    "sewer_collection_m3_per_turn": 125000,
+    "net_consumption_or_uncollected_m3_per_turn": 50000,
+    "final_treated_residual_m3_per_turn_before_explicit_treatment_losses": 90000,
+    "sewer_works_count": 2,
+    "each_nominal_sewer_capacity_m3_per_turn": 80000,
+    "combined_nominal_sewer_capacity_m3_per_turn": 160000,
+    "pressure_tank_reference_water_levels_m": [
+      75,
+      82
+    ],
+    "pumping_required": true,
+    "catchment_limit": "Lost and uncollected flow may re-enter catchment; these accounts do not establish net basin depletion",
+    "unverified": [
+      "abstraction yield and rights",
+      "raw quality",
+      "sewer peak capacity",
+      "one-works-out service",
+      "pump backup",
+      "storage volume and pressure hydraulics"
+    ]
+  },
+  "food_accounting": {
+    "resident_product_tonnes_per_turn": 1139,
+    "resident_product_basket_tonnes_per_turn": {
+      "dry": 410,
+      "fresh": 500,
+      "cultured_or_fermented": 155,
+      "other_preserved_oils_condiments": 74
+    },
+    "kcal_per_person_per_turn": 2500,
+    "resident_kcal_per_turn": 1675000000,
+    "protein_g_per_person_per_turn": 75,
+    "resident_protein_tonnes_per_turn": 50.25,
+    "illustrative_dry_equivalent_kcal_per_kg": 3200,
+    "dry_calorie_equivalent_tonnes_per_turn": 523.4375,
+    "reserve_target_civil_turns": 60,
+    "reserve_dry_calorie_equivalent_tonnes": 31406.25,
+    "regional_orison_commitment": {
+      "destination_city_id": "CITY-001",
+      "destination_city_name": "Orison",
+      "source": "Nine River producers consolidated through Marroway AND neighboring ports",
+      "product_tonnes_per_turn": {
+        "dry": 170,
+        "fresh": 145,
+        "cultured": 35,
+        "qualified_native": 0,
+        "other": 10
+      },
+      "total_tonnes_per_turn": 360,
+      "additional_to_marroway_resident_demand": true,
+      "part_of_orison_core_700t_case": true,
+      "not_total_regional_output": true,
+      "not_all_through_one_marroway_quay": true
+    },
+    "nutrient_adequacy_established": false,
+    "native_food_rule": "No default native protein edibility; any fraction is species/tissue qualified and processed",
+    "culture_accounting": "Feedstocks remain in balance; cultures do not create primary calories"
+  },
+  "energy_screen": {
+    "connection_rating_candidate_mw": 650,
+    "local_dispatchable_candidate_mw": 210,
+    "photovoltaic_candidate_mwp": 460,
+    "regional_wind_candidate_mw": 250,
+    "storage_candidate_gwh": 20,
+    "storage_discharge_candidate_mw": 220,
+    "nominal_longest_night_hours": 69.1,
+    "illustrative_120mw_deficit_gwh_before_losses": 8.292,
+    "illustrative_350mw_deficit_gwh_before_losses": 24.185,
+    "firm_coverage_claim": false,
+    "local_hydro_credited_mw": 0,
+    "heat_service": "Separate heat recovery, humidity control, cooling and thermal-storage design",
+    "status": "Portfolio to study, not installed capacity or reliability guarantee"
+  },
+  "waste_and_freight": {
+    "municipal_waste_kg_per_person_per_turn": 0.75,
+    "municipal_waste_tonnes_per_turn": 502.5,
+    "waste_excludes": "Major industrial and construction streams",
+    "unique_cargo_study_tonnes_per_turn_range": [
+      7000,
+      11000
+    ],
+    "cargo_accounting": "Repeated terminal handling must not be counted as additional unique cargo when comparing this study range",
+    "capacity_established": false
+  },
+  "sky": {
+    "natural_solar_cycle_hours": 136.755,
+    "civil_turn_hours": 24,
+    "rauth_reference_azimuth_deg": 262.827374,
+    "rauth_reference_elevation_deg": 60.749199,
+    "rauth_direction": "west, slightly south",
+    "longest_nominal_night_hours": 69.1,
+    "status": "Reference geometry; cloud, local horizon and actual illumination vary",
+    "rauth_direction_model": "Distant-center body-fixed directional approximation; finite observer-to-parent geometry and libration require almanac refinement"
+  },
+  "regional_links": [
+    {
+      "city_id": "CITY-001",
+      "city_name": "Orison",
+      "relationship": "Nine River food customer; repair assemblies and optical/technical service supplier",
+      "route_constraint": "River downstream to coastal transfer, then actual coastal route; shortest1342km city separation is not navigable route length"
+    },
+    {
+      "city_id": "CITY-012",
+      "city_name": "Sola",
+      "relationship": "Aster exchange, visiting households, touring performance and crews",
+      "route_constraint": "Coastal transfer and ocean passage after river travel; no direct sea port at Marroway"
+    },
+    {
+      "city_id": "CITY-004",
+      "city_name": "Serein",
+      "relationship": "Design, enclosure and interior expertise and components",
+      "route_constraint": "Actual Kesh corridor and carrier selection unmodeled"
+    },
+    {
+      "city_id": "CITY-003",
+      "city_name": "Hesh",
+      "relationship": "Specialist equipment, selected dryland products and exchange services",
+      "route_constraint": "Actual regional road/rail/carrier routing unmodeled"
+    },
+    {
+      "city_id": "CITY-009",
+      "city_name": "Tern",
+      "relationship": "Repair expertise and selected marine-grade components",
+      "route_constraint": "Coastal transshipment, then long surface or specialist freight route"
+    }
+  ],
+  "river_source_boundary": {
+    "source_control_lon_lat_altitude_m": [
+      29,
+      4,
+      18
+    ],
+    "source_mouth_lon_lat_altitude_m": [
+      32,
+      1,
+      0
+    ],
+    "city_mouth_spherical_lower_bound_km": 436.65052,
+    "actual_river_route_longer": true,
+    "city_is_coastal_port": false,
+    "local_channels_newly_proposed": [
+      "MAR-CH-02",
+      "MAR-CH-03"
+    ],
+    "ecology_exclusions": [
+      "No default inland duskfold",
+      "No freshwater threadglass",
+      "No inland basinbell colony",
+      "No marine scenery or ocean surf"
+    ]
+  }
+}

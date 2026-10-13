@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "edition": "0.1",
+  "status": "travel study; distances are lower bounds or declared local assumptions, not navigable routes or timetables",
+  "civil_turn_hours": 24,
+  "solar_cycle_hours": 136.755,
+  "radius_km": 5900,
+  "surface_gravity_m_s2": 8.629852,
+  "modes": [
+    {
+      "id": "WALK",
+      "label": "Walking comparison",
+      "km_per_hour": 4.5
+    },
+    {
+      "id": "COACH",
+      "label": "Moving coach comparison",
+      "km_per_hour": 60
+    },
+    {
+      "id": "RAIL",
+      "label": "Moving regional train comparison",
+      "km_per_hour": 120
+    },
+    {
+      "id": "RIVER",
+      "label": "Still-water river freight comparison",
+      "km_per_hour": 18
+    },
+    {
+      "id": "SEA",
+      "label": "Sea freight comparison",
+      "km_per_hour": 42
+    },
+    {
+      "id": "AIR",
+      "label": "Regional air groundspeed comparison",
+      "km_per_hour": 650
+    }
+  ],
+  "route_ids": [
+    "ROUTE-001",
+    "ROUTE-002",
+    "ROUTE-003",
+    "ROUTE-004",
+    "ROUTE-005",
+    "ROUTE-006",
+    "ROUTE-007",
+    "ROUTE-008",
+    "ROUTE-009",
+    "ROUTE-010",
+    "ROUTE-011",
+    "ROUTE-012",
+    "ROUTE-013"
+  ],
+  "cases": [
+    {
+      "id": "MOB-001",
+      "name": "A two-kilometer local walk",
+      "mode_id": "WALK",
+      "geometry": {
+        "kind": "declared_local_length",
+        "km": 2
+      },
+      "fixed_hours": 0,
+      "qualification": "Illustrative route length; terrain, pauses and individual pace vary."
+    },
+    {
+      "id": "MOB-002",
+      "name": "Orison to Marroway air comparison",
+      "mode_id": "AIR",
+      "geometry": {
+        "kind": "city_pair_lower_bound",
+        "from": "CITY-001",
+        "to": "CITY-002"
+      },
+      "fixed_hours": 1.5,
+      "qualification": "1.5h assumed handling/access; no route range, airfields or available service proven."
+    },
+    {
+      "id": "MOB-003",
+      "name": "Marroway to Neris mouth river comparison",
+      "mode_id": "RIVER",
+      "geometry": {
+        "kind": "river_controls_lower_bound",
+        "river_id": "RIV-001",
+        "from_index": 3,
+        "to_index": 4
+      },
+      "fixed_hours": 0,
+      "qualification": "Direct endpoint distance excludes channel bends, current and handling; source water drops18m, not a sea approach at city center."
+    },
+    {
+      "id": "MOB-004",
+      "name": "Sola to Aven air comparison",
+      "mode_id": "AIR",
+      "geometry": {
+        "kind": "city_pair_lower_bound",
+        "from": "CITY-012",
+        "to": "CITY-006"
+      },
+      "fixed_hours": 2,
+      "qualification": "2h assumed access/handling; Aven is inland, and range/landing/weather remain unproven."
+    },
+    {
+      "id": "MOB-005",
+      "name": "Orison to Talweir direct air comparison",
+      "mode_id": "AIR",
+      "geometry": {
+        "kind": "city_pair_lower_bound",
+        "from": "CITY-001",
+        "to": "CITY-005"
+      },
+      "fixed_hours": 1.5,
+      "qualification": "1.5h handling assumption; does not establish nonstop capability, reserve or a timetable."
+    },
+    {
+      "id": "MOB-006",
+      "name": "Tern to Velis sea comparison",
+      "mode_id": "SEA",
+      "geometry": {
+        "kind": "city_pair_lower_bound",
+        "from": "CITY-009",
+        "to": "CITY-010"
+      },
+      "fixed_hours": 4,
+      "qualification": "4h assumed handling; coast-following course, entrance depths, currents and weather still needed."
+    },
+    {
+      "id": "MOB-007",
+      "name": "Merrow to Tern seam-crossing comparison",
+      "mode_id": "SEA",
+      "geometry": {
+        "kind": "city_pair_lower_bound",
+        "from": "CITY-008",
+        "to": "CITY-009"
+      },
+      "fixed_hours": 4,
+      "qualification": "Shortest spherical separation crosses longitude seam; no navigable alignment or refueling chain inferred."
+    },
+    {
+      "id": "MOB-008",
+      "name": "Talweir local navigation timing study",
+      "mode_id": "RIVER",
+      "geometry": {
+        "kind": "declared_local_length",
+        "km": 20
+      },
+      "fixed_hours": 0.9,
+      "qualification": "20km rounded local course assumption plus two21-minute lock cycles and12minutes other handling; study values, not demonstrated lock operation."
+    }
+  ],
+  "orbit_example": {
+    "height_km": 300,
+    "mass_kg_for_energy_comparison": 10000,
+    "qualification": "Hypothetical circular two-body orbit, not Mirror Ring altitude. Ignores surface rotation, atmosphere, parent perturbations, propulsion losses and changing vehicle mass."
+  },
+  "unresolved": [
+    "Actual routes and topography/bathymetry",
+    "Vehicle performance, range, propellant and reserves",
+    "Operators and schedules",
+    "Weather and refuge coverage",
+    "Exact Mirror Ring orbit and ship ascent design",
+    "Runtime geographic and persistence proof"
+  ]
+}
