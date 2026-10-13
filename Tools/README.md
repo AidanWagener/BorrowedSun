@@ -98,7 +98,9 @@ If submission returns no confirmed ID, the state remains `unknown`; never resubm
 
 ## Gameplay and tooling tests
 
-The expected smoke suite now contains 17 tests. Three object-ledger tests cover real isolated SaveGame slots, collection custody, repeated placement/reload, failed writes, stale sessions and malformed checkpoint recovery. Run `Tools/Test.ps1 -Execute -NullRHI` after compiling. They qualify the [persistence foundation](../Docs/Operations/OBJECT_LEDGER_2026-10-13.md), not physical carrying or rendered object behavior.
+The expected smoke suite now contains 19 tests. Three object-ledger tests cover real isolated SaveGame slots, collection custody, repeated placement/reload, failed writes, stale sessions and malformed checkpoint recovery. Two additional tests use real physics worlds for carry, rotation, throwing, resting poses, occlusion, interrupted grips and collection failures. Run `Tools/Test.ps1 -Execute -NullRHI` after compiling. See the [object court evidence](../Docs/Operations/OBJECT_COURT_2026-10-13.md); these tests use an engine-cube fixture and do not replace rendered qualification of the ten final props.
+
+`Tools/Art/Build-InteractionProps.py` runs in the pinned Blender to create ten original hand props and 61 authored collision hulls. `Tools/Author-InteractionArt.ps1 -Execute` verifies source hashes and imports them through Unreal, including the separate `L_ObjectLab` map. Use `-Force` only for deliberate regeneration of these owned packages. Builds, imports and active source-project game sessions must remain serial.
 
 Player packages use `Tools/Build.ps1 -Mode Package -Configuration Shipping -Execute`; the Editor target remains Development. `Tools/Demo.ps1 -UserDirectory <isolated-root>` passes Unreal's player-data override and derives the correct validation report path for that root. This keeps QA preferences and checkpoints separate from normal play. For pacing measurement, use `-Mode Validate -MeasureFrames`; it requires the 60 FPS target and both routes, and rejects combining measurement with `-Screenshots`. The generated JSON includes sample counts and percentiles; it does not measure GPU work separately.
 

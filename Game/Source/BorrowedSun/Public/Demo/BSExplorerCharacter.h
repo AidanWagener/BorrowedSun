@@ -5,6 +5,7 @@
 #include "BSExplorerCharacter.generated.h"
 
 class UCameraComponent;
+class UBSCarryComponent;
 
 /** First-person walking pawn; input bindings live in the demo player controller. */
 UCLASS()
@@ -23,8 +24,12 @@ public:
     void LookPitch(float Degrees);
     void SetSprinting(bool bEnabled);
     UCameraComponent* GetViewCamera() const { return ViewCamera; }
+    UBSCarryComponent* GetCarryComponent() const { return Carry; }
 
 private:
+    UPROPERTY(VisibleAnywhere, Category = "Interaction")
+    TObjectPtr<UBSCarryComponent> Carry;
+
     UPROPERTY(VisibleAnywhere, Category = "View")
     TObjectPtr<UCameraComponent> ViewCamera;
 

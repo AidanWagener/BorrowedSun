@@ -58,7 +58,7 @@ The current verified player build is the **Second Dawn workshop Shipping preview
 
 The newer [workshop surface pass](Docs/Operations/WORKSHOP_SURFACES_2026-10-13.md) has a committed source checkpoint and a hash-verified Shipping candidate in `../BorrowedSunWorkshopSurfaces`. It corrects wood grain and adds authored contact polish and dirt. Both mission routes and checkpoints passed 40 offscreen rendered checks; four of 12 captured views have been visually reviewed. Normal-window presentation and a new frame-pacing run remain pending. [Preview Workshop Surfaces](../Preview_Workshop_Surfaces.cmd) opens this candidate with separate player data; the ordinary launcher still selects the fully measured build above.
 
-Source development also includes an [ordinary-prop persistence foundation](Docs/Operations/OBJECT_LEDGER_2026-10-13.md), with 17 smoke tests passing. Saved movement and collection custody have been tested using ten distinct data records and actual disk reloads. Actor reconstruction, pickup, throwing and player-facing collection are still to be implemented; this foundation is not in the delivered player packages.
+Source development now includes a [physical object court](Docs/Operations/OBJECT_COURT_2026-10-13.md), with 19 smoke tests passing. Ten original props are imported into a separate map, with pickup, rotation, throwing, collection and persistent actor reconstruction. Actual physics tests cover the shared interaction implementation; rendered qualification of all ten final meshes and their integration into the main city remain in progress. This work is not yet in the delivered Shipping packages.
 
 The first Orison block implements the approved Brass Sanctuary direction: warm masonry, indigo awnings, copper roofs, market props and the Lantern Keeper silhouette. [Asset provenance and authoring instructions](Docs/Art/ART_DIRECTION.md) distinguish imported scans from original meshes. Night and rain are future Indigo Monsoon studies. Screenshot validation also captures six art review views after both mission routes, including the workshop frontage and counter.
 
@@ -74,7 +74,7 @@ The additional [framework research](Docs/Research/Framework_Research.md) assesse
 
 ## Source control and portability
 
-This delivered workspace is locally initialized with Git and repository-local LFS configuration when indicated by the validation record. No remote is created. The portable ZIP includes materialized game assets and the reviewed CC0 source files; it excludes `.git`, local environment settings, artifacts and engine binaries. After unpacking, run `git init -b main` then `git lfs install --local`; create your first reviewed commit. Fill local engine configuration from the example before execution.
+The GitHub repository is [AidanWagener/BorrowedSun](https://github.com/AidanWagener/BorrowedSun). Authored Unreal assets, Blender/FBX source and source images use Git LFS. Clone with Git LFS installed and run `git lfs pull` before building. Fill ignored local engine configuration from the example before execution. Engine binaries, generated caches, local player saves and credentials are excluded. Historical portable ZIPs are separate snapshots and do not track subsequent repository changes.
 
 For sustained production prefer a short path such as `C:\Dev\BorrowedSun` on a suitable disk. Clone/copy deliberately; do not run the same game project in two editors. Do not put the active source checkout inside consumer file sync. Keep off-device backups and practice restoring the actual LFS payloads, not just Git pointers.
 

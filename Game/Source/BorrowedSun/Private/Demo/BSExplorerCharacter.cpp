@@ -4,9 +4,11 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
+#include "Objects/BSCarryComponent.h"
 
 ABSExplorerCharacter::ABSExplorerCharacter()
 {
+    Carry = CreateDefaultSubobject<UBSCarryComponent>(TEXT("Carry"));
     GetCapsuleComponent()->InitCapsuleSize(42.0f, 96.0f);
     BaseEyeHeight = 72.0f;
     bUseControllerRotationYaw = true;
@@ -77,6 +79,7 @@ void ABSExplorerCharacter::SetSprinting(bool bEnabled)
 
 void ABSExplorerCharacter::UnPossessed()
 {
+    Carry->Release(false);
     StopJumping();
     ConsumeMovementInputVector();
     GetCharacterMovement()->StopMovementImmediately();

@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "units": "centimetres",
+  "definitionRevision": 1,
+  "origin": "Original procedural geometry authored for Borrowed Sun; no external geometry inputs.",
+  "generator": "Tools/Art/Build-InteractionProps.py",
+  "blend": "SourceArt/InteractionProps/InteractionProps.blend",
+  "blendSha256": "471f271366ed582ad94da6ba35a5a12ed10fc9d447a0d6cf75dd1383ede8eace",
+  "assets": [
+    {
+      "name": "SM_HandCup",
+      "label": "Enamel tea cup",
+      "massKg": 0.28,
+      "path": "SourceArt/InteractionProps/SM_HandCup.fbx",
+      "triangles": 2724,
+      "collisionHulls": 14,
+      "dimensionsCm": [
+        11.100000381469727,
+        8.0,
+        9.0
+      ],
+      "materials": [
+        "Enamel",
+        "Brass"
+      ],
+      "sha256": "702f0f64ce379c265c2a0ae1397ba25886db437f2974a2e80bf50c6414dd28b5"
+    },
+    {
+      "name": "SM_HandBowl",
+      "label": "Glazed sharing bowl",
+      "massKg": 0.65,
+      "path": "SourceArt/InteractionProps/SM_HandBowl.fbx",
+      "triangles": 2744,
+      "collisionHulls": 12,
+      "dimensionsCm": [
+        20.0,
+        20.0,
+        6.5
+      ],
+      "materials": [
+        "Ivory",
+        "Copper",
+        "Enamel"
+      ],
+      "sha256": "0cf7eb377a4025613d9c7d8129e78e2fac086a9a28ea0567fc29e1c6fdbb0f0d"
+    },
+    {
+      "name": "SM_HandLantern",
+      "label": "Caged service lantern",
+      "massKg": 1.1,
+      "path": "SourceArt/InteractionProps/SM_HandLantern.fbx",
+      "triangles": 2448,
+      "collisionHulls": 8,
+      "dimensionsCm": [
+        13.399999618530273,
+        13.399999618530273,
+        26.297727584838867
+      ],
+      "materials": [
+        "Brass",
+        "MilkGlass",
+        "Enamel"
+      ],
+      "sha256": "8f08c875b450a71f3a4a19598b31d28fe636a6d0c353053bd417c980f0dc1980"
+    },
+    {
+      "name": "SM_HandTool",
+      "label": "Insulated service spanner",
+      "massKg": 0.55,
+      "path": "SourceArt/InteractionProps/SM_HandTool.fbx",
+      "triangles": 1692,
+      "collisionHulls": 4,
+      "dimensionsCm": [
+        6.0,
+        1.7999999523162842,
+        21.5
+      ],
+      "materials": [
+        "Iron",
+        "Enamel",
+        "Brass"
+      ],
+      "sha256": "5b91c075e56f85b4059508d6a68d47dc07f78a472c450ec2f8eb0b707e3be3f9"
+    },
+    {
+      "name": "SM_HandCell",
+      "label": "Ordinary workshop power cell",
+      "massKg": 0.8,
+      "path": "SourceArt/InteractionProps/SM_HandCell.fbx",
+      "triangles": 4908,
+      "collisionHulls": 2,
+      "dimensionsCm": [
+        7.699698448181152,
+        7.699999809265137,
+        13.0
+      ],
+      "materials": [
+        "Enamel",
+        "Brass",
+        "Copper",
+        "Ivory"
+      ],
+      "sha256": "9a9bf2e63e3f2acac505a2f4db3ec981262140a14d26cf78179b18d87ea24134"
+    },
+    {
+      "name": "SM_HandCrate",
+      "label": "Small strapped parts crate",
+      "massKg": 3.2,
+      "path": "SourceArt/InteractionProps/SM_HandCrate.fbx",
+      "triangles": 6016,
+      "collisionHulls": 1,
+      "dimensionsCm": [
+        28.600000381469727,
+        22.75,
+        21.399999618530273
+      ],
+      "materials": [
+        "Wood",
+        "Copper",
+        "Enamel",
+        "Ivory"
+      ],
+      "sha256": "0ff769c225ffec6f1979fca2d47cf5f44d0291550d89d1987800e5f6d40ba26f"
+    },
+    {
+      "name": "SM_HandBasket",
+      "label": "Woven parts basket",
+      "massKg": 0.45,
+      "path": "SourceArt/InteractionProps/SM_HandBasket.fbx",
+      "triangles": 12560,
+      "collisionHulls": 16,
+      "dimensionsCm": [
+        19.64798927307129,
+        19.64798927307129,
+        20.508132934570312
+      ],
+      "materials": [
+        "Wood"
+      ],
+      "sha256": "45042b9263c37f16a72ae55af97d145e2d1c773bc048fd39b9bfdd05fdecaa64"
+    },
+    {
+      "name": "SM_HandBottle",
+      "label": "Stoppered ceramic flask",
+      "massKg": 0.9,
+      "path": "SourceArt/InteractionProps/SM_HandBottle.fbx",
+      "triangles": 4064,
+      "collisionHulls": 2,
+      "dimensionsCm": [
+        8.799758911132812,
+        8.799999237060547,
+        21.0
+      ],
+      "materials": [
+        "Enamel",
+        "Wood",
+        "Brass",
+        "Copper",
+        "Ivory"
+      ],
+      "sha256": "66a09379cfbe08eb099d1e78f9bc08cc35785534fa19d8090315028ed9a7e582"
+    },
+    {
+      "name": "SM_HandBook",
+      "label": "Repair ledger",
+      "massKg": 0.7,
+      "path": "SourceArt/InteractionProps/SM_HandBook.fbx",
+      "triangles": 3008,
+      "collisionHulls": 1,
+      "dimensionsCm": [
+        13.699999809265137,
+        18.0,
+        4.940000057220459
+      ],
+      "materials": [
+        "Ivory",
+        "Enamel",
+        "Shadow",
+        "Brass",
+        "Copper"
+      ],
+      "sha256": "9457810fb7bdd741e88182407f92ed524fcc9d86e7cb50d7d874d2fd8cec26ee"
+    },
+    {
+      "name": "SM_HandBundle",
+      "label": "Tied cloth parcel (rigid)",
+      "massKg": 1.4,
+      "path": "SourceArt/InteractionProps/SM_HandBundle.fbx",
+      "triangles": 1116,
+      "collisionHulls": 1,
+      "dimensionsCm": [
+        23.600000381469727,
+        16.5,
+        13.199999809265137
+      ],
+      "materials": [
+        "Enamel",
+        "Ivory",
+        "Copper",
+        "Brass"
+      ],
+      "sha256": "4c650702b2ee13f9a578b463405e26fd3b969b897e01aec3f88ea1308355b7f9"
+    }
+  ]
+}
