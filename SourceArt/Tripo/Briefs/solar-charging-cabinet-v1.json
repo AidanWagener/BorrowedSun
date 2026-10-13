@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "solar-charging-cabinet-v1",
+  "prompt": "Original Brass Sanctuary science-fiction craft object: indigo enamel, aged warm brass, restrained verdigris, ivory ceramic, believable hand-built construction. Photoreal PBR, subtle localized wear, no cartoon exaggeration. A wall-mounted repair-shop solar charging cabinet. Narrow vertical rectangular indigo enamel enclosure with a rounded copper rain hood, two large ivory analog gauges behind glass, three recessed cylindrical battery charging wells along the lower front, sturdy side hinges, visible screws and one lever switch. A shallow bas-relief moth insignia on the upper front. Fully modeled back plate and mounting lugs, clean usable silhouette, no cables floating in air, no text or lettering, no wall or scene.",
+  "model": "tripo-v3.1",
+  "seed": 41002,
+  "params": {
+    "face_limit": 50000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "wall-mounted utility",
+    "targetDimensionsCm": [
+      55,
+      22,
+      85
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}

@@ -14,6 +14,7 @@ $sources+=@($kit.assets)
 $cloth=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/Generated/IndigoSunWeave.provenance.json') -Raw | ConvertFrom-Json
 $sources+=@([pscustomobject]@{path='SourceArt/Generated/IndigoSunWeave.png';sha256=$cloth.sha256})
 $workshop=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/LanternWorkshop/workshop-manifest.json') -Raw | ConvertFrom-Json
+if($workshop.materialCount -ne 7){throw 'Workshop manifest must declare the seven authored workshop materials.'}
 $sources+=@($workshop.assets)+@($workshop.files)
 foreach($source in $sources) {
     $file=Resolve-ContainedPath $ctx.Root $source.path
@@ -37,7 +38,7 @@ try {
     $expected=1+9+$kit.assetCount
     foreach($asset in $register.assets){foreach($mat in $asset.materials){$expected+=@($mat.maps.PSObject.Properties).Count;if($asset.type -eq 'model'){$expected++}};if($asset.type -eq 'model'){$expected++}}
     if($WorkshopOnly){$expected=0}
-    $expected+=5+$workshop.assetCount
+    $expected+=1+$workshop.materialCount+$workshop.assetCount
     $paths=@($report.assets | Sort-Object -Unique)
     if($report.success -ne $true -or $report.assetCount -ne $expected -or $paths.Count -ne $expected){throw ('Market report is incomplete. Expected '+$expected+'; found '+$paths.Count)}
     $content=Join-Path (Split-Path $ctx.Project -Parent) 'Content'

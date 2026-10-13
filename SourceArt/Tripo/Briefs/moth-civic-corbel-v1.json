@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "moth-civic-corbel-v1",
+  "prompt": "Original Brass Sanctuary architectural craft: warm pale sandstone, restrained aged-brass inlay, believable hand-carved construction. Photoreal PBR, subtle localized weathering, no cartoon exaggeration. A single architectural corbel carved from warm pale sandstone, an abstract folded moth supporting a rectangular stone shelf. Broad symmetrical wings wrap along each side of a tapered bracket; central oval sun medallion and deep stepped relief borders. Flat vertical back mounting plane, square load-bearing top, complete closed volume. Crisp chisel-cut planes, chipped exposed corners, dust only in recesses. No face, no human deity, no building, no pedestal beyond the corbel itself.",
+  "model": "tripo-v3.1",
+  "seed": 41005,
+  "params": {
+    "face_limit": 60000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "custom architectural ornament",
+    "targetDimensionsCm": [
+      48,
+      38,
+      72
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}

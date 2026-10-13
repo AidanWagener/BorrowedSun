@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "batch": "Brass Sanctuary first qualification set",
+  "createdAt": "2026-10-13",
+  "authorization": "Use existing credits for project assets; user approved",
+  "generationRoute": "Tripo Studio browser UI, private generation",
+  "creditPool": "Existing Studio subscription; independent of API balance",
+  "credits": {
+    "startingStudioBalance": 3200,
+    "chargedForFourCandidates": 220,
+    "lastObservedStudioBalance": 2980,
+    "newMoneySpent": 0
+  },
+  "studioSeedPolicy": "Seed values in briefs are proposed API settings. Studio did not expose or apply those seeds.",
+  "termsReviewedAt": "2026-10-13",
+  "termsUrl": "https://www.tripo3d.ai/terms",
+  "privacyUrl": "https://www.tripo3d.ai/privacy",
+  "licenseStatus": "User reports Studio subscription; record applicable Studio commercial rights and tier before production acceptance",
+  "assets": [
+    {
+      "id": "moth-service-lantern-v1",
+      "brief": "SourceArt/Tripo/Briefs/moth-service-lantern-v1.json",
+      "seed": 41001,
+      "status": "GeneratedAwaitingLocalExport",
+      "studioModelId": "35622150-77b5-44b2-87df-8592bc71de3b",
+      "studioUrl": "https://studio.tripo3d.ai/workspace/generate/35622150-77b5-44b2-87df-8592bc71de3b",
+      "creditsCharged": 55,
+      "facesObservedInStudio": 47074,
+      "verticesObservedInStudio": 28141,
+      "exportState": "Studio reports successful export; embedded browser download event times out; no local model bytes verified yet",
+      "observedBalanceAfter": 3145,
+      "actualSettings": {
+        "model": "H3.1",
+        "ultraMeshQuality": true,
+        "polycountRequested": 50000,
+        "textureResolution": "4K",
+        "removeLighting": true,
+        "pbr": true,
+        "topology": "Triangle",
+        "privacy": "Private",
+        "seedExposedByUi": false
+      },
+      "seedNote": "Brief seed is reserved for API; Studio UI did not expose or apply it.",
+      "briefSha256": "562B4FA79DC063D65ECE4DF1F06434A18D523DCDEFC755233AA9A267ADA96034"
+    },
+    {
+      "id": "solar-charging-cabinet-v1",
+      "brief": "SourceArt/Tripo/Briefs/solar-charging-cabinet-v1.json",
+      "seed": 41002,
+      "status": "GeneratedAwaitingLocalExport",
+      "studioModelId": "e9349668-6acc-47d8-b406-1fbf3e0f40bf",
+      "studioUrl": "https://studio.tripo3d.ai/workspace/generate/e9349668-6acc-47d8-b406-1fbf3e0f40bf",
+      "creditsCharged": 55,
+      "facesObservedInStudio": 44265,
+      "verticesObservedInStudio": 26651,
+      "observedBalanceAfter": 3090,
+      "actualSettings": {
+        "model": "H3.1",
+        "ultraMeshQuality": true,
+        "polycountRequested": 50000,
+        "textureResolution": "4K",
+        "removeLighting": true,
+        "pbr": true,
+        "topology": "Triangle",
+        "privacy": "Private",
+        "seedExposedByUi": false
+      },
+      "briefSha256": "FC400EEA660C126992EDEC2B22200B89DC7A9C6703E147E722A0C2B6B674C1DC"
+    },
+    {
+      "id": "repair-meter-v1",
+      "brief": "SourceArt/Tripo/Briefs/repair-meter-v1.json",
+      "seed": 41003,
+      "status": "GeneratedAwaitingLocalExport",
+      "studioModelId": "b520cd00-c6b0-4153-b0ae-eb715cc0f396",
+      "studioUrl": "https://studio.tripo3d.ai/workspace/generate/b520cd00-c6b0-4153-b0ae-eb715cc0f396",
+      "creditsCharged": 55,
+      "observedBalanceAfter": 3035,
+      "actualSettings": {
+        "model": "H3.1",
+        "ultraMeshQuality": true,
+        "polycountRequested": 35000,
+        "textureResolution": "4K",
+        "removeLighting": true,
+        "pbr": true,
+        "topology": "Triangle",
+        "privacy": "Private",
+        "seedExposedByUi": false
+      },
+      "briefSha256": "4E71B9168FABDA2F79BE4466F75F6428BBBC754CE7E14FCAEC3C5FA585B212C9",
+      "facesObservedInStudio": 33869,
+      "verticesObservedInStudio": 20321
+    },
+    {
+      "id": "insulated-tool-satchel-v1",
+      "brief": "SourceArt/Tripo/Briefs/insulated-tool-satchel-v1.json",
+      "seed": 41004,
+      "status": "AwaitingGeneration",
+      "briefSha256": "33F07DC5698282CEB922A442630143955B75454BEE118871A4A20B55A00DD45C"
+    },
+    {
+      "id": "moth-civic-corbel-v1",
+      "brief": "SourceArt/Tripo/Briefs/moth-civic-corbel-v1.json",
+      "seed": 41005,
+      "status": "GeneratedAwaitingLocalExport",
+      "studioModelId": "8547a1c0-e5ec-4d08-b7d7-a2e640214d2e",
+      "studioUrl": "https://studio.tripo3d.ai/workspace/generate/8547a1c0-e5ec-4d08-b7d7-a2e640214d2e",
+      "creditsCharged": 55,
+      "observedBalanceAfter": 2980,
+      "actualSettings": {
+        "model": "H3.1",
+        "ultraMeshQuality": true,
+        "polycountRequested": 60000,
+        "textureResolution": "4K",
+        "removeLighting": true,
+        "pbr": true,
+        "topology": "Triangle",
+        "privacy": "Private",
+        "seedExposedByUi": false
+      },
+      "briefSha256": "10BDF39DCC7134592A716FC682F4D090F67697AC8C57E8E7266B0C29645AF6E4",
+      "facesObservedInStudio": 57864,
+      "verticesObservedInStudio": 32947
+    },
+    {
+      "id": "indigo-water-vessel-v1",
+      "brief": "SourceArt/Tripo/Briefs/indigo-water-vessel-v1.json",
+      "seed": 41006,
+      "status": "AwaitingGeneration",
+      "briefSha256": "B5A77BAFB8C820794232DD35B038363A2D111AF36015054E676CC7DDD9C4F5CA"
+    },
+    {
+      "id": "copper-repair-brazier-v1",
+      "brief": "SourceArt/Tripo/Briefs/copper-repair-brazier-v1.json",
+      "seed": 41007,
+      "status": "AwaitingGeneration",
+      "briefSha256": "D0055EACF2345AE2D1D8D787813104D1E9183C58099D994688BF8C25ABB59895"
+    },
+    {
+      "id": "sun-relay-reliquary-v1",
+      "brief": "SourceArt/Tripo/Briefs/sun-relay-reliquary-v1.json",
+      "seed": 41008,
+      "status": "AwaitingGeneration",
+      "briefSha256": "89DBCD07D097B4E217574DE49971401216200D525BF6A8EFFA1FB569901016B5"
+    }
+  ]
+}

@@ -32,6 +32,25 @@
 
 namespace
 {
+    struct FArtReviewView
+    {
+        const TCHAR* Name;
+        FVector Eye;
+        FVector Target;
+        float FieldOfView;
+    };
+
+    const FArtReviewView ArtReviewViews[] =
+    {
+        { TEXT("city-overview"), {-6500,-7900,5100}, {0,400,1000}, 68.f },
+        { TEXT("market-arcade"), {-3120,-160,215}, {-1800,-500,300}, 74.f },
+        { TEXT("lantern-keeper"), {11500,-6500,1600}, {15500,0,3000}, 74.f },
+        { TEXT("dock-courtyard"), {3700,-750,420}, {1200,800,250}, 74.f },
+        // Second Dawn is anchored at (-2570,-470,8); these views stay at walking eye height.
+        { TEXT("workshop-front"), {-2500,260,192}, {-2530,-470,228}, 64.f },
+        { TEXT("workshop-bench"), {-2780,-160,192}, {-2640,-405,130}, 66.f }
+    };
+
     bool IsSafeNamespace(const FString& Value)
     {
         if (Value.IsEmpty() || Value.Len() > 48) return false;
@@ -403,12 +422,11 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
     case EPhase::ArtTour:
         if(!bArtViewCaptured && Now-PhaseStartedAt>3.0)
         {
-            const TCHAR* Names[]={TEXT("city-overview"),TEXT("market-arcade"),TEXT("lantern-keeper"),TEXT("dock-courtyard")};
-            Capture(Names[ArtViewIndex]); bArtViewCaptured=true;
+            Capture(ArtReviewViews[ArtViewIndex].Name); bArtViewCaptured=true;
         }
         if(Now-PhaseStartedAt>3.6)
         {
-            if(++ArtViewIndex>=4)Finish(true);
+            if(++ArtViewIndex>=UE_ARRAY_COUNT(ArtReviewViews))Finish(true);
             else SetArtView(Controller);
         }
         break;
@@ -418,11 +436,10 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
 
 void ABSDemoSmokeRunner::SetArtView(ABSDemoPlayerController* Controller)
 {
-    const FVector Eye[]={{-6500,-7900,5100},{-3120,-160,215},{11500,-6500,1600},{3700,-750,420}};
-    const FVector Target[]={{0,400,1000},{-1800,-500,300},{15500,0,3000},{1200,800,250}};
-    ArtCamera->SetActorLocation(Eye[ArtViewIndex]);
-    ArtCamera->SetActorRotation((Target[ArtViewIndex]-Eye[ArtViewIndex]).Rotation());
-    ArtCamera->GetCameraComponent()->SetFieldOfView(ArtViewIndex==0?68.f:74.f);
+    const FArtReviewView& View=ArtReviewViews[ArtViewIndex];
+    ArtCamera->SetActorLocation(View.Eye);
+    ArtCamera->SetActorRotation((View.Target-View.Eye).Rotation());
+    ArtCamera->GetCameraComponent()->SetFieldOfView(View.FieldOfView);
     Controller->SetViewTarget(ArtCamera); bArtViewCaptured=false; SetPhase(EPhase::ArtTour);
 }
 

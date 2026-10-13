@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "moth-service-lantern-v1",
+  "prompt": "Original Brass Sanctuary science-fiction craft object: indigo enamel, aged warm brass, restrained verdigris, ivory ceramic, believable hand-built construction. Photoreal PBR, subtle localized wear, no cartoon exaggeration. A portable service lantern, squat stable circular foot, a tapered enclosed opal-glass chamber protected by four thick curved brass ribs, a folded copper roof shaped as four moth-wing lobes, one robust arched carrying handle. Layered removable collars, small ceramic power-cell socket, flush rivets and engraved seam borders. Compact working tool with clear negative spaces between ribs, no giant wings. One object, full back and underside, no light rays, no surrounding scene.",
+  "model": "tripo-v3.1",
+  "seed": 41001,
+  "params": {
+    "face_limit": 50000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "hero portable lamp",
+    "targetDimensionsCm": [
+      28,
+      24,
+      48
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}

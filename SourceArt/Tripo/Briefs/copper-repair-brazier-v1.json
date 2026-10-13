@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "copper-repair-brazier-v1",
+  "prompt": "Original Brass Sanctuary science-fiction craft object: indigo enamel, aged warm brass, restrained verdigris, ivory ceramic, believable hand-built construction. Photoreal PBR, subtle localized wear, no cartoon exaggeration. A small freestanding workshop soldering brazier on three stout curved feet, shallow hemispherical copper fire bowl protected by a pierced indigo enameled cylindrical guard, two sturdy loop handles and a thick castellated brass top rim. Dark soot inside the bowl, warm rubbed metal on handles, faint verdigris at joints. Convincing open bowl with thick walls and visible interior. No fire, smoke, surrounding scene or text.",
+  "model": "tripo-v3.1",
+  "seed": 41007,
+  "params": {
+    "face_limit": 50000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "workshop metal craft",
+    "targetDimensionsCm": [
+      34,
+      32,
+      36
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "insulated-tool-satchel-v1",
+  "prompt": "Original Brass Sanctuary science-fiction craft object: indigo enamel, aged warm brass, restrained verdigris, ivory ceramic, believable hand-built construction. Photoreal PBR, subtle localized wear, no cartoon exaggeration. An open low leather tool satchel for a lamp repairer, thick tobacco-brown leather sides, riveted brass corner protectors, indigo woven fabric lining, two buckled straps folded outward. Three distinct robust tools in sewn internal pockets: pliers, wrench, insulated screwdriver. One coiled insulated cable in a side pocket. Clearly separated recognizable tools and leather seams, solid grounded bottom. One coherent satchel assembly, no floor plane, no text or logos.",
+  "model": "tripo-v3.1",
+  "seed": 41004,
+  "params": {
+    "face_limit": 50000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "workshop dressing",
+    "targetDimensionsCm": [
+      48,
+      28,
+      30
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}

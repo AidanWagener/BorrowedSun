@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "indigo-water-vessel-v1",
+  "prompt": "Original Brass Sanctuary science-fiction craft object: indigo enamel, aged warm brass, restrained verdigris, ivory ceramic, believable hand-built construction. Photoreal PBR, subtle localized wear, no cartoon exaggeration. A squat wide ceramic drinking-water vessel with an indigo glazed belly, ivory unglazed clay neck, two thick opposite loop handles, a removable-looking copper lid and a short protected brass tap near the base. Broad stable ceramic foot. Fine geometric moth-wing decoration embossed into the upper shoulder, irregular glaze pooling and small rim chips revealing clay. One closed vessel, no liquid, no text or setting, full back and underside.",
+  "model": "tripo-v3.1",
+  "seed": 41006,
+  "params": {
+    "face_limit": 40000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "market vessel",
+    "targetDimensionsCm": [
+      42,
+      38,
+      54
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}

@@ -16,6 +16,7 @@
 #include "Materials/MaterialExpressionMultiply.h"
 #include "Materials/MaterialExpressionTextureObject.h"
 #include "Materials/MaterialExpressionTextureSample.h"
+#include "Materials/MaterialExpressionVertexColor.h"
 #include "Materials/MaterialExpressionVertexNormalWS.h"
 #include "Materials/MaterialExpressionWorldPosition.h"
 #include "Misc/FileHelper.h"
@@ -118,12 +119,48 @@ NormalOut=normalize(float3(sign(V.x)*sqrt(saturate(1-dot(nx,nx))),nx.x,nx.y)*w.x
 return col*Tint.rgb;
 )HLSL");
         if(Name==TEXT("M_MarketPlaster"))C->Code.ReplaceInline(TEXT("return col*Tint.rgb;"),TEXT("return lerp(col*Tint.rgb,float3(.68,.60,.47),.68);"));
+        if(Name==TEXT("M_WorkshopWood"))
+        {
+            Input(TEXT("Wear"),Expr<UMaterialExpressionVertexColor>(M));
+            // Retain the reviewed grain while lifting its black cracks and softening handled edges.
+            C->Code.ReplaceInline(TEXT("return col*Tint.rgb;"),TEXT("RoughOut=clamp(.46+RoughOut*.27-saturate(Wear.r)*.06,.43,.74); return lerp(col*Tint.rgb,float3(.24,.125,.052),.40)*(1.0+saturate(Wear.r)*.06);"));
+        }
         C->RebuildOutputs();auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,C);E->Roughness.Connect(1,C);E->Normal.Connect(2,C);E->Metallic.Connect(0,Scalar(M,Metal));
         M->PostEditChange();return Save(M)?M:nullptr;
     }
     UMaterial* Solid(const FString& Name,FLinearColor Tint,float Metal,float Rough)
     {
         auto* M=NewMaterial(Name);auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,Color(M,Tint));E->Roughness.Connect(0,Scalar(M,Rough));E->Metallic.Connect(0,Scalar(M,Metal));
+        M->PostEditChange();return Save(M)?M:nullptr;
+    }
+    UMaterial* WorkshopSurface(const FString& Name,FLinearColor Tint,FLinearColor EdgeTint,float Metal,float EdgeMetal,float Rough,float RoughVariation,float EdgeStrength,bool MilkGlass=false)
+    {
+        auto* M=NewMaterial(Name);auto* C=Expr<UMaterialExpressionCustom>(M);
+        C->Description=TEXT("Restrained workshop finish; authored angular-edge mask, bounded surface variation");C->OutputType=CMOT_Float3;
+        auto Input=[&](const TCHAR* Key,UMaterialExpression* Expression){FCustomInput I;I.InputName=Key;I.Input.Connect(0,Expression);C->Inputs.Add(I);};
+        Input(TEXT("P"),Expr<UMaterialExpressionWorldPosition>(M));Input(TEXT("Wear"),Expr<UMaterialExpressionVertexColor>(M));
+        Input(TEXT("Tint"),Color(M,Tint));Input(TEXT("EdgeTint"),Color(M,EdgeTint));
+        Input(TEXT("Metal"),Scalar(M,Metal));Input(TEXT("EdgeMetal"),Scalar(M,EdgeMetal));
+        Input(TEXT("Rough"),Scalar(M,Rough));Input(TEXT("Variation"),Scalar(M,RoughVariation));Input(TEXT("EdgeStrength"),Scalar(M,EdgeStrength));
+        FCustomOutput R;R.OutputName=TEXT("RoughOut");R.OutputType=CMOT_Float1;C->AdditionalOutputs.Add(R);
+        FCustomOutput Metallic;Metallic.OutputName=TEXT("MetalOut");Metallic.OutputType=CMOT_Float1;C->AdditionalOutputs.Add(Metallic);
+        // Four scalar waves supply low-amplitude variation without extra textures or layered noise.
+        // Wear.r is baked from angular changes, not ambient occlusion or guaranteed convexity.
+        C->Code=TEXT(R"HLSL(
+float patch=.5+.5*sin(dot(P,float3(.041,.023,.037)))*sin(dot(P,float3(.019,-.031,.027)));
+float fine=sin(dot(P,float3(1.73,1.19,.91)))*sin(dot(P,float3(.77,-1.37,1.51)));
+float worn=saturate(Wear.r)*EdgeStrength*smoothstep(.22,.78,patch);
+RoughOut=clamp(Rough+(patch-.5)*Variation+fine*.008-worn*.12,.22,.86);
+MetalOut=lerp(Metal,EdgeMetal,worn);
+return lerp(Tint.rgb*(.975+patch*.05),EdgeTint.rgb,worn);
+)HLSL");
+        C->RebuildOutputs();auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,C);E->Roughness.Connect(1,C);E->Metallic.Connect(2,C);
+        if(MilkGlass)
+        {
+            // Opaque opal glass scatters daylight; stock lamps do not all become powered emitters.
+            M->SetShadingModel(MSM_Subsurface);E->SubsurfaceColor.Connect(0,Color(M,FLinearColor(.82f,.69f,.44f)));
+            E->Opacity.Connect(0,Scalar(M,.65f));
+        }
         M->PostEditChange();return Save(M)?M:nullptr;
     }
     UMaterial* Fabric(UTexture2D* Albedo)
@@ -146,6 +183,7 @@ return col*Tint.rgb;
         UI->StaticMeshImportData->bCombineMeshes=true;
         UI->StaticMeshImportData->bAutoGenerateCollision=Name==TEXT("SM_MarketTable")||Name==TEXT("SM_CarvedPlanter")||Name==TEXT("SM_wooden_crate_02")||Name==TEXT("SM_wooden_stool_01")||Name==TEXT("SM_WorkshopBench")||Name==TEXT("SM_WorkshopRack");
         UI->StaticMeshImportData->NormalImportMethod=FBXNIM_ImportNormals;
+        if(Name.StartsWith(TEXT("SM_Workshop")))UI->StaticMeshImportData->VertexColorImportOption=EVertexColorImportOption::Replace;
         auto* SM=Cast<UStaticMesh>(UFactory::StaticImportObject(UStaticMesh::StaticClass(),P,*Name,RF_Public|RF_Standalone,*Source(Relative),nullptr,Factory));
         if(!SM)return false;
         for(int I=0;I<SM->GetStaticMaterials().Num();++I)
@@ -167,17 +205,28 @@ return col*Tint.rgb;
     {
         const auto Manifest=Read(TEXT("SourceArt/LanternWorkshop/workshop-manifest.json"));
         if(!Manifest)return false;
-        TMap<FString,UMaterial*> Materials;
-        for(const TCHAR* Key:{TEXT("Wood"),TEXT("Brass"),TEXT("Copper"),TEXT("Shadow")})
+        double MaterialCount=0;
+        if(!Manifest->TryGetNumberField(TEXT("materialCount"),MaterialCount)||MaterialCount!=7)
         {
-            const FString Name=FString(TEXT("M_Market"))+Key;
-            auto* M=LoadObject<UMaterial>(nullptr,*(Base+TEXT("Materials/")+Name+TEXT(".")+Name));
-            if(!M)return false;Materials.Add(Key,M);
+            UE_LOG(LogTemp,Error,TEXT("Workshop manifest must declare the seven authored workshop materials"));return false;
         }
-        Materials.Add(TEXT("Enamel"),Solid(TEXT("M_WorkshopEnamel"),FLinearColor(.026f,.12f,.16f),.25f,.31f));
-        Materials.Add(TEXT("Iron"),Solid(TEXT("M_WorkshopIron"),FLinearColor(.075f,.085f,.085f),.8f,.52f));
-        Materials.Add(TEXT("Ivory"),Solid(TEXT("M_WorkshopIvory"),FLinearColor(.72f,.60f,.36f),0,.57f));
-        Materials.Add(TEXT("MilkGlass"),Solid(TEXT("M_WorkshopMilkGlass"),FLinearColor(.82f,.68f,.39f),0,.25f));
+        TMap<FString,UMaterial*> Materials;
+        TMap<FString,UTexture2D*> WoodMaps;
+        for(const TCHAR* Kind:{TEXT("diff"),TEXT("normal"),TEXT("rough")})
+        {
+            const FString Name=FString(TEXT("T_medieval_wood_surface_"))+Kind;
+            auto* T=LoadObject<UTexture2D>(nullptr,*(Base+TEXT("Textures/")+Name+TEXT(".")+Name));
+            if(!T){UE_LOG(LogTemp,Error,TEXT("Workshop requires reviewed market wood map %s"),*Name);return false;}
+            WoodMaps.Add(Kind,T);
+        }
+        Materials.Add(TEXT("Wood"),TiledMaterial(TEXT("M_WorkshopWood"),WoodMaps,140,FLinearColor(.90f,.72f,.50f),0,.16f));
+        Materials.Add(TEXT("Brass"),WorkshopSurface(TEXT("M_WorkshopBrass"),FLinearColor(.48f,.285f,.105f),FLinearColor(.68f,.43f,.19f),.88f,.98f,.42f,.12f,.65f));
+        Materials.Add(TEXT("Copper"),WorkshopSurface(TEXT("M_WorkshopCopper"),FLinearColor(.065f,.17f,.13f),FLinearColor(.42f,.20f,.07f),.18f,.92f,.62f,.18f,.62f));
+        Materials.Add(TEXT("Enamel"),WorkshopSurface(TEXT("M_WorkshopEnamel"),FLinearColor(.026f,.10f,.125f),FLinearColor(.14f,.11f,.075f),0,.55f,.38f,.10f,.22f));
+        Materials.Add(TEXT("Iron"),WorkshopSurface(TEXT("M_WorkshopIron"),FLinearColor(.055f,.065f,.065f),FLinearColor(.16f,.18f,.175f),.80f,.94f,.59f,.14f,.50f));
+        Materials.Add(TEXT("Ivory"),WorkshopSurface(TEXT("M_WorkshopIvory"),FLinearColor(.66f,.54f,.35f),FLinearColor(.75f,.67f,.48f),0,0,.49f,.09f,.16f));
+        Materials.Add(TEXT("MilkGlass"),WorkshopSurface(TEXT("M_WorkshopMilkGlass"),FLinearColor(.76f,.70f,.54f),FLinearColor(.86f,.79f,.62f),0,0,.31f,.045f,.12f,true));
+        Materials.Add(TEXT("Shadow"),LoadObject<UMaterial>(nullptr,*(Base+TEXT("Materials/M_MarketShadow.M_MarketShadow"))));
         for(const auto& Pair:Materials)if(!Pair.Value)return false;
         for(const auto& Entry:Manifest->GetArrayField(TEXT("assets")))
         {

@@ -71,7 +71,7 @@
     {
       "id": "ADR-012",
       "decision": "Author loose props for carrying, throwing and collection; stage later destruction",
-      "reason": "Stable identity, complete geometry and component boundaries are cheaper to establish before large-scale dressing",
+      "reason": "User approved staged local destruction followed by selected structural destruction on 2026-10-13; broader collapse remains research. Stable identity, complete geometry and component boundaries are cheaper to establish before large-scale dressing",
       "revisit": "After ten-object persistence proof and a bounded breakage prototype"
     }
   ]

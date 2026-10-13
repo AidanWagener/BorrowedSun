@@ -3,96 +3,109 @@
   "author": "Original Borrowed Sun Second Dawn workshop",
   "blenderVersion": "4.5.14 LTS",
   "units": "centimetres",
-  "assetCount": 11,
+  "assetCount": 12,
+  "materialCount": 7,
   "assets": [
     {
       "name": "SM_WorkshopBench",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopBench.fbx",
-      "sha256": "caccb7a5f27922c1f3d290c4fbd36f87bff73cd7728385ee80db607e9cfd71ca",
+      "sha256": "9ab590a56384f532c56b620028fadc5e788bd5c1455c508a8e89a0291183050e",
       "dimensionsCm": [
         302.0,
         99.0,
         120.0
       ],
-      "triangles": 12464,
+      "triangles": 12728,
       "collision": true
     },
     {
       "name": "SM_WorkshopRack",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopRack.fbx",
-      "sha256": "a4fef7ce10c541186d610889668d88f5b0f96592a5682933d6aff7975eddc603",
+      "sha256": "0d18c0a5090c790d0bd87a2690a12f3799727207d385980d7cac4eb8d25aa950",
       "dimensionsCm": [
         322.0,
         65.29000091552734,
         417.0
       ],
-      "triangles": 12448,
+      "triangles": 12528,
       "collision": true
     },
     {
       "name": "SM_WorkshopDeskLamp",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopDeskLamp.fbx",
-      "sha256": "003e05557f9d535023129410d1c3a896406e208099a619c784247e9904935bd6",
+      "sha256": "0dd5c224e3da1eefb8d7f20931025f79fd86d8308561f77c3f13c73a5d947717",
       "dimensionsCm": [
         82.00616455078125,
         70.58985900878906,
         80.0
       ],
-      "triangles": 2864,
+      "triangles": 3176,
       "collision": false
     },
     {
       "name": "SM_WorkshopPetalLamp",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopPetalLamp.fbx",
-      "sha256": "34e978f0b636f40dcda820bab35f533911e87d3e21cb9ffbd168bc0169847d23",
+      "sha256": "34b7fc021d73c3c58bfec831961451bf8bb99a40b2ee50cb590accc008285ccd",
       "dimensionsCm": [
-        51.93695831298828,
-        51.93695831298828,
+        52.563941955566406,
+        52.563941955566406,
         84.19999694824219
       ],
-      "triangles": 3360,
+      "triangles": 6912,
       "collision": false
     },
     {
       "name": "SM_WorkshopSunCell",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopSunCell.fbx",
-      "sha256": "ae5abc34fd75a7cf4c839a65b39c6651b9d9e6ea8c7d74fef66c63b317d67fa5",
+      "sha256": "f4a28ff013e8b098b57d6cd35cc8bfe3255324fe5f45161a1e8ebda06d5aac79",
       "dimensionsCm": [
         17.0,
         17.0,
         38.0
       ],
-      "triangles": 1724,
+      "triangles": 1564,
+      "collision": false
+    },
+    {
+      "name": "SM_WorkshopCellRepair",
+      "path": "SourceArt/LanternWorkshop/SM_WorkshopCellRepair.fbx",
+      "sha256": "3c807e8a38a6a5d8fb90345890e890f5a3e367e675fcd6866c5e11ff7850588f",
+      "dimensionsCm": [
+        37.0,
+        19.899999618530273,
+        27.0
+      ],
+      "triangles": 7328,
       "collision": false
     },
     {
       "name": "SM_WorkshopCableReel",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopCableReel.fbx",
-      "sha256": "ee8f0714a6f8361c6df04f6c1cbc29cb3423db5660cdd51bc49ba1d866c379e8",
+      "sha256": "68d93bad90e6b9adc0916d5cf2647e12e8698a71a7582679ea17df77760defb4",
       "dimensionsCm": [
         67.46762084960938,
         38.0,
         31.0
       ],
-      "triangles": 12432,
+      "triangles": 12288,
       "collision": false
     },
     {
       "name": "SM_WorkshopToolTray",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopToolTray.fbx",
-      "sha256": "08066c23ac5ec117d49ca16d3e2dda38637fd71bc74db6f1900010dfeb398ad2",
+      "sha256": "4a37aa79bd2da7c08191e3217037b7d479c40b30ab1d073da199682dbbe266ee",
       "dimensionsCm": [
         76.0,
         43.0,
         7.5
       ],
-      "triangles": 2572,
+      "triangles": 2644,
       "collision": false
     },
     {
       "name": "SM_WorkshopNameplate",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopNameplate.fbx",
-      "sha256": "c94078c89d7e3ffddf821767416c32e9da2a123998c2771d4ba2e94424749fcc",
+      "sha256": "f51661b12d441fe9fea83c4793b1f3bb48f86b8bedb4285ceaea8cc766af9197",
       "dimensionsCm": [
         252.0,
         11.050000190734863,
@@ -104,50 +117,50 @@
     {
       "name": "SM_WorkshopTradeSign",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopTradeSign.fbx",
-      "sha256": "61b631a0df2026952d58723a82fbf9477c3582c36e03e92a0ca5fde2cf21266f",
+      "sha256": "0e122aa01c8aab34063906bc05da778c6e903e33149c1e04ec68878cf0efe58e",
       "dimensionsCm": [
         92.0,
         9.700000762939453,
         159.39999389648438
       ],
-      "triangles": 18152,
+      "triangles": 20380,
       "collision": false
     },
     {
       "name": "SM_WorkshopHangingRail",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopHangingRail.fbx",
-      "sha256": "613c711a05cd7d58c530ada4797ce7315db28b0491168d7a3388f79ad48655b1",
+      "sha256": "e499ff90083cb8211d01af512330788db9e324c9c8236558407aa306ad099f89",
       "dimensionsCm": [
         312.0,
         126.68382263183594,
         48.0
       ],
-      "triangles": 696,
+      "triangles": 792,
       "collision": false
     },
     {
       "name": "SM_WorkshopSuspension",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopSuspension.fbx",
-      "sha256": "f9b9cf75435e987e08068d619b5b1b78b92d505d9072d5c4ee192936e5345ec5",
+      "sha256": "1b5abcd63d558bf1dd141bdc9d06838505191f7cb891735f58a070768549e84b",
       "dimensionsCm": [
         1.600000023841858,
         1.600000023841858,
         100.0
       ],
-      "triangles": 16,
+      "triangles": 28,
       "collision": false
     }
   ],
   "files": [
     {
       "path": "SourceArt/LanternWorkshop/SecondDawn.assembly.json",
-      "sha256": "5f6aaf99d76aff1ea574b72bcbf6d23711721ff47d74ec20f20fcdc0986c2cc5"
+      "sha256": "d22d844a122b63c0d188350be0c6627d60e222bac57fbbb113a04cbaa719365f"
     },
     {
       "path": "SourceArt/LanternWorkshop/LanternWorkshop.blend",
-      "sha256": "d406ad402aa7589f8ba1e26c27d7a86296b139e2d18c5e5d65975c8ab5b5a756"
+      "sha256": "004d1c05e2fc02b1c871144b6802a1f7b62bd5951509366a13c277d22930aebe"
     }
   ],
   "assembly": "SourceArt/LanternWorkshop/SecondDawn.assembly.json",
-  "assemblyPartCount": 46
+  "assemblyPartCount": 39
 }

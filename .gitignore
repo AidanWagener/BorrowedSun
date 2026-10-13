@@ -21,6 +21,11 @@
 /Backups/
 /Tools/Environment.local.json
 *.local.json
+# Tripo credentials/context, signed download metadata and task cache stay local.
+/.tripo/
+/.tripo
+/tripo-out/
+*.yaml.state.json
 .env
 .env.*
 !.env.example

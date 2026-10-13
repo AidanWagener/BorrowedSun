@@ -23,7 +23,7 @@ powershell -NoProfile -File Tools/Author-CityArt.ps1 -Execute
 
 `Author-CityArt` is a dry run without `-Execute` and refuses existing output unless `-Force` is deliberate. It verifies all 23 source files, then creates 42 real Unreal packages through editor APIs. Keep Unreal closed. The two scanned meshes retain native UVs; the modular architecture uses world-scale tiling. LFS lockable files can be read-only; make only the exact owned packages being deliberately regenerated writable. Do not recursively clear asset permissions.
 
-Rendered screenshot validation now also captures four clean city review views after both mission routes finish. Frame measurement remains a separate run without screenshots or camera tours.
+Rendered screenshot validation now also captures six clean art review views after both mission routes finish: four city views and the workshop frontage and counter. Frame measurement remains a separate run without screenshots or camera tours.
 
 ## Starting market authoring
 
@@ -49,7 +49,50 @@ A monthly restore drill is a separate requirement: create a new empty directory 
 
 `Tools/Art/Render-WorldSpec.mjs <node_modules-directory>` renders the two Markdown documents in `Docs/Art` using the existing `marked` module. It copies readable Markdown and standalone HTML deliverables beside the workspace. Use the configured Node runtime; no hosted service or network is required. The offline catalog reads embedded data and exports filtered JSON locally.
 
-The Second Dawn source generator is `Tools/Art/Build-LanternWorkshop.py`, run with the pinned Blender executable in background mode from the repository root. It creates 11 meshes, the editable source, assembly recipe and hashes. After compiling the editor, `Tools/Author-MarketArt.ps1 -WorkshopOnly -Force -Execute` imports the 16 workshop packages while retaining the existing market content. A full market import now includes the workshop. Source-only checks do not replace a rendered and packaged review.
+The Second Dawn source generator is `Tools/Art/Build-LanternWorkshop.py`, run with the pinned Blender executable in background mode from the repository root. It creates 12 meshes, the editable source, assembly recipe and hashes. After compiling the editor, `Tools/Author-MarketArt.ps1 -WorkshopOnly -Force -Execute` imports the 20 workshop packages: 12 meshes, seven dedicated materials and the assembly. It reuses the reviewed market wood maps and shared shadow material while retaining the existing market content. The manifest records both mesh and authored-material counts. A full market import now includes the workshop. Source-only checks do not replace a rendered and packaged review.
+
+## Tripo API adapter
+
+`Tools/Tripo.ps1` wraps the official API CLI pinned to version 0.6.1 in `Config/tripo-lock.json`. It creates one text-to-model task per authored brief. **This is an API workflow:** Tripo Studio credits cannot fund API requests; the two products have separate credit pools. See the [official Studio/API explanation](https://www.tripo3d.ai/help/api-plugins/tripo-studiotripo-api). The user's authorization covers spending existing credits for game assets; it does not purchase credits or enable auto-recharge. This adapter has no purchase, top-up or batch operation.
+
+The first generated candidates use Studio separately; see [Studio intake](../Docs/Operations/TRIPO_STUDIO_INTAKE.md). API job state and Resume commands below do not recover Studio generations. The register records actual Studio settings separately from the brief's proposed API model version and seeds.
+
+Run from the repository root. `Doctor` checks the installed CLI and version locally; it does not check authentication, balance or connectivity. `Plan` needs neither authentication nor the CLI and sends nothing. `Generate` without `-Execute` also prints a plan. The official CLI manages authentication internally; this adapter never reads its credential store. It invokes the npm shim's installed Node entrypoint directly so authored quotes, Unicode and shell characters remain prompt data.
+
+```powershell
+powershell -NoProfile -File Tools/Tripo.ps1 -Mode Doctor
+powershell -NoProfile -File Tools/Tripo.ps1 -Mode Plan -BriefFile SourceArt/Tripo/Briefs/moth-service-lantern-v1.json
+powershell -NoProfile -File Tools/Tripo.ps1 -Mode Generate -BriefFile SourceArt/Tripo/Briefs/moth-service-lantern-v1.json -Execute
+powershell -NoProfile -File Tools/Tripo.ps1 -Mode Resume -BriefFile SourceArt/Tripo/Briefs/moth-service-lantern-v1.json
+```
+
+The JSON brief has `schemaVersion: 1`, a stable lowercase `id`, a `prompt` of at most 1,024 characters, a reviewed `model` alias, an integer `seed`, and a `params` object. `seed` supplies `model_seed`, `image_seed` and `texture_seed`; explicit seed parameters can override individual stages. Optional `artReview` metadata stays local. For example:
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "workshop-lamp-candidate-v1",
+  "prompt": "A maintained brass repair lamp with an indigo enamel shade and visible fastened joints.",
+  "model": "tripo-v3.1",
+  "seed": 41001,
+  "params": {
+    "face_limit": 30000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  }
+}
+```
+
+Each job owns ignored `Artifacts/tripo/<id>/request.json`, `state.json` and `downloads/`. Generation records an `unknown` transaction before contacting the API, then immediately saves the actual task ID as `submitted`. It returns without waiting. Repeating `Generate` for any recorded job is refused, including failed or ambiguous jobs. Keep the exact brief bytes for that job; author a new ID deliberately for a different candidate.
+
+`Resume` makes one query against the saved task ID and downloads only when that same task succeeds. Repeat it later while the state remains `submitted`. Completion requires downloaded model files, nonzero sizes and SHA-256 hashes. Query or download errors retain the task ID for another `Resume`; terminal server failures are recorded as `fail`. Inspect the returned `status` rather than treating process exit alone as evidence of a completed model. Requests are bounded to 300 seconds by default (`-TimeoutSeconds`, 10..600).
+
+If submission returns no confirmed ID, the state remains `unknown`; never resubmit to resolve a timeout. Verify the matching task in Tripo first, then recover that existing task with `-Mode Resume -BriefFile <original-brief> -TaskId <verified-task-id>`. Raw CLI diagnostics and signed download URLs are excluded from the durable state. A completed candidate is still outside Unreal: review provenance, dimensions, materials, topology, collision and actual runtime appearance before importing it.
+
+`powershell -NoProfile -File Tools/Tests/Run-TripoTests.ps1` runs offline mock-CLI regression tests for safe prompt arguments, version enforcement, duplicate prevention, ambiguous submission recovery, durable task IDs, failed downloads, artifact hashes and path containment. Fixtures remain under `Artifacts/tripo-tests/`; these tests do not generate models or verify the API account.
 
 ## Gameplay and tooling tests
 

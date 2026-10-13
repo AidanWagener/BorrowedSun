@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "repair-meter-v1",
+  "prompt": "Original Brass Sanctuary science-fiction craft object: indigo enamel, aged warm brass, restrained verdigris, ivory ceramic, believable hand-built construction. Photoreal PBR, subtle localized wear, no cartoon exaggeration. A handheld electromechanical diagnostic meter resting upright on a broad leather-wrapped base, oval brass protective bezel around one large ivory analog dial behind glass, two indigo ceramic rotary knobs, sturdy side handle and two capped probe sockets. Layered screws, bezel clips, subtle stamped moth emblem. Closed case with complete underside. Compact tactile precision instrument with readable large forms and authentic material age. No writing, no detached parts, no scene.",
+  "model": "tripo-v3.1",
+  "seed": 41003,
+  "params": {
+    "face_limit": 35000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "collectible instrument",
+    "targetDimensionsCm": [
+      24,
+      16,
+      34
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}

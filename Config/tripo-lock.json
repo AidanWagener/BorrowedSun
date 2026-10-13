@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "cli": { "package": "tripo-cli", "version": "0.6.1" },
+  "verifiedAt": "2026-10-13",
+  "nodeMinimumMajor": 20,
+  "observedNode": "22.19.0",
+  "npmIntegrity": "sha512-odVPv3XbZnshzGb52q/7W9yubtPNBFmMO045Yhrj3HcAy9zc6w/m2WwYBqUsDVzgDeUzKZkdqCE3sx/3wOl6xA==",
+  "repository": "https://github.com/vast-enterprise/Tripo-API-CLI",
+  "documentation": "https://developers.tripo3d.ai/en/docs/cli",
+  "region": "ov",
+  "activeGenerationRoute": "Tripo Studio browser UI; existing subscription credits",
+  "creditSeparationSource": "https://www.tripo3d.ai/help/api-plugins/tripo-studiotripo-api",
+  "apiCreditObservation": { "date": "2026-10-13", "balance": 0, "studioCreditsUsableByApi": false },
+  "authorization": "User explicitly authorized using existing Tripo credits for game assets on 2026-10-13. This does not purchase credits or enable auto-recharge.",
+  "generationModel": "v3.1-20260211",
+  "intakePolicy": "Generated originals remain outside Unreal until dimensions, materials, collision, provenance and runtime rendering are reviewed. Account credentials stay in the official CLI credential store, never in this repository."
+}

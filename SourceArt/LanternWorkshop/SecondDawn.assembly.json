@@ -48,8 +48,8 @@
       "mesh": "SM_WorkshopNameplate",
       "position": [
         -60,
-        -177,
-        328
+        -137,
+        352
       ],
       "scale": [
         1,
@@ -169,12 +169,12 @@
       "position": [
         -185,
         -63,
-        252
+        230
       ],
       "scale": [
-        1.15,
-        1.15,
-        1.15
+        1.0,
+        1.0,
+        1.0
       ],
       "rotation": [
         0,
@@ -189,12 +189,12 @@
       "position": [
         -185,
         -63,
-        346.3
+        312.0
       ],
       "scale": [
         1,
         1,
-        0.2669999999999999
+        0.61
       ],
       "rotation": [
         0,
@@ -209,12 +209,12 @@
       "position": [
         -123,
         -63,
-        276
+        252
       ],
       "scale": [
-        0.95,
-        0.95,
-        0.95
+        0.7,
+        0.7,
+        0.7
       ],
       "rotation": [
         0,
@@ -229,92 +229,12 @@
       "position": [
         -123,
         -63,
-        353.9
+        309.4
       ],
       "scale": [
         1,
         1,
-        0.19100000000000023
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "collision": false
-    },
-    {
-      "key": "hanging-lamp-2",
-      "mesh": "SM_WorkshopPetalLamp",
-      "position": [
-        -60,
-        -63,
-        252
-      ],
-      "scale": [
-        1.15,
-        1.15,
-        1.15
-      ],
-      "rotation": [
-        0,
-        34,
-        0
-      ],
-      "collision": false
-    },
-    {
-      "key": "suspension-2",
-      "mesh": "SM_WorkshopSuspension",
-      "position": [
-        -60,
-        -63,
-        346.3
-      ],
-      "scale": [
-        1,
-        1,
-        0.2669999999999999
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "collision": false
-    },
-    {
-      "key": "hanging-lamp-3",
-      "mesh": "SM_WorkshopPetalLamp",
-      "position": [
-        3,
-        -63,
-        276
-      ],
-      "scale": [
-        0.95,
-        0.95,
-        0.95
-      ],
-      "rotation": [
-        0,
-        51,
-        0
-      ],
-      "collision": false
-    },
-    {
-      "key": "suspension-3",
-      "mesh": "SM_WorkshopSuspension",
-      "position": [
-        3,
-        -63,
-        353.9
-      ],
-      "scale": [
-        1,
-        1,
-        0.19100000000000023
+        0.6360000000000002
       ],
       "rotation": [
         0,
@@ -329,12 +249,12 @@
       "position": [
         65,
         -63,
-        252
+        235
       ],
       "scale": [
-        1.15,
-        1.15,
-        1.15
+        0.93,
+        0.93,
+        0.93
       ],
       "rotation": [
         0,
@@ -349,12 +269,12 @@
       "position": [
         65,
         -63,
-        346.3
+        311.26
       ],
       "scale": [
         1,
         1,
-        0.2669999999999999
+        0.6174000000000001
       ],
       "rotation": [
         0,
@@ -392,9 +312,9 @@
         77
       ],
       "scale": [
-        0.7,
-        0.7,
-        0.7
+        0.64,
+        0.64,
+        0.64
       ],
       "rotation": [
         0,
@@ -492,9 +412,9 @@
         140
       ],
       "scale": [
-        0.7,
-        0.7,
-        0.7
+        0.64,
+        0.64,
+        0.64
       ],
       "rotation": [
         0,
@@ -564,26 +484,6 @@
       "collision": false
     },
     {
-      "key": "stock-reel-1-2",
-      "mesh": "SM_WorkshopCableReel",
-      "position": [
-        -22,
-        -147,
-        140
-      ],
-      "scale": [
-        0.85,
-        0.85,
-        0.85
-      ],
-      "rotation": [
-        0,
-        66,
-        0
-      ],
-      "collision": false
-    },
-    {
       "key": "stock-lamp-1-3",
       "mesh": "SM_WorkshopPetalLamp",
       "position": [
@@ -592,9 +492,9 @@
         140
       ],
       "scale": [
-        0.7,
-        0.7,
-        0.7
+        0.64,
+        0.64,
+        0.64
       ],
       "rotation": [
         0,
@@ -644,26 +544,6 @@
       "collision": false
     },
     {
-      "key": "stock-cell-2-0-2",
-      "mesh": "SM_WorkshopSunCell",
-      "position": [
-        -157,
-        -137,
-        205
-      ],
-      "scale": [
-        0.82,
-        0.82,
-        0.82
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "collision": false
-    },
-    {
       "key": "stock-reel-2-1",
       "mesh": "SM_WorkshopCableReel",
       "position": [
@@ -692,9 +572,9 @@
         205
       ],
       "scale": [
-        0.7,
-        0.7,
-        0.7
+        0.64,
+        0.64,
+        0.64
       ],
       "rotation": [
         0,
@@ -728,26 +608,6 @@
       "mesh": "SM_WorkshopSunCell",
       "position": [
         55,
-        -137,
-        205
-      ],
-      "scale": [
-        0.82,
-        0.82,
-        0.82
-      ],
-      "rotation": [
-        0,
-        0,
-        0
-      ],
-      "collision": false
-    },
-    {
-      "key": "stock-cell-2-3-2",
-      "mesh": "SM_WorkshopSunCell",
-      "position": [
-        74,
         -137,
         205
       ],
@@ -804,11 +664,11 @@
       "collision": false
     },
     {
-      "key": "bench-cell-2",
-      "mesh": "SM_WorkshopSunCell",
+      "key": "cell-under-repair",
+      "mesh": "SM_WorkshopCellRepair",
       "position": [
-        -3,
-        92,
+        54,
+        61,
         103
       ],
       "scale": [
@@ -818,7 +678,7 @@
       ],
       "rotation": [
         0,
-        28,
+        -11,
         0
       ],
       "collision": false

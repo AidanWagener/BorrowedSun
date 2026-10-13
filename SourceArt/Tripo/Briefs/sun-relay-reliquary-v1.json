@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "sun-relay-reliquary-v1",
+  "prompt": "Original Brass Sanctuary science-fiction craft object: indigo enamel, aged warm brass, restrained verdigris, ivory ceramic, believable hand-built construction. Photoreal PBR, subtle localized wear, no cartoon exaggeration. A compact tabletop solar relay instrument: low hexagonal brass base with layered feet, one central ivory ceramic cylinder, three sturdy arched supports holding a small circular vertical brass halo. Thick articulated adjustment knobs and recessed indigo enamel panels, tiny moth relief on the front panel. Intricate but mechanically plausible bench apparatus, clear openings, complete rear and underside. No magical particles, no thin floating filigree, no text or background scene.",
+  "model": "tripo-v3.1",
+  "seed": 41008,
+  "params": {
+    "face_limit": 60000,
+    "texture": true,
+    "pbr": true,
+    "texture_quality": "detailed",
+    "geometry_quality": "detailed",
+    "auto_size": true
+  },
+  "artReview": {
+    "purpose": "hero bench apparatus",
+    "targetDimensionsCm": [
+      40,
+      30,
+      58
+    ],
+    "status": "AwaitingGeneration",
+    "direction": "Brass Sanctuary",
+    "countPolicy": "Candidate only; not an accepted catalog asset until in-engine review",
+    "sourceInputs": "Original authored text only"
+  }
+}
