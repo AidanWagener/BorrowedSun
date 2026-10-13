@@ -133,6 +133,23 @@ function Test-TripoArtifacts {
     }
     return $true
 }
+function Assert-TripoOutputTree {
+    param([string]$Directory)
+    Assert-NoReparsePoint $Directory
+    try{$root=Get-Item -LiteralPath $Directory -Force -ErrorAction Stop}
+    catch [System.Management.Automation.ItemNotFoundException]{return}
+    if(($root.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0){throw 'Tripo output directories must not contain reparse points.'}
+    if(-not $root.PSIsContainer){throw 'Tripo output path must be a directory.'}
+    $pending=New-Object 'System.Collections.Generic.Stack[string]'
+    $pending.Push($root.FullName)
+    while($pending.Count -gt 0){
+        # Inspect each entry before descent; recursive enumeration could follow a link.
+        foreach($entry in @(Get-ChildItem -LiteralPath $pending.Pop() -Force -ErrorAction Stop)){
+            if(($entry.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0){throw 'Tripo output directories must not contain reparse points.'}
+            if($entry.PSIsContainer){$pending.Push($entry.FullName)}
+        }
+    }
+}
 
 if($TaskId -and $Mode -ne 'Resume'){throw '-TaskId is only for recovering an unknown submission with Resume.'}
 if($Mode -eq 'Doctor'){
@@ -164,6 +181,7 @@ try{
     if($Mode -eq 'Generate'){
         if($null -ne $state){throw 'This job already has a durable record. Use Resume; Generate never repeats a recorded submission.'}
         $state=[pscustomobject]@{schemaVersion=1;briefId=$brief.id;briefSha256=$authored.Hash;cliVersion=$installation.Version;status='planned';task_id=$null;serverStatus=$null;progress=$null;creditsConsumed=$null;createdUtc=[DateTime]::UtcNow.ToString('o');updatedUtc=$null;lastError=$null;files=@()}
+        Assert-TripoOutputTree $job
         Write-JsonFile (Join-Path $job 'request.json') @{schemaVersion=1;briefId=$brief.id;briefSha256=$authored.Hash;endpoint='/v3/generation/text-to-model';payload=$payload}
         Save-TripoState $statePath $state
         $arguments=@('generate','text-to-model',$brief.prompt,'--model',$brief.model,'--name',$brief.id,'--no-wait','--no-download')
@@ -201,6 +219,7 @@ try{
         }
         if($state.status -eq 'fail'){$state | ConvertTo-Json -Depth 12;return}
         $download=Resolve-ContainedPath $job 'downloads'
+        Assert-TripoOutputTree $download
         try{
             $response=Invoke-TripoJson $installation @('task','get',$state.task_id,'--download','--out',$download)
             $detail=$response.Result

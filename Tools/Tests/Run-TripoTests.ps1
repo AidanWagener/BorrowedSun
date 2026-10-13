@@ -28,6 +28,7 @@ import {fileURLToPath} from 'node:url';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const args=process.argv.slice(2);
 if(args[0]==='--version'){console.log('0.6.1');process.exit(0);}
+if(args[0]==='fixture-file-link'){fs.symlinkSync(args[2],args[1],'file');process.exit(0);}
 const control=JSON.parse(fs.readFileSync(path.join(root,'control.json'),'utf8'));
 fs.appendFileSync(path.join(root,'calls.jsonl'),JSON.stringify(args)+'\n');
 if(args[0]==='generate'){
@@ -41,6 +42,7 @@ if(args[0]==='generate'){
     detail.output={model_url:'https://example.invalid/model.glb?secret=signed-sentinel'};
     detail.files=[];
     if(!control.empty){const file=path.join(out,'model.glb');fs.writeFileSync(file,'OFFLINE TEST FIXTURE, NOT A 3D MODEL');detail.files.push(file);}
+    fs.writeFileSync(path.join(out,'task.json'),JSON.stringify({task_id:detail.task_id}));
   }
   console.log(JSON.stringify(detail));
 }else{console.error('Unexpected mock command');process.exit(9);}
@@ -52,6 +54,7 @@ $brief=@{schemaVersion=1;id='fixture-lamp-v1';prompt=$prompt;model='tripo-v3.1';
 Write-JsonFile $briefPath $brief
 Write-JsonFile $controlPath @{submit='ok';status='running'}
 $passed=0
+$skipped=@()
 function Assert-True {param([bool]$Value,[string]$Message);if(-not $Value){throw $Message};$script:passed++}
 function Expect-Failure {
     param([scriptblock]$Action,[string]$Message)
@@ -64,6 +67,19 @@ function Expect-Failure {
 function Read-Calls {if(Test-Path -LiteralPath $callsPath){Get-Content -LiteralPath $callsPath -Encoding UTF8 | ForEach-Object {[pscustomobject]@{arguments=($_ | ConvertFrom-Json)}}}}
 function Count-Submits {return @((Read-Calls) | Where-Object {$_.arguments[0] -eq 'generate'}).Count}
 function Read-State {Get-Content -LiteralPath (Join-Path $fixture ('Artifacts/tripo/'+$brief.id+'/state.json')) -Raw -Encoding UTF8 | ConvertFrom-Json}
+function New-FixtureFileLink {
+    param([string]$Link,[string]$Target,[string]$Case)
+    $node=@(Get-Command 'node.exe' -CommandType Application -ErrorAction Stop)[0].Source
+    $result=Invoke-WorkspaceProcess -FilePath $node -Arguments @((Join-Path $dist 'cli.js'),'fixture-file-link',$Link,$Target) -WorkingDirectory $fixture -TimeoutSeconds 15
+    if($result.ExitCode -ne 0){
+        if($result.StdErr -match '\b(EPERM|EACCES)\b'){
+            $script:skipped+=@{Case=$Case;Reason='Windows denied file-symbolic-link creation; no file-link assertions ran.'}
+            return $false
+        }
+        throw 'Could not create the file-symlink regression fixture.'
+    }
+    return $true
+}
 
 $plan=& $adapter -Mode Plan -BriefFile $briefPath | ConvertFrom-Json
 Assert-True ($plan.localOnly -and $plan.payload.model -eq 'v3.1-20260211' -and $plan.payload.model_seed -eq 41001 -and $plan.payload.texture_seed -eq 41001) 'Plan did not preserve endpoint/model/seeds.'
@@ -104,6 +120,56 @@ $restored=& $adapter -Mode Resume -BriefFile $briefPath -CliPath $shim | Convert
 Assert-True ($restored.status -eq 'complete' -and (Test-Path -LiteralPath $modelPath)) 'Resume failed to restore a missing download.'
 Assert-True ((Count-Submits) -eq 1) 'Restoring downloaded artifacts submitted new geometry.'
 
+foreach($leaf in @('model.glb','task.json')){
+    $brief.id=if($leaf -eq 'model.glb'){'linked-model-v1'}else{'linked-metadata-v1'}
+    Write-JsonFile $briefPath $brief
+    & $adapter -Mode Generate -BriefFile $briefPath -CliPath $shim -Execute | Out-Null
+    $downloads=Join-Path $fixture ('Artifacts/tripo/'+$brief.id+'/downloads')
+    $null=New-Item -ItemType Directory -Path $downloads
+    $external=Join-Path $run ($brief.id+'-external-sentinel')
+    [IO.File]::WriteAllText($external,'Unrelated file must not change.')
+    $externalHash=(Get-FileHash -LiteralPath $external -Algorithm SHA256).Hash
+    $link=Join-Path $downloads $leaf
+    if(-not (New-FixtureFileLink $link $external $brief.id)){continue}
+    $callsBefore=@(Read-Calls).Count
+    try{
+        Expect-Failure {& $adapter -Mode Resume -BriefFile $briefPath -CliPath $shim} 'Resume accepted an existing file symlink before download.'
+        Assert-True (@(Read-Calls).Count -eq $callsBefore) 'A linked download destination reached the CLI before rejection.'
+        Assert-True ((Get-FileHash -LiteralPath $external -Algorithm SHA256).Hash -eq $externalHash) 'Resume overwrote an unrelated file through a download symlink.'
+        Assert-True ((Read-State).status -eq 'submitted' -and (Read-State).task_id -eq 'task_fixture_001') 'Rejecting a download symlink lost the resumable task ID.'
+    }finally{Remove-Item -LiteralPath $link -Force}
+    $repaired=& $adapter -Mode Resume -BriefFile $briefPath -CliPath $shim | ConvertFrom-Json
+    Assert-True ($repaired.status -eq 'complete' -and $repaired.task_id -eq 'task_fixture_001') 'Removing the download symlink did not allow the original task to resume.'
+}
+
+$brief.id='nested-junction-v1';Write-JsonFile $briefPath $brief
+& $adapter -Mode Generate -BriefFile $briefPath -CliPath $shim -Execute | Out-Null
+$downloads=Join-Path $fixture ('Artifacts/tripo/'+$brief.id+'/downloads')
+$nested=Join-Path $downloads 'one/two';$null=New-Item -ItemType Directory -Path $nested
+$junction=Join-Path $nested 'cycle'
+$null=New-Item -ItemType Junction -Path $junction -Value $downloads
+$callsBefore=@(Read-Calls).Count
+try{
+    Expect-Failure {& $adapter -Mode Resume -BriefFile $briefPath -CliPath $shim} 'Resume accepted a nested directory junction.'
+    Assert-True (@(Read-Calls).Count -eq $callsBefore) 'A nested junction reached the CLI before rejection.'
+    Assert-True ((Read-State).task_id -eq 'task_fixture_001') 'Rejecting a nested junction lost the resumable task ID.'
+}finally{[IO.Directory]::Delete($junction)}
+
+$brief.id='linked-request-v1';Write-JsonFile $briefPath $brief
+$job=Join-Path $fixture ('Artifacts/tripo/'+$brief.id);$null=New-Item -ItemType Directory -Path $job
+$external=Join-Path $run 'request-external-sentinel';[IO.File]::WriteAllText($external,'Unrelated request sentinel.')
+$externalHash=(Get-FileHash -LiteralPath $external -Algorithm SHA256).Hash
+$link=Join-Path $job 'request.json'
+if(New-FixtureFileLink $link $external $brief.id){
+    $callsBefore=@(Read-Calls).Count
+    try{
+        Expect-Failure {& $adapter -Mode Generate -BriefFile $briefPath -CliPath $shim -Execute} 'Generate accepted a linked request record.'
+        Assert-True (@(Read-Calls).Count -eq $callsBefore) 'A linked request record reached the CLI before rejection.'
+        Assert-True ((Get-FileHash -LiteralPath $external -Algorithm SHA256).Hash -eq $externalHash) 'Generate overwrote an unrelated file through request.json.'
+        Assert-True (-not (Test-Path -LiteralPath (Join-Path $job 'state.json'))) 'Rejected request path created a submission record.'
+    }finally{Remove-Item -LiteralPath $link -Force}
+}
+
 $brief.id='unknown-lamp-v1';Write-JsonFile $briefPath $brief
 Write-JsonFile $controlPath @{submit='unknown';status='running'}
 $before=Count-Submits
@@ -140,6 +206,6 @@ $brief.id='version-lamp-v1';Write-JsonFile $briefPath $brief
 Write-JsonFile (Join-Path $module 'package.json') @{name='tripo-cli';version='0.6.2';type='module'}
 Expect-Failure {& $adapter -Mode Generate -BriefFile $briefPath -CliPath $shim -Execute} 'Unreviewed CLI version was accepted.'
 Assert-True (-not (Test-Path -LiteralPath (Join-Path $fixture ('Artifacts/tripo/'+$brief.id+'/state.json')))) 'Version mismatch created a submission record.'
-$summary=@{Passed=$passed;Failed=0;Scope='Offline Tripo adapter tests with fake CLI; no network, credentials, billing or real model generation';Fixtures=$run}
+$summary=@{Passed=$passed;Failed=0;Skipped=$skipped.Count;SkippedCases=$skipped;Scope='Offline Tripo adapter tests with fake CLI; no network, credentials, billing or real model generation';Fixtures=$run}
 Write-JsonFile (Join-Path $run 'tripo-test-result.json') $summary
 $summary | ConvertTo-Json
