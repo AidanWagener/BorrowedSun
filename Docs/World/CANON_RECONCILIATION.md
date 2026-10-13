@@ -4,7 +4,7 @@
 
 ## Source hierarchy and current anchors
 
-The [original specification](Sources/Original_Game_Specification_2026-10-12.md), version 1.0 dated 12 October, explicitly calls its designs proposals. Its unchanged source snapshot has SHA-256 `b756bb794fa0f0ed65743729203d5b2da69cd6c81beaeb4f20eb59f524995791`. The later [worldbuilding asset specification](../Art/WORLD_ASSET_SPEC.md) expands Orison's material culture. [Approved art direction](../Art/ART_DIRECTION.md) records the user's visual choices. The current game code demonstrates the First Light mission, but implements only a small subset of the fictional setting. The user's 13 October direction now requires the whole world to be deeply established before its construction.
+The [original specification](Sources/Original_Game_Specification_2026-10-12.md), version 1.0 dated 12 October, explicitly calls its designs proposals. Its text is preserved here; Git normalizes line endings. The original file before that normalization has SHA-256 `b756bb794fa0f0ed65743729203d5b2da69cd6c81beaeb4f20eb59f524995791`. The later [worldbuilding asset specification](../Art/WORLD_ASSET_SPEC.md) expands Orison's material culture. [Approved art direction](../Art/ART_DIRECTION.md) records the user's visual choices. The current game code demonstrates the First Light mission, but implements only a small subset of the fictional setting. The user's 13 October direction now requires the whole world to be deeply established before its construction.
 
 | Anchor | Existing evidence | Treatment in the new bible |
 |---|---|---|
