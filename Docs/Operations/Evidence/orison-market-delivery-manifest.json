@@ -1,0 +1,165 @@
+{
+  "sourceBuild": "Artifacts/build/20261013T152950Z-f7c88d4c",
+  "fileCount": 30,
+  "engine": "5.8.2 CL 56702186",
+  "schemaVersion": 1,
+  "status": "RenderedRoutesPassedPacingMeasuredKnownHitch",
+  "sourceCommit": "f21433a396c33189025bb3fbc8e1d20d10eb5412",
+  "configuration": "Shipping",
+  "totalBytes": 1011172522.0,
+  "files": [
+    {
+      "path": "Windows/BorrowedSun.exe",
+      "sha256": "5b63bd4bb7224b2e70e41e4112992334283d054f1738088bb6ca97fb00b8689d",
+      "bytes": 171520
+    },
+    {
+      "path": "Windows/Manifest_DebugFiles_Win64.txt",
+      "sha256": "637f50182fc978bd31f1812f32b7bc31706ea231ab8622bf5872f510f5a93b20",
+      "bytes": 230
+    },
+    {
+      "path": "Windows/Manifest_NonUFSFiles_Win64.txt",
+      "sha256": "fb610ffc00923ad721ca167cb37de643eed7e765beaf01464b0bd6ec88044389",
+      "bytes": 1472
+    },
+    {
+      "path": "Windows/Manifest_UFSFiles_Win64.txt",
+      "sha256": "2e1ba2ca7bac8ea44abacd8d684d40e2ed860174c185ec852366855cadb39013",
+      "bytes": 245828
+    },
+    {
+      "path": "Windows/NOTICES.txt",
+      "sha256": "ba49ae5586f817b36a2772269f71f899cb1f54b5f2720fad951319edd5e140b8",
+      "bytes": 111
+    },
+    {
+      "path": "Windows/BorrowedSun/Binaries/Win64/BorrowedSun-Win64-Shipping.exe",
+      "sha256": "958f4803726d5417e258a3306044c231d9afefa3d9d8dc4ce58d39f56bc842a7",
+      "bytes": 166162432
+    },
+    {
+      "path": "Windows/BorrowedSun/Binaries/Win64/BorrowedSun-Win64-Shipping.pdb",
+      "sha256": "a275b03f06000312d6cf729b930045a287095dc316ff6863efe141d9b5228d87",
+      "bytes": 225849344
+    },
+    {
+      "path": "Windows/BorrowedSun/Binaries/Win64/tbb12.dll",
+      "sha256": "de15a5f93bfd334d4fe32343a81d76f9de0824af8e31b2189637d12545af2673",
+      "bytes": 342456
+    },
+    {
+      "path": "Windows/BorrowedSun/Binaries/Win64/tbbmalloc.dll",
+      "sha256": "74edc04a8f5bc2593a5a555b675c1251d6d90e693ee6a67cfa11dd3b2d17a856",
+      "bytes": 117176
+    },
+    {
+      "path": "Windows/BorrowedSun/Binaries/Win64/D3D12/x64/D3D12Core.dll",
+      "sha256": "c41711499e13244fd07ca28a9b32ece29e4454ecc38fb50681f74254b333a9b3",
+      "bytes": 4831768
+    },
+    {
+      "path": "Windows/BorrowedSun/Binaries/Win64/D3D12/x64/d3d12SDKLayers.dll",
+      "sha256": "e36f1ee4371798892529762368907d19b997493ad6f30aa8acbfd0132881804f",
+      "bytes": 4943344
+    },
+    {
+      "path": "Windows/BorrowedSun/Binaries/Win64/DML/x64/DirectML.dll",
+      "sha256": "f97b69379ecbdbab7e1dcd2b6170e7f285d367c86ee6718bc401c4d7cef1275c",
+      "bytes": 18538488
+    },
+    {
+      "path": "Windows/BorrowedSun/Content/Paks/BorrowedSun-Windows.pak",
+      "sha256": "26ff8d6616a4c0bc381db0348a1dd6dc0a64c7401143ddd67b578e215aa264e9",
+      "bytes": 11236817
+    },
+    {
+      "path": "Windows/BorrowedSun/Content/Paks/BorrowedSun-Windows.ucas",
+      "sha256": "caa354fb17c815e76140d9b445e884e7ca2a7c6c519d1f7f9a7ec6946c506a62",
+      "bytes": 538911600
+    },
+    {
+      "path": "Windows/BorrowedSun/Content/Paks/BorrowedSun-Windows.utoc",
+      "sha256": "4b45f84311d578bc02ae95d1879d97a9cf5551657262102c5f3607a0b3ed2066",
+      "bytes": 340823
+    },
+    {
+      "path": "Windows/BorrowedSun/Content/Paks/global.ucas",
+      "sha256": "8429fec79a4275d4e0ea7bf052d61c4773276f3ad6ebcc5b26ac23ce59715011",
+      "bytes": 3212864
+    },
+    {
+      "path": "Windows/BorrowedSun/Content/Paks/global.utoc",
+      "sha256": "efcec692890a649670b04e23a305a7751fa74dafef27f9b941c7e7cc853f3fea",
+      "bytes": 794
+    },
+    {
+      "path": "Windows/Engine/Binaries/ThirdParty/DbgHelp/dbghelp.dll",
+      "sha256": "36795e47d9724ee68349efbbe64aba94db108b9cad1e3dfe8bc510f359136f53",
+      "bytes": 2232688
+    },
+    {
+      "path": "Windows/Engine/Binaries/ThirdParty/MsQuic/v220/win64/msquic.dll",
+      "sha256": "5c6b07bf263dd8b85cb146b59468a22eb1fbd8635d4a6c56a8e41b67ce5eca2b",
+      "bytes": 2547080
+    },
+    {
+      "path": "Windows/Engine/Binaries/ThirdParty/NVIDIA/NVaftermath/Win64/GFSDK_Aftermath_Lib.x64.dll",
+      "sha256": "82d7a3e50710d660927db2f318cbed471049c962b7c05de12c2b2b3e40a35af9",
+      "bytes": 5799016
+    },
+    {
+      "path": "Windows/Engine/Binaries/ThirdParty/Ogg/Win64/VS2015/libogg_64.dll",
+      "sha256": "f23df1213c4bf23b5c666bafa7ec18743847a2e18192ae8e0d096a2fb7c28bf9",
+      "bytes": 59832
+    },
+    {
+      "path": "Windows/Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbis_64.dll",
+      "sha256": "a56d43a98e197f5e73a1dadf5c1dc7a07ad40327b199faa4ff1247abd6eccd5b",
+      "bytes": 1724856
+    },
+    {
+      "path": "Windows/Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll",
+      "sha256": "d64e67ca918716be8b6056a6f7a1f6256e910754425db8369d952943264b40eb",
+      "bytes": 48568
+    },
+    {
+      "path": "Windows/Engine/Binaries/ThirdParty/Windows/XAudio2_9/x64/xaudio2_9redist.dll",
+      "sha256": "0ca010abcabe52493fdb744d79c4c8132ae6756046b68aa7c88bdc03ec1effcd",
+      "bytes": 858152
+    },
+    {
+      "path": "Windows/Engine/Config/StagedBuild_BorrowedSun.ini",
+      "sha256": "f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5",
+      "bytes": 3
+    },
+    {
+      "path": "Windows/Engine/Content/Renderer/TessellationTable.bin",
+      "sha256": "edc4f3b628a139c5e185bbaeca661c95c1f427368d3b92892c5cff36c56dd941",
+      "bytes": 259568
+    },
+    {
+      "path": "Windows/Engine/Content/Slate/Cursor/invisible.cur",
+      "sha256": "fef3980fa567e9c45d5d8dcaa432a2c1a3f3bb17fe67d7ab198164f56c142aa1",
+      "bytes": 326
+    },
+    {
+      "path": "Windows/Engine/Content/SlateDebug/Fonts/LastResort.tps",
+      "sha256": "0f775fa99d05e21d43d2d06d55982b23dcdccdb512a9a5a07aff674f212c41b8",
+      "bytes": 930
+    },
+    {
+      "path": "Windows/Engine/Content/SlateDebug/Fonts/LastResort.ttf",
+      "sha256": "fff0f8de0b868b964950fe97c9b60f893e9bc85a4f90b3629c5693db058b97b9",
+      "bytes": 5395052
+    },
+    {
+      "path": "Windows/Engine/Plugins/NNE/NNERuntimeORT/Binaries/ThirdParty/Onnxruntime/Win64/onnxruntime.dll",
+      "sha256": "5df3d744b5cc4421181e9e2c97cadff4e9b1b2b25e80202160e80fc94ff948f2",
+      "bytes": 17339384
+    }
+  ],
+  "renderedValidation": "Artifacts/demo/20261013T153553Z-0b11269d",
+  "pacingValidation": "Artifacts/demo/20261013T154004Z-8ee47193",
+  "limitation": "Visual benchmark remains unmet; one 127.214 ms flight frame interval in the 1080p measurement; human input-feel review remains outstanding."
+}

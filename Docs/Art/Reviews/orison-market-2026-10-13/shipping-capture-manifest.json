@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "benchmarkMatched": false,
+  "height": 1080,
+  "width": 1920,
+  "capturedBy": "Unreal Shipping real RHI offscreen",
+  "captures": [
+    {
+      "path": "shipping-street-start.png",
+      "sha256": "3f620c8204adc97f8a4889b1a615bada6bcb772594d07192515cef465c522996",
+      "visuallyReviewed": true,
+      "edited": false,
+      "source": "Artifacts/playerdata/orison-market-shipping-shots-01/Saved/DemoValidation/QA_20261013T153553Z_606f14bf093d4180-Clinic-street-start.png"
+    },
+    {
+      "path": "shipping-workshop-front.png",
+      "sha256": "03543be174ec056c30590addaecae4df44b2d50c0b6347c68fe5b75398cbf38c",
+      "visuallyReviewed": true,
+      "edited": false,
+      "source": "Artifacts/playerdata/orison-market-shipping-shots-01/Saved/DemoValidation/QA_20261013T153553Z_606f14bf093d4180-Evacuation-workshop-front.png"
+    },
+    {
+      "path": "shipping-workshop-bench.png",
+      "sha256": "12311aec8a293b6ffc27c90c572d45b2c876443d00049dde76f21f539e08d06c",
+      "visuallyReviewed": true,
+      "edited": false,
+      "source": "Artifacts/playerdata/orison-market-shipping-shots-01/Saved/DemoValidation/QA_20261013T153553Z_606f14bf093d4180-Evacuation-workshop-bench.png"
+    },
+    {
+      "path": "shipping-city-overview.png",
+      "sha256": "cd1b6950f8b837597b75286781af30311f5563557cd27576e74d8da3c663ad9d",
+      "visuallyReviewed": true,
+      "edited": false,
+      "source": "Artifacts/playerdata/orison-market-shipping-shots-01/Saved/DemoValidation/QA_20261013T153553Z_606f14bf093d4180-Evacuation-city-overview.png"
+    },
+    {
+      "path": "shipping-lantern-keeper.png",
+      "sha256": "1248e10baa40de6f9f4b4ca8a821513082a19fe00cea894f10a31fe9ac592eed",
+      "visuallyReviewed": true,
+      "edited": false,
+      "source": "Artifacts/playerdata/orison-market-shipping-shots-01/Saved/DemoValidation/QA_20261013T153553Z_606f14bf093d4180-Evacuation-lantern-keeper.png"
+    },
+    {
+      "path": "shipping-orison-region.png",
+      "sha256": "9af8348815b597d45d7c05e421717e8e545ba2b7c98db6276901dc74cd400c0d",
+      "visuallyReviewed": true,
+      "edited": false,
+      "source": "Artifacts/playerdata/orison-market-shipping-shots-01/Saved/DemoValidation/QA_20261013T153553Z_606f14bf093d4180-Evacuation-orison-region.png"
+    }
+  ],
+  "sourceCommit": "f21433a396c33189025bb3fbc8e1d20d10eb5412"
+}

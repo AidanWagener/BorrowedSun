@@ -1,0 +1,24 @@
+{
+  "StartedUtc": "2026-10-13T15:29:50.9034686Z",
+  "Engine": {
+    "Version": "5.8.2",
+    "Changelist": 56702186
+  },
+  "PackageExecutableCount": 1,
+  "Git": {
+    "Repository": true,
+    "Commit": "f21433a396c33189025bb3fbc8e1d20d10eb5412",
+    "Dirty": false
+  },
+  "SchemaVersion": 1,
+  "Project": "Game/BorrowedSun.uproject",
+  "Platform": "Win64",
+  "Kind": "Package",
+  "Status": "Passed",
+  "Maps": [
+    "/Game/BorrowedSun/Maps/L_BorrowedSunDemo",
+    "/Game/BorrowedSun/Maps/L_ObjectLab"
+  ],
+  "FinishedUtc": "2026-10-13T15:34:02.2637915Z",
+  "Configuration": "Shipping"
+}
