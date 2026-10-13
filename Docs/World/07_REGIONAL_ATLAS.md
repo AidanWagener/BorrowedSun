@@ -84,7 +84,7 @@ Communities share musicians, instructors and specialized machinery by scheduled 
 
 ### REG-009 — Talweir Lake Country
 
-Talweir's planning center lies at 28° N, 124° E, where a narrow connection between major freshwater basins concentrates movement. The lakes themselves require detailed bathymetry and catchment boundaries; the current trunk river records only the intended downstream direction. The city's defining feature is a lived relationship with inland water rather than an ornamental lake beside a standard capital.
+Talweir's planning center lies at 28° N, 124° E, where a narrow connection between major freshwater basins concentrates movement. Namar's authored surface is 180 m and Iren's 176 m. The [city proposal](Cities/TALWEIR.md) preserves the atlas river's westward dogleg through the city and develops separate upper, lower and navigation reaches. Detailed bathymetry, catchments, flow and final engineering remain open. The city's defining feature is a lived relationship with inland water rather than an ornamental lake beside a standard capital.
 
 Households combine shore addresses with boat access, rented growing plots and ties to smaller lake settlements. Different shore authorities regulate water use, navigation, cultivation and habitat. The Lake Articles of 641 AL never made these interests neatly separable.
 

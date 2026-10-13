@@ -13,7 +13,7 @@ const { chromium } = require('playwright');
   const evidence = [];
   try {
     for (const width of [1000, 390]) {
-      const page = await browser.newPage({viewport:{width, height:1000}});
+      const page = await browser.newPage({viewport:{width, height:1000}, reducedMotion:'reduce'});
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(pathToFileURL(path.join(root,'Docs/World/Living_Planet_Reader.html')).href);
@@ -28,17 +28,19 @@ const { chromium } = require('playwright');
       for (const url of check.localFiles) {
         try { await fs.access(fileURLToPath(url)); } catch { missingFiles.push(url); }
       }
-      await page.locator('nav a[href="#atlas"]').click();
-      await page.waitForFunction(() => location.hash === '#atlas');
-      await page.locator('#atlas').scrollIntoViewIfNeeded();
-      await page.screenshot({path:path.join(output,`reader-atlas-${width}.png`)});
-      await page.locator('nav a[href="#orison"]').click();
-      await page.waitForFunction(() => location.hash === '#orison');
-      await page.locator('#orison').scrollIntoViewIfNeeded();
-      await page.screenshot({path:path.join(output,`reader-orison-${width}.png`)});
+      const navigated = [];
+      for (const {id} of expected.chapters) {
+        await page.locator(`nav a[href="#${id}"]`).click();
+        await page.waitForFunction(id => location.hash === `#${id}`, id);
+        navigated.push(id);
+        if (['atlas', 'orison', 'exchange', 'talweir'].includes(id)) {
+          await page.locator(`#${id}`).scrollIntoViewIfNeeded();
+          await page.screenshot({path:path.join(output,`reader-${id}-${width}.png`)});
+        }
+      }
       await page.goto(pathToFileURL(path.join(root,'Docs/World/Living_Planet_Reader.html')).href);
       await page.screenshot({path:path.join(output,`reader-contents-${width}.png`)});
-      const result = {width,...check, missingFiles, errors, atlasNavigation:true, orisonNavigation:true};
+      const result = {width,...check, missingFiles, errors, navigated};
       delete result.localFiles;
       evidence.push(result);
       if (check.articles !== expected.chapters.length || check.overflow || check.brokenImages.length || check.missingAnchors.length || missingFiles.length || errors.length) {

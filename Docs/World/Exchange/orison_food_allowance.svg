@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="690" viewBox="0 0 1440 690" role="img" aria-labelledby="title desc">
+<title id="title">Orison core food allowance: origin and composition</title>
+<desc id="desc">Two bar charts show the same 700 tonnes per civil turn, once by productive origin and once by product category. These totals must not be added together.</desc>
+<rect width="1440" height="690" fill="#f1eddf"/>
+<style>text{font-family:Arial,sans-serif;fill:#273e43;font-size:16px}.small{font-size:13px}.grid{stroke:#b6c4be;stroke-width:.7}</style>
+<text x="50" y="44" style="font-size:27px">ORISON / WHAT FEEDS THE CORE</text>
+<text x="50" y="77" >700 tonnes of edible product per 24-hour civil turn · 420,000 residents · authored demand allowance</text>
+<text x="50" y="103" class="small">Both panels describe the same total. Production capacity, nutrition and transport feasibility remain unverified.</text>
+<text x="50" y="150" style="font-size:18px;font-weight:bold">BY PRODUCTIVE ORIGIN</text>
+<line x1="285.0" y1="170" x2="285.0" y2="553" class="grid"/>
+<text x="285.0" y="576" class="small" text-anchor="middle">0</text>
+<line x1="365.0" y1="170" x2="365.0" y2="553" class="grid"/>
+<text x="365.0" y="576" class="small" text-anchor="middle">100</text>
+<line x1="445.0" y1="170" x2="445.0" y2="553" class="grid"/>
+<text x="445.0" y="576" class="small" text-anchor="middle">200</text>
+<line x1="525.0" y1="170" x2="525.0" y2="553" class="grid"/>
+<text x="525.0" y="576" class="small" text-anchor="middle">300</text>
+<line x1="605.0" y1="170" x2="605.0" y2="553" class="grid"/>
+<text x="605.0" y="576" class="small" text-anchor="middle">400</text>
+<text x="50" y="190" >Saffron urban/rural belt</text>
+<rect data-value="140" x="285" y="173" width="112.0" height="27" rx="2" fill="#356d7a"/>
+<text x="405.0" y="193" class="small">140</text>
+<text x="50" y="252" >Nine River producers and</text>
+<text x="50" y="268" >Marroway consolidation</text>
+<rect data-value="360" x="285" y="235" width="288.0" height="27" rx="2" fill="#356d7a"/>
+<text x="581.0" y="255" class="small">360</text>
+<text x="50" y="314" >Glassback foothill valleys</text>
+<rect data-value="75" x="285" y="297" width="60.0" height="27" rx="2" fill="#356d7a"/>
+<text x="353.0" y="317" class="small">75</text>
+<text x="50" y="376" >Red Ledger producers and</text>
+<text x="50" y="392" >Hesh distributors</text>
+<rect data-value="65" x="285" y="359" width="52.0" height="27" rx="2" fill="#356d7a"/>
+<text x="345.0" y="379" class="small">65</text>
+<text x="50" y="438" >Qualified Saffron/coastal</text>
+<text x="50" y="454" >processing</text>
+<rect data-value="48" x="285" y="421" width="38.400000000000006" height="27" rx="2" fill="#356d7a"/>
+<text x="331.4" y="441" class="small">48</text>
+<text x="50" y="500" >Distant specialties</text>
+<text x="50" y="516" >through several carriers</text>
+<rect data-value="12" x="285" y="483" width="9.600000000000001" height="27" rx="2" fill="#356d7a"/>
+<text x="302.6" y="503" class="small">12</text>
+<text x="605" y="601" class="small" text-anchor="end">tonnes / civil turn</text>
+<text x="755" y="150" style="font-size:18px;font-weight:bold">BY PRODUCT CATEGORY</text>
+<line x1="990.0" y1="170" x2="990.0" y2="553" class="grid"/>
+<text x="990.0" y="576" class="small" text-anchor="middle">0</text>
+<line x1="1070.0" y1="170" x2="1070.0" y2="553" class="grid"/>
+<text x="1070.0" y="576" class="small" text-anchor="middle">100</text>
+<line x1="1150.0" y1="170" x2="1150.0" y2="553" class="grid"/>
+<text x="1150.0" y="576" class="small" text-anchor="middle">200</text>
+<line x1="1230.0" y1="170" x2="1230.0" y2="553" class="grid"/>
+<text x="1230.0" y="576" class="small" text-anchor="middle">300</text>
+<line x1="1310.0" y1="170" x2="1310.0" y2="553" class="grid"/>
+<text x="1310.0" y="576" class="small" text-anchor="middle">400</text>
+<text x="755" y="190" >Introduced dry staples</text>
+<rect data-value="230" x="990" y="173" width="184.0" height="27" rx="2" fill="#936749"/>
+<text x="1182.0" y="193" class="small">230</text>
+<text x="755" y="252" >Introduced fresh produce</text>
+<rect data-value="300" x="990" y="235" width="240.0" height="27" rx="2" fill="#936749"/>
+<text x="1238.0" y="255" class="small">300</text>
+<text x="755" y="314" >Cultured products</text>
+<rect data-value="90" x="990" y="297" width="72.0" height="27" rx="2" fill="#936749"/>
+<text x="1070.0" y="317" class="small">90</text>
+<text x="755" y="376" >Qualified native fractions</text>
+<rect data-value="30" x="990" y="359" width="24.0" height="27" rx="2" fill="#936749"/>
+<text x="1022.0" y="379" class="small">30</text>
+<text x="755" y="438" >Other preserved products</text>
+<rect data-value="50" x="990" y="421" width="40.0" height="27" rx="2" fill="#936749"/>
+<text x="1038.0" y="441" class="small">50</text>
+<text x="1310" y="601" class="small" text-anchor="end">tonnes / civil turn</text>
+<text x="50" y="640" class="small">The dry reserve is a separate stock: 6,900 tonnes, or 30 turns of full dry demand before losses and other obligations.</text>
+<text x="50" y="663" class="small">Source: nacre_exchange.json · Working edition 0.3 · Core demand only; wider service-region requirements are additional.</text>
+</svg>

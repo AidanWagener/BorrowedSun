@@ -1,0 +1,2612 @@
+{
+  "schema_version": "1.0",
+  "edition": "0.1",
+  "status": "Authored city planning proposal; not surveyed terrain, hydraulic simulation or implemented world",
+  "city_id": "CITY-005",
+  "city_name": "Talweir",
+  "region_id": "REG-009",
+  "authored_date": "2026-10-13",
+  "present_year_AL": 742,
+  "source_bible": "TALWEIR.md",
+  "source_controls": {
+    "atlas": "../Atlas/nacre_atlas.json",
+    "geography": "../Atlas/nacre_geography.json",
+    "river_id": "RIV-004",
+    "lake_ids": [
+      "LAK-001",
+      "LAK-002"
+    ],
+    "connection_id": "WAT-001",
+    "fixed_controls_lon_lat_altitude_m": [
+      [
+        124.1,
+        28.08,
+        180
+      ],
+      [
+        124,
+        28,
+        179.7
+      ],
+      [
+        124.08,
+        27.98,
+        176
+      ]
+    ],
+    "local_geometry_status": "Preserves the source westward dogleg; intermediate channel points and local banks are new refinement proposals"
+  },
+  "coordinate_frame": {
+    "projection": "Azimuthal equidistant on adopted reference sphere",
+    "origin_lat_deg": 28,
+    "origin_lon_deg": 124,
+    "reference_radius_m": 5900000,
+    "x_axis": "east",
+    "y_axis": "north",
+    "horizontal_units": "meters",
+    "vertical": "z is altitude above planning mean sea level, not tangent-plane displacement",
+    "height_units": "meters",
+    "terrain_status": "Whole lake outlines are projected source controls; local banks, elevations and bathymetry are unsurveyed proposals",
+    "local_to_runtime_status": "No Unreal placement transform established",
+    "planning_bounds_local_m": {
+      "min_x": -10000,
+      "max_x": 13000,
+      "min_y": -6000,
+      "max_y": 12000
+    }
+  },
+  "population": {
+    "core_resident_estimate": 780000,
+    "estimate_status": "Rounded fiction planning allocation, not simulated population",
+    "district_sum_required": 780000,
+    "gross_area_allowance_km2": 117,
+    "housing": {
+      "dwelling_count_assumption": 310000,
+      "occupied_fraction_assumption": 0.95,
+      "persons_per_occupied_dwelling_assumption": 2.65,
+      "implied_population": 780425,
+      "residential_parcel_area_km2": 32,
+      "coverage_fraction_assumption": 0.29,
+      "effective_residential_floors_assumption": 3.3,
+      "usable_floor_fraction_assumption": 0.8,
+      "implied_gross_residential_floor_m2": 30624000,
+      "implied_usable_floor_m2": 24499200,
+      "implied_usable_m2_per_dwelling": 79.03
+    },
+    "land_allocation_km2": {
+      "residential_parcels": 32,
+      "employment_and_freight": 18,
+      "civic": 9,
+      "streets_transit_paths": 21,
+      "parks_recreation_growing": 17,
+      "channels_berths": 8,
+      "setbacks_reserves_other_open": 12
+    }
+  },
+  "sky": {
+    "natural_solar_cycle_earth_hours": 136.755,
+    "civil_turn_earth_hours": 24,
+    "nominal_longest_day_hours": 74.2,
+    "nominal_shortest_day_hours": 62.6,
+    "nominal_longest_night_hours": 74.2,
+    "night_value_status": "Rounded complementary interval from adopted latitude table; terrain/refraction not included",
+    "rauth_visibility": "Entire disc below ordinary reference horizon at city center",
+    "art_constraint": "Do not place Rauth in lake panoramas; avoid universal night fog or automatic frozen lakes"
+  },
+  "whole_lake_outlines": [
+    {
+      "id": "LAK-001",
+      "name": "Namar",
+      "surface_elevation_m": 180,
+      "water_type": "freshwater",
+      "source_coordinates_lon_lat": [
+        [
+          123.2,
+          30.4
+        ],
+        [
+          124.4,
+          30.7
+        ],
+        [
+          125.1,
+          30
+        ],
+        [
+          125,
+          29
+        ],
+        [
+          124.1,
+          28.08
+        ],
+        [
+          123.7,
+          28.3
+        ],
+        [
+          122.9,
+          29.2
+        ],
+        [
+          123.2,
+          30.4
+        ]
+      ],
+      "coordinates_local_m": [
+        [
+          -71073.713,
+          247377.69,
+          180
+        ],
+        [
+          35430.16,
+          278090.727,
+          180
+        ],
+        [
+          98114.822,
+          206400.707,
+          180
+        ],
+        [
+          90066.994,
+          103347.469,
+          180
+        ],
+        [
+          9085.345,
+          8241.68,
+          180
+        ],
+        [
+          -27200.092,
+          30925.868,
+          180
+        ],
+        [
+          -98883.352,
+          124020.804,
+          180
+        ],
+        [
+          -71073.713,
+          247377.69,
+          180
+        ]
+      ],
+      "geometry_status": "Direct AEQD projection of coarse authoritative source polygon; not fine shoreline or bathymetry; extends well beyond local planning bounds"
+    },
+    {
+      "id": "LAK-002",
+      "name": "Iren",
+      "surface_elevation_m": 176,
+      "water_type": "freshwater",
+      "source_coordinates_lon_lat": [
+        [
+          124.08,
+          27.98
+        ],
+        [
+          124.6,
+          27.9
+        ],
+        [
+          125.2,
+          27.2
+        ],
+        [
+          124.9,
+          26.7
+        ],
+        [
+          124,
+          26.5
+        ],
+        [
+          123.6,
+          27.1
+        ],
+        [
+          124.08,
+          27.98
+        ]
+      ],
+      "coordinates_local_m": [
+        [
+          7275.031,
+          -2057.105,
+          176
+        ],
+        [
+          54602.963,
+          -10163.366,
+          176
+        ],
+        [
+          109906.415,
+          -81843.919,
+          176
+        ],
+        [
+          82801.351,
+          -133565.783,
+          176
+        ],
+        [
+          0.0,
+          -154461.639,
+          176
+        ],
+        [
+          -36669.105,
+          -92617.483,
+          176
+        ],
+        [
+          7275.031,
+          -2057.105,
+          176
+        ]
+      ],
+      "geometry_status": "Direct AEQD projection of coarse authoritative source polygon; not fine shoreline or bathymetry; extends well beyond local planning bounds"
+    }
+  ],
+  "waterway_controls": {
+    "nominal_upstream_surface_m": 180,
+    "nominal_downstream_surface_m": 176,
+    "total_nominal_head_m": 4,
+    "junction_local_m": [
+      0,
+      0,
+      179.7
+    ],
+    "namar_outlet_local_m": [
+      9085.345,
+      8241.68,
+      180
+    ],
+    "iren_inlet_local_m": [
+      7275.031,
+      -2057.105,
+      176
+    ],
+    "direct_outlet_inlet_distance_m": 10456.683,
+    "nominal_control_dogleg_distance_m": 19826.847,
+    "head_status": "Reference water surfaces; actual seasonal levels, bathymetry, discharge, velocities, floods and backwater unresolved"
+  },
+  "channel_centerlines": [
+    {
+      "id": "TAL-CH-01",
+      "name": "Upper Reach",
+      "points_local_m": [
+        [
+          9085.345,
+          8241.68,
+          180
+        ],
+        [
+          6900,
+          7200,
+          179.96
+        ],
+        [
+          4300,
+          5200,
+          179.9
+        ],
+        [
+          1900,
+          2300,
+          179.8
+        ],
+        [
+          0,
+          0,
+          179.7
+        ]
+      ],
+      "width_targets_m": [
+        260,
+        230,
+        220,
+        190,
+        180
+      ],
+      "water_level_status": "Nominal surface controls, no hydraulic solution",
+      "connection_from": "LAK-001",
+      "connection_to": "TAL-JUNCTION"
+    },
+    {
+      "id": "TAL-CH-02",
+      "name": "Lower Reach flowing bypass",
+      "points_local_m": [
+        [
+          0,
+          0,
+          179.7
+        ],
+        [
+          1400,
+          -500,
+          179.6
+        ],
+        [
+          2100,
+          -820,
+          179.5
+        ],
+        [
+          3300,
+          -1200,
+          178.5
+        ],
+        [
+          4400,
+          -1500,
+          177.2
+        ],
+        [
+          5700,
+          -1800,
+          176.4
+        ],
+        [
+          7275.031,
+          -2057.105,
+          176
+        ]
+      ],
+      "width_targets_m": [
+        180,
+        160,
+        145,
+        140,
+        165,
+        190,
+        230
+      ],
+      "water_level_status": "Conceptual descending bypass profile; controls are not engineered falls",
+      "connection_from": "TAL-JUNCTION",
+      "connection_to": "LAK-002"
+    },
+    {
+      "id": "TAL-CH-03",
+      "name": "Navigation cut and lock passage",
+      "points_local_m": [
+        [
+          1300,
+          -500,
+          179.6
+        ],
+        [
+          1800,
+          -1150,
+          179.6
+        ],
+        [
+          2140,
+          -1405,
+          179.6
+        ],
+        [
+          2260,
+          -1495,
+          177.8
+        ],
+        [
+          3400,
+          -1900,
+          177.8
+        ],
+        [
+          4040,
+          -2080,
+          177.8
+        ],
+        [
+          4160,
+          -2120,
+          176
+        ],
+        [
+          5900,
+          -2400,
+          176
+        ],
+        [
+          7275.031,
+          -2057.105,
+          176
+        ]
+      ],
+      "width_targets_m": [
+        45,
+        45,
+        36,
+        36,
+        50,
+        36,
+        36,
+        55,
+        80
+      ],
+      "water_level_status": "Locks separate nominal179.6,177.8 and176.0m pounds; chamber water varies during operation",
+      "connection_from": "TAL-CH-02",
+      "connection_to": "LAK-002",
+      "navigation_capacity_status": "Vessel envelope, lock chamber dimensions, throughput and water use unengineered"
+    }
+  ],
+  "locks": [
+    {
+      "id": "TAL-LOCK-01",
+      "name": "Upper Gate",
+      "upper_endpoint_local_m": [
+        2140,
+        -1405,
+        179.6
+      ],
+      "lower_endpoint_local_m": [
+        2260,
+        -1495,
+        177.8
+      ],
+      "nominal_lift_m": 1.8,
+      "bypass_id": "TAL-CH-02"
+    },
+    {
+      "id": "TAL-LOCK-02",
+      "name": "Lower Gate",
+      "upper_endpoint_local_m": [
+        4040,
+        -2080,
+        177.8
+      ],
+      "lower_endpoint_local_m": [
+        4160,
+        -2120,
+        176
+      ],
+      "nominal_lift_m": 1.8,
+      "bypass_id": "TAL-CH-02"
+    }
+  ],
+  "local_water_polygons": [
+    {
+      "id": "TAL-CH-01-ENV",
+      "name": "Upper Reach planning envelope",
+      "coordinates_local_m": [
+        [
+          9141.282,
+          8124.33,
+          180
+        ],
+        [
+          6961.69,
+          7102.946,
+          179.96
+        ],
+        [
+          4376.992,
+          5121.437,
+          179.9
+        ],
+        [
+          1973.211,
+          2239.46,
+          179.8
+        ],
+        [
+          69.387,
+          -57.319,
+          179.7
+        ],
+        [
+          -69.387,
+          57.319,
+          179.7
+        ],
+        [
+          1826.789,
+          2360.54,
+          179.8
+        ],
+        [
+          4223.008,
+          5278.563,
+          179.9
+        ],
+        [
+          6838.31,
+          7297.054,
+          179.96
+        ],
+        [
+          9029.408,
+          8359.03,
+          180
+        ],
+        [
+          9141.282,
+          8124.33,
+          180
+        ]
+      ],
+      "derived_from": "TAL-CH-01",
+      "geometry_status": "Simple variable-width planning envelope, not surveyed bank, terrain carve or engineering limit"
+    },
+    {
+      "id": "TAL-CH-02-ENV",
+      "name": "Lower Reach flowing bypass planning envelope",
+      "coordinates_local_m": [
+        [
+          30.27,
+          84.757,
+          179.7
+        ],
+        [
+          1429.098,
+          -425.48,
+          179.6
+        ],
+        [
+          2125.064,
+          -751.97,
+          179.5
+        ],
+        [
+          3319.846,
+          -1132.872,
+          178.5
+        ],
+        [
+          4420.009,
+          -1419.963,
+          177.2
+        ],
+        [
+          5718.072,
+          -1706.735,
+          176.4
+        ],
+        [
+          7293.558,
+          -1943.607,
+          176
+        ],
+        [
+          7256.504,
+          -2170.603,
+          176
+        ],
+        [
+          5681.928,
+          -1893.265,
+          176.4
+        ],
+        [
+          4379.991,
+          -1580.037,
+          177.2
+        ],
+        [
+          3280.154,
+          -1267.128,
+          178.5
+        ],
+        [
+          2074.936,
+          -888.03,
+          179.5
+        ],
+        [
+          1370.902,
+          -574.52,
+          179.6
+        ],
+        [
+          -30.27,
+          -84.757,
+          179.7
+        ],
+        [
+          30.27,
+          84.757,
+          179.7
+        ]
+      ],
+      "derived_from": "TAL-CH-02",
+      "geometry_status": "Simple variable-width planning envelope, not surveyed bank, terrain carve or engineering limit"
+    },
+    {
+      "id": "TAL-CH-03-ENV",
+      "name": "Navigation cut and lock passage planning envelope",
+      "coordinates_local_m": [
+        [
+          1317.834,
+          -486.282,
+          179.6
+        ],
+        [
+          1816.491,
+          -1134.693,
+          179.6
+        ],
+        [
+          2150.8,
+          -1390.6,
+          179.6
+        ],
+        [
+          2266.582,
+          -1478.246,
+          177.8
+        ],
+        [
+          3407.806,
+          -1876.25,
+          177.8
+        ],
+        [
+          4045.005,
+          -2062.71,
+          177.8
+        ],
+        [
+          4163.052,
+          -2102.261,
+          176
+        ],
+        [
+          5899.445,
+          -2372.506,
+          176
+        ],
+        [
+          7265.352,
+          -2018.294,
+          176
+        ],
+        [
+          7284.71,
+          -2095.916,
+          176
+        ],
+        [
+          5900.555,
+          -2427.494,
+          176
+        ],
+        [
+          4156.948,
+          -2137.739,
+          176
+        ],
+        [
+          4034.995,
+          -2097.29,
+          177.8
+        ],
+        [
+          3392.194,
+          -1923.75,
+          177.8
+        ],
+        [
+          2253.418,
+          -1511.754,
+          177.8
+        ],
+        [
+          2129.2,
+          -1419.4,
+          179.6
+        ],
+        [
+          1783.509,
+          -1165.307,
+          179.6
+        ],
+        [
+          1282.166,
+          -513.718,
+          179.6
+        ],
+        [
+          1317.834,
+          -486.282,
+          179.6
+        ]
+      ],
+      "derived_from": "TAL-CH-03",
+      "geometry_status": "Simple variable-width planning envelope, not surveyed bank, terrain carve or engineering limit"
+    },
+    {
+      "id": "TAL-WATER-BASIN",
+      "name": "Junction urban basin",
+      "coordinates_local_m": [
+        [
+          -650,
+          -180,
+          179.7
+        ],
+        [
+          -180,
+          -260,
+          179.7
+        ],
+        [
+          120,
+          -120,
+          179.7
+        ],
+        [
+          100,
+          100,
+          179.7
+        ],
+        [
+          -250,
+          80,
+          179.7
+        ],
+        [
+          -650,
+          70,
+          179.7
+        ],
+        [
+          -650,
+          -180,
+          179.7
+        ]
+      ],
+      "connected_to": "TAL-CH-01",
+      "geometry_status": "Authored local refinement; no surveyed terrain; Trial Pond is isolated artificial water",
+      "water_type": "freshwater"
+    },
+    {
+      "id": "TAL-WATER-POCKET",
+      "name": "Second Shore side pocket",
+      "coordinates_local_m": [
+        [
+          1570,
+          1750,
+          179.81
+        ],
+        [
+          2040,
+          1770,
+          179.81
+        ],
+        [
+          2100,
+          2100,
+          179.81
+        ],
+        [
+          1830,
+          2150,
+          179.81
+        ],
+        [
+          1690,
+          2030,
+          179.81
+        ],
+        [
+          1570,
+          1750,
+          179.81
+        ]
+      ],
+      "connected_to": "TAL-CH-01",
+      "geometry_status": "Authored local refinement; no surveyed terrain; Trial Pond is isolated artificial water",
+      "water_type": "freshwater"
+    },
+    {
+      "id": "TAL-WATER-INLET",
+      "name": "Iren local inlet pocket",
+      "coordinates_local_m": [
+        [
+          7275,
+          -2056,
+          176
+        ],
+        [
+          7750,
+          -1600,
+          176
+        ],
+        [
+          8300,
+          -1300,
+          176
+        ],
+        [
+          9000,
+          -1700,
+          176
+        ],
+        [
+          8800,
+          -2300,
+          176
+        ],
+        [
+          7500,
+          -2500,
+          176
+        ],
+        [
+          7275,
+          -2056,
+          176
+        ]
+      ],
+      "connected_to": "LAK-002",
+      "geometry_status": "Authored local refinement; no surveyed terrain; Trial Pond is isolated artificial water",
+      "water_type": "freshwater"
+    },
+    {
+      "id": "TAL-WATER-TRIAL",
+      "name": "Trial Pond",
+      "coordinates_local_m": [
+        [
+          -6950,
+          -1450,
+          228.8
+        ],
+        [
+          -6650,
+          -1450,
+          228.8
+        ],
+        [
+          -6650,
+          -1350,
+          228.8
+        ],
+        [
+          -6950,
+          -1350,
+          228.8
+        ],
+        [
+          -6950,
+          -1450,
+          228.8
+        ]
+      ],
+      "connected_to": null,
+      "geometry_status": "Authored local refinement; no surveyed terrain; Trial Pond is isolated artificial water",
+      "water_type": "freshwater"
+    }
+  ],
+  "districts": [
+    {
+      "id": "TAL-D01",
+      "name": "Junction Courts",
+      "resident_estimate": 95000,
+      "gross_area_allowance_km2": 9,
+      "center_local_m": [
+        -500,
+        400,
+        195
+      ],
+      "extent_radii_m": [
+        1800,
+        1200
+      ],
+      "altitude_range_m": [
+        183,
+        211
+      ],
+      "purpose": "Civic junction, older courts, principal interchange and housing",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D02",
+      "name": "Threadbank",
+      "resident_estimate": 110000,
+      "gross_area_allowance_km2": 13,
+      "center_local_m": [
+        1800,
+        4300,
+        198
+      ],
+      "extent_radii_m": [
+        2900,
+        2400
+      ],
+      "altitude_range_m": [
+        184,
+        216
+      ],
+      "purpose": "Upper-bank housing, textiles, workrooms and rehearsal spaces",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D03",
+      "name": "Rillward",
+      "resident_estimate": 120000,
+      "gross_area_allowance_km2": 16,
+      "center_local_m": [
+        -3800,
+        2900,
+        218
+      ],
+      "extent_radii_m": [
+        2500,
+        2400
+      ],
+      "altitude_range_m": [
+        201,
+        248
+      ],
+      "purpose": "Inland housing, hospital, schools and public recreation",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D04",
+      "name": "Long Tables",
+      "resident_estimate": 105000,
+      "gross_area_allowance_km2": 13,
+      "center_local_m": [
+        -2700,
+        -1800,
+        198
+      ],
+      "extent_radii_m": [
+        2600,
+        1800
+      ],
+      "altitude_range_m": [
+        188,
+        219
+      ],
+      "purpose": "Food distribution, long dining rooms, markets and housing",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D05",
+      "name": "Leafyards",
+      "resident_estimate": 90000,
+      "gross_area_allowance_km2": 18,
+      "center_local_m": [
+        -5500,
+        -1000,
+        230
+      ],
+      "extent_radii_m": [
+        3200,
+        2300
+      ],
+      "altitude_range_m": [
+        214,
+        270
+      ],
+      "purpose": "Propagation, production, western freight, utilities and housing",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D06",
+      "name": "Boatwright Reach",
+      "resident_estimate": 85000,
+      "gross_area_allowance_km2": 12,
+      "center_local_m": [
+        3200,
+        200,
+        188
+      ],
+      "extent_radii_m": [
+        3200,
+        2100
+      ],
+      "altitude_range_m": [
+        183,
+        212
+      ],
+      "purpose": "Small craft, touring stages, precision work and housing",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D07",
+      "name": "Downsteps",
+      "resident_estimate": 65000,
+      "gross_area_allowance_km2": 9,
+      "center_local_m": [
+        2900,
+        -2500,
+        188
+      ],
+      "extent_radii_m": [
+        3500,
+        1300
+      ],
+      "altitude_range_m": [
+        181,
+        214
+      ],
+      "purpose": "Locks, south-bank housing, transit and treatment works",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D08",
+      "name": "Inlet Gardens",
+      "resident_estimate": 60000,
+      "gross_area_allowance_km2": 15,
+      "center_local_m": [
+        7300,
+        1400,
+        191
+      ],
+      "extent_radii_m": [
+        2500,
+        3500
+      ],
+      "altitude_range_m": [
+        183,
+        225
+      ],
+      "purpose": "Iren inlet gardens, field school, care and mixed shore housing",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    },
+    {
+      "id": "TAL-D09",
+      "name": "Namar Gate",
+      "resident_estimate": 50000,
+      "gross_area_allowance_km2": 12,
+      "center_local_m": [
+        8700,
+        6800,
+        190
+      ],
+      "extent_radii_m": [
+        2500,
+        2200
+      ],
+      "altitude_range_m": [
+        184,
+        220
+      ],
+      "purpose": "Upstream freight and passenger transfer, shore housing and open-water services",
+      "extent_status": "Overlapping planning envelope, not cadastral boundary; gross area allowance is separately allocated and does not equal envelope area"
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "TAL-STOP-01",
+      "name": "Junction interchange",
+      "local_m": [
+        -800,
+        500,
+        195
+      ],
+      "district_id": "TAL-D01",
+      "endpoint_type": "land_based_interchange",
+      "access_leg_required": true,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Ferry services require engineered shore route, transfer platform and navigable berth; those alignments are not fixed by this point"
+    },
+    {
+      "id": "TAL-STOP-02",
+      "name": "Threadbank tram and landing interchange",
+      "local_m": [
+        900,
+        3600,
+        200
+      ],
+      "district_id": "TAL-D02",
+      "endpoint_type": "land_based_interchange",
+      "access_leg_required": true,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Ferry services require engineered shore route, transfer platform and navigable berth; those alignments are not fixed by this point"
+    },
+    {
+      "id": "TAL-STOP-03",
+      "name": "Rillward center",
+      "local_m": [
+        -3600,
+        2400,
+        218
+      ],
+      "district_id": "TAL-D03",
+      "endpoint_type": "land_transport_node",
+      "access_leg_required": false,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Final operational route alignment remains to be engineered"
+    },
+    {
+      "id": "TAL-STOP-04",
+      "name": "Long Tables center",
+      "local_m": [
+        -2700,
+        -1700,
+        198
+      ],
+      "district_id": "TAL-D04",
+      "endpoint_type": "land_transport_node",
+      "access_leg_required": false,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Final operational route alignment remains to be engineered"
+    },
+    {
+      "id": "TAL-STOP-05",
+      "name": "Leafyards regional freight and transit",
+      "local_m": [
+        -6500,
+        -800,
+        230
+      ],
+      "district_id": "TAL-D05",
+      "endpoint_type": "land_transport_node",
+      "access_leg_required": false,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Final operational route alignment remains to be engineered"
+    },
+    {
+      "id": "TAL-STOP-06",
+      "name": "Boatwright transfer",
+      "local_m": [
+        3500,
+        100,
+        188
+      ],
+      "district_id": "TAL-D06",
+      "endpoint_type": "land_based_interchange",
+      "access_leg_required": true,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Ferry services require engineered shore route, transfer platform and navigable berth; those alignments are not fixed by this point"
+    },
+    {
+      "id": "TAL-STOP-07",
+      "name": "Downsteps interchange",
+      "local_m": [
+        2700,
+        -2500,
+        188
+      ],
+      "district_id": "TAL-D07",
+      "endpoint_type": "land_based_interchange",
+      "access_leg_required": true,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Ferry services require engineered shore route, transfer platform and navigable berth; those alignments are not fixed by this point"
+    },
+    {
+      "id": "TAL-STOP-08",
+      "name": "Inlet Gardens interchange",
+      "local_m": [
+        7200,
+        1500,
+        191
+      ],
+      "district_id": "TAL-D08",
+      "endpoint_type": "land_based_interchange",
+      "access_leg_required": true,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Ferry services require engineered shore route, transfer platform and navigable berth; those alignments are not fixed by this point"
+    },
+    {
+      "id": "TAL-STOP-09",
+      "name": "Namar Gate interchange",
+      "local_m": [
+        8500,
+        6800,
+        190
+      ],
+      "district_id": "TAL-D09",
+      "endpoint_type": "land_based_interchange",
+      "access_leg_required": true,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Ferry services require engineered shore route, transfer platform and navigable berth; those alignments are not fixed by this point"
+    },
+    {
+      "id": "TAL-STOP-10",
+      "name": "Namar outlet water approach",
+      "local_m": [
+        9085.345,
+        8241.68,
+        180
+      ],
+      "district_id": null,
+      "endpoint_type": "open_water_route_control",
+      "access_leg_required": false,
+      "coordinate_meaning": "Navigation control at reference water surface, not berth or vessel position",
+      "access_leg_note": "Final operational route alignment remains to be engineered"
+    },
+    {
+      "id": "TAL-STOP-11",
+      "name": "Iren inlet water approach",
+      "local_m": [
+        7275.031,
+        -2057.105,
+        176
+      ],
+      "district_id": null,
+      "endpoint_type": "open_water_route_control",
+      "access_leg_required": false,
+      "coordinate_meaning": "Navigation control at reference water surface, not berth or vessel position",
+      "access_leg_note": "Final operational route alignment remains to be engineered"
+    },
+    {
+      "id": "TAL-STOP-12",
+      "name": "Western regional road and rail approach",
+      "local_m": [
+        -9600,
+        -1000,
+        260
+      ],
+      "district_id": null,
+      "endpoint_type": "land_transport_node",
+      "access_leg_required": false,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Final operational route alignment remains to be engineered"
+    },
+    {
+      "id": "TAL-STOP-13",
+      "name": "Eastern yard and small flight apron",
+      "local_m": [
+        5400,
+        1400,
+        210
+      ],
+      "district_id": "TAL-D06",
+      "endpoint_type": "land_transport_node",
+      "access_leg_required": false,
+      "coordinate_meaning": "Land interchange or transport facility, not ferry berth or vessel position",
+      "access_leg_note": "Final operational route alignment remains to be engineered"
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "TAL-TR-001",
+      "service": "West Line",
+      "from_id": "TAL-STOP-05",
+      "to_id": "TAL-STOP-03",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-002",
+      "service": "West Line",
+      "from_id": "TAL-STOP-03",
+      "to_id": "TAL-STOP-01",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-003",
+      "service": "Market Line",
+      "from_id": "TAL-STOP-05",
+      "to_id": "TAL-STOP-04",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-004",
+      "service": "Market Line",
+      "from_id": "TAL-STOP-04",
+      "to_id": "TAL-STOP-01",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-005",
+      "service": "Upper Line",
+      "from_id": "TAL-STOP-01",
+      "to_id": "TAL-STOP-02",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-006",
+      "service": "Upper Line",
+      "from_id": "TAL-STOP-02",
+      "to_id": "TAL-STOP-09",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-007",
+      "service": "East Line",
+      "from_id": "TAL-STOP-01",
+      "to_id": "TAL-STOP-06",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-008",
+      "service": "East Line",
+      "from_id": "TAL-STOP-06",
+      "to_id": "TAL-STOP-08",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-009",
+      "service": "South Line",
+      "from_id": "TAL-STOP-04",
+      "to_id": "TAL-STOP-07",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-010",
+      "service": "South Line",
+      "from_id": "TAL-STOP-07",
+      "to_id": "TAL-STOP-08",
+      "mode": "surface_tram",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-011",
+      "service": "Eastern crosslink",
+      "from_id": "TAL-STOP-08",
+      "to_id": "TAL-STOP-13",
+      "mode": "local_transit",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-012",
+      "service": "Eastern crosslink",
+      "from_id": "TAL-STOP-13",
+      "to_id": "TAL-STOP-09",
+      "mode": "local_transit",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-013",
+      "service": "Regional freight",
+      "from_id": "TAL-STOP-12",
+      "to_id": "TAL-STOP-05",
+      "mode": "freight_rail",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-014",
+      "service": "Urban freight connection",
+      "from_id": "TAL-STOP-05",
+      "to_id": "TAL-STOP-04",
+      "mode": "freight_rail",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-015",
+      "service": "Upper freight connection",
+      "from_id": "TAL-STOP-05",
+      "to_id": "TAL-STOP-09",
+      "mode": "freight_rail",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-016",
+      "service": "Yard freight connection",
+      "from_id": "TAL-STOP-09",
+      "to_id": "TAL-STOP-13",
+      "mode": "freight_rail",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-017",
+      "service": "Yard freight connection",
+      "from_id": "TAL-STOP-13",
+      "to_id": "TAL-STOP-06",
+      "mode": "freight_rail",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    },
+    {
+      "id": "TAL-TR-018",
+      "service": "Upper water service",
+      "from_id": "TAL-STOP-09",
+      "to_id": "TAL-STOP-02",
+      "mode": "local_ferry",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "land_based_interchanges",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": []
+    },
+    {
+      "id": "TAL-TR-019",
+      "service": "Upper water service",
+      "from_id": "TAL-STOP-02",
+      "to_id": "TAL-STOP-01",
+      "mode": "local_ferry",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "land_based_interchanges",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": []
+    },
+    {
+      "id": "TAL-TR-020",
+      "service": "Bend crossing",
+      "from_id": "TAL-STOP-01",
+      "to_id": "TAL-STOP-06",
+      "mode": "local_ferry",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "land_based_interchanges",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": []
+    },
+    {
+      "id": "TAL-TR-021",
+      "service": "Lower water service",
+      "from_id": "TAL-STOP-06",
+      "to_id": "TAL-STOP-07",
+      "mode": "local_ferry",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "land_based_interchanges",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": []
+    },
+    {
+      "id": "TAL-TR-022",
+      "service": "Lower water service",
+      "from_id": "TAL-STOP-07",
+      "to_id": "TAL-STOP-08",
+      "mode": "local_ferry",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "land_based_interchanges",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": []
+    },
+    {
+      "id": "TAL-TR-023",
+      "service": "Namar regional approach",
+      "from_id": "TAL-STOP-10",
+      "to_id": "TAL-STOP-09",
+      "mode": "regional_boat_connection",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "mixed_water_approach_and_land_interchange",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": []
+    },
+    {
+      "id": "TAL-TR-024",
+      "service": "Iren regional approach",
+      "from_id": "TAL-STOP-11",
+      "to_id": "TAL-STOP-08",
+      "mode": "regional_boat_connection",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "mixed_water_approach_and_land_interchange",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": []
+    },
+    {
+      "id": "TAL-TR-025",
+      "service": "Namar through navigation",
+      "from_id": "TAL-STOP-10",
+      "to_id": "TAL-STOP-01",
+      "mode": "through_waterway",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "mixed_water_approach_and_land_interchange",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": [
+        "TAL-CH-01"
+      ]
+    },
+    {
+      "id": "TAL-TR-026",
+      "service": "Lower through navigation",
+      "from_id": "TAL-STOP-01",
+      "to_id": "TAL-STOP-11",
+      "mode": "through_waterway",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved",
+      "endpoint_type": "mixed_water_approach_and_land_interchange",
+      "access_leg_required": true,
+      "access_leg_note": "Land nodes require explicit shore-to-berth legs; water controls are not terminal buildings; link is not a straight navigable segment",
+      "waterway_alignment_ids": [
+        "TAL-CH-02",
+        "TAL-CH-03"
+      ]
+    },
+    {
+      "id": "TAL-TR-027",
+      "service": "Western approach road",
+      "from_id": "TAL-STOP-12",
+      "to_id": "TAL-STOP-05",
+      "mode": "regional_road",
+      "geometry_status": "Network dependency only; actual alignment, bridge clearance, route length, slope and engineering unresolved"
+    }
+  ],
+  "water_nodes": [
+    {
+      "id": "TAL-W01",
+      "name": "Upper raw intake",
+      "local_m": [
+        6940,
+        7200,
+        179.96
+      ],
+      "type": "raw_water_intake",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W02",
+      "name": "Western water treatment",
+      "local_m": [
+        -4500,
+        4700,
+        228
+      ],
+      "type": "treatment_works",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W03",
+      "name": "Rillward service reservoir",
+      "local_m": [
+        -5200,
+        3300,
+        238
+      ],
+      "type": "treated_water_surface_control",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W04",
+      "name": "Western high reservoir",
+      "local_m": [
+        -7100,
+        900,
+        255
+      ],
+      "type": "treated_water_surface_control",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W05",
+      "name": "Junction pressure zone",
+      "local_m": [
+        -750,
+        600,
+        195
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W06",
+      "name": "Threadbank pressure zone",
+      "local_m": [
+        1100,
+        4400,
+        199
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W07",
+      "name": "Long Tables pressure zone",
+      "local_m": [
+        -3200,
+        -1800,
+        202
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W08",
+      "name": "Leafyards pressure zone",
+      "local_m": [
+        -6000,
+        -800,
+        232
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W09",
+      "name": "Boatwright pressure zone",
+      "local_m": [
+        3300,
+        700,
+        190
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W10",
+      "name": "Inlet pressure zone",
+      "local_m": [
+        6800,
+        2000,
+        195
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W11",
+      "name": "Namar local service storage",
+      "local_m": [
+        8600,
+        6400,
+        212
+      ],
+      "type": "treated_water_surface_control",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W12",
+      "name": "Upper sewer treatment",
+      "local_m": [
+        -1000,
+        -1700,
+        190
+      ],
+      "type": "sewer_treatment_works",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W13",
+      "name": "Lower sewer collection pump",
+      "local_m": [
+        1100,
+        -2700,
+        183
+      ],
+      "type": "sewer_collection_pump",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W14",
+      "name": "Lower sewer treatment",
+      "local_m": [
+        5800,
+        -2900,
+        186
+      ],
+      "type": "sewer_treatment_works",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W15",
+      "name": "Junction sewer collection pump",
+      "local_m": [
+        -500,
+        -450,
+        183
+      ],
+      "type": "sewer_collection_pump",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W16",
+      "name": "Controlled lower discharge",
+      "local_m": [
+        6300,
+        -1898,
+        176.25
+      ],
+      "type": "treated_discharge_outfall",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W17",
+      "name": "Reclaimed process storage",
+      "local_m": [
+        5300,
+        -2650,
+        200
+      ],
+      "type": "reclaimed_water_surface_control",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W18",
+      "name": "Iren reserve raw intake",
+      "local_m": [
+        7770,
+        -2300,
+        176
+      ],
+      "type": "raw_water_intake",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line",
+      "source_protection_status": "Downstream receiving-lake source: separation from city discharge not established; plume/source assessment and treatment validation required before supply credit"
+    },
+    {
+      "id": "TAL-W19",
+      "name": "Iren reserve treatment",
+      "local_m": [
+        6500,
+        -1800,
+        187
+      ],
+      "type": "treatment_works",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W20",
+      "name": "Namar delivery zone",
+      "local_m": [
+        8700,
+        6800,
+        190
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W21",
+      "name": "Rillward delivery zone",
+      "local_m": [
+        -3600,
+        2400,
+        218
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    },
+    {
+      "id": "TAL-W22",
+      "name": "Downsteps delivery zone",
+      "local_m": [
+        2700,
+        -2500,
+        188
+      ],
+      "type": "regulated_delivery_zone",
+      "height_meaning": "Reference water surface where type specifies; otherwise facility or zone altitude, not a complete hydraulic grade line"
+    }
+  ],
+  "water_links": [
+    {
+      "id": "TAL-WL-001",
+      "from_id": "TAL-W01",
+      "to_id": "TAL-W02",
+      "system": "potable_raw",
+      "hydraulic_mode": "pumped",
+      "note": "179.96m upper-reach intake to228m treatment requires powered lift and treatment head; no gravity claim",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-002",
+      "from_id": "TAL-W02",
+      "to_id": "TAL-W03",
+      "system": "potable",
+      "hydraulic_mode": "pumped",
+      "note": "Treatment to238m reservoir needs pumping, controls and reserve power",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-003",
+      "from_id": "TAL-W02",
+      "to_id": "TAL-W04",
+      "system": "potable",
+      "hydraulic_mode": "pumped",
+      "note": "Treatment to255m reservoir needs pumping, controls and reserve power",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-004",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W05",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Available head subject to pipe friction, minimum service pressure and capacity",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-005",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W06",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Pressure zone and line losses require engineering",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-006",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W07",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Pressure zone and line losses require engineering",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-007",
+      "from_id": "TAL-W04",
+      "to_id": "TAL-W08",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Higher western storage supports Leafyards subject to maintained head and losses",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-008",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W09",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Long crossing line requires isolation, maintained head and loss calculation",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-009",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W10",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Long eastern line is provisional; booster may be required after loss calculation",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-010",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W11",
+      "system": "potable",
+      "hydraulic_mode": "pumped_boosted_transfer",
+      "note": "Local storage transfer explicitly includes booster, power and maintained pressure despite lower endpoint elevation",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-011",
+      "from_id": "TAL-W11",
+      "to_id": "TAL-W20",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Local storage head and minimum service pressure must be maintained",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-012",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W21",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Rillward service pressure and tall-building boosters require design",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-013",
+      "from_id": "TAL-W03",
+      "to_id": "TAL-W22",
+      "system": "potable",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Cross-channel main route and service head require design",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-014",
+      "from_id": "TAL-W15",
+      "to_id": "TAL-W12",
+      "system": "sewer",
+      "hydraulic_mode": "pumped",
+      "note": "Collection183m to treatment190m explicitly requires sewer lift",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-015",
+      "from_id": "TAL-W13",
+      "to_id": "TAL-W14",
+      "system": "sewer",
+      "hydraulic_mode": "pumped",
+      "note": "Collection183m to treatment186m explicitly requires sewer lift",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-016",
+      "from_id": "TAL-W12",
+      "to_id": "TAL-W16",
+      "system": "treated_residual",
+      "hydraulic_mode": "gravity_candidate",
+      "note": "Descending long outfall route, invert and capacity unresolved; no raw sewer bypass implied",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-017",
+      "from_id": "TAL-W14",
+      "to_id": "TAL-W16",
+      "system": "treated_residual",
+      "hydraulic_mode": "gravity_candidate",
+      "note": "186m treatment to176.25m flowing Lower Reach bypass; final water quality and hydraulics remain obligations",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-018",
+      "from_id": "TAL-W14",
+      "to_id": "TAL-W17",
+      "system": "reclaimed",
+      "hydraulic_mode": "pumped",
+      "note": "Recovered process water pumped to200m store; not additional raw supply",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-019",
+      "from_id": "TAL-W17",
+      "to_id": "TAL-W09",
+      "system": "reclaimed_industrial",
+      "hydraulic_mode": "gravity_candidate_regulated",
+      "note": "Separate industrial network; no connection to domestic potable delivery",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-020",
+      "from_id": "TAL-W17",
+      "to_id": "TAL-W08",
+      "system": "reclaimed_industrial",
+      "hydraulic_mode": "pumped",
+      "note": "200m reclaimed store to232m industrial zone requires boost; strictly separate from drinking lines",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-021",
+      "from_id": "TAL-W18",
+      "to_id": "TAL-W19",
+      "system": "potable_raw_reserve",
+      "hydraulic_mode": "pumped",
+      "note": "Distinct Iren treatment envelope and downstream source-protection/plume assessment required before any reserve yield is credited",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    },
+    {
+      "id": "TAL-WL-022",
+      "from_id": "TAL-W19",
+      "to_id": "TAL-W10",
+      "system": "potable_reserve",
+      "hydraulic_mode": "pumped_normally_isolated",
+      "note": "187m reserve treatment to195m zone requires pumped, quality-controlled isolated connection",
+      "alignment_status": "Service dependency link; no surveyed pipe, bore, invert, capacity or pump selection"
+    }
+  ],
+  "points_of_interest": [
+    {
+      "id": "TAL-POI-001",
+      "name": "The Two Surface Room",
+      "district_id": "TAL-D01",
+      "local_m": [
+        -620,
+        180,
+        195
+      ],
+      "encounter_type": "records_and_history",
+      "resident_contact": {
+        "id": "TAL-PER-001",
+        "name": "Leda Orven",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-001",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-002",
+      "name": "The Four Passage Window",
+      "district_id": "TAL-D01",
+      "local_m": [
+        -1350,
+        700,
+        197
+      ],
+      "encounter_type": "architecture_and_domestic_life",
+      "resident_contact": {
+        "id": "TAL-PER-002",
+        "name": "Nami Pell",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-002",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-003",
+      "name": "Three Seat Café",
+      "district_id": "TAL-D01",
+      "local_m": [
+        -260,
+        650,
+        193
+      ],
+      "encounter_type": "game_and_company",
+      "resident_contact": {
+        "id": "TAL-PER-003",
+        "name": "Arun Des",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md",
+        "birth_year_AL": 672,
+        "approx_standard_age_earth_years": 62,
+        "continuity_reference": "LEI-03 in PLEASURES_AND_EVERYDAY_LIFE.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-003",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-004",
+      "name": "The Wrong Map Room",
+      "district_id": "TAL-D01",
+      "local_m": [
+        -950,
+        -80,
+        195
+      ],
+      "encounter_type": "maps_and_legal_history",
+      "resident_contact": {
+        "id": "TAL-PER-004",
+        "name": "Pera Noll",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-004",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-005",
+      "name": "The Hanging Hull School",
+      "district_id": "TAL-D02",
+      "local_m": [
+        1400,
+        3800,
+        198
+      ],
+      "encounter_type": "craft_learning",
+      "resident_contact": {
+        "id": "TAL-PER-005",
+        "name": "Tavi Neral",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-005",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-006",
+      "name": "Quiet Seam Court",
+      "district_id": "TAL-D02",
+      "local_m": [
+        -100,
+        4700,
+        203
+      ],
+      "encounter_type": "fashion_and_domestic_comedy",
+      "resident_contact": {
+        "id": "TAL-PER-006",
+        "name": "Asa Drem",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-006",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-007",
+      "name": "The Room of Six Returns",
+      "district_id": "TAL-D02",
+      "local_m": [
+        2100,
+        3700,
+        199
+      ],
+      "encounter_type": "music_and_heritage",
+      "resident_contact": {
+        "id": "TAL-PER-007",
+        "name": "Ressa Tor",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-007",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-008",
+      "name": "The Oblique Landing",
+      "district_id": "TAL-D02",
+      "local_m": [
+        3600,
+        4500,
+        184
+      ],
+      "encounter_type": "transport_and_rest",
+      "resident_contact": {
+        "id": "TAL-PER-008",
+        "name": "Deni Alvek",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "supported_overwater_structure",
+      "shore_access_required": true,
+      "dossier_source": "TALWEIR.md#tal-poi-008",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented",
+      "water_body_id": "TAL-CH-01-ENV",
+      "access_note": "Supported deck with connected public shore route; final grades, transfer movement and structural engineering unresolved"
+    },
+    {
+      "id": "TAL-POI-009",
+      "name": "Morrow Bath",
+      "district_id": "TAL-D03",
+      "local_m": [
+        -3500,
+        2100,
+        218
+      ],
+      "encounter_type": "rest_and_care",
+      "resident_contact": {
+        "id": "TAL-PER-009",
+        "name": "Meral Doss",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-009",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-010",
+      "name": "The Room with No Audience",
+      "district_id": "TAL-D03",
+      "local_m": [
+        -4400,
+        3400,
+        222
+      ],
+      "encounter_type": "amateur_comedy",
+      "resident_contact": {
+        "id": "TAL-PER-010",
+        "name": "Kira Fen",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-010",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-011",
+      "name": "Open Latch Ground",
+      "district_id": "TAL-D03",
+      "local_m": [
+        -2800,
+        3900,
+        212
+      ],
+      "encounter_type": "games_and_public_recreation",
+      "resident_contact": {
+        "id": "TAL-PER-011",
+        "name": "Vedo Ar",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-011",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-012",
+      "name": "Second Course Hall",
+      "district_id": "TAL-D04",
+      "local_m": [
+        -2200,
+        -1000,
+        196
+      ],
+      "encounter_type": "food_and_company",
+      "resident_contact": {
+        "id": "TAL-PER-012",
+        "name": "Hessa Morn",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-012",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-013",
+      "name": "The Cold Gallery",
+      "district_id": "TAL-D04",
+      "local_m": [
+        -4300,
+        -2200,
+        208
+      ],
+      "encounter_type": "food_logistics_and_view",
+      "resident_contact": {
+        "id": "TAL-PER-013",
+        "name": "Nerin Solt",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-013",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-014",
+      "name": "Night Recipe Court",
+      "district_id": "TAL-D04",
+      "local_m": [
+        -1800,
+        -2400,
+        198
+      ],
+      "encounter_type": "household_teaching",
+      "resident_contact": {
+        "id": "TAL-PER-014",
+        "name": "Aru Mett",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-014",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-015",
+      "name": "Leaf Exchange",
+      "district_id": "TAL-D05",
+      "local_m": [
+        -5800,
+        300,
+        238
+      ],
+      "encounter_type": "gardening_and_knowledge",
+      "resident_contact": {
+        "id": "TAL-PER-015",
+        "name": "Leva Som",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-015",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-016",
+      "name": "The Trial Pond",
+      "district_id": "TAL-D05",
+      "local_m": [
+        -6800,
+        -1400,
+        230
+      ],
+      "encounter_type": "model_boat_hobby",
+      "resident_contact": {
+        "id": "TAL-PER-016",
+        "name": "Tess Varen",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "shore_access_landmark",
+      "shore_access_required": true,
+      "dossier_source": "TALWEIR.md#tal-poi-016",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented",
+      "coordinate_meaning": "Pond area focus, not standing point or building foundation",
+      "visitor_access_local_m": [
+        -6960,
+        -1400,
+        230
+      ],
+      "water_body_id": "TAL-WATER-TRIAL"
+    },
+    {
+      "id": "TAL-POI-017",
+      "name": "The Spare Parts Library",
+      "district_id": "TAL-D05",
+      "local_m": [
+        -5300,
+        -2700,
+        226
+      ],
+      "encounter_type": "repair_and_shared_tools",
+      "resident_contact": {
+        "id": "TAL-PER-017",
+        "name": "Oren Dask",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-017",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-018",
+      "name": "The Second Shore Platform",
+      "district_id": "TAL-D06",
+      "local_m": [
+        1950,
+        1920,
+        184
+      ],
+      "encounter_type": "freshwater_wildlife_and_rest",
+      "resident_contact": {
+        "id": "TAL-PER-018",
+        "name": "Mira Tenn",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "supported_overwater_structure",
+      "shore_access_required": true,
+      "dossier_source": "TALWEIR.md#tal-poi-018",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented",
+      "water_body_id": "TAL-WATER-POCKET",
+      "access_note": "Supported deck with connected public shore route; final grades, transfer movement and structural engineering unresolved"
+    },
+    {
+      "id": "TAL-POI-019",
+      "name": "Three Hulls Gallery",
+      "district_id": "TAL-D06",
+      "local_m": [
+        3900,
+        700,
+        188
+      ],
+      "encounter_type": "vessel_design",
+      "resident_contact": {
+        "id": "TAL-PER-019",
+        "name": "Renn Isca",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-019",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-020",
+      "name": "A Stage at Rest",
+      "district_id": "TAL-D06",
+      "local_m": [
+        4100,
+        -950,
+        185
+      ],
+      "encounter_type": "performance_infrastructure",
+      "resident_contact": {
+        "id": "TAL-PER-020",
+        "name": "Pali Em",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-020",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-021",
+      "name": "The Gate Interval",
+      "district_id": "TAL-D07",
+      "local_m": [
+        2230,
+        -1570,
+        184
+      ],
+      "encounter_type": "lock_observation_and_garden",
+      "resident_contact": {
+        "id": "TAL-PER-021",
+        "name": "Sada Verr",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-021",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-022",
+      "name": "The Return Water Gallery",
+      "district_id": "TAL-D07",
+      "local_m": [
+        6000,
+        -3000,
+        184
+      ],
+      "encounter_type": "water_treatment_and_evidence",
+      "resident_contact": {
+        "id": "TAL-PER-022",
+        "name": "Dorel Hann",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-022",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-023",
+      "name": "Window Margin",
+      "district_id": "TAL-D08",
+      "local_m": [
+        7900,
+        -950,
+        185
+      ],
+      "encounter_type": "habitat_and_solitude",
+      "resident_contact": {
+        "id": "TAL-PER-023",
+        "name": "Ria Nemm",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-023",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    },
+    {
+      "id": "TAL-POI-024",
+      "name": "The Far Water Bench",
+      "district_id": "TAL-D09",
+      "local_m": [
+        9250,
+        7700,
+        188
+      ],
+      "encounter_type": "view_weather_and_rest",
+      "resident_contact": {
+        "id": "TAL-PER-024",
+        "name": "Eda Rell",
+        "purpose_source": "Individual independent purpose described in TALWEIR.md"
+      },
+      "placement_type": "terrestrial_structure_or_ground",
+      "shore_access_required": false,
+      "dossier_source": "TALWEIR.md#tal-poi-024",
+      "implementation_status": "Authored proposal; no runtime placement, interaction or schedule implemented"
+    }
+  ],
+  "ecology": {
+    "native_species_ids": [
+      "ECO-025",
+      "ECO-026",
+      "ECO-027",
+      "ECO-028"
+    ],
+    "namar_local_conditions": "More exposed outlet approach with patchy stony shallows and sheltered pockets; not whole-lake bathymetry",
+    "iren_local_conditions": "Sheltered lateral inlet coves with selected fine-sediment and vegetated margins; not uniform lake habitat",
+    "conditions_unresolved": [
+      "bathymetry",
+      "seasonal mixing",
+      "oxygen profiles",
+      "thermal profile",
+      "sediment budget",
+      "native population connectivity"
+    ],
+    "food_contract": "Introduced crops and maintained cultures provide human diets; native protein is not generally human food; processed native fractions require species/tissue qualification",
+    "prohibited_shortcuts": [
+      "Turning cups do not treat sewage",
+      "Lakewindow is not a magical purifier",
+      "Reeddivers are not universal edible fish",
+      "No marine palehinge transplanted into fresh water by default"
+    ]
+  },
+  "service_assumptions": {
+    "status": "Transparent screening assumptions, not designed, financed or verified service capacities",
+    "water": {
+      "civil_turn_hours": 24,
+      "resident_domestic_liters_per_turn": 150,
+      "domestic_delivery_m3_per_turn": 117000,
+      "nonresidential_delivery_m3_per_turn": 63000,
+      "total_delivery_m3_per_turn": 180000,
+      "combined_raw_to_delivery_loss_fraction": 0.2,
+      "raw_abstraction_m3_per_turn": 225000,
+      "average_sewer_collection_m3_per_turn": 155000,
+      "treatment_works_count": 2,
+      "each_nominal_sewer_capacity_m3_per_turn": 95000,
+      "total_nominal_sewer_capacity_m3_per_turn": 190000,
+      "reclaimed_flow_target_m3_per_turn": 50000,
+      "reclaimed_accounting": "Recovered from sewage treatment, not added to raw supply",
+      "yield_status": "Lake yield, seasonal operations, peak storms and one-works-out resilience unverified",
+      "delivery_definition": "180000m3/turn potable network output;50000m3 reclaimed deliveries are a separate reuse loop",
+      "gross_end_use_delivery_m3_per_turn": 230000,
+      "net_consumed_or_uncollected_m3_per_turn": 75000,
+      "final_treated_residual_m3_per_turn_before_explicit_treatment_losses": 105000,
+      "collection_definition": "Includes return from potable and reclaimed uses; proportions remain unverified study assumptions",
+      "iren_reserve_yield_credited_m3_per_turn": 0,
+      "catchment_accounting_limit": "Network loss and uncollected flow may re-enter the catchment; abstraction and service balances do not establish net basin depletion"
+    },
+    "food": {
+      "kcal_per_resident_per_turn": 2500,
+      "city_kcal_per_turn": 1950000000,
+      "illustrative_dry_equivalent_kcal_per_kg": 3200,
+      "dry_calorie_equivalent_tonnes_per_turn": 609.375,
+      "edible_mass_kg_per_resident_per_turn": 1.6,
+      "edible_mass_tonnes_per_turn": 1248,
+      "protein_g_per_resident_per_turn": 80,
+      "protein_tonnes_per_turn": 62.4,
+      "annual_calorie_origin_shares": {
+        "Lake_Country_regional": 0.75,
+        "other_connected_Morrow": 0.22,
+        "city_internal_primary_production": 0.03
+      },
+      "dry_staple_reserve_target_civil_turns": 75,
+      "dry_staple_reserve_equivalent_tonnes": 45703.125,
+      "feedstock_rule": "Cultures consuming crops do not create additional primary calories; keep their inputs in balance",
+      "velis_role": "Low-mass clean seed, clonal starts and culture stocks, not daily bulk grain"
+    },
+    "electricity": {
+      "average_demand_study_MW": 620,
+      "peak_demand_study_MW": 1100,
+      "regional_connection_rating_total_MW": 500,
+      "regional_connection_count": 2,
+      "local_dispatchable_nameplate_MW": 190,
+      "photovoltaic_candidate_MWp": 600,
+      "regional_wind_candidate_MW": 300,
+      "storage_energy_target_GWh": 30,
+      "storage_discharge_target_MW": 250,
+      "longest_nominal_night_hours": 74.2,
+      "illustrative_150MW_deficit_GWh_before_losses": 11.13,
+      "illustrative_400MW_deficit_GWh_before_losses": 29.68,
+      "firm_coverage_claim": false,
+      "local_hydro_credited_MW": 0,
+      "hydro_screening_example": {
+        "hypothetical_flow_m3_per_second": 40,
+        "hypothetical_full_head_m": 4,
+        "hypothetical_efficiency": 0.8,
+        "gravity_m_s2": 8.629852,
+        "hypothetical_power_MW": 1.10462,
+        "flow_and_head_availability_established": false
+      },
+      "thermal_service": "Separate heat network, recovery and storage to be designed; no unproven geothermal power counted"
+    },
+    "waste": {
+      "municipal_kg_per_resident_per_turn": 0.8,
+      "municipal_tonnes_per_turn": 624,
+      "excludes": "Major industrial and construction waste streams",
+      "native_compatibility": "Separate native and terrestrial biological processing checks"
+    },
+    "freight": {
+      "study_total_tonnes_per_turn_range": [
+        6000,
+        9000
+      ],
+      "initial_mode_share_assumptions": {
+        "water": 0.6,
+        "rail": 0.3,
+        "road": 0.1
+      },
+      "verified_forecast": false,
+      "products": [
+        "small craft",
+        "craft repair",
+        "floating stages",
+        "transfer mechanisms",
+        "precision housings",
+        "water quality instruments",
+        "performance work",
+        "training"
+      ],
+      "import_dependencies": [
+        "high grade alloys",
+        "electronics",
+        "bearings",
+        "selected resins",
+        "bulk food",
+        "generation feedstock",
+        "regional electricity"
+      ]
+    }
+  },
+  "unresolved": [
+    "Cadastral district boundaries and terrain survey",
+    "Seasonal lake ranges, catchments and flow hydraulics",
+    "Lock dimensions, vessel envelopes, capacity and emergency procedures",
+    "Navigation-cut water use and bypass ecological flow",
+    "Bridge clearances and opening schedules",
+    "Water treatment operating envelopes and failure cases",
+    "Grid reliability, generation contracts, fuel supply and storage dispatch",
+    "Agricultural yield and supplier capacities",
+    "Final freight demand, modal shares and route lengths",
+    "Detailed accessible gradients and all ferry access legs",
+    "Native habitat and water-column model",
+    "Runtime streaming, persistence, object interaction and NPC simulation"
+  ],
+  "regional_gateway_ids": [
+    "TAL-STOP-10",
+    "TAL-STOP-11",
+    "TAL-STOP-12"
+  ]
+}

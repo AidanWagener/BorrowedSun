@@ -4,6 +4,8 @@ Original worldbuilding draft, 13 October 2026. This document proposes a connecte
 
 The observable acceptance condition for this foundation is that an author can place two neighbors with different obligations in the same building, explain how those obligations arose, and derive a credible disagreement, shared meal and possible reconciliation without assigning either person a factional morality. The file contains proposals for canon review, not implemented characters, approved dialogue or constructed places.
 
+**Subsequent authoring:** [Languages, names and belonging](../05_LANGUAGES_NAMES_AND_BELONGING.md) now supplies bounded public varieties, grammar, lexical roots and naming rules. [Power and exchange](../06_POWER_AND_EXCHANGE.md) develops issuer-qualified marks, selected jurisdictions, industrial roles and explicit supply assumptions. Their adopted decisions supersede earlier open questions here; neither volume claims completed languages, a balanced planetary economy or implementation.
+
 ## 1. What the first arrivals did not know
 
 The people who reached Nacre came with incompatible ideas about what arrival meant. Administrators carried settlement shares. Technicians carried service obligations. Several transport collectives considered arrival the completion of a contract, after which no employer could dictate their place of residence. Families who had exchanged property elsewhere for passage expected homes. Children born aboard expected almost nothing specific except to get out of the rooms in which other people had explained their futures.

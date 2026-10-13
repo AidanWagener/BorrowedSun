@@ -1,6 +1,6 @@
 # Volume 00 — A world that owes nobody a sunrise
 
-Working canon, edition 0.2, 13 October 2026. These are new authorial decisions for development and review, not claims of additional user approvals. The physical model is a checked design candidate, not a demonstrated habitable exomoon simulation. The full bible remains in progress. Nothing in this volume describes new functionality already implemented in Unreal.
+Working canon, edition 0.3, 13 October 2026. These are new authorial decisions for development and review, not claims of additional user approvals. The physical model is a checked design candidate, not a demonstrated habitable exomoon simulation. The full bible remains in progress. Nothing in this volume describes new functionality already implemented in Unreal.
 
 ## The world in one arrival
 
@@ -45,6 +45,10 @@ This civilization possesses advanced materials, excellent computation, capable m
 Flight is ordinary enough to support ports and trades, but not cheap enough to eliminate roads, ferries, freight rail, footpaths or neighborhood shops. Most people do not own a space-capable workboat. Cargo, maintenance, weather, landing rights, rescue coverage and safe traffic separation matter. A fast ship can cross distance; it cannot make every destination willing or able to receive it.
 
 Interplanetary routes and offworld relatives exist. This bible does not establish faster-than-light travel or instantaneous interstellar communication. The earliest immigration came in three major arrivals, followed by smaller and irregular transfers. Offworld history can widen later without turning the planet into a disconnected terrarium or making distant authorities a convenient solution to every local crisis.
+
+Connected cities ordinarily exchange messages quickly. Intermittent relays, restricted access, physical specimens and protected originals can give couriers a reason to travel; planetary distance alone does not make a radio message take days. [Power and exchange](06_POWER_AND_EXCHANGE.md) establishes plural regional institutions, issuer-qualified mark balances and a distributed industrial economy. No single planetary government, currency backing or continuous electrical grid is assumed.
+
+The [language volume](05_LANGUAGES_NAMES_AND_BELONGING.md) develops Shore, Lake, Wake and Reach public varieties, with shared origins, porous boundaries and other household and sign languages alongside them. Transit Clear is an operational register rather than everyone's native language. Existing names remain canonical; the starter lexicon does not retroactively invent all their etymologies. English presentation carries essential meaning while optional original forms add texture.
 
 Native biochemistry follows the ecology foundation's **limited overlap contract**, adopted for working canon: selected native oils and small carbon compounds can be used after species- and tissue-specific processing, while native proteins and structural materials are not generally interchangeable with terrestrial nutrition. Complete human diets still depend on introduced crops and maintained biological cultures. This is an explicit fictional assumption, not a scientific prediction. Food conversion, composting and waste treatment are separate processes. A beautiful alien fruit is not automatically food, Earth livestock cannot graze any meadow, and a dangerous animal is not automatically a communicable disease reservoir.
 

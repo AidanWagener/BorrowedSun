@@ -6,7 +6,7 @@ Read [canon reconciliation](CANON_RECONCILIATION.md) and the [initial research l
 
 ## Current reading edition
 
-Open the [living planet reader](Living_Planet_Reader.html) for the current eleven-chapter authoring edition, 0.2. It combines working canon with explicitly labeled research and lore drafts. [Authoring counts](AUTHORING_COUNTS.json) report source words, including research and review notes; they do not report completed pages or certify quality. The historical specification is excluded from that count.
+Open the [living planet reader](Living_Planet_Reader.html) for the current fifteen-chapter authoring edition, 0.3. These chapters develop parts of the fifteen planned volumes; they do not constitute fifteen finished volumes. They combine working canon with explicitly labeled research and lore drafts. [Authoring counts](AUTHORING_COUNTS.json) report source words, including research and review notes; they do not report completed pages or certify quality. The historical specification is excluded from that count.
 
 | Current material | State |
 |---|---|
@@ -16,13 +16,17 @@ Open the [living planet reader](Living_Planet_Reader.html) for the current eleve
 | [02 — Sky, water and seasons](02_SKY_WATER_AND_SEASONS.md) | Adopted calendar, idealized sky geometry, regional weather regimes and their limits |
 | [03a — Ecology foundation](Drafts/ECOLOGY_FOUNDATION.md) | 24 species dossiers, food webs, disruptions and conditional regional ranges |
 | [03b — Morrow ecosystems](Drafts/MORROW_ECOSYSTEMS.md) | 24 additional species and six regional networks; carrying capacities, climate and detailed lifecycles remain open |
+| [03c — Sere and Pale ecosystems](Drafts/SERE_AND_PALE_ECOSYSTEMS.md) | 24 additional species, six regional food webs, four journeys and Velis living-stock requirements; no food qualification or productive yield claimed |
 | [04 — History](04_HISTORY_OF_NACRE.md) | Connected settlement chronology through 742 AL; detailed archival and regional histories still expanding |
 | [05 — Societies](Drafts/SOCIETIES_FOUNDATION.md) | Eight overlapping traditions, institutions, twelve human-scale stories and archival voices |
 | [05b — Everyday pleasures](Drafts/PLEASURES_AND_EVERYDAY_LIFE.md) | Games, music, fashion, cuisine, relationships and eight pleasant encounters; specific proposals awaiting integration |
+| [05c — Languages, names and belonging](05_LANGUAGES_NAMES_AND_BELONGING.md) | Four related public varieties, an 80-root starter lexicon, bounded grammar, heritage and sign communities; not complete languages |
+| [06 — Power and exchange](06_POWER_AND_EXCHANGE.md) | Regional institutions, money, labor, industry, energy and trade; 18 selected dependencies and an Orison food-demand account |
 | [07 — Regional atlas](07_REGIONAL_ATLAS.md) | 24 regional foundations and twelve city anchors; concept coasts refined around established ports |
 | [08a — Orison](Cities/ORISON.md) | Eleven mapped district envelopes, 24 detailed places and service dependencies; no constructed city claimed |
+| [08b — Talweir](Cities/TALWEIR.md) | Nine district envelopes, 24 detailed places, two lake levels, locks, transport and utilities; engineering capacity remains open |
 
-The [concept map](Atlas/nacre_geographic_concept.svg) and [route arithmetic](Atlas/ATLAS_ARITHMETIC.md) are generated from [coordinate data](Atlas/nacre_atlas.json). The [relief and water map](Atlas/nacre_relief_and_water.svg) adds [geographic controls](Atlas/nacre_geography.json), including explicitly level lake reaches. The [Orison plan](Cities/orison_city_plan.svg) and [network register](Cities/ORISON_NETWORK_CHECKS.md) make local placement and service dependencies inspectable. Checks cover authored geometry and references; they do not validate terrain, catchments, climate, transport feasibility or a playable world. See [authoring handoff and next work](AUTHORING_HANDOFF_2026-10-13.md).
+The [concept map](Atlas/nacre_geographic_concept.svg) and [route arithmetic](Atlas/ATLAS_ARITHMETIC.md) are generated from [coordinate data](Atlas/nacre_atlas.json). The [relief and water map](Atlas/nacre_relief_and_water.svg) adds [geographic controls](Atlas/nacre_geography.json), including explicitly level lake reaches. The [Orison plan](Cities/orison_city_plan.svg) and [network register](Cities/ORISON_NETWORK_CHECKS.md), alongside the [Talweir plan](Cities/talweir_city_plan.svg) and [its checks](Cities/TALWEIR_PLAN_CHECKS.md), make local placement and dependencies inspectable. The [Orison food plate](Exchange/orison_food_allowance.svg) separates the origins and composition of one demand allowance; [exchange checks](Exchange/EXCHANGE_CHECKS.md) state what its arithmetic establishes. Checks cover authored geometry and references; they do not validate terrain, catchments, climate, productive capacity, transport feasibility or a playable world. See [current authoring handoff and next work](AUTHORING_HANDOFF_2026-10-13_03.md).
 
 The world must make exploration compelling at street, regional and planetary scales. Its geography, societies, wildlife and histories must explain one another. A place should offer more than a view: something to understand, a person or creature with an independent purpose, an opportunity to act, or a reason to return when circumstances change. Distance must communicate a large inhabited world while journeys offer decisions and discoveries.
 

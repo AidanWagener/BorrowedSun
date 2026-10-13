@@ -1,14 +1,14 @@
 {
-  "edition": "0.2",
+  "edition": "0.3",
   "scope": "Current new foundations including research/review notes; not pages, completion or quality certification",
-  "words": 85014,
+  "words": 131350,
   "chapters": [
     {
       "id": "orientation",
       "source": "00_CANON_AND_ORIENTATION.md",
       "title": "00 · Canon and orientation",
       "status": "Working canon",
-      "words": 2672
+      "words": 2794
     },
     {
       "id": "physics",
@@ -46,6 +46,13 @@
       "words": 10912
     },
     {
+      "id": "serepale",
+      "source": "Drafts/SERE_AND_PALE_ECOSYSTEMS.md",
+      "title": "03c · Sere and Pale ecosystems",
+      "status": "24 additional species, six regional webs and Velis stock requirements; qualification and capacities open",
+      "words": 12723
+    },
+    {
       "id": "history",
       "source": "04_HISTORY_OF_NACRE.md",
       "title": "04 · History",
@@ -57,7 +64,7 @@
       "source": "Drafts/SOCIETIES_FOUNDATION.md",
       "title": "05 · Societies",
       "status": "Draft reconciled to the historical spine",
-      "words": 10327
+      "words": 10379
     },
     {
       "id": "pleasures",
@@ -67,11 +74,25 @@
       "words": 6709
     },
     {
+      "id": "languages",
+      "source": "05_LANGUAGES_NAMES_AND_BELONGING.md",
+      "title": "05c · Languages, names and belonging",
+      "status": "Four public varieties, a bounded grammar and starter lexicon; not complete conlangs",
+      "words": 10835
+    },
+    {
+      "id": "exchange",
+      "source": "06_POWER_AND_EXCHANGE.md",
+      "title": "06 · Power and exchange",
+      "status": "Working institutions and selected demand/dependency records; not a simulated economy",
+      "words": 9598
+    },
+    {
       "id": "atlas",
       "source": "07_REGIONAL_ATLAS.md",
       "title": "07 · Regional atlas",
       "status": "Geographic concept; terrain and climate development pending",
-      "words": 4106
+      "words": 4129
     },
     {
       "id": "orison",
@@ -79,6 +100,13 @@
       "title": "08a · Orison",
       "status": "Authored city proposal: eleven districts, 24 places and service dependencies; not constructed",
       "words": 11344
+    },
+    {
+      "id": "talweir",
+      "source": "Cities/TALWEIR.md",
+      "title": "08b · Talweir",
+      "status": "Authored lake city proposal: nine districts, 24 places and level-controlled navigation; not constructed",
+      "words": 12983
     }
   ]
 }

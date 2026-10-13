@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1560" viewBox="0 0 1560 1560" role="img" aria-labelledby="title desc">
+<title id="title">Talweir: the city between Namar and Iren</title>
+<desc id="desc">Nine overlapping district envelopes and twenty-four authored places in a north-up azimuthal equidistant city plan. Whole-lake inset preserves atlas projection. Water heights and channel shapes are planning controls, not terrain or a hydraulic model.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#253e43;font-size:16px}.small{font-size:13px}.tiny{font-size:11px}.muted{fill:#566e70}.water{fill:#bdd7db;stroke:#397d8b;stroke-width:1.2}.label{font-size:12px;font-weight:bold}.grid{stroke:#b9bbae;stroke-width:.6}</style>
+<rect width="1560" height="1560" fill="#f4f0e5"/>
+<text x="60.00" y="46.00" class="" style="font-size:28px;letter-spacing:1px">TALWEIR / THE CITY BETWEEN TWO LAKES</text>
+<text x="60.00" y="74.00" class="small" >CITY-005 · 742 AL · Working plan 0.1 · 780,000 residents, authored estimate</text>
+<text x="60.00" y="98.00" class="small muted" >North is up · coordinates in kilometers · z is planning sea-level altitude · envelopes overlap; no surveyed terrain or service capacity</text>
+<defs><clipPath id="city-clip"><rect x="60" y="140" width="1035.0" height="810.0"/></clipPath></defs>
+<g clip-path="url(#city-clip)">
+<rect x="60.00" y="140.00" width="1035.00" height="810.00" fill="#e5dfce"/>
+<line x1="60.00" y1="140.00" x2="60.00" y2="950.00" class="grid"/>
+<line x1="150.00" y1="140.00" x2="150.00" y2="950.00" class="grid"/>
+<line x1="240.00" y1="140.00" x2="240.00" y2="950.00" class="grid"/>
+<line x1="330.00" y1="140.00" x2="330.00" y2="950.00" class="grid"/>
+<line x1="420.00" y1="140.00" x2="420.00" y2="950.00" class="grid"/>
+<line x1="510.00" y1="140.00" x2="510.00" y2="950.00" class="grid"/>
+<line x1="600.00" y1="140.00" x2="600.00" y2="950.00" class="grid"/>
+<line x1="690.00" y1="140.00" x2="690.00" y2="950.00" class="grid"/>
+<line x1="780.00" y1="140.00" x2="780.00" y2="950.00" class="grid"/>
+<line x1="870.00" y1="140.00" x2="870.00" y2="950.00" class="grid"/>
+<line x1="960.00" y1="140.00" x2="960.00" y2="950.00" class="grid"/>
+<line x1="1050.00" y1="140.00" x2="1050.00" y2="950.00" class="grid"/>
+<line x1="60.00" y1="950.00" x2="1095.00" y2="950.00" class="grid"/>
+<line x1="60.00" y1="860.00" x2="1095.00" y2="860.00" class="grid"/>
+<line x1="60.00" y1="770.00" x2="1095.00" y2="770.00" class="grid"/>
+<line x1="60.00" y1="680.00" x2="1095.00" y2="680.00" class="grid"/>
+<line x1="60.00" y1="590.00" x2="1095.00" y2="590.00" class="grid"/>
+<line x1="60.00" y1="500.00" x2="1095.00" y2="500.00" class="grid"/>
+<line x1="60.00" y1="410.00" x2="1095.00" y2="410.00" class="grid"/>
+<line x1="60.00" y1="320.00" x2="1095.00" y2="320.00" class="grid"/>
+<line x1="60.00" y1="230.00" x2="1095.00" y2="230.00" class="grid"/>
+<line x1="60.00" y1="140.00" x2="1095.00" y2="140.00" class="grid"/>
+<ellipse data-district="TAL-D01" cx="487.50" cy="662.00" rx="81.00" ry="54.00" fill="#b89261" fill-opacity=".22" stroke="#b89261" stroke-width="1.6"/>
+<ellipse data-district="TAL-D02" cx="591.00" cy="486.50" rx="130.50" ry="108.00" fill="#a97773" fill-opacity=".22" stroke="#a97773" stroke-width="1.6"/>
+<ellipse data-district="TAL-D03" cx="339.00" cy="549.50" rx="112.50" ry="108.00" fill="#898ea0" fill-opacity=".22" stroke="#898ea0" stroke-width="1.6"/>
+<ellipse data-district="TAL-D04" cx="388.50" cy="761.00" rx="117.00" ry="81.00" fill="#b89957" fill-opacity=".22" stroke="#b89957" stroke-width="1.6"/>
+<ellipse data-district="TAL-D05" cx="262.50" cy="725.00" rx="144.00" ry="103.50" fill="#719a79" fill-opacity=".22" stroke="#719a79" stroke-width="1.6"/>
+<ellipse data-district="TAL-D06" cx="654.00" cy="671.00" rx="144.00" ry="94.50" fill="#749ca4" fill-opacity=".22" stroke="#749ca4" stroke-width="1.6"/>
+<ellipse data-district="TAL-D07" cx="640.50" cy="792.50" rx="157.50" ry="58.50" fill="#ab8465" fill-opacity=".22" stroke="#ab8465" stroke-width="1.6"/>
+<ellipse data-district="TAL-D08" cx="838.50" cy="617.00" rx="112.50" ry="157.50" fill="#74a397" fill-opacity=".22" stroke="#74a397" stroke-width="1.6"/>
+<ellipse data-district="TAL-D09" cx="901.50" cy="374.00" rx="112.50" ry="99.00" fill="#8d9eac" fill-opacity=".22" stroke="#8d9eac" stroke-width="1.6"/>
+<path class="water" d="M-2688.32,-10452.00 L2104.36,-11834.08 L4925.17,-8608.03 L4563.01,-3970.64 L918.84,309.12 L-714.00,-711.66 L-3939.75,-4900.94 L-2688.32,-10452.00 Z"/>
+<path class="water" d="M837.38,772.57 L2967.13,1137.35 L5455.79,4362.98 L4236.06,6690.46 L510.00,7630.77 L-1140.11,4847.79 L837.38,772.57 Z"/>
+<path class="water" d="M921.36,314.41 L823.28,360.37 L706.96,449.54 L598.79,579.22 L513.12,682.58 L506.88,677.42 L592.21,573.78 L700.04,442.46 L817.72,351.63 L916.32,303.84 L921.36,314.41 Z"/>
+<path class="water" d="M511.36,676.19 L574.31,699.15 L605.63,713.84 L659.39,730.98 L708.90,743.90 L767.31,756.80 L838.21,767.46 L836.54,777.68 L765.69,765.20 L707.10,751.10 L657.61,737.02 L603.37,719.96 L571.69,705.85 L508.64,683.81 L511.36,676.19 Z"/>
+<path class="water" d="M569.30,701.88 L591.74,731.06 L606.79,742.58 L612.00,746.52 L663.35,764.43 L692.03,772.82 L697.34,774.60 L775.48,786.76 L836.94,770.82 L837.81,774.32 L775.52,789.24 L697.06,776.20 L691.57,774.38 L662.65,766.57 L611.40,748.03 L605.81,743.87 L590.26,732.44 L567.70,703.12 L569.30,701.88 Z"/>
+<path class="water" d="M480.75,688.10 L501.90,691.70 L515.40,685.40 L514.50,675.50 L498.75,676.40 L480.75,676.85 L480.75,688.10 Z"/>
+<path class="water" d="M580.65,601.25 L601.80,600.35 L604.50,585.50 L592.35,583.25 L586.05,588.65 L580.65,601.25 Z"/>
+<path class="water" d="M837.38,772.52 L858.75,752.00 L883.50,738.50 L915.00,756.50 L906.00,783.50 L847.50,792.50 L837.38,772.52 Z"/>
+<path class="water" d="M197.25,745.25 L210.75,745.25 L210.75,740.75 L197.25,740.75 L197.25,745.25 Z"/>
+<line x1="217.50" y1="716.00" x2="348.00" y2="572.00" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="348.00" y1="572.00" x2="474.00" y2="657.50" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="217.50" y1="716.00" x2="388.50" y2="756.50" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="388.50" y1="756.50" x2="474.00" y2="657.50" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="474.00" y1="657.50" x2="550.50" y2="518.00" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="550.50" y1="518.00" x2="892.50" y2="374.00" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="474.00" y1="657.50" x2="667.50" y2="675.50" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="667.50" y1="675.50" x2="834.00" y2="612.50" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="388.50" y1="756.50" x2="631.50" y2="792.50" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="631.50" y1="792.50" x2="834.00" y2="612.50" stroke="#758783" stroke-width="1.2" stroke-dasharray="3 6" opacity=".65"/>
+<line x1="606.30" y1="743.23" x2="611.70" y2="747.27" stroke="#965e3b" stroke-width="5"/>
+<line x1="691.80" y1="773.60" x2="697.20" y2="775.40" stroke="#965e3b" stroke-width="5"/>
+</g>
+<rect x="60.00" y="140.00" width="1035.00" height="810.00" fill="none" stroke="#89958b"/>
+<text x="60.00" y="973.00" class="tiny" text-anchor="middle">-10</text>
+<text x="150.00" y="973.00" class="tiny" text-anchor="middle">-8</text>
+<text x="240.00" y="973.00" class="tiny" text-anchor="middle">-6</text>
+<text x="330.00" y="973.00" class="tiny" text-anchor="middle">-4</text>
+<text x="420.00" y="973.00" class="tiny" text-anchor="middle">-2</text>
+<text x="510.00" y="973.00" class="tiny" text-anchor="middle">0</text>
+<text x="600.00" y="973.00" class="tiny" text-anchor="middle">2</text>
+<text x="690.00" y="973.00" class="tiny" text-anchor="middle">4</text>
+<text x="780.00" y="973.00" class="tiny" text-anchor="middle">6</text>
+<text x="870.00" y="973.00" class="tiny" text-anchor="middle">8</text>
+<text x="960.00" y="973.00" class="tiny" text-anchor="middle">10</text>
+<text x="1050.00" y="973.00" class="tiny" text-anchor="middle">12</text>
+<text x="52.00" y="954.00" class="tiny" text-anchor="end">-6</text>
+<text x="52.00" y="864.00" class="tiny" text-anchor="end">-4</text>
+<text x="52.00" y="774.00" class="tiny" text-anchor="end">-2</text>
+<text x="52.00" y="684.00" class="tiny" text-anchor="end">0</text>
+<text x="52.00" y="594.00" class="tiny" text-anchor="end">2</text>
+<text x="52.00" y="504.00" class="tiny" text-anchor="end">4</text>
+<text x="52.00" y="414.00" class="tiny" text-anchor="end">6</text>
+<text x="52.00" y="324.00" class="tiny" text-anchor="end">8</text>
+<text x="52.00" y="234.00" class="tiny" text-anchor="end">10</text>
+<text x="52.00" y="144.00" class="tiny" text-anchor="end">12</text>
+<text x="60.00" y="128.00" class="tiny" >y north / km</text>
+<text x="1095.00" y="992.00" class="tiny" text-anchor="end">x east / km</text>
+<line x1="92.00" y1="185.00" x2="92.00" y2="155.00" stroke="#324f56" stroke-width="2"/>
+<path d="M86,164 L92,153 L98,164" fill="none" stroke="#324f56" stroke-width="2"/>
+<text x="107.00" y="165.00" class="label" >N</text>
+<circle data-poi="TAL-POI-001" cx="482.10" cy="671.90" r="3.5" fill="#2c505a"/>
+<line x1="482.10" y1="671.90" x2="502.10" y2="671.90" stroke="#657675" stroke-width=".8"/>
+<rect x="489.10" y="661.40" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="502.10" y="675.90" class="label" text-anchor="middle" style="fill:#253e43">01</text>
+<circle data-poi="TAL-POI-002" cx="449.25" cy="648.50" r="3.5" fill="#2c505a"/>
+<line x1="449.25" y1="648.50" x2="469.25" y2="648.50" stroke="#657675" stroke-width=".8"/>
+<rect x="456.25" y="638.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="469.25" y="652.50" class="label" text-anchor="middle" style="fill:#253e43">02</text>
+<circle data-poi="TAL-POI-003" cx="498.30" cy="650.75" r="3.5" fill="#2c505a"/>
+<line x1="498.30" y1="650.75" x2="520.93" y2="628.12" stroke="#657675" stroke-width=".8"/>
+<rect x="507.93" y="617.62" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="520.93" y="632.12" class="label" text-anchor="middle" style="fill:#253e43">03</text>
+<circle data-poi="TAL-POI-004" cx="467.25" cy="683.60" r="3.5" fill="#2c505a"/>
+<line x1="467.25" y1="683.60" x2="447.25" y2="683.60" stroke="#657675" stroke-width=".8"/>
+<rect x="434.25" y="673.10" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="447.25" y="687.60" class="label" text-anchor="middle" style="fill:#253e43">04</text>
+<circle data-poi="TAL-POI-005" cx="573.00" cy="509.00" r="3.5" fill="#2c505a"/>
+<line x1="573.00" y1="509.00" x2="553.00" y2="509.00" stroke="#657675" stroke-width=".8"/>
+<rect x="540.00" y="498.50" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="553.00" y="513.00" class="label" text-anchor="middle" style="fill:#253e43">05</text>
+<circle data-poi="TAL-POI-006" cx="505.50" cy="468.50" r="3.5" fill="#2c505a"/>
+<line x1="505.50" y1="468.50" x2="525.50" y2="468.50" stroke="#657675" stroke-width=".8"/>
+<rect x="512.50" y="458.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="525.50" y="472.50" class="label" text-anchor="middle" style="fill:#253e43">06</text>
+<circle data-poi="TAL-POI-007" cx="604.50" cy="513.50" r="3.5" fill="#2c505a"/>
+<line x1="604.50" y1="513.50" x2="624.50" y2="513.50" stroke="#657675" stroke-width=".8"/>
+<rect x="611.50" y="503.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="624.50" y="517.50" class="label" text-anchor="middle" style="fill:#253e43">07</text>
+<circle data-poi="TAL-POI-008" cx="672.00" cy="477.50" r="3.5" fill="#2c505a"/>
+<line x1="672.00" y1="477.50" x2="692.00" y2="477.50" stroke="#657675" stroke-width=".8"/>
+<rect x="679.00" y="467.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="692.00" y="481.50" class="label" text-anchor="middle" style="fill:#253e43">08</text>
+<circle data-poi="TAL-POI-009" cx="352.50" cy="585.50" r="3.5" fill="#2c505a"/>
+<line x1="352.50" y1="585.50" x2="372.50" y2="585.50" stroke="#657675" stroke-width=".8"/>
+<rect x="359.50" y="575.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="372.50" y="589.50" class="label" text-anchor="middle" style="fill:#253e43">09</text>
+<circle data-poi="TAL-POI-010" cx="312.00" cy="527.00" r="3.5" fill="#2c505a"/>
+<line x1="312.00" y1="527.00" x2="332.00" y2="527.00" stroke="#657675" stroke-width=".8"/>
+<rect x="319.00" y="516.50" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="332.00" y="531.00" class="label" text-anchor="middle" style="fill:#253e43">10</text>
+<circle data-poi="TAL-POI-011" cx="384.00" cy="504.50" r="3.5" fill="#2c505a"/>
+<line x1="384.00" y1="504.50" x2="404.00" y2="504.50" stroke="#657675" stroke-width=".8"/>
+<rect x="391.00" y="494.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="404.00" y="508.50" class="label" text-anchor="middle" style="fill:#253e43">11</text>
+<circle data-poi="TAL-POI-012" cx="411.00" cy="725.00" r="3.5" fill="#2c505a"/>
+<line x1="411.00" y1="725.00" x2="431.00" y2="725.00" stroke="#657675" stroke-width=".8"/>
+<rect x="418.00" y="714.50" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="431.00" y="729.00" class="label" text-anchor="middle" style="fill:#253e43">12</text>
+<circle data-poi="TAL-POI-013" cx="316.50" cy="779.00" r="3.5" fill="#2c505a"/>
+<line x1="316.50" y1="779.00" x2="336.50" y2="779.00" stroke="#657675" stroke-width=".8"/>
+<rect x="323.50" y="768.50" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="336.50" y="783.00" class="label" text-anchor="middle" style="fill:#253e43">13</text>
+<circle data-poi="TAL-POI-014" cx="429.00" cy="788.00" r="3.5" fill="#2c505a"/>
+<line x1="429.00" y1="788.00" x2="449.00" y2="788.00" stroke="#657675" stroke-width=".8"/>
+<rect x="436.00" y="777.50" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="449.00" y="792.00" class="label" text-anchor="middle" style="fill:#253e43">14</text>
+<circle data-poi="TAL-POI-015" cx="249.00" cy="666.50" r="3.5" fill="#2c505a"/>
+<line x1="249.00" y1="666.50" x2="269.00" y2="666.50" stroke="#657675" stroke-width=".8"/>
+<rect x="256.00" y="656.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="269.00" y="670.50" class="label" text-anchor="middle" style="fill:#253e43">15</text>
+<circle data-poi="TAL-POI-016" cx="204.00" cy="743.00" r="3.5" fill="#2c505a"/>
+<line x1="204.00" y1="743.00" x2="224.00" y2="743.00" stroke="#657675" stroke-width=".8"/>
+<rect x="211.00" y="732.50" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="224.00" y="747.00" class="label" text-anchor="middle" style="fill:#253e43">16</text>
+<circle data-poi="TAL-POI-017" cx="271.50" cy="801.50" r="3.5" fill="#2c505a"/>
+<line x1="271.50" y1="801.50" x2="291.50" y2="801.50" stroke="#657675" stroke-width=".8"/>
+<rect x="278.50" y="791.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="291.50" y="805.50" class="label" text-anchor="middle" style="fill:#253e43">17</text>
+<circle data-poi="TAL-POI-018" cx="597.75" cy="593.60" r="3.5" fill="#2c505a"/>
+<line x1="597.75" y1="593.60" x2="617.75" y2="593.60" stroke="#657675" stroke-width=".8"/>
+<rect x="604.75" y="583.10" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="617.75" y="597.60" class="label" text-anchor="middle" style="fill:#253e43">18</text>
+<circle data-poi="TAL-POI-019" cx="685.50" cy="648.50" r="3.5" fill="#2c505a"/>
+<line x1="685.50" y1="648.50" x2="705.50" y2="648.50" stroke="#657675" stroke-width=".8"/>
+<rect x="692.50" y="638.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="705.50" y="652.50" class="label" text-anchor="middle" style="fill:#253e43">19</text>
+<circle data-poi="TAL-POI-020" cx="694.50" cy="722.75" r="3.5" fill="#2c505a"/>
+<line x1="694.50" y1="722.75" x2="714.50" y2="722.75" stroke="#657675" stroke-width=".8"/>
+<rect x="701.50" y="712.25" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="714.50" y="726.75" class="label" text-anchor="middle" style="fill:#253e43">20</text>
+<circle data-poi="TAL-POI-021" cx="610.35" cy="750.65" r="3.5" fill="#2c505a"/>
+<line x1="610.35" y1="750.65" x2="630.35" y2="750.65" stroke="#657675" stroke-width=".8"/>
+<rect x="617.35" y="740.15" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="630.35" y="754.65" class="label" text-anchor="middle" style="fill:#253e43">21</text>
+<circle data-poi="TAL-POI-022" cx="780.00" cy="815.00" r="3.5" fill="#2c505a"/>
+<line x1="780.00" y1="815.00" x2="800.00" y2="815.00" stroke="#657675" stroke-width=".8"/>
+<rect x="787.00" y="804.50" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="800.00" y="819.00" class="label" text-anchor="middle" style="fill:#253e43">22</text>
+<circle data-poi="TAL-POI-023" cx="865.50" cy="722.75" r="3.5" fill="#2c505a"/>
+<line x1="865.50" y1="722.75" x2="885.50" y2="722.75" stroke="#657675" stroke-width=".8"/>
+<rect x="872.50" y="712.25" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="885.50" y="726.75" class="label" text-anchor="middle" style="fill:#253e43">23</text>
+<circle data-poi="TAL-POI-024" cx="926.25" cy="333.50" r="3.5" fill="#2c505a"/>
+<line x1="926.25" y1="333.50" x2="946.25" y2="333.50" stroke="#657675" stroke-width=".8"/>
+<rect x="933.25" y="323.00" width="26.00" height="21.00" class="map-label-box" rx="3" fill="#fff9e8" stroke="#7d8b85" stroke-width=".7"/>
+<text x="946.25" y="337.50" class="label" text-anchor="middle" style="fill:#253e43">24</text>
+<line x1="445.38" y1="628.52" x2="459.52" y2="614.38" stroke="#657675" stroke-width=".8"/>
+<rect x="442.02" y="603.88" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="459.52" y="618.38" class="label" text-anchor="middle" style="fill:#fff9e8">D01</text>
+<line x1="523.14" y1="419.54" x2="537.28" y2="405.40" stroke="#657675" stroke-width=".8"/>
+<rect x="519.78" y="394.90" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="537.28" y="409.40" class="label" text-anchor="middle" style="fill:#fff9e8">D02</text>
+<line x1="280.50" y1="482.54" x2="294.64" y2="468.40" stroke="#657675" stroke-width=".8"/>
+<rect x="277.14" y="457.90" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="294.64" y="472.40" class="label" text-anchor="middle" style="fill:#fff9e8">D03</text>
+<line x1="327.66" y1="710.78" x2="341.80" y2="696.64" stroke="#657675" stroke-width=".8"/>
+<rect x="324.30" y="686.14" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="341.80" y="700.64" class="label" text-anchor="middle" style="fill:#fff9e8">D04</text>
+<line x1="187.62" y1="660.83" x2="201.76" y2="646.69" stroke="#657675" stroke-width=".8"/>
+<rect x="184.26" y="636.19" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="201.76" y="650.69" class="label" text-anchor="middle" style="fill:#fff9e8">D05</text>
+<line x1="579.12" y1="612.41" x2="593.26" y2="626.55" stroke="#657675" stroke-width=".8"/>
+<rect x="575.76" y="616.05" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="593.26" y="630.55" class="label" text-anchor="middle" style="fill:#fff9e8">D06</text>
+<line x1="558.60" y1="756.23" x2="572.74" y2="742.09" stroke="#657675" stroke-width=".8"/>
+<rect x="555.24" y="731.59" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="572.74" y="746.09" class="label" text-anchor="middle" style="fill:#fff9e8">D07</text>
+<line x1="780.00" y1="519.35" x2="794.14" y2="505.21" stroke="#657675" stroke-width=".8"/>
+<rect x="776.64" y="494.71" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="794.14" y="509.21" class="label" text-anchor="middle" style="fill:#fff9e8">D08</text>
+<line x1="843.00" y1="312.62" x2="857.14" y2="298.48" stroke="#657675" stroke-width=".8"/>
+<rect x="839.64" y="287.98" width="35.00" height="21.00" class="map-label-box" rx="3" fill="#334f57" stroke="#7d8b85" stroke-width=".7"/>
+<text x="857.14" y="302.48" class="label" text-anchor="middle" style="fill:#fff9e8">D09</text>
+<text x="1140.00" y="155.00" class="" style="font-size:18px;font-weight:bold">NINE DISTRICTS</text>
+<text x="1140.00" y="189.00" class="small" >D01  Junction Courts</text>
+<text x="1176.00" y="206.00" class="tiny muted" >95,000 residents · 183–211 m</text>
+<text x="1140.00" y="233.00" class="small" >D02  Threadbank</text>
+<text x="1176.00" y="250.00" class="tiny muted" >110,000 residents · 184–216 m</text>
+<text x="1140.00" y="277.00" class="small" >D03  Rillward</text>
+<text x="1176.00" y="294.00" class="tiny muted" >120,000 residents · 201–248 m</text>
+<text x="1140.00" y="321.00" class="small" >D04  Long Tables</text>
+<text x="1176.00" y="338.00" class="tiny muted" >105,000 residents · 188–219 m</text>
+<text x="1140.00" y="365.00" class="small" >D05  Leafyards</text>
+<text x="1176.00" y="382.00" class="tiny muted" >90,000 residents · 214–270 m</text>
+<text x="1140.00" y="409.00" class="small" >D06  Boatwright Reach</text>
+<text x="1176.00" y="426.00" class="tiny muted" >85,000 residents · 183–212 m</text>
+<text x="1140.00" y="453.00" class="small" >D07  Downsteps</text>
+<text x="1176.00" y="470.00" class="tiny muted" >65,000 residents · 181–214 m</text>
+<text x="1140.00" y="497.00" class="small" >D08  Inlet Gardens</text>
+<text x="1176.00" y="514.00" class="tiny muted" >60,000 residents · 183–225 m</text>
+<text x="1140.00" y="541.00" class="small" >D09  Namar Gate</text>
+<text x="1176.00" y="558.00" class="tiny muted" >50,000 residents · 184–220 m</text>
+<text x="1140.00" y="607.00" class="" style="font-size:18px;font-weight:bold">THE WHOLE LAKES</text>
+<rect x="1140.00" y="625.00" width="340.00" height="320.00" fill="#e5dfce" stroke="#89958b"/>
+<path class="water" d="M1260.42,664.88 L1329.37,645.00 L1369.94,691.41 L1364.73,758.11 L1312.31,819.68 L1288.83,804.99 L1242.42,744.73 L1260.42,664.88 Z"/>
+<path class="water" d="M1311.14,826.35 L1341.78,831.59 L1377.58,877.99 L1360.03,911.47 L1306.43,925.00 L1282.70,884.97 L1311.14,826.35 Z"/>
+<rect x="1299.96" y="817.25" width="14.89" height="11.65" fill="none" stroke="#9a5c35" stroke-width="1.4"/>
+<text x="1160.00" y="658.00" class="tiny" >NAMAR · 180 m</text>
+<text x="1160.00" y="913.00" class="tiny" >IREN · 176 m</text>
+<text x="1140.00" y="967.00" class="tiny muted" >Orange box: main planning frame</text>
+<text x="1140.00" y="985.00" class="tiny muted" >Projected source outlines; no bathymetry</text>
+<text x="60.00" y="1007.00" class="small muted" >Cream labels: places · dark labels: district envelopes · dotted lines: tram dependencies, not route alignments</text>
+<rect x="60.00" y="1030.00" width="1420.00" height="112.00" rx="6" fill="#e3e8de"/>
+<text x="80.00" y="1058.00" class="label" >THE DOWNHILL RELATIONSHIP</text>
+<text x="80.00" y="1084.00" class="" style="font-size:20px">Namar outlet 180 m  →  Talweir junction 179.7 m  →  Iren inlet 176 m</text>
+<text x="80.00" y="1108.00" class="small" >Navigation cut: 179.6 → 177.8 → 176 m, two 1.8 m locks · flowing bypass remains separate</text>
+<text x="80.00" y="1128.00" class="small muted" >The 4 m total head does not establish flow, useful power, vessel clearance, lock throughput or pipe pressure.</text>
+<text x="60.00" y="1185.00" class="" style="font-size:19px;font-weight:bold">PLACES WORTH FINDING</text>
+<text x="60.00" y="1218.00" class="small" >01  The Two Surface Room</text>
+<text x="60.00" y="1247.00" class="small" >02  The Four Passage Window</text>
+<text x="60.00" y="1276.00" class="small" >03  Three Seat Café</text>
+<text x="60.00" y="1305.00" class="small" >04  The Wrong Map Room</text>
+<text x="60.00" y="1334.00" class="small" >05  The Hanging Hull School</text>
+<text x="60.00" y="1363.00" class="small" >06  Quiet Seam Court</text>
+<text x="60.00" y="1392.00" class="small" >07  The Room of Six Returns</text>
+<text x="60.00" y="1421.00" class="small" >08  The Oblique Landing</text>
+<text x="545.00" y="1218.00" class="small" >09  Morrow Bath</text>
+<text x="545.00" y="1247.00" class="small" >10  The Room with No Audience</text>
+<text x="545.00" y="1276.00" class="small" >11  Open Latch Ground</text>
+<text x="545.00" y="1305.00" class="small" >12  Second Course Hall</text>
+<text x="545.00" y="1334.00" class="small" >13  The Cold Gallery</text>
+<text x="545.00" y="1363.00" class="small" >14  Night Recipe Court</text>
+<text x="545.00" y="1392.00" class="small" >15  Leaf Exchange</text>
+<text x="545.00" y="1421.00" class="small" >16  The Trial Pond</text>
+<text x="1030.00" y="1218.00" class="small" >17  The Spare Parts Library</text>
+<text x="1030.00" y="1247.00" class="small" >18  The Second Shore Platform</text>
+<text x="1030.00" y="1276.00" class="small" >19  Three Hulls Gallery</text>
+<text x="1030.00" y="1305.00" class="small" >20  A Stage at Rest</text>
+<text x="1030.00" y="1334.00" class="small" >21  The Gate Interval</text>
+<text x="1030.00" y="1363.00" class="small" >22  The Return Water Gallery</text>
+<text x="1030.00" y="1392.00" class="small" >23  Window Margin</text>
+<text x="1030.00" y="1421.00" class="small" >24  The Far Water Bench</text>
+<text x="60.00" y="1470.00" class="small muted" >08 and 18 are supported overwater decks; 16 marks Trial Pond, with a separate dry visitor-access control.</text>
+<text x="60.00" y="1494.00" class="small muted" >Ferry interchanges are on land. Access legs, actual berths, streets, structures and navigable alignments remain to be designed.</text>
+<text x="60.00" y="1518.00" class="small muted" >Source: talweir_city_plan.json · AEQD from 28° N, 124° E, radius 5,900 km · authored controls, not constructed terrain.</text>
+</svg>

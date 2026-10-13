@@ -1,5 +1,7 @@
 # Planet authoring handoff — 13 October 2026
 
+**Historical edition 0.2 snapshot.** The [edition 0.3 handoff](AUTHORING_HANDOFF_2026-10-13_03.md) records subsequent work. The reader link below now opens the current compiled edition; counts and validation in this snapshot describe edition 0.2 only.
+
 The full-world goal remains active. The existing mechanics Development handoff is complete; no runtime, asset import, map construction or package change occurred during this authoring pass.
 
 ## What now exists

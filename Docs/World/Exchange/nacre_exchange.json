@@ -1,0 +1,569 @@
+{
+  "schema_version": "1.0",
+  "edition": "0.3",
+  "status": "Authored relationship and demand model; not operating economy or verified productive capacity",
+  "civil_turn_hours": 24,
+  "source_bible": "../06_POWER_AND_EXCHANGE.md",
+  "currency": {
+    "display_family": "mark",
+    "issuer_qualification_required_across_regions": true,
+    "examples": [
+      "M-OR",
+      "M-TL"
+    ],
+    "universal_backing": false,
+    "fixed_energy_peg": false,
+    "exchange_rates_status": "No fixed interregional rates established"
+  },
+  "city_roles": [
+    {
+      "id": "CITY-001",
+      "name": "Orison",
+      "region_id": "REG-001",
+      "role": "Collector service, optical integration and coastal repair",
+      "needs": "Regional food, industrial stock and firm grid supply",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-002",
+      "name": "Marroway",
+      "region_id": "REG-002",
+      "role": "Basin freight consolidation, storage and food distribution",
+      "needs": "Multiple growers, feeder routes and functioning stores",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-003",
+      "name": "Hesh",
+      "region_id": "REG-004",
+      "role": "Closed-basin services, selected mineral processing and inland distribution",
+      "needs": "Water recovery, upland inflows and process qualification",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-004",
+      "name": "Serein",
+      "region_id": "REG-006",
+      "role": "Durable enclosures, domestic manufacture and maritime services",
+      "needs": "Moisture control, feedstock and reliable transport",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-005",
+      "name": "Talweir",
+      "region_id": "REG-009",
+      "role": "Inland navigation, small-vessel design and lake-region processing",
+      "needs": "Distinct lake habitats, catchment farming and transfer facilities",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-006",
+      "name": "Aven",
+      "region_id": "REG-010",
+      "role": "Precision manufacture, tested ceramics, education and upland transfer",
+      "needs": "Clean production, skilled maintainers and long regional routes",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-007",
+      "name": "Dhal",
+      "region_id": "REG-011",
+      "role": "Field science, river service and qualified biological/material processing",
+      "needs": "Access agreements, humidity control and ecological limits",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-008",
+      "name": "Merrow",
+      "region_id": "REG-012",
+      "role": "Estuarine services and controlled food-conversion expertise",
+      "needs": "Water-quality evidence, introduced crops and tested cultures",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-009",
+      "name": "Tern",
+      "region_id": "REG-015",
+      "role": "Marine repair, rescue training and durable equipment",
+      "needs": "Imported parts, qualified yards and sustained readiness funding",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-010",
+      "name": "Velis",
+      "region_id": "REG-016",
+      "role": "Viable cultivation stocks, preservation work and teaching",
+      "needs": "Separate seed, tissue, partner-culture and grow-out dependencies",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-011",
+      "name": "Brin",
+      "region_id": "REG-018",
+      "role": "Northern logistics, observation and cold-environment maintenance",
+      "needs": "Seasonal freight, specialist care and local civic services",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    },
+    {
+      "id": "CITY-012",
+      "name": "Sola",
+      "region_id": "REG-021",
+      "role": "Interregional transfer, hospitality and island manufacture",
+      "needs": "Freshwater, berth access and useful local ferries",
+      "scope": "Concentration of activities, not exclusive planetary monopoly"
+    }
+  ],
+  "selected_dependencies": [
+    {
+      "id": "EX-001",
+      "from_city_id": "CITY-002",
+      "to_city_id": "CITY-001",
+      "goods": "Regional staple and fresh-food deliveries",
+      "transport_intent": "Surface and coastal logistics; exact corridor and capacities unresolved",
+      "alternative": "Use distinct stores and other producing regions; no assumed spare capacity",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-002",
+      "from_city_id": "CITY-001",
+      "to_city_id": "CITY-012",
+      "goods": "Optical assemblies and maritime service parts",
+      "transport_intent": "Coastal cargo and qualified fast carriage",
+      "alternative": "Other workshops can substitute after interface and batch checks",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-003",
+      "from_city_id": "CITY-012",
+      "to_city_id": "CITY-006",
+      "goods": "Transferred components and equipment",
+      "transport_intent": "Sea/air/interior transfers required; no direct sea route to upland city",
+      "alternative": "Alternative carriers and stores; inland approach still required",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-004",
+      "from_city_id": "CITY-006",
+      "to_city_id": "CITY-005",
+      "goods": "Calibrated instruments and tested ceramics",
+      "transport_intent": "Inland freight and qualified fast carriage",
+      "alternative": "Repair existing instruments or qualify a different source",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-005",
+      "from_city_id": "CITY-005",
+      "to_city_id": "CITY-007",
+      "goods": "Small-vessel design packages and measuring equipment",
+      "transport_intent": "Knowledge by relay; physical components through inland/coastal transfers",
+      "alternative": "Local designs where fit for purpose; no universal boat kit",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-006",
+      "from_city_id": "CITY-007",
+      "to_city_id": "CITY-008",
+      "goods": "Qualified biological material and associated records",
+      "transport_intent": "Controlled physical shipment; records may arrive first",
+      "alternative": "Other qualified material or defer use; no automatic species substitution",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-007",
+      "from_city_id": "CITY-008",
+      "to_city_id": "CITY-009",
+      "goods": "Specialty preparations and process equipment",
+      "transport_intent": "Long maritime or mixed cargo corridor",
+      "alternative": "Local introduced ingredients and alternative equipment suppliers",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-008",
+      "from_city_id": "CITY-009",
+      "to_city_id": "CITY-010",
+      "goods": "Durable cold-logistics and cultivation hardware",
+      "transport_intent": "Regional Sere surface/coastal carriage",
+      "alternative": "Repair or borrow qualified hardware locally",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-009",
+      "from_city_id": "CITY-010",
+      "to_city_id": "CITY-004",
+      "goods": "Viable introduced cultivation stocks and preservation expertise",
+      "transport_intent": "Maintained cargo or qualified preservation; documentation by relay",
+      "alternative": "Regional reserve and independent collection, if viable",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-010",
+      "from_city_id": "CITY-004",
+      "to_city_id": "CITY-011",
+      "goods": "Durable building envelopes and marine equipment",
+      "transport_intent": "Northern maritime or mixed freight",
+      "alternative": "Local repair and other suppliers; seasonal access still constrains",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-011",
+      "from_city_id": "CITY-011",
+      "to_city_id": "CITY-005",
+      "goods": "Observation instruments and specialist calibration services",
+      "transport_intent": "Low-mass high-value shipment; teaching can travel by relay",
+      "alternative": "Other Measure Houses or maintained local equipment",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-012",
+      "from_city_id": "CITY-005",
+      "to_city_id": "CITY-006",
+      "goods": "Lake-cultivation stock and maintained cultures",
+      "transport_intent": "Controlled inland freight; not a claim of cheap daily fresh supply",
+      "alternative": "Upland stocks and alternative approved cultures",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-013",
+      "from_city_id": "CITY-003",
+      "to_city_id": "CITY-001",
+      "goods": "Selected metal stock and durable inland goods",
+      "transport_intent": "Cross-Kesh land/mixed carriage; alignment unresolved",
+      "alternative": "Recovered stock and alternative qualified alloys",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-014",
+      "from_city_id": "CITY-001",
+      "to_city_id": "CITY-002",
+      "goods": "Water-service parts and repair assemblies",
+      "transport_intent": "Regional freight with local installation",
+      "alternative": "Independent workshops and repair of installed equipment",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-015",
+      "from_city_id": "CITY-012",
+      "to_city_id": "CITY-001",
+      "goods": "Transferred spares, consumer goods and carrier services",
+      "transport_intent": "Coastal/interregional cargo",
+      "alternative": "Direct qualified suppliers where practical",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-016",
+      "from_city_id": "CITY-008",
+      "to_city_id": "CITY-007",
+      "goods": "Water-processing equipment and qualification services",
+      "transport_intent": "Coastal/river transfer and relay for records",
+      "alternative": "Local repair and alternative tested systems",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-017",
+      "from_city_id": "CITY-005",
+      "to_city_id": "CITY-008",
+      "goods": "Small-vessel design expertise and civic measurement methods",
+      "transport_intent": "Primarily information and people; selected demonstration hardware",
+      "alternative": "Local interpretation and independently developed methods",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    },
+    {
+      "id": "EX-018",
+      "from_city_id": "CITY-010",
+      "to_city_id": "CITY-005",
+      "goods": "Viable seed lots, terrestrial partner cultures and grow-out teaching",
+      "transport_intent": "Long controlled shipment; not staple harvest tonnage",
+      "alternative": "Independent collections and maintained local reserve",
+      "quantity_status": "Unquantified selected dependency; not included as extra tonnage in the core food ledger",
+      "alignment_status": "Not a navigable route",
+      "capacity_verified": false
+    }
+  ],
+  "orison_food": {
+    "city_id": "CITY-001",
+    "served_population": 420000,
+    "scope": "Core city only; does not include wider 1.2 million service region",
+    "unit": "edible_product_tonnes_per_civil_turn",
+    "baseline_total": 700,
+    "categories": [
+      "introduced_dry_staples",
+      "introduced_fresh_produce",
+      "cultured_products",
+      "qualified_native_fractions",
+      "other_preserved"
+    ],
+    "category_targets": {
+      "introduced_dry_staples": 230,
+      "introduced_fresh_produce": 300,
+      "cultured_products": 90,
+      "qualified_native_fractions": 30,
+      "other_preserved": 50
+    },
+    "deliveries": [
+      {
+        "id": "SUP-001",
+        "label": "Saffron urban/rural belt",
+        "origin_region_ids": [
+          "REG-001"
+        ],
+        "category_tonnes_per_turn": {
+          "introduced_dry_staples": 25,
+          "introduced_fresh_produce": 90,
+          "cultured_products": 25,
+          "qualified_native_fractions": 0,
+          "other_preserved": 0
+        },
+        "row_total_tonnes_per_turn": 140,
+        "capacity_verified": false
+      },
+      {
+        "id": "SUP-002",
+        "label": "Nine River producers and Marroway consolidation",
+        "origin_region_ids": [
+          "REG-002"
+        ],
+        "category_tonnes_per_turn": {
+          "introduced_dry_staples": 170,
+          "introduced_fresh_produce": 145,
+          "cultured_products": 35,
+          "qualified_native_fractions": 0,
+          "other_preserved": 10
+        },
+        "row_total_tonnes_per_turn": 360,
+        "capacity_verified": false
+      },
+      {
+        "id": "SUP-003",
+        "label": "Glassback foothill valleys",
+        "origin_region_ids": [
+          "REG-003"
+        ],
+        "category_tonnes_per_turn": {
+          "introduced_dry_staples": 20,
+          "introduced_fresh_produce": 40,
+          "cultured_products": 15,
+          "qualified_native_fractions": 0,
+          "other_preserved": 0
+        },
+        "row_total_tonnes_per_turn": 75,
+        "capacity_verified": false
+      },
+      {
+        "id": "SUP-004",
+        "label": "Red Ledger producers and Hesh distributors",
+        "origin_region_ids": [
+          "REG-004"
+        ],
+        "category_tonnes_per_turn": {
+          "introduced_dry_staples": 15,
+          "introduced_fresh_produce": 25,
+          "cultured_products": 15,
+          "qualified_native_fractions": 0,
+          "other_preserved": 10
+        },
+        "row_total_tonnes_per_turn": 65,
+        "capacity_verified": false
+      },
+      {
+        "id": "SUP-005",
+        "label": "Qualified Saffron/coastal processing",
+        "origin_region_ids": [
+          "REG-001"
+        ],
+        "category_tonnes_per_turn": {
+          "introduced_dry_staples": 0,
+          "introduced_fresh_produce": 0,
+          "cultured_products": 0,
+          "qualified_native_fractions": 25,
+          "other_preserved": 23
+        },
+        "row_total_tonnes_per_turn": 48,
+        "capacity_verified": false
+      },
+      {
+        "id": "SUP-006",
+        "label": "Distant specialties through several carriers",
+        "origin_region_ids": [
+          "REG-011",
+          "REG-012",
+          "REG-021"
+        ],
+        "category_tonnes_per_turn": {
+          "introduced_dry_staples": 0,
+          "introduced_fresh_produce": 0,
+          "cultured_products": 0,
+          "qualified_native_fractions": 5,
+          "other_preserved": 7
+        },
+        "row_total_tonnes_per_turn": 12,
+        "capacity_verified": false
+      }
+    ],
+    "dry_reserve_tonnes": 6900,
+    "nominal_dry_reserve_turns": 30,
+    "interruption_case": {
+      "interrupted_delivery_id": "SUP-002",
+      "assumptions": [
+        "Other dry deliveries continue unchanged",
+        "All stated reserve accessible",
+        "No loss or additional obligation included",
+        "Does not cover missing fresh or cultured food"
+      ],
+      "all_food_security_verified": false
+    },
+    "urban_fresh_subset": {
+      "included_in_delivery_id": "SUP-001",
+      "tonnes_per_civil_turn": 24,
+      "scope": "Included within SUP-001 fresh 90 t and total 700 t; proposed yield not verified"
+    }
+  },
+  "household_example": {
+    "currency": "M-OR",
+    "duration_civil_turns": 25,
+    "people": 3,
+    "income": [
+      {
+        "source": "paid_watch_A",
+        "count": 16,
+        "rate": 24,
+        "total": 384
+      },
+      {
+        "source": "paid_watch_B",
+        "count": 14,
+        "rate": 22,
+        "total": 308
+      },
+      {
+        "source": "pooled_care_support",
+        "count": 1,
+        "rate": 28,
+        "total": 28
+      }
+    ],
+    "expenses": [
+      {
+        "use": "housing",
+        "amount": 210
+      },
+      {
+        "use": "food",
+        "amount": 180
+      },
+      {
+        "use": "heat_power_light",
+        "amount": 45
+      },
+      {
+        "use": "water_waste",
+        "amount": 18
+      },
+      {
+        "use": "transport",
+        "amount": 38
+      },
+      {
+        "use": "health",
+        "amount": 30
+      },
+      {
+        "use": "education_care",
+        "amount": 22
+      },
+      {
+        "use": "debt",
+        "amount": 36
+      },
+      {
+        "use": "repair_reserve",
+        "amount": 50
+      },
+      {
+        "use": "gifts_leisure",
+        "amount": 58
+      },
+      {
+        "use": "communication_fees",
+        "amount": 10
+      },
+      {
+        "use": "contingency",
+        "amount": 23
+      }
+    ],
+    "total_income": 720,
+    "total_expense": 720,
+    "scope": "One illustrative household; not median, minimum diet or universal affordability"
+  },
+  "event_cases": [
+    {
+      "id": "EX-E01",
+      "name": "Nine River handling interruption",
+      "status": "Authored causal seed; not runtime event"
+    },
+    {
+      "id": "EX-E02",
+      "name": "Disputed qualification batch",
+      "status": "Authored causal seed; not runtime event"
+    },
+    {
+      "id": "EX-E03",
+      "name": "Service-operator work stoppage",
+      "status": "Authored causal seed; not runtime event"
+    },
+    {
+      "id": "EX-E04",
+      "name": "Uncertain living-stock shipment",
+      "status": "Authored causal seed; not runtime event"
+    },
+    {
+      "id": "EX-E05",
+      "name": "False route notice",
+      "status": "Authored causal seed; not runtime event"
+    }
+  ],
+  "open_obligations": [
+    "Regional acreage and yields",
+    "Industrial input/output and energy budgets",
+    "Cargo alignments, modes, transfers and capacities",
+    "City public finance and service jurisdictions",
+    "Spare capacity for alternatives",
+    "Propulsion and offworld supply constraints",
+    "Rural settlement dossiers",
+    "Runtime representation and observed behavior"
+  ]
+}
