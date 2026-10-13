@@ -1,0 +1,1014 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-007",
+  "city_name": "Dhal",
+  "region_id": "REG-011",
+  "status": "Authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "DHAL.md",
+  "frame": {
+    "origin_lon_deg": 166,
+    "origin_lat_deg": 4,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -9500,
+      -7000,
+      10000,
+      8500
+    ]
+  },
+  "population": 160000,
+  "gross_area_allowance_km2": 74,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "DHA-WATER-01",
+      "name": "Dhal working river",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          -9000,
+          1330
+        ],
+        [
+          -6500,
+          970
+        ],
+        [
+          -4200,
+          580
+        ],
+        [
+          -2200,
+          50
+        ],
+        [
+          0,
+          360
+        ],
+        [
+          2600,
+          70
+        ],
+        [
+          5000,
+          -410
+        ],
+        [
+          7300,
+          -1080
+        ],
+        [
+          9200,
+          -1760
+        ],
+        [
+          9200,
+          -2640
+        ],
+        [
+          7300,
+          -1920
+        ],
+        [
+          5000,
+          -1190
+        ],
+        [
+          2600,
+          -670
+        ],
+        [
+          0,
+          -360
+        ],
+        [
+          -2200,
+          -650
+        ],
+        [
+          -4200,
+          -80
+        ],
+        [
+          -6500,
+          330
+        ],
+        [
+          -9000,
+          670
+        ],
+        [
+          -9000,
+          1330
+        ]
+      ],
+      "surface_m": 8,
+      "status": "Central nominal reference only; local flowing surface follows channel, not a level lake"
+    }
+  ],
+  "source_river_id": "RIV-005",
+  "channels": [
+    {
+      "id": "DHA-CHANNEL-01",
+      "name": "Dhal water: west to east-southeast",
+      "points_xyz_m": [
+        [
+          -9000,
+          1000,
+          9.2
+        ],
+        [
+          -6500,
+          650,
+          8.9
+        ],
+        [
+          -4200,
+          250,
+          8.6
+        ],
+        [
+          -2200,
+          -300,
+          8.3
+        ],
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          2600,
+          -300,
+          7.7
+        ],
+        [
+          5000,
+          -800,
+          7.4
+        ],
+        [
+          7300,
+          -1500,
+          7.1
+        ],
+        [
+          9200,
+          -2200,
+          6.8
+        ]
+      ],
+      "surface_polygon_ids": [
+        "DHA-WATER-01"
+      ],
+      "status": "Authored nonrising nominal controls through exact atlas city height; no hydraulics or navigation proof"
+    }
+  ],
+  "districts": [
+    {
+      "id": "DHA-D01",
+      "name": "River Fold",
+      "population": 24000,
+      "area_allowance_km2": 8,
+      "center_xyz_m": [
+        -400,
+        1100,
+        20
+      ],
+      "radii_m": [
+        1900,
+        1500
+      ],
+      "altitude_range_m": [
+        12,
+        35
+      ],
+      "character": "Working river arrival and mixed homes"
+    },
+    {
+      "id": "DHA-D02",
+      "name": "Long Dry",
+      "population": 22000,
+      "area_allowance_km2": 7,
+      "center_xyz_m": [
+        -3200,
+        2000,
+        27
+      ],
+      "radii_m": [
+        2000,
+        1700
+      ],
+      "altitude_range_m": [
+        18,
+        45
+      ],
+      "character": "Dry storage heritage, housing, baths and publishing"
+    },
+    {
+      "id": "DHA-D03",
+      "name": "Crown Rooms",
+      "population": 18000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        -2200,
+        5100,
+        35
+      ],
+      "radii_m": [
+        2200,
+        1900
+      ],
+      "altitude_range_m": [
+        22,
+        65
+      ],
+      "character": "Education, domestic art and native stand approaches"
+    },
+    {
+      "id": "DHA-D04",
+      "name": "Open Weft",
+      "population": 20000,
+      "area_allowance_km2": 8,
+      "center_xyz_m": [
+        2300,
+        2700,
+        24
+      ],
+      "radii_m": [
+        2200,
+        1800
+      ],
+      "altitude_range_m": [
+        16,
+        50
+      ],
+      "character": "Humid-service manufacture, repair and performance"
+    },
+    {
+      "id": "DHA-D05",
+      "name": "East Chain",
+      "population": 16000,
+      "area_allowance_km2": 7,
+      "center_xyz_m": [
+        5600,
+        950,
+        19
+      ],
+      "radii_m": [
+        2000,
+        1800
+      ],
+      "altitude_range_m": [
+        12,
+        38
+      ],
+      "character": "Downstream transfer, crew services and towing remnants"
+    },
+    {
+      "id": "DHA-D06",
+      "name": "South Racks",
+      "population": 18000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        3300,
+        -2600,
+        18
+      ],
+      "radii_m": [
+        2200,
+        1800
+      ],
+      "altitude_range_m": [
+        12,
+        38
+      ],
+      "character": "Separated processing and shift-based public life"
+    },
+    {
+      "id": "DHA-D07",
+      "name": "Seed Yards",
+      "population": 15000,
+      "area_allowance_km2": 8,
+      "center_xyz_m": [
+        0,
+        -4400,
+        24
+      ],
+      "radii_m": [
+        2200,
+        2000
+      ],
+      "altitude_range_m": [
+        17,
+        42
+      ],
+      "character": "Introduced cultivation stock and family kitchens"
+    },
+    {
+      "id": "DHA-D08",
+      "name": "Turning Ground",
+      "population": 14000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        -3900,
+        -2500,
+        22
+      ],
+      "radii_m": [
+        2400,
+        1800
+      ],
+      "altitude_range_m": [
+        16,
+        42
+      ],
+      "character": "Transfer reuse, workshops and regional departure"
+    },
+    {
+      "id": "DHA-D09",
+      "name": "Borrowed Height",
+      "population": 13000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        3400,
+        5700,
+        42
+      ],
+      "radii_m": [
+        2200,
+        1800
+      ],
+      "altitude_range_m": [
+        28,
+        85
+      ],
+      "character": "Independent canopy frames, homes and forecasts"
+    }
+  ],
+  "places": [
+    {
+      "id": "DHA-POI-001",
+      "name": "Threadwater Quay",
+      "district_id": "DHA-D01",
+      "xyz_m": [
+        -900,
+        420,
+        15
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-002",
+      "name": "Two Banks Span",
+      "district_id": "DHA-D01",
+      "xyz_m": [
+        0,
+        0,
+        17
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 8,
+      "shore_access_xyz_m": [
+        0,
+        650,
+        18
+      ]
+    },
+    {
+      "id": "DHA-POI-003",
+      "name": "Porch of Many Departures",
+      "district_id": "DHA-D01",
+      "xyz_m": [
+        450,
+        1200,
+        22
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-004",
+      "name": "Long Dry House",
+      "district_id": "DHA-D02",
+      "xyz_m": [
+        -3600,
+        1800,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-005",
+      "name": "Heat Release Baths",
+      "district_id": "DHA-D02",
+      "xyz_m": [
+        -2300,
+        2500,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-006",
+      "name": "The Book of Lost Sounds",
+      "district_id": "DHA-D02",
+      "xyz_m": [
+        -4200,
+        2700,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-007",
+      "name": "Family Resemblance Room",
+      "district_id": "DHA-D03",
+      "xyz_m": [
+        -2400,
+        5000,
+        39
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-008",
+      "name": "Underleaf School",
+      "district_id": "DHA-D03",
+      "xyz_m": [
+        -900,
+        5600,
+        36
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-009",
+      "name": "Storm Gap Three",
+      "district_id": "DHA-D03",
+      "xyz_m": [
+        -3600,
+        5900,
+        34
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-010",
+      "name": "Open Weft Works",
+      "district_id": "DHA-D04",
+      "xyz_m": [
+        1700,
+        2500,
+        25
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-011",
+      "name": "The Return Shelf",
+      "district_id": "DHA-D04",
+      "xyz_m": [
+        3000,
+        3200,
+        27
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-012",
+      "name": "Under Roof Arena",
+      "district_id": "DHA-D04",
+      "xyz_m": [
+        2100,
+        3900,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-013",
+      "name": "East Chain Transfer",
+      "district_id": "DHA-D05",
+      "xyz_m": [
+        5300,
+        200,
+        15
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-014",
+      "name": "The Unfinished Tow",
+      "district_id": "DHA-D05",
+      "xyz_m": [
+        6500,
+        1700,
+        22
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-015",
+      "name": "Reach Clinic",
+      "district_id": "DHA-D05",
+      "xyz_m": [
+        4600,
+        1600,
+        22
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-016",
+      "name": "Three Atmospheres",
+      "district_id": "DHA-D06",
+      "xyz_m": [
+        3600,
+        -2400,
+        20
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-017",
+      "name": "Night Market Racks",
+      "district_id": "DHA-D06",
+      "xyz_m": [
+        2100,
+        -2100,
+        19
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-018",
+      "name": "Last Wash",
+      "district_id": "DHA-D06",
+      "xyz_m": [
+        4700,
+        -3500,
+        17
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-019",
+      "name": "Seed Ledger House",
+      "district_id": "DHA-D07",
+      "xyz_m": [
+        -900,
+        -4000,
+        26
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-020",
+      "name": "Court of Ordinary Meals",
+      "district_id": "DHA-D07",
+      "xyz_m": [
+        800,
+        -4500,
+        25
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-021",
+      "name": "Old Tension Hall",
+      "district_id": "DHA-D08",
+      "xyz_m": [
+        -3800,
+        -2200,
+        24
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-022",
+      "name": "Dry Foot Landing",
+      "district_id": "DHA-D08",
+      "xyz_m": [
+        -5500,
+        -3300,
+        25
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-023",
+      "name": "Borrowed Height Walk",
+      "district_id": "DHA-D09",
+      "xyz_m": [
+        2700,
+        5600,
+        69
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "DHA-POI-024",
+      "name": "Far Rain Receiver",
+      "district_id": "DHA-D09",
+      "xyz_m": [
+        4500,
+        6300,
+        44
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "DHA-T01",
+      "name": "River Fold interchange",
+      "district_id": "DHA-D01",
+      "xyz_m": [
+        -500,
+        800,
+        19
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "DHA-T02",
+      "name": "Long Dry interchange",
+      "district_id": "DHA-D02",
+      "xyz_m": [
+        -3200,
+        2100,
+        27
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "DHA-T03",
+      "name": "Crown Rooms interchange",
+      "district_id": "DHA-D03",
+      "xyz_m": [
+        -1800,
+        5000,
+        36
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "DHA-T04",
+      "name": "Open Weft interchange",
+      "district_id": "DHA-D04",
+      "xyz_m": [
+        2400,
+        2600,
+        25
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "DHA-T05",
+      "name": "East Chain interchange",
+      "district_id": "DHA-D05",
+      "xyz_m": [
+        5600,
+        700,
+        17
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "DHA-T06",
+      "name": "South Racks interchange",
+      "district_id": "DHA-D06",
+      "xyz_m": [
+        3400,
+        -2400,
+        20
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "DHA-T07",
+      "name": "Seed Yards interchange",
+      "district_id": "DHA-D07",
+      "xyz_m": [
+        0,
+        -4400,
+        24
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "DHA-T08",
+      "name": "Turning Ground interchange",
+      "district_id": "DHA-D08",
+      "xyz_m": [
+        -4000,
+        -2500,
+        24
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "DHA-T09",
+      "name": "Borrowed Height interchange",
+      "district_id": "DHA-D09",
+      "xyz_m": [
+        3400,
+        5600,
+        40
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "DHA-T10",
+      "name": "Upstream regional road gateway",
+      "district_id": null,
+      "xyz_m": [
+        -8000,
+        -1400,
+        22
+      ],
+      "regional_gateway": true
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "DHA-L01",
+      "from": "DHA-T01",
+      "to": "DHA-T02",
+      "mode": "tram",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L02",
+      "from": "DHA-T02",
+      "to": "DHA-T03",
+      "mode": "bus",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L03",
+      "from": "DHA-T03",
+      "to": "DHA-T04",
+      "mode": "walking",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L04",
+      "from": "DHA-T04",
+      "to": "DHA-T05",
+      "mode": "tram",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L05",
+      "from": "DHA-T04",
+      "to": "DHA-T09",
+      "mode": "bus",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L06",
+      "from": "DHA-T03",
+      "to": "DHA-T09",
+      "mode": "walking",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L07",
+      "from": "DHA-T01",
+      "to": "DHA-T04",
+      "mode": "walking",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L08",
+      "from": "DHA-T01",
+      "to": "DHA-T06",
+      "mode": "walking",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L09",
+      "from": "DHA-T01",
+      "to": "DHA-T06",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L10",
+      "from": "DHA-T06",
+      "to": "DHA-T05",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L11",
+      "from": "DHA-T06",
+      "to": "DHA-T07",
+      "mode": "bus",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L12",
+      "from": "DHA-T07",
+      "to": "DHA-T08",
+      "mode": "bus",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L13",
+      "from": "DHA-T08",
+      "to": "DHA-T01",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L14",
+      "from": "DHA-T08",
+      "to": "DHA-T10",
+      "mode": "road",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L15",
+      "from": "DHA-T02",
+      "to": "DHA-T08",
+      "mode": "ferry",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L16",
+      "from": "DHA-T07",
+      "to": "DHA-T10",
+      "mode": "road",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    },
+    {
+      "id": "DHA-L17",
+      "from": "DHA-T06",
+      "to": "DHA-T08",
+      "mode": "road",
+      "status": "Service dependency; alignment, structures, berths and capacity unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 120,
+    "other_potable_m3_per_turn": 10800,
+    "delivered_potable_m3_per_turn": 30000,
+    "network_loss_fraction": 0.12,
+    "network_input_m3_per_turn": 34090.90909090909,
+    "edible_product_kg_per_person_per_turn": 1.65,
+    "edible_product_tonnes_per_turn": 264,
+    "electric_average_mw": 150,
+    "electric_peak_mw": 270,
+    "scope": "160000 core residents per 24-hour civil turn; demand assumptions, no productive yield, nutrition, reliability or capacity validated"
+  },
+  "housing_case": {
+    "units": 65000,
+    "occupied_fraction": 0.96,
+    "people_per_occupied_unit": 2.57,
+    "screening_population": 160368,
+    "residential_parcel_km2": 12.5,
+    "coverage_fraction": 0.24,
+    "effective_floors": 2.5,
+    "gross_residential_floor_m2": 7500000,
+    "usable_fraction": 0.8,
+    "usable_floor_m2": 6000000,
+    "usable_m2_per_planned_unit": 92.3076923076923,
+    "scope": "Screening averages, not surveyed parcel capacity or affordable vacancies"
+  },
+  "gross_area_categories_km2": {
+    "residential_parcels": 12.5,
+    "industrial_and_freight": 8,
+    "transportation_and_utilities": 11,
+    "public_habitat_and_open": 28,
+    "other_civic_commercial_mixed": 14.5
+  },
+  "water_screening_case": {
+    "treatment_recovery_fraction": 0.95,
+    "raw_abstraction_m3_per_turn": 35885.167464114835,
+    "raw_treatment_residual_m3_per_turn": 1794.2583732057465,
+    "network_loss_m3_per_turn": 4090.9090909090883,
+    "average_raw_m3_per_s": 0.415337586390218,
+    "candidate_instantaneous_intake_m3_per_s": 0.75,
+    "raw_storage_m3": 700000,
+    "raw_storage_turns_if_full": 19.506666666666664,
+    "treated_storage_m3": 90000,
+    "treated_storage_turns_at_network_input": 2.64,
+    "reclaimed_delivery_m3_per_turn": 6000,
+    "gross_end_use_supply_m3_per_turn": 36000,
+    "sewer_collection_m3_per_turn": 26000,
+    "net_end_use_uncollected_m3_per_turn": 10000,
+    "final_water_m3_per_turn": 20000,
+    "wastewater_process_trains": 2,
+    "nominal_train_capacity_m3_per_turn": 16000,
+    "scope": "Conservation screening; upstream intake and downstream outfall require actual siting; excludes storm runoff and separately scoped industrial streams; no N-1 redundancy claim"
+  },
+  "food_screening_case": {
+    "energy_kcal_per_person_per_turn": 2400,
+    "total_kcal_per_turn": 384000000,
+    "protein_g_per_person_per_turn": 75,
+    "total_protein_tonnes_per_turn": 12,
+    "dry_equivalent_kcal_per_kg": 3200,
+    "dry_equivalent_tonnes_per_turn": 120,
+    "reserve_turns": 30,
+    "dry_calorie_equivalent_reserve_tonnes": 3600,
+    "calorie_origin_fractions": {
+      "regional_agricultural_culture_belt": 0.68,
+      "other_morrow": 0.29,
+      "urban_culture_growing": 0.03
+    },
+    "scope": "Calorie shares not product-tonnage shares; maintained introduced lines and cultures dominate; native fractions conditional and not whole protein"
+  },
+  "power_screening_case": {
+    "demand_allocations_mw": {
+      "homes_commerce": 43,
+      "public_water": 18,
+      "transport_freight": 22,
+      "core_manufacturing_controlled_food": 47,
+      "cooling_drying_distribution_auxiliaries": 20
+    },
+    "candidate_regional_firm_mw": 110,
+    "candidate_local_firm_mw": 60,
+    "candidate_solar_mwp": 100,
+    "candidate_wind_mw_installed": 30,
+    "storage_usable_gwh": 8,
+    "storage_discharge_limit_mw": 120,
+    "screening_night_hours": 69.1,
+    "deficit_case_mw": 80,
+    "deficit_energy_gwh": 5.528,
+    "whole_city_night_energy_gwh": 10.365,
+    "scope": "Candidate supplies only; technology, cooling, fuel, firm reliability and charging unresolved; no unlimited forest fuel or mirror power"
+  },
+  "other_screening_case": {
+    "municipal_solid_kg_per_person_per_turn": 0.65,
+    "municipal_solid_tonnes_per_turn": 104,
+    "freight_envelope_tonnes_per_turn": [
+      1600,
+      2800
+    ],
+    "scope": "Workload assumptions, separately scoped industrial wastes and exports additional"
+  },
+  "sky_case": {
+    "nominal_natural_solar_hours": 136.7550076,
+    "nominal_longest_night_hours_rounded": 69.1,
+    "parent_disc": "Below ordinary horizon",
+    "scope": "Open-horizon geometry; canopy, cloud and built shadows additional"
+  },
+  "unresolved": [
+    "Terrain, foundations, hydraulic profile, depth, flood frequency, drainage and groundwater",
+    "Actual upstream intake and downstream discharge, drought abstraction share, treatment recovery, usable storage and residual disposal",
+    "Bridge structure, understructure clearance, collision protection, gradients and independent canopy supports",
+    "Transit alignments, berths, vessel draft, service capacity and regional routes",
+    "Regional productive land, introduced-line yields, culture feedstock and power, nutritional reserve composition",
+    "Native species/tissue qualification and yield; conditional Orison fraction is not a production promise",
+    "Firm import and local generation selection, fuel, cooling, reliability, storage recharge",
+    "Housing affordability and occupancy distributions, habitat function, recovery and runtime performance"
+  ]
+}

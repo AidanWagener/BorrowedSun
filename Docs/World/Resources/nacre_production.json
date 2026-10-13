@@ -1,0 +1,30 @@
+{
+  "edition": "0.1",
+  "status": "Fictional productive-landscape sizing study; no measured Nacre yields or licensed abstraction",
+  "scope": "Only Orison's existing introduced dry, fresh and cultured allocations; other food, other residents and exports are additional",
+  "civil_year_turns": 325.1913043478261,
+  "gravity_m_s2": 8.629852,
+  "water_density_kg_m3": 1000,
+  "productive_fraction_of_farm_land": 0.7,
+  "crop_cases": {
+    "introduced_dry_staples": {"gross_harvest_t_per_canopy_ha_per_civil_year": 5, "retained_fraction": 0.9, "annual_crop_et_mm": 650},
+    "introduced_fresh_produce": {"gross_harvest_t_per_canopy_ha_per_civil_year": 30, "retained_fraction": 0.8, "annual_crop_et_mm": 900},
+    "cultured_products": {"gross_harvest_t_per_canopy_ha_per_civil_year": 5, "retained_fraction": 0.9, "annual_crop_et_mm": 650, "product_dry_fraction": 0.2, "dry_biomass_per_dry_substrate": 0.5, "fermentable_substrate_per_retained_harvest": 0.7}
+  },
+  "origins": [
+    {"delivery_id": "SUP-001", "label": "Saffron rural plots", "effective_rain_mm_per_civil_year": 450, "extra_leaching_mm_per_civil_year": 0, "irrigation_delivery_fraction": 0.75, "pump_head_m": 80, "pump_efficiency": 0.75},
+    {"delivery_id": "SUP-002", "label": "Nine River production mosaics", "effective_rain_mm_per_civil_year": 700, "extra_leaching_mm_per_civil_year": 0, "irrigation_delivery_fraction": 0.75, "pump_head_m": 30, "pump_efficiency": 0.75},
+    {"delivery_id": "SUP-003", "label": "Glassback foothill benches", "effective_rain_mm_per_civil_year": 350, "extra_leaching_mm_per_civil_year": 0, "irrigation_delivery_fraction": 0.75, "pump_head_m": 120, "pump_efficiency": 0.75},
+    {"delivery_id": "SUP-004", "label": "Red Ledger managed plots", "effective_rain_mm_per_civil_year": 120, "extra_leaching_mm_per_civil_year": 80, "irrigation_delivery_fraction": 0.8, "pump_head_m": 60, "pump_efficiency": 0.75}
+  ],
+  "urban_fresh": {"delivery_id": "SUP-001", "label": "Orison urban canopy", "effective_rain_mm_per_civil_year": 0, "extra_leaching_mm_per_civil_year": 0, "irrigation_delivery_fraction": 0.9, "pump_head_m": 100, "pump_efficiency": 0.75, "condensate_recovery_fraction": 0.75},
+  "lighting_case": {"canopy_ppfd_umol_m2_s": 250, "effective_canopy_efficacy_umol_per_joule": 3, "scheduled_light_hours_per_turn": 16, "scheduled_light_in_dark_fraction": 0.5, "stack_layers": 4},
+  "stress_cases": {"harvest_fraction_after_shock": 0.7, "regional_irrigation_supply_fraction": 0.7},
+  "unmodeled_categories": ["qualified_native_fractions", "other_preserved"],
+  "sources": [
+    "https://www.fao.org/4/s2022e/s2022e02.htm",
+    "https://www.fao.org/4/s2022e/s2022e03.htm",
+    "https://www.fao.org/4/t0234e/T0234E02.htm",
+    "https://science.nasa.gov/biological-physical/the-challenges-of-growing-plants-in-space/"
+  ]
+}

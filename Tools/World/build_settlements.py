@@ -10,12 +10,12 @@ import textwrap
 from pathlib import Path
 
 from build_atlas import contains, segments_cross
-from build_talweir import segment_distance
+from build_talweir import project, segment_distance
 
 ROOT = Path(__file__).resolve().parents[2]
 WORLD = ROOT / 'Docs/World'
 CITY = WORLD / 'Cities'
-NAMES = ('marroway', 'aven', 'sola')
+NAMES = ('marroway', 'aven', 'sola', 'hesh', 'serein', 'dhal')
 
 
 def number(x):
@@ -45,6 +45,29 @@ def dry(p, d):
     return (not opposite) if d['base_surface'] == 'land' else opposite
 
 
+def clip_to_frame(polygon, bounds):
+    """Clip straight projected control edges; do not invent shoreline detail."""
+    result=[list(p) for p in polygon[:-1]]
+    for axis,limit,lower in ((0,bounds[0],True),(0,bounds[2],False),(1,bounds[1],True),(1,bounds[3],False)):
+        output=[]
+        for a,b in zip(result,result[1:]+result[:1]):
+            ai=a[axis]>=limit if lower else a[axis]<=limit
+            bi=b[axis]>=limit if lower else b[axis]<=limit
+            if ai != bi:
+                t=(limit-a[axis])/(b[axis]-a[axis])
+                output.append([a[i]+t*(b[i]-a[i]) for i in (0,1)])
+            if bi: output.append(b)
+        result=output
+    return result+[result[0]] if result else []
+
+
+def same_ring(a,b,tolerance=.02):
+    if len(a)!=len(b) or not a or not all(point(p,2) for p in b): return False
+    aa,bb=a[:-1],b[:-1]
+    return any(all(math.dist(p,q)<=tolerance for p,q in zip(aa,ring[k:]+ring[:k]))
+               for ring in (bb,list(reversed(bb))) for k in range(len(bb)))
+
+
 def validate(d, atlas, geography):
     errors = []
     parent = next((c for c in atlas['cities'] if c['id'] == d['city_id']), None)
@@ -71,6 +94,32 @@ def validate(d, atlas, geography):
         if not number(poly['surface_m']): errors.append('Invalid surface reference: '+poly['id'])
     if any(e.startswith('Invalid surface polygon') for e in errors): return errors
     polys = d['surface_polygons']
+    if d.get('source_lake_id'):
+        lake=next((p for p in geography['lakes'] if p['id']==d['source_lake_id']),None)
+        record=d.get('source_lake_geometry',{})
+        if lake is None or record.get('source_coordinates_lon_lat')!=lake['coordinates_lon_lat'] or record.get('surface_elevation_m')!=lake['surface_elevation_m']:
+            errors.append('Source lake geometry/height not preserved')
+        else:
+            projection_frame={**f,'reference_radius_m':f['radius_m']}
+            expected=[list(project(*p,projection_frame)) for p in lake['coordinates_lon_lat']]
+            stored=record.get('projected_coordinates_xy_m',[])
+            if len(expected)!=len(stored) or not all(point(p,2) for p in stored) or any(math.dist(p,q)>.02 for p,q in zip(expected,stored)):
+                errors.append('Source lake projection differs from frame')
+            local=next((p for p in polys if p['id']==record.get('render_polygon_id')),None)
+            if local is None or local['kind']!='water' or local['surface_m']!=lake['surface_elevation_m'] or not same_ring(clip_to_frame(expected,bounds),local['points_xy_m']):
+                errors.append('Local lake clipping/height differs from source')
+    if d.get('nearby_river_context'):
+        context=d['nearby_river_context']
+        river=next((r for r in atlas['rivers']+geography['additional_rivers'] if r['id']==context['river_id']),None)
+        terminal=None if river is None else river['points_lon_lat_elevation_m'][-1]
+        if terminal is None or context.get('source_terminal_lon_lat_elevation_m')!=terminal:
+            errors.append('Nearby river terminal differs from source')
+        else:
+            projected=[*project(*terminal[:2],{**f,'reference_radius_m':f['radius_m']}),terminal[2]]
+            stored=context.get('projected_terminal_xyz_m')
+            distance=context.get('distance_from_origin_m')
+            if not point(stored) or math.dist(projected,stored)>.02 or not number(distance) or abs(math.hypot(*projected[:2])-distance)>.02:
+                errors.append('Nearby river projection/distance differs from source')
     for i,a in enumerate(polys):
         for b in polys[i+1:]:
             ap,bp = a['points_xy_m'],b['points_xy_m']
@@ -104,7 +153,9 @@ def validate(d, atlas, geography):
                 for channel in d['channels']:
                     for a,b in zip(channel['points_xyz_m'],channel['points_xyz_m'][1:]):
                         distance,t = segment_distance(p,a,b); matches.append((distance,a[2]+t*(b[2]-a[2])))
-                expected_surface = min(matches)[1] if matches else 0
+                local_surfaces = [poly['surface_m'] for poly in polys
+                                  if poly['kind'] == 'water' and inside(p, poly['points_xy_m'])]
+                expected_surface = min(matches)[1] if matches else (local_surfaces[0] if local_surfaces else 0)
                 if abs(surface-expected_surface) > .1: errors.append('Wet placement surface differs from local water: '+place['id'])
         else: errors.append('Unknown placement type: '+place['id'])
     water_ids = {p['id'] for p in polys if p['kind']=='water'}
@@ -178,7 +229,24 @@ def controls(d,a,g):
     if d['source_river_id']:
         case('river center altitude changed',lambda x:[p.__setitem__(2,p[2]+1) for c in x['channels'] for p in c['points_xyz_m'] if p[0]==0 and p[1]==0],'Source river center/height')
     else:
-        case('land placed in open sea',lambda x:x['places'][0].__setitem__('xyz_m',[x['frame']['bounds_m'][0]+1,x['frame']['bounds_m'][1]+1,20]),'Land place in water')
+        b=d['frame']['bounds_m']
+        wet=next(([b[0]+(b[2]-b[0])*(i+.5)/41,b[1]+(b[3]-b[1])*(j+.5)/41,20]
+                  for i in range(41) for j in range(41)
+                  if not dry([b[0]+(b[2]-b[0])*(i+.5)/41,b[1]+(b[3]-b[1])*(j+.5)/41],d)),None)
+        if wet is None: raise ValueError('No authored water found for placement control')
+        case('land placed in authored water',lambda x:x['places'][0].update(xyz_m=wet,placement='land'),'Land place in water')
+    supported=next((i for i,p in enumerate(d['places']) if p['placement']=='supported_overwater'),None)
+    if supported is not None:
+        case('wrong local water surface',lambda x:x['places'][supported].__setitem__('water_surface_m',x['places'][supported]['water_surface_m']+1),'surface differs from local water')
+    if d.get('source_lake_id'):
+        case('lake source altitude changed',lambda x:x['source_lake_geometry'].__setitem__('surface_elevation_m',0),'Source lake geometry/height')
+        case('projected lake vertex moved',lambda x:x['source_lake_geometry']['projected_coordinates_xy_m'][1].__setitem__(0,0),'Source lake projection')
+        def move_shore(x):
+            polygon=next(p for p in x['surface_polygons'] if p['id']==x['source_lake_geometry']['render_polygon_id'])
+            polygon['points_xy_m'][1][0]+=100
+        case('local shoreline invented',move_shore,'Local lake clipping/height')
+    if d.get('nearby_river_context'):
+        case('nearby river moved into city',lambda x:x['nearby_river_context'].__setitem__('projected_terminal_xyz_m',[0,0,270]),'Nearby river projection/distance')
     for name,x,needle in cases:
         if not any(needle in error for error in validate(x,a,g)): raise ValueError('Regression control not rejected: '+name)
     return [name for name,_,_ in cases]

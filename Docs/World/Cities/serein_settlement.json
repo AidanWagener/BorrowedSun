@@ -1,0 +1,816 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-004",
+  "city_name": "Serein",
+  "region_id": "REG-006",
+  "status": "authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "SEREIN.md",
+  "frame": {
+    "origin_lon_deg": -73,
+    "origin_lat_deg": 36,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -11000,
+      -14000,
+      16000,
+      14000
+    ]
+  },
+  "population": 530000,
+  "gross_area_allowance_km2": 114,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "SER-WATER-01",
+      "name": "Western coast and working bays",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          -11000,
+          -14000
+        ],
+        [
+          -11000,
+          14000
+        ],
+        [
+          -4500,
+          14000
+        ],
+        [
+          -4000,
+          11000
+        ],
+        [
+          -5600,
+          8000
+        ],
+        [
+          -4300,
+          5300
+        ],
+        [
+          -3200,
+          3200
+        ],
+        [
+          -2200,
+          1000
+        ],
+        [
+          -3500,
+          -1000
+        ],
+        [
+          -1800,
+          -3200
+        ],
+        [
+          -2700,
+          -5500
+        ],
+        [
+          -1800,
+          -8000
+        ],
+        [
+          -3500,
+          -10800
+        ],
+        [
+          -2200,
+          -14000
+        ],
+        [
+          -11000,
+          -14000
+        ]
+      ],
+      "surface_m": 0,
+      "status": "Authored sea-reference coastline refining coarse atlas; tides, waves, coast profiles and bathymetry unresolved"
+    }
+  ],
+  "source_river_id": null,
+  "channels": [],
+  "districts": [
+    {
+      "id": "SER-D01",
+      "name": "Common Quay",
+      "center_xyz_m": [
+        -400,
+        1300,
+        28
+      ],
+      "radii_m": [
+        2600,
+        2100
+      ],
+      "altitude_range_m": [
+        8,
+        90
+      ],
+      "population": 75000,
+      "area_allowance_km2": 13,
+      "character": "Working harbor, public arrival rooms and domestic streets"
+    },
+    {
+      "id": "SER-D02",
+      "name": "Oblique Ward",
+      "center_xyz_m": [
+        3300,
+        2300,
+        95
+      ],
+      "radii_m": [
+        2400,
+        1900
+      ],
+      "altitude_range_m": [
+        45,
+        155
+      ],
+      "population": 72000,
+      "area_allowance_km2": 13,
+      "character": "Design history, cooperative homes and small theaters"
+    },
+    {
+      "id": "SER-D03",
+      "name": "Long Rooms",
+      "center_xyz_m": [
+        6100,
+        -700,
+        120
+      ],
+      "radii_m": [
+        2600,
+        2000
+      ],
+      "altitude_range_m": [
+        65,
+        195
+      ],
+      "population": 68000,
+      "area_allowance_km2": 12,
+      "character": "Dense domestic life, baths and shared care"
+    },
+    {
+      "id": "SER-D04",
+      "name": "Glazeworks",
+      "center_xyz_m": [
+        1800,
+        -4800,
+        50
+      ],
+      "radii_m": [
+        2800,
+        1900
+      ],
+      "altitude_range_m": [
+        12,
+        110
+      ],
+      "population": 66000,
+      "area_allowance_km2": 14,
+      "character": "Large enclosure manufacturing and material recovery"
+    },
+    {
+      "id": "SER-D05",
+      "name": "Nine Roofs",
+      "center_xyz_m": [
+        6500,
+        3900,
+        185
+      ],
+      "radii_m": [
+        2400,
+        2100
+      ],
+      "altitude_range_m": [
+        110,
+        280
+      ],
+      "population": 58000,
+      "area_allowance_km2": 11,
+      "character": "Linked roof courts, sport, gardening and ordinary work"
+    },
+    {
+      "id": "SER-D06",
+      "name": "Catchment Gate",
+      "center_xyz_m": [
+        10900,
+        700,
+        315
+      ],
+      "radii_m": [
+        2500,
+        2400
+      ],
+      "altitude_range_m": [
+        180,
+        440
+      ],
+      "population": 54000,
+      "area_allowance_km2": 13,
+      "character": "Inland services, cultivation teaching and regional road connections"
+    },
+    {
+      "id": "SER-D07",
+      "name": "Lower Screen",
+      "center_xyz_m": [
+        600,
+        -9300,
+        35
+      ],
+      "radii_m": [
+        2600,
+        2200
+      ],
+      "altitude_range_m": [
+        8,
+        105
+      ],
+      "population": 50000,
+      "area_allowance_km2": 10,
+      "character": "Ship fabrication, coastal working neighborhoods and older survey rooms"
+    },
+    {
+      "id": "SER-D08",
+      "name": "Wellleaf Heights",
+      "center_xyz_m": [
+        -2800,
+        8500,
+        190
+      ],
+      "radii_m": [
+        2700,
+        2200
+      ],
+      "altitude_range_m": [
+        80,
+        350
+      ],
+      "population": 47000,
+      "area_allowance_km2": 16,
+      "character": "Cliff-edge ecology, protected neighborhoods and landscape access"
+    },
+    {
+      "id": "SER-D09",
+      "name": "Clear Saddle",
+      "center_xyz_m": [
+        6100,
+        9500,
+        420
+      ],
+      "radii_m": [
+        3000,
+        2000
+      ],
+      "altitude_range_m": [
+        280,
+        590
+      ],
+      "population": 40000,
+      "area_allowance_km2": 12,
+      "character": "Upper routes, mixed homes and unfinished transport works"
+    }
+  ],
+  "places": [
+    {
+      "id": "SER-POI-001",
+      "name": "Counterweight Quay",
+      "district_id": "SER-D01",
+      "xyz_m": [
+        -2080,
+        1000,
+        18
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-002",
+      "name": "The Room Without a Case",
+      "district_id": "SER-D01",
+      "xyz_m": [
+        200,
+        2300,
+        35
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-003",
+      "name": "Closewater Gallery",
+      "district_id": "SER-D01",
+      "xyz_m": [
+        -2500,
+        1100,
+        8
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 0,
+      "shore_access_xyz_m": [
+        -1800,
+        1100,
+        20
+      ],
+      "support_type": "engineered public gallery above nominal sea; structure and access span unresolved"
+    },
+    {
+      "id": "SER-POI-004",
+      "name": "Oblique Rooms",
+      "district_id": "SER-D02",
+      "xyz_m": [
+        2500,
+        3100,
+        100
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-005",
+      "name": "A Lease with Two Doors",
+      "district_id": "SER-D02",
+      "xyz_m": [
+        4100,
+        2600,
+        112
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-006",
+      "name": "Counterprint Theatre",
+      "district_id": "SER-D02",
+      "xyz_m": [
+        3300,
+        1200,
+        72
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-007",
+      "name": "At the Right Volume",
+      "district_id": "SER-D03",
+      "xyz_m": [
+        5200,
+        -700,
+        108
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-008",
+      "name": "A Window Made for Weather",
+      "district_id": "SER-D03",
+      "xyz_m": [
+        6900,
+        100,
+        145
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-009",
+      "name": "The Unpaid Watch",
+      "district_id": "SER-D03",
+      "xyz_m": [
+        6700,
+        -1800,
+        117
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-010",
+      "name": "The Long Press",
+      "district_id": "SER-D04",
+      "xyz_m": [
+        900,
+        -4400,
+        42
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-011",
+      "name": "The Rejected Hinge",
+      "district_id": "SER-D04",
+      "xyz_m": [
+        2600,
+        -3700,
+        58
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-012",
+      "name": "Glass Weather Yard",
+      "district_id": "SER-D04",
+      "xyz_m": [
+        2700,
+        -5700,
+        40
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-013",
+      "name": "The Ninth Roof Run",
+      "district_id": "SER-D05",
+      "xyz_m": [
+        5700,
+        4300,
+        205
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-014",
+      "name": "A Seat Between Gardens",
+      "district_id": "SER-D05",
+      "xyz_m": [
+        7200,
+        4700,
+        220
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-015",
+      "name": "The Invisible Kitchen",
+      "district_id": "SER-D05",
+      "xyz_m": [
+        7000,
+        2800,
+        160
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-016",
+      "name": "The Inlet of the Hills",
+      "district_id": "SER-D06",
+      "xyz_m": [
+        9900,
+        1700,
+        350
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-017",
+      "name": "The Nursery Behind the Gate",
+      "district_id": "SER-D06",
+      "xyz_m": [
+        11700,
+        1200,
+        325
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-018",
+      "name": "The Carriers Rest",
+      "district_id": "SER-D06",
+      "xyz_m": [
+        11500,
+        -700,
+        280
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-019",
+      "name": "The Slip of Unfinished Boats",
+      "district_id": "SER-D07",
+      "xyz_m": [
+        -1770,
+        -8400,
+        24
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-020",
+      "name": "The Old Sounding Room",
+      "district_id": "SER-D07",
+      "xyz_m": [
+        1500,
+        -10000,
+        35
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-021",
+      "name": "The Ledge That Drinks",
+      "district_id": "SER-D08",
+      "xyz_m": [
+        -5250,
+        8600,
+        175
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-022",
+      "name": "Three Breaths Cave",
+      "district_id": "SER-D08",
+      "xyz_m": [
+        -4200,
+        7400,
+        95
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-023",
+      "name": "Above the White",
+      "district_id": "SER-D09",
+      "xyz_m": [
+        5200,
+        10100,
+        485
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "SER-POI-024",
+      "name": "The Span That Ended",
+      "district_id": "SER-D09",
+      "xyz_m": [
+        7900,
+        8900,
+        395
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "SER-T01",
+      "name": "Common Quay interchange",
+      "district_id": "SER-D01",
+      "xyz_m": [
+        -400,
+        1300,
+        28
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "SER-T02",
+      "name": "Oblique Ward interchange",
+      "district_id": "SER-D02",
+      "xyz_m": [
+        3300,
+        2300,
+        95
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "SER-T03",
+      "name": "Long Rooms interchange",
+      "district_id": "SER-D03",
+      "xyz_m": [
+        6100,
+        -700,
+        120
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "SER-T04",
+      "name": "Glazeworks interchange",
+      "district_id": "SER-D04",
+      "xyz_m": [
+        1800,
+        -4800,
+        50
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "SER-T05",
+      "name": "Nine Roofs interchange",
+      "district_id": "SER-D05",
+      "xyz_m": [
+        6500,
+        3900,
+        185
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "SER-T06",
+      "name": "Catchment Gate interchange",
+      "district_id": "SER-D06",
+      "xyz_m": [
+        10900,
+        700,
+        315
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "SER-T07",
+      "name": "Lower Screen interchange",
+      "district_id": "SER-D07",
+      "xyz_m": [
+        600,
+        -9300,
+        35
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "SER-T08",
+      "name": "Wellleaf Heights interchange",
+      "district_id": "SER-D08",
+      "xyz_m": [
+        -2800,
+        8500,
+        190
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "SER-T09",
+      "name": "Clear Saddle interchange",
+      "district_id": "SER-D09",
+      "xyz_m": [
+        6100,
+        9500,
+        420
+      ],
+      "regional_gateway": false
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "SER-L01",
+      "from": "SER-T01",
+      "to": "SER-T02",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L02",
+      "from": "SER-T02",
+      "to": "SER-T03",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L03",
+      "from": "SER-T03",
+      "to": "SER-T04",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L04",
+      "from": "SER-T04",
+      "to": "SER-T07",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L05",
+      "from": "SER-T02",
+      "to": "SER-T05",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L06",
+      "from": "SER-T05",
+      "to": "SER-T06",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L07",
+      "from": "SER-T05",
+      "to": "SER-T09",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L08",
+      "from": "SER-T01",
+      "to": "SER-T08",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L09",
+      "from": "SER-T08",
+      "to": "SER-T09",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L10",
+      "from": "SER-T03",
+      "to": "SER-T06",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L11",
+      "from": "SER-T04",
+      "to": "SER-T06",
+      "mode": "rail",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L12",
+      "from": "SER-T01",
+      "to": "SER-T04",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    },
+    {
+      "id": "SER-L13",
+      "from": "SER-T02",
+      "to": "SER-T08",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, grades, crossings and capacity unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 125,
+    "other_potable_m3_per_turn": 33750,
+    "delivered_potable_m3_per_turn": 100000,
+    "network_loss_fraction": 0.2,
+    "network_input_m3_per_turn": 125000,
+    "edible_product_kg_per_person_per_turn": 1.65,
+    "edible_product_tonnes_per_turn": 874.5,
+    "electric_average_mw": 450,
+    "electric_peak_mw": 820,
+    "scope": "24-hour civil-turn demand assumptions. Network input is treated supply, not raw abstraction. Food covers core residents; temporary occupants and departing ship stores are separately additional. Productive yield, reliability and nutrient adequacy unverified."
+  },
+  "unresolved": [
+    "Local coast refines concept atlas. Tides, storm surge, wave exposure, sea caves, bank profiles, depth and continuous terrain require separate geometry.",
+    "No parent river is mapped at this city; catchment storage and piped supply are proposed dependencies outside this surface sketch, not an invented validated river.",
+    "Fog and cool-current mechanism is a working climate hypothesis. Fog interception is supplemental and receives no firm bulk water credit.",
+    "Every transport node is a dry interchange. Regional gateways need qualified rail, road or harbor facilities; graph connectivity does not prove alignment, grades, berths or capacity.",
+    "Closewater Gallery is a supported overwater proposal with a dry shore-access control. Structure, access span and operating limits remain unengineered.",
+    "Three Breaths Cave marks a dry inland expedition room, not an automatically safe cave mouth. Actual cave geometry, weather windows, water access, evacuation and inspection remain obligations.",
+    "Native wellleaf and windspindle occurrence requires suitable cliff patches, roosts, food and local conditions; remote named taxa are not scenery defaults.",
+    "Introduced crops use selected long-cycle staple lines or explicitly powered controlled photoperiods; native soils and proteins are not universally compatible.",
+    "Distribution, freshwater treatment, desalination and reclamation accounts are separate. Source yields and safe residual disposal remain unverified.",
+    "Food allocations create additional regional demand; they do not reserve the same stock already promised to Orison, Marroway or Sola.",
+    "Housing rights, cooperative duties, access permissions and family schedules need detailed records before runtime interaction.",
+    "No generated terrain, implemented traversal, weather simulation, production capacity or functioning city is established."
+  ]
+}

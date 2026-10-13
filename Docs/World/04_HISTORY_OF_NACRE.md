@@ -52,7 +52,7 @@ In 147 AL an expedition established a durable service harbor on the Aster island
 
 The Morrow crossings intensified after 163 AL. Settlers found a different sky relationship: in much of the continent Rauth never rose. Early near-side migrants described its absence as a loss. Their children described the first visit to Kesh as an enormous thing blocking familiar stars. These responses generated art and argument; they did not divide humanity into two psychological species.
 
-Talweir developed around lake navigation and research installations. Aven began near an upland transfer route between basins. The communities that became Dhal and Merrow formed much farther apart along different coasts. Morrow was not founded by one expedition, and its modern cities do not inherit one continental government.
+Talweir developed around lake navigation and research installations. Aven began near an upland transfer route between basins. The communities that became Dhal and Merrow formed much farther apart within different coastal drainage systems: Dhal inland along its working river, Merrow toward its own estuary. Morrow was not founded by one expedition, and its modern cities do not inherit one continental government.
 
 During the failed crossing of 188 AL, several vessels survived by transferring passengers and abandoning commercially valuable cargo. The subsequent litigation helped create the first durable **Open Wake** rescue articles: an obligation to answer defined distress calls, standards for reporting salvage, and limits on what a rescuer could claim. The articles did not eliminate predation. They made some forms of it recognizable as a betrayal of one's own association.
 

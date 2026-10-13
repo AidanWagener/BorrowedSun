@@ -199,6 +199,8 @@ The ledger does not establish that these sources already possess the required ac
 
 Within the Saffron row's 90 tonnes of fresh produce, the central case assigns **24 tonnes to urban growing and 66 tonnes to the rural belt**. The urban contribution is eight percent of the total 300-tonne fresh category, within Orison's existing 5–12 percent target. It is already included in the 700-tonne total. Roofs, courtyards and managed growing facilities still need enough actual area and yield to support it; this allocation is not proof that the illustrated gardens do so.
 
+The subsequent [productive-landscape chapter](06b_PRODUCTIVE_LANDSCAPES.md) traces the 620-tonne dry, fresh and cultured subset into explicit crop, water and light sizing cases while preserving these allocations. It separates urban canopy from rural fields and identifies a substantial lighting obligation that still needs reconciliation with Orison's end-use power budget. The remaining 80 tonnes, regional residents and other customers remain additional authoring obligations; arithmetic does not promote the source rows to verified capacity.
+
 The 12-tonne specialty allowance can carry distinctive ingredients and preserved luxuries across long routes. It is intentionally small compared with staple flows. Velis can supply valuable viable stocks that later produce food in Orison without shipping the resulting harvest around the planet. Merrow can export a qualified preparation method and starter culture; local manufacture may replace most recurring bulk carriage once properly established.
 
 ### Reserves are specific, and need rotation

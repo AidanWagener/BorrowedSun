@@ -81,6 +81,8 @@ The first freight model allows roughly **600–800 tonnes of edible product per 
 
 Hanging Gardens and smaller urban growing sites are valuable but cannot feed 420,000 people by visual implication. A working target is roughly 5–12% of fresh edible product by mass, varying seasonally and excluding any claim to the same share of calories. Most staples arrive through regional agriculture, coastal freight and inland transport. The Nine-River Lowlands are an important connection, not the only supplier or a possession of Orison. Regional farmers have other customers and their own needs.
 
+The later [productive-landscape study](../06b_PRODUCTIVE_LANDSCAPES.md) sizes the exchange ledger's 24-tonne urban fresh target at about 325 hectares of productive canopy under its explicit yield case. Its alternative lighting studies expose a 90 MW daylit or 158 MW four-layer mean fixture load, before environmental services. These are not automatically added to the city's adopted demand: crop mix, daylight access, actual growing systems and the 600 MW end-use account must be reconciled before the target is called supplied.
+
 First Light Quay serves mixed passenger and market deliveries. Coil Yard handles large stores and service freight. Common Table Yard contains public kitchens, independent vendors and wholesale interfaces. Cold rooms, dry stores, preparation spaces and waste collection are distinct interiors. A beautiful stall is the visible front of a longer chain. Its cook may receive supplies before the player wakes, serve one busy interval, clean, close and go to a performance.
 
 ### Energy has several owners and several forms

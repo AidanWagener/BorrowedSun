@@ -10,7 +10,11 @@ const { chromium } = require('playwright');
     talweir:{file:'Cities/talweir_city_plan.svg',counts:{'[data-poi]':24,'[data-district]':9}},
     marroway:{file:'Cities/marroway_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
     aven:{file:'Cities/aven_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
-    sola:{file:'Cities/sola_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}}
+    sola:{file:'Cities/sola_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    hesh:{file:'Cities/hesh_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    serein:{file:'Cities/serein_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    dhal:{file:'Cities/dhal_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    production:{file:'Resources/orison_productive_land.svg',counts:{'[data-allocation]':13}}
   };
   const config=sources[process.argv[3]];
   if(!process.argv[2] || !config) throw new Error('Supply browser executable and a known plate key: '+Object.keys(sources).join(', '));

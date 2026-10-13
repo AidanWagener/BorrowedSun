@@ -1,0 +1,1190 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-003",
+  "city_name": "Hesh",
+  "region_id": "REG-004",
+  "status": "authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "HESH.md",
+  "frame": {
+    "origin_lon_deg": -17,
+    "origin_lat_deg": 18,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -16000,
+      -13000,
+      14000,
+      14000
+    ]
+  },
+  "population": 310000,
+  "gross_area_allowance_km2": 70,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "HES-WATER-01",
+      "name": "Hesh terminal waters: clipped source outline",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          -3504.7,
+          14000.0
+        ],
+        [
+          0.0,
+          10297.443
+        ],
+        [
+          -16000.0,
+          -9238.431
+        ],
+        [
+          -16000.0,
+          14000.0
+        ],
+        [
+          -3504.7,
+          14000.0
+        ]
+      ],
+      "surface_m": 270,
+      "status": "one planning lake state from the source polygon, clipped without adding a local bay; not surveyed shoreline"
+    }
+  ],
+  "source_river_id": null,
+  "source_lake_id": "LAK-003",
+  "channels": [],
+  "districts": [
+    {
+      "id": "HES-D01",
+      "name": "Red Rooms",
+      "population": 50000,
+      "area_allowance_km2": 6,
+      "center_xyz_m": [
+        0,
+        0,
+        318
+      ],
+      "radii_m": [
+        1700,
+        1600
+      ],
+      "altitude_range_m": [
+        300,
+        340
+      ],
+      "character": "Compact mixed housing, stages, meals and precise intimate interiors"
+    },
+    {
+      "id": "HES-D02",
+      "name": "Split Shade",
+      "population": 42000,
+      "area_allowance_km2": 7,
+      "center_xyz_m": [
+        3300,
+        2200,
+        344
+      ],
+      "radii_m": [
+        2500,
+        2200
+      ],
+      "altitude_range_m": [
+        320,
+        390
+      ],
+      "character": "Cuttings, bridges, housing and distinct maintained versus hazardous high routes"
+    },
+    {
+      "id": "HES-D03",
+      "name": "Vane Steps",
+      "population": 38000,
+      "area_allowance_km2": 7,
+      "center_xyz_m": [
+        -3000,
+        -2200,
+        311
+      ],
+      "radii_m": [
+        2400,
+        2000
+      ],
+      "altitude_range_m": [
+        285,
+        340
+      ],
+      "character": "Schools, housing, repair, music and sheltered performance courts"
+    },
+    {
+      "id": "HES-D04",
+      "name": "Counterglass",
+      "population": 36000,
+      "area_allowance_km2": 8,
+      "center_xyz_m": [
+        4000,
+        -2100,
+        354
+      ],
+      "radii_m": [
+        2500,
+        2100
+      ],
+      "altitude_range_m": [
+        330,
+        390
+      ],
+      "character": "Ceramics, material preparation, precision finishing and mixed housing"
+    },
+    {
+      "id": "HES-D05",
+      "name": "Ochre Landing",
+      "population": 34000,
+      "area_allowance_km2": 7,
+      "center_xyz_m": [
+        -6500,
+        800,
+        291
+      ],
+      "radii_m": [
+        3200,
+        3200
+      ],
+      "altitude_range_m": [
+        274,
+        320
+      ],
+      "character": "Dry shore quarter, hotels, local lake craft and long covered approaches"
+    },
+    {
+      "id": "HES-D06",
+      "name": "Reservoir Ward",
+      "population": 32000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        -3200,
+        5200,
+        301
+      ],
+      "radii_m": [
+        2300,
+        2100
+      ],
+      "altitude_range_m": [
+        290,
+        350
+      ],
+      "character": "Treatment, storage, gardens, crop facilities and selected sealed former works"
+    },
+    {
+      "id": "HES-D07",
+      "name": "Outrider Commons",
+      "population": 30000,
+      "area_allowance_km2": 8,
+      "center_xyz_m": [
+        6800,
+        4300,
+        368
+      ],
+      "radii_m": [
+        2300,
+        2200
+      ],
+      "altitude_range_m": [
+        345,
+        410
+      ],
+      "character": "Independent crew rooms, overland transfer, repair and limited flight facility"
+    },
+    {
+      "id": "HES-D08",
+      "name": "Saltward",
+      "population": 26000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        -7800,
+        -5800,
+        283
+      ],
+      "radii_m": [
+        3400,
+        2400
+      ],
+      "altitude_range_m": [
+        278,
+        320
+      ],
+      "character": "Separate dry housing, field routes, material recovery and engineered residual storage"
+    },
+    {
+      "id": "HES-D09",
+      "name": "Broken Stair",
+      "population": 22000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        1000,
+        7600,
+        391
+      ],
+      "radii_m": [
+        2600,
+        2400
+      ],
+      "altitude_range_m": [
+        355,
+        440
+      ],
+      "character": "Elevated homes, shared outlooks, old quarry approaches and difficult outside routes"
+    }
+  ],
+  "places": [
+    {
+      "id": "HES-POI-001",
+      "name": "Terrace of Interruptions",
+      "district_id": "HES-D01",
+      "xyz_m": [
+        400,
+        450,
+        320
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Deri Vask",
+      "independent_purpose": "Argument, performance and reading a crowd",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-002",
+      "name": "Impossible Hat House",
+      "district_id": "HES-D01",
+      "xyz_m": [
+        -550,
+        -350,
+        319
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Fenna Orel",
+      "independent_purpose": "Private workshop and intentionally impractical beautiful models",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-003",
+      "name": "The Unfinished Supper",
+      "district_id": "HES-D01",
+      "xyz_m": [
+        700,
+        -800,
+        322
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Kiva Rell",
+      "independent_purpose": "Private meal and a relationship with Osen Rell beyond the visitor",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-004",
+      "name": "Shade Without a Street",
+      "district_id": "HES-D02",
+      "xyz_m": [
+        2700,
+        2900,
+        353
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Mael Korr",
+      "independent_purpose": "Public passage, shadows and consequential route choice",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-005",
+      "name": "The Narrow Race",
+      "district_id": "HES-D02",
+      "xyz_m": [
+        3800,
+        3300,
+        362
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Edda Serr",
+      "independent_purpose": "Sanctioned course and visibly different dangerous variants",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-006",
+      "name": "House of Three Keys",
+      "district_id": "HES-D02",
+      "xyz_m": [
+        3700,
+        1500,
+        345
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Tovan Eri",
+      "independent_purpose": "Household refuge with boundaries and resident agency",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-007",
+      "name": "The Returning Wind",
+      "district_id": "HES-D03",
+      "xyz_m": [
+        -2800,
+        -1700,
+        312
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Arel Som",
+      "independent_purpose": "Instrument work, listening and repair",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-008",
+      "name": "Courtyard of Small Fires",
+      "district_id": "HES-D03",
+      "xyz_m": [
+        -3600,
+        -2500,
+        309
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Nisa Pel",
+      "independent_purpose": "Shared cooking, pleasure and ordinary company",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-009",
+      "name": "The Voice Ladder",
+      "district_id": "HES-D03",
+      "xyz_m": [
+        -2300,
+        -2900,
+        315
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Lio Dren",
+      "independent_purpose": "Studio work, comedy and editorial choices",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-010",
+      "name": "Veda's Small Plates",
+      "district_id": "HES-D04",
+      "xyz_m": [
+        4200,
+        -1700,
+        356
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Veda Pell",
+      "independent_purpose": "Ceramic exhibition, friends and bounded privacy",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-011",
+      "name": "Red Sheet Works",
+      "district_id": "HES-D04",
+      "xyz_m": [
+        3400,
+        -3000,
+        348
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Iven Ors",
+      "independent_purpose": "Material history and actual small-batch manufacture",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-012",
+      "name": "Bone of a Machine",
+      "district_id": "HES-D04",
+      "xyz_m": [
+        5100,
+        -2600,
+        363
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Ressa Vaal",
+      "independent_purpose": "Human-built salvage, inspection and stored-energy hazards",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-013",
+      "name": "The Listening Jetty",
+      "district_id": "HES-D05",
+      "xyz_m": [
+        -7600,
+        1700,
+        274
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 270,
+      "shore_access_xyz_m": [
+        -6500,
+        1300,
+        292
+      ],
+      "principal_resident": "Senn Aro",
+      "independent_purpose": "Working lake craft, quiet attention and a bounded journey",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-014",
+      "name": "Low Water Hotel",
+      "district_id": "HES-D05",
+      "xyz_m": [
+        -5700,
+        100,
+        295
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Mira Kehl",
+      "independent_purpose": "Discreet travel accommodation and ordinary hospitality",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-015",
+      "name": "The Last Mark",
+      "district_id": "HES-D05",
+      "xyz_m": [
+        -8300,
+        -1700,
+        279
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Oran Keff",
+      "independent_purpose": "Shore history and distinguishable incomplete evidence",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-016",
+      "name": "Clear Room",
+      "district_id": "HES-D06",
+      "xyz_m": [
+        -3000,
+        4400,
+        307
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Jella Dorn",
+      "independent_purpose": "Public treatment room with readable material processes",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-017",
+      "name": "A Garden with a Valve",
+      "district_id": "HES-D06",
+      "xyz_m": [
+        -2500,
+        5300,
+        310
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Piri Senn",
+      "independent_purpose": "Qualified crops, managed native animal Toc and distinct husbandry systems",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-018",
+      "name": "The Sealed Stair",
+      "district_id": "HES-D06",
+      "xyz_m": [
+        -4100,
+        4300,
+        304
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Tamsi Orr",
+      "independent_purpose": "Former condensate works, careful access and incomplete recovery",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-019",
+      "name": "Departure Nobody Owns",
+      "district_id": "HES-D07",
+      "xyz_m": [
+        7500,
+        4800,
+        376
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Nyra Val",
+      "independent_purpose": "Independent courier crew, negotiation and the ability to refuse",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-020",
+      "name": "The Unclaimed Hull",
+      "district_id": "HES-D07",
+      "xyz_m": [
+        7600,
+        3300,
+        367
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Osen Rell",
+      "independent_purpose": "A vessel, repair work and genuinely contested ownership",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-021",
+      "name": "Black Scallop Track",
+      "district_id": "HES-D08",
+      "xyz_m": [
+        -7400,
+        -5400,
+        286
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Dava Mer",
+      "independent_purpose": "Reading living crust, firm ground and dangerous margins",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-022",
+      "name": "White Work",
+      "district_id": "HES-D08",
+      "xyz_m": [
+        -10500,
+        -6500,
+        282
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Esrin Tor",
+      "independent_purpose": "Finite engineered residue containment and an ordinary private hobby",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-023",
+      "name": "Empty Pilot's Chair",
+      "district_id": "HES-D09",
+      "xyz_m": [
+        1300,
+        8900,
+        410
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Haro Nes",
+      "independent_purpose": "Flight-test remains, a broad view and the pleasure of solitude",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    },
+    {
+      "id": "HES-POI-024",
+      "name": "The Long Way Home",
+      "district_id": "HES-D09",
+      "xyz_m": [
+        2800,
+        7900,
+        402
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Fell Arin",
+      "independent_purpose": "Courier routes, exposed crossings and meaningful retreat",
+      "status": "authored place; biography and affordances in HESH.md, not runtime"
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "HES-T01",
+      "name": "Red Rooms interchange",
+      "district_id": "HES-D01",
+      "xyz_m": [
+        0,
+        500,
+        320
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T02",
+      "name": "Split Shade stop",
+      "district_id": "HES-D02",
+      "xyz_m": [
+        3200,
+        2300,
+        350
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T03",
+      "name": "Vane Steps interchange",
+      "district_id": "HES-D03",
+      "xyz_m": [
+        -2800,
+        -2100,
+        314
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T04",
+      "name": "Counterglass works stop",
+      "district_id": "HES-D04",
+      "xyz_m": [
+        4200,
+        -2300,
+        358
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T05",
+      "name": "Ochre Landing dry interchange",
+      "district_id": "HES-D05",
+      "xyz_m": [
+        -5700,
+        500,
+        295
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Lake craft require a separate shore approach and berth; this is not a vessel position"
+    },
+    {
+      "id": "HES-T06",
+      "name": "Reservoir Ward interchange",
+      "district_id": "HES-D06",
+      "xyz_m": [
+        -2000,
+        4400,
+        319
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T07",
+      "name": "Outrider regional transfer",
+      "district_id": "HES-D07",
+      "xyz_m": [
+        7100,
+        4300,
+        376
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T08",
+      "name": "Saltward service stop",
+      "district_id": "HES-D08",
+      "xyz_m": [
+        -8200,
+        -5600,
+        286
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T09",
+      "name": "Broken Stair northern route",
+      "district_id": "HES-D09",
+      "xyz_m": [
+        1200,
+        7300,
+        395
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T10",
+      "name": "Eastern regional road gateway",
+      "district_id": null,
+      "xyz_m": [
+        11200,
+        4300,
+        385
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T11",
+      "name": "Southern regional rail-road gateway",
+      "district_id": null,
+      "xyz_m": [
+        -1000,
+        -11000,
+        330
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    },
+    {
+      "id": "HES-T12",
+      "name": "Western basin service gateway",
+      "district_id": null,
+      "xyz_m": [
+        -12200,
+        -7900,
+        279
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_note": "Exact platforms, gradients and routes remain to be designed"
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "HES-L01",
+      "from": "HES-T01",
+      "to": "HES-T02",
+      "mode": "tram",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L02",
+      "from": "HES-T01",
+      "to": "HES-T03",
+      "mode": "tram",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L03",
+      "from": "HES-T01",
+      "to": "HES-T04",
+      "mode": "tram",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L04",
+      "from": "HES-T01",
+      "to": "HES-T05",
+      "mode": "tram",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L05",
+      "from": "HES-T01",
+      "to": "HES-T06",
+      "mode": "bus",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L06",
+      "from": "HES-T02",
+      "to": "HES-T07",
+      "mode": "tram",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L07",
+      "from": "HES-T02",
+      "to": "HES-T09",
+      "mode": "bus",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L08",
+      "from": "HES-T03",
+      "to": "HES-T08",
+      "mode": "bus",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L09",
+      "from": "HES-T03",
+      "to": "HES-T11",
+      "mode": "rail",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L10",
+      "from": "HES-T04",
+      "to": "HES-T07",
+      "mode": "bus",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L11",
+      "from": "HES-T04",
+      "to": "HES-T11",
+      "mode": "road",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L12",
+      "from": "HES-T05",
+      "to": "HES-T06",
+      "mode": "bus",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L13",
+      "from": "HES-T05",
+      "to": "HES-T08",
+      "mode": "road",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L14",
+      "from": "HES-T06",
+      "to": "HES-T09",
+      "mode": "bus",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L15",
+      "from": "HES-T07",
+      "to": "HES-T10",
+      "mode": "road",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L16",
+      "from": "HES-T08",
+      "to": "HES-T12",
+      "mode": "road",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L17",
+      "from": "HES-T08",
+      "to": "HES-T11",
+      "mode": "road",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L18",
+      "from": "HES-T09",
+      "to": "HES-T07",
+      "mode": "road",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L19",
+      "from": "HES-T01",
+      "to": "HES-T02",
+      "mode": "walking",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L20",
+      "from": "HES-T01",
+      "to": "HES-T03",
+      "mode": "walking",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "HES-L21",
+      "from": "HES-T02",
+      "to": "HES-T04",
+      "mode": "bus",
+      "status": "service dependency; alignment, gradients, capacity and operating rights unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 130,
+    "other_potable_m3_per_turn": 17700,
+    "delivered_potable_m3_per_turn": 58000,
+    "network_loss_fraction": 0.15,
+    "network_input_m3_per_turn": 68235.29411764706,
+    "edible_product_kg_per_person_per_turn": 1.6,
+    "edible_product_tonnes_per_turn": 496,
+    "electric_average_mw": 215,
+    "electric_peak_mw": 430,
+    "scope": "24-hour civil-turn demand assumptions; productive yield, reliability and nutrition unverified"
+  },
+  "unresolved": [
+    "Survey local shore and terrain before refining the source polygon; lake levels vary and the mapped state is not permanent.",
+    "Qualify source-water rights, upland conveyance alignment, seasonal yield and basin hydrogeology; RIV-003 remains outside the city.",
+    "Measure lake and process chemistry, validate recoveries, isolate hazardous fractions and license final effluent loads.",
+    "Engineer finite next-cell storage, inventory legacy residues, fund closure and provide verified future capacity before making long-term service promises.",
+    "Map a real emergency buffer and operating reductions if terminal-lake discharge is unavailable; no hidden outlet is assumed.",
+    "Qualify agricultural land and water separately for residents and the additional Orison/Sola commitments; this is not total regional output.",
+    "Model power dispatch, fuel, storage losses, charging windows, transmission contingencies and treatment energy.",
+    "Design actual regional and local route alignments, dry-to-berth lake access, gradients and accessible alternatives.",
+    "Author a terminal-lake food web and dryland fauna compatible with salinity and substrates; do not import freshwater or estuarine taxa by default.",
+    "Resolve managed kettlebarrel introduction, husbandry permits and native fodder supply before treating Toc as a routine citywide practice.",
+    "Review the proposed local chronology and biographies for integration; no new local date is silently promoted to planet canon."
+  ],
+  "source_lake_geometry": {
+    "source_file": "../Atlas/nacre_geography.json",
+    "source_coordinates_lon_lat": [
+      [
+        -18.5,
+        18.5
+      ],
+      [
+        -17.5,
+        18.6
+      ],
+      [
+        -17,
+        18.1
+      ],
+      [
+        -17.6,
+        17.4
+      ],
+      [
+        -18.4,
+        17.5
+      ],
+      [
+        -18.5,
+        18.5
+      ]
+    ],
+    "projected_coordinates_xy_m": [
+      [
+        -146479.843881,
+        52085.066109
+      ],
+      [
+        -48798.784764,
+        61851.160222
+      ],
+      [
+        0.0,
+        10297.442587
+      ],
+      [
+        -58958.387948,
+        -61690.284299
+      ],
+      [
+        -137492.310984,
+        -50972.752334
+      ],
+      [
+        -146479.843881,
+        52085.066109
+      ]
+    ],
+    "surface_elevation_m": 270,
+    "projection": "spherical azimuthal equidistant using frame origin and radius",
+    "clipping_method": "Sutherland-Hodgman clipping of straight edges in projected source polygon against frame bounds; no invented shore vertices beyond boundary intersections",
+    "render_polygon_id": "HES-WATER-01",
+    "shore_status": "extent represents one planning water state, not permanent shoreline"
+  },
+  "nearby_river_context": {
+    "river_id": "RIV-003",
+    "source_terminal_lon_lat_elevation_m": [
+      -17.6,
+      17.8,
+      270
+    ],
+    "projected_terminal_xyz_m": [
+      -58827.004434,
+      -20500.042527,
+      270
+    ],
+    "distance_from_origin_m": 62296.614629472686,
+    "relation": "about 62 km southwest; not a city channel or source point at the origin"
+  },
+  "housing_screen": {
+    "dwellings": 125000,
+    "occupied_fraction": 0.95,
+    "residents_per_occupied_dwelling": 2.61,
+    "implied_population": 309937.5,
+    "residential_parcels_km2": 15,
+    "coverage_fraction": 0.32,
+    "effective_floors": 3,
+    "usable_fraction": 0.8,
+    "usable_residential_floor_m2": 11520000,
+    "usable_m2_per_dwelling": 92.16,
+    "scope": "illustrative mixed housing allowance, not surveyed stock or affordability proof"
+  },
+  "land_allocation_km2": {
+    "residential": 15,
+    "employment_and_yards": 12,
+    "civic": 6,
+    "streets_and_transit": 12,
+    "recreation_and_managed_growing": 10,
+    "shore_facilities": 3,
+    "reserves_and_other_open_ground": 12
+  },
+  "water_process_screen": {
+    "upland_product_m3_per_turn": 52000,
+    "upland_recovery_fraction": 0.95,
+    "upland_raw_m3_per_turn": 54736.84210526316,
+    "upland_residual_m3_per_turn": 2736.84210526316,
+    "lake_product_m3_per_turn": 16235.294117647063,
+    "lake_recovery_fraction": 0.7,
+    "lake_raw_m3_per_turn": 23193.27731092438,
+    "concentrate_m3_per_turn": 6957.983193277316,
+    "combined_raw_m3_per_turn": 77930.11941618755,
+    "assumed_lake_tds_kg_per_m3": 5,
+    "assumed_product_tds_kg_per_m3": 0.1,
+    "concentrate_dissolved_mass_tonnes_per_turn": 114.34285714285718,
+    "qualified_salt_sales_credited_tonnes_per_turn": 0,
+    "potable_recovery_from_concentrate_credited_m3_per_turn": 0,
+    "next_cell_capacity_tonnes": 150000,
+    "next_cell_life_local_orbital_years_at_example_salt_rate": 4.034072523412454,
+    "next_cell_access_place_id": "HES-POI-022",
+    "reclaimed_m3_per_turn": 22000,
+    "gross_end_use_m3_per_turn": 80000,
+    "sewer_collection_m3_per_turn": 55000,
+    "net_consumption_or_uncollected_m3_per_turn": 25000,
+    "final_treated_residual_m3_per_turn": 33000,
+    "distribution_loss_m3_per_turn": 10235.294117647063,
+    "scope": "hypothetical recovery/chemistry screen; salt cell is finite next capacity, legacy stores need independent inventories; final residual return requires actual load authorization; no firm source yield or disposal license"
+  },
+  "food_screen": {
+    "resident_basket_tonnes_per_turn": {
+      "dry": 185,
+      "fresh": 175,
+      "cultured": 90,
+      "other": 46
+    },
+    "kcal_per_resident_per_turn": 2500,
+    "calorie_equivalent_kcal_per_kg": 3200,
+    "dry_calorie_equivalent_tonnes_per_turn": 242.1875,
+    "protein_g_per_resident_per_turn": 75,
+    "protein_tonnes_per_turn": 23.25,
+    "reserve_turns": 90,
+    "reserve_dry_calorie_equivalent_tonnes": 21796.875,
+    "regional_exports_additional_to_residents": [
+      {
+        "destination_city_id": "CITY-001",
+        "destination": "Orison",
+        "tonnes_per_turn": 65,
+        "basket": {
+          "dry": 15,
+          "fresh": 25,
+          "cultured": 15,
+          "native_qualified": 0,
+          "other": 10
+        }
+      },
+      {
+        "destination_city_id": "CITY-012",
+        "destination": "Sola",
+        "tonnes_per_turn": 25,
+        "basket": {
+          "dry": 15,
+          "fresh": 0,
+          "cultured": 10,
+          "native_qualified": 0,
+          "other": 0
+        }
+      }
+    ],
+    "scope": "product mass and dietary screens, not nutritional proof; exports come from Red Ledger producing settlements/distributors, not necessarily a single Hesh store; regional production and agricultural water unverified"
+  },
+  "power_screen": {
+    "regional_connection_rating_mw": 250,
+    "candidate_dispatchable_mw": 95,
+    "candidate_photovoltaic_mwp": 250,
+    "candidate_regional_wind_mw": 180,
+    "candidate_storage_gwh": 12,
+    "candidate_storage_discharge_mw": 180,
+    "longest_nominal_night_hours": 71.9,
+    "residual_deficit_examples": [
+      {
+        "mw": 70,
+        "energy_gwh_before_losses": 5.033
+      },
+      {
+        "mw": 200,
+        "energy_gwh_before_losses": 14.38
+      }
+    ],
+    "scope": "portfolio to test, not installed or firm generation; 200 MW exceeds both candidate storage discharge power and night energy"
+  },
+  "municipal_waste_screen": {
+    "kg_per_resident_per_turn": 0.7,
+    "tonnes_per_turn": 217,
+    "excluded_streams": [
+      "major construction",
+      "mineral processing",
+      "raw-water treatment residuals",
+      "hazardous industrial streams"
+    ],
+    "scope": "source-separated recovery and finite containment need actual facilities; native decomposers are not universal waste treatment"
+  },
+  "biographical_continuity": [
+    {
+      "name": "Fenna Orel",
+      "birth_year_AL": 698,
+      "approximate_age_Earth_standard_years": 39,
+      "place_id": "HES-POI-002",
+      "status": "existing pleasures-draft biography"
+    },
+    {
+      "name": "Veda Pell",
+      "place_id": "HES-POI-010",
+      "status": "existing language vignette: preferred public association name, separately retained confidential invoice link; no age invented"
+    },
+    {
+      "names": [
+        "Kiva Rell",
+        "Osen Rell"
+      ],
+      "place_ids": [
+        "HES-POI-003",
+        "HES-POI-020"
+      ],
+      "relationship": "spouses; original proposed relationship"
+    }
+  ],
+  "sources": [
+    "../00_CANON_AND_ORIENTATION.md",
+    "../Atlas/nacre_atlas.json",
+    "../Atlas/nacre_geography.json",
+    "../Drafts/ECOLOGY_FOUNDATION.md",
+    "../Drafts/PLEASURES_AND_EVERYDAY_LIFE.md",
+    "SOLA.md",
+    "SETTLEMENT_PLAN_FORMAT.md"
+  ]
+}

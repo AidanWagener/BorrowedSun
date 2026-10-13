@@ -1,5 +1,7 @@
 # Canon reconciliation: the world before expansion
 
+**Edition 0.5:** [Productive landscapes](06b_PRODUCTIVE_LANDSCAPES.md) adopts selected introduced staple lines suited to Nacre's long natural cycle as a fictional biological premise. Crop yields remain explicit sizing assumptions. The first 620 t/turn study preserves Orison's existing allocations, exposes urban farming's unbudgeted lighting requirement and keeps regional residents and exports additional. Hesh preserves the actual LAK-003 projection and RIV-003 terminal southwest of the city; Serein adds no atlas river; Dhal retains its inland 8 m river control. Their new local histories remain city proposals until integrated into the master chronology.
+
 13 October 2026. This is the first continuity pass for the living planet bible. It preserves the existing work while identifying decisions that the expanded world must resolve. It is not the completed canon.
 
 **Subsequent authoring update:** [Volume 00](00_CANON_AND_ORIENTATION.md) and the [physical review](Drafts/PHYSICAL_FOUNDATION_REVIEW.md) now select a working astronomical model, civil turn, settlement epoch and bounded mirror architecture. The open questions described below record the initial reconciliation; the newer explicit decisions take precedence. The [regional atlas](07_REGIONAL_ATLAS.md) and [history](04_HISTORY_OF_NACRE.md) begin the world beyond Orison. No construction is implied by those documents.

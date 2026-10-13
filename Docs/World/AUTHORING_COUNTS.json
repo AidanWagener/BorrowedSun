@@ -1,14 +1,14 @@
 {
-  "edition": "0.4",
+  "edition": "0.5",
   "scope": "Current new foundations including research/review notes; not pages, completion or quality certification",
-  "words": 177409,
+  "words": 217861,
   "chapters": [
     {
       "id": "orientation",
       "source": "00_CANON_AND_ORIENTATION.md",
       "title": "00 · Canon and orientation",
       "status": "Working canon",
-      "words": 2794
+      "words": 2862
     },
     {
       "id": "physics",
@@ -57,7 +57,7 @@
       "source": "04_HISTORY_OF_NACRE.md",
       "title": "04 · History",
       "status": "Working canon",
-      "words": 3879
+      "words": 3892
     },
     {
       "id": "societies",
@@ -85,7 +85,14 @@
       "source": "06_POWER_AND_EXCHANGE.md",
       "title": "06 · Power and exchange",
       "status": "Working institutions and selected demand/dependency records; not a simulated economy",
-      "words": 9598
+      "words": 9668
+    },
+    {
+      "id": "production",
+      "source": "06b_PRODUCTIVE_LANDSCAPES.md",
+      "title": "06b · Productive landscapes",
+      "status": "Cultivation canon and traceable land, water and light sizing; regional source capacity remains unfinished",
+      "words": 6479
     },
     {
       "id": "atlas",
@@ -99,7 +106,7 @@
       "source": "Cities/ORISON.md",
       "title": "08a · Orison",
       "status": "Authored city proposal: eleven districts, 24 places and service dependencies; not constructed",
-      "words": 11344
+      "words": 11420
     },
     {
       "id": "marroway",
@@ -128,6 +135,27 @@
       "title": "08e · Sola",
       "status": "Authored island city: five islands, nine districts and 24 places; no navigation or source yield proved",
       "words": 13216
+    },
+    {
+      "id": "hesh",
+      "source": "Cities/HESH.md",
+      "title": "08f · Hesh",
+      "status": "Authored closed-basin city: nine districts and 24 places; lake geography preserved",
+      "words": 10541
+    },
+    {
+      "id": "serein",
+      "source": "Cities/SEREIN.md",
+      "title": "08g · Serein",
+      "status": "Authored fog-coast city: nine districts and 24 places; local marine and service assumptions",
+      "words": 11430
+    },
+    {
+      "id": "dhal",
+      "source": "Cities/DHAL.md",
+      "title": "08h · Dhal",
+      "status": "Authored inland forest river city: nine districts and 24 places; not a coastal port",
+      "words": 11775
     },
     {
       "id": "journeys",

@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1570" viewBox="0 0 1560 1570" role="img" aria-labelledby="title desc">
+<title id="title">Dhal authored settlement plan</title>
+<desc id="desc">Twenty-four named places and district envelopes. Lines represent service dependencies, not surveyed routes. No constructed city is claimed.</desc>
+<rect width="1560" height="1570" fill="#f3efe2"/>
+<style>text{font-family:Arial,sans-serif;fill:#233e47;font-size:16px}.small{font-size:13px}.tiny{font-size:12px}</style>
+<text x="60.00" y="47.00" style="font-size:29px">DHAL / A PLACE TO ARRIVE</text>
+<text x="60.00" y="79.00" >CITY-007 · 742 AL · 160,000 core residents, authored estimate · settlement proposal v1</text>
+<text x="60.00" y="105.00" class="small">North is up · coordinates in kilometers · z is planning sea-level altitude · no surveyed terrain or operating service capacity</text>
+<rect x="74.27419354838707" y="145.0" width="1006.4516129032259" height="800.0" fill="#e3dfce" stroke="#8ca6aa"/>
+<polygon points="100.08,515.06 229.11,533.65 347.82,553.77 451.05,581.13 564.60,565.13 698.79,580.10 822.66,604.87 941.37,639.45 1039.44,674.55 1039.44,719.97 941.37,682.81 822.66,645.13 698.79,618.29 564.60,602.29 451.05,617.26 347.82,587.84 229.11,566.68 100.08,549.13 100.08,515.06" fill="#bdd9df" stroke="#477f90" stroke-width="1.2"/>
+<line x1="151.69354838709677" y1="145.0" x2="151.69354838709677" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="151.69" y="968.00" class="tiny" text-anchor="middle">-8</text>
+<line x1="254.91935483870967" y1="145.0" x2="254.91935483870967" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="254.92" y="968.00" class="tiny" text-anchor="middle">-6</text>
+<line x1="358.14516129032256" y1="145.0" x2="358.14516129032256" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="358.15" y="968.00" class="tiny" text-anchor="middle">-4</text>
+<line x1="461.3709677419355" y1="145.0" x2="461.3709677419355" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="461.37" y="968.00" class="tiny" text-anchor="middle">-2</text>
+<line x1="564.5967741935483" y1="145.0" x2="564.5967741935483" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="564.60" y="968.00" class="tiny" text-anchor="middle">0</text>
+<line x1="667.8225806451612" y1="145.0" x2="667.8225806451612" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="667.82" y="968.00" class="tiny" text-anchor="middle">2</text>
+<line x1="771.0483870967741" y1="145.0" x2="771.0483870967741" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="771.05" y="968.00" class="tiny" text-anchor="middle">4</text>
+<line x1="874.2741935483871" y1="145.0" x2="874.2741935483871" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="874.27" y="968.00" class="tiny" text-anchor="middle">6</text>
+<line x1="977.5" y1="145.0" x2="977.5" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="977.50" y="968.00" class="tiny" text-anchor="middle">8</text>
+<line x1="1080.725806451613" y1="145.0" x2="1080.725806451613" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="1080.73" y="968.00" class="tiny" text-anchor="middle">10</text>
+<line x1="74.27419354838707" y1="893.3870967741935" x2="1080.725806451613" y2="893.3870967741935" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="897.39" class="tiny" text-anchor="end">-6</text>
+<line x1="74.27419354838707" y1="790.1612903225806" x2="1080.725806451613" y2="790.1612903225806" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="794.16" class="tiny" text-anchor="end">-4</text>
+<line x1="74.27419354838707" y1="686.9354838709677" x2="1080.725806451613" y2="686.9354838709677" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="690.94" class="tiny" text-anchor="end">-2</text>
+<line x1="74.27419354838707" y1="583.7096774193549" x2="1080.725806451613" y2="583.7096774193549" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="587.71" class="tiny" text-anchor="end">0</text>
+<line x1="74.27419354838707" y1="480.48387096774195" x2="1080.725806451613" y2="480.48387096774195" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="484.48" class="tiny" text-anchor="end">2</text>
+<line x1="74.27419354838707" y1="377.258064516129" x2="1080.725806451613" y2="377.258064516129" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="381.26" class="tiny" text-anchor="end">4</text>
+<line x1="74.27419354838707" y1="274.0322580645161" x2="1080.725806451613" y2="274.0322580645161" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="278.03" class="tiny" text-anchor="end">6</text>
+<line x1="74.27419354838707" y1="170.80645161290323" x2="1080.725806451613" y2="170.80645161290323" stroke="#aebfb8" opacity=".35"/>
+<text x="65.27" y="174.81" class="tiny" text-anchor="end">8</text>
+<text x="74.27" y="135.00" class="tiny">y north / km</text>
+<text x="1080.73" y="988.00" class="tiny" text-anchor="end">x east / km</text>
+<ellipse data-district="DHA-D01" cx="543.9516129032259" cy="526.9354838709678" rx="98.06451612903226" ry="77.41935483870968" fill="#bd9355" fill-opacity=".12" stroke="#bd9355" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D02" cx="399.43548387096774" cy="480.48387096774195" rx="103.2258064516129" ry="87.74193548387096" fill="#ad7464" fill-opacity=".12" stroke="#ad7464" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D03" cx="451.04838709677415" cy="320.48387096774195" rx="113.54838709677419" ry="98.06451612903226" fill="#767da1" fill-opacity=".12" stroke="#767da1" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D04" cx="683.3064516129032" cy="444.35483870967744" rx="113.54838709677419" ry="92.90322580645162" fill="#b69a3b" fill-opacity=".12" stroke="#b69a3b" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D05" cx="853.6290322580645" cy="534.6774193548388" rx="103.2258064516129" ry="92.90322580645162" fill="#648c66" fill-opacity=".12" stroke="#648c66" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D06" cx="734.9193548387096" cy="717.9032258064516" rx="113.54838709677419" ry="92.90322580645162" fill="#527d89" fill-opacity=".12" stroke="#527d89" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D07" cx="564.5967741935483" cy="810.8064516129032" rx="113.54838709677419" ry="103.2258064516129" fill="#a78163" fill-opacity=".12" stroke="#a78163" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D08" cx="363.30645161290323" cy="712.741935483871" rx="123.87096774193549" ry="92.90322580645162" fill="#4c917e" fill-opacity=".12" stroke="#4c917e" stroke-opacity=".75"/>
+<ellipse data-district="DHA-D09" cx="740.0806451612902" cy="289.51612903225805" rx="113.54838709677419" ry="92.90322580645162" fill="#7c90a1" fill-opacity=".12" stroke="#7c90a1" stroke-opacity=".75"/>
+<line x1="538.7903225806451" y1="542.4193548387098" x2="399.43548387096774" y2="475.3225806451613" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="399.43548387096774" y1="475.3225806451613" x2="471.69354838709677" y2="325.64516129032256" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="471.69354838709677" y1="325.64516129032256" x2="688.4677419354839" y2="449.51612903225805" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="688.4677419354839" y1="449.51612903225805" x2="853.6290322580645" y2="547.5806451612902" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="688.4677419354839" y1="449.51612903225805" x2="740.0806451612902" y2="294.6774193548387" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="471.69354838709677" y1="325.64516129032256" x2="740.0806451612902" y2="294.6774193548387" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="538.7903225806451" y1="542.4193548387098" x2="688.4677419354839" y2="449.51612903225805" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="538.7903225806451" y1="542.4193548387098" x2="740.0806451612902" y2="707.5806451612904" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="538.7903225806451" y1="542.4193548387098" x2="740.0806451612902" y2="707.5806451612904" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="740.0806451612902" y1="707.5806451612904" x2="853.6290322580645" y2="547.5806451612902" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="740.0806451612902" y1="707.5806451612904" x2="564.5967741935483" y2="810.8064516129032" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="564.5967741935483" y1="810.8064516129032" x2="358.14516129032256" y2="712.741935483871" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="358.14516129032256" y1="712.741935483871" x2="538.7903225806451" y2="542.4193548387098" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="358.14516129032256" y1="712.741935483871" x2="151.69354838709677" y2="655.9677419354839" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="399.43548387096774" y1="475.3225806451613" x2="358.14516129032256" y2="712.741935483871" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="564.5967741935483" y1="810.8064516129032" x2="151.69354838709677" y2="655.9677419354839" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="740.0806451612902" y1="707.5806451612904" x2="358.14516129032256" y2="712.741935483871" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="516.4935483870968" y1="465.0" x2="542.9935483870968" y2="464.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="526.4935483870968" y="452.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="542.99" y="469.00" class="small" text-anchor="middle" style="fill:#fff9e9">D01</text>
+<line x1="370.5322580645161" y1="410.2903225806452" x2="397.0322580645161" y2="409.2903225806452" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="380.5322580645161" y="397.2903225806452" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="397.03" y="414.29" class="small" text-anchor="middle" style="fill:#fff9e9">D02</text>
+<line x1="419.2548387096774" y1="242.03225806451613" x2="445.7548387096774" y2="241.03225806451613" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="429.2548387096774" y="229.03225806451613" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="445.75" y="246.03" class="small" text-anchor="middle" style="fill:#fff9e9">D03</text>
+<line x1="651.5129032258064" y1="370.0322580645161" x2="678.0129032258064" y2="369.0322580645161" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="661.5129032258064" y="357.0322580645161" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="678.01" y="374.03" class="small" text-anchor="middle" style="fill:#fff9e9">D04</text>
+<line x1="824.7258064516129" y1="460.35483870967744" x2="851.2258064516129" y2="459.35483870967744" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="834.7258064516129" y="447.35483870967744" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="851.23" y="464.35" class="small" text-anchor="middle" style="fill:#fff9e9">D05</text>
+<line x1="703.1258064516129" y1="643.5806451612902" x2="729.6258064516129" y2="642.5806451612902" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="713.1258064516129" y="630.5806451612902" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="729.63" y="647.58" class="small" text-anchor="middle" style="fill:#fff9e9">D06</text>
+<line x1="532.8032258064516" y1="728.2258064516129" x2="559.3032258064516" y2="727.2258064516129" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="542.8032258064516" y="715.2258064516129" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="559.30" y="732.23" class="small" text-anchor="middle" style="fill:#fff9e9">D07</text>
+<line x1="328.6225806451613" y1="638.4193548387098" x2="355.1225806451613" y2="637.4193548387098" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="338.6225806451613" y="625.4193548387098" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="355.12" y="642.42" class="small" text-anchor="middle" style="fill:#fff9e9">D08</text>
+<line x1="708.2870967741935" y1="215.19354838709677" x2="734.7870967741935" y2="214.19354838709677" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="718.2870967741935" y="202.19354838709677" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="734.79" y="219.19" class="small" text-anchor="middle" style="fill:#fff9e9">D09</text>
+<circle data-poi="DHA-POI-001" cx="518.1451612903226" cy="562.0322580645161" r="3.5" fill="#345863"/>
+<line x1="518.1451612903226" y1="562.0322580645161" x2="541.6451612903226" y2="561.0322580645161" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="528.1451612903226" y="549.0322580645161" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="541.65" y="566.03" class="small" text-anchor="middle" style="fill:#233e47">01</text>
+<circle data-poi="DHA-POI-002" cx="564.5967741935483" cy="583.7096774193549" r="3.5" fill="#345863"/>
+<line x1="564.5967741935483" y1="583.7096774193549" x2="588.0967741935483" y2="582.7096774193549" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="574.5967741935483" y="570.7096774193549" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="588.10" y="587.71" class="small" text-anchor="middle" style="fill:#233e47">02</text>
+<circle data-poi="DHA-POI-003" cx="587.8225806451612" cy="521.7741935483871" r="3.5" fill="#345863"/>
+<line x1="587.8225806451612" y1="521.7741935483871" x2="611.3225806451612" y2="520.7741935483871" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="597.8225806451612" y="508.7741935483871" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="611.32" y="525.77" class="small" text-anchor="middle" style="fill:#233e47">03</text>
+<circle data-poi="DHA-POI-004" cx="378.7903225806451" cy="490.80645161290323" r="3.5" fill="#345863"/>
+<line x1="378.7903225806451" y1="490.80645161290323" x2="402.2903225806451" y2="489.80645161290323" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="388.7903225806451" y="477.80645161290323" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="402.29" y="494.81" class="small" text-anchor="middle" style="fill:#233e47">04</text>
+<circle data-poi="DHA-POI-005" cx="445.88709677419354" cy="454.6774193548387" r="3.5" fill="#345863"/>
+<line x1="445.88709677419354" y1="454.6774193548387" x2="469.38709677419354" y2="453.6774193548387" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="455.88709677419354" y="441.6774193548387" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="469.39" y="458.68" class="small" text-anchor="middle" style="fill:#233e47">05</text>
+<circle data-poi="DHA-POI-006" cx="347.8225806451613" cy="444.35483870967744" r="3.5" fill="#345863"/>
+<line x1="347.8225806451613" y1="444.35483870967744" x2="371.3225806451613" y2="443.35483870967744" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="357.8225806451613" y="431.35483870967744" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="371.32" y="448.35" class="small" text-anchor="middle" style="fill:#233e47">06</text>
+<circle data-poi="DHA-POI-007" cx="440.72580645161287" cy="325.64516129032256" r="3.5" fill="#345863"/>
+<line x1="440.72580645161287" y1="325.64516129032256" x2="464.22580645161287" y2="324.64516129032256" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="450.72580645161287" y="312.64516129032256" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="464.23" y="329.65" class="small" text-anchor="middle" style="fill:#233e47">07</text>
+<circle data-poi="DHA-POI-008" cx="518.1451612903226" cy="294.6774193548387" r="3.5" fill="#345863"/>
+<line x1="518.1451612903226" y1="294.6774193548387" x2="541.6451612903226" y2="293.6774193548387" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="528.1451612903226" y="281.6774193548387" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="541.65" y="298.68" class="small" text-anchor="middle" style="fill:#233e47">08</text>
+<circle data-poi="DHA-POI-009" cx="378.7903225806451" cy="279.19354838709677" r="3.5" fill="#345863"/>
+<line x1="378.7903225806451" y1="279.19354838709677" x2="402.2903225806451" y2="278.19354838709677" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="388.7903225806451" y="266.19354838709677" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="402.29" y="283.19" class="small" text-anchor="middle" style="fill:#233e47">09</text>
+<circle data-poi="DHA-POI-010" cx="652.3387096774194" cy="454.6774193548387" r="3.5" fill="#345863"/>
+<line x1="652.3387096774194" y1="454.6774193548387" x2="675.8387096774194" y2="453.6774193548387" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="662.3387096774194" y="441.6774193548387" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="675.84" y="458.68" class="small" text-anchor="middle" style="fill:#233e47">10</text>
+<circle data-poi="DHA-POI-011" cx="719.4354838709677" cy="418.5483870967742" r="3.5" fill="#345863"/>
+<line x1="719.4354838709677" y1="418.5483870967742" x2="742.9354838709677" y2="417.5483870967742" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="729.4354838709677" y="405.5483870967742" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="742.94" y="422.55" class="small" text-anchor="middle" style="fill:#233e47">11</text>
+<circle data-poi="DHA-POI-012" cx="672.983870967742" cy="382.41935483870964" r="3.5" fill="#345863"/>
+<line x1="672.983870967742" y1="382.41935483870964" x2="696.483870967742" y2="401.41935483870964" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="682.983870967742" y="389.41935483870964" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="696.48" y="406.42" class="small" text-anchor="middle" style="fill:#233e47">12</text>
+<circle data-poi="DHA-POI-013" cx="838.1451612903226" cy="573.3870967741935" r="3.5" fill="#345863"/>
+<line x1="838.1451612903226" y1="573.3870967741935" x2="861.6451612903226" y2="572.3870967741935" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="848.1451612903226" y="560.3870967741935" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="861.65" y="577.39" class="small" text-anchor="middle" style="fill:#233e47">13</text>
+<circle data-poi="DHA-POI-014" cx="900.0806451612902" cy="495.96774193548384" r="3.5" fill="#345863"/>
+<line x1="900.0806451612902" y1="495.96774193548384" x2="923.5806451612902" y2="494.96774193548384" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="910.0806451612902" y="482.96774193548384" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="923.58" y="499.97" class="small" text-anchor="middle" style="fill:#233e47">14</text>
+<circle data-poi="DHA-POI-015" cx="802.016129032258" cy="501.1290322580645" r="3.5" fill="#345863"/>
+<line x1="802.016129032258" y1="501.1290322580645" x2="825.516129032258" y2="500.1290322580645" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="812.016129032258" y="488.1290322580645" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="825.52" y="505.13" class="small" text-anchor="middle" style="fill:#233e47">15</text>
+<circle data-poi="DHA-POI-016" cx="750.4032258064516" cy="707.5806451612904" r="3.5" fill="#345863"/>
+<line x1="750.4032258064516" y1="707.5806451612904" x2="773.9032258064516" y2="706.5806451612904" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="760.4032258064516" y="694.5806451612904" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="773.90" y="711.58" class="small" text-anchor="middle" style="fill:#233e47">16</text>
+<circle data-poi="DHA-POI-017" cx="672.983870967742" cy="692.0967741935484" r="3.5" fill="#345863"/>
+<line x1="672.983870967742" y1="692.0967741935484" x2="696.483870967742" y2="691.0967741935484" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="682.983870967742" y="679.0967741935484" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="696.48" y="696.10" class="small" text-anchor="middle" style="fill:#233e47">17</text>
+<circle data-poi="DHA-POI-018" cx="807.1774193548387" cy="764.3548387096774" r="3.5" fill="#345863"/>
+<line x1="807.1774193548387" y1="764.3548387096774" x2="830.6774193548387" y2="763.3548387096774" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="817.1774193548387" y="751.3548387096774" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="830.68" y="768.35" class="small" text-anchor="middle" style="fill:#233e47">18</text>
+<circle data-poi="DHA-POI-019" cx="518.1451612903226" cy="790.1612903225806" r="3.5" fill="#345863"/>
+<line x1="518.1451612903226" y1="790.1612903225806" x2="541.6451612903226" y2="789.1612903225806" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="528.1451612903226" y="777.1612903225806" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="541.65" y="794.16" class="small" text-anchor="middle" style="fill:#233e47">19</text>
+<circle data-poi="DHA-POI-020" cx="605.8870967741935" cy="815.9677419354839" r="3.5" fill="#345863"/>
+<line x1="605.8870967741935" y1="815.9677419354839" x2="629.3870967741935" y2="814.9677419354839" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="615.8870967741935" y="802.9677419354839" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="629.39" y="819.97" class="small" text-anchor="middle" style="fill:#233e47">20</text>
+<circle data-poi="DHA-POI-021" cx="368.46774193548384" cy="697.258064516129" r="3.5" fill="#345863"/>
+<line x1="368.46774193548384" y1="697.258064516129" x2="391.96774193548384" y2="696.258064516129" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="378.46774193548384" y="684.258064516129" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="391.97" y="701.26" class="small" text-anchor="middle" style="fill:#233e47">21</text>
+<circle data-poi="DHA-POI-022" cx="280.72580645161287" cy="754.0322580645161" r="3.5" fill="#345863"/>
+<line x1="280.72580645161287" y1="754.0322580645161" x2="304.22580645161287" y2="753.0322580645161" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="290.72580645161287" y="741.0322580645161" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="304.23" y="758.03" class="small" text-anchor="middle" style="fill:#233e47">22</text>
+<circle data-poi="DHA-POI-023" cx="703.9516129032257" cy="294.6774193548387" r="3.5" fill="#345863"/>
+<line x1="703.9516129032257" y1="294.6774193548387" x2="727.4516129032257" y2="293.6774193548387" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="713.9516129032257" y="281.6774193548387" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="727.45" y="298.68" class="small" text-anchor="middle" style="fill:#233e47">23</text>
+<circle data-poi="DHA-POI-024" cx="796.8548387096774" cy="258.5483870967742" r="3.5" fill="#345863"/>
+<line x1="796.8548387096774" y1="258.5483870967742" x2="820.3548387096774" y2="257.5483870967742" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="806.8548387096774" y="245.5483870967742" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="820.35" y="262.55" class="small" text-anchor="middle" style="fill:#233e47">24</text>
+<text x="1140.00" y="161.00" style="font-size:20px;font-weight:bold">DISTRICTS</text>
+<text x="1140.00" y="198.00" >D01 River Fold</text>
+<text x="1140.00" y="217.00" class="small">24,000 residents · 12–35 m</text>
+<text x="1140.00" y="252.00" >D02 Long Dry</text>
+<text x="1140.00" y="271.00" class="small">22,000 residents · 18–45 m</text>
+<text x="1140.00" y="306.00" >D03 Crown Rooms</text>
+<text x="1140.00" y="325.00" class="small">18,000 residents · 22–65 m</text>
+<text x="1140.00" y="360.00" >D04 Open Weft</text>
+<text x="1140.00" y="379.00" class="small">20,000 residents · 16–50 m</text>
+<text x="1140.00" y="414.00" >D05 East Chain</text>
+<text x="1140.00" y="433.00" class="small">16,000 residents · 12–38 m</text>
+<text x="1140.00" y="468.00" >D06 South Racks</text>
+<text x="1140.00" y="487.00" class="small">18,000 residents · 12–38 m</text>
+<text x="1140.00" y="522.00" >D07 Seed Yards</text>
+<text x="1140.00" y="541.00" class="small">15,000 residents · 17–42 m</text>
+<text x="1140.00" y="576.00" >D08 Turning Ground</text>
+<text x="1140.00" y="595.00" class="small">14,000 residents · 16–42 m</text>
+<text x="1140.00" y="630.00" >D09 Borrowed Height</text>
+<text x="1140.00" y="649.00" class="small">13,000 residents · 28–85 m</text>
+<text x="1140.00" y="702.00" style="font-size:18px;font-weight:bold">SURFACE CONTROLS</text>
+<text x="1140.00" y="728.00" class="small">Dhal working river</text>
+<text x="1140.00" y="852.00" style="font-size:18px;font-weight:bold">READING THE PLAN</text>
+<text x="1140.00" y="880.00" class="small">Cream labels: places. Dark labels: district</text>
+<text x="1140.00" y="898.00" class="small">envelopes. Dotted lines: transport</text>
+<text x="1140.00" y="916.00" class="small">dependencies, not route alignments. Ferry</text>
+<text x="1140.00" y="934.00" class="small">points are dry interchanges; actual berths</text>
+<text x="1140.00" y="952.00" class="small">and access legs remain to be designed.</text>
+<text x="60.00" y="1016.00" style="font-size:22px;font-weight:bold">PLACES WORTH FINDING</text>
+<text x="60.00" y="1055.00" >01  Threadwater Quay</text>
+<text x="60.00" y="1102.00" >02  Two Banks Span</text>
+<text x="60.00" y="1149.00" >03  Porch of Many Departures</text>
+<text x="60.00" y="1196.00" >04  Long Dry House</text>
+<text x="60.00" y="1243.00" >05  Heat Release Baths</text>
+<text x="60.00" y="1290.00" >06  The Book of Lost Sounds</text>
+<text x="60.00" y="1337.00" >07  Family Resemblance Room</text>
+<text x="60.00" y="1384.00" >08  Underleaf School</text>
+<text x="550.00" y="1055.00" >09  Storm Gap Three</text>
+<text x="550.00" y="1102.00" >10  Open Weft Works</text>
+<text x="550.00" y="1149.00" >11  The Return Shelf</text>
+<text x="550.00" y="1196.00" >12  Under Roof Arena</text>
+<text x="550.00" y="1243.00" >13  East Chain Transfer</text>
+<text x="550.00" y="1290.00" >14  The Unfinished Tow</text>
+<text x="550.00" y="1337.00" >15  Reach Clinic</text>
+<text x="550.00" y="1384.00" >16  Three Atmospheres</text>
+<text x="1040.00" y="1055.00" >17  Night Market Racks</text>
+<text x="1040.00" y="1102.00" >18  Last Wash</text>
+<text x="1040.00" y="1149.00" >19  Seed Ledger House</text>
+<text x="1040.00" y="1196.00" >20  Court of Ordinary Meals</text>
+<text x="1040.00" y="1243.00" >21  Old Tension Hall</text>
+<text x="1040.00" y="1290.00" >22  Dry Foot Landing</text>
+<text x="1040.00" y="1337.00" >23  Borrowed Height Walk</text>
+<text x="1040.00" y="1384.00" >24  Far Rain Receiver</text>
+<text x="60.00" y="1456.00" class="small">74 km² gross allocation; district ellipses overlap and are not measured parcel areas.</text>
+<text x="60.00" y="1480.00" class="small">Local surfaces and heights are authored controls. Floods, depths, gradients, structures and service capacity require separate work.</text>
+<text x="60.00" y="1504.00" class="small">Source: dhal_settlement.json · spherical AEQD at 4° latitude, 166° longitude</text>
+<text x="60.00" y="1528.00" class="small">This plate locates a proposal; it does not show a built or simulated city.</text>
+</svg>

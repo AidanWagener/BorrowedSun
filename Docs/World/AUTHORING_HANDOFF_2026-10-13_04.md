@@ -1,5 +1,7 @@
 # Planet authoring handoff — edition 0.4
 
+Historical edition snapshot. The [edition 0.5 handoff](AUTHORING_HANDOFF_2026-10-13_05.md) records the newer cities, productive-landscape study and current next work; counts and validation below describe edition 0.4.
+
 **13 October 2026. Full-world authorship remains active.** This pass expands the canonical-world proposals and travel design. The earlier mechanics Development handoff remains complete; no new Unreal code, map, asset import, package or gameplay system was changed. Planet construction still follows the complete, reconciled bible.
 
 ## What this edition adds

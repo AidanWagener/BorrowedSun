@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1180" role="img" aria-labelledby="title desc">
+<title id="title">Land behind Orison food allocations</title>
+<desc id="desc">13 productive-canopy cases for 620 tonnes per civil turn. Horizontal bars compare hectares; excluded food and assumptions are stated.</desc>
+<rect width="1280" height="1180" fill="#f3efe2"/>
+<style>text{font-family:Arial,sans-serif;fill:#233e47;font-size:16px}</style>
+<text x="55" y="52" style="font-size:28px;font-weight:bold">THE LAND BEHIND THE MEAL</text>
+<text x="55" y="84" >Orison / 620 t per civil turn modeled · 80 t native/preserved demand outside study</text>
+<text x="55" y="111" style="font-size:14px">Original sizing assumptions · areas are productive canopy, not a map or proven yields</text>
+<text x="55" y="152" style="font-size:14px">Saffron rural plots / dry</text>
+<rect data-allocation="SUP-001-introduced_dry_staples" x="440" y="134" width="95.588" height="22" fill="#ae874b"/>
+<text x="1120" y="152" text-anchor="start" style="font-size:14px">1,807 ha</text>
+<text x="55" y="210" style="font-size:14px">Saffron rural plots / fresh</text>
+<rect data-allocation="SUP-001-introduced_fresh_produce" x="440" y="192" width="47.316" height="22" fill="#64846a"/>
+<text x="1120" y="210" text-anchor="start" style="font-size:14px">894 ha</text>
+<text x="55" y="268" style="font-size:14px">Orison urban canopy / fresh</text>
+<rect data-allocation="SUP-001-urban" x="440" y="250" width="17.206" height="22" fill="#64846a"/>
+<text x="1120" y="268" text-anchor="start" style="font-size:14px">325 ha</text>
+<text x="55" y="326" style="font-size:14px">Saffron rural plots / culture feed</text>
+<rect data-allocation="SUP-001-cultured_products" x="440" y="308" width="54.622" height="22" fill="#587f90"/>
+<text x="1120" y="326" text-anchor="start" style="font-size:14px">1,032 ha</text>
+<text x="55" y="384" style="font-size:14px">Nine River production mosaics / dry</text>
+<rect data-allocation="SUP-002-introduced_dry_staples" x="440" y="366" width="650.000" height="22" fill="#ae874b"/>
+<text x="1120" y="384" text-anchor="start" style="font-size:14px">12,285 ha</text>
+<text x="55" y="442" style="font-size:14px">Nine River production mosaics / fresh</text>
+<rect data-allocation="SUP-002-introduced_fresh_produce" x="440" y="424" width="103.952" height="22" fill="#64846a"/>
+<text x="1120" y="442" text-anchor="start" style="font-size:14px">1,965 ha</text>
+<text x="55" y="500" style="font-size:14px">Nine River production mosaics / culture feed</text>
+<rect data-allocation="SUP-002-cultured_products" x="440" y="482" width="76.471" height="22" fill="#587f90"/>
+<text x="1120" y="500" text-anchor="start" style="font-size:14px">1,445 ha</text>
+<text x="55" y="558" style="font-size:14px">Glassback foothill benches / dry</text>
+<rect data-allocation="SUP-003-introduced_dry_staples" x="440" y="540" width="76.471" height="22" fill="#ae874b"/>
+<text x="1120" y="558" text-anchor="start" style="font-size:14px">1,445 ha</text>
+<text x="55" y="616" style="font-size:14px">Glassback foothill benches / fresh</text>
+<rect data-allocation="SUP-003-introduced_fresh_produce" x="440" y="598" width="28.676" height="22" fill="#64846a"/>
+<text x="1120" y="616" text-anchor="start" style="font-size:14px">542 ha</text>
+<text x="55" y="674" style="font-size:14px">Glassback foothill benches / culture feed</text>
+<rect data-allocation="SUP-003-cultured_products" x="440" y="656" width="32.773" height="22" fill="#587f90"/>
+<text x="1120" y="674" text-anchor="start" style="font-size:14px">619 ha</text>
+<text x="55" y="732" style="font-size:14px">Red Ledger managed plots / dry</text>
+<rect data-allocation="SUP-004-introduced_dry_staples" x="440" y="714" width="57.353" height="22" fill="#ae874b"/>
+<text x="1120" y="732" text-anchor="start" style="font-size:14px">1,084 ha</text>
+<text x="55" y="790" style="font-size:14px">Red Ledger managed plots / fresh</text>
+<rect data-allocation="SUP-004-introduced_fresh_produce" x="440" y="772" width="17.923" height="22" fill="#64846a"/>
+<text x="1120" y="790" text-anchor="start" style="font-size:14px">339 ha</text>
+<text x="55" y="848" style="font-size:14px">Red Ledger managed plots / culture feed</text>
+<rect data-allocation="SUP-004-cultured_products" x="440" y="830" width="32.773" height="22" fill="#587f90"/>
+<text x="1120" y="848" text-anchor="start" style="font-size:14px">619 ha</text>
+<text x="55" y="955" style="font-size:21px">244.0 km² productive canopy / 347.2 km² with stated farm-land allowance</text>
+<text x="55" y="989" >Culture output consumes crop substrate. Urban fresh is a subset of Saffron delivery, not additional food.</text>
+<text x="55" y="1017" >Lower-harvest case: 186 t/turn shortfall. Regional residents and other exports are additional.</text>
+<text x="55" y="1055" style="font-size:17px;font-weight:bold">Long natural nights require a crop strategy and a real source of energy.</text>
+<text x="55" y="1083" >Nacre staples use selected long-cycle lines; full artificial-light alternatives carry explicit power costs.</text>
+<text x="55" y="1131" style="font-size:14px">Authoritative assumptions: nacre_production.json · source allocation: Exchange/nacre_exchange.json</text>
+</svg>

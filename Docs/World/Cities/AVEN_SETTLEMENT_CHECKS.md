@@ -10,6 +10,6 @@ Where applicable, source river identity, city-center altitude, nonrising local c
 
 Water demand, treated network input, distribution loss and core food product mass reconcile under declared assumptions. Treatment losses, desalination inputs and yields are separate prose obligations.
 
-Rejected regression controls: moved city origin; population allocation; missing place district; nonfinite place; place outside district; missing gateway; dangling route endpoint; unassigned ordinary interchange; open surface polygon; nonfinite service; loss of all distribution supply; incorrect treated input; incorrect food demand; river center altitude changed.
+Rejected regression controls: moved city origin; population allocation; missing place district; nonfinite place; place outside district; missing gateway; dangling route endpoint; unassigned ordinary interchange; open surface polygon; nonfinite service; loss of all distribution supply; incorrect treated input; incorrect food demand; river center altitude changed; wrong local water surface.
 
 A browser render and visual review are separate from these checks. Source JSON and the city dossier remain authoritative.
