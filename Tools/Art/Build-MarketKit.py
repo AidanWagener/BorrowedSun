@@ -54,6 +54,17 @@ def box(p,size,mat='Stone',edge=1,rot=None):
     if edge:bevel(ob,edge)
     return ob
 
+def masonry(p,size,seed,edge=1.1):
+    """Bounded hand dressing, not noisy displacement of the whole building."""
+    ob=box(p,size,'Stone',0)
+    rng=random.Random(seed)
+    for vertex in ob.data.vertices:
+        vertex.co.x+=rng.uniform(-.32,.32)
+        vertex.co.y+=rng.uniform(-.22,.22)
+        vertex.co.z+=rng.uniform(-.28,.28)
+    bevel(ob,edge,3)
+    return ob
+
 def extrusion(poly,y,depth,mat='Stone',edge=1):
     n=len(poly);verts=[(x,y+dy,z) for dy in [-depth/2,depth/2] for x,z in poly]
     faces=[tuple(reversed(range(n))),tuple(range(n,2*n))]+[(i,(i+1)%n,(i+1)%n+n,i+n) for i in range(n)]
@@ -115,14 +126,34 @@ def finish(name):
         for index in polygon.loop_indices:
             co=ob.data.vertices[ob.data.loops[index].vertex_index].co
             uv.data[index].uv=(co[axes[0]]/160,co[axes[1]]/160)
+    # The fabric shader uses linear vertex R as the amount of printed gold motif.
+    # Sewn border strips retain the motif; broad indigo panels provide visual rest.
+    # This is material data, not a baked lighting/AO mask. G/B/A remain one.
+    color=ob.data.color_attributes.new(name='ArtMasks',type='FLOAT_COLOR',domain='CORNER')
+    for polygon in ob.data.polygons:
+        for index in polygon.loop_indices:
+            co=ob.data.vertices[ob.data.loops[index].vertex_index].co
+            amount=1.0
+            if ob.data.materials[polygon.material_index].name=='Cloth':
+                if name=='SM_MarketCanopy':
+                    border=max(abs(co.x)/250,abs(co.y)/165)
+                    band=max(0.0,min(1.0,(border-.78)/.09))
+                    seam=min(abs(co.x-83.333),abs(co.x+83.333))
+                    amount=max(.12+.08*(co.x>0),band,.72*max(0.0,1-seam/5))
+                elif name=='SM_WovenSackCluster':amount=.02
+                elif name=='SM_MarketDrape':amount=1.0 if abs(co.x)>158 or co.z<-32 else .22
+            color.data[index].color=(amount,1,1,1)
     bpy.ops.export_scene.fbx(filepath=str(OUT/(name+'.fbx')),use_selection=True,object_types={'MESH'},
         global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_NONE',axis_forward='-Y',axis_up='Z',
-        mesh_smooth_type='FACE',use_mesh_modifiers=True,add_leaf_bones=False,bake_anim=False,path_mode='STRIP')
+        mesh_smooth_type='FACE',use_mesh_modifiers=True,add_leaf_bones=False,bake_anim=False,path_mode='STRIP',colors_type='LINEAR')
     ob.data.calc_loop_triangles()
     assets.append({'name':name,'path':(OUT/(name+'.fbx')).relative_to(ROOT).as_posix(),
         'sha256':hashlib.sha256((OUT/(name+'.fbx')).read_bytes()).hexdigest(),
         'dimensionsCm':list(ob.dimensions),'triangles':len(ob.data.loop_triangles),
-        'materials':[m.name for m in ob.data.materials]})
+        'materials':[m.name for m in ob.data.materials],
+        'vertexColorContract':'Linear ArtMasks: R=cloth motif amount; G/B/A=1',
+        'boundsCm':{'min':[min(v.co[a] for v in ob.data.vertices) for a in range(3)],
+                    'max':[max(v.co[a] for v in ob.data.vertices) for a in range(3)]}})
     ob.location=((len(assets)-1)%5*850,((len(assets)-1)//5)*900,0)
     parts=[];print('EXPORTED',name,assets[-1],flush=True)
 
@@ -130,7 +161,7 @@ def finish(name):
 for variant in [0,1]:
     inner=140;outer=196;spring=285;stretch=1.0 if variant==0 else 1.25
     for side in [-1,1]:
-        for row in range(6):box((side*168,0,23.5+row*47.5),(55,83,46),'Stone',1.3)
+        for row in range(6):masonry((side*168,0,23.5+row*47.5),(55,83,46),1100+variant*100+side*10+row,1.3)
         for radius,height in [(33,0),(29,20),(23,45)]:
             box((side*204,-42,height+10),(radius*2,62,20),'Stone',1.5)
         lathe([(0,55),(25,55),(25,70),(19,84),(16,92),(16,270),(23,285),(28,292),(28,307),(0,307)],p=(side*204,-37,0),flutes=.07)
@@ -139,12 +170,18 @@ for variant in [0,1]:
     for i in range(28):
         a=i*math.pi/28+.0025;b=(i+1)*math.pi/28-.0025
         poly=[(r*math.cos(t),spring+r*math.sin(t)*stretch) for r,t in [(inner,a),(outer,a),(outer,b),(inner,b)]]
-        extrusion(poly,-3,86,'Stone',1.1)
+        extrusion(poly,-3+math.sin(i*2.39+variant)*.35,86,'Stone',1.1)
     for radius,yy,rr in [(137,-52,2.2),(153,-51,1.4),(201,-48,4.0),(214,-43,2.5)]:
         tube([(radius*math.cos(t*math.pi/96),yy,spring+radius*math.sin(t*math.pi/96)*stretch) for t in range(97)],rr,'Stone' if rr>2 else 'Brass')
     for side in [-1,1]:
         rosette(side*178,-53,470 if variant==0 else 505,24,'Stone')
     extrusion([(-22,455 if variant==0 else 489),(22,455 if variant==0 else 489),(28,507 if variant==0 else 562),(-28,507 if variant==0 else 562)],-13,100,'Stone',1.5)
+    # Recessed, separately bedded threshold slabs with a worn central walking line.
+    for slab in range(3):
+        masonry((-91+slab*91,-5,3),(89,108,6),1800+variant*10+slab,.9)
+    for side in [-1,1]:
+        # A concave shoe at each jamb makes the dressed stone meet the pavement.
+        extrusion([(side*141,6),(side*191,6),(side*191,19),(side*147,19)],-45,19,'Stone',1)
     finish('SM_MarketArch_'+('Round' if variant==0 else 'Tall'))
 
 # Double timber door: boards, inset panels, rim mouldings, hinges and pull rings.
@@ -191,19 +228,49 @@ for y in [-24,24]:tube([(x,y,z) for x,z in poly],2,'Stone',cyclic=True)
 rosette(-14,-27,-62,20,'Brass')
 finish('SM_MarketCorbel')
 
-# Balcony assembly: floor slabs, deeply turned balusters and layered handrail.
-for z,width,depth in [(0,380,120),(18,395,132),(28,385,128)]:box((0,0,z),(width,depth,18),'Stone',2)
-for x in [-177,177]:box((x,-42,83),(27,32,115),'Stone',1.5)
-for i in range(11):
-    x=-150+i*30
-    lathe([(0,37),(10,37),(10,44),(6,48),(5,62),(8,72),(9,81),(6,91),(5,105),(9,111),(10,119),(0,119)],p=(x,-46,0),sides=24)
-for z in [125,138]:box((0,-46,z),(390,42 if z==138 else 34,14),'Stone',2)
-for x in [-163,163]:tube([(x,-48,39),(x,-48,119)],2,'Brass')
+# Balcony: three enclosed sides, a stone lattice and a continuous load-bearing rail.
+# The old front-only balusters left the floor edges visibly unfinished at oblique angles.
+for z,width,depth in [(0,380,120),(18,395,132),(28,385,128)]:box((0,0,z),(width,depth,18),'Stone',1.5)
+for x in [-177,0,177]:
+    masonry((x,-46,83),(22,28,102),2100+int(x),1)
+    box((x,-46,132),(30,36,10),'Stone',1.1)
+    box((x,-46,141),(25,31,8),'Stone',1)
+
+def lattice(x,y,z,width,height):
+    # Chamfered octagonal rings have real open apertures and 11 cm of depth.
+    for row in range(2):
+        for col in range(4):
+            cx=x+(col-1.5)*width/4;cz=z+(row-.5)*height/2
+            outer=width/8;inner=outer-4.6
+            for segment in range(8):
+                a=(segment+.5)*math.tau/8;b=(segment+1.5)*math.tau/8
+                poly=[(cx+r*math.cos(t),cz+r*math.sin(t)) for r,t in [(inner,a),(outer,a),(outer,b),(inner,b)]]
+                extrusion(poly,y,11,'Stone',.45)
+            if col<3:box((cx+width/8,y,cz),(5.8,11,6),'Stone',.45)
+            box((cx,y,z),(6,11,5),'Stone',.45)
+    for zz in [z-height*.5-3,z+height*.5+3]:box((x,y,zz),(width+13,16,6),'Stone',.7)
+    for xx in [x-width*.5-2,x+width*.5+2]:box((xx,y,z),(7,16,height+12),'Stone',.7)
+
+for x in [-87,87]:lattice(x,-46,83,148,70)
+for z in [125,139]:box((0,-46,z),(390,36 if z==139 else 28,12),'Stone',1.4)
+for side in [-1,1]:
+    # Returns close the open sides without changing the floor footprint or pivots.
+    for y in [-29,5,39]:
+        lathe([(0,36),(7,36),(7,44),(4,54),(6,65),(5,83),(4,102),(7,114),(7,124),(0,124)],p=(side*177,y,0),sides=20)
+    for z in [124,139]:box((side*177,3,z),(28,108,12),'Stone',1.2)
+    box((side*177,53,84),(22,24,101),'Stone',1)
+# A narrow soffit drip-groove is geometry, preventing the balcony reading as stacked boxes.
+for y in [-62,62]:box((0,y,-7),(367,5,4),'Shadow',.4)
 finish('SM_MarketBalcony')
 
 # Cloth has authored UVs, scalloped valance, sewn hems and visible suspension ropes.
-verts=[];uv=[];faces=[];nx=64;ny=40
-def clothpoint(u,v):return ((u-.5)*500,(v-.5)*330,-32*math.sin(u*math.pi)*math.sin(v*math.pi)+3*math.sin(u*12*math.pi)*math.sin(v*math.pi))
+verts=[];uv=[];faces=[];nx=64;ny=48
+def clothpoint(u,v):
+    belly=-46*math.sin(u*math.pi)*math.sin(v*math.pi)
+    selvage=-11*math.sin(u*math.pi)*(1-.35*v)-6*math.sin(v*math.pi)
+    gathered=2.2*math.sin(u*12*math.pi+.8*v)*math.sin(v*math.pi)
+    diagonal=1.7*math.sin((u+v)*18)*math.sin(u*math.pi)*math.sin(v*math.pi)
+    return ((u-.5)*500,(v-.5)*330,belly+selvage+gathered+diagonal)
 for j in range(ny+1):
     for i in range(nx+1):
         u=i/nx;v=j/ny;verts.append(clothpoint(u,v));uv.append((u*2.4,v*1.6))
@@ -212,15 +279,23 @@ for j in range(ny):
 mesh('Draped fabric',verts,faces,'Cloth',uv,True)
 for v in [0,1]:
     tube([clothpoint(i/64,v) for i in range(65)],1.3,'Cloth')
-for u in [0,1/3,2/3,1]:tube([clothpoint(u,j/40) for j in range(41)],.8,'Cloth')
+for u in [0,1/3,2/3,1]:tube([clothpoint(u,j/48) for j in range(49)],.55,'Cloth')
 verts=[];uv=[];faces=[]
 for i in range(81):
     u=i/80;x=(u-.5)*500
-    for row in [0,1]:verts.append((x,-165-3*math.sin(u*math.pi*12),-row*(34+8*math.sin(u*math.pi*20))));uv.append((u*2.4,-row*.2))
+    top=clothpoint(u,0)[2]
+    for row in [0,1]:verts.append((x,-165-2*math.sin(u*math.pi*12),top-row*(24+6*(1-math.cos(u*math.pi*20)))));uv.append((u*2.4,-row*.2))
 for i in range(80):faces.append((i*2,i*2+1,i*2+3,i*2+2))
 mesh('Scalloped valance',verts,faces,'Cloth',uv,True)
+for i in range(11):
+    u=i/10;x=(u-.5)*500;z=clothpoint(u,0)[2]-25
+    tube([(x,-165,z),(x+1,-165,z-8),(x,-165,z-16)],.9,'Wood')
+    for dx in [-1.3,0,1.3]:tube([(x+dx,-165,z-15),(x+dx,-165,z-26)],.4,'Cloth')
 for x in [-250,250]:
-    for y in [-165,165]:tube([(x,y,0),(x*1.12,y*1.18,20)],1.7,'Wood')
+    for y in [-165,165]:
+        tube([(x+4*math.cos(i*math.tau/20),y+4*math.sin(i*math.tau/20),0) for i in range(21)],.8,'Brass')
+        tube([(x,y,0),(x*1.045,y*1.04,6),(x*1.12,y*1.18,20)],1.25,'Wood')
+        for offset in [-3,0,3]:tube([(x+offset,y,0),(x*1.045+offset,y*1.04,6)],.45,'Wood')
 finish('SM_MarketCanopy')
 
 # Vertical cloth banner with a pointed foot, brass rods and tassels.
@@ -276,12 +351,12 @@ height_image.colorspace_settings.name='Non-Color'
 iw,ih=height_image.size;pixels=array('f',[0.0])*(iw*ih*4);height_image.pixels.foreach_get(pixels)
 def paving_height(x,y):
     # Unreal's FBX coordinate conversion flips Y; sample the eventual world orientation.
-    u=(x/400)%1;v=(-y/400)%1
+    u=(x/200)%1;v=(-y/200)%1
     xx=u*(iw-1);yy=(1-v)*(ih-1);ix=int(xx);iy=int(yy);fx=xx-ix;fy=yy-iy
     def p(a,b):return pixels[(min(ih-1,b)*iw+min(iw-1,a))*4]
-    return ((p(ix,iy)*(1-fx)+p(ix+1,iy)*fx)*(1-fy)+(p(ix,iy+1)*(1-fx)+p(ix+1,iy+1)*fx)*fy)*5.5
+    return ((p(ix,iy)*(1-fx)+p(ix+1,iy)*fx)*(1-fy)+(p(ix,iy+1)*(1-fx)+p(ix+1,iy+1)*fx)*fy)*3.8
 for variant in range(3):
-    verts=[];faces=[];n=160
+    verts=[];faces=[];n=240
     for j in range(n+1):
         for i in range(n+1):
             x=-200+i*400/n;y=-200+j*400/n;verts.append((x,y,paving_height(x,y)))
@@ -302,10 +377,15 @@ for z in [25,175,325]:
     for x in [-9,9]:box((x,16,z+3),(4,4,4),'Brass',.4)
 finish('SM_CopperDownpipe')
 
-# Thin practical drain strip, warm metallic joints and carved stone border.
-for x in [-13,13]:box((x,0,0),(7,200,8),'Stone',.8)
-box((0,0,-3),(23,200,5),'Shadow',0)
-for i in range(25):box((0,-96+i*8,1),(24,2,3),'Brass',.4)
+# Drain: separate dressed curb blocks, recessed patinated grates and finite end frames.
+# Dark aperture, not a bright continuous guide stripe, should dominate the street view.
+for side in [-1,1]:
+    for course in range(4):masonry((side*13,-75+course*50,0),(4.8,49.1,7),3000+side*20+course,.55)
+box((0,0,-3),(23,200,4),'Shadow',0)
+for x in [-10.5,10.5]:box((x,0,-.3),(1.6,198,2),'Copper',.3)
+for y in [-98,0,98]:box((0,y,-.1),(22,2,2.5),'Copper',.3)
+for i in range(24):box((0,-94+i*8,-.6),(21,1.4,2),'Copper',.25)
+for y in [-51,47]:box((0,y,-1.5),(2,85,1.7),'Copper',.25)
 finish('SM_DrainStrip')
 
 # Large turned planter, layered stone lip and deliberate fluting.
@@ -462,5 +542,8 @@ finish('SM_MarketLantern')
 bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'MarketKit.blend'))
 (OUT/'market-kit-manifest.json').write_text(json.dumps({'schemaVersion':1,'author':'Original Borrowed Sun architecture and sculpture; CC0 scan-derived paving',
-    'blenderVersion':bpy.app.version_string,'units':'centimetres','assetCount':len(assets),'assets':assets},indent=2)+'\n',encoding='utf-8')
+    'blenderVersion':bpy.app.version_string,'units':'centimetres','assetCount':len(assets),
+    'pavingMaterialPeriodCm':200,'pavingReliefCm':3.8,
+    'sourceRevision':'starting-area-polish-2026-10-13',
+    'assets':assets},indent=2)+'\n',encoding='utf-8')
 print('MARKET KIT COMPLETE',len(assets),sum(a['triangles'] for a in assets),'triangles',flush=True)

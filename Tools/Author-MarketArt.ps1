@@ -1,8 +1,14 @@
 <# .SYNOPSIS
 Import the reviewed starting-market assets through the pinned Unreal editor.
+.PARAMETER SurfacesOnly
+Rewrite the nine architectural materials using textures already imported into Unreal.
+Requires a successful full import of the matching source revision first. Source hash
+checks verify files on disk; they do not prove existing Unreal meshes/textures match.
+After changing geometry, source textures or paving period, run the full import first.
 #>
 [CmdletBinding()]
-param([switch]$Execute,[switch]$Force,[switch]$WorkshopOnly,[string]$ConfigPath)
+param([switch]$Execute,[switch]$Force,[switch]$WorkshopOnly,[switch]$SurfacesOnly,[string]$ConfigPath)
+if($WorkshopOnly -and $SurfacesOnly){throw 'Choose WorkshopOnly or SurfacesOnly, not both.'}
 . "$PSScriptRoot/Common.ps1"
 $ctx=Get-WorkspaceContext -ConfigPath $ConfigPath
 Assert-Project $ctx
@@ -10,6 +16,7 @@ $identity=Assert-EngineLock $ctx
 $register=Get-Content -LiteralPath (Join-Path $ctx.Root 'Docs/Registers/market-asset-intake.json') -Raw | ConvertFrom-Json
 $sources=@($register.assets | ForEach-Object { $_.files })
 $kit=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/MarketKit/market-kit-manifest.json') -Raw | ConvertFrom-Json
+if(-not $WorkshopOnly -and $kit.pavingMaterialPeriodCm -ne 200){throw 'Paving height geometry and compiled material must both use the reviewed 200 cm period.'}
 $sources+=@($kit.assets)
 $cloth=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/Generated/IndigoSunWeave.provenance.json') -Raw | ConvertFrom-Json
 $sources+=@([pscustomobject]@{path='SourceArt/Generated/IndigoSunWeave.png';sha256=$cloth.sha256})
@@ -28,6 +35,7 @@ $executable=Join-Path $ctx.Config.EngineRoot 'Engine/Binaries/Win64/UnrealEditor
 $arguments=@($ctx.Project,'-run=BSMarketArt','-NullRHI','-unattended','-nop4','-nosplash','-stdout','-FullStdOutLogOutput')
 if($Force){$arguments+='-Force'}
 if($WorkshopOnly){$arguments+='-WorkshopOnly'}
+if($SurfacesOnly){$arguments+='-SurfacesOnly'}
 if(-not $Execute){[pscustomobject]@{DryRun=$true;SourceFiles=$sources.Count;Force=[bool]$Force;Executable=$executable;Arguments=$arguments}|ConvertTo-Json;return}
 $run=New-RunDirectory $ctx 'market-art'
 $arguments+='-abslog='+(Join-Path $run 'engine.log')
@@ -42,6 +50,7 @@ try {
     foreach($asset in $register.assets){foreach($mat in $asset.materials){$expected+=@($mat.maps.PSObject.Properties).Count;if($asset.type -eq 'model'){$expected++}};if($asset.type -eq 'model'){$expected++}}
     if($WorkshopOnly){$expected=0}
     $expected+=1+$workshop.materialCount+$workshop.assetCount+@($wood.files).Count
+    if($SurfacesOnly){$expected=9}
     $paths=@($report.assets | Sort-Object -Unique)
     if($report.success -ne $true -or $report.assetCount -ne $expected -or $paths.Count -ne $expected){throw ('Market report is incomplete. Expected '+$expected+'; found '+$paths.Count)}
     $content=Join-Path (Split-Path $ctx.Project -Parent) 'Content'
@@ -51,7 +60,7 @@ try {
         Assert-MaterializedAsset (Resolve-ContainedPath $content $package)
     }
     Copy-Item -LiteralPath $reportPath -Destination (Join-Path $run 'market-assets.json')
-    $result.Status='Passed';$result.AuthoredPackages=$paths.Count;$result.WorkshopOnly=[bool]$WorkshopOnly
+    $result.Status='Passed';$result.AuthoredPackages=$paths.Count;$result.WorkshopOnly=[bool]$WorkshopOnly;$result.SurfacesOnly=[bool]$SurfacesOnly
     Write-Host ('Market art authored and source hashes verified: '+$run)
 } catch {$result.Status='Failed';throw}
 finally {$result.FinishedUtc=[DateTime]::UtcNow.ToString('o');Write-JsonFile (Join-Path $run 'market-art-result.json') $result}

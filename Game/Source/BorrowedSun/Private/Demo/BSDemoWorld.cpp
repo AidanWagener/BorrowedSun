@@ -4,6 +4,8 @@
 #include "Components/TextRenderComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "UObject/ConstructorHelpers.h"
+#include "EngineUtils.h"
+#include "Engine/World.h"
 
 namespace
 {
@@ -28,6 +30,8 @@ ABSDemoWorld::ABSDemoWorld()
 void ABSDemoWorld::BeginPlay()
 {
     Super::BeginPlay();
+    for (TActorIterator<AActor> It(GetWorld()); It; ++It)
+        if (It->ActorHasTag(TEXT("BorrowedSun.OrisonMacroTerrain"))) { bRegionalTerrain = true; break; }
     if (!Surface) Surface = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/BorrowedSun/Art/M_DemoSurface.M_DemoSurface"));
     LoadCityArt();
     LoadMarketArt();
@@ -38,6 +42,30 @@ void ABSDemoWorld::BeginPlay()
     BuildWorkshopProps();
     SetSeedAvailable(bSeedAvailable);
     ApplyConsequence(AppliedChoice, bConsequenceComplete);
+}
+
+double ABSDemoWorld::RegionalGroundHeight(double X, double Y, double Fallback) const
+{
+    if (!bRegionalTerrain) return Fallback;
+    FHitResult Hit;
+    FCollisionQueryParams Query(SCENE_QUERY_STAT(OrisonScenePlacement), false, this);
+    if (GetWorld()->LineTraceSingleByChannel(Hit, FVector(X,Y,220000), FVector(X,Y,-210000), ECC_Visibility, Query)
+        && Hit.GetActor() && Hit.GetActor()->ActorHasTag(TEXT("BorrowedSun.OrisonMacroTerrain")))
+        return Hit.ImpactPoint.Z;
+    return Fallback;
+}
+
+FVector2D ABSDemoWorld::RegionalGroundRange(double X, double Y, double HalfX, double HalfY, double Fallback) const
+{
+    FVector2D Range(RegionalGroundHeight(X,Y,Fallback));
+    if(!bRegionalTerrain) return Range;
+    // Placement is a one-time construction operation, never unbounded per-frame tracing.
+    for(double DX:{-HalfX,0.,HalfX})for(double DY:{-HalfY,0.,HalfY})
+    {
+        const double Z=RegionalGroundHeight(X+DX,Y+DY,Fallback);
+        Range.X=FMath::Min(Range.X,Z); Range.Y=FMath::Max(Range.Y,Z);
+    }
+    return Range;
 }
 
 void ABSDemoWorld::Shape(UStaticMesh* Mesh, FVector Position, FVector S, FLinearColor Tint, float Glow, bool bCollision, FRotator Rotation, UMaterialInterface* Override, bool bMeshMaterials)

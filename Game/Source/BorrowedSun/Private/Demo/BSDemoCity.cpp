@@ -201,7 +201,14 @@ void ABSDemoWorld::BuildLanternKeeper()
 {
     if(HasMarketArt())
     {
-        const FVector O(15500,0,-1800);
+        const double KeeperX=bRegionalTerrain?25000.:15500.;
+        const FVector2D Ground=RegionalGroundRange(KeeperX,0,2000,2150,-1800);
+        const FVector O(KeeperX,0,bRegionalTerrain?Ground.Y+85:-1800);
+        if(bRegionalTerrain)
+        {
+            const double Bottom=Ground.X-150,Top=O.Z-70;
+            MarketBox({O.X,O.Y,(Bottom+Top)*.5},{40,43,(Top-Bottom)/100},TEXT("M_MarketStone"));
+        }
         MarketPart(TEXT("SM_KeeperSculpt"),O,FVector(7.5),FRotator(0,90,0));
         MarketPart(TEXT("SM_SolarHalo"),O,FVector(7.5),FRotator(0,90,0));
         for(int Step=0;Step<6;++Step)MarketBox(O+FVector(0,0,Step*135.),{40.-Step*3,43.-Step*3,1.4},TEXT("M_MarketStone"));
@@ -249,21 +256,26 @@ void ABSDemoWorld::BuildLanternKeeper()
 
 void ABSDemoWorld::BuildSky()
 {
-    Box({0,0,-5000},{1500,1500,4},FLinearColor(.025,.13,.17),0,false);
+    if (!bRegionalTerrain) Box({0,0,-5000},{1500,1500,4},FLinearColor(.025,.13,.17),0,false);
     // Outer city is only a silhouette layer; all detailed art is concentrated on the quay.
     FRandomStream R(102620);
     for(int I=0;I<48;++I)
     {
         const double A=I*2*PI/48, Radius=R.FRandRange(12000,24500), H=R.FRandRange(1700,4600);
-        const FVector P(FMath::Cos(A)*Radius,FMath::Sin(A)*Radius,H*.5-3400);
+        if(bRegionalTerrain && (I<=2 || I>=46))continue; // Preserve the market's view corridor toward the Keeper and bay.
+        const double X=FMath::Cos(A)*Radius,Y=FMath::Sin(A)*Radius;
+        const FVector2D Ground=RegionalGroundRange(X,Y,950,900,-3400);
+        const double Base=bRegionalTerrain?Ground.Y+15:-3400;
+        const FVector P(X,Y,Base+H*.5);
         const double WX=R.FRandRange(9,19),WY=R.FRandRange(9,17);
         CityBox(P,{WX,WY,H/100},TEXT("M_CityPlaster"),I%3?CityIvory:CityOchre,false);
         CityBox(P+FVector(0,0,H*.5),{WX+.6,WY+.6,.8},TEXT("M_CityStone"),CityPale,false);
         // Buildings meet a harbor foundation instead of terminating above the water plane.
-        CityBox({P.X,P.Y,-4140},{19,18,16},TEXT("M_CityStone"),CityIvory,false);
+        const double Bottom=Ground.X-150;
+        CityBox({P.X,P.Y,bRegionalTerrain?(Base+Bottom)*.5:-4140},{19,18,bRegionalTerrain?(Base-Bottom)/100:16.},TEXT("M_CityStone"),CityIvory,false);
         if(HasMarketArt())for(int Floor=0;Floor<3;++Floor)for(double DX:{-320.,320.})
         {
-            const double Z=-3200+Floor*550;if(Z+420>P.Z+H*.5)continue;
+            const double Z=Base+200+Floor*550;if(Z+420>P.Z+H*.5)continue;
             MarketPart(TEXT("SM_MarketWindow"),{P.X+DX,P.Y-WY*50-15,Z},{1.3,1.3,1.3},FRotator(0,180,0));
             MarketPart(TEXT("SM_MarketWindow"),{P.X-WX*50-15,P.Y+DX,Z},{1.3,1.3,1.3},FRotator(0,90,0));
         }
@@ -276,10 +288,11 @@ void ABSDemoWorld::BuildSky()
         FRandomStream Harbor(70412);
         for(int Row=0;Row<4;++Row)for(int I=-5;I<=5;++I)
         {
-            if(FMath::Abs(I)<2&&Row<2)continue;
+            if(FMath::Abs(I)<2&&(bRegionalTerrain||Row<2))continue;
             const double X=10200+Row*2300+Harbor.FRandRange(-350,350),Y=I*1400.+Harbor.FRandRange(-220,220);
-            const double H=Harbor.FRandRange(1700,4100),Base=-1950+Row*150;
-            MarketBox({X,Y,(Base-4800)*.5},{16.,18.,(Base+4800)/100},TEXT("M_MarketStone"));
+            const FVector2D Ground=RegionalGroundRange(X,Y,800,900,-1950+Row*150);
+            const double H=Harbor.FRandRange(1700,4100),Base=bRegionalTerrain?Ground.Y+15:-1950+Row*150,Bottom=Ground.X-150;
+            MarketBox({X,Y,bRegionalTerrain?(Base+Bottom)*.5:(Base-4800)*.5},{16.,18.,bRegionalTerrain?(Base-Bottom)/100:(Base+4800)/100},TEXT("M_MarketStone"));
             MarketBox({X,Y,Base+H*.5},{10.,11.,H/100},TEXT("M_MarketPlaster"));
             for(double Z:{Base+500,Base+1100,Base+H-40})MarketBox({X,Y,Z},{10.6,11.6,.35},TEXT("M_MarketStone"));
             for(int Floor=0;Floor<4;++Floor)for(double DY:{-300.,300.})

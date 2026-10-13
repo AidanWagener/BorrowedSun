@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "terrain_id": "NACRE-ORISON-MACRO-001",
+  "edition": "0.1",
+  "resolution": [
+    1009,
+    1009
+  ],
+  "engineScaleCm": [
+    2678.5714285714284,
+    2380.952380952381,
+    800
+  ],
+  "runtimeOriginMetres": [
+    -4754.3,
+    -1365.3,
+    91.92
+  ],
+  "status": "Authored local macro terrain source; Unreal integration and play verification recorded separately",
+  "source_city_plan": "Docs/World/Cities/orison_city_plan.json",
+  "source_city_plan_sha256": "830705a15a95517c2016b3418429c4d74b15280a740155e85e796891ffe6f3b7",
+  "generator": "Tools/World/build_orison_heightfield.py",
+  "heightmap_file": "Orison_MacroTerrain_1009.r16",
+  "sha256": "08b8506576e172427b2efd4fa5d5274c693cb24517e33066c9eb00f9014a2005",
+  "encoding": {
+    "type": "uint16",
+    "endianness": "little",
+    "header_bytes": 0,
+    "row_order": "south to north (ascending city-local y)",
+    "column_order": "west to east (ascending city-local x)",
+    "row_stride_bytes": 2018,
+    "height_m": "(raw - 32768) / 16",
+    "sea_level_raw": 32768,
+    "quantization_step_m": 0.0625
+  },
+  "grid": {
+    "width": 1009,
+    "height": 1009,
+    "quads_per_component": 63,
+    "sections_per_component": 1,
+    "components_x": 16,
+    "components_y": 16,
+    "extent_m": [
+      27000,
+      24000
+    ],
+    "bounds_local_m": {
+      "min_x": -13500,
+      "max_x": 13500,
+      "min_y": -12000,
+      "max_y": 12000
+    },
+    "sample_spacing_m": [
+      26.785714285714285,
+      23.80952380952381
+    ]
+  },
+  "unreal": {
+    "landscape_scale_cm": [
+      2678.5714285714284,
+      2380.952380952381,
+      800
+    ],
+    "landscape_actor_location_cm": [
+      -874570.0000000001,
+      -1063470.0,
+      -9192.0
+    ],
+    "runtime_zero_city_local_m": [
+      -4754.3,
+      -1365.3,
+      91.92
+    ],
+    "city_to_runtime": "(city_local_m - runtime_zero_city_local_m) * 100",
+    "sea_level_runtime_z_cm": -9192.0,
+    "world_axes": "X east, Y north, Z altitude relative to runtime zero; local flat patch, not ECEF"
+  },
+  "height_range_m": [
+    -209.8125,
+    1483.1875
+  ],
+  "control_counts": {
+    "canonical_rim": 42,
+    "dry_pois": 21,
+    "excluded_overwater_pois": 3
+  },
+  "excluded_overwater_poi_ids": [
+    "ORI-POI-012",
+    "ORI-POI-021",
+    "ORI-POI-024"
+  ],
+  "surface_method": {
+    "baseline": "Coast-to-rim interpolation with authored exterior falloff, bounded deterministic sculpted folds and open-bay bathymetry",
+    "correction": "Compact support C2 Wendland radial basis correction at rim and dry POIs, faded to zero at the coast",
+    "rbf_support_radius_m": 3500.0,
+    "rbf_matrix_condition_number": 27.06513,
+    "inland_water_policy": "No new inland seas: positive floor on canonical land",
+    "shore_resolution_note": "Canonical vector shore has zero source elevation; coarse R16 interpolation introduces bounded near-shore altitude residuals reported below"
+  },
+  "starting_area_preservation": {
+    "center_city_local_m": [
+      -4754.3,
+      -1365.3
+    ],
+    "flat_radius_m": 100.0,
+    "transition_end_radius_m": 280.0,
+    "target_ground_altitude_m": 91.52,
+    "encoded_ground_altitude_m": 91.5,
+    "runtime_ground_z_cm": -42.0,
+    "existing_quay_top_runtime_z_cm": 0,
+    "workshop_position_city_local_m": [
+      -4780,
+      -1370,
+      92
+    ],
+    "workshop_anchor_runtime_cm": [
+      -2570,
+      -470,
+      8
+    ],
+    "intentional_exception": "Local quay pad ground is 0.48 m below workshop deck altitude; retains existing functional prototype geometry"
+  },
+  "validation": {
+    "passed": true,
+    "r16_byte_count": 2036162,
+    "height_quantization_max_error_m": 0.03125,
+    "rim_control_max_grid_residual_m": 4.8624,
+    "coast_sample_count": 603,
+    "coast_grid_max_abs_altitude_m": 4.0909,
+    "coast_side_probe_count": 1206,
+    "all_coast_side_probes_have_correct_sign": true,
+    "dry_poi_grid_residuals": [
+      {
+        "id": "ORI-POI-001",
+        "target_altitude_m": 16.0,
+        "sampled_grid_altitude_m": 15.9655,
+        "residual_m": -0.0345
+      },
+      {
+        "id": "ORI-POI-002",
+        "target_altitude_m": 42.0,
+        "sampled_grid_altitude_m": 41.7509,
+        "residual_m": -0.2491
+      },
+      {
+        "id": "ORI-POI-003",
+        "target_altitude_m": 92.0,
+        "sampled_grid_altitude_m": 91.5,
+        "residual_m": -0.5
+      },
+      {
+        "id": "ORI-POI-004",
+        "target_altitude_m": 68.0,
+        "sampled_grid_altitude_m": 68.0367,
+        "residual_m": 0.0367
+      },
+      {
+        "id": "ORI-POI-005",
+        "target_altitude_m": 225.0,
+        "sampled_grid_altitude_m": 224.9808,
+        "residual_m": -0.0192
+      },
+      {
+        "id": "ORI-POI-006",
+        "target_altitude_m": 260.0,
+        "sampled_grid_altitude_m": 259.9687,
+        "residual_m": -0.0313
+      },
+      {
+        "id": "ORI-POI-007",
+        "target_altitude_m": 390.0,
+        "sampled_grid_altitude_m": 390.014,
+        "residual_m": 0.014
+      },
+      {
+        "id": "ORI-POI-008",
+        "target_altitude_m": 350.0,
+        "sampled_grid_altitude_m": 349.9808,
+        "residual_m": -0.0192
+      },
+      {
+        "id": "ORI-POI-009",
+        "target_altitude_m": 160.0,
+        "sampled_grid_altitude_m": 160.009,
+        "residual_m": 0.009
+      },
+      {
+        "id": "ORI-POI-010",
+        "target_altitude_m": 115.0,
+        "sampled_grid_altitude_m": 114.99,
+        "residual_m": -0.01
+      },
+      {
+        "id": "ORI-POI-011",
+        "target_altitude_m": 31.0,
+        "sampled_grid_altitude_m": 30.9817,
+        "residual_m": -0.0183
+      },
+      {
+        "id": "ORI-POI-013",
+        "target_altitude_m": 705.0,
+        "sampled_grid_altitude_m": 705.0002,
+        "residual_m": 0.0002
+      },
+      {
+        "id": "ORI-POI-014",
+        "target_altitude_m": 585.0,
+        "sampled_grid_altitude_m": 584.984,
+        "residual_m": -0.016
+      },
+      {
+        "id": "ORI-POI-015",
+        "target_altitude_m": 590.0,
+        "sampled_grid_altitude_m": 589.9528,
+        "residual_m": -0.0472
+      },
+      {
+        "id": "ORI-POI-016",
+        "target_altitude_m": 470.0,
+        "sampled_grid_altitude_m": 470.0092,
+        "residual_m": 0.0092
+      },
+      {
+        "id": "ORI-POI-017",
+        "target_altitude_m": 980.0,
+        "sampled_grid_altitude_m": 979.9877,
+        "residual_m": -0.0123
+      },
+      {
+        "id": "ORI-POI-018",
+        "target_altitude_m": 950.0,
+        "sampled_grid_altitude_m": 949.9312,
+        "residual_m": -0.0688
+      },
+      {
+        "id": "ORI-POI-019",
+        "target_altitude_m": 1370.0,
+        "sampled_grid_altitude_m": 1369.895,
+        "residual_m": -0.105
+      },
+      {
+        "id": "ORI-POI-020",
+        "target_altitude_m": 1305.0,
+        "sampled_grid_altitude_m": 1304.9449,
+        "residual_m": -0.0551
+      },
+      {
+        "id": "ORI-POI-022",
+        "target_altitude_m": 18.0,
+        "sampled_grid_altitude_m": 17.9058,
+        "residual_m": -0.0942
+      },
+      {
+        "id": "ORI-POI-023",
+        "target_altitude_m": 805.0,
+        "sampled_grid_altitude_m": 804.9875,
+        "residual_m": -0.0125
+      }
+    ],
+    "preserved_quay_grid_altitude_m": 91.5,
+    "slope_degrees": {
+      "maximum": 81.473,
+      "percentile_99": 21.894
+    },
+    "unreal_import_collision_render_and_play_verified": false,
+    "negative_controls": {
+      "passed": true,
+      "rejected_corruption_count": 8,
+      "rejected_corruptions": [
+        "north_south_rows_reversed",
+        "big_endian_source_misread_as_little_endian",
+        "wrong_sea_datum_plus_10m",
+        "fabricated_land_in_open_bay",
+        "quay_pad_buried_by_terrain",
+        "saturated_uint16_height",
+        "east_edge_closed_with_false_beach",
+        "supported_overwater_deck_used_as_ground"
+      ]
+    }
+  },
+  "limitations": [
+    "First sculpted 27 x 24 km macro surface, not a finished city or a whole planet",
+    "Heightfield cannot model caves, bridges, overhangs or supported water structures",
+    "Dry POI heights are planning placement anchors used to shape ground, not surveyed foundations",
+    "Existing prototype landmarks remain compressed; this file establishes only the workshop coordinate anchor",
+    "No hydraulic erosion, actual drainage validation, vegetation, roads, interiors, settlement parcels or navigation engineering",
+    "Local flat altitude patch; planet curvature and coordinate handoff need a separate verified runtime layer",
+    "Approximately 24-27 m horizontal samples require separate finer terrain and meshes for foot-scale detail",
+    "Terrain relief is bounded authored fiction, not a geological or oceanographic simulation"
+  ]
+}

@@ -226,6 +226,8 @@ void ABSDemoWorld::BuildStartingMarket()
     // Geometric joints remain visible at player height, while a continuous collider avoids snagging.
     for(int X=0;X<15;++X)for(int Y=0;Y<5;++Y)
         MarketPart(FName(*FString::Printf(TEXT("SM_FlagstonePatch_%d"),(X+Y*2)%3)),{-4000+X*400.,-800+Y*400.,3},{1,1,1});
+    // The recessed bed must clear the displaced paving (world maximum 6.768 cm).
+    // Lowering the complete assembly hides its grates and leaves only bright curb lines.
     for(int I=0;I<25;++I)for(double Y:{-220.,400.})MarketPart(TEXT("SM_DrainStrip"),{-3800+I*200.,Y,8},{1,1,1},FRotator(0,90,0));
     MarketPart(TEXT("SM_SunseedReliquary"),SeedLocation()-FVector(0,0,142));
     MarketBox(SeedLocation()-FVector(0,0,101),{1.2,1.2,.80},TEXT("M_MarketStone"),true);

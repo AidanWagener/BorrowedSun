@@ -1,6 +1,6 @@
 # Borrowed Sun: the living planet bible
 
-**Authoring in progress.** This directory is the new authoritative home for the full-world project requested on 13 October 2026. It does not yet contain the completed planet bible or a constructed planet. The [ordinary-prop integration](../Operations/CITY_OBJECTS_2026-10-13.md) has passed its Development handoff; the active phase is now deep worldbuilding. Planet construction follows completion and coherence review of the full canon and lore.
+**Authoring and construction in progress.** This directory is the authoritative home for the full-world project requested on 13 October 2026. It does not yet contain the completed planet bible or a constructed planet. The user's latest instruction authorizes starting construction now, with necessary canon work continuing alongside it; this supersedes the earlier bible-first prerequisite. The starting-area art pass also continues against the approved gameplay mockup. The [ordinary-prop integration](../Operations/CITY_OBJECTS_2026-10-13.md) remains the verified gameplay baseline.
 
 Read [canon reconciliation](CANON_RECONCILIATION.md) and the [initial research ledger](RESEARCH_FOUNDATIONS.md) next. The unchanged [original game specification](Sources/Original_Game_Specification_2026-10-12.md) is preserved as a historical design source, not presented as newly written planet lore.
 

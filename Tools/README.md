@@ -12,6 +12,14 @@ Dry runs of Build and Test validate the project and show the plan, but do not wr
 
 ## City art authoring
 
+### Orison terrain and starting-area look
+
+`Tools/World/build_orison_heightfield.py` generates the canonical 27 x 24 km local macro heightfield; `--check` verifies deterministic bytes, source controls and deliberate corruption cases. This is the first local terrain frame, not planetary streaming. Read `SourceArt/World/Orison/README.md` for units and limitations.
+
+After compiling, `Tools/Author-OrisonTerrain.ps1 -Execute` adds the Landscape and planning sea to the **existing** main game map. A later regeneration requires `-ReplaceOwned`; only the tagged terrain/sea actors are replaced. The source hash, city-plan hash, dimensions, scale and workshop datum are checked before the engine launches. `Tools/Author-StartingAreaLook.ps1 -Execute` updates the existing named daylight actors without rebuilding scene geometry. Both scripts save fresh evidence under `Artifacts` and leave visual/play verification to `Demo.ps1`.
+
+The revised MarketKit uses a **200 cm** paving texture/height-sampling period. Keep those values paired. Linear cloth vertex colour R controls motif amount on canopies, drapes and sacks; the importer replaces their vertex colours. `Tools/Author-MarketArt.ps1 -SurfacesOnly -Force -Execute` rebuilds the nine architectural materials from already imported textures without reimporting meshes or workshop content. Use the full import when geometry, textures or imported masks change. `-SurfacesOnly` and `-WorkshopOnly` are mutually exclusive. Authoring remains one Unreal writer at a time.
+
 The approved art direction is in `Docs/Art/ART_DIRECTION.md`. Reviewed CC0 source maps and FBX files are in `SourceArt/PolyHaven`, tracked with LFS; their hashes are in the two city intake registers. Fetch scripts use the public Poly Haven API with an identifying user agent and verify source checksums. No live asset API is used by the game.
 
 ```powershell

@@ -7,6 +7,7 @@
 #include "Demo/BSDemoSmokeRunner.h"
 #include "Demo/BSDemoAudioComponent.h"
 #include "Objects/BSPhysicalObject.h"
+#include "World/BSOrisonFrame.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
 #include "EngineUtils.h"
@@ -67,7 +68,10 @@ void ABSDemoGameMode::Tick(float Dt)
         }
         else { RelayRetryDelay=8; Ship->StopFlight(); Say(State->LastError); }
     }
-    if(PC->GetPawn() && PC->GetPawn()->GetActorLocation().Z < -500)
+    // Regional hills descend legitimately below the old demo's Z=-500 void plane.
+    // Until swimming exists, recovery begins three metres below the planning sea datum.
+    const double RecoveryFloor=District && District->HasRegionalTerrain()?FBSOrisonFrame::ToRuntime(FVector(0,0,-3)).Z:-500.;
+    if(PC->GetPawn() && PC->GetPawn()->GetActorLocation().Z < RecoveryFloor)
         Recover(PC);
 }
 

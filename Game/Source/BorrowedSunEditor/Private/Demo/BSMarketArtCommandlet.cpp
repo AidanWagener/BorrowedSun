@@ -8,6 +8,8 @@
 #include "Factories/FbxImportUI.h"
 #include "Factories/FbxStaticMeshImportData.h"
 #include "HAL/FileManager.h"
+#include "HAL/PlatformFileManager.h"
+#include "HAL/PlatformFile.h"
 #include "Materials/Material.h"
 #include "Materials/MaterialExpressionConstant.h"
 #include "Materials/MaterialExpressionConstant3Vector.h"
@@ -44,6 +46,9 @@ namespace BSMarketArt
         if(!Asset)return false;
         auto* P=Asset->GetOutermost();P->MarkAsFullyLoaded();P->MarkPackageDirty();
         const FString File=FPackageName::LongPackageNameToFilename(P->GetName(),FPackageName::GetAssetPackageExtension());
+        // Only the exact package currently being authored may shed its local LFS read-only flag.
+        if(!P->GetName().StartsWith(Base))return false;
+        if(IFileManager::Get().IsReadOnly(*File) && !FPlatformFileManager::Get().GetPlatformFile().SetReadOnly(*File,false))return false;
         IFileManager::Get().MakeDirectory(*FPaths::GetPath(File),true);
         FSavePackageArgs Args;Args.TopLevelFlags=RF_Public|RF_Standalone;
         if(!UPackage::SavePackage(P,Asset,*File,Args))return false;
@@ -118,7 +123,8 @@ float2 nz=(Texture2DSample(N,NSampler,p.xy).rg*2-1)*Strength;
 NormalOut=normalize(float3(sign(V.x)*sqrt(saturate(1-dot(nx,nx))),nx.x,nx.y)*w.x+float3(ny.x,sign(V.y)*sqrt(saturate(1-dot(ny,ny))),ny.y)*w.y+float3(nz.x,nz.y,sign(V.z)*sqrt(saturate(1-dot(nz,nz))))*w.z);
 return col*Tint.rgb;
 )HLSL");
-        if(Name==TEXT("M_MarketPlaster"))C->Code.ReplaceInline(TEXT("return col*Tint.rgb;"),TEXT("return lerp(col*Tint.rgb,float3(.68,.60,.47),.68);"));
+        if(Name==TEXT("M_MarketPlaster"))C->Code.ReplaceInline(TEXT("return col*Tint.rgb;"),TEXT("return lerp(col*Tint.rgb,float3(.59,.54,.43),.38);"));
+        if(Name==TEXT("M_MarketStone"))C->Code.ReplaceInline(TEXT("return col*Tint.rgb;"),TEXT("float luminance=dot(col,float3(.2126,.7152,.0722)); return lerp(col,luminance.xxx,.62)*Tint.rgb;"));
         C->RebuildOutputs();auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,C);E->Roughness.Connect(1,C);E->Normal.Connect(2,C);E->Metallic.Connect(0,Scalar(M,Metal));
         M->PostEditChange();return Save(M)?M:nullptr;
     }
@@ -191,8 +197,9 @@ return lerp(lerp(Tint.rgb*(.975+patch*.05),EdgeTint.rgb,worn),float3(.026,.023,.
     {
         auto* M=NewMaterial(TEXT("M_MarketCloth"));M->TwoSided=true;M->SetShadingModel(MSM_TwoSidedFoliage);
         auto* E=M->GetEditorOnlyData();auto* D=Sample(M,Albedo,SAMPLERTYPE_Color);
-        auto* Pattern=Expr<UMaterialExpressionMultiply>(M);Pattern->A.Connect(0,D);Pattern->B.Connect(0,Scalar(M,.65f));
-        auto* Dyed=Expr<UMaterialExpressionAdd>(M);Dyed->A.Connect(0,Pattern);Dyed->B.Connect(0,Color(M,FLinearColor(.01f,.025f,.065f)));E->BaseColor.Connect(0,Dyed);
+        auto* PanelMask=Expr<UMaterialExpressionMultiply>(M);PanelMask->A.Connect(1,Expr<UMaterialExpressionVertexColor>(M));PanelMask->B.Connect(0,Scalar(M,.55f));
+        auto* Pattern=Expr<UMaterialExpressionMultiply>(M);Pattern->A.Connect(0,D);Pattern->B.Connect(0,PanelMask);
+        auto* Dyed=Expr<UMaterialExpressionAdd>(M);Dyed->A.Connect(0,Pattern);Dyed->B.Connect(0,Color(M,FLinearColor(.025f,.040f,.085f)));E->BaseColor.Connect(0,Dyed);
         E->Roughness.Connect(0,Scalar(M,.9f));E->Opacity.Connect(0,Scalar(M,.38f));
         auto* Sub=Expr<UMaterialExpressionMultiply>(M);Sub->A.Connect(0,Dyed);Sub->B.Connect(0,Scalar(M,.65f));E->SubsurfaceColor.Connect(0,Sub);
         auto* N=LoadObject<UTexture2D>(nullptr,TEXT("/Game/BorrowedSun/City/Textures/T_denmin_fabric_02_nor_dx.T_denmin_fabric_02_nor_dx"));
@@ -207,7 +214,7 @@ return lerp(lerp(Tint.rgb*(.975+patch*.05),EdgeTint.rgb,worn),float3(.026,.023,.
         UI->StaticMeshImportData->bCombineMeshes=true;
         UI->StaticMeshImportData->bAutoGenerateCollision=Name==TEXT("SM_MarketTable")||Name==TEXT("SM_CarvedPlanter")||Name==TEXT("SM_wooden_crate_02")||Name==TEXT("SM_wooden_stool_01")||Name==TEXT("SM_WorkshopBench")||Name==TEXT("SM_WorkshopRack");
         UI->StaticMeshImportData->NormalImportMethod=FBXNIM_ImportNormals;
-        if(Name.StartsWith(TEXT("SM_Workshop")))UI->StaticMeshImportData->VertexColorImportOption=EVertexColorImportOption::Replace;
+        if(Name.StartsWith(TEXT("SM_Workshop")) || Name==TEXT("SM_MarketCanopy") || Name==TEXT("SM_MarketDrape") || Name==TEXT("SM_WovenSackCluster"))UI->StaticMeshImportData->VertexColorImportOption=EVertexColorImportOption::Replace;
         auto* SM=Cast<UStaticMesh>(UFactory::StaticImportObject(UStaticMesh::StaticClass(),P,*Name,RF_Public|RF_Standalone,*Source(Relative),nullptr,Factory));
         if(!SM)return false;
         for(int I=0;I<SM->GetStaticMaterials().Num();++I)
@@ -311,6 +318,8 @@ UBSMarketArtCommandlet::UBSMarketArtCommandlet(){IsClient=false;IsServer=false;I
 int32 UBSMarketArtCommandlet::Main(const FString& Params)
 {
     using namespace BSMarketArt;SavedAssets.Reset();
+    const bool bSurfacesOnly=FParse::Param(*Params,TEXT("SurfacesOnly"));
+    if(bSurfacesOnly && FParse::Param(*Params,TEXT("WorkshopOnly")))return 2;
     if(IFileManager::Get().DirectoryExists(*(FPaths::ProjectContentDir()/TEXT("BorrowedSun/Market")))&&!FParse::Param(*Params,TEXT("Force")))return 2;
     if(FParse::Param(*Params,TEXT("WorkshopOnly")))return ImportWorkshop()?WriteReport():10;
     const auto Intake=Read(TEXT("Docs/Registers/market-asset-intake.json"));const auto Kit=Read(TEXT("SourceArt/MarketKit/market-kit-manifest.json"));
@@ -319,6 +328,7 @@ int32 UBSMarketArtCommandlet::Main(const FString& Params)
     for(const auto& Value:Intake->GetArrayField(TEXT("assets")))
     {
         const auto Asset=Value->AsObject();const FString Id=Asset->GetStringField(TEXT("id"));const bool Model=Asset->GetStringField(TEXT("type"))==TEXT("model");
+        if(bSurfacesOnly && Model)continue;
         TMap<FString,UMaterial*> PropMats;bool MaskedModel=false;
         for(const auto& MatValue:Asset->GetArrayField(TEXT("materials")))
         {
@@ -327,7 +337,9 @@ int32 UBSMarketArtCommandlet::Main(const FString& Params)
             for(const FString& Kind:TArray<FString>{TEXT("diff"),TEXT("normal"),TEXT("rough"),TEXT("metal"),TEXT("ao"),TEXT("opacity")})
             {
                 FString Path;if(!Definition->GetObjectField(TEXT("maps"))->TryGetStringField(Kind,Path))continue;
-                auto* T=Texture(TEXT("T_")+Id+TEXT("_")+Key+TEXT("_")+Kind,Path,Kind,Definition->GetBoolField(TEXT("flipNormalGreen")));
+                const FString TextureName=TEXT("T_")+Id+TEXT("_")+Key+TEXT("_")+Kind;
+                auto* T=bSurfacesOnly?LoadObject<UTexture2D>(nullptr,*(Base+TEXT("Textures/")+TextureName+TEXT(".")+TextureName))
+                    :Texture(TextureName,Path,Kind,Definition->GetBoolField(TEXT("flipNormalGreen")));
                 if(!T)return 4;Maps.Add(Kind,T);
             }
             if(Model)
@@ -342,17 +354,20 @@ int32 UBSMarketArtCommandlet::Main(const FString& Params)
             if(File.IsEmpty()||!ImportMesh(TEXT("SM_")+Id,File,PropMats,!MaskedModel||Id==TEXT("tree_small_02")))return 6;
         }
     }
-    KitMats.Add(TEXT("Stone"),TiledMaterial(TEXT("M_MarketStone"),Surfaces.FindChecked(TEXT("sandstone_cracks")),220,FLinearColor(1.50f,1.47f,1.32f),0,.25f));
-    KitMats.Add(TEXT("Plaster"),TiledMaterial(TEXT("M_MarketPlaster"),Surfaces.FindChecked(TEXT("worn_cracked_plaster")),420,FLinearColor(1.75f,1.60f,1.34f),0,.20f));
+    KitMats.Add(TEXT("Stone"),TiledMaterial(TEXT("M_MarketStone"),Surfaces.FindChecked(TEXT("sandstone_cracks")),140,FLinearColor(1.32f,1.30f,1.19f),0,.19f));
+    KitMats.Add(TEXT("Plaster"),TiledMaterial(TEXT("M_MarketPlaster"),Surfaces.FindChecked(TEXT("worn_cracked_plaster")),260,FLinearColor(1.35f,1.40f,1.40f),0,.14f));
     KitMats.Add(TEXT("Wood"),TiledMaterial(TEXT("M_MarketWood"),Surfaces.FindChecked(TEXT("medieval_wood")),280,FLinearColor(.85f,.69f,.5f),0,.45f));
     KitMats.Add(TEXT("Brass"),Solid(TEXT("M_MarketBrass"),FLinearColor(.65f,.38f,.11f),.85f,.32f));
     KitMats.Add(TEXT("Copper"),TiledMaterial(TEXT("M_MarketCopper"),Surfaces.FindChecked(TEXT("worn_cracked_plaster")),170,FLinearColor(.16f,.34f,.27f),.65f,.12f));
     KitMats.Add(TEXT("Shadow"),Solid(TEXT("M_MarketShadow"),FLinearColor(.025f,.035f,.039f),0,.96f));
     KitMats.Add(TEXT("Ceramic"),Solid(TEXT("M_MarketCeramic"),FLinearColor(.36f,.12f,.036f),0,.29f));
-    auto* Cloth=Texture(TEXT("T_IndigoSunWeave"),TEXT("SourceArt/Generated/IndigoSunWeave.png"),TEXT("diff"));if(!Cloth)return 7;
+    auto* Cloth=bSurfacesOnly?LoadObject<UTexture2D>(nullptr,TEXT("/Game/BorrowedSun/Market/Textures/T_IndigoSunWeave.T_IndigoSunWeave"))
+        :Texture(TEXT("T_IndigoSunWeave"),TEXT("SourceArt/Generated/IndigoSunWeave.png"),TEXT("diff"));if(!Cloth)return 7;
     KitMats.Add(TEXT("Cloth"),Fabric(Cloth));
-    auto* Floor=TiledMaterial(TEXT("M_MarketPaving"),Surfaces.FindChecked(TEXT("monastery_stone_floor")),400,FLinearColor(1.15f,1.06f,.94f),0,.3f);
+    // Keep this 200 cm period equal to Build-MarketKit.py's displaced flagstone height sampling.
+    auto* Floor=TiledMaterial(TEXT("M_MarketPaving"),Surfaces.FindChecked(TEXT("monastery_stone_floor")),200,FLinearColor(1.15f,1.06f,.94f),0,.3f);
     if(!Floor)return 7;for(const auto& Pair:KitMats)if(!Pair.Value)return 7;
+    if(bSurfacesOnly)return WriteReport();
     for(const auto& Value:Kit->GetArrayField(TEXT("assets")))
     {
         const auto Asset=Value->AsObject();const FString Name=Asset->GetStringField(TEXT("name"));auto Materials=KitMats;

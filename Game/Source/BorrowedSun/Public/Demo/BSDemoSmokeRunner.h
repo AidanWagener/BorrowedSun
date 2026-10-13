@@ -23,6 +23,7 @@ private:
     enum class EPhase : uint8
     {
         Startup,
+        RegionalGroundPause,
         WalkToWorkshop,
         HoldWorkshopProp,
         StreetStartPause,
@@ -76,6 +77,7 @@ private:
     double PhaseStartedAt = 0;
     double LastWalkSampleAt = 0;
     FVector LastWalkSample = FVector::ZeroVector;
+    FVector RegionalGroundProbe = FVector::ZeroVector;
     FString SaveNamespace;
     FString ReportDirectory;
     TArray<FCheck> Checks;

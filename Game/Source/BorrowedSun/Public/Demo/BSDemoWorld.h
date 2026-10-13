@@ -26,6 +26,7 @@ public:
     bool HasMarketArt() const { return MarketMeshes.Num() == 30 && MarketMaterials.Num() == 9; }
     bool HasWorkshopArt() const { return bWorkshopReady; }
     bool HasWorkshopProps() const { return bWorkshopPropsReady; }
+    bool HasRegionalTerrain() const { return bRegionalTerrain; }
     static FVector SeedLocation() { return FVector(-1100, 0, 150); }
     static FVector DockLocation() { return FVector(1800, 0, 220); }
     static FVector RelayLocation() { return FVector(18000, 0, 15000); }
@@ -51,6 +52,7 @@ private:
     bool bSeedAvailable = true;
     bool bWorkshopReady = false;
     bool bWorkshopPropsReady = false;
+    bool bRegionalTerrain = false;
     uint8 AppliedChoice = 0;
     bool bConsequenceComplete = false;
     TMap<FString, int32> GroupIndices;
@@ -66,6 +68,8 @@ private:
     void CityBox(FVector P, FVector S, FName Material, FLinearColor Tint, bool Collision = true);
     void Beam(FVector A, FVector B, float Radius, FLinearColor Tint);
     void BuildLanternKeeper();
+    double RegionalGroundHeight(double X, double Y, double Fallback) const;
+    FVector2D RegionalGroundRange(double X, double Y, double HalfX, double HalfY, double Fallback) const;
     void Box(FVector P, FVector S, FLinearColor C, float Glow = 0, bool bCollision = true);
     UTextRenderComponent* Sign(const FString& Text, FVector Position, float Size, FColor Color, FRotator Rotation = FRotator(0, -90, 0));
     void BuildDistrict();

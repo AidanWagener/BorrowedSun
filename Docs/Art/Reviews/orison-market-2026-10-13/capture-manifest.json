@@ -1,0 +1,38 @@
+{
+  "width": 1920,
+  "configuration": "Editor Game / Development",
+  "benchmarkMatched": false,
+  "capturedBy": "Unreal real RHI offscreen",
+  "schemaVersion": 1,
+  "captures": [
+    {
+      "edited": false,
+      "visuallyReviewed": true,
+      "path": "development-street-start.png",
+      "sha256": "e34922235c415789c05bd64935fb3c4915588733cef657f2a55d54300a925c08",
+      "source": "Artifacts/playerdata/starting-area-polish-03/Saved/DemoValidation/QA_20261013T152204Z_547516338934416a-Clinic-street-start.png"
+    },
+    {
+      "edited": false,
+      "visuallyReviewed": true,
+      "path": "development-workshop-front.png",
+      "sha256": "c5a813aab6616cdfceabd149e93e20b744244c7ef52290cbbebe42d94e999431",
+      "source": "Artifacts/playerdata/starting-area-polish-03/Saved/DemoValidation/QA_20261013T152204Z_547516338934416a-Evacuation-workshop-front.png"
+    },
+    {
+      "edited": false,
+      "visuallyReviewed": true,
+      "path": "development-market-arcade.png",
+      "sha256": "ce017cd18488d69425a5a91c71ea48f58980b9193c49cf880914de4659df2aeb",
+      "source": "Artifacts/playerdata/starting-area-polish-03/Saved/DemoValidation/QA_20261013T152204Z_547516338934416a-Evacuation-market-arcade.png"
+    },
+    {
+      "edited": false,
+      "visuallyReviewed": true,
+      "path": "development-orison-region.png",
+      "sha256": "9ecd12d43335e5780783bb3952c3dac10012fcf231c9809f024a564142dd6e4b",
+      "source": "Artifacts/playerdata/starting-area-polish-03/Saved/DemoValidation/QA_20261013T152204Z_547516338934416a-Evacuation-orison-region.png"
+    }
+  ],
+  "height": 1080
+}

@@ -8,6 +8,7 @@
 #include "Demo/BSKestrelPawn.h"
 #include "Objects/BSCarryComponent.h"
 #include "Objects/BSHandProps.h"
+#include "World/BSOrisonFrame.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
@@ -20,6 +21,7 @@
 #include "Camera/CameraActor.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/HUD.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "HAL/FileManager.h"
 #include "HAL/PlatformMisc.h"
 #include "HAL/PlatformTime.h"
@@ -49,11 +51,12 @@ namespace
     {
         { TEXT("city-overview"), {-6500,-7900,5100}, {0,400,1000}, 68.f },
         { TEXT("market-arcade"), {-3120,-160,215}, {-1800,-500,300}, 74.f },
-        { TEXT("lantern-keeper"), {11500,-6500,1600}, {15500,0,3000}, 74.f },
+        { TEXT("lantern-keeper"), {19500,-6500,1600}, {25000,0,2300}, 74.f },
         { TEXT("dock-courtyard"), {3700,-750,420}, {1200,800,250}, 74.f },
         // Second Dawn is anchored at (-2570,-470,8); these views stay at walking eye height.
         { TEXT("workshop-front"), {-2500,260,192}, {-2530,-470,228}, 64.f },
-        { TEXT("workshop-bench"), {-2780,-160,192}, {-2640,-405,130}, 66.f }
+        { TEXT("workshop-bench"), {-2780,-160,192}, {-2640,-405,130}, 66.f },
+        { TEXT("orison-region"), {-280000,-340000,110000}, {550000,300000,-1000}, 90.f }
     };
 
     bool IsSafeNamespace(const FString& Value)
@@ -285,6 +288,23 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
         if (!Check(TEXT("CityArtReady"), City && City->HasCityArt(), TEXT("All 14 city meshes and seven PBR materials loaded in this runtime."))) return;
         if (!Check(TEXT("MarketArtReady"), City && City->HasMarketArt(), TEXT("All 30 market meshes and nine architectural materials loaded in this runtime."))) return;
         if (!Check(TEXT("WorkshopArtReady"), City && City->HasWorkshopArt(), TEXT("The editable Second Dawn assembly and every referenced mesh loaded and passed validation."))) return;
+        if (!Check(TEXT("RegionalTerrainLoaded"), City->HasRegionalTerrain(), TEXT("Main game contains the imported Orison heightfield."))) return;
+        FCollisionQueryParams TerrainQuery(SCENE_QUERY_STAT(OrisonTerrainQA), false);
+        for(TActorIterator<AActor> It(GetWorld());It;++It)
+            if(!It->ActorHasTag(TEXT("BorrowedSun.OrisonMacroTerrain")))TerrainQuery.AddIgnoredActor(*It);
+        auto TerrainHit=[&](FVector CityPoint,FHitResult& Hit)
+        {
+            const FVector P=FBSOrisonFrame::ToRuntime(CityPoint);
+            return GetWorld()->LineTraceSingleByChannel(Hit,FVector(P.X,P.Y,210000),FVector(P.X,P.Y,-210000),ECC_Visibility,TerrainQuery)
+                && Hit.GetActor() && Hit.GetActor()->ActorHasTag(TEXT("BorrowedSun.OrisonMacroTerrain"));
+        };
+        FHitResult PadHit,RimHit,BayHit;
+        if(!Check(TEXT("RegionalWorkshopPadCollision"),TerrainHit(FVector(-4780,-1370,92),PadHit)
+            && PadHit.ImpactPoint.Z>-80 && PadHit.ImpactPoint.Z<-10,TEXT("Real Landscape collision stays below the preserved quay and physical props.")))return;
+        if(!Check(TEXT("RegionalRimCollision"),TerrainHit(FVector(-11971,767,1447),RimHit)
+            && FMath::Abs(FBSOrisonFrame::ToCity(RimHit.ImpactPoint).Z-1447)<55,TEXT("Western rim collides at its canonical mountain-scale elevation.")))return;
+        if(!Check(TEXT("RegionalBayBelowSea"),TerrainHit(FVector(0,0,0),BayHit)
+            && FBSOrisonFrame::ToCity(BayHit.ImpactPoint).Z<-1,TEXT("Bay bathymetry stays below the planning sea datum.")))return;
         auto* Store=GetWorld()->GetSubsystem<UBSObjectWorldSubsystem>();
         if(!Check(TEXT("WorkshopPropsReady"),City->HasWorkshopProps() && Store && Store->GetLedger()
             && Store->GetLedger()->GetSnapshot().Objects.Num()==BSHandProps::Count,Store?Store->LastError:FString()))return;
@@ -307,7 +327,12 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
         }
         if(!Check(TEXT("TenLiveWorkshopProps"),Count==BSHandProps::Count&&WorkshopProp.IsValid()))return;
         Controller->Confirm(); Mode->NewExpedition(Controller); RouteStartedAt=Now;
-        SetPhase(EPhase::WalkToWorkshop);
+        FHitResult Downhill;
+        if(!Check(TEXT("RegionalDownhillGround"),TerrainHit(FBSOrisonFrame::RuntimeOriginMetres()+FVector(180,0,0),Downhill)
+            && Downhill.ImpactPoint.Z<-650 && Downhill.ImpactPoint.Z>-8000))return;
+        RegionalGroundProbe=Downhill.ImpactPoint;
+        Controller->GetPawn()->SetActorLocation(RegionalGroundProbe+FVector(0,0,100),false,nullptr,ETeleportType::TeleportPhysics);
+        SetPhase(EPhase::RegionalGroundPause);
         return;
     }
     if (!Mode || !Controller || !Controller->GetPawn() || !Mode->Ship)
@@ -320,6 +345,18 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
     const FVector Service = RouteIndex == 0 ? ABSDemoWorld::ClinicLocation() : ABSDemoWorld::EvacuationLocation();
     switch (Phase)
     {
+    case EPhase::RegionalGroundPause:
+        if(Now-PhaseStartedAt>1.5)
+        {
+            auto* Walker=Cast<ABSExplorerCharacter>(Controller->GetPawn());
+            const FVector Position=Controller->GetPawn()->GetActorLocation();
+            if(!Check(TEXT("RegionalDownhillDoesNotRecover"),Walker && Walker->GetCharacterMovement()->IsMovingOnGround()
+                && FVector::Dist2D(Position,RegionalGroundProbe)<180 && Position.Z<-500,
+                TEXT("Player settles on real downhill terrain below the old void plane without being respawned.")))return;
+            Mode->Recover(Controller);
+            SetPhase(EPhase::WalkToWorkshop);
+        }
+        break;
     case EPhase::WalkToWorkshop:
         if(WalkTo(Controller,FVector(-2768,-240,120),15.f,DeltaSeconds))
         {
