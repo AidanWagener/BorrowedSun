@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "packageSourceCommit": "ec513de3c595633abe6c3bd767846268b900fd16",
+  "run": "Artifacts/demo/20261013T064333Z-9a5d2be2",
+  "offscreen": true,
+  "images": [
+    {
+      "path": "Docs/Art/Reviews/workshop-surfaces-2026-10-13/shipping-front.png",
+      "source": "C:\\Users\\aidan\\Documents\\Codex\\2026-10-12\\plea\\work\\qa-workshop-surfaces-offscreen-01\\Saved\\DemoValidation\\QA_20261013T064333Z_95615f98a9184ec6-Evacuation-workshop-front.png",
+      "sha256": "21fe1cc0b21bd689205729ed5a9a9a4cde931f1fd31606b0b05892c650052325",
+      "visuallyReviewed": true
+    },
+    {
+      "path": "Docs/Art/Reviews/workshop-surfaces-2026-10-13/shipping-bench.png",
+      "source": "C:\\Users\\aidan\\Documents\\Codex\\2026-10-12\\plea\\work\\qa-workshop-surfaces-offscreen-01\\Saved\\DemoValidation\\QA_20261013T064333Z_95615f98a9184ec6-Evacuation-workshop-bench.png",
+      "sha256": "db9bea532e6bb4895e50138e989997ffd4566d1b9e9ef4d5c5bd90caf0f6f729",
+      "visuallyReviewed": true
+    },
+    {
+      "path": "Docs/Art/Reviews/workshop-surfaces-2026-10-13/shipping-market-arcade.png",
+      "source": "C:\\Users\\aidan\\Documents\\Codex\\2026-10-12\\plea\\work\\qa-workshop-surfaces-offscreen-01\\Saved\\DemoValidation\\QA_20261013T064333Z_95615f98a9184ec6-Evacuation-market-arcade.png",
+      "sha256": "2eedddb7a91835c6372d67472a4af415d4ecc637de197877ee7ccd1b8fa4ac08",
+      "visuallyReviewed": true
+    },
+    {
+      "path": "Docs/Art/Reviews/workshop-surfaces-2026-10-13/shipping-street-start.png",
+      "source": "C:\\Users\\aidan\\Documents\\Codex\\2026-10-12\\plea\\work\\qa-workshop-surfaces-offscreen-01\\Saved\\DemoValidation\\QA_20261013T064333Z_95615f98a9184ec6-Clinic-street-start.png",
+      "sha256": "15b92dd5d91d8d1606c78e3352d83088d758f4e989f9d8668f451ab2495e0487",
+      "visuallyReviewed": true
+    }
+  ]
+}

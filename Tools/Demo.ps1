@@ -20,6 +20,11 @@ Validate only: request and require all six route milestone PNGs. Images still ne
 .PARAMETER MeasureFrames
 Validate only: collect application frame intervals after five seconds of warmup. Cannot be
 combined with Screenshots because screenshot readback distorts timing. This is not GPU profiling.
+.PARAMETER Offscreen
+Validate only: render through Unreal's real RHI into an offscreen viewport without showing a
+game window. Requires an explicit UserDirectory to isolate QA preferences and saves.
+Cannot be combined with MeasureFrames; this does not qualify display presentation
+or uncontended frame pacing. Requires a working GPU/RHI, unlike NullRHI.
 .PARAMETER Force
 AuthorMap only: explicitly permit the commandlet to replace its owned demo map and material.
 .PARAMETER TimeoutSeconds
@@ -37,8 +42,9 @@ powershell -NoProfile -File Tools/Demo.ps1 -Mode Validate -Screenshots -Execute
 .EXAMPLE
 powershell -NoProfile -File Tools/Demo.ps1 -Mode Validate -PackageExecutable 'D:\Build\BorrowedSun.exe' -ReportDirectory 'D:\Build\BorrowedSun\Saved\DemoValidation' -Execute
 .NOTES
-Close any editor/game using this project before AuthorMap or Validate. Do not run them alongside
-a build or another writer of the same assets. Rendered validation requires a desktop/GPU session;
+Close any editor using this project's source assets before AuthorMap or Validate. Do not run them
+alongside a build or another writer of the same assets. Offscreen Validate may run beside another
+immutable package with separate player data. Rendered validation requires a desktop/GPU session;
 it intentionally has no NullRHI option. It drives real gameplay methods, not physical input devices.
 Evidence is local under Artifacts/demo/<fresh-run>. QA checkpoint files remain isolated for inspection.
 Launch reports Launched, not Passed; it does not observe the eventual exit code or validate gameplay.
@@ -57,6 +63,7 @@ param(
     [ValidateRange(360,2160)][int]$Height=720,
     [switch]$Screenshots,
     [switch]$MeasureFrames,
+    [switch]$Offscreen,
     [switch]$Force,
     [switch]$Execute
 )
@@ -154,6 +161,8 @@ function Start-DemoInteractiveProcess {
 if ($Force -and $Mode -ne 'AuthorMap') { throw '-Force is supported only by AuthorMap.' }
 if ($Screenshots -and $Mode -ne 'Validate') { throw '-Screenshots is supported only by Validate.' }
 if ($MeasureFrames -and ($Mode -ne 'Validate' -or $Screenshots)) { throw '-MeasureFrames requires Validate without Screenshots.' }
+if ($Offscreen -and ($Mode -ne 'Validate' -or $MeasureFrames)) { throw '-Offscreen requires Validate without MeasureFrames.' }
+if ($Offscreen -and -not $UserDirectory) { throw '-Offscreen requires an explicit isolated -UserDirectory.' }
 if ($ReportDirectory -and $Mode -ne 'Validate') { throw '-ReportDirectory is supported only by Validate.' }
 if ($PackageExecutable -and $Mode -eq 'AuthorMap') { throw 'AuthorMap requires the installed editor, not a packaged game.' }
 if ($UserDirectory) {
@@ -204,11 +213,12 @@ if ($Mode -eq 'Validate') {
     $arguments += @('-unattended','-ForceRes','-BSDemoAutoTest',('-BSDemoSaveNamespace=' + $saveNamespace),('-BSDemoQAWidth='+$Width),('-BSDemoQAHeight='+$Height))
     if ($Screenshots) { $arguments += '-BSDemoScreenshots' }
     if ($MeasureFrames) { $arguments += '-BSDemoMeasureFrames' }
+    if ($Offscreen) { $arguments += '-RenderOffscreen' }
 }
 if (-not $Execute) {
     [pscustomobject]@{DryRun=$true; Mode=$Mode; Executable=$executable; Arguments=$arguments;
         TimeoutSeconds=$(if ($Mode -eq 'Launch') { $null } else { $TimeoutSeconds }); SaveNamespace=$saveNamespace; ExpectedReport=$reportPath;
-        Screenshots=[bool]$Screenshots; MeasureFrames=[bool]$MeasureFrames; Force=[bool]$Force;
+        Screenshots=[bool]$Screenshots; MeasureFrames=[bool]$MeasureFrames; Offscreen=[bool]$Offscreen; Force=[bool]$Force;
         Note='Nothing executed or written. Execute records fresh local Artifacts/demo evidence; Validate requires both rendered routes.'} | ConvertTo-Json -Depth 6
     return
 }
@@ -226,7 +236,7 @@ if ($reportPath -and (Test-Path -LiteralPath $reportPath)) { throw 'Fresh namesp
 $run=New-RunDirectory $ctx 'demo'
 $arguments += '-abslog=' + (Join-Path $run 'engine.log')
 $result=@{SchemaVersion=1; Status='Running'; Mode=$Mode; Packaged=[bool]$PackageExecutable;
-    SaveNamespace=$saveNamespace; Engine=$engineIdentity; ScreenshotsRequested=[bool]$Screenshots; FrameSamplesRequested=[bool]$MeasureFrames;
+    SaveNamespace=$saveNamespace; Engine=$engineIdentity; ScreenshotsRequested=[bool]$Screenshots; FrameSamplesRequested=[bool]$MeasureFrames; OffscreenRequested=[bool]$Offscreen;
     Force=[bool]$Force; Git=(Get-GitIdentity $ctx.Root); StartedUtc=[DateTime]::UtcNow.ToString('o')}
 $startedUtc=[DateTime]::UtcNow
 try {

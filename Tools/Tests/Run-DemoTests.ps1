@@ -125,6 +125,10 @@ $report=New-FrameReport; $report.frameIntervals.overflow=$true; Save-Fixture $re
 Expect-Rejection 'truncated frame measurement' { Invoke-FrameGate }
 Expect-Rejection 'frame measurement combined with screenshots' { & $scriptPath -Mode Validate -MeasureFrames -Screenshots }
 Expect-Rejection 'frame measurement in interactive launch' { & $scriptPath -Mode Launch -MeasureFrames }
+Expect-Rejection 'offscreen rendering mistaken for display frame measurement' { & $scriptPath -Mode Validate -Offscreen -MeasureFrames }
+Expect-Rejection 'offscreen mode hiding a requested interactive launch' { & $scriptPath -Mode Launch -Offscreen }
+Expect-Rejection 'offscreen validation flag passed to asset authoring' { & $scriptPath -Mode AuthorMap -Offscreen }
+Expect-Rejection 'background validation sharing default player preferences' { & $scriptPath -Mode Validate -Offscreen }
 
 $preview=(& (Join-Path $toolsDirectory 'Build.ps1') -Configuration Shipping | Out-String | ConvertFrom-Json)
 if ($preview.Steps[0].Args[2] -ne 'Development' -or $preview.Steps[1].Args[2] -ne 'Shipping') { throw 'Shipping override did not preserve the Development editor target.' }

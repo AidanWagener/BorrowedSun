@@ -43,4 +43,4 @@ Disk tests use fresh random QA namespaces and delete only their two own slots on
 
 The first build exposed an existing unity-build name collision among city/HUD colour constants. The city palette identifiers now have a `City` prefix; their values and string literals were verified unchanged. The first test run stopped on a test-fixture error while duplicating an element from the same Unreal array. Copying the fixture record before adding it fixed that setup error; the full successful rerun above is the qualifying result. Earlier failures remain in `Artifacts/build/20261013T062519Z-e55b0bf3` and `Artifacts/tests/20261013T063018Z-cb4c6855`.
 
-The separate [workshop surface candidate](WORKSHOP_SURFACES_2026-10-13.md) retains its earlier packaged source checkpoint and still awaits its own final rendered qualification. It does not contain this new ledger.
+The separate [workshop surface candidate](WORKSHOP_SURFACES_2026-10-13.md) retains its earlier packaged source checkpoint. Its offscreen rendered routes and visual review passed; normal-window presentation and frame-pacing qualification remain pending. It does not contain this new ledger.
