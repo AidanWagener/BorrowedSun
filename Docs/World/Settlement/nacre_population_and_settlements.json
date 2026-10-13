@@ -1,0 +1,1115 @@
+{
+  "schema_version": 1,
+  "edition": "0.7",
+  "present_year_AL": 742,
+  "population_estimate": 34800000,
+  "uncertainty_fraction": 0.1,
+  "scope": "Habitual Nacre surface and marine residents counted once at usual residence, including residents temporarily away. Separately domiciled offworld/orbital communities outside this estimate. Regional allocations are authored rounded choices, not independent measured estimates.",
+  "buckets": [
+    "core_city",
+    "associated_settlement_belt",
+    "other_towns",
+    "dispersed_and_station",
+    "mobile_usual_residents"
+  ],
+  "regions": [
+    {
+      "region_id": "REG-001",
+      "region_name": "Saffron Escarpment",
+      "total_habitual_residents": 2400000,
+      "allocation": {
+        "core_city": 420000,
+        "associated_settlement_belt": 220000,
+        "other_towns": 640000,
+        "dispersed_and_station": 1100000,
+        "mobile_usual_residents": 20000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-002",
+      "region_name": "Nine-River Lowlands",
+      "total_habitual_residents": 5600000,
+      "allocation": {
+        "core_city": 670000,
+        "associated_settlement_belt": 380000,
+        "other_towns": 1850000,
+        "dispersed_and_station": 2670000,
+        "mobile_usual_residents": 30000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-003",
+      "region_name": "Glassback Range",
+      "total_habitual_residents": 1450000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 800000,
+        "dispersed_and_station": 630000,
+        "mobile_usual_residents": 20000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-004",
+      "region_name": "Red Ledger Basin",
+      "total_habitual_residents": 1800000,
+      "allocation": {
+        "core_city": 310000,
+        "associated_settlement_belt": 150000,
+        "other_towns": 690000,
+        "dispersed_and_station": 635000,
+        "mobile_usual_residents": 15000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-005",
+      "region_name": "Foldwood Marches",
+      "total_habitual_residents": 1600000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 540000,
+        "dispersed_and_station": 1030000,
+        "mobile_usual_residents": 30000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-006",
+      "region_name": "Serein Fog Coast",
+      "total_habitual_residents": 2100000,
+      "allocation": {
+        "core_city": 530000,
+        "associated_settlement_belt": 240000,
+        "other_towns": 700000,
+        "dispersed_and_station": 615000,
+        "mobile_usual_residents": 15000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-007",
+      "region_name": "Cairn Steppe",
+      "total_habitual_residents": 1100000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 430000,
+        "dispersed_and_station": 645000,
+        "mobile_usual_residents": 25000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-008",
+      "region_name": "North Gate Sounds",
+      "total_habitual_residents": 550000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 260000,
+        "dispersed_and_station": 270000,
+        "mobile_usual_residents": 20000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-009",
+      "region_name": "Talweir Lake Country",
+      "total_habitual_residents": 4400000,
+      "allocation": {
+        "core_city": 780000,
+        "associated_settlement_belt": 420000,
+        "other_towns": 1750000,
+        "dispersed_and_station": 1430000,
+        "mobile_usual_residents": 20000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-010",
+      "region_name": "Aven Uplands",
+      "total_habitual_residents": 2350000,
+      "allocation": {
+        "core_city": 450000,
+        "associated_settlement_belt": 210000,
+        "other_towns": 810000,
+        "dispersed_and_station": 860000,
+        "mobile_usual_residents": 20000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-011",
+      "region_name": "Green Vault",
+      "total_habitual_residents": 1300000,
+      "allocation": {
+        "core_city": 160000,
+        "associated_settlement_belt": 50000,
+        "other_towns": 320000,
+        "dispersed_and_station": 755000,
+        "mobile_usual_residents": 15000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-012",
+      "region_name": "Merrow Estuaries",
+      "total_habitual_residents": 3350000,
+      "allocation": {
+        "core_city": 610000,
+        "associated_settlement_belt": 300000,
+        "other_towns": 1150000,
+        "dispersed_and_station": 1260000,
+        "mobile_usual_residents": 30000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-013",
+      "region_name": "White Reed Savannas",
+      "total_habitual_residents": 1250000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 400000,
+        "dispersed_and_station": 825000,
+        "mobile_usual_residents": 25000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-014",
+      "region_name": "Morrow Crown",
+      "total_habitual_residents": 450000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 200000,
+        "dispersed_and_station": 240000,
+        "mobile_usual_residents": 10000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-015",
+      "region_name": "Tern Storm Coast",
+      "total_habitual_residents": 1500000,
+      "allocation": {
+        "core_city": 360000,
+        "associated_settlement_belt": 200000,
+        "other_towns": 570000,
+        "dispersed_and_station": 350000,
+        "mobile_usual_residents": 20000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-016",
+      "region_name": "Velis Cold Gardens",
+      "total_habitual_residents": 900000,
+      "allocation": {
+        "core_city": 120000,
+        "associated_settlement_belt": 70000,
+        "other_towns": 340000,
+        "dispersed_and_station": 355000,
+        "mobile_usual_residents": 15000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-017",
+      "region_name": "Ember Fault",
+      "total_habitual_residents": 320000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 120000,
+        "dispersed_and_station": 190000,
+        "mobile_usual_residents": 10000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-018",
+      "region_name": "Brin Long Shore",
+      "total_habitual_residents": 650000,
+      "allocation": {
+        "core_city": 180000,
+        "associated_settlement_belt": 60000,
+        "other_towns": 200000,
+        "dispersed_and_station": 195000,
+        "mobile_usual_residents": 15000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-019",
+      "region_name": "Pale Interior",
+      "total_habitual_residents": 60000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 12000,
+        "dispersed_and_station": 36000,
+        "mobile_usual_residents": 12000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-020",
+      "region_name": "Split Cape",
+      "total_habitual_residents": 230000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 95000,
+        "dispersed_and_station": 120000,
+        "mobile_usual_residents": 15000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-021",
+      "region_name": "Aster Chain",
+      "total_habitual_residents": 1050000,
+      "allocation": {
+        "core_city": 290000,
+        "associated_settlement_belt": 130000,
+        "other_towns": 320000,
+        "dispersed_and_station": 280000,
+        "mobile_usual_residents": 30000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-022",
+      "region_name": "Neral Arc",
+      "total_habitual_residents": 110000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 40000,
+        "dispersed_and_station": 60000,
+        "mobile_usual_residents": 10000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-023",
+      "region_name": "Pelagic Roads",
+      "total_habitual_residents": 250000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 0,
+        "dispersed_and_station": 0,
+        "mobile_usual_residents": 250000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    },
+    {
+      "region_id": "REG-024",
+      "region_name": "Southern Blue",
+      "total_habitual_residents": 30000,
+      "allocation": {
+        "core_city": 0,
+        "associated_settlement_belt": 0,
+        "other_towns": 0,
+        "dispersed_and_station": 8000,
+        "mobile_usual_residents": 22000
+      },
+      "status": "authored rounded allocation of existing census estimate; regional boundaries and full settlement inventory remain to be developed"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "SET-001",
+      "name": "Kela Steps",
+      "region_id": "REG-001",
+      "landmass": "Kesh",
+      "lon_deg": 27.4,
+      "lat_deg": 16.4,
+      "habitual_residents": 85000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Escarpment freight transfer and independent fabrication",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-002",
+      "name": "Three Basin",
+      "region_id": "REG-001",
+      "landmass": "Kesh",
+      "lon_deg": 26.9,
+      "lat_deg": 18.1,
+      "habitual_residents": 24000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Cultivation, water storage and mixed rural services",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-003",
+      "name": "Neri Fold",
+      "region_id": "REG-002",
+      "landmass": "Kesh",
+      "lon_deg": 27.5,
+      "lat_deg": 4.8,
+      "habitual_residents": 92000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Food aggregation and household manufacture",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-004",
+      "name": "Ravelbank",
+      "region_id": "REG-002",
+      "landmass": "Kesh",
+      "lon_deg": 28,
+      "lat_deg": 1.8,
+      "habitual_residents": 42000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Lowland teaching, repair and regional market",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-005",
+      "name": "Leth Pass",
+      "region_id": "REG-003",
+      "landmass": "Kesh",
+      "lon_deg": 10.5,
+      "lat_deg": 16.2,
+      "habitual_residents": 38000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Pass exchange and upland service town",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-006",
+      "name": "Cloud Loom",
+      "region_id": "REG-003",
+      "landmass": "Kesh",
+      "lon_deg": 7.2,
+      "lat_deg": 13.8,
+      "habitual_residents": 12000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Catchment stewardship and fine textile work",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-007",
+      "name": "Senn Cut",
+      "region_id": "REG-004",
+      "landmass": "Kesh",
+      "lon_deg": -14.8,
+      "lat_deg": 16,
+      "habitual_residents": 56000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Mineral processing and closed-basin reuse",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-008",
+      "name": "Shallow House",
+      "region_id": "REG-004",
+      "landmass": "Kesh",
+      "lon_deg": -14.4,
+      "lat_deg": 20,
+      "habitual_residents": 17000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Regional care, repair and basin-margin cultivation",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-009",
+      "name": "Fellmere",
+      "region_id": "REG-005",
+      "landmass": "Kesh",
+      "lon_deg": -28,
+      "lat_deg": -12,
+      "habitual_residents": 45000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Seasonal woodland service town",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-010",
+      "name": "Walking Orchard",
+      "region_id": "REG-005",
+      "landmass": "Kesh",
+      "lon_deg": -31,
+      "lat_deg": -15,
+      "habitual_residents": 8000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Introduced crop nursery and dispersed household exchange",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-011",
+      "name": "Low Bell",
+      "region_id": "REG-006",
+      "landmass": "Kesh",
+      "lon_deg": -72.2,
+      "lat_deg": 35.5,
+      "habitual_residents": 72000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Inland enclosure fabrication and freight consolidation",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-012",
+      "name": "Aru Court",
+      "region_id": "REG-006",
+      "landmass": "Kesh",
+      "lon_deg": -69,
+      "lat_deg": 38,
+      "habitual_residents": 26000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Upland teaching, housing and source-water services",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-013",
+      "name": "Renn Cross",
+      "region_id": "REG-007",
+      "landmass": "Kesh",
+      "lon_deg": -30,
+      "lat_deg": 43,
+      "habitual_residents": 52000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Steppe freight intersection and vehicle repair",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-014",
+      "name": "Kite Rest",
+      "region_id": "REG-007",
+      "landmass": "Kesh",
+      "lon_deg": -25,
+      "lat_deg": 46,
+      "habitual_residents": 10500,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Seasonal fieldwork, care and migration observation",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-015",
+      "name": "Orris Sound",
+      "region_id": "REG-008",
+      "landmass": "Kesh",
+      "lon_deg": -30.2,
+      "lat_deg": 65.8,
+      "habitual_residents": 44000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Northern coastal interchange and seasonal provisioning",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md",
+      "concept_coast_max_km": 40,
+      "coast_scope": "dry town anchor near coarse concept coast; actual landing, navigation and local terrain require design"
+    },
+    {
+      "id": "SET-016",
+      "name": "Small Promise",
+      "region_id": "REG-008",
+      "landmass": "Kesh",
+      "lon_deg": -34.5,
+      "lat_deg": 65.8,
+      "habitual_residents": 9000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Sound-region households, repair and shelter",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-017",
+      "name": "Namar Fold",
+      "region_id": "REG-009",
+      "landmass": "Morrow",
+      "lon_deg": 123,
+      "lat_deg": 26,
+      "habitual_residents": 110000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Lake-country processing and regional market",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-018",
+      "name": "Iren Fields",
+      "region_id": "REG-009",
+      "landmass": "Morrow",
+      "lon_deg": 125,
+      "lat_deg": 25,
+      "habitual_residents": 35000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Introduced cultivation and processing villages hub",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-019",
+      "name": "Veyra Landing",
+      "region_id": "REG-010",
+      "landmass": "Morrow",
+      "lon_deg": 84.9,
+      "lat_deg": -19.5,
+      "habitual_residents": 78000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Western Morrow coastal gateway toward Aven",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md",
+      "concept_coast_max_km": 40,
+      "coast_scope": "dry town anchor near coarse concept coast; actual landing, navigation and local terrain require design"
+    },
+    {
+      "id": "SET-020",
+      "name": "Harrow Bend",
+      "region_id": "REG-010",
+      "landmass": "Morrow",
+      "lon_deg": 101,
+      "lat_deg": -15,
+      "habitual_residents": 48000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Inland freight, vehicle transfer and upland services",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-021",
+      "name": "Ves Reach",
+      "region_id": "REG-011",
+      "landmass": "Morrow",
+      "lon_deg": 159,
+      "lat_deg": 6,
+      "habitual_residents": 18000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Forest-region publishing and field logistics",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-022",
+      "name": "Underleaf",
+      "region_id": "REG-011",
+      "landmass": "Morrow",
+      "lon_deg": 146,
+      "lat_deg": 2,
+      "habitual_residents": 6500,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Forest household network and qualified material trials",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-023",
+      "name": "Blue Sill Landing",
+      "region_id": "REG-012",
+      "landmass": "Morrow",
+      "lon_deg": 158.18,
+      "lat_deg": -30.94,
+      "habitual_residents": 32000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Lower-estuary transfer and nursery interpretation",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md",
+      "concept_coast_max_km": 40,
+      "coast_scope": "dry town anchor near coarse concept coast; actual landing, navigation and local terrain require design"
+    },
+    {
+      "id": "SET-024",
+      "name": "Upper Tamar",
+      "region_id": "REG-012",
+      "landmass": "Morrow",
+      "lon_deg": 154,
+      "lat_deg": -28,
+      "habitual_residents": 54000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "River-region processing and household boat services",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-025",
+      "name": "Lera Weir",
+      "region_id": "REG-013",
+      "landmass": "Morrow",
+      "lon_deg": 111,
+      "lat_deg": -36,
+      "habitual_residents": 28000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Seasonal cultivation and open-country exchange",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-026",
+      "name": "Four Shade",
+      "region_id": "REG-013",
+      "landmass": "Morrow",
+      "lon_deg": 107,
+      "lat_deg": -40,
+      "habitual_residents": 7200,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Savanna refuge, maintenance and field study",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-027",
+      "name": "High Eren",
+      "region_id": "REG-014",
+      "landmass": "Morrow",
+      "lon_deg": 124,
+      "lat_deg": 55,
+      "habitual_residents": 25000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Cool-upland instrument work and source-water services",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-028",
+      "name": "Snow Book",
+      "region_id": "REG-014",
+      "landmass": "Morrow",
+      "lon_deg": 128,
+      "lat_deg": 58,
+      "habitual_residents": 3800,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Ridge school, archives and dispersed settlement support",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-029",
+      "name": "Mendward",
+      "region_id": "REG-015",
+      "landmass": "Sere",
+      "lon_deg": -102,
+      "lat_deg": -48,
+      "habitual_residents": 58000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Repair supply and fabrication beyond Tern",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-030",
+      "name": "Little Return",
+      "region_id": "REG-015",
+      "landmass": "Sere",
+      "lon_deg": -97.3,
+      "lat_deg": -47.8,
+      "habitual_residents": 12500,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Coastal refuge and independent vessel service",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md",
+      "concept_coast_max_km": 40,
+      "coast_scope": "dry town anchor near coarse concept coast; actual landing, navigation and local terrain require design"
+    },
+    {
+      "id": "SET-031",
+      "name": "Leth Garden",
+      "region_id": "REG-016",
+      "landmass": "Sere",
+      "lon_deg": -126,
+      "lat_deg": -39.1,
+      "habitual_residents": 36000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Propagation training and ordinary food processing",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-032",
+      "name": "Closed Petal",
+      "region_id": "REG-016",
+      "landmass": "Sere",
+      "lon_deg": -130,
+      "lat_deg": -40.2,
+      "habitual_residents": 6800,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Cold-garden homes and living-stock care",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-033",
+      "name": "Ashless",
+      "region_id": "REG-017",
+      "landmass": "Sere",
+      "lon_deg": -112,
+      "lat_deg": -62,
+      "habitual_residents": 29000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Fault-region heat investigation and manufacture",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-034",
+      "name": "Warm Stone",
+      "region_id": "REG-017",
+      "landmass": "Sere",
+      "lon_deg": -116,
+      "lat_deg": -64,
+      "habitual_residents": 5400,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Mineral service settlement and thermal workshops",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-035",
+      "name": "South Letter",
+      "region_id": "REG-018",
+      "landmass": "Pale Reach",
+      "lon_deg": -117,
+      "lat_deg": 61.1,
+      "habitual_residents": 26000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Regional freight, teaching and domestic manufacture",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-036",
+      "name": "Nine Windows",
+      "region_id": "REG-018",
+      "landmass": "Pale Reach",
+      "lon_deg": -121,
+      "lat_deg": 63,
+      "habitual_residents": 8200,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Inland approach support and instrument repair",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-037",
+      "name": "Fallow Station",
+      "region_id": "REG-019",
+      "landmass": "Pale Reach",
+      "lon_deg": -119,
+      "lat_deg": 70.5,
+      "habitual_residents": 2600,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Permanent interior service community",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-038",
+      "name": "Long Measure",
+      "region_id": "REG-019",
+      "landmass": "Pale Reach",
+      "lon_deg": -114,
+      "lat_deg": 73.2,
+      "habitual_residents": 900,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Observation and refuge community",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-039",
+      "name": "Half Sail",
+      "region_id": "REG-020",
+      "landmass": "Pale Reach",
+      "lon_deg": -142,
+      "lat_deg": 53.8,
+      "habitual_residents": 18000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Cape coastal landing and household repair",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md",
+      "concept_coast_max_km": 40,
+      "coast_scope": "dry town anchor near coarse concept coast; actual landing, navigation and local terrain require design"
+    },
+    {
+      "id": "SET-040",
+      "name": "Morrowless",
+      "region_id": "REG-020",
+      "landmass": "Pale Reach",
+      "lon_deg": -145,
+      "lat_deg": 56.2,
+      "habitual_residents": 4600,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Inland cape crafts and dispersed community services",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-041",
+      "name": "Rillano",
+      "region_id": "REG-021",
+      "landmass": "Aster",
+      "lon_deg": 62.8,
+      "lat_deg": -8,
+      "habitual_residents": 41000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Southern Aster coastal market and vessel service",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md",
+      "concept_coast_max_km": 40,
+      "coast_scope": "dry town anchor near coarse concept coast; actual landing, navigation and local terrain require design"
+    },
+    {
+      "id": "SET-042",
+      "name": "Dema Reach",
+      "region_id": "REG-021",
+      "landmass": "Aster",
+      "lon_deg": 57,
+      "lat_deg": 32,
+      "habitual_residents": 12000,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Northern Aster farming, school and repair town",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-043",
+      "name": "Eska Shelter",
+      "region_id": "REG-022",
+      "landmass": "Neral",
+      "lon_deg": -170,
+      "lat_deg": 13,
+      "habitual_residents": 3200,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Remote island service and native-life observation",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-044",
+      "name": "Seam House",
+      "region_id": "REG-022",
+      "landmass": "Neral",
+      "lon_deg": 175,
+      "lat_deg": -19,
+      "habitual_residents": 1100,
+      "allocation_bucket": "other_towns",
+      "position_kind": "fixed_land_proposal",
+      "role": "Southern Neral refuge and field community",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-045",
+      "name": "Mile of Rooms",
+      "region_id": "REG-023",
+      "landmass": "Ocean",
+      "lon_deg": -115,
+      "lat_deg": -8,
+      "habitual_residents": 4800,
+      "allocation_bucket": "mobile_usual_residents",
+      "position_kind": "mobile_reference",
+      "role": "Mobile convoy community with independent households",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-046",
+      "name": "Common Wake",
+      "region_id": "REG-023",
+      "landmass": "Ocean",
+      "lon_deg": -25,
+      "lat_deg": -63,
+      "habitual_residents": 2600,
+      "allocation_bucket": "mobile_usual_residents",
+      "position_kind": "mobile_reference",
+      "role": "Mobile marine service and research community",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-047",
+      "name": "Silllight",
+      "region_id": "REG-024",
+      "landmass": "Ocean",
+      "lon_deg": 20,
+      "lat_deg": -82,
+      "habitual_residents": 900,
+      "allocation_bucket": "dispersed_and_station",
+      "position_kind": "fixed_marine_proposal",
+      "role": "Fixed floating high-southern service station",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    },
+    {
+      "id": "SET-048",
+      "name": "Far Turn",
+      "region_id": "REG-024",
+      "landmass": "Ocean",
+      "lon_deg": 45,
+      "lat_deg": -78,
+      "habitual_residents": 1200,
+      "allocation_bucket": "mobile_usual_residents",
+      "position_kind": "mobile_reference",
+      "role": "Mobile southern observation and supply community",
+      "status": "authored settlement proposal; not constructed or a surveyed site",
+      "source_chapter": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md"
+    }
+  ],
+  "functional_regions": [
+    {
+      "id": "FUN-ORISON-01",
+      "name": "Orison urban and agricultural service region",
+      "population": 1200000,
+      "within_region_id": "REG-001",
+      "includes_core_city": "CITY-001",
+      "overlap_status": "subset of REG-001, not additional population; detailed constituent settlements and boundaries remain unallocated"
+    }
+  ],
+  "route_proposals": [
+    {
+      "id": "REGROUTE-001",
+      "name": "Sola–Veyra western sea approach",
+      "mode": "marine_with_port_transfer",
+      "from": "CITY-012",
+      "to": "SET-019",
+      "waypoints_lon_lat": [
+        [
+          58.3,
+          11
+        ],
+        [
+          60.4,
+          10.3
+        ],
+        [
+          66,
+          7
+        ],
+        [
+          75,
+          -6
+        ],
+        [
+          83,
+          -18.7
+        ],
+        [
+          84.4,
+          -19.35
+        ]
+      ],
+      "status": "open-water concept controls ending offshore; port transfer separate, no bathymetric/wind/current proof",
+      "port_transfers": [
+        {
+          "node_id": "CITY-012",
+          "waypoint_index": 0,
+          "max_anchor_separation_km": 40
+        },
+        {
+          "node_id": "SET-019",
+          "waypoint_index": 5,
+          "max_anchor_separation_km": 70
+        }
+      ]
+    },
+    {
+      "id": "REGROUTE-002",
+      "name": "Veyra–Harrow–Aven inland continuation",
+      "mode": "land_multimodal",
+      "from": "SET-019",
+      "via": [
+        "SET-020"
+      ],
+      "to": "CITY-006",
+      "waypoints_lon_lat": [
+        [
+          84.9,
+          -19.5
+        ],
+        [
+          89,
+          -19
+        ],
+        [
+          95,
+          -17
+        ],
+        [
+          101,
+          -15
+        ],
+        [
+          106,
+          -13
+        ],
+        [
+          110,
+          -12
+        ]
+      ],
+      "status": "concept control chain across Morrow; roads, grades, passes and source services not constructed",
+      "waypoint_indices_for_nodes": [
+        0,
+        3,
+        5
+      ]
+    }
+  ]
+}

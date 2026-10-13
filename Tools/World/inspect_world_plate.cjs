@@ -18,7 +18,8 @@ const { chromium } = require('playwright');
     tern:{file:'Cities/tern_settlement.svg',counts:{'[data-poi]':24,'[data-district]':10}},
     velis:{file:'Cities/velis_settlement.svg',counts:{'[data-poi]':24,'[data-district]':8}},
     brin:{file:'Cities/brin_settlement.svg',counts:{'[data-poi]':24,'[data-district]':8}},
-    production:{file:'Resources/orison_productive_land.svg',counts:{'[data-allocation]':13}}
+    production:{file:'Resources/orison_productive_land.svg',counts:{'[data-allocation]':13}},
+    settlements:{file:'Settlement/nacre_settlement_network.svg',counts:{'[data-settlement]':48,'[data-city]':12,'[data-route]':2}}
   };
   const config=sources[process.argv[3]];
   if(!process.argv[2] || !config) throw new Error('Supply browser executable and a known plate key: '+Object.keys(sources).join(', '));

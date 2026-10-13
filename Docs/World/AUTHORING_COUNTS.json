@@ -1,14 +1,14 @@
 {
-  "edition": "0.6",
+  "edition": "0.7",
   "scope": "Current new foundations including research/review notes; not pages, completion or quality certification",
-  "words": 267637,
+  "words": 300011,
   "chapters": [
     {
       "id": "orientation",
       "source": "00_CANON_AND_ORIENTATION.md",
       "title": "00 · Canon and orientation",
       "status": "Working canon",
-      "words": 2862
+      "words": 2905
     },
     {
       "id": "physics",
@@ -57,7 +57,14 @@
       "source": "04_HISTORY_OF_NACRE.md",
       "title": "04 · History",
       "status": "Working canon",
-      "words": 3892
+      "words": 5088
+    },
+    {
+      "id": "chronology",
+      "source": "04b_CHRONOLOGY_AND_MEMORY.md",
+      "title": "04b · Chronology and memory",
+      "status": "105 reconciled dated entries; retained proposals and undated contexts remain explicit",
+      "words": 5222
     },
     {
       "id": "societies",
@@ -95,11 +102,25 @@
       "words": 6479
     },
     {
+      "id": "accounts",
+      "source": "06c_CITY_AND_REGION_ACCOUNTS.md",
+      "title": "06c · City and region accounts",
+      "status": "Twelve demand accounts and attributed procurement; source capacity remains unresolved",
+      "words": 6290
+    },
+    {
       "id": "atlas",
       "source": "07_REGIONAL_ATLAS.md",
       "title": "07 · Regional atlas",
       "status": "Geographic concept; terrain and climate development pending",
       "words": 4314
+    },
+    {
+      "id": "settlements",
+      "source": "07b_SETTLEMENT_BELTS_AND_DISTANCE.md",
+      "title": "07b · Settlement belts and distance",
+      "status": "Population allocation, 48 community proposals and two route chains; no constructed settlements",
+      "words": 11374
     },
     {
       "id": "orison",
@@ -134,7 +155,7 @@
       "source": "Cities/SOLA.md",
       "title": "08e · Sola",
       "status": "Authored island city: five islands, nine districts and 24 places; no navigation or source yield proved",
-      "words": 13216
+      "words": 13218
     },
     {
       "id": "hesh",
@@ -148,14 +169,14 @@
       "source": "Cities/SEREIN.md",
       "title": "08g · Serein",
       "status": "Authored fog-coast city: nine districts and 24 places; local marine and service assumptions",
-      "words": 11430
+      "words": 11453
     },
     {
       "id": "dhal",
       "source": "Cities/DHAL.md",
       "title": "08h · Dhal",
       "status": "Authored inland forest river city: nine districts and 24 places; not a coastal port",
-      "words": 11775
+      "words": 11781
     },
     {
       "id": "merrow",
@@ -169,7 +190,7 @@
       "source": "Cities/TERN.md",
       "title": "08j · Tern",
       "status": "Authored industrial harbor city: ten districts and 24 places; coastal and service capacities remain proposals",
-      "words": 11699
+      "words": 11710
     },
     {
       "id": "velis",
@@ -190,7 +211,14 @@
       "source": "09_ROADS_SKIES_AND_EXPLORATION.md",
       "title": "09 · Roads, skies and exploration",
       "status": "Travel culture, thirteen route intentions and adventure requirements; no new movement or time systems implemented",
-      "words": 8534
+      "words": 8559
+    },
+    {
+      "id": "people",
+      "source": "11_PEOPLE_AND_RELATIONSHIPS.md",
+      "title": "11 · People and relationships",
+      "status": "261 evidenced identities and 158 directed relationships; behavioral cases remain proposals",
+      "words": 8182
     }
   ]
 }

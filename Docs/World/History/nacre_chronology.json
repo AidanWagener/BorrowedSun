@@ -1,0 +1,3016 @@
+{
+  "schema_version": 1,
+  "edition": "0.7",
+  "present_year_AL": 742,
+  "local_year_earth_days": 325.191,
+  "city_lookup": {
+    "Orison": {
+      "city_id": "CITY-001",
+      "region_id": "REG-001"
+    },
+    "Marroway": {
+      "city_id": "CITY-002",
+      "region_id": "REG-002"
+    },
+    "Hesh": {
+      "city_id": "CITY-003",
+      "region_id": "REG-004"
+    },
+    "Serein": {
+      "city_id": "CITY-004",
+      "region_id": "REG-006"
+    },
+    "Talweir": {
+      "city_id": "CITY-005",
+      "region_id": "REG-009"
+    },
+    "Aven": {
+      "city_id": "CITY-006",
+      "region_id": "REG-010"
+    },
+    "Dhal": {
+      "city_id": "CITY-007",
+      "region_id": "REG-011"
+    },
+    "Merrow": {
+      "city_id": "CITY-008",
+      "region_id": "REG-012"
+    },
+    "Tern": {
+      "city_id": "CITY-009",
+      "region_id": "REG-015"
+    },
+    "Velis": {
+      "city_id": "CITY-010",
+      "region_id": "REG-016"
+    },
+    "Brin": {
+      "city_id": "CITY-011",
+      "region_id": "REG-018"
+    },
+    "Sola": {
+      "city_id": "CITY-012",
+      "region_id": "REG-021"
+    }
+  },
+  "authority": "Original fictional history. Edition 0.7 decisions supersede proposal labels preserved in city source drafts. Unadopted dates and disputed interpretations remain qualified.",
+  "events": [
+    {
+      "id": "HIST-0001",
+      "title": "First major arrival",
+      "start_AL": 0,
+      "end_AL": 0,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Approximately 72,000 arrive; reconstructed manifests, not an exact ancestry census.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "72,000",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0002",
+      "title": "Orison freight station",
+      "start_AL": 9,
+      "end_AL": 9,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-001"
+        ],
+        "region_ids": [
+          "REG-001"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "A sheltered station uses an ancient breached crater; local thermal occurrences do not prove electrical generating capacity.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 9 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0003",
+      "title": "Second major arrival",
+      "start_AL": 17,
+      "end_AL": 17,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Approximately 81,000 arrive; the waves are not homogeneous cultures.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "81,000",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0004",
+      "title": "Third major arrival",
+      "start_AL": 43,
+      "end_AL": 43,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Approximately 57,000 arrive; modest later immigration remains possible.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "57,000",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0005",
+      "title": "Marroway river growth",
+      "start_AL": 62,
+      "end_AL": 128,
+      "date_precision": "interval",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Household and service networks grow; era-scale process, not a founding charter.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "The Marroway river settlements grew",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0006",
+      "title": "Drainage contamination and First Famine",
+      "start_AL": 76,
+      "end_AL": 76,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Contamination causes hunger and deaths in particular cultivated basins, not uniform planetary collapse.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 76 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0007",
+      "title": "Witness of Flow agreements",
+      "start_AL": 84,
+      "end_AL": 91,
+      "date_precision": "interval",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Participating works accept public measures and inspection; ancestor of Basin Witness, not global water law.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "Witness of Flow",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0008",
+      "title": "Municipal kitchen compact",
+      "start_AL": 113,
+      "end_AL": 113,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-001"
+        ],
+        "region_ids": [
+          "REG-001"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Port wards publish reserve-kitchen obligations; domestic sharing predates the Common Table's institutional ancestors.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 113 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0009",
+      "title": "Serein durable settlement era",
+      "start_AL": 129,
+      "end_AL": 216,
+      "date_precision": "interval",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Settlement develops among existing survey and seasonal uses; neither empty land nor debt-free machinery.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "Its first permanent residents",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0010",
+      "title": "Sola durable service harbor",
+      "start_AL": 147,
+      "end_AL": 147,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Three Orrel landing grounds form a nucleus, not all five modern islands simultaneously.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 147 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0011",
+      "title": "Intensified Morrow crossings",
+      "start_AL": 163,
+      "end_AL": 163,
+      "date_precision": "onset_marker",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-005",
+          "CITY-006",
+          "CITY-007",
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-009",
+          "REG-010",
+          "REG-011",
+          "REG-012"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Reference for intensification continuing afterwards, not first or final crossing.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "after 163 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0012",
+      "title": "Failed crossing and rescue litigation",
+      "start_AL": 188,
+      "end_AL": 188,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Rescue at commercial cost prompts litigation helping Open Wake articles emerge; exact later adoption year remains unassigned.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "failed crossing of 188 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0013",
+      "title": "First Wrong House surviving script",
+      "start_AL": 198,
+      "end_AL": 198,
+      "date_precision": "earliest_attestation",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Earliest surviving script of the comedy, not invention of theater or an unchanged stage.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "dates to 198 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0014",
+      "title": "Orison major collector enters service",
+      "start_AL": 231,
+      "end_AL": 231,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-001"
+        ],
+        "region_ids": [
+          "REG-001"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Daylight is redirected to a terrace and horticulture; distinct from electricity and natural night.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "in 231 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0015",
+      "title": "Second Dawn agreements",
+      "start_AL": 248,
+      "end_AL": 248,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-001"
+        ],
+        "region_ids": [
+          "REG-001"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Connected services gain financing and priority terms; ancestors of the Concession, not eternal ownership.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 248 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0016",
+      "title": "Brin observatory nucleus",
+      "start_AL": 279,
+      "end_AL": 279,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Survey observatory forms a settlement nucleus; relative founding purposes remain disputed.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 279 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0017",
+      "title": "Mirror Ring first service annex",
+      "start_AL": 318,
+      "end_AL": 318,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-001"
+        ],
+        "region_ids": [
+          "REG-001"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Partners commission a moving orbital annex, not a fixed ground district or grid substitute.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 318 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0018",
+      "title": "Oblique Rooms exhibition",
+      "start_AL": 337,
+      "end_AL": 337,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Asymmetry spreads through objects and inexpensive diagrams; not every asymmetric room derives from it.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 337 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0019",
+      "title": "Quiet Census",
+      "start_AL": 354,
+      "end_AL": 354,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Record reconciliation supports both recognition reforms and disputed employer claims; no universal citizenship settlement.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 354 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0020",
+      "title": "Mothglass controversy",
+      "start_AL": 367,
+      "end_AL": 372,
+      "date_precision": "interval",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Fraudulent reports aid takeovers while concealing a real ecological problem; exposing fraud does not remove the hazard.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "367–372 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0021",
+      "title": "Relay Winter onset",
+      "start_AL": 392,
+      "end_AL": null,
+      "date_precision": "onset_only",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Initial uneven interruptions; no established common end year. Null means unknown duration, not continuing to the present. Distinct from the 392–468 era.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "began in 392 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0022",
+      "title": "Attributed Night Choir origin",
+      "start_AL": 392,
+      "end_AL": 468,
+      "date_precision": "context_window",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Public readings of disputed messages provide one remembered origin; era bounds are not an exact founding chronology.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "traces one origin",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0023",
+      "title": "Anonymous forwarding-ledger entry",
+      "start_AL": 397,
+      "end_AL": 397,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "A dated fictional artifact distinguishes boat return from receipt by a sister; author and route remain unknown.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "forwarding ledger, 397 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0024",
+      "title": "Open Ledger settlement",
+      "start_AL": 481,
+      "end_AL": 481,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "A family of reserve-publication and inspection agreements, not a planetary constitution or guarantee of honesty.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 481 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0025",
+      "title": "Terrace Settlement",
+      "start_AL": 506,
+      "end_AL": 506,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-001"
+        ],
+        "region_ids": [
+          "REG-001"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Several operators and creditors enter the modern Concession charter with obligations and protected powers.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 506 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0026",
+      "title": "Six Returns released",
+      "start_AL": 563,
+      "end_AL": 563,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-005"
+        ],
+        "region_ids": [
+          "REG-009"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Emet Ral and collaborators release the compositions; later politics do not erase dance, weddings or professional pride.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 563 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0027",
+      "title": "Unbinding decisions",
+      "start_AL": 571,
+      "end_AL": 589,
+      "date_precision": "interval",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Several jurisdictions limit inherited labor claims; not universal emancipation or abolition of all obligations.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 571–589 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0028",
+      "title": "Aven Passage cases",
+      "start_AL": 549,
+      "end_AL": 624,
+      "date_precision": "context_window",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-006"
+        ],
+        "region_ids": [
+          "REG-010"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Plural refuge-route and water-access cases; era placement, not one continuous trial. Later coastal influence is distinct from Unbinding.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "Passage cases",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0029",
+      "title": "Blue Sill hearings",
+      "start_AL": 612,
+      "end_AL": 612,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Hearings link cultivated-water discharge and nursery damage; later museums need not occupy original sites and recovery is partial.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "In 612 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0030",
+      "title": "Lake Articles",
+      "start_AL": 641,
+      "end_AL": 641,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-005"
+        ],
+        "region_ids": [
+          "REG-009"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Overlapping navigation, shore, water and cultivation arrangements, not one lake state; maps and present water can differ.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 641 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0031",
+      "title": "Copper Shortage",
+      "start_AL": 681,
+      "end_AL": 686,
+      "date_precision": "interval",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Supply constraints encourage uneven substitution and repair; mixed fittings need their own dates.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "681–686 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0032",
+      "title": "Census synthesis",
+      "start_AL": 698,
+      "end_AL": 698,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Major synthesis estimates about 31 million, with uncertainty and differing categories.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "of 698 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0033",
+      "title": "Pocket Weather craze",
+      "start_AL": 716,
+      "end_AL": 716,
+      "date_precision": "year",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Miniature-making gains popularity; not its invention or evidence every maker visited their subject.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "in 716 AL",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0034",
+      "title": "Sunseed affair opening",
+      "start_AL": 742,
+      "end_AL": 742,
+      "date_precision": "reference_epoch",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-001"
+        ],
+        "region_ids": [
+          "REG-001"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Story starting condition around authorization and access, not completed outcome or unlimited power.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "Sunseed affair",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0035",
+      "title": "Present population reference",
+      "start_AL": 742,
+      "end_AL": 742,
+      "date_precision": "reference_epoch",
+      "status": "established",
+      "locations": {
+        "city_ids": [],
+        "region_ids": [],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Working 34.8-million estimate; reference epoch, not a newly invented census or sum of twelve cores.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "34.8 million",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-0036",
+      "title": "Sere city expansion",
+      "start_AL": 305,
+      "end_AL": 391,
+      "date_precision": "interval",
+      "status": "established",
+      "locations": {
+        "city_ids": [
+          "CITY-009",
+          "CITY-010"
+        ],
+        "region_ids": [
+          "REG-015",
+          "REG-016"
+        ],
+        "scope_note": "Participating historical locations; no universal jurisdiction implied."
+      },
+      "summary": "Tern and Velis expand differently; earlier occupation may predate this era.",
+      "adoption_rationale": "Preserves an existing master-history anchor with its bounded meaning.",
+      "sources": [
+        {
+          "path": "Docs/World/04_HISTORY_OF_NACRE.md",
+          "anchor": "On Sere",
+          "source_role": "established_master_anchor"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MAR-001",
+      "title": "Kept Room register",
+      "start_AL": 93,
+      "end_AL": 93,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "An agreement transfers return rooms and stored property across households.",
+      "adoption_rationale": "Adopt the recorded procedure, not the invention of hospitality or an untouched original building.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MARROWAY.md",
+          "anchor": "Kept Room register",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MAR-002",
+      "title": "Dry Door standard",
+      "start_AL": 226,
+      "end_AL": 226,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Replaceable lower-room components and service isolation gain compatibility.",
+      "adoption_rationale": "Adopt the standard without declaring all rooms safe under every flood level.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MARROWAY.md",
+          "anchor": "Dry Door standard",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MAR-003",
+      "title": "Windowboat exhibitions",
+      "start_AL": 341,
+      "end_AL": 341,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Domestic exhibitions adapt several influences including Oblique Rooms to rearrangeable boat rooms.",
+      "adoption_rationale": "Adopt the explicit influence and four-year interval, not a single source for every local taste.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MARROWAY.md",
+          "anchor": "Windowboat exhibitions",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MAR-004",
+      "title": "Two Copies practice",
+      "start_AL": 411,
+      "end_AL": 411,
+      "date_precision": "year",
+      "status": "adopted_revised",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Pupil and care records are held at separate stops.",
+      "adoption_rationale": "Keep year and practice; replace continuous initial Relay Winter with later broken-links context.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MARROWAY.md",
+          "anchor": "Two Copies practice",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MAR-005",
+      "title": "Moving School Accord",
+      "start_AL": 493,
+      "end_AL": 493,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Learning across routes gains defined recognition.",
+      "adoption_rationale": "Adopt recognition of an older practice, not invention of itinerant education.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MARROWAY.md",
+          "anchor": "Moving School Accord",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MAR-006",
+      "title": "Leave Without Forfeiture",
+      "start_AL": 586,
+      "end_AL": 586,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Adult departure is distinguished from surrender of personally owned belongings.",
+      "adoption_rationale": "Adopt a limited Unbinding-era decision, separating personal property from common reserves and care obligations.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MARROWAY.md",
+          "anchor": "Leave Without Forfeiture",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MAR-007",
+      "title": "Three Grounds program",
+      "start_AL": 679,
+      "end_AL": 679,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-002"
+        ],
+        "region_ids": [
+          "REG-002"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Playing grounds, quiet rooms and toilets receive public investment.",
+      "adoption_rationale": "Adopt ordinary leisure provision, retaining its imperfect execution without inventing a crisis as cause.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MARROWAY.md",
+          "anchor": "Three Grounds",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-HES-001",
+      "title": "East Bank stations",
+      "start_AL": 104,
+      "end_AL": 121,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-003"
+        ],
+        "region_ids": [
+          "REG-004"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Higher-ground compounds form a proposed durable settlement phase.",
+      "adoption_rationale": "Retain approximate occupation boundaries while avoiding one exclusive city birthday.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/HESH.md",
+          "anchor": "East Bank stations",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-HES-002",
+      "title": "Red-sheet survey editions",
+      "start_AL": 154,
+      "end_AL": 154,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-003"
+        ],
+        "region_ids": [
+          "REG-004"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Mineral-treated record sheets help establish the Red Ledger name.",
+      "adoption_rationale": "Adopt the publication practice; blood-debt retellings remain media rather than geological evidence.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/HESH.md",
+          "anchor": "red-sheet survey editions",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-HES-003",
+      "title": "Shade-span standards",
+      "start_AL": 263,
+      "end_AL": 263,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-003"
+        ],
+        "region_ids": [
+          "REG-004"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Supports, fasteners and removable panels become compatible.",
+      "adoption_rationale": "Adopt repair interfaces without forcing all buildings into one style.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/HESH.md",
+          "anchor": "shade-span standards",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-HES-004",
+      "title": "Condensate-works departures",
+      "start_AL": 414,
+      "end_AL": 426,
+      "date_precision": "interval",
+      "status": "adopted_revised",
+      "locations": {
+        "city_ids": [
+          "CITY-003"
+        ],
+        "region_ids": [
+          "REG-004"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Operators close, salvage and seal a complex in stages.",
+      "adoption_rationale": "Keep the interval within later broken links and particular parts/contract failures, not an endless initial emergency.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/HESH.md",
+          "anchor": "departures from the old condensate works",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-HES-005",
+      "title": "Open-yard settlement",
+      "start_AL": 487,
+      "end_AL": 487,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-003"
+        ],
+        "region_ids": [
+          "REG-004"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Participating yards publish limited safe-conduct and repair terms.",
+      "adoption_rationale": "Adopt a useful freedom for independent crews, not criminal immunity or universal shelter for stolen cargo.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/HESH.md",
+          "anchor": "open-yard settlement",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-HES-006",
+      "title": "Small Rooms season",
+      "start_AL": 604,
+      "end_AL": 604,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-003"
+        ],
+        "region_ids": [
+          "REG-004"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Compact interiors and off-center dress become celebrated.",
+      "adoption_rationale": "Adopt an acknowledged transformation of Oblique Rooms where scale and taste are genuine motives.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/HESH.md",
+          "anchor": "Small Rooms season",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-HES-007",
+      "title": "Saltward closure review",
+      "start_AL": 688,
+      "end_AL": 688,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-003"
+        ],
+        "region_ids": [
+          "REG-004"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Accumulated residues and future storage are reviewed together.",
+      "adoption_rationale": "Adopt connected accounting of existing obligations, not first discovery of salt or proof of indefinite capacity.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/HESH.md",
+          "anchor": "Saltward closure review",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SER-001",
+      "title": "Common Quay household register",
+      "start_AL": 164,
+      "end_AL": 164,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "A register records several occupancy forms.",
+      "adoption_rationale": "Adopt an attestation rather than universal birthday; gift and repayment can concern different stores.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SEREIN.md",
+          "anchor": "Common Quay household register",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SER-002",
+      "title": "Borrowed-pattern shops",
+      "start_AL": 409,
+      "end_AL": 416,
+      "date_precision": "interval",
+      "status": "adopted_revised",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Shops adapt technical patterns while distant revisions arrive unreliably.",
+      "adoption_rationale": "Keep dates and substitutions within later broken links, not the initial disturbance lasting decades.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SEREIN.md",
+          "anchor": "borrowed-pattern shops",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SER-003",
+      "title": "Long Rooms agreement",
+      "start_AL": 501,
+      "end_AL": 501,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Shared bathing, laundry, quiet and guest facilities acquire arrangements.",
+      "adoption_rationale": "Adopt comfort as a real institution while retaining labor and funding disputes.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SEREIN.md",
+          "anchor": "Long Rooms agreement",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SER-004",
+      "title": "Substitute-duty decision",
+      "start_AL": 584,
+      "end_AL": 584,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Cooperatives replace one inherited maintenance category with declared contributions.",
+      "adoption_rationale": "Adopt narrow reform within Unbinding, not abolition of every employment obligation.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SEREIN.md",
+          "anchor": "substitute-duty decision",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SER-005",
+      "title": "Stopped upper span",
+      "start_AL": 623,
+      "end_AL": 627,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Freight-span work is canceled after ground and traffic reassessment.",
+      "adoption_rationale": "Retain phase boundaries until construction records are authored; cancellation does not prove corruption.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SEREIN.md",
+          "anchor": "stopped upper span",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SER-006",
+      "title": "Roof-access revision",
+      "start_AL": 728,
+      "end_AL": 728,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-004"
+        ],
+        "region_ids": [
+          "REG-006"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Public roof access is distinguished from private gardens.",
+      "adoption_rationale": "Adopt a recent limited revision, leaving actual maintenance and access terms consequential.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SEREIN.md",
+          "anchor": "roof-access revision",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TAL-001",
+      "title": "Gauge Rooms",
+      "start_AL": 181,
+      "end_AL": 181,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-005"
+        ],
+        "region_ids": [
+          "REG-009"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Navigation instruments record Namar and Iren separately.",
+      "adoption_rationale": "Adopt the installation, not earliest household, present machinery or one merged lake level.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TALWEIR.md",
+          "anchor": "Talweir Gauge Rooms",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TAL-002",
+      "title": "Bend Works",
+      "start_AL": 238,
+      "end_AL": 251,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-005"
+        ],
+        "region_ids": [
+          "REG-009"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Works regularize navigation beside the lower flowing channel.",
+      "adoption_rationale": "Retain the work-phase interval until detailed phases are authored; present gates are later replacements.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TALWEIR.md",
+          "anchor": "The Bend Works",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TAL-003",
+      "title": "Court Extensions",
+      "start_AL": 306,
+      "end_AL": 349,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-005"
+        ],
+        "region_ids": [
+          "REG-009"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Housing and services expand behind original banks.",
+      "adoption_rationale": "Adopt a spatial process with different household preferences, not one shoreline ideology.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TALWEIR.md",
+          "anchor": "The Court Extensions",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TAL-004",
+      "title": "Four Landing Circuit",
+      "start_AL": 512,
+      "end_AL": 512,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-005"
+        ],
+        "region_ids": [
+          "REG-009"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Touring stages share docking fittings and a booking circuit.",
+      "adoption_rationale": "Adopt physical compatibility without standardizing shows or linking Brin's coincident departures.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TALWEIR.md",
+          "anchor": "Four Landing Circuit",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TAL-005",
+      "title": "Level Door program",
+      "start_AL": 689,
+      "end_AL": 707,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-005"
+        ],
+        "region_ids": [
+          "REG-009"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Landings gain longer routes, transfers, seats and shelter.",
+      "adoption_rationale": "Adopt varied advocacy and imperfect compromises, not universal barrier-free access.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TALWEIR.md",
+          "anchor": "Level Door program",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-AVE-001",
+      "title": "Shelter Ledger",
+      "start_AL": 194,
+      "end_AL": 194,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-006"
+        ],
+        "region_ids": [
+          "REG-010"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "An inventory survives from three transfer shelters.",
+      "adoption_rationale": "Adopt attestation, not a founding constitution or first occupation.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/AVEN.md",
+          "anchor": "The Shelter Ledger",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-AVE-002",
+      "title": "Bench Schools",
+      "start_AL": 267,
+      "end_AL": 282,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-006"
+        ],
+        "region_ids": [
+          "REG-010"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Adult technical learning and household schooling share a network.",
+      "adoption_rationale": "Adopt the institutional phase without retrospectively granting universal equal access.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/AVEN.md",
+          "anchor": "Bench Schools",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-AVE-003",
+      "title": "Covered Circuit",
+      "start_AL": 351,
+      "end_AL": 368,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-006"
+        ],
+        "region_ids": [
+          "REG-010"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Roofed public routes connect selected institutions and approaches.",
+      "adoption_rationale": "Adopt the route program; private thresholds remain private and later lifts are not original.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/AVEN.md",
+          "anchor": "Covered Circuit",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-AVE-004",
+      "title": "First Useful Exhibition",
+      "start_AL": 432,
+      "end_AL": 432,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-006"
+        ],
+        "region_ids": [
+          "REG-010"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Repairable household fixtures receive a public prize.",
+      "adoption_rationale": "Adopt taste and practical skill in broken links, not universal emergency propaganda.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/AVEN.md",
+          "anchor": "First Useful Exhibition",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-AVE-005",
+      "title": "Independent Bench Fund",
+      "start_AL": 631,
+      "end_AL": 631,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-006"
+        ],
+        "region_ids": [
+          "REG-010"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "A fund expands access to qualified shared equipment.",
+      "adoption_rationale": "Adopt equipment access while preserving assessor gatekeeping and uneven reach.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/AVEN.md",
+          "anchor": "Independent Bench Fund",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-AVE-006",
+      "title": "Roof and Rest program",
+      "start_AL": 698,
+      "end_AL": 716,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-006"
+        ],
+        "region_ids": [
+          "REG-010"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Routes gain clearer junctions, resting places and alternatives.",
+      "adoption_rationale": "Adopt an independent program; simultaneous projects elsewhere do not imply a planetary directive.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/AVEN.md",
+          "anchor": "Roof and Rest",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-DHA-001",
+      "title": "River-service settlement cluster",
+      "start_AL": 214,
+      "end_AL": 238,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-007"
+        ],
+        "region_ids": [
+          "REG-011"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Several landings and yards form a proposed settlement phase.",
+      "adoption_rationale": "Retain the range pending specific archaeology rather than assigning the whole city one captain-founder.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/DHAL.md",
+          "anchor": "214–238 AL",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-DHA-002",
+      "title": "Common Dry Store agreement",
+      "start_AL": 309,
+      "end_AL": 309,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-007"
+        ],
+        "region_ids": [
+          "REG-011"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Reliable rooms for tools, records and crop stocks are pooled.",
+      "adoption_rationale": "Adopt the agreement; its successors become several institutions rather than one unchanged organization.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/DHAL.md",
+          "anchor": "Common Dry Store agreement",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-DHA-003",
+      "title": "Transfer expansion",
+      "start_AL": 397,
+      "end_AL": 421,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-007"
+        ],
+        "region_ids": [
+          "REG-011"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Larger cargoes encourage independent riverbank structures.",
+      "adoption_rationale": "Adopt local growth during distant disruption; today's cladding and uses may be younger.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/DHAL.md",
+          "anchor": "transfer expansion",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-DHA-004",
+      "title": "Wet Rooms inquiry",
+      "start_AL": 667,
+      "end_AL": 667,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-007"
+        ],
+        "region_ids": [
+          "REG-011"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Inquiry separates product defects, installation failures and unfair household blame.",
+      "adoption_rationale": "Adopt a specific controversy rather than one company causing every damp wall.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/DHAL.md",
+          "anchor": "Wet Rooms inquiry",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-DHA-005",
+      "title": "Canopy Connection program",
+      "start_AL": 701,
+      "end_AL": 718,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-007"
+        ],
+        "region_ids": [
+          "REG-011"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Observation and household routes develop through habitat-sensitive revisions.",
+      "adoption_rationale": "Adopt both mistakes and improved access, with detailed engineering still bounded.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/DHAL.md",
+          "anchor": "Canopy Connection program",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-001",
+      "title": "Joined river stations",
+      "start_AL": 206,
+      "end_AL": 232,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Several inland settlements acquire a connected river-service identity.",
+      "adoption_rationale": "Retain a phase proposal, not one foundation or an ocean quay at the inland city.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "joined river stations",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-002",
+      "title": "Comparable ribbon records",
+      "start_AL": 271,
+      "end_AL": 271,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Records compare particular tissues and preparation failures.",
+      "adoption_rationale": "Adopt an evidence practice within regional research, never universal native edibility.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "first comparable ribbon records",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-003",
+      "title": "Broad-roof rebuilding",
+      "start_AL": 324,
+      "end_AL": 339,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Shared interfaces and broad roofs spread among makers and households.",
+      "adoption_rationale": "Adopt repair arrangements while preserving taste and exposure differences.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "broad-roof rebuilding",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-004",
+      "title": "Divided departures",
+      "start_AL": 407,
+      "end_AL": 436,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Crews leave, remain or acquire equipment under uneven support and disputed arrangements.",
+      "adoption_rationale": "Adopt later broken-links departures; fitting age cannot establish hull age or hereditary guilt.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "divided departures",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-005",
+      "title": "Shared Supper circuits",
+      "start_AL": 522,
+      "end_AL": 522,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Cooks, kitchens and performers coordinate cross-district meals and travel.",
+      "adoption_rationale": "Adopt a new circuit, not first public dining or an exclusive authenticity claim for expensive successors.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "Shared Supper circuits",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-006",
+      "title": "Practical recovery agreements",
+      "start_AL": 614,
+      "end_AL": 650,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Proposed measures respond to Blue Sill with partial, uneven recovery.",
+      "adoption_rationale": "Retain phase limits until individual obligations and sites are written; new damage needs its own cause.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "practical recovery agreements",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-007",
+      "title": "Paper Mile recording season",
+      "start_AL": 687,
+      "end_AL": 687,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Corner-pop recordings become commercially conspicuous and circulate abroad.",
+      "adoption_rationale": "Adopt the season, not genre invention or instant physical travel to distant listeners.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "Paper Mile recording season",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-MER-008",
+      "title": "Competing lower-estuary approaches",
+      "start_AL": 734,
+      "end_AL": 742,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-008"
+        ],
+        "region_ids": [
+          "REG-012"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Approaches and interventions develop beyond the city toward its estuary.",
+      "adoption_rationale": "Retain the current phase proposal; MOR-E04's bank construction date and future outcome remain open.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/MERROW.md",
+          "anchor": "competing ways into the lower estuary",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TER-001",
+      "title": "Repair-landing consolidation",
+      "start_AL": 276,
+      "end_AL": 303,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-009"
+        ],
+        "region_ids": [
+          "REG-015"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Repair landings consolidate before Sere's later expansion.",
+      "adoption_rationale": "Earlier consolidation fits 305–391 growth; exclusive founding boundaries remain unassigned.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TERN.md",
+          "anchor": "consolidation around several repair landings",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TER-002",
+      "title": "Common Landing works",
+      "start_AL": 382,
+      "end_AL": 382,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-009"
+        ],
+        "region_ids": [
+          "REG-015"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "A shared public arrival gains facilities.",
+      "adoption_rationale": "Adopt a specific investment without treating present fittings as original.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TERN.md",
+          "anchor": "Common Landing works",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TER-003",
+      "title": "Cradle Expansion",
+      "start_AL": 452,
+      "end_AL": 477,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-009"
+        ],
+        "region_ids": [
+          "REG-015"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Heavy repair expands across the boundary between two historical eras.",
+      "adoption_rationale": "Adopt a continuous local phase; period labels do not halt construction at 468.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TERN.md",
+          "anchor": "Cradle Expansion",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TER-004",
+      "title": "Split Inspection inquiry",
+      "start_AL": 653,
+      "end_AL": 653,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-009"
+        ],
+        "region_ids": [
+          "REG-015"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Contractors' scattered warnings are examined together.",
+      "adoption_rationale": "Adopt fragmented responsibility without making everyone knowingly fraudulent.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TERN.md",
+          "anchor": "Split Inspection inquiry",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-TER-005",
+      "title": "Second Life program",
+      "start_AL": 704,
+      "end_AL": 721,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-009"
+        ],
+        "region_ids": [
+          "REG-015"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Selected vessels and industrial spaces acquire new uses.",
+      "adoption_rationale": "Adopt successful and rejected reuse; age proves neither safety nor value.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/TERN.md",
+          "anchor": "Second Life program",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-VEL-001",
+      "title": "Eight Receiving Rooms",
+      "start_AL": 329,
+      "end_AL": 329,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-010"
+        ],
+        "region_ids": [
+          "REG-016"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Households share receiving arrangements for living material.",
+      "adoption_rationale": "Adopt cooperation and recorded losses; remembered eight does not generate modern district count.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/VELIS.md",
+          "anchor": "Eight Receiving Rooms",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-VEL-002",
+      "title": "Split Return",
+      "start_AL": 419,
+      "end_AL": 431,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-010"
+        ],
+        "region_ids": [
+          "REG-016"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "A crop-associated practice returns through exchanges among three settlements.",
+      "adoption_rationale": "Adopt restoration history while separating ancestry, recipe and social continuity.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/VELIS.md",
+          "anchor": "Split Return",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-VEL-003",
+      "title": "Separate Copies agreement",
+      "start_AL": 487,
+      "end_AL": 487,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-010"
+        ],
+        "region_ids": [
+          "REG-016"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Holdings require independently recoverable backups.",
+      "adoption_rationale": "Adopt continuing recoverability obligations, not infinite reserves or duplicate compromised cultures as safety.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/VELIS.md",
+          "anchor": "Separate Copies agreement",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-VEL-004",
+      "title": "Open Garden season",
+      "start_AL": 553,
+      "end_AL": 553,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-010"
+        ],
+        "region_ids": [
+          "REG-016"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Voluntary scheduled visits open selected native displays and introduced ornamental rooms.",
+      "adoption_rationale": "Adopt pleasure and hosting; biology remains distinct and privacy is not civic failure.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/VELIS.md",
+          "anchor": "Open Garden season",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-VEL-005",
+      "title": "Left Shoe printing",
+      "start_AL": 638,
+      "end_AL": 638,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-010"
+        ],
+        "region_ids": [
+          "REG-016"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "A gift-planning game's edition repeats a left shoe in its illustrations.",
+      "adoption_rationale": "Adopt a dated elaboration of the leisure anecdote, not a universally priceless relic.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/VELIS.md",
+          "anchor": "Left Shoe printing",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-VEL-006",
+      "title": "Broken Branch closures",
+      "start_AL": 713,
+      "end_AL": 719,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-010"
+        ],
+        "region_ids": [
+          "REG-016"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Contracts, heating costs and deferred work close selected facilities.",
+      "adoption_rationale": "Adopt recent multi-cause history with living witnesses and continuing owners, not ownerless ancient ruins.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/VELIS.md",
+          "anchor": "Broken Branch closures",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-BRI-001",
+      "title": "Rooms below the instruments",
+      "start_AL": 296,
+      "end_AL": 314,
+      "date_precision": "interval",
+      "status": "retained_proposal",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Household and tenure arrangements consolidate around an older observatory.",
+      "adoption_rationale": "Retain phase limits pending occupancy evidence; preserve the established 279 observatory nucleus.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/BRIN.md",
+          "anchor": "rooms below the instruments",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-BRI-002",
+      "title": "Two-entrance agreement",
+      "start_AL": 358,
+      "end_AL": 358,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Some housing access is separated from immediate employment loss.",
+      "adoption_rationale": "Adopt a limited agreement, not universal citizenship law.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/BRIN.md",
+          "anchor": "two-entrance agreement",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-BRI-003",
+      "title": "Repair winters",
+      "start_AL": 423,
+      "end_AL": 447,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Equipment adaptation and ordinary life alternate through later broken links.",
+      "adoption_rationale": "Adopt the phase without continuous catastrophe or linking every later failure to it.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/BRIN.md",
+          "anchor": "repair winters",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-BRI-004",
+      "title": "Departing households",
+      "start_AL": 512,
+      "end_AL": 512,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Institutional contracts prompt varied specialist departures and returns.",
+      "adoption_rationale": "Adopt household choices rather than betrayal or a causal link to Talweir's same-year circuit.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/BRIN.md",
+          "anchor": "departing households",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-BRI-005",
+      "title": "Joining-yard settlement",
+      "start_AL": 603,
+      "end_AL": 603,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Emergency shelter, repair and storage gain arrangements.",
+      "adoption_rationale": "Adopt limited protection while preserving ownership and responsibility differences.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/BRIN.md",
+          "anchor": "joining-yard settlement",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-BRI-006",
+      "title": "Shared apprenticeship rooms",
+      "start_AL": 731,
+      "end_AL": 731,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-011"
+        ],
+        "region_ids": [
+          "REG-018"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Shared equipment and teaching space expand training.",
+      "adoption_rationale": "Adopt investment without inventing a moral or contractual debt if graduates leave.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/BRIN.md",
+          "anchor": "shared apprenticeship rooms",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-001",
+      "title": "Veya wintering lease",
+      "start_AL": 176,
+      "end_AL": 176,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "A longer layover arrangement joins wages, lodging and storage shares.",
+      "adoption_rationale": "Adopt the lease; wintering is a shipping term, not snow climate at 11 degrees north.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "first Veya wintering lease",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-002",
+      "title": "Meren cultivation courts",
+      "start_AL": 263,
+      "end_AL": 263,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Introduced stocks, media and partner cultures support maintained cultivation.",
+      "adoption_rationale": "Adopt the institution; native qualification and repeated stock replacement still apply.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "Meren cultivation courts",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-003",
+      "title": "Separated ledgers",
+      "start_AL": 407,
+      "end_AL": 414,
+      "date_precision": "interval",
+      "status": "adopted_revised",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Notices, credit and residence records reach connected harbors differently.",
+      "adoption_rationale": "Keep dates in later broken links while radio and physical movement continue.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "separated ledgers",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-004",
+      "title": "Return Seat agreement",
+      "start_AL": 492,
+      "end_AL": 492,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Publicly supported meetings must account for selected return journeys.",
+      "adoption_rationale": "Adopt a mobility obligation, not universal free boats or one participation mode.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "Return Seat agreement",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-005",
+      "title": "Landing service separated from descent",
+      "start_AL": 582,
+      "end_AL": 582,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "One inherited personal-service category ends while property contributions remain.",
+      "adoption_rationale": "Adopt a jurisdictional Unbinding example; later disguised coercion remains contestable.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "landing service separated from descent",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-006",
+      "title": "Neri common crossing account",
+      "start_AL": 648,
+      "end_AL": 655,
+      "date_precision": "interval",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "School transport gains a shared public service account.",
+      "adoption_rationale": "Adopt a service phase without a universal life timetable.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "Neri's common crossing account",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-007",
+      "title": "Separate visitor book",
+      "start_AL": 694,
+      "end_AL": 694,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Temporary occupancy and core residence are reported separately.",
+      "adoption_rationale": "Adopt useful accounting without declaring when someone truly belongs.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "separate visitor book",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    },
+    {
+      "id": "HIST-SOL-008",
+      "title": "Neri shore setback",
+      "start_AL": 731,
+      "end_AL": 731,
+      "date_precision": "year",
+      "status": "adopted",
+      "locations": {
+        "city_ids": [
+          "CITY-012"
+        ],
+        "region_ids": [
+          "REG-021"
+        ],
+        "scope_note": "City or precursor networks; present municipal limits do not define historical jurisdiction."
+      },
+      "summary": "Selected paths, stores and a room move from an eroding margin.",
+      "adoption_rationale": "Adopt partial adjustment with compensation and dispute, not abandonment of an island.",
+      "sources": [
+        {
+          "path": "Docs/World/Cities/SOLA.md",
+          "anchor": "Neri shore setback",
+          "source_role": "city_local_proposal_reviewed_for_edition_0_7"
+        }
+      ]
+    }
+  ],
+  "date_rules": {
+    "year": "One local orbital year; no day or month implied.",
+    "interval": "Multi-year phase, not necessarily uninterrupted activity.",
+    "earliest_attestation": "Earliest surviving evidence, not first occurrence.",
+    "context_window": "Era placement only, not start/end dates of one proceeding.",
+    "onset_only": "Start established; null end means unknown, never present ongoing.",
+    "onset_marker": "Reference for intensification continuing afterwards.",
+    "reference_epoch": "Assessment or story setup, not new survey or completed future."
+  },
+  "status_rules": {
+    "established": "Existing master anchor retained.",
+    "adopted": "City proposal explicitly accepted at bounded scope.",
+    "adopted_revised": "Dates retained; historical attribution corrected.",
+    "retained_proposal": "Recorded for continuity, not a fixed historical event."
+  },
+  "eras": [
+    {
+      "id": "ERA-ARRIVALS",
+      "title": "Arrivals and unequal beginnings",
+      "start_AL": 0,
+      "end_AL": 61
+    },
+    {
+      "id": "ERA-SHORE",
+      "title": "Opening the shore",
+      "start_AL": 62,
+      "end_AL": 128
+    },
+    {
+      "id": "ERA-CROSSINGS",
+      "title": "Long crossings",
+      "start_AL": 129,
+      "end_AL": 216
+    },
+    {
+      "id": "ERA-INSTRUMENTS",
+      "title": "Years of instruments",
+      "start_AL": 217,
+      "end_AL": 304
+    },
+    {
+      "id": "ERA-EXPANSION",
+      "title": "Expansion and first forgetting",
+      "start_AL": 305,
+      "end_AL": 391
+    },
+    {
+      "id": "ERA-BROKEN-LINKS",
+      "title": "Broken links",
+      "start_AL": 392,
+      "end_AL": 468
+    },
+    {
+      "id": "ERA-REPAIR",
+      "title": "Settlements of repair",
+      "start_AL": 469,
+      "end_AL": 548
+    },
+    {
+      "id": "ERA-INHERITANCE",
+      "title": "Argument over inheritance",
+      "start_AL": 549,
+      "end_AL": 624
+    },
+    {
+      "id": "ERA-CONNECTION",
+      "title": "Connection and new dependencies",
+      "start_AL": 625,
+      "end_AL": 703
+    },
+    {
+      "id": "ERA-PRESENT",
+      "title": "Present inheritance",
+      "start_AL": 704,
+      "end_AL": 742
+    }
+  ],
+  "relations": [
+    {
+      "from_event_id": "HIST-0006",
+      "to_event_id": "HIST-0007",
+      "kind": "response",
+      "note": "Cross-claim water consequences motivate inspection."
+    },
+    {
+      "from_event_id": "HIST-0018",
+      "to_event_id": "HIST-MAR-003",
+      "kind": "influence",
+      "note": "Acknowledged influence, not only influence."
+    },
+    {
+      "from_event_id": "HIST-0018",
+      "to_event_id": "HIST-HES-006",
+      "kind": "influence",
+      "note": "Later reinterpretation changes scale, density and dress."
+    },
+    {
+      "from_event_id": "HIST-0014",
+      "to_event_id": "HIST-0015",
+      "kind": "precedes",
+      "note": "Collector predates the financing package."
+    },
+    {
+      "from_event_id": "HIST-0015",
+      "to_event_id": "HIST-0025",
+      "kind": "institutional_ancestor",
+      "note": "Multiple operators later join the modern charter."
+    },
+    {
+      "from_event_id": "HIST-0021",
+      "to_event_id": "HIST-MAR-004",
+      "kind": "historical_context",
+      "note": "Later practice within broken links; no common initial-event end inferred."
+    },
+    {
+      "from_event_id": "HIST-0021",
+      "to_event_id": "HIST-SOL-003",
+      "kind": "historical_context",
+      "note": "Uneven receipt is not total planetary silence."
+    },
+    {
+      "from_event_id": "HIST-0021",
+      "to_event_id": "HIST-HES-004",
+      "kind": "historical_context",
+      "note": "Later shutdown has particular parts and contract causes."
+    },
+    {
+      "from_event_id": "HIST-0021",
+      "to_event_id": "HIST-SER-002",
+      "kind": "historical_context",
+      "note": "Later revisions become unreliable."
+    },
+    {
+      "from_event_id": "HIST-0027",
+      "to_event_id": "HIST-SOL-005",
+      "kind": "local_expression",
+      "note": "Limited service reform during Unbinding."
+    },
+    {
+      "from_event_id": "HIST-0027",
+      "to_event_id": "HIST-SER-004",
+      "kind": "local_expression",
+      "note": "Declared maintenance contributions differ from inherited bodily duty."
+    },
+    {
+      "from_event_id": "HIST-0027",
+      "to_event_id": "HIST-MAR-006",
+      "kind": "local_expression",
+      "note": "Local departure and personal-property recognition."
+    },
+    {
+      "from_event_id": "HIST-0027",
+      "to_event_id": "HIST-0028",
+      "kind": "distinct_from",
+      "note": "Inherited labor and refuge-route access are separate legal histories."
+    },
+    {
+      "from_event_id": "HIST-0029",
+      "to_event_id": "HIST-MER-006",
+      "kind": "response",
+      "note": "Proposed recovery phase follows hearings."
+    },
+    {
+      "from_event_id": "HIST-HES-005",
+      "to_event_id": "HIST-VEL-003",
+      "kind": "distinct_from",
+      "note": "Coincident 487 events concern different places and objects."
+    },
+    {
+      "from_event_id": "HIST-TAL-004",
+      "to_event_id": "HIST-BRI-004",
+      "kind": "distinct_from",
+      "note": "Coincident 512 events have no established causal connection."
+    },
+    {
+      "from_event_id": "HIST-0036",
+      "to_event_id": "HIST-TER-001",
+      "kind": "compatible_overlap",
+      "note": "Earlier consolidation fits later expansion."
+    },
+    {
+      "from_event_id": "HIST-0016",
+      "to_event_id": "HIST-BRI-001",
+      "kind": "precedes",
+      "note": "Household phase can postdate the observatory nucleus."
+    },
+    {
+      "from_event_id": "HIST-VEL-001",
+      "to_event_id": "HIST-VEL-002",
+      "kind": "historical_context",
+      "note": "Older receiving network does not prove genetic continuity."
+    },
+    {
+      "from_event_id": "HIST-VEL-002",
+      "to_event_id": "HIST-VEL-003",
+      "kind": "precedes",
+      "note": "Recovery predates the copies agreement, without sole-cause claim."
+    },
+    {
+      "from_event_id": "HIST-0029",
+      "to_event_id": "HIST-MER-008",
+      "kind": "distinct_from",
+      "note": "Recent estuary works need a distinct causal history."
+    }
+  ],
+  "undated_contexts": [
+    {
+      "id": "HIST-U001",
+      "title": "Arrival School teaching copy",
+      "date_AL": null,
+      "source_path": "Docs/World/04_HISTORY_OF_NACRE.md",
+      "anchor": "Fictional teaching copy",
+      "note": "Attribution uncertain and no copying date; chapter placement does not date it."
+    },
+    {
+      "id": "HIST-U002",
+      "title": "Durable Open Wake articles",
+      "date_AL": null,
+      "source_path": "Docs/World/04_HISTORY_OF_NACRE.md",
+      "anchor": "Open Wake",
+      "note": "Litigation follows the fixed 188 crossing; exact article-adoption dates remain open."
+    },
+    {
+      "id": "HIST-U003",
+      "title": "Coastal reception of Passage law",
+      "date_AL": null,
+      "source_path": "Docs/World/04_HISTORY_OF_NACRE.md",
+      "anchor": "coastal access law",
+      "note": "Influence is established in principle, but Dhal and Tern local proceedings are undated."
+    },
+    {
+      "id": "HIST-U004",
+      "title": "Orison thermal investigations",
+      "date_AL": null,
+      "source_path": "Docs/World/Cities/ORISON.md",
+      "anchor": "thermal",
+      "note": "Thermal observations and possible bounded uses do not establish dated city-scale electrical capacity."
+    }
+  ],
+  "source_corrections": [
+    {
+      "id": "HCOR-001",
+      "path": "Docs/World/Cities/MARROWAY.md",
+      "topic": "411 Two Copies",
+      "decision": "Later broken-links era, not continuous initial Relay Winter.",
+      "status": "applied_by_parent"
+    },
+    {
+      "id": "HCOR-002",
+      "path": "Docs/World/Cities/HESH.md",
+      "topic": "414–426 condensate departures",
+      "decision": "Later broken-links era with particular contract and parts causes.",
+      "status": "applied_by_parent"
+    },
+    {
+      "id": "HCOR-003",
+      "path": "Docs/World/Cities/SEREIN.md",
+      "topic": "409–416 borrowed patterns",
+      "decision": "Later broken-links era, not initial disturbance lasting decades.",
+      "status": "applied_by_parent"
+    },
+    {
+      "id": "HCOR-004",
+      "path": "Docs/World/Cities/SOLA.md",
+      "topic": "407–414 separated ledgers",
+      "decision": "Later broken links; radio and physical traffic persist.",
+      "status": "applied_by_parent"
+    },
+    {
+      "id": "HCOR-005",
+      "path": "Docs/World/Cities/DHAL.md",
+      "topic": "Passage cases",
+      "decision": "Aven origin within 549–624 and later coastal influence, not a planetary proceeding.",
+      "status": "applied_by_parent"
+    },
+    {
+      "id": "HCOR-006",
+      "path": "Docs/World/Cities/TERN.md",
+      "topic": "Passage cases",
+      "decision": "Aven origin and coastal reception, distinct from inherited-labor Unbinding.",
+      "status": "applied_by_parent"
+    }
+  ]
+}

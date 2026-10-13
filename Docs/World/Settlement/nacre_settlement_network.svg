@@ -1,0 +1,364 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1660">
+<style>text{font-family:Arial,sans-serif;fill:#213c47;font-size:16px}.small{font-size:13px}.heading{font-size:25px;font-weight:bold}</style>
+<rect width="1800" height="1660" fill="#f3efdf"/>
+<text x="60" y="48" class="heading">NACRE / HOMES BETWEEN THE CITIES</text>
+<text x="60" y="80" >48 authored secondary settlements and communities · 12 major-city anchors · 742 AL census allocation</text>
+<text x="60" y="104" class="small">Equirectangular concept map; angular scale distorts distance. Marine symbols are reference anchors, not engineered settlement footprints.</text>
+<rect x="80" y="120" width="1584" height="792" fill="#c6dde3"/>
+<path d="M80.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="80.0" y="933" class="small" text-anchor="middle">-180</text>
+<path d="M212.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="212.0" y="933" class="small" text-anchor="middle">-150</text>
+<path d="M344.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="344.0" y="933" class="small" text-anchor="middle">-120</text>
+<path d="M476.00000000000006 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="476.00000000000006" y="933" class="small" text-anchor="middle">-90</text>
+<path d="M608.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="608.0" y="933" class="small" text-anchor="middle">-60</text>
+<path d="M740.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="740.0" y="933" class="small" text-anchor="middle">-30</text>
+<path d="M872.0000000000001 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="872.0000000000001" y="933" class="small" text-anchor="middle">0</text>
+<path d="M1004.0000000000001 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="1004.0000000000001" y="933" class="small" text-anchor="middle">30</text>
+<path d="M1136.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="1136.0" y="933" class="small" text-anchor="middle">60</text>
+<path d="M1268.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="1268.0" y="933" class="small" text-anchor="middle">90</text>
+<path d="M1400.0 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="1400.0" y="933" class="small" text-anchor="middle">120</text>
+<path d="M1532.0000000000002 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="1532.0000000000002" y="933" class="small" text-anchor="middle">150</text>
+<path d="M1664.0000000000002 120V912" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="1664.0000000000002" y="933" class="small" text-anchor="middle">180</text>
+<path d="M80 780.0H1664" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="71" y="784.0" class="small" text-anchor="end">-60</text>
+<path d="M80 648.0H1664" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="71" y="652.0" class="small" text-anchor="end">-30</text>
+<path d="M80 516.0H1664" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="71" y="520.0" class="small" text-anchor="end">0</text>
+<path d="M80 384.0H1664" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="71" y="388.0" class="small" text-anchor="end">30</text>
+<path d="M80 252.0H1664" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="71" y="256.0" class="small" text-anchor="end">60</text>
+<path d="M80 120.0H1664" stroke="#a7c1c6" stroke-width=".7"/>
+<text x="71" y="124.0" class="small" text-anchor="end">90</text>
+<polygon points="484.8,278.4 590.4000000000001,230.0 709.2,216.8 823.6,252.0 907.2,265.20000000000005 990.8000000000001,318.0 1021.6,392.8 1017.2,410.40000000000003 1008.4000000000001,423.6 995.9040000000001,441.20000000000005 1001.8000000000001,454.40000000000003 1019.4000000000001,472.0 1026.0,480.8 1017.2,498.40000000000003 1012.8000000000001,511.6 995.2,555.6 946.8000000000001,612.8000000000001 916.0000000000001,692.0 832.4000000000001,722.8000000000001 744.4000000000001,683.2 669.6,612.8000000000001 608.0,520.4000000000001 528.8,428.0 528.8,392.8 546.4000000000001,370.8 550.2719999999999,357.6 528.8,331.20000000000005 484.8,278.4" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="1232.8000000000002,304.8 1334.0,252.0 1452.8000000000002,230.0 1540.8000000000002,287.20000000000005 1620.0000000000002,392.8 1611.2,511.6 1571.6000000000001,590.8 1567.2,670.0 1470.4,758.0 1360.4,775.6 1281.2,705.2 1246.0,604.0 1202.0,538.0 1246.0,454.40000000000003 1232.8000000000002,304.8" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="159.2,234.4 238.4,181.60000000000002 348.40000000000003,150.8 484.8,181.60000000000002 489.20000000000005,221.2 427.6,269.6 388.0,265.20000000000005 348.84,248.04000000000002 343.12,257.28000000000003 330.8,287.20000000000005 278.0,296.0 159.2,234.4" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="212.0,692.0 269.20000000000005,674.4000000000001 295.6,676.6 313.20000000000005,682.7600000000001 335.20000000000005,670.0 361.6,665.6 414.40000000000003,674.4000000000001 454.00000000000006,683.2 471.6,700.8000000000001 449.6,718.4000000000001 441.68000000000006,731.6 458.40000000000003,740.4000000000001 506.8,744.8000000000001 542.0,758.0 594.8000000000001,771.2 528.8,841.6 414.40000000000003,859.2 286.8,802.0 225.20000000000002,740.4000000000001 212.0,692.0" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="1100.8000000000002,445.6 1127.2,419.20000000000005 1149.2,445.6 1136.0,454.40000000000003 1127.728,467.6 1136.0,472.0 1149.2,480.8 1131.6000000000001,502.8 1100.8000000000002,485.20000000000005 1100.8000000000002,445.6" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="1096.4,529.2 1127.2,516.0 1149.2,551.2 1127.2,586.4000000000001 1100.8000000000002,560.0 1096.4,529.2" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="1096.4,375.20000000000005 1118.4,344.4 1140.4,362.0 1131.6000000000001,397.20000000000005 1105.2,406.0 1096.4,375.20000000000005" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="1114.0,630.4000000000001 1149.2,621.6 1162.4,656.8000000000001 1144.8000000000002,687.6 1122.8000000000002,674.4000000000001 1114.0,630.4000000000001" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="97.6,450.0 115.2,423.6 141.60000000000002,445.6 132.8,485.20000000000005 102.0,485.20000000000005 97.6,450.0" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="128.4,520.4000000000001 154.8,516.0 172.4,551.2 150.4,573.2 128.4,546.8 128.4,520.4000000000001" fill="#d9dac0" stroke="#8d9e8b"/>
+<polygon points="1633.2,577.6 1659.6000000000001,586.4000000000001 1659.6000000000001,617.2 1637.6000000000001,626.0 1620.0000000000002,604.0 1633.2,577.6" fill="#d9dac0" stroke="#8d9e8b"/>
+<polyline data-route="REGROUTE-001" points="1128.5200000000002,467.6 1137.7600000000002,470.68000000000006 1162.4,485.20000000000005 1202.0,542.4000000000001 1237.2,598.28 1243.36,601.14" fill="none" stroke="#b36643" stroke-width="3" stroke-dasharray="6 5"/>
+<polyline data-route="REGROUTE-002" points="1245.56,601.8 1263.6000000000001,599.6 1290.0,590.8 1316.4,582.0 1338.4,573.2 1356.0,568.8" fill="none" stroke="#b36643" stroke-width="3" stroke-dasharray="6 5"/>
+<path data-city="CITY-001" d="M995.2 436.20000000000005l5 5l-5 5l-5-5Z" fill="#875039"><title>Orison</title></path>
+<path data-city="CITY-002" d="M999.6 493.40000000000003l5 5l-5 5l-5-5Z" fill="#875039"><title>Marroway</title></path>
+<path data-city="CITY-003" d="M797.2 431.8l5 5l-5 5l-5-5Z" fill="#875039"><title>Hesh</title></path>
+<path data-city="CITY-004" d="M550.8 352.6l5 5l-5 5l-5-5Z" fill="#875039"><title>Serein</title></path>
+<path data-city="CITY-005" d="M1417.6000000000001 387.8l5 5l-5 5l-5-5Z" fill="#875039"><title>Talweir</title></path>
+<path data-city="CITY-006" d="M1356.0 563.8l5 5l-5 5l-5-5Z" fill="#875039"><title>Aven</title></path>
+<path data-city="CITY-007" d="M1602.4 493.40000000000003l5 5l-5 5l-5-5Z" fill="#875039"><title>Dhal</title></path>
+<path data-city="CITY-008" d="M1567.2 643.0l5 5l-5 5l-5-5Z" fill="#875039"><title>Merrow</title></path>
+<path data-city="CITY-009" d="M440.8 726.6l5 5l-5 5l-5-5Z" fill="#875039"><title>Tern</title></path>
+<path data-city="CITY-010" d="M313.20000000000005 678.2l5 5l-5 5l-5-5Z" fill="#875039"><title>Velis</title></path>
+<path data-city="CITY-011" d="M348.40000000000003 242.60000000000002l5 5l-5 5l-5-5Z" fill="#875039"><title>Brin</title></path>
+<path data-city="CITY-012" d="M1127.2 462.6l5 5l-5 5l-5-5Z" fill="#875039"><title>Sola</title></path>
+<circle data-settlement="SET-001" cx="992.5600000000001" cy="443.84" r="4" fill="#294d49"><title>Kela Steps</title></circle>
+<path d="M992.5600000000001 443.84L969.0600000000001 442.84" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="955.5600000000001" y="431.84" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="969.0600000000001" y="447.84" class="small" text-anchor="middle">01</text>
+<circle data-settlement="SET-002" cx="990.3600000000001" cy="436.36000000000007" r="4" fill="#294d49"><title>Three Basin</title></circle>
+<path d="M990.3600000000001 436.36000000000007L1003.8600000000001 417.36000000000007" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="990.3600000000001" y="406.36000000000007" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1003.8600000000001" y="422.36000000000007" class="small" text-anchor="middle">02</text>
+<circle data-settlement="SET-003" cx="993.0000000000001" cy="494.88000000000005" r="4" fill="#294d49"><title>Neri Fold</title></circle>
+<path d="M993.0000000000001 494.88000000000005L969.5000000000001 493.88000000000005" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="956.0000000000001" y="482.88000000000005" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="969.5000000000001" y="498.88000000000005" class="small" text-anchor="middle">03</text>
+<circle data-settlement="SET-004" cx="995.2" cy="508.08000000000004" r="4" fill="#294d49"><title>Ravelbank</title></circle>
+<path d="M995.2 508.08000000000004L1018.7 528.08" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1005.2" y="517.08" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1018.7" y="533.08" class="small" text-anchor="middle">04</text>
+<circle data-settlement="SET-005" cx="918.2" cy="444.72" r="4" fill="#294d49"><title>Leth Pass</title></circle>
+<path d="M918.2 444.72L894.7 443.72" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="881.2" y="432.72" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="894.7" y="448.72" class="small" text-anchor="middle">05</text>
+<circle data-settlement="SET-006" cx="903.6800000000001" cy="455.28000000000003" r="4" fill="#294d49"><title>Cloud Loom</title></circle>
+<path d="M903.6800000000001 455.28000000000003L927.1800000000001 454.28000000000003" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="913.6800000000001" y="443.28000000000003" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="927.1800000000001" y="459.28000000000003" class="small" text-anchor="middle">06</text>
+<circle data-settlement="SET-007" cx="806.88" cy="445.6" r="4" fill="#294d49"><title>Senn Cut</title></circle>
+<path d="M806.88 445.6L830.38 444.6" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="816.88" y="433.6" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="830.38" y="449.6" class="small" text-anchor="middle">07</text>
+<circle data-settlement="SET-008" cx="808.64" cy="428.0" r="4" fill="#294d49"><title>Shallow House</title></circle>
+<path d="M808.64 428.0L822.14 409.0" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="808.64" y="398.0" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="822.14" y="414.0" class="small" text-anchor="middle">08</text>
+<circle data-settlement="SET-009" cx="748.8000000000001" cy="568.8" r="4" fill="#294d49"><title>Fellmere</title></circle>
+<path d="M748.8000000000001 568.8L772.3000000000001 567.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="758.8000000000001" y="556.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="772.3000000000001" y="572.8" class="small" text-anchor="middle">09</text>
+<circle data-settlement="SET-010" cx="735.6" cy="582.0" r="4" fill="#294d49"><title>Walking Orchard</title></circle>
+<path d="M735.6 582.0L712.1 581.0" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="698.6" y="570.0" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="712.1" y="586.0" class="small" text-anchor="middle">10</text>
+<circle data-settlement="SET-011" cx="554.32" cy="359.8" r="4" fill="#294d49"><title>Low Bell</title></circle>
+<path d="M554.32 359.8L577.82 358.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="564.32" y="347.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="577.82" y="363.8" class="small" text-anchor="middle">11</text>
+<circle data-settlement="SET-012" cx="568.4000000000001" cy="348.8" r="4" fill="#294d49"><title>Aru Court</title></circle>
+<path d="M568.4000000000001 348.8L581.9000000000001 329.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="568.4000000000001" y="318.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="581.9000000000001" y="334.8" class="small" text-anchor="middle">12</text>
+<circle data-settlement="SET-013" cx="740.0" cy="326.8" r="4" fill="#294d49"><title>Renn Cross</title></circle>
+<path d="M740.0 326.8L763.5 325.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="750.0" y="314.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="763.5" y="330.8" class="small" text-anchor="middle">13</text>
+<circle data-settlement="SET-014" cx="762.0" cy="313.6" r="4" fill="#294d49"><title>Kite Rest</title></circle>
+<path d="M762.0 313.6L775.5 294.6" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="762.0" y="283.6" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="775.5" y="299.6" class="small" text-anchor="middle">14</text>
+<circle data-settlement="SET-015" cx="739.1200000000001" cy="226.48000000000002" r="4" fill="#294d49"><title>Orris Sound</title></circle>
+<path d="M739.1200000000001 226.48000000000002L762.6200000000001 225.48000000000002" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="749.1200000000001" y="214.48000000000002" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="762.6200000000001" y="230.48000000000002" class="small" text-anchor="middle">15</text>
+<circle data-settlement="SET-016" cx="720.2" cy="226.48000000000002" r="4" fill="#294d49"><title>Small Promise</title></circle>
+<path d="M720.2 226.48000000000002L696.7 225.48000000000002" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="683.2" y="214.48000000000002" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="696.7" y="230.48000000000002" class="small" text-anchor="middle">16</text>
+<circle data-settlement="SET-017" cx="1413.2" cy="401.6" r="4" fill="#294d49"><title>Namar Fold</title></circle>
+<path d="M1413.2 401.6L1389.7 400.6" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1376.2" y="389.6" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1389.7" y="405.6" class="small" text-anchor="middle">17</text>
+<circle data-settlement="SET-018" cx="1422.0" cy="406.0" r="4" fill="#294d49"><title>Iren Fields</title></circle>
+<path d="M1422.0 406.0L1445.5 405.0" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1432.0" y="394.0" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1445.5" y="410.0" class="small" text-anchor="middle">18</text>
+<circle data-settlement="SET-019" cx="1245.56" cy="601.8" r="4" fill="#294d49"><title>Veyra Landing</title></circle>
+<path d="M1245.56 601.8L1269.06 600.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1255.56" y="589.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1269.06" y="605.8" class="small" text-anchor="middle">19</text>
+<circle data-settlement="SET-020" cx="1316.4" cy="582.0" r="4" fill="#294d49"><title>Harrow Bend</title></circle>
+<path d="M1316.4 582.0L1339.9 602.0" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1326.4" y="591.0" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1339.9" y="607.0" class="small" text-anchor="middle">20</text>
+<circle data-settlement="SET-021" cx="1571.6000000000001" cy="489.6" r="4" fill="#294d49"><title>Ves Reach</title></circle>
+<path d="M1571.6000000000001 489.6L1548.1000000000001 488.6" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1534.6000000000001" y="477.6" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1548.1000000000001" y="493.6" class="small" text-anchor="middle">21</text>
+<circle data-settlement="SET-022" cx="1514.4" cy="507.20000000000005" r="4" fill="#294d49"><title>Underleaf</title></circle>
+<path d="M1514.4 507.20000000000005L1490.9 506.20000000000005" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1477.4" y="495.20000000000005" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1490.9" y="511.20000000000005" class="small" text-anchor="middle">22</text>
+<circle data-settlement="SET-023" cx="1567.9920000000002" cy="652.1360000000001" r="4" fill="#294d49"><title>Blue Sill Landing</title></circle>
+<path d="M1567.9920000000002 652.1360000000001L1591.4920000000002 651.1360000000001" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1577.9920000000002" y="640.1360000000001" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1591.4920000000002" y="656.1360000000001" class="small" text-anchor="middle">23</text>
+<circle data-settlement="SET-024" cx="1549.6000000000001" cy="639.2" r="4" fill="#294d49"><title>Upper Tamar</title></circle>
+<path d="M1549.6000000000001 639.2L1526.1000000000001 638.2" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1512.6000000000001" y="627.2" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1526.1000000000001" y="643.2" class="small" text-anchor="middle">24</text>
+<circle data-settlement="SET-025" cx="1360.4" cy="674.4000000000001" r="4" fill="#294d49"><title>Lera Weir</title></circle>
+<path d="M1360.4 674.4000000000001L1383.9 673.4000000000001" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1370.4" y="662.4000000000001" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1383.9" y="678.4000000000001" class="small" text-anchor="middle">25</text>
+<circle data-settlement="SET-026" cx="1342.8000000000002" cy="692.0" r="4" fill="#294d49"><title>Four Shade</title></circle>
+<path d="M1342.8000000000002 692.0L1319.3000000000002 691.0" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1305.8000000000002" y="680.0" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1319.3000000000002" y="696.0" class="small" text-anchor="middle">26</text>
+<circle data-settlement="SET-027" cx="1417.6000000000001" cy="274.0" r="4" fill="#294d49"><title>High Eren</title></circle>
+<path d="M1417.6000000000001 274.0L1441.1000000000001 273.0" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1427.6000000000001" y="262.0" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1441.1000000000001" y="278.0" class="small" text-anchor="middle">27</text>
+<circle data-settlement="SET-028" cx="1435.2" cy="260.8" r="4" fill="#294d49"><title>Snow Book</title></circle>
+<path d="M1435.2 260.8L1411.7 259.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1398.2" y="248.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1411.7" y="264.8" class="small" text-anchor="middle">28</text>
+<circle data-settlement="SET-029" cx="423.20000000000005" cy="727.2" r="4" fill="#294d49"><title>Mendward</title></circle>
+<path d="M423.20000000000005 727.2L399.70000000000005 726.2" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="386.20000000000005" y="715.2" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="399.70000000000005" y="731.2" class="small" text-anchor="middle">29</text>
+<circle data-settlement="SET-030" cx="443.88000000000005" cy="726.32" r="4" fill="#294d49"><title>Little Return</title></circle>
+<path d="M443.88000000000005 726.32L467.38000000000005 725.32" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="453.88000000000005" y="714.32" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="467.38000000000005" y="730.32" class="small" text-anchor="middle">30</text>
+<circle data-settlement="SET-031" cx="317.6" cy="688.0400000000001" r="4" fill="#294d49"><title>Leth Garden</title></circle>
+<path d="M317.6 688.0400000000001L341.1 687.0400000000001" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="327.6" y="676.0400000000001" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="341.1" y="692.0400000000001" class="small" text-anchor="middle">31</text>
+<circle data-settlement="SET-032" cx="300.0" cy="692.88" r="4" fill="#294d49"><title>Closed Petal</title></circle>
+<path d="M300.0 692.88L276.5 691.88" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="263.0" y="680.88" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="276.5" y="696.88" class="small" text-anchor="middle">32</text>
+<circle data-settlement="SET-033" cx="379.20000000000005" cy="788.8000000000001" r="4" fill="#294d49"><title>Ashless</title></circle>
+<path d="M379.20000000000005 788.8000000000001L402.70000000000005 787.8000000000001" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="389.20000000000005" y="776.8000000000001" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="402.70000000000005" y="792.8000000000001" class="small" text-anchor="middle">33</text>
+<circle data-settlement="SET-034" cx="361.6" cy="797.6" r="4" fill="#294d49"><title>Warm Stone</title></circle>
+<path d="M361.6 797.6L338.1 796.6" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="324.6" y="785.6" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="338.1" y="801.6" class="small" text-anchor="middle">34</text>
+<circle data-settlement="SET-035" cx="357.20000000000005" cy="247.16000000000003" r="4" fill="#294d49"><title>South Letter</title></circle>
+<path d="M357.20000000000005 247.16000000000003L380.70000000000005 246.16000000000003" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="367.20000000000005" y="235.16000000000003" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="380.70000000000005" y="251.16000000000003" class="small" text-anchor="middle">35</text>
+<circle data-settlement="SET-036" cx="339.6" cy="238.8" r="4" fill="#294d49"><title>Nine Windows</title></circle>
+<path d="M339.6 238.8L316.1 237.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="302.6" y="226.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="316.1" y="242.8" class="small" text-anchor="middle">36</text>
+<circle data-settlement="SET-037" cx="348.40000000000003" cy="205.8" r="4" fill="#294d49"><title>Fallow Station</title></circle>
+<path d="M348.40000000000003 205.8L371.90000000000003 204.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="358.40000000000003" y="193.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="371.90000000000003" y="209.8" class="small" text-anchor="middle">37</text>
+<circle data-settlement="SET-038" cx="370.40000000000003" cy="193.92" r="4" fill="#294d49"><title>Long Measure</title></circle>
+<path d="M370.40000000000003 193.92L383.90000000000003 174.92" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="370.40000000000003" y="163.92" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="383.90000000000003" y="179.92" class="small" text-anchor="middle">38</text>
+<circle data-settlement="SET-039" cx="247.20000000000002" cy="279.28000000000003" r="4" fill="#294d49"><title>Half Sail</title></circle>
+<path d="M247.20000000000002 279.28000000000003L270.70000000000005 278.28000000000003" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="257.20000000000005" y="267.28000000000003" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="270.70000000000005" y="283.28000000000003" class="small" text-anchor="middle">39</text>
+<circle data-settlement="SET-040" cx="234.0" cy="268.72" r="4" fill="#294d49"><title>Morrowless</title></circle>
+<path d="M234.0 268.72L210.5 267.72" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="197.0" y="256.72" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="210.5" y="272.72" class="small" text-anchor="middle">40</text>
+<circle data-settlement="SET-041" cx="1148.3200000000002" cy="551.2" r="4" fill="#294d49"><title>Rillano</title></circle>
+<path d="M1148.3200000000002 551.2L1171.8200000000002 550.2" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1158.3200000000002" y="539.2" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1171.8200000000002" y="555.2" class="small" text-anchor="middle">41</text>
+<circle data-settlement="SET-042" cx="1122.8000000000002" cy="375.20000000000005" r="4" fill="#294d49"><title>Dema Reach</title></circle>
+<path d="M1122.8000000000002 375.20000000000005L1146.3000000000002 374.20000000000005" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1132.8000000000002" y="363.20000000000005" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1146.3000000000002" y="379.20000000000005" class="small" text-anchor="middle">42</text>
+<circle data-settlement="SET-043" cx="124.0" cy="458.8" r="4" fill="#294d49"><title>Eska Shelter</title></circle>
+<path d="M124.0 458.8L147.5 457.8" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="134.0" y="446.8" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="147.5" y="462.8" class="small" text-anchor="middle">43</text>
+<circle data-settlement="SET-044" cx="1642.0000000000002" cy="599.6" r="4" fill="#294d49"><title>Seam House</title></circle>
+<path d="M1642.0000000000002 599.6L1618.5000000000002 598.6" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1605.0000000000002" y="587.6" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1618.5000000000002" y="603.6" class="small" text-anchor="middle">44</text>
+<circle data-settlement="SET-045" cx="366.0" cy="551.2" r="4" fill="#276e91"><title>Mile of Rooms</title></circle>
+<path d="M366.0 551.2L389.5 550.2" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="376.0" y="539.2" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="389.5" y="555.2" class="small" text-anchor="middle">45</text>
+<circle data-settlement="SET-046" cx="762.0" cy="793.2" r="4" fill="#276e91"><title>Common Wake</title></circle>
+<path d="M762.0 793.2L785.5 792.2" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="772.0" y="781.2" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="785.5" y="797.2" class="small" text-anchor="middle">46</text>
+<circle data-settlement="SET-047" cx="960.0000000000001" cy="876.8000000000001" r="4" fill="#276e91"><title>Silllight</title></circle>
+<path d="M960.0000000000001 876.8000000000001L983.5000000000001 875.8000000000001" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="970.0000000000001" y="864.8000000000001" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="983.5000000000001" y="880.8000000000001" class="small" text-anchor="middle">47</text>
+<circle data-settlement="SET-048" cx="1070.0" cy="859.2" r="4" fill="#276e91"><title>Far Turn</title></circle>
+<path d="M1070.0 859.2L1093.5 858.2" stroke="#73857d" stroke-width=".8"/>
+<rect class="map-label-box" x="1080.0" y="847.2" width="27" height="22" rx="3" fill="#fff9e9" stroke="#83988e"/>
+<text x="1093.5" y="863.2" class="small" text-anchor="middle">48</text>
+<text x="60" y="978" class="heading">NUMBERED COMMUNITIES</text>
+<text x="60" y="1005" class="small">Rust diamonds: existing major cities. Blue dots: marine communities. Dashed rust line: proposed Sola–Veyra–Aven connection.</text>
+<text x="60" y="1047" >01  Kela Steps</text>
+<text x="60" y="1064" class="small">85,000 habitual residents · REG-001</text>
+<text x="60" y="1087" >02  Three Basin</text>
+<text x="60" y="1104" class="small">24,000 habitual residents · REG-001</text>
+<text x="60" y="1127" >03  Neri Fold</text>
+<text x="60" y="1144" class="small">92,000 habitual residents · REG-002</text>
+<text x="60" y="1167" >04  Ravelbank</text>
+<text x="60" y="1184" class="small">42,000 habitual residents · REG-002</text>
+<text x="60" y="1207" >05  Leth Pass</text>
+<text x="60" y="1224" class="small">38,000 habitual residents · REG-003</text>
+<text x="60" y="1247" >06  Cloud Loom</text>
+<text x="60" y="1264" class="small">12,000 habitual residents · REG-003</text>
+<text x="60" y="1287" >07  Senn Cut</text>
+<text x="60" y="1304" class="small">56,000 habitual residents · REG-004</text>
+<text x="60" y="1327" >08  Shallow House</text>
+<text x="60" y="1344" class="small">17,000 habitual residents · REG-004</text>
+<text x="60" y="1367" >09  Fellmere</text>
+<text x="60" y="1384" class="small">45,000 habitual residents · REG-005</text>
+<text x="60" y="1407" >10  Walking Orchard</text>
+<text x="60" y="1424" class="small">8,000 habitual residents · REG-005</text>
+<text x="60" y="1447" >11  Low Bell</text>
+<text x="60" y="1464" class="small">72,000 habitual residents · REG-006</text>
+<text x="60" y="1487" >12  Aru Court</text>
+<text x="60" y="1504" class="small">26,000 habitual residents · REG-006</text>
+<text x="500" y="1047" >13  Renn Cross</text>
+<text x="500" y="1064" class="small">52,000 habitual residents · REG-007</text>
+<text x="500" y="1087" >14  Kite Rest</text>
+<text x="500" y="1104" class="small">10,500 habitual residents · REG-007</text>
+<text x="500" y="1127" >15  Orris Sound</text>
+<text x="500" y="1144" class="small">44,000 habitual residents · REG-008</text>
+<text x="500" y="1167" >16  Small Promise</text>
+<text x="500" y="1184" class="small">9,000 habitual residents · REG-008</text>
+<text x="500" y="1207" >17  Namar Fold</text>
+<text x="500" y="1224" class="small">110,000 habitual residents · REG-009</text>
+<text x="500" y="1247" >18  Iren Fields</text>
+<text x="500" y="1264" class="small">35,000 habitual residents · REG-009</text>
+<text x="500" y="1287" >19  Veyra Landing</text>
+<text x="500" y="1304" class="small">78,000 habitual residents · REG-010</text>
+<text x="500" y="1327" >20  Harrow Bend</text>
+<text x="500" y="1344" class="small">48,000 habitual residents · REG-010</text>
+<text x="500" y="1367" >21  Ves Reach</text>
+<text x="500" y="1384" class="small">18,000 habitual residents · REG-011</text>
+<text x="500" y="1407" >22  Underleaf</text>
+<text x="500" y="1424" class="small">6,500 habitual residents · REG-011</text>
+<text x="500" y="1447" >23  Blue Sill Landing</text>
+<text x="500" y="1464" class="small">32,000 habitual residents · REG-012</text>
+<text x="500" y="1487" >24  Upper Tamar</text>
+<text x="500" y="1504" class="small">54,000 habitual residents · REG-012</text>
+<text x="940" y="1047" >25  Lera Weir</text>
+<text x="940" y="1064" class="small">28,000 habitual residents · REG-013</text>
+<text x="940" y="1087" >26  Four Shade</text>
+<text x="940" y="1104" class="small">7,200 habitual residents · REG-013</text>
+<text x="940" y="1127" >27  High Eren</text>
+<text x="940" y="1144" class="small">25,000 habitual residents · REG-014</text>
+<text x="940" y="1167" >28  Snow Book</text>
+<text x="940" y="1184" class="small">3,800 habitual residents · REG-014</text>
+<text x="940" y="1207" >29  Mendward</text>
+<text x="940" y="1224" class="small">58,000 habitual residents · REG-015</text>
+<text x="940" y="1247" >30  Little Return</text>
+<text x="940" y="1264" class="small">12,500 habitual residents · REG-015</text>
+<text x="940" y="1287" >31  Leth Garden</text>
+<text x="940" y="1304" class="small">36,000 habitual residents · REG-016</text>
+<text x="940" y="1327" >32  Closed Petal</text>
+<text x="940" y="1344" class="small">6,800 habitual residents · REG-016</text>
+<text x="940" y="1367" >33  Ashless</text>
+<text x="940" y="1384" class="small">29,000 habitual residents · REG-017</text>
+<text x="940" y="1407" >34  Warm Stone</text>
+<text x="940" y="1424" class="small">5,400 habitual residents · REG-017</text>
+<text x="940" y="1447" >35  South Letter</text>
+<text x="940" y="1464" class="small">26,000 habitual residents · REG-018</text>
+<text x="940" y="1487" >36  Nine Windows</text>
+<text x="940" y="1504" class="small">8,200 habitual residents · REG-018</text>
+<text x="1380" y="1047" >37  Fallow Station</text>
+<text x="1380" y="1064" class="small">2,600 habitual residents · REG-019</text>
+<text x="1380" y="1087" >38  Long Measure</text>
+<text x="1380" y="1104" class="small">900 habitual residents · REG-019</text>
+<text x="1380" y="1127" >39  Half Sail</text>
+<text x="1380" y="1144" class="small">18,000 habitual residents · REG-020</text>
+<text x="1380" y="1167" >40  Morrowless</text>
+<text x="1380" y="1184" class="small">4,600 habitual residents · REG-020</text>
+<text x="1380" y="1207" >41  Rillano</text>
+<text x="1380" y="1224" class="small">41,000 habitual residents · REG-021</text>
+<text x="1380" y="1247" >42  Dema Reach</text>
+<text x="1380" y="1264" class="small">12,000 habitual residents · REG-021</text>
+<text x="1380" y="1287" >43  Eska Shelter</text>
+<text x="1380" y="1304" class="small">3,200 habitual residents · REG-022</text>
+<text x="1380" y="1327" >44  Seam House</text>
+<text x="1380" y="1344" class="small">1,100 habitual residents · REG-022</text>
+<text x="1380" y="1367" >45  Mile of Rooms</text>
+<text x="1380" y="1384" class="small">4,800 habitual residents · REG-023</text>
+<text x="1380" y="1407" >46  Common Wake</text>
+<text x="1380" y="1424" class="small">2,600 habitual residents · REG-023</text>
+<text x="1380" y="1447" >47  Silllight</text>
+<text x="1380" y="1464" class="small">900 habitual residents · REG-024</text>
+<text x="1380" y="1487" >48  Far Turn</text>
+<text x="1380" y="1504" class="small">1,200 habitual residents · REG-024</text>
+<text x="60" y="1575" class="small">34.8 million habitual residents allocated once across 24 regional accounts. Named places are subsets of those accounts.</text>
+<text x="60" y="1598" class="small">Concept placement and bookkeeping checked; settlement footprints, source capacity, terrain and operating transport remain to be developed.</text>
+<text x="60" y="1621" class="small">Source: nacre_population_and_settlements.json and parent atlas. This plate is not a playable world or a population simulation.</text>
+</svg>

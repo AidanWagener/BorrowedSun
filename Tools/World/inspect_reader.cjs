@@ -33,7 +33,7 @@ const { chromium } = require('playwright');
         await page.locator(`nav a[href="#${id}"]`).click();
         await page.waitForFunction(id => location.hash === `#${id}`, id);
         navigated.push(id);
-        if (['atlas', 'orison', 'exchange', 'talweir', 'marroway', 'aven', 'sola', 'hesh', 'serein', 'dhal', 'merrow', 'tern', 'velis', 'brin', 'production', 'journeys'].includes(id)) {
+        if (['atlas', 'orison', 'exchange', 'talweir', 'marroway', 'aven', 'sola', 'hesh', 'serein', 'dhal', 'merrow', 'tern', 'velis', 'brin', 'production', 'journeys', 'chronology', 'accounts', 'settlements', 'people'].includes(id)) {
           await page.locator(`#${id}`).scrollIntoViewIfNeeded();
           await page.screenshot({path:path.join(output,`reader-${id}-${width}.png`)});
         }

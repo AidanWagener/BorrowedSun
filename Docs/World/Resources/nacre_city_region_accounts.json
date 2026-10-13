@@ -1,0 +1,1692 @@
+{
+  "edition": "0.7",
+  "status": "Reconciled authored demand and procurement commitments; not productive capacity, operating contracts or a globally complete economy",
+  "civil_turn_hours": 24,
+  "source_head_at_task_start": "9c6aae3",
+  "population_scope": "Twelve habitual resident city cores only; remaining regional population allocation belongs to the separate atlas. Orison service-region population includes its core. Temporary visitors remain residents at their usual home for census accounting.",
+  "categories": [
+    "dry",
+    "fresh",
+    "cultured",
+    "qualified_native",
+    "other"
+  ],
+  "cities": [
+    {
+      "city_id": "CITY-001",
+      "name": "Orison",
+      "host_region_id": "REG-001",
+      "core_population": 420000,
+      "source_json": "Cities/orison_city_plan.json",
+      "source_bible": "Cities/ORISON.md",
+      "source_section_hint": "3. The things arriving before breakfast",
+      "core_fields_pointer": "/service_assumptions",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 120,
+        "other_delivered_m3_per_turn": 9600,
+        "total_delivered_m3_per_turn": 60000,
+        "distribution_loss_fraction": 0.1,
+        "treated_network_input_m3_per_turn": 66666.66666666667,
+        "raw_source_streams": [],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 25000,
+        "sewer_collection_m3_per_turn": null,
+        "final_residual_m3_per_turn": null,
+        "gross_end_use_m3_per_turn": 85000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Raw source recovery and sewer return balance."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 700,
+        "kg_per_resident_per_turn": 1.6666666666666667,
+        "kcal_per_resident_per_turn": null,
+        "resident_kcal_per_turn": null,
+        "protein_g_per_resident_per_turn": null,
+        "protein_tonnes_per_turn": null,
+        "basket_tonnes_per_turn": {
+          "dry": 230,
+          "fresh": 300,
+          "cultured": 90,
+          "qualified_native": 30,
+          "other": 50
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 600,
+        "peak_case_mw": 1050,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-002",
+      "name": "Marroway",
+      "host_region_id": "REG-002",
+      "core_population": 670000,
+      "source_json": "Cities/marroway_settlement.json",
+      "source_bible": "Cities/MARROWAY.md",
+      "source_section_hint": "5. Water, food, power and the work between them",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 145,
+        "other_delivered_m3_per_turn": 42850,
+        "total_delivered_m3_per_turn": 140000,
+        "distribution_loss_fraction": 0.2,
+        "treated_network_input_m3_per_turn": 175000,
+        "raw_source_streams": [
+          {
+            "source_kind": "river",
+            "treated_product_m3_per_turn": 175000,
+            "treatment_recovery": 0.95,
+            "raw_abstraction_m3_per_turn": 184210.5263157895,
+            "source_process_residual_m3_per_turn": 9210.526315789495,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 35000,
+        "sewer_collection_m3_per_turn": 125000,
+        "final_residual_m3_per_turn": 90000,
+        "gross_end_use_m3_per_turn": 175000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 1139,
+        "kg_per_resident_per_turn": 1.7,
+        "kcal_per_resident_per_turn": 2500,
+        "resident_kcal_per_turn": 1675000000,
+        "protein_g_per_resident_per_turn": 75,
+        "protein_tonnes_per_turn": 50.25,
+        "basket_tonnes_per_turn": {
+          "dry": 410,
+          "fresh": 500,
+          "cultured": 155,
+          "qualified_native": 0,
+          "other": 74
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 460,
+        "peak_case_mw": 840,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-003",
+      "name": "Hesh",
+      "host_region_id": "REG-004",
+      "core_population": 310000,
+      "source_json": "Cities/hesh_settlement.json",
+      "source_bible": "Cities/HESH.md",
+      "source_section_hint": "5. The closed basin balance; 6. Meals, manufacture and movement",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 130,
+        "other_delivered_m3_per_turn": 17700,
+        "total_delivered_m3_per_turn": 58000,
+        "distribution_loss_fraction": 0.15,
+        "treated_network_input_m3_per_turn": 68235.29411764706,
+        "raw_source_streams": [
+          {
+            "source_kind": "upland_freshwater",
+            "treated_product_m3_per_turn": 52000,
+            "treatment_recovery": 0.95,
+            "raw_abstraction_m3_per_turn": 54736.84210526316,
+            "source_process_residual_m3_per_turn": 2736.84210526316,
+            "capacity_verified": false
+          },
+          {
+            "source_kind": "brackish_terminal_lake",
+            "treated_product_m3_per_turn": 16235.294117647,
+            "treatment_recovery": 0.7,
+            "raw_abstraction_m3_per_turn": 23193.277310924288,
+            "source_process_residual_m3_per_turn": 6957.983193277289,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 22000,
+        "sewer_collection_m3_per_turn": 55000,
+        "final_residual_m3_per_turn": 33000,
+        "gross_end_use_m3_per_turn": 80000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 496,
+        "kg_per_resident_per_turn": 1.6,
+        "kcal_per_resident_per_turn": 2500,
+        "resident_kcal_per_turn": 775000000,
+        "protein_g_per_resident_per_turn": 75,
+        "protein_tonnes_per_turn": 23.25,
+        "basket_tonnes_per_turn": {
+          "dry": 185,
+          "fresh": 175,
+          "cultured": 90,
+          "qualified_native": 0,
+          "other": 46
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 215,
+        "peak_case_mw": 430,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-004",
+      "name": "Serein",
+      "host_region_id": "REG-006",
+      "core_population": 530000,
+      "source_json": "Cities/serein_settlement.json",
+      "source_bible": "Cities/SEREIN.md",
+      "source_section_hint": "6. A service account that supports the rooms",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 125,
+        "other_delivered_m3_per_turn": 33750,
+        "total_delivered_m3_per_turn": 100000,
+        "distribution_loss_fraction": 0.2,
+        "treated_network_input_m3_per_turn": 125000,
+        "raw_source_streams": [
+          {
+            "source_kind": "catchment_ground_roof_freshwater",
+            "treated_product_m3_per_turn": 95000,
+            "treatment_recovery": 0.95,
+            "raw_abstraction_m3_per_turn": 100000.0,
+            "source_process_residual_m3_per_turn": 5000.0,
+            "capacity_verified": false
+          },
+          {
+            "source_kind": "seawater",
+            "treated_product_m3_per_turn": 30000,
+            "treatment_recovery": 0.45,
+            "raw_abstraction_m3_per_turn": 66666.66666666667,
+            "source_process_residual_m3_per_turn": 36666.66666666667,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 25000,
+        "sewer_collection_m3_per_turn": 85000,
+        "final_residual_m3_per_turn": 60000,
+        "gross_end_use_m3_per_turn": 125000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 874.5,
+        "kg_per_resident_per_turn": 1.65,
+        "kcal_per_resident_per_turn": null,
+        "resident_kcal_per_turn": null,
+        "protein_g_per_resident_per_turn": null,
+        "protein_tonnes_per_turn": null,
+        "basket_tonnes_per_turn": {
+          "dry": 300,
+          "fresh": 360,
+          "cultured": 150,
+          "qualified_native": 0,
+          "other": 64.5
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 450,
+        "peak_case_mw": 820,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-005",
+      "name": "Talweir",
+      "host_region_id": "REG-009",
+      "core_population": 780000,
+      "source_json": "Cities/talweir_city_plan.json",
+      "source_bible": "Cities/TALWEIR.md",
+      "source_section_hint": "5. The city keeps itself supplied",
+      "core_fields_pointer": "/service_assumptions",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 150,
+        "other_delivered_m3_per_turn": 63000,
+        "total_delivered_m3_per_turn": 180000,
+        "distribution_loss_fraction": null,
+        "treated_network_input_m3_per_turn": null,
+        "raw_source_streams": [],
+        "combined_raw_abstraction_m3_per_turn": 225000,
+        "combined_raw_to_delivery_loss_fraction": 0.2,
+        "reuse_internal_loop_m3_per_turn": 50000,
+        "sewer_collection_m3_per_turn": 155000,
+        "final_residual_m3_per_turn": 105000,
+        "gross_end_use_m3_per_turn": 230000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Separate raw-treatment and distribution losses, including treated network input."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 1248,
+        "kg_per_resident_per_turn": 1.6,
+        "kcal_per_resident_per_turn": 2500,
+        "resident_kcal_per_turn": 1950000000,
+        "protein_g_per_resident_per_turn": 80,
+        "protein_tonnes_per_turn": 62.4,
+        "basket_tonnes_per_turn": null,
+        "calorie_origin_shares": {
+          "Lake_Country_regional": 0.75,
+          "other_connected_Morrow": 0.22,
+          "city_internal_primary_production": 0.03
+        },
+        "calorie_origin_source_pointer": "/service_assumptions/food/annual_calorie_origin_shares",
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 620,
+        "peak_case_mw": 1100,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-006",
+      "name": "Aven",
+      "host_region_id": "REG-010",
+      "core_population": 450000,
+      "source_json": "Cities/aven_settlement.json",
+      "source_bible": "Cities/AVEN.md",
+      "source_section_hint": "5. Supplies that have to reach the plateau",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 140,
+        "other_delivered_m3_per_turn": 27000,
+        "total_delivered_m3_per_turn": 90000,
+        "distribution_loss_fraction": 0.15,
+        "treated_network_input_m3_per_turn": 105882.35294117648,
+        "raw_source_streams": [
+          {
+            "source_kind": "upland_surface_freshwater",
+            "treated_product_m3_per_turn": 105882.352941176,
+            "treatment_recovery": 0.96,
+            "raw_abstraction_m3_per_turn": 110294.11764705833,
+            "source_process_residual_m3_per_turn": 4411.764705882335,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 12000,
+        "sewer_collection_m3_per_turn": 70000,
+        "final_residual_m3_per_turn": 58000,
+        "gross_end_use_m3_per_turn": 102000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 742.5,
+        "kg_per_resident_per_turn": 1.65,
+        "kcal_per_resident_per_turn": 2400,
+        "resident_kcal_per_turn": 1080000000,
+        "protein_g_per_resident_per_turn": 75,
+        "protein_tonnes_per_turn": 33.75,
+        "basket_tonnes_per_turn": null,
+        "calorie_origin_shares": {
+          "wider_Aven_basins": 0.62,
+          "other_connected_Morrow": 0.36,
+          "core_primary_production": 0.02
+        },
+        "calorie_origin_source_pointer": "/food_screen/calorie_origin_shares",
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 420,
+        "peak_case_mw": 740,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-007",
+      "name": "Dhal",
+      "host_region_id": "REG-011",
+      "core_population": 160000,
+      "source_json": "Cities/dhal_settlement.json",
+      "source_bible": "Cities/DHAL.md",
+      "source_section_hint": "A demand study that the forest does not pay for",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 120,
+        "other_delivered_m3_per_turn": 10800,
+        "total_delivered_m3_per_turn": 30000,
+        "distribution_loss_fraction": 0.12,
+        "treated_network_input_m3_per_turn": 34090.90909090909,
+        "raw_source_streams": [
+          {
+            "source_kind": "river_freshwater",
+            "treated_product_m3_per_turn": 34090.909090909,
+            "treatment_recovery": 0.95,
+            "raw_abstraction_m3_per_turn": 35885.16746411474,
+            "source_process_residual_m3_per_turn": 1794.2583732057392,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 6000,
+        "sewer_collection_m3_per_turn": 26000,
+        "final_residual_m3_per_turn": 20000,
+        "gross_end_use_m3_per_turn": 36000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 264,
+        "kg_per_resident_per_turn": 1.65,
+        "kcal_per_resident_per_turn": 2400,
+        "resident_kcal_per_turn": 384000000,
+        "protein_g_per_resident_per_turn": 75,
+        "protein_tonnes_per_turn": 12.0,
+        "basket_tonnes_per_turn": null,
+        "calorie_origin_shares": {
+          "regional_agricultural_culture_belt": 0.68,
+          "other_morrow": 0.29,
+          "urban_culture_growing": 0.03
+        },
+        "calorie_origin_source_pointer": "/food_screening_case/calorie_origin_fractions",
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 150,
+        "peak_case_mw": 270,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-008",
+      "name": "Merrow",
+      "host_region_id": "REG-012",
+      "core_population": 610000,
+      "source_json": "Cities/merrow_settlement.json",
+      "source_bible": "Cities/MERROW.md",
+      "source_section_hint": "Households, food and the material city; Water that comes back, power that must arrive",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 130,
+        "other_delivered_m3_per_turn": 35700,
+        "total_delivered_m3_per_turn": 115000,
+        "distribution_loss_fraction": 0.12,
+        "treated_network_input_m3_per_turn": 130681.81818181818,
+        "raw_source_streams": [
+          {
+            "source_kind": "river_freshwater",
+            "treated_product_m3_per_turn": 130681.818181818,
+            "treatment_recovery": 0.96,
+            "raw_abstraction_m3_per_turn": 136126.89393939375,
+            "source_process_residual_m3_per_turn": 5445.075757575745,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 30000,
+        "sewer_collection_m3_per_turn": 110000,
+        "final_residual_m3_per_turn": 80000,
+        "gross_end_use_m3_per_turn": 145000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 1037,
+        "kg_per_resident_per_turn": 1.7,
+        "kcal_per_resident_per_turn": 2500,
+        "resident_kcal_per_turn": 1525000000,
+        "protein_g_per_resident_per_turn": 75,
+        "protein_tonnes_per_turn": 45.75,
+        "basket_tonnes_per_turn": {
+          "dry": 380,
+          "fresh": 390,
+          "cultured": 175,
+          "qualified_native": 12,
+          "other": 80
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 410,
+        "peak_case_mw": 760,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-009",
+      "name": "Tern",
+      "host_region_id": "REG-015",
+      "core_population": 360000,
+      "source_json": "Cities/tern_settlement.json",
+      "source_bible": "Cities/TERN.md",
+      "source_section_hint": "A service account with a working boundary",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 130,
+        "other_delivered_m3_per_turn": 25200,
+        "total_delivered_m3_per_turn": 72000,
+        "distribution_loss_fraction": 0.14,
+        "treated_network_input_m3_per_turn": 83720.93023255814,
+        "raw_source_streams": [
+          {
+            "source_kind": "regional_freshwater",
+            "treated_product_m3_per_turn": 58604.651162791,
+            "treatment_recovery": 0.96,
+            "raw_abstraction_m3_per_turn": 61046.5116279073,
+            "source_process_residual_m3_per_turn": 2441.860465116297,
+            "capacity_verified": false
+          },
+          {
+            "source_kind": "seawater",
+            "treated_product_m3_per_turn": 25116.279069767,
+            "treatment_recovery": 0.45,
+            "raw_abstraction_m3_per_turn": 55813.95348837111,
+            "source_process_residual_m3_per_turn": 30697.67441860411,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 18000,
+        "sewer_collection_m3_per_turn": 66000,
+        "final_residual_m3_per_turn": 48000,
+        "gross_end_use_m3_per_turn": 90000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 594,
+        "kg_per_resident_per_turn": 1.65,
+        "kcal_per_resident_per_turn": 2400,
+        "resident_kcal_per_turn": 864000000,
+        "protein_g_per_resident_per_turn": 75,
+        "protein_tonnes_per_turn": 27.0,
+        "basket_tonnes_per_turn": null,
+        "calorie_origin_shares": {
+          "nearby_sere_production": 0.22,
+          "other_sere": 0.28,
+          "other_continents": 0.48,
+          "urban": 0.02
+        },
+        "calorie_origin_source_pointer": "/food_screening_case/calorie_origin_fractions",
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 440,
+        "peak_case_mw": 790,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-010",
+      "name": "Velis",
+      "host_region_id": "REG-016",
+      "core_population": 120000,
+      "source_json": "Cities/velis_settlement.json",
+      "source_bible": "Cities/VELIS.md",
+      "source_section_hint": "6. Material accounts: meals now, future crops later",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 135,
+        "other_delivered_m3_per_turn": 13800,
+        "total_delivered_m3_per_turn": 30000,
+        "distribution_loss_fraction": 0.2,
+        "treated_network_input_m3_per_turn": 37500,
+        "raw_source_streams": [
+          {
+            "source_kind": "river_ground_roof_freshwater",
+            "treated_product_m3_per_turn": 37500,
+            "treatment_recovery": 0.95,
+            "raw_abstraction_m3_per_turn": 39473.68421052632,
+            "source_process_residual_m3_per_turn": 1973.6842105263204,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 12000,
+        "sewer_collection_m3_per_turn": 29000,
+        "final_residual_m3_per_turn": 17000,
+        "gross_end_use_m3_per_turn": 42000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 192,
+        "kg_per_resident_per_turn": 1.6,
+        "kcal_per_resident_per_turn": null,
+        "resident_kcal_per_turn": null,
+        "protein_g_per_resident_per_turn": null,
+        "protein_tonnes_per_turn": null,
+        "basket_tonnes_per_turn": {
+          "dry": 65,
+          "fresh": 80,
+          "cultured": 32,
+          "qualified_native": 0,
+          "other": 15
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 110,
+        "peak_case_mw": 220,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-011",
+      "name": "Brin",
+      "host_region_id": "REG-018",
+      "core_population": 180000,
+      "source_json": "Cities/brin_settlement.json",
+      "source_bible": "Cities/BRIN.md",
+      "source_section_hint": "5. What supports the windows",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 125,
+        "other_delivered_m3_per_turn": 10500,
+        "total_delivered_m3_per_turn": 33000,
+        "distribution_loss_fraction": 0.12,
+        "treated_network_input_m3_per_turn": 37500,
+        "raw_source_streams": [
+          {
+            "source_kind": "regional_freshwater",
+            "treated_product_m3_per_turn": 30000,
+            "treatment_recovery": 0.95,
+            "raw_abstraction_m3_per_turn": 31578.947368421053,
+            "source_process_residual_m3_per_turn": 1578.9473684210534,
+            "capacity_verified": false
+          },
+          {
+            "source_kind": "seawater",
+            "treated_product_m3_per_turn": 7500,
+            "treatment_recovery": 0.45,
+            "raw_abstraction_m3_per_turn": 16666.666666666668,
+            "source_process_residual_m3_per_turn": 9166.666666666668,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 9000,
+        "sewer_collection_m3_per_turn": 29000,
+        "final_residual_m3_per_turn": 20000,
+        "gross_end_use_m3_per_turn": 42000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Source yields, seasonal availability, catchment depletion and effluent receiving capacity."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 297,
+        "kg_per_resident_per_turn": 1.65,
+        "kcal_per_resident_per_turn": null,
+        "resident_kcal_per_turn": null,
+        "protein_g_per_resident_per_turn": null,
+        "protein_tonnes_per_turn": null,
+        "basket_tonnes_per_turn": {
+          "dry": 105,
+          "fresh": 115,
+          "cultured": 55,
+          "qualified_native": 0,
+          "other": 22
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 240,
+        "peak_case_mw": 440,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    },
+    {
+      "city_id": "CITY-012",
+      "name": "Sola",
+      "host_region_id": "REG-021",
+      "core_population": 290000,
+      "source_json": "Cities/sola_settlement.json",
+      "source_bible": "Cities/SOLA.md",
+      "source_section_hint": "7. The service account: enough detail to expose a gap",
+      "core_fields_pointer": "/service_cases",
+      "water": {
+        "domestic_liters_per_core_resident_per_turn": 110,
+        "other_delivered_m3_per_turn": 20100,
+        "total_delivered_m3_per_turn": 52000,
+        "distribution_loss_fraction": 0.2,
+        "treated_network_input_m3_per_turn": 65000,
+        "raw_source_streams": [
+          {
+            "source_kind": "seawater",
+            "treated_product_m3_per_turn": 38000,
+            "treatment_recovery": 0.45,
+            "raw_abstraction_m3_per_turn": 84444.44444444444,
+            "source_process_residual_m3_per_turn": 46444.44444444444,
+            "capacity_verified": false
+          },
+          {
+            "source_kind": "stored_runoff_freshwater",
+            "treated_product_m3_per_turn": 20000,
+            "treatment_recovery": null,
+            "raw_abstraction_m3_per_turn": null,
+            "source_process_residual_m3_per_turn": null,
+            "capacity_verified": false
+          },
+          {
+            "source_kind": "groundwater",
+            "treated_product_m3_per_turn": 7000,
+            "treatment_recovery": null,
+            "raw_abstraction_m3_per_turn": null,
+            "source_process_residual_m3_per_turn": null,
+            "capacity_verified": false
+          }
+        ],
+        "combined_raw_abstraction_m3_per_turn": null,
+        "combined_raw_to_delivery_loss_fraction": null,
+        "reuse_internal_loop_m3_per_turn": 12000,
+        "sewer_collection_m3_per_turn": 42000,
+        "final_residual_m3_per_turn": 30000,
+        "gross_end_use_m3_per_turn": 64000,
+        "source_scope": "Municipal allocation; wider farming, regional residents and unallocated visiting/ship demand excluded. Reuse is internal, not an external source.",
+        "unclosed_boundary": "Runoff/groundwater treatment recovery and raw yields."
+      },
+      "food": {
+        "resident_edible_product_tonnes_per_turn": 478.5,
+        "kg_per_resident_per_turn": 1.65,
+        "kcal_per_resident_per_turn": null,
+        "resident_kcal_per_turn": null,
+        "protein_g_per_resident_per_turn": null,
+        "protein_tonnes_per_turn": null,
+        "basket_tonnes_per_turn": {
+          "dry": 160,
+          "fresh": 200,
+          "cultured": 80,
+          "qualified_native": 8.5,
+          "other": 30
+        },
+        "calorie_origin_shares": null,
+        "calorie_origin_source_pointer": null,
+        "nutrient_adequacy_verified": false
+      },
+      "electricity": {
+        "mean_end_use_mw": 360,
+        "peak_case_mw": 620,
+        "scope": "City dossier service scope, including selected industry; ordinary visitor inclusion only where expressly allocated. No whole regional farming load assumed. Mean and peak are demand, not proven supply.",
+        "fuel_or_regional_supply_verified": false
+      }
+    }
+  ],
+  "guest_cases": [
+    {
+      "id": "GUEST-004-ordinary",
+      "city_id": "CITY-004",
+      "scenario": "ordinary",
+      "people": 9600,
+      "food_tonnes_per_turn": 15.84,
+      "domestic_water_m3_per_turn": 1200,
+      "water_relation_to_baseline": "already_in_baseline",
+      "food_relation_to_baseline": "additional_to_resident_food",
+      "source_bible": "Cities/SEREIN.md",
+      "domestic_liters_per_guest_per_turn": 125
+    },
+    {
+      "id": "GUEST-010-ordinary",
+      "city_id": "CITY-010",
+      "scenario": "ordinary",
+      "people": 1500,
+      "food_tonnes_per_turn": 2.4,
+      "domestic_water_m3_per_turn": 202.5,
+      "water_relation_to_baseline": "already_in_baseline",
+      "food_relation_to_baseline": "additional_to_resident_food",
+      "source_bible": "Cities/VELIS.md",
+      "domestic_liters_per_guest_per_turn": 135
+    },
+    {
+      "id": "GUEST-012-ordinary",
+      "city_id": "CITY-012",
+      "scenario": "ordinary",
+      "people": 18000,
+      "food_tonnes_per_turn": 29.7,
+      "domestic_water_m3_per_turn": 2160,
+      "water_relation_to_baseline": "already_in_baseline",
+      "food_relation_to_baseline": "additional_to_resident_food",
+      "source_bible": "Cities/SOLA.md",
+      "domestic_liters_per_guest_per_turn": 120
+    },
+    {
+      "id": "GUEST-012-event_ceiling",
+      "city_id": "CITY-012",
+      "scenario": "event_ceiling",
+      "people": 36000,
+      "food_tonnes_per_turn": 59.4,
+      "domestic_water_m3_per_turn": 4320,
+      "water_relation_to_baseline": "replaces_ordinary_guest_domestic_component",
+      "food_relation_to_baseline": "additional_to_resident_food",
+      "source_bible": "Cities/SOLA.md",
+      "domestic_liters_per_guest_per_turn": 120
+    },
+    {
+      "id": "GUEST-011-seasonal_peak",
+      "city_id": "CITY-011",
+      "scenario": "seasonal_peak",
+      "people": 12000,
+      "food_tonnes_per_turn": 19.8,
+      "domestic_water_m3_per_turn": 1500,
+      "water_relation_to_baseline": "additional_domestic_only",
+      "food_relation_to_baseline": "additional_to_resident_food",
+      "source_bible": "Cities/BRIN.md",
+      "domestic_liters_per_guest_per_turn": 125
+    }
+  ],
+  "ship_provision_cases": [
+    {
+      "city_id": "CITY-004",
+      "food_tonnes_per_turn": 20,
+      "scope": "Separate departing vessel provision allowance; not extra resident consumption. These allowances are not a planetwide eater count.",
+      "source_bible": "Cities/SEREIN.md"
+    },
+    {
+      "city_id": "CITY-010",
+      "food_tonnes_per_turn": 4,
+      "scope": "Separate departing vessel provision allowance; not extra resident consumption. These allowances are not a planetwide eater count.",
+      "source_bible": "Cities/VELIS.md"
+    },
+    {
+      "city_id": "CITY-011",
+      "food_tonnes_per_turn": 12,
+      "scope": "Separate departing vessel provision allowance; not extra resident consumption. These allowances are not a planetwide eater count.",
+      "source_bible": "Cities/BRIN.md"
+    },
+    {
+      "city_id": "CITY-012",
+      "food_tonnes_per_turn": 35,
+      "scope": "Separate departing vessel provision allowance; not extra resident consumption. These allowances are not a planetwide eater count.",
+      "source_bible": "Cities/SOLA.md"
+    }
+  ],
+  "food_commitments": [
+    {
+      "id": "FOOD-ORI-SUP-001",
+      "recipient_city_id": "CITY-001",
+      "recipient_scope": "core_food",
+      "source_label": "Saffron urban/rural belt",
+      "source_region_ids": [
+        "REG-001"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 25,
+        "fresh": 90,
+        "cultured": 25,
+        "qualified_native": 0,
+        "other": 0
+      },
+      "total_tonnes_per_turn": 140,
+      "source_file": "Exchange/nacre_exchange.json",
+      "source_record_id": "SUP-001",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-ORI-SUP-002",
+      "recipient_city_id": "CITY-001",
+      "recipient_scope": "core_food",
+      "source_label": "Nine River producers and Marroway consolidation",
+      "source_region_ids": [
+        "REG-002"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 170,
+        "fresh": 145,
+        "cultured": 35,
+        "qualified_native": 0,
+        "other": 10
+      },
+      "total_tonnes_per_turn": 360,
+      "source_file": "Exchange/nacre_exchange.json",
+      "source_record_id": "SUP-002",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-ORI-SUP-003",
+      "recipient_city_id": "CITY-001",
+      "recipient_scope": "core_food",
+      "source_label": "Glassback foothill valleys",
+      "source_region_ids": [
+        "REG-003"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 20,
+        "fresh": 40,
+        "cultured": 15,
+        "qualified_native": 0,
+        "other": 0
+      },
+      "total_tonnes_per_turn": 75,
+      "source_file": "Exchange/nacre_exchange.json",
+      "source_record_id": "SUP-003",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-ORI-SUP-004",
+      "recipient_city_id": "CITY-001",
+      "recipient_scope": "core_food",
+      "source_label": "Red Ledger producers and Hesh distributors",
+      "source_region_ids": [
+        "REG-004"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 15,
+        "fresh": 25,
+        "cultured": 15,
+        "qualified_native": 0,
+        "other": 10
+      },
+      "total_tonnes_per_turn": 65,
+      "source_file": "Exchange/nacre_exchange.json",
+      "source_record_id": "SUP-004",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-ORI-SUP-005",
+      "recipient_city_id": "CITY-001",
+      "recipient_scope": "core_food",
+      "source_label": "Qualified Saffron/coastal processing",
+      "source_region_ids": [
+        "REG-001"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 0,
+        "fresh": 0,
+        "cultured": 0,
+        "qualified_native": 25,
+        "other": 23
+      },
+      "total_tonnes_per_turn": 48,
+      "source_file": "Exchange/nacre_exchange.json",
+      "source_record_id": "SUP-005",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-ORI-SUP-006",
+      "recipient_city_id": "CITY-001",
+      "recipient_scope": "core_food",
+      "source_label": "Distant specialties through several carriers",
+      "source_region_ids": [
+        "REG-011",
+        "REG-012",
+        "REG-021"
+      ],
+      "origin_resolution": "unsplit_multi_region_pool",
+      "basket_tonnes_per_turn": {
+        "dry": 0,
+        "fresh": 0,
+        "cultured": 0,
+        "qualified_native": 5,
+        "other": 7
+      },
+      "total_tonnes_per_turn": 12,
+      "source_file": "Exchange/nacre_exchange.json",
+      "source_record_id": "SUP-006",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SER-01",
+      "recipient_city_id": "CITY-004",
+      "recipient_scope": "core_food",
+      "source_label": "Managed production within Serein",
+      "source_region_ids": [
+        "REG-006"
+      ],
+      "origin_resolution": "city_internal",
+      "basket_tonnes_per_turn": {
+        "dry": 0.0,
+        "fresh": 30.0,
+        "cultured": 5.0,
+        "qualified_native": 0,
+        "other": 0.0
+      },
+      "total_tonnes_per_turn": 35.0,
+      "source_file": "Cities/SEREIN.md",
+      "source_table_row": "Managed production within Serein",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SER-02",
+      "recipient_city_id": "CITY-004",
+      "recipient_scope": "core_food",
+      "source_label": "Wider western coastal production, REG-006",
+      "source_region_ids": [
+        "REG-006"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 90.0,
+        "fresh": 240.0,
+        "cultured": 50.0,
+        "qualified_native": 0,
+        "other": 30.0
+      },
+      "total_tonnes_per_turn": 410.0,
+      "source_file": "Cities/SEREIN.md",
+      "source_table_row": "Wider western coastal production, REG-006",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SER-03",
+      "recipient_city_id": "CITY-004",
+      "recipient_scope": "core_food",
+      "source_label": "North Gate regional network, REG-008",
+      "source_region_ids": [
+        "REG-008"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 40.0,
+        "fresh": 20.0,
+        "cultured": 25.0,
+        "qualified_native": 0,
+        "other": 15.0
+      },
+      "total_tonnes_per_turn": 100.0,
+      "source_file": "Cities/SEREIN.md",
+      "source_table_row": "North Gate regional network, REG-008",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SER-04",
+      "recipient_city_id": "CITY-004",
+      "recipient_scope": "core_food",
+      "source_label": "Nine-River producers, REG-002",
+      "source_region_ids": [
+        "REG-002"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 110.0,
+        "fresh": 60.0,
+        "cultured": 35.0,
+        "qualified_native": 0,
+        "other": 15.0
+      },
+      "total_tonnes_per_turn": 220.0,
+      "source_file": "Cities/SEREIN.md",
+      "source_table_row": "Nine-River producers, REG-002",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SER-05",
+      "recipient_city_id": "CITY-004",
+      "recipient_scope": "core_food",
+      "source_label": "Red Ledger production, REG-004",
+      "source_region_ids": [
+        "REG-004"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 60.0,
+        "fresh": 10.0,
+        "cultured": 10.0,
+        "qualified_native": 0,
+        "other": 4.5
+      },
+      "total_tonnes_per_turn": 84.5,
+      "source_file": "Cities/SEREIN.md",
+      "source_table_row": "Red Ledger production, REG-004",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SER-06",
+      "recipient_city_id": "CITY-004",
+      "recipient_scope": "core_food",
+      "source_label": "Talweir regional stabilized culture products, REG-009",
+      "source_region_ids": [
+        "REG-009"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 0.0,
+        "fresh": 0.0,
+        "cultured": 25.0,
+        "qualified_native": 0,
+        "other": 0.0
+      },
+      "total_tonnes_per_turn": 25.0,
+      "source_file": "Cities/SEREIN.md",
+      "source_table_row": "Talweir regional stabilized culture products, REG-009",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SOL-01",
+      "recipient_city_id": "CITY-012",
+      "recipient_scope": "core_food",
+      "source_label": "Nine-River network, REG-002",
+      "source_region_ids": [
+        "REG-002"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 90.0,
+        "fresh": 60.0,
+        "cultured": 20.0,
+        "qualified_native": 8.5,
+        "other": 10.0
+      },
+      "total_tonnes_per_turn": 188.5,
+      "source_file": "Cities/SOLA.md",
+      "source_table_row": "Nine-River network, REG-002",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SOL-02",
+      "recipient_city_id": "CITY-012",
+      "recipient_scope": "core_food",
+      "source_label": "Talweir regional network, REG-009",
+      "source_region_ids": [
+        "REG-009"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 45.0,
+        "fresh": 65.0,
+        "cultured": 10.0,
+        "qualified_native": 0.0,
+        "other": 5.0
+      },
+      "total_tonnes_per_turn": 125.0,
+      "source_file": "Cities/SOLA.md",
+      "source_table_row": "Talweir regional network, REG-009",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SOL-03",
+      "recipient_city_id": "CITY-012",
+      "recipient_scope": "core_food",
+      "source_label": "Controlled production within Sola",
+      "source_region_ids": [
+        "REG-021"
+      ],
+      "origin_resolution": "city_internal",
+      "basket_tonnes_per_turn": {
+        "dry": 0.0,
+        "fresh": 60.0,
+        "cultured": 30.0,
+        "qualified_native": 0.0,
+        "other": 5.0
+      },
+      "total_tonnes_per_turn": 95.0,
+      "source_file": "Cities/SOLA.md",
+      "source_table_row": "Controlled production within Sola",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SOL-04",
+      "recipient_city_id": "CITY-012",
+      "recipient_scope": "core_food",
+      "source_label": "Aster growers outside the city frame",
+      "source_region_ids": [
+        "REG-021"
+      ],
+      "origin_resolution": "region_outside_city",
+      "basket_tonnes_per_turn": {
+        "dry": 10.0,
+        "fresh": 15.0,
+        "cultured": 10.0,
+        "qualified_native": 0.0,
+        "other": 10.0
+      },
+      "total_tonnes_per_turn": 45.0,
+      "source_file": "Cities/SOLA.md",
+      "source_table_row": "Aster growers outside the city frame",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-SOL-05",
+      "recipient_city_id": "CITY-012",
+      "recipient_scope": "core_food",
+      "source_label": "Red Ledger managed production, REG-004",
+      "source_region_ids": [
+        "REG-004"
+      ],
+      "origin_resolution": "single_region",
+      "basket_tonnes_per_turn": {
+        "dry": 15.0,
+        "fresh": 0.0,
+        "cultured": 10.0,
+        "qualified_native": 0.0,
+        "other": 0.0
+      },
+      "total_tonnes_per_turn": 25.0,
+      "source_file": "Cities/SOLA.md",
+      "source_table_row": "Red Ledger managed production, REG-004",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-BRI-01",
+      "recipient_city_id": "CITY-011",
+      "recipient_scope": "core_food",
+      "source_label": "Brin-serving local and regional production",
+      "source_region_ids": [
+        "REG-018"
+      ],
+      "origin_resolution": "local_and_regional_group",
+      "basket_tonnes_per_turn": {
+        "dry": 10.0,
+        "fresh": 55.0,
+        "cultured": 5.0,
+        "qualified_native": 0,
+        "other": 5.0
+      },
+      "total_tonnes_per_turn": 75.0,
+      "source_file": "Cities/BRIN.md",
+      "source_table_row": "Brin-serving local and regional production",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-BRI-02",
+      "recipient_city_id": "CITY-011",
+      "recipient_scope": "core_food",
+      "source_label": "Serein-serving coastal supply network",
+      "source_region_ids": [
+        "REG-006"
+      ],
+      "origin_resolution": "serving_network_not_exclusive_origin",
+      "basket_tonnes_per_turn": {
+        "dry": 35.0,
+        "fresh": 35.0,
+        "cultured": 15.0,
+        "qualified_native": 0,
+        "other": 5.0
+      },
+      "total_tonnes_per_turn": 90.0,
+      "source_file": "Cities/BRIN.md",
+      "source_table_row": "Serein-serving coastal supply network",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-BRI-03",
+      "recipient_city_id": "CITY-011",
+      "recipient_scope": "core_food",
+      "source_label": "Northern Kesh trading network",
+      "source_region_ids": [],
+      "origin_resolution": "trading_network_origins_unallocated",
+      "basket_tonnes_per_turn": {
+        "dry": 30.0,
+        "fresh": 15.0,
+        "cultured": 10.0,
+        "qualified_native": 0,
+        "other": 5.0
+      },
+      "total_tonnes_per_turn": 60.0,
+      "source_file": "Cities/BRIN.md",
+      "source_table_row": "Northern Kesh trading network",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-BRI-04",
+      "recipient_city_id": "CITY-011",
+      "recipient_scope": "core_food",
+      "source_label": "Talweir-serving production and processors",
+      "source_region_ids": [
+        "REG-009"
+      ],
+      "origin_resolution": "serving_network_not_exclusive_origin",
+      "basket_tonnes_per_turn": {
+        "dry": 25.0,
+        "fresh": 0.0,
+        "cultured": 15.0,
+        "qualified_native": 0,
+        "other": 5.0
+      },
+      "total_tonnes_per_turn": 45.0,
+      "source_file": "Cities/BRIN.md",
+      "source_table_row": "Talweir-serving production and processors",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-BRI-05",
+      "recipient_city_id": "CITY-011",
+      "recipient_scope": "core_food",
+      "source_label": "Other participating Pale settlements",
+      "source_region_ids": [],
+      "origin_resolution": "other_pale_origins_unallocated",
+      "basket_tonnes_per_turn": {
+        "dry": 5.0,
+        "fresh": 10.0,
+        "cultured": 10.0,
+        "qualified_native": 0,
+        "other": 2.0
+      },
+      "total_tonnes_per_turn": 27.0,
+      "source_file": "Cities/BRIN.md",
+      "source_table_row": "Other participating Pale settlements",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-VEL-01",
+      "recipient_city_id": "CITY-010",
+      "recipient_scope": "core_food",
+      "source_label": "Facilities within the city planning area",
+      "source_region_ids": [
+        "REG-016"
+      ],
+      "origin_resolution": "city_internal",
+      "basket_tonnes_per_turn": {
+        "dry": 0.0,
+        "fresh": 35.0,
+        "cultured": 15.0,
+        "qualified_native": 0,
+        "other": 2.0
+      },
+      "total_tonnes_per_turn": 52.0,
+      "source_file": "Cities/VELIS.md",
+      "source_table_row": "Facilities within the city planning area",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-VEL-02",
+      "recipient_city_id": "CITY-010",
+      "recipient_scope": "core_food",
+      "source_label": "Wider Velis catchment and sheltered hinterland",
+      "source_region_ids": [
+        "REG-016"
+      ],
+      "origin_resolution": "region_outside_city",
+      "basket_tonnes_per_turn": {
+        "dry": 50.0,
+        "fresh": 45.0,
+        "cultured": 10.0,
+        "qualified_native": 0,
+        "other": 5.0
+      },
+      "total_tonnes_per_turn": 110.0,
+      "source_file": "Cities/VELIS.md",
+      "source_table_row": "Wider Velis catchment and sheltered hinterland",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-VEL-03",
+      "recipient_city_id": "CITY-010",
+      "recipient_scope": "core_food",
+      "source_label": "Other qualified Sere production networks",
+      "source_region_ids": [],
+      "origin_resolution": "other_sere_origins_unallocated",
+      "basket_tonnes_per_turn": {
+        "dry": 15.0,
+        "fresh": 0.0,
+        "cultured": 7.0,
+        "qualified_native": 0,
+        "other": 2.0
+      },
+      "total_tonnes_per_turn": 24.0,
+      "source_file": "Cities/VELIS.md",
+      "source_table_row": "Other qualified Sere production networks",
+      "capacity_verified": false
+    },
+    {
+      "id": "FOOD-VEL-04",
+      "recipient_city_id": "CITY-010",
+      "recipient_scope": "core_food",
+      "source_label": "Selected cross-sea ingredients and preserved goods",
+      "source_region_ids": [],
+      "origin_resolution": "cross_sea_origins_unallocated",
+      "basket_tonnes_per_turn": {
+        "dry": 0.0,
+        "fresh": 0.0,
+        "cultured": 0.0,
+        "qualified_native": 0,
+        "other": 6.0
+      },
+      "total_tonnes_per_turn": 6.0,
+      "source_file": "Cities/VELIS.md",
+      "source_table_row": "Selected cross-sea ingredients and preserved goods",
+      "capacity_verified": false
+    }
+  ],
+  "duplicate_source_mentions": [
+    {
+      "source_file": "Cities/marroway_settlement.json",
+      "source_pointer": "/food_accounting/regional_orison_commitment/total_tonnes_per_turn",
+      "canonical_commitment_id": "FOOD-ORI-SUP-002",
+      "amount_tonnes_per_turn": 360,
+      "additional_demand_tonnes_per_turn": 0
+    },
+    {
+      "source_file": "Cities/hesh_settlement.json",
+      "source_pointer": "/food_screen/regional_exports_additional_to_residents/0/tonnes_per_turn",
+      "canonical_commitment_id": "FOOD-ORI-SUP-004",
+      "amount_tonnes_per_turn": 65,
+      "additional_demand_tonnes_per_turn": 0
+    },
+    {
+      "source_file": "Cities/hesh_settlement.json",
+      "source_pointer": "/food_screen/regional_exports_additional_to_residents/1/tonnes_per_turn",
+      "canonical_commitment_id": "FOOD-SOL-05",
+      "amount_tonnes_per_turn": 25,
+      "additional_demand_tonnes_per_turn": 0
+    },
+    {
+      "source_file": "Cities/merrow_settlement.json",
+      "source_pointer": "/food_screen/shared_Orison_export_allowance/combined_tonnes_per_turn",
+      "canonical_commitment_id": "FOOD-ORI-SUP-006",
+      "amount_tonnes_per_turn": 12,
+      "additional_demand_tonnes_per_turn": 0
+    },
+    {
+      "source_file": "Cities/hesh_settlement.json",
+      "source_pointer": "/food_screen/regional_exports_additional_to_residents/2/tonnes_per_turn",
+      "canonical_commitment_id": "FOOD-SER-05",
+      "amount_tonnes_per_turn": 84.5,
+      "additional_demand_tonnes_per_turn": 0
+    }
+  ],
+  "existing_unquantified_dependencies": [
+    {
+      "id": "EX-001",
+      "from_city_id": "CITY-002",
+      "to_city_id": "CITY-001",
+      "goods": "Regional staple and fresh-food deliveries",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-002",
+      "from_city_id": "CITY-001",
+      "to_city_id": "CITY-012",
+      "goods": "Optical assemblies and maritime service parts",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-003",
+      "from_city_id": "CITY-012",
+      "to_city_id": "CITY-006",
+      "goods": "Transferred components and equipment",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-004",
+      "from_city_id": "CITY-006",
+      "to_city_id": "CITY-005",
+      "goods": "Calibrated instruments and tested ceramics",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-005",
+      "from_city_id": "CITY-005",
+      "to_city_id": "CITY-007",
+      "goods": "Small-vessel design packages and measuring equipment",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-006",
+      "from_city_id": "CITY-007",
+      "to_city_id": "CITY-008",
+      "goods": "Qualified biological material and associated records",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-007",
+      "from_city_id": "CITY-008",
+      "to_city_id": "CITY-009",
+      "goods": "Specialty preparations and process equipment",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-008",
+      "from_city_id": "CITY-009",
+      "to_city_id": "CITY-010",
+      "goods": "Durable cold-logistics and cultivation hardware",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-009",
+      "from_city_id": "CITY-010",
+      "to_city_id": "CITY-004",
+      "goods": "Viable introduced cultivation stocks and preservation expertise",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-010",
+      "from_city_id": "CITY-004",
+      "to_city_id": "CITY-011",
+      "goods": "Durable building envelopes and marine equipment",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-011",
+      "from_city_id": "CITY-011",
+      "to_city_id": "CITY-005",
+      "goods": "Observation instruments and specialist calibration services",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-012",
+      "from_city_id": "CITY-005",
+      "to_city_id": "CITY-006",
+      "goods": "Lake-cultivation stock and maintained cultures",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-013",
+      "from_city_id": "CITY-003",
+      "to_city_id": "CITY-001",
+      "goods": "Selected metal stock and durable inland goods",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-014",
+      "from_city_id": "CITY-001",
+      "to_city_id": "CITY-002",
+      "goods": "Water-service parts and repair assemblies",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-015",
+      "from_city_id": "CITY-012",
+      "to_city_id": "CITY-001",
+      "goods": "Transferred spares, consumer goods and carrier services",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-016",
+      "from_city_id": "CITY-008",
+      "to_city_id": "CITY-007",
+      "goods": "Water-processing equipment and qualification services",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-017",
+      "from_city_id": "CITY-005",
+      "to_city_id": "CITY-008",
+      "goods": "Small-vessel design expertise and civic measurement methods",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    },
+    {
+      "id": "EX-018",
+      "from_city_id": "CITY-010",
+      "to_city_id": "CITY-005",
+      "goods": "Viable seed lots, terrestrial partner cultures and grow-out teaching",
+      "additional_quantified_food_tonnes_per_turn": null,
+      "source_file": "Exchange/nacre_exchange.json",
+      "scope": "Relationship only; no extra tonnage inferred. EX-001 overlaps Nine River/Orison procurement geography."
+    }
+  ],
+  "nested_subsets": [
+    {
+      "id": "ORI-URBAN-FRESH",
+      "parent_commitment_id": "FOOD-ORI-SUP-001",
+      "category": "fresh",
+      "tonnes_per_turn": 24,
+      "additional_demand_tonnes_per_turn": 0,
+      "source_file": "Exchange/nacre_exchange.json",
+      "source_pointer": "/orison_food/urban_fresh_subset/tonnes_per_civil_turn"
+    }
+  ],
+  "existing_production_study": {
+    "source_file": "Resources/nacre_production.json",
+    "recipient_city_id": "CITY-001",
+    "included_commitment_ids": [
+      "FOOD-ORI-SUP-001",
+      "FOOD-ORI-SUP-002",
+      "FOOD-ORI-SUP-003",
+      "FOOD-ORI-SUP-004"
+    ],
+    "included_categories": [
+      "dry",
+      "fresh",
+      "cultured"
+    ],
+    "excluded_categories": [
+      "qualified_native",
+      "other"
+    ],
+    "status": "Study of existing Orison commitments, never additional output or verified capacity",
+    "source_capacity_tonnes_per_turn": null
+  },
+  "separate_viable_stock_case": {
+    "city_id": "CITY-010",
+    "net_biological_tonnes_per_turn": 0.8,
+    "dry_seed_tonnes_per_turn": 0.6,
+    "living_plant_tonnes_per_turn": 0.18,
+    "cultures_tissue_tonnes_per_turn": 0.02,
+    "packaging_conditioning_tonnes_per_turn": 1.2,
+    "gross_dispatched_tonnes_per_turn": 2.0,
+    "additional_edible_food_tonnes_per_turn": 0,
+    "source_file": "Cities/VELIS.md"
+  },
+  "rules": [
+    "Incoming core-food commitments are subsets of each recipient core demand, not new demand added to all city cores.",
+    "Named producing-region obligations are not necessarily intermediary-city handling volumes.",
+    "Multi-region pools remain unsplit. Serving-network labels do not establish exclusive source regions.",
+    "Calorie origin fractions are never applied to product tonnes.",
+    "Null source capacity means unestablished, not zero production or unlimited surplus.",
+    "Raw saline water, fresh water, treated input and reused flow are distinct streams.",
+    "Calendar/civil-turn service means do not establish coincident peak demand or reliability.",
+    "Temporary occupancy scenarios at one city replace rather than accumulate; visitors may have their home demand represented elsewhere, so food additions are facility allocation screens, not a new global population diet."
+  ],
+  "closure_light_screens": {
+    "status": "Counterfactual comparison under the existing Orison yield/light assumptions; not adopted capacity, species yield or incremental electricity allocation. Velis retains its separate explicit canopy/load case.",
+    "source_model": "Resources/nacre_production.json",
+    "comparison_cases": [
+      {
+        "city_id": "CITY-001",
+        "fresh_target_tonnes_per_turn": 24,
+        "scope": "Existing nested urban fresh target.",
+        "canopy_ha_under_shared_case": 325.1913043478261,
+        "daylit_supplement_mean_lamp_mw": 90.33091787439612,
+        "four_layer_mean_lamp_mw": 158.0791062801932,
+        "four_layer_canopy_footprint_ha": 81.29782608695652,
+        "existing_cultivation_allowance_mean_mw": null,
+        "adopted": false
+      },
+      {
+        "city_id": "CITY-004",
+        "fresh_target_tonnes_per_turn": 30,
+        "scope": "Serein within-city fresh row; culture output separate.",
+        "canopy_ha_under_shared_case": 406.48913043478257,
+        "daylit_supplement_mean_lamp_mw": 112.91364734299515,
+        "four_layer_mean_lamp_mw": 197.59888285024152,
+        "four_layer_canopy_footprint_ha": 101.62228260869564,
+        "existing_cultivation_allowance_mean_mw": 40,
+        "adopted": false
+      },
+      {
+        "city_id": "CITY-012",
+        "fresh_target_tonnes_per_turn": 60,
+        "scope": "Sola within-city fresh row; culture/other output separate.",
+        "canopy_ha_under_shared_case": 812.9782608695651,
+        "daylit_supplement_mean_lamp_mw": 225.8272946859903,
+        "four_layer_mean_lamp_mw": 395.19776570048305,
+        "four_layer_canopy_footprint_ha": 203.24456521739128,
+        "existing_cultivation_allowance_mean_mw": null,
+        "adopted": false
+      },
+      {
+        "city_id": "CITY-011",
+        "fresh_target_tonnes_per_turn": 55,
+        "scope": "Brin local/regional fresh row; not all city production or all controlled cultivation.",
+        "canopy_ha_under_shared_case": 745.230072463768,
+        "daylit_supplement_mean_lamp_mw": 207.00835346215777,
+        "four_layer_mean_lamp_mw": 362.2646185587761,
+        "four_layer_canopy_footprint_ha": 186.307518115942,
+        "existing_cultivation_allowance_mean_mw": 20,
+        "adopted": false
+      }
+    ],
+    "velis_separate_case": {
+      "active_lit_canopy_m2": 180000,
+      "lamp_watts_per_m2_when_on": 150,
+      "light_hours_per_turn": 16,
+      "mean_lamp_mw": 18,
+      "fresh_output_target_tonnes_per_turn": 8,
+      "implied_retained_fresh_tonnes_per_canopy_ha_per_civil_year": 144.5294685990338,
+      "comparison_generic_retained_fresh_tonnes_per_ha_per_civil_year": 24,
+      "scope": "An implied annual throughput check, not an established crop yield or a replacement for Velis selected screen. No seasonal gaps credited in this calculation.",
+      "adopted_new_capacity": false
+    }
+  }
+}

@@ -1118,6 +1118,18 @@
           "native_qualified": 0,
           "other": 0
         }
+      },
+      {
+        "destination_city_id": "CITY-004",
+        "destination": "Serein",
+        "tonnes_per_turn": 84.5,
+        "basket": {
+          "dry": 60,
+          "fresh": 10,
+          "cultured": 10,
+          "native_qualified": 0,
+          "other": 4.5
+        }
       }
     ],
     "scope": "product mass and dietary screens, not nutritional proof; exports come from Red Ledger producing settlements/distributors, not necessarily a single Hesh store; regional production and agricultural water unverified"

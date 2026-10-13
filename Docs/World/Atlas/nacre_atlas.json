@@ -377,10 +377,10 @@
       "lat_deg": -30,
       "lon_deg": 158,
       "population_core_estimate": 610000,
-      "role": "estuary city",
+      "role": "lower-river transfer city in the estuary region",
       "landmass": "Morrow",
       "coastal_approach_max_km": 40,
-      "coast_check_scope": "planning center near concept coastline; local harbor shore is a separate scale"
+      "coast_check_scope": "proximity to coarse concept coast only; mapped river mouth remains about 105 km away and urban marine access is not established"
     },
     {
       "id": "CITY-009",
