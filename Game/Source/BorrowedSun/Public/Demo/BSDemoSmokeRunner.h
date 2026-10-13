@@ -23,6 +23,8 @@ private:
     enum class EPhase : uint8
     {
         Startup,
+        WalkToWorkshop,
+        HoldWorkshopProp,
         StreetStartPause,
         WalkToSeed,
         LeavePlinth,
@@ -65,6 +67,8 @@ private:
     FIntPoint RequestedViewport = FIntPoint::ZeroValue;
     int32 ArtViewIndex = 0;
     bool bArtViewCaptured = false;
+    TWeakObjectPtr<class ABSPhysicalObject> WorkshopProp;
+    bool bWorkshopCaptured = false;
     UPROPERTY(Transient) TObjectPtr<class ACameraActor> ArtCamera;
     EPhase Phase = EPhase::Startup;
     double StartedAt = 0;

@@ -1,6 +1,6 @@
 # Physical objects and Second Dawn object court
 
-Status: Development implementation built and launched; city placement and packaged/rendered interaction qualification remain in progress. This extends the [object ledger](OBJECT_LEDGER_2026-10-13.md). It does not complete BS-027 or establish AAA visual quality.
+Status: the original court implementation below is historical evidence. The subsequent [main-city integration](CITY_OBJECTS_2026-10-13.md) passed 20 smoke tests and 57 rendered checks, including the actual imported models and collection in Second Dawn. Shipping qualification and human input-feel review remain separate. This extends the [object ledger](OBJECT_LEDGER_2026-10-13.md); it does not establish AAA visual quality.
 
 ## Player behavior
 

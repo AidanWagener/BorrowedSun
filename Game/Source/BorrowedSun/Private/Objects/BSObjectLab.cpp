@@ -1,6 +1,7 @@
 #include "Objects/BSObjectLab.h"
 #include "Objects/BSPhysicalObject.h"
 #include "Objects/BSCarryComponent.h"
+#include "Objects/BSHandProps.h"
 #include "Demo/BSExplorerCharacter.h"
 #include "Components/InputComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -55,16 +56,11 @@ void ABSObjectLabGameMode::StartPlay()
         FBox(FVector(-580,-680,-180),FVector(580,680,900)),Error)) Status=Error;
     else
     {
-        const TCHAR* Names[]={TEXT("Cup"),TEXT("Bowl"),TEXT("Lantern"),TEXT("Tool"),TEXT("Cell"),TEXT("Crate"),TEXT("Basket"),TEXT("Bottle"),TEXT("Book"),TEXT("Bundle")};
-        const TCHAR* Labels[]={TEXT("Enamel tea cup"),TEXT("Glazed sharing bowl"),TEXT("Caged service lantern"),TEXT("Insulated service spanner"),TEXT("Workshop power cell"),TEXT("Strapped parts crate"),TEXT("Woven parts basket"),TEXT("Ceramic flask"),TEXT("Repair ledger"),TEXT("Tied cloth parcel")};
-        const float Masses[]={.28f,.65f,1.1f,.55f,.8f,3.2f,.45f,.9f,.7f,1.4f};
-        for (int32 I=0;I<10;++I)
+        for (int32 I=0;I<BSHandProps::Count;++I)
         {
-            const FString Key=FString(Names[I]).ToLower(); const FString MeshName=TEXT("SM_Hand")+FString(Names[I]);
-            FBSPhysicalObjectPlacement P; P.InstanceId=BSObjectLabPrivate::Id(TEXT("object_lab"),Key);
-            P.DefinitionId=BSObjectLabPrivate::Id(TEXT("hand_prop"),Key); P.DisplayName=Labels[I]; P.MassKg=Masses[I];
-            P.Mesh=LoadObject<UStaticMesh>(nullptr,*(TEXT("/Game/BorrowedSun/Interaction/Meshes/")+MeshName+TEXT(".")+MeshName));
-            P.Transform.SetLocation(FVector(-240+(I%5)*120,(I/5)*150,94));
+            FBSPhysicalObjectPlacement P;
+            if (!BSHandProps::MakePlacement(I,TEXT("object_lab"),FTransform(FVector(-240+(I%5)*120,(I/5)*150,94)),P,Error))
+            { Status=Error; break; }
             Store->RegisterPlacement(P,Error); if (!Error.IsEmpty()) { Status=Error; break; }
         }
         if (Status.IsEmpty()) Status=TEXT("Ten ordinary props. Try the table, shelves, stairs and narrow doorway.");

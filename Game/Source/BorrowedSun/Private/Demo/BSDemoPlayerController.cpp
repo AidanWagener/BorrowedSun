@@ -3,6 +3,8 @@
 #include "Demo/BSExplorerCharacter.h"
 #include "Demo/BSKestrelPawn.h"
 #include "Demo/BSDemoUserSettings.h"
+#include "Objects/BSCarryComponent.h"
+#include "Objects/BSHandProps.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputAction.h"
@@ -102,6 +104,10 @@ void ABSDemoPlayerController::SetupInputComponent()
     Bind(TEXT("Quit"),EKeys::Q,FKey(),&ThisClass::Quit);
     Bind(TEXT("Help"),EKeys::F1,EKeys::Gamepad_Special_Left,&ThisClass::Help);
     Bind(TEXT("Guidance"),EKeys::G,EKeys::Gamepad_FaceButton_Top,&ThisClass::Guidance);
+    Bind(TEXT("GrabProp"),EKeys::F,EKeys::Gamepad_DPad_Up,&ThisClass::GrabProp);
+    Bind(TEXT("ThrowProp"),EKeys::LeftMouseButton,EKeys::Gamepad_DPad_Right,&ThisClass::ThrowProp);
+    Bind(TEXT("CollectProp"),EKeys::Z,EKeys::Gamepad_DPad_Left,&ThisClass::CollectProp);
+    BindAxis(Button(TEXT("RotateProp"),EKeys::RightMouseButton,EKeys::Gamepad_RightThumbstick),&ThisClass::RotateProp);
     Bind(TEXT("SensitivityDown"),EKeys::LeftBracket,FKey(),&ThisClass::SensitivityDown);
     Bind(TEXT("SensitivityUp"),EKeys::RightBracket,FKey(),&ThisClass::SensitivityUp);
     Bind(TEXT("Settings"),EKeys::O,FKey(),&ThisClass::Settings);
@@ -133,6 +139,7 @@ void ABSDemoPlayerController::LookYaw(const FInputActionValue& V)
 {
     if(IsOverlayOpen() || bGuidance) return;
     const float D=V.Get<float>()*LookSensitivity;
+    if(bRotateProp&&Hand()&&Hand()->GetHeldObject()){Hand()->RotateHeld(D,0);return;}
     if(auto* P=Cast<ABSExplorerCharacter>(GetPawn())) P->LookYaw(D);
     if(auto* P=Cast<ABSKestrelPawn>(GetPawn())) P->LookYaw(D);
 }
@@ -140,6 +147,7 @@ void ABSDemoPlayerController::LookPitch(const FInputActionValue& V)
 {
     if(IsOverlayOpen() || bGuidance) return;
     const float D=V.Get<float>()*LookSensitivity*(bInvertLook?1.f:-1.f);
+    if(bRotateProp&&Hand()&&Hand()->GetHeldObject()){Hand()->RotateHeld(0,D);return;}
     if(auto* P=Cast<ABSExplorerCharacter>(GetPawn())) P->LookPitch(D);
     if(auto* P=Cast<ABSKestrelPawn>(GetPawn())) P->LookPitch(D);
 }
@@ -147,6 +155,7 @@ void ABSDemoPlayerController::PadYaw(const FInputActionValue& V)
 {
     if(IsOverlayOpen() || bGuidance) return;
     const float D=V.Get<float>()*100*GetWorld()->GetDeltaSeconds();
+    if(bRotateProp&&Hand()&&Hand()->GetHeldObject()){Hand()->RotateHeld(D,0);return;}
     if(auto* P=Cast<ABSExplorerCharacter>(GetPawn())) P->LookYaw(D);
     if(auto* P=Cast<ABSKestrelPawn>(GetPawn())) P->LookYaw(D);
 }
@@ -154,6 +163,7 @@ void ABSDemoPlayerController::PadPitch(const FInputActionValue& V)
 {
     if(IsOverlayOpen() || bGuidance) return;
     const float D=V.Get<float>()*80*GetWorld()->GetDeltaSeconds()*(bInvertLook?-1.f:1.f);
+    if(bRotateProp&&Hand()&&Hand()->GetHeldObject()){Hand()->RotateHeld(0,D);return;}
     if(auto* P=Cast<ABSExplorerCharacter>(GetPawn())) P->LookPitch(D);
     if(auto* P=Cast<ABSKestrelPawn>(GetPawn())) P->LookPitch(D);
 }
@@ -209,6 +219,7 @@ void ABSDemoPlayerController::Confirm()
 }
 void ABSDemoPlayerController::ToggleMenu()
 {
+    ReleaseProp();
     if(bSettings) { bSettings=false; return; }
     if(bConfirmRestart) { bConfirmRestart=false; return; }
     bWelcome=false; bMenu=!bMenu;
@@ -248,4 +259,29 @@ void ABSDemoPlayerController::SavePreferences()
         Preferences->SetLookInverted(bInvertLook);
         Preferences->SaveSettings();
     }
+}
+
+UBSCarryComponent* ABSDemoPlayerController::Hand() const
+{ const auto* P=Cast<ABSExplorerCharacter>(GetPawn());return P?P->GetCarryComponent():nullptr; }
+void ABSDemoPlayerController::ReleaseProp()
+{ bRotateProp=false;if(Hand())Hand()->Release(false); }
+void ABSDemoPlayerController::FlushPressedKeys()
+{ ReleaseProp();Super::FlushPressedKeys(); }
+void ABSDemoPlayerController::RotateProp(const FInputActionValue& V)
+{ bRotateProp=!IsOverlayOpen()&&V.Get<bool>(); }
+void ABSDemoPlayerController::GrabProp()
+{
+    if(IsOverlayOpen()||!Hand())return;
+    if(Hand()->GetHeldObject()){ReleaseProp();return;}
+    FString Error;
+    if(!Hand()->TryGrab(Error))if(auto* G=GetWorld()->GetAuthGameMode<ABSDemoGameMode>())G->Say(Error,3);
+}
+void ABSDemoPlayerController::ThrowProp()
+{ if(!IsOverlayOpen()&&Hand()){bRotateProp=false;Hand()->Release(true);} }
+void ABSDemoPlayerController::CollectProp()
+{
+    if(IsOverlayOpen()||!Hand())return;
+    FString Error;
+    if(auto* G=GetWorld()->GetAuthGameMode<ABSDemoGameMode>())
+        G->Say(Hand()->Collect(BSHandProps::Id(TEXT("collection"),TEXT("field_satchel")),10,Error)?TEXT("Collected and saved. Inventory browsing and retrieval are coming later."):Error,4);
 }

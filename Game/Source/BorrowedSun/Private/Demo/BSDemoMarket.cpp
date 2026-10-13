@@ -3,6 +3,59 @@
 #include "Engine/StaticMesh.h"
 #include "Materials/MaterialInterface.h"
 #include "Components/PointLightComponent.h"
+#include "Components/BoxComponent.h"
+#include "Objects/BSHandProps.h"
+#include "Misc/CommandLine.h"
+#include "Misc/Parse.h"
+
+void ABSDemoWorld::BuildBenchCollision(const FTransform& Anchor)
+{
+    // Explicit simple shapes follow the authored bench. A single enclosing convex hull
+    // would bridge the vise to the tabletop and make small objects rest in midair.
+    const FVector Bench(-70,65,0);
+    auto BoxBody=[&](FVector Center,FVector Size)
+    {
+        auto* Body=NewObject<UBoxComponent>(this);
+        AddInstanceComponent(Body); Body->SetupAttachment(RootComponent);
+        Body->SetMobility(EComponentMobility::Movable); Body->SetBoxExtent(Size*.5);
+        Body->SetCollisionProfileName(TEXT("BlockAll")); Body->SetCanEverAffectNavigation(false);
+        Body->SetWorldTransform(FTransform(Anchor.GetRotation(),Anchor.TransformPosition(Bench+Center)));
+        Body->RegisterComponent();
+    };
+    BoxBody(FVector(0,0,98),FVector(302,92,8));
+    BoxBody(FVector(0,0,76),FVector(297,75,30));
+    BoxBody(FVector(0,0,28),FVector(278,7,12));
+    for(double X:{-137.,137.})for(double Y:{-37.,37.})BoxBody(FVector(X,Y,47),FVector(13,13,94));
+    for(double X:{89.,110.})BoxBody(FVector(X,40,109),FVector(9,26,21));
+    for(double X:{-145.,145.})BoxBody(FVector(X,0,103),FVector(10,90,1.4));
+}
+
+void ABSDemoWorld::BuildWorkshopProps()
+{
+    if(!bWorkshopReady)return;
+    auto* Store=GetWorld()->GetSubsystem<UBSObjectWorldSubsystem>(); FString Error;
+    FString Namespace=TEXT("OrisonProps_v1");
+    const bool bQA=FParse::Param(FCommandLine::Get(),TEXT("BSDemoAutoTest"));
+    const bool bSpecified=FParse::Value(FCommandLine::Get(),TEXT("BSDemoSaveNamespace="),Namespace);
+    if(bQA&&!bSpecified){Store->LastError=TEXT("Automated object placement requires an isolated save namespace.");return;}
+    if(!Store->Open(BSHandProps::Id(TEXT("orison"),TEXT("lower_quay_props_v1")),Namespace,
+        FBox(FVector(-6000,-1800,-120),FVector(6500,5000,2400)),Error)) {Store->LastError=Error;return;}
+    const FTransform Anchor(FVector(-2570,-470,8));
+    const FVector Positions[]={FVector(-198,92,104),FVector(-142,96,104),FVector(-62,54,104),
+        FVector(-100,50,108),FVector(-40,90,104),FVector(148,92,3),FVector(111,40,3),
+        FVector(-200,50,104),FVector(-112,90,104),FVector(-54,36,104)};
+    static_assert(UE_ARRAY_COUNT(Positions)==BSHandProps::Count);
+    for(int32 I=0;I<BSHandProps::Count;++I)
+    {
+        FBSPhysicalObjectPlacement P;
+        const FTransform Local(I==3?FRotator(90,20,0):FRotator(0,I==8?-8:0,0),Positions[I]);
+        if(!BSHandProps::MakePlacement(I,TEXT("second_dawn"),Local*Anchor,P,Error)) {Store->LastError=Error;return;}
+        Store->RegisterPlacement(P,Error);
+        if(!Error.IsEmpty()){Store->LastError=Error;return;}
+    }
+    bWorkshopPropsReady=true;
+    UE_LOG(LogTemp,Display,TEXT("Second Dawn physical props: ten stable identities registered."));
+}
 
 void ABSDemoWorld::LoadMarketArt()
 {
@@ -113,9 +166,12 @@ void ABSDemoWorld::BuildStartingMarket()
             const FTransform Anchor(R,FVector(X,Y,8));
             for(const auto& Part:Workshop->Parts)
             {
+                // These display pieces are replaced by addressable ordinary props.
+                if(Part.Key==TEXT("repair-tray") || Part.Key==TEXT("bench-cell-0") || Part.Key==TEXT("bench-cell-1"))continue;
                 const FTransform World=Part.LocalTransform*Anchor;
-                Shape(Part.Mesh,World.GetLocation(),World.GetScale3D(),FLinearColor::White,0,Part.bCollision,World.Rotator(),nullptr,true);
+                Shape(Part.Mesh,World.GetLocation(),World.GetScale3D(),FLinearColor::White,0,Part.bCollision&&Part.Key!=TEXT("repair-bench"),World.Rotator(),nullptr,true);
             }
+            BuildBenchCollision(Anchor);
             // The trade sign's bracket returns to an existing canopy post.
             Beam({X+302,Y+110,425},{X+405,Y+170,425},2.5,Brass);
             bWorkshopReady=true;

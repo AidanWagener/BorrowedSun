@@ -35,6 +35,7 @@ void ABSDemoWorld::BeginPlay()
     BuildStartingMarket();
     BuildSky();
     BuildStateVisuals();
+    BuildWorkshopProps();
     SetSeedAvailable(bSeedAvailable);
     ApplyConsequence(AppliedChoice, bConsequenceComplete);
 }

@@ -6,6 +6,7 @@
 #include "Demo/BSDemoHUD.h"
 #include "Demo/BSDemoSmokeRunner.h"
 #include "Demo/BSDemoAudioComponent.h"
+#include "Objects/BSPhysicalObject.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
 #include "EngineUtils.h"
@@ -83,6 +84,7 @@ bool ABSDemoGameMode::CanInteractAt(const APlayerController* PC,FVector Point,fl
 void ABSDemoGameMode::RestorePose(APlayerController* PC)
 {
     if(!PC || !Ship) return;
+    if(auto* D=Cast<ABSDemoPlayerController>(PC)) D->ReleaseProp();
     if(!Ground) Ground=Cast<ABSExplorerCharacter>(PC->GetPawn());
     if(!Ground)
     {
@@ -201,6 +203,7 @@ void ABSDemoGameMode::Choose(APlayerController* PC,EBSDemoChoice Choice)
 void ABSDemoGameMode::Recover(APlayerController* PC)
 {
     if(!PC || !Ship) return;
+    if(auto* D=Cast<ABSDemoPlayerController>(PC)) D->ReleaseProp();
     if(IsFlying(PC))
     {
         const bool Sky=Progress().Stage==EBSDemoStage::AtRelay;
@@ -213,13 +216,28 @@ void ABSDemoGameMode::Recover(APlayerController* PC)
     Say(TEXT("KESTREL  //  Safe position restored. Your cargo and mission choice are unchanged."));
 }
 
-void ABSDemoGameMode::Save(APlayerController*)
+void ABSDemoGameMode::Save(APlayerController* PC)
 {
-    if(State) Say(State->SaveCheckpoint()?TEXT("CHECKPOINT SAVED  //  Reload resumes at the safe start of this mission stage."):State->LastError);
+    if(auto* D=Cast<ABSDemoPlayerController>(PC)) D->ReleaseProp();
+    if(!State || !State->SaveCheckpoint()) { if(State) Say(State->LastError); return; }
+    FString Error;
+    auto* Store=GetWorld()->GetSubsystem<UBSObjectWorldSubsystem>();
+    if(Store && Store->GetLedger() && !Store->SaveSettledObjects(Error))
+    { Say(TEXT("Mission saved; prop save failed: ")+Error); return; }
+    Say(TEXT("CHECKPOINT SAVED  //  Moving props retain their last safe resting position."));
 }
 void ABSDemoGameMode::Load(APlayerController* PC)
 {
-    if(State && State->LoadCheckpoint()) { RestorePose(PC); Say(State->LastError.IsEmpty()?TEXT("CHECKPOINT RESTORED  //  Resuming the saved mission stage."):State->LastError); }
+    if(auto* D=Cast<ABSDemoPlayerController>(PC)) D->ReleaseProp();
+    if(State && State->LoadCheckpoint())
+    {
+        RestorePose(PC);
+        FString Error;
+        auto* Store=GetWorld()->GetSubsystem<UBSObjectWorldSubsystem>();
+        if(Store && Store->GetLedger() && !Store->Reload(Error))
+        { Say(TEXT("Mission restored; prop reload failed: ")+Error); return; }
+        Say(State->LastError.IsEmpty()?TEXT("CHECKPOINT RESTORED  //  Mission and saved ordinary props restored."):State->LastError);
+    }
     else if(State) Say(State->LastError);
 }
 void ABSDemoGameMode::NewExpedition(APlayerController* PC)

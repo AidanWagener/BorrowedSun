@@ -7,6 +7,7 @@
 
 class UInputAction;
 class UInputMappingContext;
+class UBSCarryComponent;
 
 UCLASS()
 class BORROWEDSUN_API ABSDemoPlayerController : public APlayerController
@@ -18,6 +19,7 @@ public:
     virtual void SetupInputComponent() override;
     virtual void PlayerTick(float DeltaTime) override;
     virtual void ProcessPlayerInput(float DeltaTime, bool bGamePaused) override;
+    virtual void FlushPressedKeys() override;
     bool bWelcome = true;
     bool bMenu = false;
     bool bConfirmRestart = false;
@@ -30,8 +32,14 @@ public:
     bool IsOverlayOpen() const { return bWelcome || bMenu; }
     void Confirm();
     void ToggleMenu();
+    UBSCarryComponent* Hand() const;
+    void GrabProp();
+    void ThrowProp();
+    void CollectProp();
+    void ReleaseProp();
 private:
     bool bAutomatedInput = false;
+    bool bRotateProp = false;
     UPROPERTY() TObjectPtr<UInputMappingContext> Mapping;
     UPROPERTY() TArray<TObjectPtr<UInputAction>> Actions;
     UInputAction* Axis(const TCHAR* Name, FKey Positive, FKey Negative, FKey Gamepad);
@@ -45,6 +53,7 @@ private:
     void PadPitch(const FInputActionValue& V);
     void Boost(const FInputActionValue& V);
     void Brake(const FInputActionValue& V);
+    void RotateProp(const FInputActionValue& V);
     void Interact();
     void SelectClinic();
     void SelectEvacuation();

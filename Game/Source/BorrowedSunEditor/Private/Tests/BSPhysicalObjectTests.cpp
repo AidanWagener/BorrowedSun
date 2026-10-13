@@ -1,8 +1,10 @@
 #include "Objects/BSPhysicalObject.h"
 #include "Objects/BSCarryComponent.h"
+#include "Objects/BSHandProps.h"
 
 #if WITH_DEV_AUTOMATION_TESTS
 #include "Demo/BSExplorerCharacter.h"
+#include "Demo/BSDemoPlayerController.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/Engine.h"
 #include "Engine/StaticMeshActor.h"
@@ -11,6 +13,8 @@
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/WorldSettings.h"
 #include "Misc/AutomationTest.h"
+#include "MeshDescription.h"
+#include "StaticMeshAttributes.h"
 
 namespace BSPhysicalTests
 {
@@ -177,6 +181,69 @@ bool FBSPhysicalCarryTest::RunTest(const FString& Parameters)
     TestTrue(TEXT("Committed collection hides the world prop"), Object->IsHidden());
     TestFalse(TEXT("Collected body cannot collide or simulate"), Object->GetBody()->IsSimulatingPhysics());
     TestEqual(TEXT("Collected collision disabled"), Object->GetBody()->GetCollisionEnabled(), ECollisionEnabled::NoCollision);
+    return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FBSImportedHandPropTest, "BorrowedSun.Smoke.Objects.ImportedHandPropsAndCityController",
+    EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FBSImportedHandPropTest::RunTest(const FString& Parameters)
+{
+    using namespace BSPhysicalTests;
+    FPhysicalTestScene S;
+    TArray<ABSPhysicalObject*> Props;
+    for(int32 I=0;I<BSHandProps::Count;++I)
+    {
+        FBSPhysicalObjectPlacement P;
+        if(!TestTrue(TEXT("Authored model loads"),BSHandProps::MakePlacement(I,TEXT("import_qa"),
+            FTransform(FVector(-400+(I%5)*200,(I/5)*250,180)),P,S.Error))) return false;
+        auto* Object=S.Store->RegisterPlacement(P,S.Error);
+        if(!TestNotNull(*P.DisplayName,Object)) {AddError(S.Error);return false;}
+        TestTrue(TEXT("Imported body can be carried"),Object->CanCarry()); Props.Add(Object);
+    }
+    S.Tick(1200);
+    for(auto* Object:Props)
+    {
+        const FString Name=Object->GetPlacement().DisplayName;
+        double Lowest=DBL_MAX;
+        const FMeshDescription* Mesh=Object->GetPlacement().Mesh->GetMeshDescription(0);
+        if(!TestNotNull(TEXT("Imported source geometry is available for contact measurement"),Mesh))return false;
+        const auto Positions=FStaticMeshConstAttributes(*Mesh).GetVertexPositions();
+        for(const FVertexID Vertex:Mesh->Vertices().GetElementIDs())
+            Lowest=FMath::Min(Lowest,Object->GetActorTransform().TransformPosition(FVector(Positions[Vertex])).Z);
+        AddInfo(FString::Printf(TEXT("%s: min vertex Z %.3f cm, speed %.3f cm/s, angular speed %.3f deg/s"),*Name,Lowest,
+            Object->GetBody()->GetPhysicsLinearVelocity().Size(),Object->GetBody()->GetPhysicsAngularVelocityInDegrees().Size()));
+        TestFalse(*(Name+TEXT(" sleeps after landing")),Object->GetBody()->IsAnyRigidBodyAwake());
+        TestTrue(*(Name+TEXT(" clears actual floor collision")),Object->IsPoseClear(Object->GetActorTransform()));
+        TestTrue(*(Name+TEXT(" remains on the floor")),Lowest> -1 && Lowest<2);
+        TestTrue(*(Name+TEXT(" saves its settled pose")),Object->PersistRestingPose(S.Error));
+    }
+    FActorSpawnParameters Always; Always.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+    auto* Pawn=S.World->SpawnActor<ABSExplorerCharacter>(FVector(-170,-400,100),FRotator::ZeroRotator,Always);
+    auto* PC=S.World->SpawnActor<ABSDemoPlayerController>(); PC->Possess(Pawn); PC->Confirm();
+    auto* Hand=Pawn->GetCarryComponent();
+    for(auto* Object:Props)
+    {
+        // Only the fixture is teleported. The player path uses the same physical grip as the city.
+        Object->SetActorLocation(FVector(0,-400,165),false,nullptr,ETeleportType::TeleportPhysics);
+        Object->GetBody()->SetPhysicsLinearVelocity(FVector::ZeroVector);
+        FVector Eye; FRotator View; Pawn->GetActorEyesViewPoint(Eye,View);
+        PC->SetControlRotation((Object->GetBody()->Bounds.Origin-Eye).Rotation());
+        if(!TestEqual(TEXT("Ray reaches imported model"),Hand->TraceObject(),Object)) return false;
+        PC->GrabProp();
+        if(!TestEqual(TEXT("Main city controller grips imported prop"),Hand->GetHeldObject(),Object))return false;
+        Hand->RotateHeld(12,8); S.Tick(15);
+        TestEqual(TEXT("Imported prop stays held during rotation"),Hand->GetHeldObject(),Object);
+        PC->ToggleMenu(); TestNull(TEXT("Menu releases imported body"),Hand->GetHeldObject()); PC->Confirm();
+        Object->SetActorLocation(FVector(0,-400,165),false,nullptr,ETeleportType::TeleportPhysics);
+        Object->GetBody()->SetPhysicsLinearVelocity(FVector::ZeroVector);
+        PC->SetControlRotation((Object->GetBody()->Bounds.Origin-Eye).Rotation());
+        PC->GrabProp(); TestEqual(TEXT("Prop can be gripped again"),Hand->GetHeldObject(),Object);
+        PC->ThrowProp(); S.Tick(1); // Chaos applies queued impulses on the simulation step.
+        TestNull(TEXT("Throw clears main city grip"),Hand->GetHeldObject());
+        TestTrue(*(Object->GetPlacement().DisplayName+TEXT(" receives bounded throw velocity")),Object->GetBody()->GetPhysicsLinearVelocity().Size()>500
+            && Object->GetBody()->GetPhysicsLinearVelocity().Size()<820);
+        Object->Destroy();
+    }
     return true;
 }
 #endif

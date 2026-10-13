@@ -2,6 +2,8 @@
 #include "Demo/BSDemoGameMode.h"
 #include "Demo/BSDemoPlayerController.h"
 #include "Demo/BSKestrelPawn.h"
+#include "Objects/BSCarryComponent.h"
+#include "Objects/BSPhysicalObject.h"
 #include "Engine/Canvas.h"
 #include "Engine/Engine.h"
 #include "Engine/Font.h"
@@ -59,7 +61,7 @@ void ABSDemoHUD::DrawHUD()
         else if(PC->bConfirmRestart)
         {
             Text(TEXT("START A NEW EXPEDITION?"),X+30,310,30,Paper);
-            Text(TEXT("This replaces this demo's current and backup checkpoints."),X+30,362,20,Muted);
+            Text(TEXT("Replaces mission checkpoints. Ordinary props and collection stay saved."),X+30,362,20,Muted);
             Text(TEXT("ENTER confirms    /    ESC cancels"),X+30,430,24,Mint);
         }
         else
@@ -112,11 +114,21 @@ void ABSDemoHUD::DrawHUD()
     }
     Panel(W*.5f-1,H*.5f-5,2,10,Paper*.6f);
     Panel(W*.5f-5,H*.5f-1,10,2,Paper*.6f);
-    const FString Prompt=G->InteractionPrompt(PC);
+    FString Prompt=G->InteractionPrompt(PC);
+    if(auto* Hand=PC->Hand())
+    {
+        auto* Object=Hand->GetHeldObject(); const bool bHolding=Object!=nullptr;
+        if(!Object)Object=Hand->TraceObject();
+        if(Object && Object->CanCarry())
+        {
+            Prompt=bHolding?TEXT("[F] DROP  [LMB] THROW  [RMB + MOUSE] ROTATE  [Z] COLLECT"):TEXT("[F / D-UP] PICK UP     [Z / D-LEFT] COLLECT");
+            Text(Object->GetPlacement().DisplayName,W*.5f-200,H-235,19,Amber);
+        }
+    }
     if(!Prompt.IsEmpty())
     {
         Panel(W*.5f-300,H-205,600,47,Ink);
-        Text(Prompt,W*.5f-274,H-191,20,Mint);
+        Text(Prompt,W*.5f-274,H-191,17,Mint);
     }
     if(G->MessageSeconds>0)
     {
@@ -159,7 +171,7 @@ void ABSDemoHUD::DrawHUD()
     }
     if(PC->bShowHelp)
     {
-        Panel(W-495,153,467,280,Ink);
+        Panel(W-495,153,467,378,Ink);
         Text(TEXT("CONTROLS / ACCESSIBILITY"),W-475,173,23,Mint);
         Text(TEXT("Stick left: move / strafe. Stick right: look."),W-475,218,17,Paper);
         Text(TEXT("A: jump / rise. B: descend. X: interact."),W-475,250,17,Paper);
@@ -167,5 +179,8 @@ void ABSDemoHUD::DrawHUD()
         Text(TEXT("D-pad down / R: recover to a safe position."),W-475,314,17,Paper);
         Text(FString::Printf(TEXT("[ / ]: mouse sensitivity (%.2f). No camera shake."),PC->LookSensitivity),W-475,346,16,Paper);
         Text(TEXT("Flight assist is optional. F1 / View closes this panel."),W-475,392,15,Muted);
+        Text(TEXT("F / D-up: prop grab or drop. Z / D-left: collect."),W-475,428,16,Paper);
+        Text(TEXT("LMB / D-right: throw. RMB / R-stick: rotate."),W-475,458,16,Paper);
+        Text(TEXT("Collection is saved; inventory retrieval comes later."),W-475,494,15,Muted);
     }
 }

@@ -6,11 +6,16 @@
 #include "Demo/BSDemoWorld.h"
 #include "Demo/BSExplorerCharacter.h"
 #include "Demo/BSKestrelPawn.h"
+#include "Objects/BSCarryComponent.h"
+#include "Objects/BSHandProps.h"
+#include "Components/StaticMeshComponent.h"
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
 #include "Engine/GameViewportClient.h"
 #include "GameFramework/GameUserSettings.h"
 #include "Engine/World.h"
+#include "Engine/OverlapResult.h"
+#include "Engine/StaticMesh.h"
 #include "EngineUtils.h"
 #include "Camera/CameraActor.h"
 #include "Camera/CameraComponent.h"
@@ -280,7 +285,29 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
         if (!Check(TEXT("CityArtReady"), City && City->HasCityArt(), TEXT("All 14 city meshes and seven PBR materials loaded in this runtime."))) return;
         if (!Check(TEXT("MarketArtReady"), City && City->HasMarketArt(), TEXT("All 30 market meshes and nine architectural materials loaded in this runtime."))) return;
         if (!Check(TEXT("WorkshopArtReady"), City && City->HasWorkshopArt(), TEXT("The editable Second Dawn assembly and every referenced mesh loaded and passed validation."))) return;
-        BeginRoute(Mode, Controller);
+        auto* Store=GetWorld()->GetSubsystem<UBSObjectWorldSubsystem>();
+        if(!Check(TEXT("WorkshopPropsReady"),City->HasWorkshopProps() && Store && Store->GetLedger()
+            && Store->GetLedger()->GetSnapshot().Objects.Num()==BSHandProps::Count,Store?Store->LastError:FString()))return;
+        int32 Count=0;
+        for(TActorIterator<ABSPhysicalObject> It(GetWorld());It;++It)
+        {
+            ++Count;
+            FString Contacts;
+            TArray<FOverlapResult> Hits; FComponentQueryParams Query(SCENE_QUERY_STAT(WorkshopQA),*It);
+            It->GetBody()->ComponentOverlapMulti(Hits,GetWorld(),It->GetActorLocation()+FVector(0,0,.5),It->GetActorQuat(),ECC_PhysicsBody,Query);
+            for(const auto& Hit:Hits)if(Hit.bBlockingHit&&Hit.GetComponent())
+            {
+                auto* Mesh=Cast<UStaticMeshComponent>(Hit.GetComponent());
+                Contacts+=FString::Printf(TEXT(" [%s / %s]"),*Hit.GetComponent()->GetName(),Mesh&&Mesh->GetStaticMesh()?*Mesh->GetStaticMesh()->GetName():TEXT("shape"));
+            }
+            if(!Check(*FString::Printf(TEXT("WorkshopProp_%s"),*It->GetPlacement().InstanceId.Key),
+                It->CanCarry() && It->IsPoseClear(It->GetActorTransform()),FString::Printf(TEXT("%s carry=%d awake=%d pose=%s contacts=%s"),
+                    *It->GetPlacement().DisplayName,It->CanCarry(),It->GetBody()->IsAnyRigidBodyAwake(),*It->GetActorTransform().ToHumanReadableString(),*Contacts)))return;
+            if(It->GetPlacement().InstanceId.Key==TEXT("cup"))WorkshopProp=*It;
+        }
+        if(!Check(TEXT("TenLiveWorkshopProps"),Count==BSHandProps::Count&&WorkshopProp.IsValid()))return;
+        Controller->Confirm(); Mode->NewExpedition(Controller); RouteStartedAt=Now;
+        SetPhase(EPhase::WalkToWorkshop);
         return;
     }
     if (!Mode || !Controller || !Controller->GetPawn() || !Mode->Ship)
@@ -293,6 +320,36 @@ void ABSDemoSmokeRunner::Tick(float DeltaSeconds)
     const FVector Service = RouteIndex == 0 ? ABSDemoWorld::ClinicLocation() : ABSDemoWorld::EvacuationLocation();
     switch (Phase)
     {
+    case EPhase::WalkToWorkshop:
+        if(WalkTo(Controller,FVector(-2768,-240,120),15.f,DeltaSeconds))
+        {
+            FVector Eye; FRotator View; Controller->GetPawn()->GetActorEyesViewPoint(Eye,View);
+            Controller->SetControlRotation((WorkshopProp->GetBody()->Bounds.Origin-Eye).Rotation());
+            Controller->GrabProp();
+            if(!Check(TEXT("WorkshopPropGrabbed"),Controller->Hand()&&Controller->Hand()->GetHeldObject()==WorkshopProp.Get()))return;
+            Controller->Hand()->RotateHeld(10,0);
+            SetPhase(EPhase::HoldWorkshopProp);
+        }
+        break;
+    case EPhase::HoldWorkshopProp:
+        if(!bWorkshopCaptured && Now-PhaseStartedAt>.5)
+        { Capture(TEXT("workshop-held-prop")); bWorkshopCaptured=true; }
+        if(Now-PhaseStartedAt>1.0)
+        {
+            if(!Check(TEXT("WorkshopGripSurvivesPhysics"),Controller->Hand()->GetHeldObject()==WorkshopProp.Get()))return;
+            Controller->CollectProp();
+            auto* Store=GetWorld()->GetSubsystem<UBSObjectWorldSubsystem>();
+            const FBSStableId Id=WorkshopProp->GetPlacement().InstanceId;
+            if(!Check(TEXT("WorkshopCollectionCommits"),WorkshopProp->IsHidden()&&!Controller->Hand()->GetHeldObject()
+                && Store->GetLedger()->GetSnapshot().Find(Id)->Custody==EBSObjectCustody::Collection))return;
+            Mode->Save(Controller); Mode->Load(Controller);
+            if(!Check(TEXT("WorkshopCollectionSurvivesReload"),Store->LastError.IsEmpty()
+                && Store->GetLedger()->GetSnapshot().Find(Id)->Custody==EBSObjectCustody::Collection))return;
+            int32 Live=0; for(TActorIterator<ABSPhysicalObject> It(GetWorld());It;++It)if(!It->IsActorBeingDestroyed())++Live;
+            if(!Check(TEXT("WorkshopReloadHasNoDuplicate"),Live==BSHandProps::Count-1))return;
+            BeginRoute(Mode,Controller);
+        }
+        break;
     case EPhase::StreetStartPause:
         // Capture the real idle gameplay view after the opening dialogue naturally fades.
         if(Mode->MessageSeconds<=0)

@@ -25,6 +25,7 @@ public:
     bool HasCityArt() const { return CityMeshes.Num() == 14 && CityMaterials.Num() == 7; }
     bool HasMarketArt() const { return MarketMeshes.Num() == 30 && MarketMaterials.Num() == 9; }
     bool HasWorkshopArt() const { return bWorkshopReady; }
+    bool HasWorkshopProps() const { return bWorkshopPropsReady; }
     static FVector SeedLocation() { return FVector(-1100, 0, 150); }
     static FVector DockLocation() { return FVector(1800, 0, 220); }
     static FVector RelayLocation() { return FVector(18000, 0, 15000); }
@@ -49,12 +50,15 @@ private:
     UPROPERTY(Transient) TArray<TObjectPtr<UStaticMeshComponent>> FlightBeacons;
     bool bSeedAvailable = true;
     bool bWorkshopReady = false;
+    bool bWorkshopPropsReady = false;
     uint8 AppliedChoice = 0;
     bool bConsequenceComplete = false;
     TMap<FString, int32> GroupIndices;
     void Shape(UStaticMesh* Mesh, FVector Position, FVector Scale, FLinearColor Tint, float Glow = 0, bool bCollision = true, FRotator Rotation = FRotator::ZeroRotator, UMaterialInterface* Override = nullptr, bool bMeshMaterials = false);
     void LoadMarketArt();
     void BuildStartingMarket();
+    void BuildWorkshopProps();
+    void BuildBenchCollision(const FTransform& Anchor);
     void MarketPart(FName Mesh, FVector P, FVector S = FVector(1), FRotator Rotation = FRotator::ZeroRotator);
     void MarketBox(FVector P, FVector S, FName Material, bool bCollision = false);
     void LoadCityArt();

@@ -6,6 +6,7 @@
 #include "Engine/World.h"
 #include "Engine/OverlapResult.h"
 #include "PhysicsEngine/BodySetup.h"
+#include "PhysicalMaterials/PhysicalMaterial.h"
 #include "TimerManager.h"
 
 namespace BSPhysicalObjectPrivate
@@ -39,7 +40,12 @@ ABSPhysicalObject::ABSPhysicalObject()
     Body->SetCanEverAffectNavigation(false);
     Body->CanCharacterStepUpOn = ECB_No;
     Body->BodyInstance.bGenerateWakeEvents = true;
-    Body->SetLinearDamping(.15f); Body->SetAngularDamping(1.2f);
+    Body->SetLinearDamping(.2f); Body->SetAngularDamping(3.f);
+    // Centimetre-scale curved props need enough contact iterations to settle instead
+    // of continually rocking at seams between their authored convex hulls.
+    Body->BodyInstance.SetPositionSolverIterationCount(16);
+    Body->BodyInstance.SetVelocitySolverIterationCount(4);
+    Body->BodyInstance.SetOverrideIterationCounts(true);
 }
 
 bool ABSPhysicalObject::InitializePlacement(const FBSPhysicalObjectPlacement& P, const FBSObjectRecord& Record, FString& Error)
@@ -50,6 +56,14 @@ bool ABSPhysicalObject::InitializePlacement(const FBSPhysicalObjectPlacement& P,
         || !Record.RestTransform.GetScale3D().Equals(FVector(1), .0001))
         return BSPhysicalObjectPrivate::Reject(Error, TEXT("Saved object does not match its physical definition."));
     Placement = P; Body->SetStaticMesh(P.Mesh);
+    auto* Contact = NewObject<UPhysicalMaterial>(this);
+    Contact->Friction = .7f; Contact->StaticFriction = .7f; Contact->Restitution = .05f;
+    // Filter sub-centimetre contact chatter for 30 consecutive physics steps before sleeping.
+    // Angular threshold is radians/s; ordinary movement and impacts still wake the body.
+    Contact->SleepLinearVelocityThreshold = 1.f;
+    Contact->SleepAngularVelocityThreshold = .2f;
+    Contact->SleepCounterThreshold = 30;
+    Body->SetPhysMaterialOverride(Contact);
     Body->SetMassOverrideInKg(NAME_None, P.MassKg, true);
     Body->SetUseCCD(true); Body->SetPhysicsMaxAngularVelocityInDegrees(360.f);
     Body->OnComponentWake.AddDynamic(this, &ThisClass::OnWake);

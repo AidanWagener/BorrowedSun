@@ -6,5 +6,6 @@ public class BorrowedSun : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "EnhancedInput", "InputCore" });
+        PrivateDependencyModuleNames.Add("PhysicsCore");
     }
 }
