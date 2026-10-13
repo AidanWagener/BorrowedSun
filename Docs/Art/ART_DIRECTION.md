@@ -39,6 +39,8 @@ The v0.4 starting market adds the [approved benchmark](STARTING_MARKET_BENCHMARK
 
 The Blender source and exports are editable production assets; the generated benchmark remains a reference image. Source triangle counts, package counts and successful tests do not establish that its visual quality has been reached. Actual runtime captures and the corresponding validation report are the review evidence.
 
+The original Second Dawn workshop adds 12 meshes in a 39-part assembly. Its [surface pass](../Operations/WORKSHOP_SURFACES_2026-10-13.md) uses component-aligned UV grain and authored contact/dirt masks. [The workshop intake](../Registers/workshop-surface-intake.json) records Rob Tuytel's CC0 `fine_grained_wood` colour, normal and roughness maps, original files and checksums. These joinery maps replace the shared medieval plank scan on workshop meshes; existing market doors retain their separate materials.
+
 ## Kit purchasing decision
 
 [KitBash3D Shangri-La](https://kitbash3d.com/products/shangri-la) is a candidate for selected roof and distant monastery forms, subject to an exact asset/version and gameplay suitability review. [Neo City](https://kitbash3d.com/products/mini-kit-neo-city) is a candidate for industrial details; its broad cyberpunk façades do not establish this city's primary identity. Neither kit is purchased or imported by this pass. The first block uses the reviewed CC0 maps and original reusable geometry; asset spending remains EUR 0.

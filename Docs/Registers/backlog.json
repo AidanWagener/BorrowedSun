@@ -426,7 +426,7 @@
       "estimateHours": [8, 30],
       "confidence": "low",
       "acceptance": "Actual matched in-game captures show coherent construction, materials and grounded objects; mission routes and packaged performance remain qualified.",
-      "evidence": ["Docs/Operations/WORLD_LIBRARY_PLAN_VALIDATION.md", "Docs/Operations/WORKSHOP_ART_PASS_2026-10-13.md", "Docs/Operations/TRIPO_STUDIO_INTAKE.md"]
+      "evidence": ["Docs/Operations/WORLD_LIBRARY_PLAN_VALIDATION.md", "Docs/Operations/WORKSHOP_ART_PASS_2026-10-13.md", "Docs/Operations/WORKSHOP_SURFACES_2026-10-13.md", "Docs/Operations/TRIPO_STUDIO_INTAKE.md"]
     },
     {
       "id": "BS-027",
