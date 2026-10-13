@@ -1,28 +1,49 @@
 {
-  "edition": "0.1",
+  "edition": "0.2",
   "scope": "Current new foundations including research/review notes; not pages, completion or quality certification",
-  "words": 49549,
+  "words": 85014,
   "chapters": [
     {
       "id": "orientation",
       "source": "00_CANON_AND_ORIENTATION.md",
       "title": "00 · Canon and orientation",
       "status": "Working canon",
-      "words": 2635
+      "words": 2672
     },
     {
       "id": "physics",
       "source": "Drafts/PHYSICAL_FOUNDATION_REVIEW.md",
-      "title": "01 · Physical foundation",
+      "title": "01a · Physical foundation",
       "status": "Checked design candidate; open physical questions remain",
       "words": 6296
     },
     {
+      "id": "landwater",
+      "source": "01_LAND_WATER_AND_DEEP_TIME.md",
+      "title": "01b · Land, water and deep time",
+      "status": "Working geological canon and authored relief controls; not surveyed terrain",
+      "words": 5101
+    },
+    {
+      "id": "sky",
+      "source": "02_SKY_WATER_AND_SEASONS.md",
+      "title": "02 · Sky, water and seasons",
+      "status": "Adopted calendar; idealized sky and regional weather proposals",
+      "words": 7936
+    },
+    {
       "id": "ecology",
       "source": "Drafts/ECOLOGY_FOUNDATION.md",
-      "title": "03 · Ecology foundation",
+      "title": "03a · Ecology foundation",
       "status": "Draft; limited food compatibility adopted, regional ranges conditional",
-      "words": 15597
+      "words": 15732
+    },
+    {
+      "id": "morrow",
+      "source": "Drafts/MORROW_ECOSYSTEMS.md",
+      "title": "03b · Morrow ecosystems",
+      "status": "24 additional species and six regional networks; climate and carrying capacities unresolved",
+      "words": 10912
     },
     {
       "id": "history",
@@ -51,6 +72,13 @@
       "title": "07 · Regional atlas",
       "status": "Geographic concept; terrain and climate development pending",
       "words": 4106
+    },
+    {
+      "id": "orison",
+      "source": "Cities/ORISON.md",
+      "title": "08a · Orison",
+      "status": "Authored city proposal: eleven districts, 24 places and service dependencies; not constructed",
+      "words": 11344
     }
   ]
 }

@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1450" viewBox="0 0 1440 1450" role="img" aria-labelledby="title desc">
+<title id="title">Orison: districts, places and the breached crater</title>
+<desc id="desc">An authored city plan with eleven district envelopes, twenty-four numbered places, a whole-crater inset and a measured coordinate grid. This is a planning illustration, not a terrain survey.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#253d42;font-size:16px}.small{font-size:13px}.tiny{font-size:11px}.muted{fill:#526f70}.water{fill:#c9dee0;stroke:#538e98;stroke-width:1.5}.rim{fill:none;stroke:#97715c;stroke-width:5}.grid{stroke:#c4c4b3;stroke-width:.6}.label{font-size:12px;font-weight:bold}</style>
+<rect width="1440" height="1450" fill="#f1eddf"/>
+<text x="48.0" y="45.0" class="" style="font-size:28px;letter-spacing:1px">ORISON / THE WESTERN TERRACES</text>
+<text x="48.0" y="73.0" class="small" >CITY-001 · 742 AL · Working plan 0.1 · 420,000 residents in the core</text>
+<text x="48.0" y="95.0" class="small muted" >North is up. Distances in kilometers; heights above planning sea level. District envelopes overlap.</text>
+<defs><clipPath id="city-clip"><rect x="55" y="125" width="899.0" height="870.0"/></clipPath></defs>
+<g clip-path="url(#city-clip)">
+<rect x="55" y="125" width="899.0" height="870.0" fill="#e4ddc9"/>
+<path class="water" d="M1534.0,455.6 L1331.0,432.4 L1197.6,357.0 L1058.4,287.4 L896.0,246.8 L727.8,316.4 L698.8,386.0 L640.8,455.6 L617.6,531.0 L611.8,606.4 L635.0,670.2 L672.7,734.0 L669.8,763.0 L687.2,855.8 L678.5,905.1 L797.4,925.4 L896.0,884.8 L1041.0,919.6 L1186.0,884.8 L1302.0,792.0 L1505.0,768.8 L1621.0,768.8 L1621.0,455.6 L1534.0,455.6 Z"/>
+<path class="rim" d="M1507.0,442.1 L1473.9,358.5 L1428.3,279.9 L1371.2,207.9 L1303.7,143.8 L1227.2,89.1 L1143.1,44.6 L1053.1,11.2 L958.9,-10.3 L862.3,-19.6 L765.3,-16.5 L669.6,-1.0 L577.3,26.5 L490.0,65.5 L409.5,115.3 L337.3,174.8 L274.9,243.0 L223.5,318.5 L184.0,399.8 L157.2,485.4 L143.7,573.5 L143.7,662.5 L157.2,750.6 L184.0,836.2 L223.5,917.5 L274.9,993.0 L337.3,1061.2 L409.5,1120.7 L490.0,1170.5 L577.3,1209.5 L669.6,1237.0 L765.3,1252.5 L862.3,1255.6 L958.9,1246.3 L1053.1,1224.8 L1143.1,1191.4 L1227.2,1146.9 L1303.7,1092.2 L1371.2,1028.1 L1428.3,956.1 L1473.9,877.5 L1507.0,793.9"/>
+<line x1="142.0" y1="125.0" x2="142.0" y2="995.0" class="grid"/>
+<line x1="258.0" y1="125.0" x2="258.0" y2="995.0" class="grid"/>
+<line x1="374.0" y1="125.0" x2="374.0" y2="995.0" class="grid"/>
+<line x1="490.0" y1="125.0" x2="490.0" y2="995.0" class="grid"/>
+<line x1="606.0" y1="125.0" x2="606.0" y2="995.0" class="grid"/>
+<line x1="722.0" y1="125.0" x2="722.0" y2="995.0" class="grid"/>
+<line x1="838.0" y1="125.0" x2="838.0" y2="995.0" class="grid"/>
+<line x1="954.0" y1="125.0" x2="954.0" y2="995.0" class="grid"/>
+<line x1="55.0" y1="966.0" x2="954.0" y2="966.0" class="grid"/>
+<line x1="55.0" y1="850.0" x2="954.0" y2="850.0" class="grid"/>
+<line x1="55.0" y1="734.0" x2="954.0" y2="734.0" class="grid"/>
+<line x1="55.0" y1="618.0" x2="954.0" y2="618.0" class="grid"/>
+<line x1="55.0" y1="502.0" x2="954.0" y2="502.0" class="grid"/>
+<line x1="55.0" y1="386.0" x2="954.0" y2="386.0" class="grid"/>
+<line x1="55.0" y1="270.0" x2="954.0" y2="270.0" class="grid"/>
+<line x1="55.0" y1="154.0" x2="954.0" y2="154.0" class="grid"/>
+<ellipse data-district="ORI-D01" cx="611.8" cy="664.4" rx="52.2" ry="81.2" fill="#759b9a" fill-opacity=".19" stroke="#759b9a" stroke-width="1.5"/>
+<ellipse data-district="ORI-D02" cx="565.4" cy="702.1" rx="52.2" ry="69.6" fill="#adad75" fill-opacity=".19" stroke="#adad75" stroke-width="1.5"/>
+<ellipse data-district="ORI-D03" cx="545.1" cy="594.8" rx="66.7" ry="69.6" fill="#bd975f" fill-opacity=".19" stroke="#bd975f" stroke-width="1.5"/>
+<ellipse data-district="ORI-D04" cx="504.5" cy="504.9" rx="66.7" ry="69.6" fill="#bd975f" fill-opacity=".19" stroke="#bd975f" stroke-width="1.5"/>
+<ellipse data-district="ORI-D05" cx="591.5" cy="426.6" rx="66.7" ry="78.3" fill="#adad75" fill-opacity=".19" stroke="#adad75" stroke-width="1.5"/>
+<ellipse data-district="ORI-D06" cx="701.7" cy="316.4" rx="104.4" ry="87.0" fill="#759b9a" fill-opacity=".19" stroke="#759b9a" stroke-width="1.5"/>
+<ellipse data-district="ORI-D07" cx="423.3" cy="490.4" rx="95.7" ry="101.5" fill="#bd975f" fill-opacity=".19" stroke="#bd975f" stroke-width="1.5"/>
+<ellipse data-district="ORI-D08" cx="429.1" cy="678.9" rx="87.0" ry="101.5" fill="#bd975f" fill-opacity=".19" stroke="#bd975f" stroke-width="1.5"/>
+<ellipse data-district="ORI-D09" cx="356.6" cy="577.4" rx="81.2" ry="78.3" fill="#9e858e" fill-opacity=".19" stroke="#9e858e" stroke-width="1.5"/>
+<ellipse data-district="ORI-D10" cx="260.9" cy="667.3" rx="63.8" ry="133.4" fill="#9e858e" fill-opacity=".19" stroke="#9e858e" stroke-width="1.5"/>
+<ellipse data-district="ORI-D11" cx="646.6" cy="841.3" rx="81.2" ry="89.9" fill="#759b9a" fill-opacity=".19" stroke="#759b9a" stroke-width="1.5"/>
+<path d="M240.6,223.6 L362.4,287.4 L449.4,368.6 L501.6,484.6 L545.1,562.3 L629.2,478.8 L652.4,467.2" fill="none" stroke="#5481a1" stroke-width="2" stroke-dasharray="4 4"/>
+</g>
+<rect x="55" y="125" width="899.0" height="870.0" fill="none" stroke="#92978a"/>
+<text x="142.0" y="1018.0" class="tiny" text-anchor="middle">-12</text>
+<text x="258.0" y="1018.0" class="tiny" text-anchor="middle">-10</text>
+<text x="374.0" y="1018.0" class="tiny" text-anchor="middle">-8</text>
+<text x="490.0" y="1018.0" class="tiny" text-anchor="middle">-6</text>
+<text x="606.0" y="1018.0" class="tiny" text-anchor="middle">-4</text>
+<text x="722.0" y="1018.0" class="tiny" text-anchor="middle">-2</text>
+<text x="838.0" y="1018.0" class="tiny" text-anchor="middle">0</text>
+<text x="954.0" y="1018.0" class="tiny" text-anchor="middle">2</text>
+<text x="47.0" y="970.0" class="tiny" text-anchor="end">-6</text>
+<text x="47.0" y="854.0" class="tiny" text-anchor="end">-4</text>
+<text x="47.0" y="738.0" class="tiny" text-anchor="end">-2</text>
+<text x="47.0" y="622.0" class="tiny" text-anchor="end">0</text>
+<text x="47.0" y="506.0" class="tiny" text-anchor="end">2</text>
+<text x="47.0" y="390.0" class="tiny" text-anchor="end">4</text>
+<text x="47.0" y="274.0" class="tiny" text-anchor="end">6</text>
+<text x="47.0" y="158.0" class="tiny" text-anchor="end">8</text>
+<text x="954.0" y="1038.0" class="tiny" text-anchor="end">x east / km</text>
+<text x="55.0" y="116.0" class="tiny" >y north / km</text>
+<circle data-poi="ORI-POI-001" cx="632.7" cy="683.0" r="3.5" fill="#2d5059"/>
+<line x1="632.7" y1="683.0" x2="645.4" y2="670.2" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="632.9" y="660.2" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="645.4" y="674.2" class="label" text-anchor="middle" style="fill:#243d42">01</text>
+<circle data-poi="ORI-POI-002" cx="621.7" cy="654.0" r="3.5" fill="#2d5059"/>
+<line x1="621.7" y1="654.0" x2="634.4" y2="641.2" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="621.9" y="631.2" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="634.4" y="645.2" class="label" text-anchor="middle" style="fill:#243d42">02</text>
+<circle data-poi="ORI-POI-003" cx="560.8" cy="697.5" r="3.5" fill="#2d5059"/>
+<line x1="560.8" y1="697.5" x2="573.5" y2="684.7" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="561.0" y="674.7" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="573.5" y="688.7" class="label" text-anchor="middle" style="fill:#243d42">03</text>
+<circle data-poi="ORI-POI-004" cx="572.9" cy="729.4" r="3.5" fill="#2d5059"/>
+<line x1="572.9" y1="729.4" x2="585.7" y2="716.6" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="573.2" y="706.6" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="585.7" y="720.6" class="label" text-anchor="middle" style="fill:#243d42">04</text>
+<circle data-poi="ORI-POI-005" cx="538.1" cy="598.3" r="3.5" fill="#2d5059"/>
+<line x1="538.1" y1="598.3" x2="550.9" y2="585.6" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="538.4" y="575.6" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="550.9" y="589.6" class="label" text-anchor="middle" style="fill:#243d42">05</text>
+<circle data-poi="ORI-POI-006" cx="554.4" cy="562.3" r="3.5" fill="#2d5059"/>
+<line x1="554.4" y1="562.3" x2="567.1" y2="549.6" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="554.6" y="539.6" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="567.1" y="553.6" class="label" text-anchor="middle" style="fill:#243d42">06</text>
+<circle data-poi="ORI-POI-007" cx="499.9" cy="507.8" r="3.5" fill="#2d5059"/>
+<line x1="499.9" y1="507.8" x2="512.6" y2="495.1" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="500.1" y="485.1" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="512.6" y="499.1" class="label" text-anchor="middle" style="fill:#243d42">07</text>
+<circle data-poi="ORI-POI-008" cx="520.7" cy="479.4" r="3.5" fill="#2d5059"/>
+<line x1="520.7" y1="479.4" x2="533.5" y2="466.7" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="521.0" y="456.7" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="533.5" y="470.7" class="label" text-anchor="middle" style="fill:#243d42">08</text>
+<circle data-poi="ORI-POI-009" cx="585.7" cy="425.4" r="3.5" fill="#2d5059"/>
+<line x1="585.7" y1="425.4" x2="598.4" y2="412.7" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="585.9" y="402.7" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="598.4" y="416.7" class="label" text-anchor="middle" style="fill:#243d42">09</text>
+<circle data-poi="ORI-POI-010" cx="613.5" cy="406.3" r="3.5" fill="#2d5059"/>
+<line x1="613.5" y1="406.3" x2="631.5" y2="406.3" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="619.0" y="396.3" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="631.5" y="410.3" class="label" text-anchor="middle" style="fill:#243d42">10</text>
+<circle data-poi="ORI-POI-011" cx="698.2" cy="305.4" r="3.5" fill="#2d5059"/>
+<line x1="698.2" y1="305.4" x2="710.9" y2="292.7" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="698.4" y="282.7" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="710.9" y="296.7" class="label" text-anchor="middle" style="fill:#243d42">11</text>
+<circle data-poi="ORI-POI-012" cx="757.4" cy="311.2" r="3.5" fill="#2d5059"/>
+<line x1="757.4" y1="311.2" x2="770.1" y2="298.5" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="757.6" y="288.5" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="770.1" y="302.5" class="label" text-anchor="middle" style="fill:#243d42">12</text>
+<circle data-poi="ORI-POI-013" cx="397.2" cy="471.3" r="3.5" fill="#2d5059"/>
+<line x1="397.2" y1="471.3" x2="409.9" y2="458.5" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="397.4" y="448.5" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="409.9" y="462.5" class="label" text-anchor="middle" style="fill:#243d42">13</text>
+<circle data-poi="ORI-POI-014" cx="432.6" cy="507.8" r="3.5" fill="#2d5059"/>
+<line x1="432.6" y1="507.8" x2="445.3" y2="495.1" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="432.8" y="485.1" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="445.3" y="499.1" class="label" text-anchor="middle" style="fill:#243d42">14</text>
+<circle data-poi="ORI-POI-015" cx="428.5" cy="672.5" r="3.5" fill="#2d5059"/>
+<line x1="428.5" y1="672.5" x2="441.2" y2="659.8" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="428.7" y="649.8" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="441.2" y="663.8" class="label" text-anchor="middle" style="fill:#243d42">15</text>
+<circle data-poi="ORI-POI-016" cx="455.2" cy="716.0" r="3.5" fill="#2d5059"/>
+<line x1="455.2" y1="716.0" x2="467.9" y2="703.3" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="455.4" y="693.3" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="467.9" y="707.3" class="label" text-anchor="middle" style="fill:#243d42">16</text>
+<circle data-poi="ORI-POI-017" cx="350.2" cy="580.3" r="3.5" fill="#2d5059"/>
+<line x1="350.2" y1="580.3" x2="362.9" y2="567.6" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="350.4" y="557.6" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="362.9" y="571.6" class="label" text-anchor="middle" style="fill:#243d42">17</text>
+<circle data-poi="ORI-POI-018" cx="363.6" cy="545.5" r="3.5" fill="#2d5059"/>
+<line x1="363.6" y1="545.5" x2="376.3" y2="532.8" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="363.8" y="522.8" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="376.3" y="536.8" class="label" text-anchor="middle" style="fill:#243d42">18</text>
+<circle data-poi="ORI-POI-019" cx="242.3" cy="670.8" r="3.5" fill="#2d5059"/>
+<line x1="242.3" y1="670.8" x2="255.1" y2="658.1" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="242.6" y="648.1" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="255.1" y="662.1" class="label" text-anchor="middle" style="fill:#243d42">19</text>
+<circle data-poi="ORI-POI-020" cx="259.7" cy="591.9" r="3.5" fill="#2d5059"/>
+<line x1="259.7" y1="591.9" x2="272.5" y2="579.2" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="260.0" y="569.2" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="272.5" y="583.2" class="label" text-anchor="middle" style="fill:#243d42">20</text>
+<circle data-poi="ORI-POI-021" cx="685.5" cy="828.0" r="3.5" fill="#2d5059"/>
+<line x1="685.5" y1="828.0" x2="698.2" y2="815.2" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="685.7" y="805.2" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="698.2" y="819.2" class="label" text-anchor="middle" style="fill:#243d42">21</text>
+<circle data-poi="ORI-POI-022" cx="673.3" cy="855.8" r="3.5" fill="#2d5059"/>
+<line x1="673.3" y1="855.8" x2="686.0" y2="843.1" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="673.5" y="833.1" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="686.0" y="847.1" class="label" text-anchor="middle" style="fill:#243d42">22</text>
+<circle data-poi="ORI-POI-023" cx="376.9" cy="432.4" r="3.5" fill="#2d5059"/>
+<line x1="376.9" y1="432.4" x2="389.6" y2="419.7" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="377.1" y="409.7" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="389.6" y="423.7" class="label" text-anchor="middle" style="fill:#243d42">23</text>
+<circle data-poi="ORI-POI-024" cx="682.0" cy="897.6" r="3.5" fill="#2d5059"/>
+<line x1="682.0" y1="897.6" x2="694.7" y2="884.8" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="682.2" y="874.8" width="25" height="20" rx="3" fill="#fff9e7" stroke="#7c8881" stroke-width=".7"/>
+<text x="694.7" y="888.8" class="label" text-anchor="middle" style="fill:#243d42">24</text>
+<line x1="580.5" y1="611.6" x2="593.2" y2="598.9" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="576.2" y="588.9" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="593.2" y="602.9" class="label" text-anchor="middle" style="fill:#fff9e7">D01</text>
+<line x1="534.1" y1="656.9" x2="546.8" y2="644.1" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="529.8" y="634.1" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="546.8" y="648.1" class="label" text-anchor="middle" style="fill:#fff9e7">D02</text>
+<line x1="505.1" y1="549.6" x2="517.8" y2="536.8" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="500.8" y="526.8" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="517.8" y="540.8" class="label" text-anchor="middle" style="fill:#fff9e7">D03</text>
+<line x1="464.5" y1="459.7" x2="477.2" y2="446.9" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="460.2" y="436.9" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="477.2" y="450.9" class="label" text-anchor="middle" style="fill:#fff9e7">D04</text>
+<line x1="551.5" y1="375.7" x2="564.2" y2="363.0" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="547.2" y="353.0" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="564.2" y="367.0" class="label" text-anchor="middle" style="fill:#fff9e7">D05</text>
+<line x1="639.1" y1="259.9" x2="651.8" y2="247.1" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="634.8" y="237.1" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="651.8" y="251.1" class="label" text-anchor="middle" style="fill:#fff9e7">D06</text>
+<line x1="365.9" y1="424.4" x2="353.2" y2="411.7" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="336.2" y="401.7" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="353.2" y="415.7" class="label" text-anchor="middle" style="fill:#fff9e7">D07</text>
+<line x1="376.9" y1="612.9" x2="389.6" y2="600.2" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="372.6" y="590.2" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="389.6" y="604.2" class="label" text-anchor="middle" style="fill:#fff9e7">D08</text>
+<line x1="307.9" y1="526.5" x2="320.6" y2="513.8" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="303.6" y="503.8" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="320.6" y="517.8" class="label" text-anchor="middle" style="fill:#fff9e7">D09</text>
+<line x1="222.6" y1="580.6" x2="235.3" y2="567.9" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="218.3" y="557.9" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="235.3" y="571.9" class="label" text-anchor="middle" style="fill:#fff9e7">D10</text>
+<line x1="597.9" y1="782.9" x2="610.6" y2="770.1" stroke="#586767" stroke-width=".8"/>
+<rect class="map-label-box" x="593.6" y="760.1" width="34" height="20" rx="3" fill="#314e56" stroke="#7c8881" stroke-width=".7"/>
+<text x="610.6" y="774.1" class="label" text-anchor="middle" style="fill:#fff9e7">D11</text>
+<text x="867.0" y="606.4" class="muted" text-anchor="middle" transform="rotate(-90 867.0 606.4)">ORISON BAY</text>
+<text x="987.0" y="146.0" class="" style="font-size:18px;font-weight:bold">ELEVEN DISTRICTS</text>
+<text x="987.0" y="180.0" class="small" >D01  First Light Quay</text>
+<text x="1024.0" y="197.0" class="tiny muted" >42,000 residents · 8–90 m</text>
+<text x="987.0" y="226.0" class="small" >D02  Second Dawn Lane</text>
+<text x="1024.0" y="243.0" class="tiny muted" >38,000 residents · 35–180 m</text>
+<text x="987.0" y="272.0" class="small" >D03  Three Drops Court</text>
+<text x="1024.0" y="289.0" class="tiny muted" >52,000 residents · 110–340 m</text>
+<text x="987.0" y="318.0" class="small" >D04  Copper Thread Steps</text>
+<text x="1024.0" y="335.0" class="tiny muted" >62,000 residents · 220–520 m</text>
+<text x="987.0" y="364.0" class="small" >D05  Common Table Yard</text>
+<text x="1024.0" y="381.0" class="tiny muted" >45,000 residents · 70–250 m</text>
+<text x="987.0" y="410.0" class="small" >D06  Coil Yard</text>
+<text x="1024.0" y="427.0" class="tiny muted" >21,000 residents · 12–100 m</text>
+<text x="987.0" y="456.0" class="small" >D07  Hanging Gardens</text>
+<text x="1024.0" y="473.0" class="tiny muted" >70,000 residents · 430–820 m</text>
+<text x="987.0" y="502.0" class="small" >D08  High Step Junction</text>
+<text x="1024.0" y="519.0" class="tiny muted" >48,000 residents · 360–820 m</text>
+<text x="987.0" y="548.0" class="small" >D09  Civic Shade</text>
+<text x="1024.0" y="565.0" class="tiny muted" >33,000 residents · 760–1090 m</text>
+<text x="987.0" y="594.0" class="small" >D10  Collector Ridge</text>
+<text x="1024.0" y="611.0" class="tiny muted" >2,000 residents · 1050–1400 m</text>
+<text x="987.0" y="640.0" class="small" >D11  Open Wake Dock</text>
+<text x="1024.0" y="657.0" class="tiny muted" >7,000 residents · 7–75 m</text>
+<text x="987.0" y="720.0" class="" style="font-size:18px;font-weight:bold">THE WHOLE CRATER</text>
+<rect x="1016" y="735" width="338" height="280" fill="#e4ddc9" stroke="#92978a"/>
+<path class="water" d="M1329.0,841.4 L1287.0,836.6 L1259.4,821.0 L1230.6,806.6 L1197.0,798.2 L1162.2,812.6 L1156.2,827.0 L1144.2,841.4 L1139.4,857.0 L1138.2,872.6 L1143.0,885.8 L1150.8,899.0 L1150.2,905.0 L1153.8,924.2 L1152.0,934.4 L1176.6,938.6 L1197.0,930.2 L1227.0,937.4 L1257.0,930.2 L1281.0,911.0 L1323.0,906.2 L1347.0,906.2 L1347.0,841.4 L1329.0,841.4 Z"/>
+<path d="M1323.4,838.6 L1316.6,821.3 L1307.1,805.1 L1295.3,790.1 L1281.4,776.9 L1265.5,765.6 L1248.1,756.4 L1229.5,749.5 L1210.0,745.0 L1190.0,743.1 L1170.0,743.7 L1150.2,746.9 L1131.1,752.6 L1113.0,760.7 L1096.3,771.0 L1081.4,783.3 L1068.5,797.4 L1057.9,813.0 L1049.7,829.9 L1044.1,847.6 L1041.3,865.8 L1041.3,884.2 L1044.1,902.4 L1049.7,920.1 L1057.9,937.0 L1068.5,952.6 L1081.4,966.7 L1096.3,979.0 L1113.0,989.3 L1131.1,997.4 L1150.2,1003.1 L1170.0,1006.3 L1190.0,1006.9 L1210.0,1005.0 L1229.5,1000.5 L1248.1,993.6 L1265.5,984.4 L1281.4,973.1 L1295.3,959.9 L1307.1,944.9 L1316.6,928.7 L1323.4,911.4" fill="none" stroke="#97715c" stroke-width="3"/>
+<circle cx="1138.2" cy="884.6" r="3" fill="#304e55"/>
+<circle cx="1128.6" cy="892.4" r="3" fill="#304e55"/>
+<circle cx="1124.4" cy="870.2" r="3" fill="#304e55"/>
+<circle cx="1116.0" cy="851.6" r="3" fill="#304e55"/>
+<circle cx="1134.0" cy="835.4" r="3" fill="#304e55"/>
+<circle cx="1156.8" cy="812.6" r="3" fill="#304e55"/>
+<circle cx="1099.2" cy="848.6" r="3" fill="#304e55"/>
+<circle cx="1100.4" cy="887.6" r="3" fill="#304e55"/>
+<circle cx="1085.4" cy="866.6" r="3" fill="#304e55"/>
+<circle cx="1065.6" cy="885.2" r="3" fill="#304e55"/>
+<circle cx="1145.4" cy="921.2" r="3" fill="#304e55"/>
+<text x="1185.0" y="1033.0" class="tiny" text-anchor="middle">~24 km east–west · east breach →</text>
+<text x="987.0" y="1053.0" class="small" >Dark labels: district envelopes</text>
+<text x="987.0" y="1074.0" class="small" >Cream labels: individual places</text>
+<text x="987.0" y="1095.0" class="small" >Dotted blue: proposed storm corridor</text>
+<text x="55.0" y="1075.0" class="" style="font-size:19px;font-weight:bold">PLACES WORTH FINDING</text>
+<text x="55.0" y="1110.0" class="small" >01  Five-Level Landing</text>
+<text x="55.0" y="1138.0" class="small" >02  The Cup Balcony</text>
+<text x="55.0" y="1166.0" class="small" >03  Second Dawn Workshop</text>
+<text x="55.0" y="1194.0" class="small" >04  House of Small Doors</text>
+<text x="55.0" y="1222.0" class="small" >05  Three Drops Measure Room</text>
+<text x="55.0" y="1250.0" class="small" >06  Rain-Thread Bridge</text>
+<text x="55.0" y="1278.0" class="small" >07  Thread-Sail Gallery</text>
+<text x="55.0" y="1306.0" class="small" >08  The Long Cutting Table</text>
+<text x="520.0" y="1110.0" class="small" >09  Oven Court</text>
+<text x="520.0" y="1138.0" class="small" >10  Court of Borrowed Games</text>
+<text x="520.0" y="1166.0" class="small" >11  Quiet Drum Hall</text>
+<text x="520.0" y="1194.0" class="small" >12  Public Outfall Gallery</text>
+<text x="520.0" y="1222.0" class="small" >13  Closed-Fans Walk</text>
+<text x="520.0" y="1250.0" class="small" >14  Orchard of Short Rows</text>
+<text x="520.0" y="1278.0" class="small" >15  Three-Face Clock</text>
+<text x="520.0" y="1306.0" class="small" >16  Old Lift Turntable</text>
+<text x="985.0" y="1110.0" class="small" >17  Library of Public Margins</text>
+<text x="985.0" y="1138.0" class="small" >18  The Unfinished Room</text>
+<text x="985.0" y="1166.0" class="small" >19  First Collector Chair</text>
+<text x="985.0" y="1194.0" class="small" >20  Ridge Sleepers&#x27; Lookout</text>
+<text x="985.0" y="1222.0" class="small" >21  Kestrel Service Cradle</text>
+<text x="985.0" y="1250.0" class="small" >22  Drydock Theatre</text>
+<text x="985.0" y="1278.0" class="small" >23  The Listening Fold</text>
+<text x="985.0" y="1306.0" class="small" >24  Old Breach Nursery</text>
+<text x="55.0" y="1362.0" class="small muted" >Three waterfront locations are supported overwater structures; shore access must be designed.</text>
+<text x="55.0" y="1385.0" class="small muted" >Mirror Ring is a moving orbital annex and has no ground coordinate. No actual streets, terrain, bathymetry or capacity simulation is claimed.</text>
+<text x="55.0" y="1408.0" class="small muted" >Source: orison_city_plan.json · Azimuthal equidistant from 17° N, 28° E on the adopted 5,900 km sphere.</text>
+</svg>

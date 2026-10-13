@@ -6,6 +6,7 @@ const { chromium } = require('playwright');
 (async () => {
   const root = path.resolve(__dirname, '../..');
   const output = path.join(root, 'Artifacts/world');
+  const expected = JSON.parse(await fs.readFile(path.join(root,'Docs/World/AUTHORING_COUNTS.json'),'utf8'));
   await fs.mkdir(output, {recursive:true});
   if (!process.argv[2]) throw new Error('Supply the browser executable path.');
   const browser = await chromium.launch({executablePath:process.argv[2], headless:true, args:['--disable-gpu']});
@@ -31,12 +32,16 @@ const { chromium } = require('playwright');
       await page.waitForFunction(() => location.hash === '#atlas');
       await page.locator('#atlas').scrollIntoViewIfNeeded();
       await page.screenshot({path:path.join(output,`reader-atlas-${width}.png`)});
+      await page.locator('nav a[href="#orison"]').click();
+      await page.waitForFunction(() => location.hash === '#orison');
+      await page.locator('#orison').scrollIntoViewIfNeeded();
+      await page.screenshot({path:path.join(output,`reader-orison-${width}.png`)});
       await page.goto(pathToFileURL(path.join(root,'Docs/World/Living_Planet_Reader.html')).href);
       await page.screenshot({path:path.join(output,`reader-contents-${width}.png`)});
-      const result = {width,...check, missingFiles, errors, atlasNavigation:true};
+      const result = {width,...check, missingFiles, errors, atlasNavigation:true, orisonNavigation:true};
       delete result.localFiles;
       evidence.push(result);
-      if (check.articles !== 7 || check.overflow || check.brokenImages.length || check.missingAnchors.length || missingFiles.length || errors.length) {
+      if (check.articles !== expected.chapters.length || check.overflow || check.brokenImages.length || check.missingAnchors.length || missingFiles.length || errors.length) {
         throw new Error(JSON.stringify(result));
       }
       await page.close();

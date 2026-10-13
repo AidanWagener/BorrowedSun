@@ -30,6 +30,19 @@ def contains(point, polygon):
     return inside
 
 
+def sampled_coast_distance(point, polygons, radius):
+    """Upper bound on nearest distance to authored lon/lat-linear edges; <=~1.5km sampling gap."""
+    nearest = math.inf
+    for polygon in polygons:
+        for a, b in zip(polygon, polygon[1:]):
+            steps = max(1, math.ceil(max(abs(b[0]-a[0]), abs(b[1]-a[1])) / 0.02))
+            for i in range(steps + 1):
+                t = i / steps
+                q = (a[0] + t*(b[0]-a[0]), a[1] + t*(b[1]-a[1]))
+                nearest = min(nearest, distance_km(point, q, radius))
+    return nearest
+
+
 def segments_cross(a, b, c, d):
     def orient(p, q, r):
         return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
@@ -72,14 +85,20 @@ def validate(data):
             errors.append(f"Out-of-range city: {city['id']}")
         if not any(land["name"] == city["landmass"] and contains(point, land["coordinates_lon_lat"]) for land in data["landmasses"]):
             errors.append(f"City outside assigned concept coastline: {city['name']}")
+        if "coastal_approach_max_km" in city:
+            polygons = [land["coordinates_lon_lat"] for land in data["landmasses"] if land["name"] == city["landmass"]]
+            coast_distance = sampled_coast_distance(point, polygons, data["radius_km"])
+            if coast_distance > city["coastal_approach_max_km"]:
+                errors.append(f"Coastal city too far from concept shore: {city['name']} ({coast_distance:.1f}km)")
     for region in data["regions"]:
         point = region["anchor"]["lon_deg"], region["anchor"]["lat_deg"]
         if not (-180 <= point[0] <= 180 and -90 <= point[1] <= 90):
             errors.append(f"Out-of-range regional anchor: {region['id']}")
     for river in data["rivers"]:
         elevations = [p[2] for p in river["points_lon_lat_elevation_m"]]
-        if not all(a > b for a, b in zip(elevations, elevations[1:])):
-            errors.append(f"River rises downstream: {river['id']}")
+        flat_segments = {(s["from_index"], s["to_index"]) for s in river.get("flat_lake_segments", [])}
+        if not all(a > b or (a == b and (i, i+1) in flat_segments) for i, (a, b) in enumerate(zip(elevations, elevations[1:]))):
+            errors.append(f"River rises or has an undeclared flat reach: {river['id']}")
     for route in data["routes"]:
         if route["from"] not in cities or route["to"] not in cities or route["from"] == route["to"]:
             errors.append(f"Invalid route endpoint: {route['id']}")
@@ -97,11 +116,11 @@ def render(data):
     def path(points):
         return " ".join(("M" if i == 0 else "L") + f"{x:.1f},{y:.1f}" for i, (x, y) in enumerate(map(point, points)))
     svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">',
-           '<title id="title">Nacre geographic concept, edition 0.1</title>',
+           f'<title id="title">Nacre geographic concept, edition {data["edition"]}</title>',
            '<desc id="desc">Equirectangular concept map of four continents, two island arcs and twelve city anchors. Coastlines are schematic; no terrain or biome boundaries are surveyed.</desc>',
            '<style>text{font-family:Arial,sans-serif;fill:#e8e2d4;font-size:15px}.small{font-size:12px}.land{fill:#b8aa86;stroke:#d4c9a9;stroke-width:1}.river{fill:none;stroke:#315f73;stroke-width:2}.grid{stroke:#63838d;stroke-width:.7;opacity:.36}</style>',
            '<rect width="1200" height="840" fill="#122e38"/>',
-           '<text x="60" y="32" style="font-size:24px">NACRE · GEOGRAPHIC CONCEPT 0.1</text>',
+           f'<text x="60" y="32" style="font-size:24px">NACRE · GEOGRAPHIC CONCEPT {data["edition"]}</text>',
            '<text x="60" y="54" class="small">742 AL · Radius 5,900 km · Equirectangular · Coastlines and regional placement remain under development</text>']
     for lon in range(-180, 181, 30):
         x, _ = point((lon, 0))

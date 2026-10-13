@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
-<title id="title">Nacre geographic concept, edition 0.1</title>
+<title id="title">Nacre geographic concept, edition 0.2</title>
 <desc id="desc">Equirectangular concept map of four continents, two island arcs and twelve city anchors. Coastlines are schematic; no terrain or biome boundaries are surveyed.</desc>
 <style>text{font-family:Arial,sans-serif;fill:#e8e2d4;font-size:15px}.small{font-size:12px}.land{fill:#b8aa86;stroke:#d4c9a9;stroke-width:1}.river{fill:none;stroke:#315f73;stroke-width:2}.grid{stroke:#63838d;stroke-width:.7;opacity:.36}</style>
 <rect width="1200" height="840" fill="#122e38"/>
-<text x="60" y="32" style="font-size:24px">NACRE · GEOGRAPHIC CONCEPT 0.1</text>
+<text x="60" y="32" style="font-size:24px">NACRE · GEOGRAPHIC CONCEPT 0.2</text>
 <text x="60" y="54" class="small">742 AL · Radius 5,900 km · Equirectangular · Coastlines and regional placement remain under development</text>
 <line class="grid" x1="60" y1="70" x2="60" y2="610"/>
 <text x="60" y="633" text-anchor="middle" class="small">-180°</text>
@@ -45,11 +45,11 @@
 <text x="49" y="164" text-anchor="end" class="small">60°</text>
 <line class="grid" x1="60" y1="70" x2="1140" y2="70"/>
 <text x="49" y="74" text-anchor="end" class="small">90°</text>
-<path class="land" d="M336.0,178.0 L408.0,145.0 L489.0,136.0 L567.0,160.0 L624.0,169.0 L681.0,205.0 L702.0,256.0 L708.0,316.0 L684.0,367.0 L651.0,406.0 L630.0,460.0 L573.0,481.0 L513.0,454.0 L462.0,406.0 L420.0,343.0 L366.0,280.0 L336.0,178.0 Z"/>
+<path class="land" d="M336.0,178.0 L408.0,145.0 L489.0,136.0 L567.0,160.0 L624.0,169.0 L681.0,205.0 L702.0,256.0 L699.0,268.0 L693.0,277.0 L684.5,289.0 L688.5,298.0 L700.5,310.0 L705.0,316.0 L699.0,328.0 L696.0,337.0 L684.0,367.0 L651.0,406.0 L630.0,460.0 L573.0,481.0 L513.0,454.0 L462.0,406.0 L420.0,343.0 L366.0,280.0 L366.0,256.0 L378.0,241.0 L380.6,232.0 L366.0,214.0 L336.0,178.0 Z"/>
 <path class="land" d="M846.0,196.0 L915.0,160.0 L996.0,145.0 L1056.0,184.0 L1110.0,256.0 L1104.0,337.0 L1077.0,391.0 L1074.0,445.0 L1008.0,505.0 L933.0,517.0 L879.0,469.0 L855.0,400.0 L825.0,355.0 L855.0,298.0 L846.0,196.0 Z"/>
-<path class="land" d="M114.0,148.0 L168.0,112.0 L243.0,91.0 L336.0,112.0 L339.0,139.0 L297.0,172.0 L240.0,187.0 L195.0,190.0 L114.0,148.0 Z"/>
-<path class="land" d="M150.0,460.0 L222.0,439.0 L288.0,448.0 L348.0,469.0 L411.0,514.0 L366.0,562.0 L288.0,574.0 L201.0,535.0 L159.0,493.0 L150.0,460.0 Z"/>
-<path class="land" d="M756.0,292.0 L774.0,274.0 L789.0,292.0 L789.0,316.0 L777.0,331.0 L756.0,319.0 L756.0,292.0 Z"/>
+<path class="land" d="M114.0,148.0 L168.0,112.0 L243.0,91.0 L336.0,112.0 L339.0,139.0 L297.0,172.0 L270.0,169.0 L243.3,157.3 L239.4,163.6 L231.0,184.0 L195.0,190.0 L114.0,148.0 Z"/>
+<path class="land" d="M150.0,460.0 L189.0,448.0 L207.0,449.5 L219.0,453.7 L234.0,445.0 L252.0,442.0 L288.0,448.0 L315.0,454.0 L327.0,466.0 L312.0,478.0 L306.6,487.0 L318.0,493.0 L351.0,496.0 L375.0,505.0 L411.0,514.0 L366.0,562.0 L288.0,574.0 L201.0,535.0 L159.0,493.0 L150.0,460.0 Z"/>
+<path class="land" d="M756.0,292.0 L774.0,274.0 L789.0,292.0 L780.0,298.0 L774.4,307.0 L780.0,310.0 L789.0,316.0 L777.0,331.0 L756.0,319.0 L756.0,292.0 Z"/>
 <path class="land" d="M753.0,349.0 L774.0,340.0 L789.0,364.0 L774.0,388.0 L756.0,370.0 L753.0,349.0 Z"/>
 <path class="land" d="M753.0,244.0 L768.0,223.0 L783.0,235.0 L777.0,259.0 L759.0,265.0 L753.0,244.0 Z"/>
 <path class="land" d="M765.0,418.0 L789.0,412.0 L798.0,436.0 L786.0,457.0 L771.0,448.0 L765.0,418.0 Z"/>
@@ -57,11 +57,11 @@
 <path class="land" d="M93.0,343.0 L111.0,340.0 L123.0,364.0 L108.0,379.0 L93.0,361.0 L93.0,343.0 Z"/>
 <path class="land" d="M1119.0,382.0 L1137.0,388.0 L1137.0,409.0 L1122.0,415.0 L1110.0,400.0 L1119.0,382.0 Z"/>
 <path class="river" d="M636.0,271.0 L657.0,295.0 L675.0,313.0 L687.0,328.0 L696.0,337.0"/>
-<path class="river" d="M657.0,265.0 L672.0,277.0 L681.0,286.0 L690.0,292.0"/>
-<path class="river" d="M618.0,262.0 L591.0,271.0 L567.0,280.0 L549.0,286.0"/>
-<path class="river" d="M981.0,211.0 L978.0,235.0 L972.0,256.0 L1017.0,262.0 L1065.0,271.0 L1107.0,280.0"/>
-<path class="river" d="M975.0,307.0 L1023.0,319.0 L1071.0,325.0 L1098.0,328.0 L1104.0,331.0"/>
-<path class="river" d="M1008.0,397.0 L1035.0,415.0 L1053.0,424.0 L1074.0,430.0 L1075.5,433.0"/>
+<path class="river" d="M657.0,265.0 L672.0,277.0 L681.0,286.0 L684.5,289.0"/>
+<path class="river" d="M618.0,262.0 L591.0,271.0 L567.0,280.0 L547.2,286.6"/>
+<path class="river" d="M981.0,211.0 L978.0,235.0 L974.4,249.1 L972.3,255.8 L972.0,256.0 L972.2,256.1 L975.6,258.4 L1017.0,262.0 L1065.0,271.0 L1108.2,280.0"/>
+<path class="river" d="M975.0,307.0 L1023.0,319.0 L1071.0,325.0 L1098.0,328.0 L1104.4,331.0"/>
+<path class="river" d="M1008.0,397.0 L1035.0,415.0 L1053.0,424.0 L1074.0,430.0 L1074.7,433.0"/>
 <text x="522" y="220" text-anchor="middle" style="fill:#102f37;font-size:16px">KESH</text>
 <text x="969" y="196" text-anchor="middle" style="fill:#102f37;font-size:16px">MORROW</text>
 <text x="231" y="124" text-anchor="middle" style="fill:#102f37;font-size:16px">PALE REACH</text>

@@ -1,0 +1,629 @@
+{
+  "edition": "0.2",
+  "status": "fictional geological and drainage concept; not simulated tectonics, terrain or climate",
+  "atlas_source": "nacre_atlas.json",
+  "height_datum": "meters above planning sea level on5900km reference sphere",
+  "reliefs": [
+    {
+      "id": "REL-001",
+      "name": "Glassback belt",
+      "type": "orogenic belt",
+      "points_lon_lat_reference_height_m": [
+        [
+          5,
+          40,
+          3100
+        ],
+        [
+          11,
+          25,
+          5800
+        ],
+        [
+          8,
+          15,
+          4400
+        ],
+        [
+          13,
+          0,
+          3700
+        ],
+        [
+          6,
+          -18,
+          2600
+        ]
+      ],
+      "label_lon_lat": [
+        4,
+        31
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-002",
+      "name": "Saffron coastal faults",
+      "type": "faulted coastal upland",
+      "points_lon_lat_reference_height_m": [
+        [
+          21,
+          34,
+          2200
+        ],
+        [
+          20,
+          26,
+          1900
+        ],
+        [
+          22,
+          20,
+          1200
+        ],
+        [
+          26,
+          12,
+          600
+        ]
+      ],
+      "label_lon_lat": [
+        25,
+        27
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-003",
+      "name": "Western Kesh uplands",
+      "type": "old continental upland",
+      "points_lon_lat_reference_height_m": [
+        [
+          -70,
+          47,
+          1700
+        ],
+        [
+          -65,
+          32,
+          1300
+        ],
+        [
+          -56,
+          15,
+          1800
+        ],
+        [
+          -47,
+          -2,
+          1400
+        ]
+      ],
+      "label_lon_lat": [
+        -64,
+        20
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-004",
+      "name": "Morrow Crown",
+      "type": "orogenic upland",
+      "points_lon_lat_reference_height_m": [
+        [
+          100,
+          49,
+          3600
+        ],
+        [
+          118,
+          51,
+          4900
+        ],
+        [
+          134,
+          46,
+          4200
+        ],
+        [
+          148,
+          38,
+          2800
+        ]
+      ],
+      "label_lon_lat": [
+        111,
+        45
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-005",
+      "name": "Aven high basins",
+      "type": "upland with intervening basins",
+      "points_lon_lat_reference_height_m": [
+        [
+          105,
+          4,
+          2400
+        ],
+        [
+          108,
+          -9,
+          3100
+        ],
+        [
+          112,
+          -19,
+          2700
+        ],
+        [
+          118,
+          -29,
+          1800
+        ]
+      ],
+      "label_lon_lat": [
+        105,
+        -24
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-006",
+      "name": "Morrow interior spine",
+      "type": "uplifted continental belt",
+      "points_lon_lat_reference_height_m": [
+        [
+          118,
+          18,
+          2600
+        ],
+        [
+          119,
+          3,
+          3100
+        ],
+        [
+          124,
+          -12,
+          3900
+        ],
+        [
+          130,
+          -25,
+          2800
+        ],
+        [
+          135,
+          -38,
+          1700
+        ]
+      ],
+      "label_lon_lat": [
+        128,
+        -8
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-007",
+      "name": "Ember rift province",
+      "type": "rift axis; heights describe nearby ground not a ridge",
+      "points_lon_lat_reference_height_m": [
+        [
+          -125,
+          -53,
+          1700
+        ],
+        [
+          -113,
+          -61,
+          2200
+        ],
+        [
+          -94,
+          -67,
+          1600
+        ]
+      ],
+      "label_lon_lat": [
+        -120,
+        -56
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-008",
+      "name": "Pale shield uplands",
+      "type": "old exposed and reworked continental material",
+      "points_lon_lat_reference_height_m": [
+        [
+          -139,
+          63,
+          1900
+        ],
+        [
+          -123,
+          72,
+          2900
+        ],
+        [
+          -108,
+          73,
+          2500
+        ],
+        [
+          -96,
+          68,
+          1700
+        ]
+      ],
+      "label_lon_lat": [
+        -129,
+        67
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-009",
+      "name": "Aster volcanic arc",
+      "type": "island-chain axis; intervening sea remains",
+      "points_lon_lat_reference_height_m": [
+        [
+          56,
+          35,
+          2400
+        ],
+        [
+          58,
+          13,
+          3200
+        ],
+        [
+          57,
+          -8,
+          2700
+        ],
+        [
+          61,
+          -30,
+          2900
+        ]
+      ],
+      "label_lon_lat": [
+        66,
+        20
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    },
+    {
+      "id": "REL-010",
+      "name": "Neral volcanic chain",
+      "type": "island-chain axis; origin hypothesis distinct from Aster",
+      "points_lon_lat_reference_height_m": [
+        [
+          -171,
+          15,
+          1400
+        ],
+        [
+          -165,
+          -6,
+          2000
+        ],
+        [
+          175,
+          -20,
+          1300
+        ]
+      ],
+      "label_lon_lat": [
+        -162,
+        20
+      ],
+      "status": "authored province controls; not a DEM or continuous crest"
+    }
+  ],
+  "lakes": [
+    {
+      "id": "LAK-001",
+      "name": "Namar",
+      "surface_elevation_m": 180,
+      "landmass": "Morrow",
+      "coordinates_lon_lat": [
+        [
+          123.2,
+          30.4
+        ],
+        [
+          124.4,
+          30.7
+        ],
+        [
+          125.1,
+          30
+        ],
+        [
+          125,
+          29
+        ],
+        [
+          124.1,
+          28.08
+        ],
+        [
+          123.7,
+          28.3
+        ],
+        [
+          122.9,
+          29.2
+        ],
+        [
+          123.2,
+          30.4
+        ]
+      ],
+      "outlet": "Talweir connection to Iren",
+      "water_type": "freshwater"
+    },
+    {
+      "id": "LAK-002",
+      "name": "Iren",
+      "surface_elevation_m": 176,
+      "landmass": "Morrow",
+      "coordinates_lon_lat": [
+        [
+          124.08,
+          27.98
+        ],
+        [
+          124.6,
+          27.9
+        ],
+        [
+          125.2,
+          27.2
+        ],
+        [
+          124.9,
+          26.7
+        ],
+        [
+          124,
+          26.5
+        ],
+        [
+          123.6,
+          27.1
+        ],
+        [
+          124.08,
+          27.98
+        ]
+      ],
+      "outlet": "eastern Talweir trunk",
+      "water_type": "freshwater"
+    },
+    {
+      "id": "LAK-003",
+      "name": "Hesh terminal waters",
+      "surface_elevation_m": 270,
+      "landmass": "Kesh",
+      "coordinates_lon_lat": [
+        [
+          -18.5,
+          18.5
+        ],
+        [
+          -17.5,
+          18.6
+        ],
+        [
+          -17,
+          18.1
+        ],
+        [
+          -17.6,
+          17.4
+        ],
+        [
+          -18.4,
+          17.5
+        ],
+        [
+          -18.5,
+          18.5
+        ]
+      ],
+      "outlet": null,
+      "water_type": "closed-basin variable salinity",
+      "status": "extent represents one planning water state, not permanent shoreline"
+    }
+  ],
+  "water_systems": [
+    {
+      "id": "BAS-001",
+      "name": "Neris network",
+      "river_id": "RIV-001",
+      "outlet_type": "ocean",
+      "focus_region_id": "REG-002",
+      "region_ids": [
+        "REG-003",
+        "REG-002"
+      ],
+      "note": "Major eastern Kesh catchment; tributary divides and floodplain not yet terrain-derived",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    },
+    {
+      "id": "BAS-002",
+      "name": "Orison feeder",
+      "river_id": "RIV-002",
+      "outlet_type": "ocean",
+      "focus_region_id": "REG-001",
+      "region_ids": [
+        "REG-001"
+      ],
+      "note": "Separate coastal catchment; city supply also depends on local storage, treatment and aquifers",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    },
+    {
+      "id": "BAS-003",
+      "name": "Red Ledger terminal basin",
+      "river_id": "RIV-003",
+      "outlet_type": "closed basin",
+      "focus_region_id": "REG-004",
+      "region_ids": [
+        "REG-003",
+        "REG-004"
+      ],
+      "note": "No assumed surface outlet; salts, evaporation, groundwater and return flows must be budgeted",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    },
+    {
+      "id": "BAS-004",
+      "name": "Talweir lakes and outflow",
+      "river_id": "RIV-004",
+      "outlet_type": "ocean",
+      "focus_region_id": "REG-009",
+      "region_ids": [
+        "REG-014",
+        "REG-009"
+      ],
+      "note": "Namar180m to Iren176m to eastern river; lake residence and full catchment unresolved",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    },
+    {
+      "id": "BAS-005",
+      "name": "Green Vault rivers",
+      "river_id": "RIV-005",
+      "outlet_type": "ocean",
+      "focus_region_id": "REG-011",
+      "region_ids": [
+        "REG-011"
+      ],
+      "note": "Distinct freshwater network, not every Morrow lake draining into Dhal",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    },
+    {
+      "id": "BAS-006",
+      "name": "Merrow catchment",
+      "river_id": "RIV-006",
+      "outlet_type": "ocean",
+      "focus_region_id": "REG-012",
+      "region_ids": [
+        "REG-012"
+      ],
+      "note": "Southeastern upland inputs; distinct from Talweir and Green Vault",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    },
+    {
+      "id": "BAS-007",
+      "name": "Aven southern spill",
+      "river_id": "RIV-007",
+      "outlet_type": "ocean",
+      "focus_region_id": "REG-013",
+      "region_ids": [
+        "REG-010",
+        "REG-013"
+      ],
+      "note": "One of several Aven-basin outlets; not a universal drain for White Reed",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    },
+    {
+      "id": "BAS-008",
+      "name": "Velis estuary catchment",
+      "river_id": "RIV-008",
+      "outlet_type": "ocean",
+      "focus_region_id": "REG-016",
+      "region_ids": [
+        "REG-016"
+      ],
+      "note": "Sheltered northwest Sere catchment, separate from Tern",
+      "boundary_status": "catchment relationship; boundary polygon not yet terrain-derived"
+    }
+  ],
+  "additional_rivers": [
+    {
+      "id": "RIV-007",
+      "name": "Aven southern spill",
+      "points_lon_lat_elevation_m": [
+        [
+          112,
+          -7,
+          3200
+        ],
+        [
+          110,
+          -12,
+          1650
+        ],
+        [
+          109,
+          -21,
+          1200
+        ],
+        [
+          110,
+          -30,
+          540
+        ],
+        [
+          111,
+          -37,
+          120
+        ],
+        [
+          119,
+          -57.72,
+          0
+        ]
+      ],
+      "status": "authored downhill control chain; channel and outlet refinement pending"
+    },
+    {
+      "id": "RIV-008",
+      "name": "Velis water",
+      "points_lon_lat_elevation_m": [
+        [
+          -116,
+          -45,
+          2100
+        ],
+        [
+          -121,
+          -42,
+          850
+        ],
+        [
+          -126,
+          -39,
+          110
+        ],
+        [
+          -127,
+          -38,
+          12
+        ],
+        [
+          -127,
+          -37.9,
+          0
+        ]
+      ],
+      "status": "authored downhill control chain; channel and estuary refinement pending"
+    }
+  ],
+  "connections": [
+    {
+      "id": "WAT-001",
+      "from": "LAK-001",
+      "to": "LAK-002",
+      "via_city": "CITY-005",
+      "direction": "downstream",
+      "drop_m": 4,
+      "scope": "lake surface controls; actual strait profile and hydraulics unmodeled"
+    }
+  ]
+}

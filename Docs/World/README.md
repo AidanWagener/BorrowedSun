@@ -6,19 +6,23 @@ Read [canon reconciliation](CANON_RECONCILIATION.md) and the [initial research l
 
 ## Current reading edition
 
-Open the [living planet reader](Living_Planet_Reader.html) for the current seven-chapter authoring edition. It combines working canon with explicitly labeled research and lore drafts. [Authoring counts](AUTHORING_COUNTS.json) report source words, including research and review notes; they do not report completed pages or certify quality. The historical specification is excluded from that count.
+Open the [living planet reader](Living_Planet_Reader.html) for the current eleven-chapter authoring edition, 0.2. It combines working canon with explicitly labeled research and lore drafts. [Authoring counts](AUTHORING_COUNTS.json) report source words, including research and review notes; they do not report completed pages or certify quality. The historical specification is excluded from that count.
 
 | Current material | State |
 |---|---|
 | [00 — Canon and orientation](00_CANON_AND_ORIENTATION.md) | Working physical/social frame, narrative commitments and continuity rules |
-| [01 — Physical foundation review](Drafts/PHYSICAL_FOUNDATION_REVIEW.md) | Checked arithmetic and source research; formation, climate and long-term dynamics remain open |
-| [03 — Ecology foundation](Drafts/ECOLOGY_FOUNDATION.md) | 24 species dossiers, food webs, disruptions and conditional regional ranges; further regional taxa required |
+| [01a — Physical foundation review](Drafts/PHYSICAL_FOUNDATION_REVIEW.md) | Checked arithmetic and source research; formation, climate and long-term dynamics remain open |
+| [01b — Land, water and deep time](01_LAND_WATER_AND_DEEP_TIME.md) | Geological history, ten relief provinces, three lake surfaces and eight water trunks; no continuous terrain or hydraulic model |
+| [02 — Sky, water and seasons](02_SKY_WATER_AND_SEASONS.md) | Adopted calendar, idealized sky geometry, regional weather regimes and their limits |
+| [03a — Ecology foundation](Drafts/ECOLOGY_FOUNDATION.md) | 24 species dossiers, food webs, disruptions and conditional regional ranges |
+| [03b — Morrow ecosystems](Drafts/MORROW_ECOSYSTEMS.md) | 24 additional species and six regional networks; carrying capacities, climate and detailed lifecycles remain open |
 | [04 — History](04_HISTORY_OF_NACRE.md) | Connected settlement chronology through 742 AL; detailed archival and regional histories still expanding |
 | [05 — Societies](Drafts/SOCIETIES_FOUNDATION.md) | Eight overlapping traditions, institutions, twelve human-scale stories and archival voices |
 | [05b — Everyday pleasures](Drafts/PLEASURES_AND_EVERYDAY_LIFE.md) | Games, music, fashion, cuisine, relationships and eight pleasant encounters; specific proposals awaiting integration |
-| [07 — Regional atlas](07_REGIONAL_ATLAS.md) | 24 regional foundations, twelve city anchors and geographic concept; detailed relief and city maps pending |
+| [07 — Regional atlas](07_REGIONAL_ATLAS.md) | 24 regional foundations and twelve city anchors; concept coasts refined around established ports |
+| [08a — Orison](Cities/ORISON.md) | Eleven mapped district envelopes, 24 detailed places and service dependencies; no constructed city claimed |
 
-The [concept map](Atlas/nacre_geographic_concept.svg) and [route arithmetic](Atlas/ATLAS_ARITHMETIC.md) are generated from [coordinate data](Atlas/nacre_atlas.json). Coastline separation, city containment, descending river-trunk elevations, unique IDs and route endpoints are checked. These checks do not validate terrain, drainage catchments, climate, transport feasibility or a playable world. See [authoring handoff and next work](AUTHORING_HANDOFF_2026-10-13.md).
+The [concept map](Atlas/nacre_geographic_concept.svg) and [route arithmetic](Atlas/ATLAS_ARITHMETIC.md) are generated from [coordinate data](Atlas/nacre_atlas.json). The [relief and water map](Atlas/nacre_relief_and_water.svg) adds [geographic controls](Atlas/nacre_geography.json), including explicitly level lake reaches. The [Orison plan](Cities/orison_city_plan.svg) and [network register](Cities/ORISON_NETWORK_CHECKS.md) make local placement and service dependencies inspectable. Checks cover authored geometry and references; they do not validate terrain, catchments, climate, transport feasibility or a playable world. See [authoring handoff and next work](AUTHORING_HANDOFF_2026-10-13.md).
 
 The world must make exploration compelling at street, regional and planetary scales. Its geography, societies, wildlife and histories must explain one another. A place should offer more than a view: something to understand, a person or creature with an independent purpose, an opportunity to act, or a reason to return when circumstances change. Distance must communicate a large inhabited world while journeys offer decisions and discoveries.
 
@@ -36,7 +40,7 @@ The planet-scale setting includes multiple distinct cities, climatic regions and
 4. Implemented prototype behavior is evidence of the build, not automatic truth about every place on the future planet.
 5. New fiction becomes the working canon through explicit decisions recorded with their dependencies. Research supports plausibility; it does not establish that a fictional civilization or planet exists.
 
-The original specification locates Orison on a tidally locked moon. Working edition 0.1 now names that world Nacre, its giant parent Rauth and its star Ilex. The checked reference model adopts a 5,900 km radius, 0.88 Earth gravity, a 136.755-hour natural solar cycle and a 325.191-Earth-day orbital year. A 24-hour civil turn supports human schedules. Detailed calendar intercalation, climate and long-term orbital evolution remain open; the physical review states the assumptions and limits. The user's word "planet" describes the full explorable world without requiring deletion of the earlier moon setting.
+The original specification locates Orison on a tidally locked moon. Working canon names that world Nacre, its giant parent Rauth and its star Ilex. The checked reference model adopts a 5,900 km radius, 0.88 Earth gravity, a 136.755-hour natural solar cycle and a 325.191-Earth-day orbital year. A 24-hour civil turn supports human schedules. The [calendar](02_SKY_WATER_AND_SEASONS.md) adopts thirteen 25-turn spans and 22 Balance turns per 115 years. Climate and long-term orbital evolution remain open; the physical review states the assumptions and limits. The user's word "planet" describes the full explorable world without requiring deletion of the earlier moon setting.
 
 ## Volume architecture
 

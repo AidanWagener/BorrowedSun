@@ -1,0 +1,2111 @@
+{
+  "schema_version": "1.0",
+  "edition": "0.1",
+  "status": "Authored city planning proposal; not surveyed terrain, service simulation or implemented world",
+  "city_id": "CITY-001",
+  "city_name": "Orison",
+  "region_id": "REG-001",
+  "regional_gateway_ids": ["ORI-GATE-NORTH", "ORI-GATE-INLAND", "ORI-HARBOR-EAST"],
+  "authored_date": "2026-10-13",
+  "present_year_AL": 742,
+  "source_bible": "ORISON.md",
+  "coordinate_frame": {
+    "projection": "Azimuthal equidistant on adopted reference sphere",
+    "origin_lat_deg": 17,
+    "origin_lon_deg": 28,
+    "reference_radius_m": 5900000,
+    "x_axis": "east",
+    "y_axis": "north",
+    "horizontal_units": "meters",
+    "vertical": "z is altitude above planning mean sea level, not flat tangent-plane up displacement",
+    "height_units": "meters",
+    "terrain_status": "Schematic coast, unsurveyed elevation and bathymetry",
+    "local_to_runtime_status": "No current Unreal prototype placement transform is established",
+    "planning_bounds_local_m": {
+      "min_x": -13500,
+      "max_x": 13500,
+      "min_y": -12000,
+      "max_y": 12000
+    }
+  },
+  "crater": {
+    "approx_outer_diameter_east_west_m": 24000,
+    "approx_outer_diameter_north_south_m": 22000,
+    "center_local_m": [
+      0,
+      0,
+      0
+    ],
+    "seaward_breach_direction": "east",
+    "western_rim_height_target_m": [
+      1300,
+      1550
+    ],
+    "shape_status": "Ancient eroded rim ellipse is an orientation aid, not a perfect circular wall",
+    "surviving_rim_trace_local_m": [
+      [
+        11535,
+        3032,
+        817
+      ],
+      [
+        10963,
+        4474,
+        836
+      ],
+      [
+        10177,
+        5829,
+        840
+      ],
+      [
+        9193,
+        7071,
+        828
+      ],
+      [
+        8030,
+        8175,
+        803
+      ],
+      [
+        6710,
+        9119,
+        769
+      ],
+      [
+        5260,
+        9887,
+        731
+      ],
+      [
+        3708,
+        10462,
+        697
+      ],
+      [
+        2084,
+        10833,
+        672
+      ],
+      [
+        419,
+        10993,
+        660
+      ],
+      [
+        -1254,
+        10940,
+        735
+      ],
+      [
+        -2903,
+        10673,
+        848
+      ],
+      [
+        -4495,
+        10199,
+        968
+      ],
+      [
+        -6000,
+        9526,
+        1090
+      ],
+      [
+        -7388,
+        8668,
+        1205
+      ],
+      [
+        -8632,
+        7641,
+        1306
+      ],
+      [
+        -9708,
+        6466,
+        1386
+      ],
+      [
+        -10595,
+        5164,
+        1440
+      ],
+      [
+        -11276,
+        3762,
+        1467
+      ],
+      [
+        -11738,
+        2287,
+        1468
+      ],
+      [
+        -11971,
+        767,
+        1447
+      ],
+      [
+        -11971,
+        -767,
+        1410
+      ],
+      [
+        -11738,
+        -2287,
+        1362
+      ],
+      [
+        -11276,
+        -3762,
+        1311
+      ],
+      [
+        -10595,
+        -5164,
+        1261
+      ],
+      [
+        -9708,
+        -6466,
+        1215
+      ],
+      [
+        -8632,
+        -7641,
+        1172
+      ],
+      [
+        -7388,
+        -8668,
+        1132
+      ],
+      [
+        -6000,
+        -9526,
+        1090
+      ],
+      [
+        -4495,
+        -10199,
+        1041
+      ],
+      [
+        -2903,
+        -10673,
+        981
+      ],
+      [
+        -1254,
+        -10940,
+        907
+      ],
+      [
+        419,
+        -10993,
+        840
+      ],
+      [
+        2084,
+        -10833,
+        828
+      ],
+      [
+        3708,
+        -10462,
+        803
+      ],
+      [
+        5260,
+        -9887,
+        769
+      ],
+      [
+        6710,
+        -9119,
+        731
+      ],
+      [
+        8030,
+        -8175,
+        697
+      ],
+      [
+        9193,
+        -7071,
+        672
+      ],
+      [
+        10177,
+        -5829,
+        660
+      ],
+      [
+        10963,
+        -4474,
+        664
+      ],
+      [
+        11535,
+        -3032,
+        683
+      ]
+    ],
+    "bay_coastline_local_m": [
+      [
+        12000,
+        2800,
+        0
+      ],
+      [
+        8500,
+        3200,
+        0
+      ],
+      [
+        6200,
+        4500,
+        0
+      ],
+      [
+        3800,
+        5700,
+        0
+      ],
+      [
+        1000,
+        6400,
+        0
+      ],
+      [
+        -1900,
+        5200,
+        0
+      ],
+      [
+        -2400,
+        4000,
+        0
+      ],
+      [
+        -3400,
+        2800,
+        0
+      ],
+      [
+        -3800,
+        1500,
+        0
+      ],
+      [
+        -3900,
+        200,
+        0
+      ],
+      [
+        -3500,
+        -900,
+        0
+      ],
+      [
+        -2850,
+        -2000,
+        0
+      ],
+      [
+        -2900,
+        -2500,
+        0
+      ],
+      [
+        -2600,
+        -4100,
+        0
+      ],
+      [
+        -2750,
+        -4950,
+        0
+      ],
+      [
+        -700,
+        -5300,
+        0
+      ],
+      [
+        1000,
+        -4600,
+        0
+      ],
+      [
+        3500,
+        -5200,
+        0
+      ],
+      [
+        6000,
+        -4600,
+        0
+      ],
+      [
+        8000,
+        -3000,
+        0
+      ],
+      [
+        11500,
+        -2600,
+        0
+      ]
+    ],
+    "bay_water_display_polygon_local_m": [
+      [
+        12000,
+        2800,
+        0
+      ],
+      [
+        8500,
+        3200,
+        0
+      ],
+      [
+        6200,
+        4500,
+        0
+      ],
+      [
+        3800,
+        5700,
+        0
+      ],
+      [
+        1000,
+        6400,
+        0
+      ],
+      [
+        -1900,
+        5200,
+        0
+      ],
+      [
+        -2400,
+        4000,
+        0
+      ],
+      [
+        -3400,
+        2800,
+        0
+      ],
+      [
+        -3800,
+        1500,
+        0
+      ],
+      [
+        -3900,
+        200,
+        0
+      ],
+      [
+        -3500,
+        -900,
+        0
+      ],
+      [
+        -2850,
+        -2000,
+        0
+      ],
+      [
+        -2900,
+        -2500,
+        0
+      ],
+      [
+        -2600,
+        -4100,
+        0
+      ],
+      [
+        -2750,
+        -4950,
+        0
+      ],
+      [
+        -700,
+        -5300,
+        0
+      ],
+      [
+        1000,
+        -4600,
+        0
+      ],
+      [
+        3500,
+        -5200,
+        0
+      ],
+      [
+        6000,
+        -4600,
+        0
+      ],
+      [
+        8000,
+        -3000,
+        0
+      ],
+      [
+        11500,
+        -2600,
+        0
+      ],
+      [
+        13500,
+        -2600,
+        0
+      ],
+      [
+        13500,
+        2800,
+        0
+      ],
+      [
+        12000,
+        2800,
+        0
+      ]
+    ],
+    "mouth_cross_section_local_m": [
+      [
+        12000,
+        2800,
+        0
+      ],
+      [
+        11500,
+        -2600,
+        0
+      ]
+    ],
+    "survey_note": "The current global coastline cannot resolve this roughly 24 km feature; use a nested coast/elevation survey before construction"
+  },
+  "population": {
+    "core_estimate": 420000,
+    "service_region_estimate": 1200000,
+    "service_region_includes_core": true,
+    "district_total": 420000,
+    "runtime_spawn_count": null,
+    "housing_assumptions": {
+      "residents_per_occupied_dwelling": 2.6,
+      "occupied_dwellings_approx": 161540,
+      "total_dwellings_approx": 176000,
+      "occupancy_fraction_approx": 0.92,
+      "mean_internal_dwelling_area_m2": 65,
+      "net_to_gross_floor_area_ratio": 0.75,
+      "residential_gross_floor_area_m2_approx": 15253333,
+      "average_residential_storeys": 4.5,
+      "residential_building_footprint_km2_approx": 3.39,
+      "urban_service_envelope_km2_approx": 64
+    },
+    "scope_note": "Administrative catchment estimates; overlapping drawn district envelopes are not housing parcel areas"
+  },
+  "light": {
+    "solar_cycle_Earth_hours": 136.755,
+    "seasonal_noon_altitude_deg_approx": [
+      59,
+      87
+    ],
+    "natural_dawn_note": "Eastern-breach waterfront receives ordinary daylight; west rim removes some late light; local canyons create additional shade",
+    "horizon_examples": [
+      {
+        "height_difference_m": 1000,
+        "horizontal_distance_m": 15000,
+        "angle_deg_approx": 3.8,
+        "timing_difference_hours_approx": 1.5
+      },
+      {
+        "height_difference_m": 1150,
+        "horizontal_distance_m": 6500,
+        "angle_deg_approx": 10,
+        "timing_difference_hours_approx": 4
+      },
+      {
+        "height_difference_m": 500,
+        "horizontal_distance_m": 1600,
+        "angle_deg_approx": 17.4,
+        "timing_difference_hours_approx": 7
+      }
+    ],
+    "timing_note": "Illustrative 2.4–2.6 degrees per hour near-horizon vertical motion; actual azimuth, season and horizon profile required",
+    "collector_contract": "Available-light redirection to named receivers; not permanent global day or citywide electricity",
+    "rendered_sun_study_verified": false,
+    "longest_nominal_natural_night_Earth_hours_approx": 71.7,
+    "rauth_city_reference": {
+      "azimuth_deg_approx": 241.2,
+      "elevation_deg_approx": 57.4,
+      "azimuth_convention": "Clockwise from geographic north",
+      "view_direction": "west-southwest",
+      "visual_constraint": "Distinct from east-facing open-bay panorama; do not relocate the giant for composition",
+      "scope": "Reference city position; precise local sky projection still required"
+    }
+  },
+  "districts": [
+    {
+      "id": "ORI-D01",
+      "name": "First Light Quay",
+      "city_layer": "Low Tides",
+      "resident_estimate": 42000,
+      "center_local_m": [
+        -3900,
+        -800,
+        35
+      ],
+      "extent_radii_m": [
+        900,
+        1400
+      ],
+      "altitude_range_m": [
+        8,
+        90
+      ],
+      "purpose": "Passenger harbor, markets, dense lower housing",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D02",
+      "name": "Second Dawn Lane",
+      "city_layer": "Low Tides / Ladder",
+      "resident_estimate": 38000,
+      "center_local_m": [
+        -4700,
+        -1450,
+        95
+      ],
+      "extent_radii_m": [
+        900,
+        1200
+      ],
+      "altitude_range_m": [
+        35,
+        180
+      ],
+      "purpose": "Repair trades and mixed domestic streets",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D03",
+      "name": "Three Drops Court",
+      "city_layer": "Ladder",
+      "resident_estimate": 52000,
+      "center_local_m": [
+        -5050,
+        400,
+        225
+      ],
+      "extent_radii_m": [
+        1150,
+        1200
+      ],
+      "altitude_range_m": [
+        110,
+        340
+      ],
+      "purpose": "Water distribution, schools, courtyard homes",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D04",
+      "name": "Copper Thread Steps",
+      "city_layer": "Ladder",
+      "resident_estimate": 62000,
+      "center_local_m": [
+        -5750,
+        1950,
+        365
+      ],
+      "extent_radii_m": [
+        1150,
+        1200
+      ],
+      "altitude_range_m": [
+        220,
+        520
+      ],
+      "purpose": "Textiles, tailoring, residential terraces",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D05",
+      "name": "Common Table Yard",
+      "city_layer": "Low Tides / Ladder",
+      "resident_estimate": 45000,
+      "center_local_m": [
+        -4250,
+        3300,
+        155
+      ],
+      "extent_radii_m": [
+        1150,
+        1350
+      ],
+      "altitude_range_m": [
+        70,
+        250
+      ],
+      "purpose": "Public provisioning, markets, shared rooms",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D06",
+      "name": "Coil Yard",
+      "city_layer": "Low Tides",
+      "resident_estimate": 21000,
+      "center_local_m": [
+        -2350,
+        5200,
+        25
+      ],
+      "extent_radii_m": [
+        1800,
+        1500
+      ],
+      "altitude_range_m": [
+        12,
+        100
+      ],
+      "purpose": "Industrial service and freight handling",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D07",
+      "name": "Hanging Gardens",
+      "city_layer": "Ladder",
+      "resident_estimate": 70000,
+      "center_local_m": [
+        -7150,
+        2200,
+        620
+      ],
+      "extent_radii_m": [
+        1650,
+        1750
+      ],
+      "altitude_range_m": [
+        430,
+        820
+      ],
+      "purpose": "Residential terraces and managed cultivation",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D08",
+      "name": "High Step Junction",
+      "city_layer": "Ladder",
+      "resident_estimate": 48000,
+      "center_local_m": [
+        -7050,
+        -1050,
+        590
+      ],
+      "extent_radii_m": [
+        1500,
+        1750
+      ],
+      "altitude_range_m": [
+        360,
+        820
+      ],
+      "purpose": "Transport, education, mixed housing",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D09",
+      "name": "Civic Shade",
+      "city_layer": "Crown",
+      "resident_estimate": 33000,
+      "center_local_m": [
+        -8300,
+        700,
+        970
+      ],
+      "extent_radii_m": [
+        1400,
+        1350
+      ],
+      "altitude_range_m": [
+        760,
+        1090
+      ],
+      "purpose": "Civic services, libraries, residential courts",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D10",
+      "name": "Collector Ridge",
+      "city_layer": "Crown",
+      "resident_estimate": 2000,
+      "center_local_m": [
+        -9950,
+        -850,
+        1280
+      ],
+      "extent_radii_m": [
+        1100,
+        2300
+      ],
+      "altitude_range_m": [
+        1050,
+        1400
+      ],
+      "purpose": "Optical infrastructure and service settlements",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    },
+    {
+      "id": "ORI-D11",
+      "name": "Open Wake Dock",
+      "city_layer": "Low Tides",
+      "resident_estimate": 7000,
+      "center_local_m": [
+        -3300,
+        -3850,
+        20
+      ],
+      "extent_radii_m": [
+        1400,
+        1550
+      ],
+      "altitude_range_m": [
+        7,
+        75
+      ],
+      "purpose": "Independent vessel service and waterfront lodging",
+      "extent_status": "Illustrative overlapping planning envelope, not legal boundary or surveyed polygon"
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "ORI-STOP-01",
+      "district_id": "ORI-D01",
+      "name": "First Light Quay interchange",
+      "position_local_m": [
+        -3900,
+        -800,
+        35
+      ],
+      "endpoint_type": "district_interchange",
+      "access_leg_required": true,
+      "ferry_endpoint_note": "District interchange coordinate, not a surveyed berth or vessel position; requires accessible shore access and separate water-level boarding location"
+    },
+    {
+      "id": "ORI-STOP-02",
+      "district_id": "ORI-D02",
+      "name": "Second Dawn Lane interchange",
+      "position_local_m": [
+        -4700,
+        -1450,
+        95
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-03",
+      "district_id": "ORI-D03",
+      "name": "Three Drops Court interchange",
+      "position_local_m": [
+        -5050,
+        400,
+        225
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-04",
+      "district_id": "ORI-D04",
+      "name": "Copper Thread Steps interchange",
+      "position_local_m": [
+        -5750,
+        1950,
+        365
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-05",
+      "district_id": "ORI-D05",
+      "name": "Common Table Yard interchange",
+      "position_local_m": [
+        -4250,
+        3300,
+        155
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-06",
+      "district_id": "ORI-D06",
+      "name": "Coil Yard interchange",
+      "position_local_m": [
+        -2350,
+        5200,
+        25
+      ],
+      "endpoint_type": "district_interchange",
+      "access_leg_required": true,
+      "ferry_endpoint_note": "District interchange coordinate, not a surveyed berth or vessel position; requires accessible shore access and separate water-level boarding location"
+    },
+    {
+      "id": "ORI-STOP-07",
+      "district_id": "ORI-D07",
+      "name": "Hanging Gardens interchange",
+      "position_local_m": [
+        -7150,
+        2200,
+        620
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-08",
+      "district_id": "ORI-D08",
+      "name": "High Step Junction interchange",
+      "position_local_m": [
+        -7050,
+        -1050,
+        590
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-09",
+      "district_id": "ORI-D09",
+      "name": "Civic Shade interchange",
+      "position_local_m": [
+        -8300,
+        700,
+        970
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-10",
+      "district_id": "ORI-D10",
+      "name": "Collector Ridge interchange",
+      "position_local_m": [
+        -9950,
+        -850,
+        1280
+      ],
+      "endpoint_type": "district_interchange"
+    },
+    {
+      "id": "ORI-STOP-11",
+      "district_id": "ORI-D11",
+      "name": "Open Wake Dock interchange",
+      "position_local_m": [
+        -3300,
+        -3850,
+        20
+      ],
+      "endpoint_type": "district_interchange",
+      "access_leg_required": true,
+      "ferry_endpoint_note": "District interchange coordinate, not a surveyed berth or vessel position; requires accessible shore access and separate water-level boarding location"
+    },
+    {
+      "id": "ORI-STOP-RIDGE",
+      "district_id": "ORI-D10",
+      "name": "Ridge public terminus",
+      "position_local_m": [
+        -9300,
+        -300,
+        1160
+      ],
+      "endpoint_type": "public_transport_terminus"
+    },
+    {
+      "id": "ORI-GATE-NORTH",
+      "district_id": null,
+      "name": "North freight gateway",
+      "position_local_m": [
+        -900,
+        7800,
+        80
+      ],
+      "endpoint_type": "land_transport_gateway"
+    },
+    {
+      "id": "ORI-GATE-INLAND",
+      "district_id": null,
+      "name": "Western inland road gateway",
+      "position_local_m": [
+        -12700,
+        -1650,
+        1440
+      ],
+      "endpoint_type": "land_transport_gateway"
+    },
+    {
+      "id": "ORI-HARBOR-EAST",
+      "district_id": null,
+      "name": "Eastern sea approach",
+      "position_local_m": [
+        11500,
+        0,
+        0
+      ],
+      "endpoint_type": "waterway_approach_reference"
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "ORI-TR-001",
+      "service": "Shore Line",
+      "from_id": "ORI-STOP-11",
+      "to_id": "ORI-STOP-01",
+      "mode": "shore_tram",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-002",
+      "service": "Shore Line",
+      "from_id": "ORI-STOP-01",
+      "to_id": "ORI-STOP-05",
+      "mode": "shore_tram",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-003",
+      "service": "Shore Line",
+      "from_id": "ORI-STOP-05",
+      "to_id": "ORI-STOP-06",
+      "mode": "shore_tram",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-004",
+      "service": "Ladder Line",
+      "from_id": "ORI-STOP-01",
+      "to_id": "ORI-STOP-02",
+      "mode": "mixed_contour_and_incline",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-005",
+      "service": "Ladder Line",
+      "from_id": "ORI-STOP-02",
+      "to_id": "ORI-STOP-03",
+      "mode": "mixed_contour_and_incline",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-006",
+      "service": "Ladder Line",
+      "from_id": "ORI-STOP-03",
+      "to_id": "ORI-STOP-04",
+      "mode": "inclined_rail",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-007",
+      "service": "Ladder Line",
+      "from_id": "ORI-STOP-04",
+      "to_id": "ORI-STOP-07",
+      "mode": "mixed_contour_and_incline",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-008",
+      "service": "Ladder Line",
+      "from_id": "ORI-STOP-07",
+      "to_id": "ORI-STOP-08",
+      "mode": "contour_service",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-009",
+      "service": "Crown Line",
+      "from_id": "ORI-STOP-08",
+      "to_id": "ORI-STOP-09",
+      "mode": "inclined_rail",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-010",
+      "service": "Crown Line",
+      "from_id": "ORI-STOP-09",
+      "to_id": "ORI-STOP-RIDGE",
+      "mode": "inclined_rail",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-011",
+      "service": "Ridge staff connection",
+      "from_id": "ORI-STOP-RIDGE",
+      "to_id": "ORI-STOP-10",
+      "mode": "restricted_service_vehicle",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-012",
+      "service": "North freight branch",
+      "from_id": "ORI-GATE-NORTH",
+      "to_id": "ORI-STOP-06",
+      "mode": "freight_rail",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-013",
+      "service": "Port ferry",
+      "from_id": "ORI-STOP-11",
+      "to_id": "ORI-STOP-01",
+      "mode": "passenger_ferry",
+      "geometry_status": "Service relationship between district interchanges; both shore access legs, berths and navigable water route remain unauthored",
+      "endpoint_type": "district_interchange_pair",
+      "access_leg_required": true,
+      "from_access_leg_required": true,
+      "to_access_leg_required": true
+    },
+    {
+      "id": "ORI-TR-014",
+      "service": "Port ferry",
+      "from_id": "ORI-STOP-01",
+      "to_id": "ORI-STOP-06",
+      "mode": "passenger_ferry",
+      "geometry_status": "Service relationship between district interchanges; both shore access legs, berths and navigable water route remain unauthored",
+      "endpoint_type": "district_interchange_pair",
+      "access_leg_required": true,
+      "from_access_leg_required": true,
+      "to_access_leg_required": true
+    },
+    {
+      "id": "ORI-TR-015",
+      "service": "Sea approach",
+      "from_id": "ORI-HARBOR-EAST",
+      "to_id": "ORI-STOP-11",
+      "mode": "vessel_channel",
+      "geometry_status": "Waterway approach to service district; final berth, shore access and navigable channel geometry remain unauthored",
+      "endpoint_type": "waterway_reference_to_district_interchange",
+      "access_leg_required": true,
+      "from_access_leg_required": false,
+      "to_access_leg_required": true
+    },
+    {
+      "id": "ORI-TR-016",
+      "service": "Western road",
+      "from_id": "ORI-GATE-INLAND",
+      "to_id": "ORI-STOP-08",
+      "mode": "switchback_road",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-017",
+      "service": "Garden civic walk",
+      "from_id": "ORI-STOP-07",
+      "to_id": "ORI-STOP-09",
+      "mode": "walk_and_accessible_transfer",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-018",
+      "service": "Middle terrace connection",
+      "from_id": "ORI-STOP-03",
+      "to_id": "ORI-STOP-08",
+      "mode": "walk_and_accessible_transfer",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-019",
+      "service": "Workshop dock connection",
+      "from_id": "ORI-STOP-02",
+      "to_id": "ORI-STOP-11",
+      "mode": "contour_service",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    },
+    {
+      "id": "ORI-TR-020",
+      "service": "Lower civic connection",
+      "from_id": "ORI-STOP-03",
+      "to_id": "ORI-STOP-05",
+      "mode": "walk_and_accessible_transfer",
+      "geometry_status": "Connection corridor only; route alignment, slope, vehicle and accessibility engineering unresolved"
+    }
+  ],
+  "water_nodes": [
+    {
+      "id": "ORI-W01",
+      "name": "Western treatment and regional transfer headworks",
+      "position_local_m": [
+        -12000,
+        4100,
+        1460
+      ],
+      "function": "Treat raw regional supply; proposed potable design capacity 80000 m3 per civil turn",
+      "system": "potable"
+    },
+    {
+      "id": "ORI-W02",
+      "name": "Upper protected reserve",
+      "position_local_m": [
+        -9450,
+        3350,
+        1160
+      ],
+      "function": "Major distributed reserve member; final volume and geometry pending",
+      "system": "potable"
+    },
+    {
+      "id": "ORI-W03",
+      "name": "Garden pressure break",
+      "position_local_m": [
+        -7700,
+        1950,
+        760
+      ],
+      "function": "Separate high and middle pressure zones",
+      "system": "potable"
+    },
+    {
+      "id": "ORI-W04",
+      "name": "Three Drops distribution",
+      "position_local_m": [
+        -5280,
+        570,
+        260
+      ],
+      "function": "Middle pressure zoning, measurement and local distribution",
+      "system": "potable"
+    },
+    {
+      "id": "ORI-W05",
+      "name": "Lower operational storage",
+      "position_local_m": [
+        -3780,
+        2560,
+        95
+      ],
+      "function": "Lower district operating tanks and distribution",
+      "system": "potable"
+    },
+    {
+      "id": "ORI-W06",
+      "name": "North industrial process-water center",
+      "position_local_m": [
+        -1220,
+        6580,
+        35
+      ],
+      "function": "Separate qualified industrial reuse and intake processing",
+      "system": "nonpotable"
+    },
+    {
+      "id": "ORI-W07",
+      "name": "South wastewater treatment",
+      "position_local_m": [
+        -970,
+        -5730,
+        20
+      ],
+      "function": "Proposed 70000 m3 per civil turn design capacity, separate from storm drainage",
+      "system": "wastewater"
+    },
+    {
+      "id": "ORI-W08",
+      "name": "Offshore treated discharge planning endpoint",
+      "position_local_m": [
+        12400,
+        -5800,
+        -25
+      ],
+      "function": "Location and environmental capacity require bathymetric and current survey",
+      "system": "treated_discharge"
+    },
+    {
+      "id": "ORI-W09",
+      "name": "South reuse treatment and pumping",
+      "position_local_m": [
+        -1060,
+        -5830,
+        22
+      ],
+      "function": "Qualify reclaimed water for specific nonpotable uses; target about 25,000 m3 per civil turn",
+      "system": "nonpotable"
+    }
+  ],
+  "water_links": [
+    {
+      "id": "ORI-WL-001",
+      "from_id": "ORI-W01",
+      "to_id": "ORI-W02",
+      "system": "potable",
+      "note": "Regional input yield remains unverified",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-002",
+      "from_id": "ORI-W02",
+      "to_id": "ORI-W03",
+      "system": "potable",
+      "note": "Pressure reduction required",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-003",
+      "from_id": "ORI-W03",
+      "to_id": "ORI-W04",
+      "system": "potable",
+      "note": "Pressure reduction required",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-004",
+      "from_id": "ORI-W04",
+      "to_id": "ORI-W05",
+      "system": "potable",
+      "note": "Separate low pressure zone",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-005",
+      "from_id": "ORI-W05",
+      "to_id": "ORI-STOP-01",
+      "system": "potable_distribution",
+      "note": "Schematic service connection",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-006",
+      "from_id": "ORI-W04",
+      "to_id": "ORI-STOP-05",
+      "system": "potable_distribution",
+      "note": "Higher Three Drops distribution at 260 m feeds Common Table interchange at 155 m through pressure regulation; no unassisted rise from lower 95 m storage",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate",
+      "maintained_pressure_dependencies": [
+        "Upstream hydraulic grade and operating water level",
+        "Functioning pressure-regulating equipment",
+        "Pipe capacity and friction losses under demand",
+        "Service requirements of higher district buildings"
+      ],
+      "hydraulic_capacity_verified": false
+    },
+    {
+      "id": "ORI-WL-007",
+      "from_id": "ORI-W03",
+      "to_id": "ORI-STOP-07",
+      "system": "potable_distribution",
+      "note": "Schematic service connection",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-008",
+      "from_id": "ORI-W02",
+      "to_id": "ORI-STOP-09",
+      "system": "potable_distribution",
+      "note": "Pressure regulation required",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-009",
+      "from_id": "ORI-STOP-01",
+      "to_id": "ORI-W07",
+      "system": "wastewater",
+      "note": "Concept catchment transfer, not pipe alignment",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-010",
+      "from_id": "ORI-STOP-05",
+      "to_id": "ORI-W07",
+      "system": "wastewater",
+      "note": "Concept catchment transfer, not pipe alignment",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-011",
+      "from_id": "ORI-STOP-07",
+      "to_id": "ORI-W07",
+      "system": "wastewater",
+      "note": "Concept catchment transfer, not pipe alignment",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    },
+    {
+      "id": "ORI-WL-012",
+      "from_id": "ORI-W07",
+      "to_id": "ORI-W09",
+      "system": "nonpotable_treatment",
+      "note": "Treatment feed pumping provides the local 2 m lift; quality checks required before reuse",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "pumped",
+      "static_lift_m": 2
+    },
+    {
+      "id": "ORI-WL-013",
+      "from_id": "ORI-W09",
+      "to_id": "ORI-W06",
+      "system": "nonpotable",
+      "note": "Pumping and independent distribution required",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "pumped",
+      "static_lift_m": 13
+    },
+    {
+      "id": "ORI-WL-014",
+      "from_id": "ORI-W07",
+      "to_id": "ORI-W08",
+      "system": "treated_discharge",
+      "note": "Discharge conditions, route and ecology unresolved",
+      "alignment_status": "Schematic dependency link, not surveyed pipe",
+      "hydraulic_mode": "gravity_candidate"
+    }
+  ],
+  "storm_corridors": [
+    {
+      "id": "ORI-STORM-01",
+      "name": "Middle gully concept",
+      "points_local_m": [
+        [
+          -10300,
+          6800,
+          1330
+        ],
+        [
+          -8200,
+          5700,
+          960
+        ],
+        [
+          -6700,
+          4300,
+          550
+        ],
+        [
+          -5800,
+          2300,
+          320
+        ],
+        [
+          -5050,
+          960,
+          200
+        ],
+        [
+          -3600,
+          2400,
+          5
+        ],
+        [
+          -3200,
+          2600,
+          0
+        ]
+      ],
+      "status": "Proposed continuous falling drainage path; catchment and channel capacity unverified"
+    }
+  ],
+  "service_assumptions": {
+    "basis": "Core city; all quantities are authored planning allowances requiring independent capacity and environmental review",
+    "civil_turn_hours": 24,
+    "potable_domestic_liters_per_resident_per_turn": 120,
+    "potable_domestic_m3_per_turn": 50400,
+    "potable_public_commercial_m3_per_turn": 9600,
+    "potable_delivered_total_m3_per_turn": 60000,
+    "potable_distribution_loss_fraction": 0.1,
+    "potable_treatment_output_m3_per_turn_approx": 66667,
+    "potable_treatment_capacity_m3_per_turn": 80000,
+    "protected_reserve_volume_m3_approx": 2400000,
+    "reserve_turns_at_delivered_load_before_losses_or_dead_storage": 40,
+    "nonpotable_reuse_target_m3_per_turn": 25000,
+    "wastewater_design_capacity_m3_per_turn": 70000,
+    "edible_food_product_tonnes_per_turn_range": [
+      600,
+      800
+    ],
+    "dry_grain_pulse_tonnes_per_turn_illustrative": 230,
+    "dry_reserve_turns_illustrative": 30,
+    "dry_reserve_tonnes_illustrative": 6900,
+    "urban_share_of_fresh_edible_product_by_mass_target_range": [
+      0.05,
+      0.12
+    ],
+    "municipal_solid_waste_kg_per_resident_per_turn": 0.8,
+    "municipal_solid_waste_tonnes_per_turn": 336,
+    "gross_port_freight_tonnes_per_turn_range": [
+      14000,
+      22000
+    ],
+    "electricity_average_MW": 600,
+    "electricity_peak_target_MW": 1050,
+    "ordinary_average_sources_MW": {
+      "regional": 360,
+      "local_dispatchable": 120,
+      "variable_annual_average": 120
+    },
+    "capacity_case_MW": {
+      "regional_import_limit": 720,
+      "local_dispatchable": 200,
+      "storage_dispatch": 300
+    },
+    "usable_electrical_storage_GWh_target": 9,
+    "geothermal_status": "Local thermal occurrence observed in fiction; sustainable electrical resource, reservoir behavior and plant output unproven; no verified electrical output counted",
+    "first_light_mission_scope": "Isolated feeder and bounded maintenance-window lease; no implication of whole-city blackout or unlimited Sunseed energy",
+    "storage_night_case": {
+      "nominal_natural_night_hours_approx": 71.7,
+      "constant_deficit_MW": 120,
+      "energy_before_additional_losses_GWh": 8.604,
+      "rounded_up_planning_allowance_GWh": 8.61,
+      "earlier_illustration_hours": 60,
+      "earlier_illustration_energy_GWh": 7.2,
+      "firm_coverage_verified": false,
+      "limitations": [
+        "Terrain can extend local direct-light absence",
+        "Available state of charge",
+        "Storage power and transfer limits",
+        "Conversion and distribution losses",
+        "Protected reserves",
+        "Failures and actual generation/import availability"
+      ]
+    }
+  },
+  "points_of_interest": [
+    {
+      "id": "ORI-POI-001",
+      "name": "Five-Level Landing",
+      "district_id": "ORI-D01",
+      "position_local_m": [
+        -3540,
+        -1120,
+        16
+      ],
+      "experience_tags": [
+        "arrival",
+        "history",
+        "ordinary_work"
+      ],
+      "asset_requirements": [
+        "Stepped quay repair phases",
+        "Mooring hardware",
+        "Passenger seating",
+        "Ticket room",
+        "Freight handcarts"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-001"
+    },
+    {
+      "id": "ORI-POI-002",
+      "name": "The Cup Balcony",
+      "district_id": "ORI-D01",
+      "position_local_m": [
+        -3730,
+        -620,
+        42
+      ],
+      "experience_tags": [
+        "pleasure",
+        "view",
+        "domestic_life"
+      ],
+      "asset_requirements": [
+        "Supported balcony",
+        "Mixed cups and plates",
+        "Adjustable shade",
+        "Compact cafe interior",
+        "Restrained harbor sound"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-002"
+    },
+    {
+      "id": "ORI-POI-003",
+      "name": "Second Dawn Workshop",
+      "district_id": "ORI-D02",
+      "position_local_m": [
+        -4780,
+        -1370,
+        92
+      ],
+      "experience_tags": [
+        "craft",
+        "home",
+        "existing_game_anchor"
+      ],
+      "asset_requirements": [
+        "Qualified existing workshop bench",
+        "Physical hand props",
+        "Rear storage",
+        "Wash point",
+        "Domestic stair"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-003"
+    },
+    {
+      "id": "ORI-POI-004",
+      "name": "House of Small Doors",
+      "district_id": "ORI-D02",
+      "position_local_m": [
+        -4570,
+        -1920,
+        68
+      ],
+      "experience_tags": [
+        "play",
+        "craft",
+        "history"
+      ],
+      "asset_requirements": [
+        "Miniature door mechanisms",
+        "Retained pressure doorway",
+        "Low test surface",
+        "Fine tools",
+        "Toy packaging"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-004"
+    },
+    {
+      "id": "ORI-POI-005",
+      "name": "Three Drops Measure Room",
+      "district_id": "ORI-D03",
+      "position_local_m": [
+        -5170,
+        340,
+        225
+      ],
+      "experience_tags": [
+        "water",
+        "learning",
+        "civic_life"
+      ],
+      "asset_requirements": [
+        "Serviceable instruments",
+        "Sample vessels",
+        "Separate water route markings",
+        "Charts",
+        "Public and staff rooms"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-005"
+    },
+    {
+      "id": "ORI-POI-006",
+      "name": "Rain-Thread Bridge",
+      "district_id": "ORI-D03",
+      "position_local_m": [
+        -4890,
+        960,
+        260
+      ],
+      "experience_tags": [
+        "home",
+        "weather",
+        "route"
+      ],
+      "asset_requirements": [
+        "Bridge load structure",
+        "Inhabited infill",
+        "Chain drains",
+        "Storm gully",
+        "Safe resting recesses"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-006"
+    },
+    {
+      "id": "ORI-POI-007",
+      "name": "Thread-Sail Gallery",
+      "district_id": "ORI-D04",
+      "position_local_m": [
+        -5830,
+        1900,
+        390
+      ],
+      "experience_tags": [
+        "art",
+        "light",
+        "pleasure"
+      ],
+      "asset_requirements": [
+        "Adjustable textile frames",
+        "Distinct cloth forms",
+        "Preparation room",
+        "Folded storage",
+        "Gallery landings"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-007"
+    },
+    {
+      "id": "ORI-POI-008",
+      "name": "The Long Cutting Table",
+      "district_id": "ORI-D04",
+      "position_local_m": [
+        -5470,
+        2390,
+        350
+      ],
+      "experience_tags": [
+        "craft",
+        "fashion",
+        "ordinary_work"
+      ],
+      "asset_requirements": [
+        "Cutting table",
+        "Meaningful patterns",
+        "Garment stages",
+        "Adjustable mirrors",
+        "Accessible fitting space"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-008"
+    },
+    {
+      "id": "ORI-POI-009",
+      "name": "Oven Court",
+      "district_id": "ORI-D05",
+      "position_local_m": [
+        -4350,
+        3320,
+        160
+      ],
+      "experience_tags": [
+        "food",
+        "social_life",
+        "public_service"
+      ],
+      "asset_requirements": [
+        "Serviced masonry ovens",
+        "Preparation and serving zones",
+        "Reusable vessels",
+        "Protected stores",
+        "Staff rest rooms"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-009"
+    },
+    {
+      "id": "ORI-POI-010",
+      "name": "Court of Borrowed Games",
+      "district_id": "ORI-D05",
+      "position_local_m": [
+        -3870,
+        3650,
+        115
+      ],
+      "experience_tags": [
+        "play",
+        "friendship",
+        "pleasure"
+      ],
+      "asset_requirements": [
+        "Latch tables",
+        "Release aids",
+        "Illustrated cards",
+        "Rules boards",
+        "Equipment cupboard"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-010"
+    },
+    {
+      "id": "ORI-POI-011",
+      "name": "Quiet Drum Hall",
+      "district_id": "ORI-D06",
+      "position_local_m": [
+        -2410,
+        5390,
+        31
+      ],
+      "experience_tags": [
+        "engineering",
+        "learning",
+        "ordinary_work"
+      ],
+      "asset_requirements": [
+        "Isolated test bays",
+        "Viewing gallery",
+        "Lifting clearances",
+        "Sectioned assembly",
+        "Sample racks"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-011"
+    },
+    {
+      "id": "ORI-POI-012",
+      "name": "Public Outfall Gallery",
+      "district_id": "ORI-D06",
+      "position_local_m": [
+        -1390,
+        5290,
+        14
+      ],
+      "experience_tags": [
+        "ecology",
+        "water",
+        "learning"
+      ],
+      "asset_requirements": [
+        "Supported observation deck",
+        "Guarded sampling",
+        "Outfall geometry",
+        "Interpretation panels",
+        "Qualified shoreline assemblage"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-012",
+      "placement_type": "supported_overwater_structure",
+      "shore_access_required": true,
+      "placement_note": "Coordinates retained intentionally over authored bay water; supporting structure and shore connection require construction design"
+    },
+    {
+      "id": "ORI-POI-013",
+      "name": "Closed-Fans Walk",
+      "district_id": "ORI-D07",
+      "position_local_m": [
+        -7600,
+        2530,
+        705
+      ],
+      "experience_tags": [
+        "ecology",
+        "beauty",
+        "quiet"
+      ],
+      "asset_requirements": [
+        "Native fan growth stages",
+        "Posture states",
+        "Soil and roots",
+        "Observation board",
+        "Sheltered benches"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-013"
+    },
+    {
+      "id": "ORI-POI-014",
+      "name": "Orchard of Short Rows",
+      "district_id": "ORI-D07",
+      "position_local_m": [
+        -6990,
+        1900,
+        585
+      ],
+      "experience_tags": [
+        "food",
+        "pleasure",
+        "garden"
+      ],
+      "asset_requirements": [
+        "Managed introduced orchard set",
+        "Training supports",
+        "Work shed",
+        "Harvest containers",
+        "Seating"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-014"
+    },
+    {
+      "id": "ORI-POI-015",
+      "name": "Three-Face Clock",
+      "district_id": "ORI-D08",
+      "position_local_m": [
+        -7060,
+        -940,
+        590
+      ],
+      "experience_tags": [
+        "transport",
+        "meeting",
+        "time"
+      ],
+      "asset_requirements": [
+        "Legible three-field clock",
+        "Maintenance hatch",
+        "Departure boards",
+        "Waiting positions",
+        "Platform sightlines"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-015"
+    },
+    {
+      "id": "ORI-POI-016",
+      "name": "Old Lift Turntable",
+      "district_id": "ORI-D08",
+      "position_local_m": [
+        -6600,
+        -1690,
+        470
+      ],
+      "experience_tags": [
+        "history",
+        "performance",
+        "route"
+      ],
+      "asset_requirements": [
+        "Freight turntable",
+        "Retained rails",
+        "Safe edges",
+        "Removable stage fittings",
+        "Historical route diagrams"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-016"
+    },
+    {
+      "id": "ORI-POI-017",
+      "name": "Library of Public Margins",
+      "district_id": "ORI-D09",
+      "position_local_m": [
+        -8410,
+        650,
+        980
+      ],
+      "experience_tags": [
+        "reading",
+        "memory",
+        "pleasure"
+      ],
+      "asset_requirements": [
+        "Varied document storage",
+        "Accessible desks",
+        "Quiet and active rooms",
+        "Catalog furniture",
+        "Staff spaces"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-017"
+    },
+    {
+      "id": "ORI-POI-018",
+      "name": "The Unfinished Room",
+      "district_id": "ORI-D09",
+      "position_local_m": [
+        -8180,
+        1250,
+        950
+      ],
+      "experience_tags": [
+        "belief",
+        "care",
+        "social_life"
+      ],
+      "asset_requirements": [
+        "Adaptable seating",
+        "Quiet alcove",
+        "Domestic kitchen",
+        "Multiple exits",
+        "Adjustable light"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-018"
+    },
+    {
+      "id": "ORI-POI-019",
+      "name": "First Collector Chair",
+      "district_id": "ORI-D10",
+      "position_local_m": [
+        -10270,
+        -910,
+        1370
+      ],
+      "experience_tags": [
+        "engineering",
+        "history",
+        "view"
+      ],
+      "asset_requirements": [
+        "Collector anchorage",
+        "Brake and articulation",
+        "Service clearance",
+        "Retired joint exhibit",
+        "Receiver sightline"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-019"
+    },
+    {
+      "id": "ORI-POI-020",
+      "name": "Ridge Sleepers' Lookout",
+      "district_id": "ORI-D10",
+      "position_local_m": [
+        -9970,
+        450,
+        1305
+      ],
+      "experience_tags": [
+        "sky",
+        "pleasure",
+        "quiet"
+      ],
+      "asset_requirements": [
+        "Weather shelters",
+        "Varied reclining seats",
+        "Safe edges",
+        "Wind-responsive details",
+        "Physically consistent sky"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-020",
+      "view_orientation_note": "Separate east-facing bay seats and west-southwest-facing Rauth seats; city reference Rauth azimuth 241.2 degrees, elevation 57.4 degrees"
+    },
+    {
+      "id": "ORI-POI-021",
+      "name": "Kestrel Service Cradle",
+      "district_id": "ORI-D11",
+      "position_local_m": [
+        -2630,
+        -3620,
+        13
+      ],
+      "experience_tags": [
+        "home_ship",
+        "craft",
+        "departure"
+      ],
+      "asset_requirements": [
+        "Original Kestrel cradle",
+        "Docking hardware",
+        "Cargo handling",
+        "Shore services",
+        "Crew belongings"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-021",
+      "placement_type": "supported_overwater_structure",
+      "shore_access_required": true,
+      "placement_note": "Coordinates retained intentionally over authored bay water; supporting structure and shore connection require construction design"
+    },
+    {
+      "id": "ORI-POI-022",
+      "name": "Drydock Theatre",
+      "district_id": "ORI-D11",
+      "position_local_m": [
+        -2840,
+        -4100,
+        18
+      ],
+      "experience_tags": [
+        "performance",
+        "comedy",
+        "pleasure"
+      ],
+      "asset_requirements": [
+        "Adapted drydock",
+        "Removable cover",
+        "Accessible audience positions",
+        "Caption panels",
+        "Backstage rooms"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-022"
+    },
+    {
+      "id": "ORI-POI-023",
+      "name": "The Listening Fold",
+      "district_id": "ORI-D07",
+      "position_local_m": [
+        -7950,
+        3200,
+        805
+      ],
+      "experience_tags": [
+        "beauty",
+        "sound",
+        "quiet"
+      ],
+      "asset_requirements": [
+        "Exposed rock fold",
+        "Qualified native planting",
+        "Drainage",
+        "Supported path",
+        "Sparse seating"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-023"
+    },
+    {
+      "id": "ORI-POI-024",
+      "name": "Old Breach Nursery",
+      "district_id": "ORI-D11",
+      "position_local_m": [
+        -2690,
+        -4820,
+        8
+      ],
+      "experience_tags": [
+        "wildlife",
+        "beauty",
+        "observation"
+      ],
+      "asset_requirements": [
+        "Shallow coastal pocket",
+        "Supported viewing deck",
+        "Qualified nursery assemblage",
+        "Flow debris",
+        "Maintenance access"
+      ],
+      "status": "Authored dossier; not constructed",
+      "dossier_anchor": "ori-poi-024",
+      "placement_type": "supported_overwater_structure",
+      "shore_access_required": true,
+      "placement_note": "Coordinates retained intentionally over authored bay water; supporting structure and shore connection require construction design"
+    }
+  ],
+  "orbital_annexes": [
+    {
+      "id": "ORI-ORB-01",
+      "name": "Mirror Ring",
+      "first_service_annex_year_AL": 318,
+      "relationship": "Orbital service, ownership, crews and families linked to Orison",
+      "frame": "Moving orbital frame; no city-local xyz assigned",
+      "orbit_status": "Orbital elements, attitude, pass schedule, power and thermal budgets unresolved",
+      "ground_connection_ids": [
+        "ORI-D10",
+        "ORI-D11"
+      ],
+      "services": [
+        "inspection",
+        "relay",
+        "collector service",
+        "limited reflector passes"
+      ],
+      "limitations": [
+        "Not stationary above Orison",
+        "No deep-midnight illumination from a reflector itself in planetary shadow",
+        "No current verified physically scaled transfer"
+      ]
+    }
+  ],
+  "unresolved": [
+    "High-resolution terrain and bathymetry",
+    "Exact district and property boundaries",
+    "Regional hydrology and drought coverage",
+    "Actual firm electrical supply and end-use model",
+    "Species ranges and nursery salinity coexistence",
+    "Street-level route alignments and accessible transfers",
+    "Runtime local-to-planet transform",
+    "Orbital annex elements and operation",
+    "Asset catalog family mapping",
+    "Actual construction and visual verification"
+  ]
+}

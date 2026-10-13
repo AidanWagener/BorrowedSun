@@ -1,4 +1,4 @@
-# Atlas arithmetic — edition 0.1
+# Atlas arithmetic — edition 0.2
 
 Generated from `nacre_atlas.json` by `Tools/World/build_atlas.py`. Distances are spherical shortest-path lower bounds, not surveyed transport routes. Constant cruise times exclude ascent, routing, weather, stops, waiting and landing. No game time acceleration is specified.
 
