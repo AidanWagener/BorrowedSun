@@ -16,6 +16,9 @@ $sources+=@([pscustomobject]@{path='SourceArt/Generated/IndigoSunWeave.png';sha2
 $workshop=Get-Content -LiteralPath (Join-Path $ctx.Root 'SourceArt/LanternWorkshop/workshop-manifest.json') -Raw | ConvertFrom-Json
 if($workshop.materialCount -ne 7){throw 'Workshop manifest must declare the seven authored workshop materials.'}
 $sources+=@($workshop.assets)+@($workshop.files)
+$wood=Get-Content -LiteralPath (Join-Path $ctx.Root 'Docs/Registers/workshop-surface-intake.json') -Raw | ConvertFrom-Json
+if($wood.schemaVersion -ne 1 -or @($wood.files).Count -ne 3){throw 'Workshop wood intake must contain the three reviewed PBR maps.'}
+$sources+=@($wood.files)
 foreach($source in $sources) {
     $file=Resolve-ContainedPath $ctx.Root $source.path
     Assert-NoReparsePoint $file
@@ -38,7 +41,7 @@ try {
     $expected=1+9+$kit.assetCount
     foreach($asset in $register.assets){foreach($mat in $asset.materials){$expected+=@($mat.maps.PSObject.Properties).Count;if($asset.type -eq 'model'){$expected++}};if($asset.type -eq 'model'){$expected++}}
     if($WorkshopOnly){$expected=0}
-    $expected+=1+$workshop.materialCount+$workshop.assetCount
+    $expected+=1+$workshop.materialCount+$workshop.assetCount+@($wood.files).Count
     $paths=@($report.assets | Sort-Object -Unique)
     if($report.success -ne $true -or $report.assetCount -ne $expected -or $paths.Count -ne $expected){throw ('Market report is incomplete. Expected '+$expected+'; found '+$paths.Count)}
     $content=Join-Path (Split-Path $ctx.Project -Parent) 'Content'

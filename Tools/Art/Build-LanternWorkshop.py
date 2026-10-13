@@ -1,7 +1,7 @@
 """Original Second Dawn repair-shop kit; pinned Blender, centimetres, front -Y.
 
 FBX import converts the front to Unreal +Y. The recipe uses Unreal coordinates.
-Run: blender --background --python Tools/Art/Build-LanternWorkshop.py
+Run: blender --background --factory-startup --python Tools/Art/Build-LanternWorkshop.py
 """
 from pathlib import Path
 import bpy, bmesh, math, json, hashlib
@@ -25,6 +25,87 @@ for name, color, metal, rough in [
     p.inputs['Metallic'].default_value=metal; p.inputs['Roughness'].default_value=rough
     MATS[name]=m
 parts=[]; assets=[]
+UV_TILE_CM=60.0
+
+def bump(value,center,radius):
+    """Compact smooth authored influence; exactly zero outside the contact region."""
+    t=max(0.0,1.0-abs(value-center)/radius)
+    return t*t*(3-2*t)
+
+def patch(x,y,cx,cy,rx,ry):
+    return bump(math.sqrt(((x-cx)/rx)**2+((y-cy)/ry)**2),0,1)
+
+def contact_masks(asset,co,normal,material):
+    """G=handled/contact polish, B=localized grime; coordinates are authored cm.
+
+    These regions describe use and construction, not randomized material noise.
+    R remains a separate unsigned angular-edge mask; A is always one.
+    """
+    x,y,z=co; polish=grime=0.0
+    if material not in {'Wood','Brass','Copper','Enamel','Iron'}:return 0.0,0.0
+    if asset=='SM_WorkshopBench':
+        if material=='Wood' and z>92:
+            top=max(0.0,normal.z)
+            # Hands work in front of the tool well and beside the vise.
+            work=max(.65*patch(x,y,-25,-24,70,26),.48*patch(x,y,103,-8,35,24))
+            lip=bump(y,-44.5,8)*max(bump(x,-36,95),.7*bump(x,102,40))
+            polish=top*work+.55*lip*bump(z,99,7)
+            # Oily servicing spot, rear tool-well corner, and narrow plank joints.
+            grime=top*(.40*patch(x,y,109,12,19,14)+.28*patch(x,y,-113,32,30,12))
+            seam=max(bump(y,joint,1.3) for joint in [-28,-9.5,9,27.5])
+            grime=max(grime,.22*seam*bump(z,101,4)*bump(x,112,35))
+        if z<20:
+            grime=max(grime,.72*bump(z,0,20))
+        for drawer in [-101,0,101]:
+            if material=='Brass':
+                polish=max(polish,.90*bump(x,drawer,12)*bump(y,-47,7)*bump(z,76,7))
+                grime=max(grime,.35*max(bump(x,drawer-10,4),bump(x,drawer+10,4))*bump(y,-44,3)*bump(z,79,4))
+            elif material=='Enamel':
+                front=bump(y,-42,3)*max(0.0,-normal.y)
+                polish=max(polish,.32*patch(x,z,drawer,76,23,10)*front)
+                grime=max(grime,.30*bump(x,drawer+42,8)*bump(z,65,5)*front)
+        if material=='Iron' and z>96:
+            polish=max(polish,.35*patch(x,y,100,-40,22,19)*bump(z,111,16))
+    elif asset=='SM_WorkshopRack':
+        grime=.65*bump(z,0,24)
+        for shelf in [12,73,136,201,267]:
+            lip=bump(y,-30.5,7)*bump(z,shelf+2.5,6)
+            hand=max(bump(x,bay,31) for bay in [-115,-38,38,115])
+            polish=max(polish,.56*lip*hand)
+            back=bump(y,23,9)*bump(z,shelf+4,8)
+            corner=max(bump(x,divider,12) for divider in [-151,-78,0,78,151])
+            grime=max(grime,.44*back*corner)
+        if material=='Brass':
+            polish=max(polish,.62*bump(y,-32,5)*bump(z,46,5))
+    elif asset=='SM_WorkshopToolTray':
+        if material=='Wood':
+            polish=.46*bump(z,5,4)*max(bump(x,-37,4),bump(x,37,4),bump(y,-20,4))
+            grime=.34*bump(z,1,2)*max(patch(x,y,-31,15,10,8),patch(x,y,29,14,10,8))
+        else:polish=.44*bump(y,-12,9)
+    return min(1.0,polish),min(1.0,grime)
+
+def author_uv(ob,asset,index):
+    """UV0: V follows each board's long axis; end caps have a transverse chart.
+
+    The texture is assumed to have vertical grain. Both axes are 60 cm per
+    tile. Stable component offsets avoid identical grain on adjacent boards.
+    """
+    for existing in list(ob.data.uv_layers):ob.data.uv_layers.remove(existing)
+    layer=ob.data.uv_layers.new(name='UVMap')
+    lo=[min(v.co[k] for v in ob.data.vertices) for k in range(3)]
+    hi=[max(v.co[k] for v in ob.data.vertices) for k in range(3)]
+    grain=ob.get('grain_axis',max(range(3),key=lambda k:hi[k]-lo[k]))
+    digest=hashlib.sha256(json.dumps([asset,index,lo,hi],sort_keys=True).encode()).digest()
+    offset=(int.from_bytes(digest[:4],'little')/2**32,int.from_bytes(digest[4:8],'little')/2**32)
+    for face in ob.data.polygons:
+        dominant=max(range(3),key=lambda k:abs(face.normal[k]))
+        axes=[k for k in range(3) if k!=dominant]
+        wood=ob.data.materials[face.material_index].name=='Wood'
+        if wood and dominant!=grain:axes=[next(k for k in axes if k!=grain),grain]
+        for li in face.loop_indices:
+            co=ob.data.vertices[ob.data.loops[li].vertex_index].co
+            layer.data[li].uv=(co[axes[0]]/UV_TILE_CM+(offset[0] if wood else 0),
+                               co[axes[1]]/UV_TILE_CM+(offset[1] if wood else 0))
 
 def geom(name, verts, faces, mat, smooth=False):
     d=bpy.data.meshes.new(name); d.from_pydata(verts,[],faces); d.update()
@@ -33,11 +114,36 @@ def geom(name, verts, faces, mat, smooth=False):
     for p in d.polygons:p.use_smooth=smooth
     parts.append(ob); return ob
 
-def box(p,s,mat='Wood',edge=.6):
-    v=[tuple(p[k]+sign[k]*s[k]/2 for k in range(3)) for sign in [(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),(-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]]
-    ob=geom('Joinery',v,[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)],mat)
+def box(p,s,mat='Wood',edge=.6,mask_step=None):
+    if mask_step:
+        # Matching anisotropic grids on the six sides preserve a closed surface.
+        # Only components carrying authored spatial masks opt into this density.
+        steps=[max(1,math.ceil(d/mask_step)) for d in s];v=[];f=[];indices={}
+        def vertex(grid):
+            key=tuple(grid)
+            if key not in indices:
+                indices[key]=len(v)
+                v.append([p[k]+(grid[k]/steps[k]-.5)*s[k] for k in range(3)])
+            return indices[key]
+        for fixed in range(3):
+            a,b=[k for k in range(3) if k!=fixed]
+            for side in [-1,1]:
+                for ia in range(steps[a]):
+                    for ib in range(steps[b]):
+                        corners=[]
+                        for da,db in [(0,0),(0,1),(1,1),(1,0)]:
+                            grid=[0,0,0];grid[fixed]=0 if side<0 else steps[fixed]
+                            grid[a]=ia+da;grid[b]=ib+db;corners.append(vertex(grid))
+                        f.append(corners)
+        ob=geom('Joinery',v,f,mat)
+        ob['mask_grid']=True
+    else:
+        # Conventional eight-corner box for pieces without spatial wear regions.
+        v=[tuple(p[k]+sign[k]*s[k]/2 for k in range(3)) for sign in [(-1,-1,-1),(1,-1,-1),(1,1,-1),(-1,1,-1),(-1,-1,1),(1,-1,1),(1,1,1),(-1,1,1)]]
+        ob=geom('Joinery',v,[(0,3,2,1),(4,5,6,7),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7)],mat)
+    if mat=='Wood':ob['grain_axis']=max(range(3),key=lambda k:s[k])
     if edge:
-        b=ob.modifiers.new('Rounded working edges','BEVEL'); b.width=edge; b.segments=3
+        b=ob.modifiers.new('Rounded working edges','BEVEL'); b.width=edge; b.segments=3;b.limit_method='ANGLE'
         n=ob.modifiers.new('Face normals','WEIGHTED_NORMAL'); n.keep_sharp=True
     return ob
 
@@ -53,7 +159,13 @@ def lathe(profile,mat='Brass',p=(0,0,0),n=48):
     bm.to_mesh(ob.data); bm.free(); ob.data.update()
     return ob
 
-def tube(points,r,mat='Brass',closed=False):
+def tube(points,r,mat='Brass',closed=False,mask_step=None):
+    if mask_step:
+        sampled=[]
+        for a,b in zip(points,points[1:]):
+            a,b=Vector(a),Vector(b);count=max(1,math.ceil((b-a).length/mask_step))
+            sampled.extend(tuple(a.lerp(b,i/count)) for i in range(count))
+        points=sampled+[points[-1]]
     d=bpy.data.curves.new('Bent tube','CURVE'); d.dimensions='3D'; d.bevel_depth=r; d.bevel_resolution=2; d.use_fill_caps=True
     s=d.splines.new('POLY'); s.points.add(len(points)-1)
     for v,p in zip(s.points,points):v.co=(*p,1)
@@ -77,7 +189,7 @@ def lettering(text,p,size,mat='Ivory'):
 
 def finish(name,collision=False):
     bpy.ops.object.select_all(action='DESELECT')
-    for ob in parts:
+    for index,ob in enumerate(parts):
         ob.select_set(True); bpy.context.view_layer.objects.active=ob
         was_tube=ob.type=='CURVE'
         if ob.type!='MESH':bpy.ops.object.convert(target='MESH')
@@ -87,6 +199,15 @@ def finish(name,collision=False):
             bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.00001)
             bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces)); bm.to_mesh(ob.data); bm.free()
         for m in list(ob.modifiers):bpy.ops.object.modifier_apply(modifier=m.name)
+        if ob.get('mask_grid'):
+            # Bevel can duplicate a vertex where a straight grid edge meets its
+            # rim. Weld only this one component, before UVs, never adjacent boards.
+            bm=bmesh.new();bm.from_mesh(ob.data)
+            bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.00001)
+            bmesh.ops.dissolve_degenerate(bm,edges=list(bm.edges),dist=.00001)
+            assert all(e.is_manifold for e in bm.edges),(name,index,'grid component must remain closed')
+            bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(ob.data);bm.free()
+        author_uv(ob,name,index)
         ob.select_set(False)
     for ob in parts:ob.select_set(True)
     bpy.context.view_layer.objects.active=parts[0]; bpy.ops.object.join(); ob=bpy.context.object; ob.name=name
@@ -102,13 +223,8 @@ def finish(name,collision=False):
         return face.calc_area()
     bmesh.ops.delete(bm,geom=[f for f in bm.faces if stable_area(f)<1e-8],context='FACES_ONLY')
     bm.to_mesh(ob.data); bm.free(); ob.data.update()
-    # Curves may bring their own UV0. Export exactly one complete channel.
-    for existing in list(ob.data.uv_layers):ob.data.uv_layers.remove(existing)
-    layer=ob.data.uv_layers.new(name='UVMap')
-    for p in ob.data.polygons:
-        axes=[i for i in range(3) if i!=max(range(3),key=lambda k:abs(p.normal[k]))]
-        for j in p.loop_indices:
-            v=ob.data.vertices[ob.data.loops[j].vertex_index].co; layer.data[j].uv=(v[axes[0]]/120,v[axes[1]]/120)
+    # Each component already has its full UV0; joining preserves the grain charts.
+    assert len(ob.data.uv_layers)==1
     # An angular edge mask drives restrained finish changes in the Unreal materials.
     # This is geometric normal variation, not baked occlusion or signed curvature.
     normals=[Vector((0,0,0)) for _ in ob.data.vertices]; counts=[0]*len(normals)
@@ -116,31 +232,41 @@ def finish(name,collision=False):
         for vi in face.vertices:normals[vi]+=face.normal; counts[vi]+=1
     wear=[min(1,max(0,(1-n.length/max(1,c))*9)) for n,c in zip(normals,counts)]
     color=ob.data.color_attributes.new(name='SurfaceWear',type='FLOAT_COLOR',domain='CORNER')
-    for loop in ob.data.loops:color.data[loop.index].color=(wear[loop.vertex_index],0,0,1)
+    for face in ob.data.polygons:
+        material=ob.data.materials[face.material_index].name
+        for li in face.loop_indices:
+            loop=ob.data.loops[li];polish,grime=contact_masks(name,ob.data.vertices[loop.vertex_index].co,face.normal,material)
+            color.data[li].color=(wear[loop.vertex_index],polish,grime,1)
     ob.data.color_attributes.active_color=color
+    ob.data.calc_loop_triangles()
+    uv=ob.data.uv_layers[0].data
+    for tri in ob.data.loop_triangles:
+        a,b,c=[uv[li].uv for li in tri.loops]
+        assert abs((b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x))>1e-14,(name,tri.polygon_index,'degenerate UV')
     path=OUT/(name+'.fbx')
     bpy.ops.export_scene.fbx(filepath=str(path),use_selection=True,object_types={'MESH'},global_scale=1,
         apply_unit_scale=True,apply_scale_options='FBX_SCALE_NONE',axis_forward='-Y',axis_up='Z',
-        mesh_smooth_type='FACE',use_mesh_modifiers=True,add_leaf_bones=False,bake_anim=False,path_mode='STRIP')
-    ob.data.calc_loop_triangles()
+        mesh_smooth_type='FACE',use_mesh_modifiers=True,add_leaf_bones=False,bake_anim=False,path_mode='STRIP',
+        colors_type='LINEAR') # SurfaceWear is numeric data, never display-color sRGB.
     assets.append(dict(name=name,path=path.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
-        dimensionsCm=list(ob.dimensions),triangles=len(ob.data.loop_triangles),collision=collision))
+        dimensionsCm=list(ob.dimensions),triangles=len(ob.data.loop_triangles),collision=collision,
+        surfaceWearRange={channel:[min(c.color[i] for c in color.data),max(c.color[i] for c in color.data)] for i,channel in enumerate('RGB')}))
     ob.location=((len(assets)-1)%4*500,((len(assets)-1)//4)*500,0)
     parts.clear(); print('EXPORTED',name,assets[-1]['triangles'],flush=True)
 
 # A heavy repair bench: separate boards, pegged joints, drawers, tool well and vice.
 for x in [-137,137]:
     for y in [-37,37]:
-        box((x,y,47),(13,13,94),edge=1.1)
-        box((x,y,7),(15,15,14),'Iron',.7)
+        box((x,y,47),(13,13,94),edge=1.1,mask_step=9)
+        box((x,y,7),(15,15,14),'Iron',.7,mask_step=4)
     box((x,0,30),(9,75,9))
 box((0,0,28),(278,7,12))
-for i in range(5):box((0,-37+i*18.5,98),(302,18,8),edge=1)
+for i in range(5):box((0,-37+i*18.5,98),(302,18,8),edge=1,mask_step=6)
 for x in [-101,0,101]:
     box((x,0,76),(95,75,30),'Wood',.8)
-    box((x,-40,76),(94,4,26),'Enamel',.8)
+    box((x,-40,76),(94,4,26),'Enamel',.8,mask_step=4)
     for z in [65,87]:box((x,-43,z),(88,2,1.5),'Brass',.2)
-    tube([(x-10,-44,79),(x-10,-48,76),(x+10,-48,76),(x+10,-44,79)],1.3,'Brass')
+    tube([(x-10,-44,79),(x-10,-48,76),(x+10,-48,76),(x+10,-44,79)],1.3,'Brass',mask_step=3)
     for dx in [-41,41]:
         for z in [66,86]:rivet(x+dx,-44,z)
 for x in [-145,145]:
@@ -155,16 +281,16 @@ tube([(125,-42,93),(125,-42,120)],1.3,'Brass')
 finish('SM_WorkshopBench',True)
 
 # Freestanding stock cabinet. Each shelf and divider has thickness and visible feet.
-for x in [-156,156]:box((x,0,132),(10,51,264),edge=1.2)
-box((0,24,135),(304,5,255),'Enamel',.6)
-for z in [12,73,136,201,267]:box((0,-2,z),(320,57,7),edge=.7)
-for x in [-78,0,78]:box((x,0,171),(5,48,188))
+for x in [-156,156]:box((x,0,132),(10,51,264),edge=1.2,mask_step=12)
+box((0,24,135),(304,5,255),'Enamel',.6,mask_step=12)
+for z in [12,73,136,201,267]:box((0,-2,z),(320,57,7),edge=.7,mask_step=9)
+for x in [-78,0,78]:box((x,0,171),(5,48,188),mask_step=12)
 for x in [-115,-38,38,115]:
     box((x,-27,43),(72,4,47),'Enamel',.6)
     for i in range(4):box((x,-30,27+i*10),(61,3,4),'Wood',.6)
     rivet(x+26,-32,46)
-for x in [-147,147]:box((x,-30,140),(3,2,255),'Brass',.3)
-for x in [-143,143]:box((x,26,342),(10,10,150),'Wood',.9)
+for x in [-147,147]:box((x,-30,140),(3,2,255),'Brass',.3,mask_step=12)
+for x in [-143,143]:box((x,26,342),(10,10,150),'Wood',.9,mask_step=12)
 box((0,26,410),(310,10,9),'Wood',.8)
 for side in [-1,1]:
     tube([(side*143,26,352),(side*118,26,352),(side*118,-16,352)],1.8,'Iron')
@@ -233,9 +359,9 @@ tube([(15,0,8),(25,6,3),(38,-8,2),(48,-4,2)],1.3,'Shadow')
 finish('SM_WorkshopCableReel')
 
 # A tray of repair tools, measured to rest on the bench rather than float above it.
-box((0,0,1),(76,43,2),'Wood',.5)
-for x in [-37,37]:box((x,0,4),(2,43,7),'Wood',.5)
-for y in [-20,20]:box((0,y,4),(76,2,7),'Wood',.5)
+box((0,0,1),(76,43,2),'Wood',.5,mask_step=5)
+for x in [-37,37]:box((x,0,4),(2,43,7),'Wood',.5,mask_step=5)
+for y in [-20,20]:box((0,y,4),(76,2,7),'Wood',.5,mask_step=5)
 for i in range(4):
     x=-24+i*16;box((x,5,4),(5,17,5),'Wood',1)
     tube([(x,-4,4),(x,-16,4)],1.15,'Iron')
@@ -318,5 +444,7 @@ bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'LanternWorkshop.blend'))
 files=[dict(path=p.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in [definition,OUT/'LanternWorkshop.blend']]
 (OUT/'workshop-manifest.json').write_text(json.dumps(dict(schemaVersion=1,author='Original Borrowed Sun Second Dawn workshop',
     blenderVersion=bpy.app.version_string,units='centimetres',assetCount=len(assets),materialCount=7,assets=assets,files=files,
+    uv0=dict(tileSizeCm=UV_TILE_CM,woodGrainAxis='V follows each board longest axis; end caps use transverse projection',boardOffsets='deterministic per construction component'),
+    vertexColor=dict(name='SurfaceWear',domain='CORNER',encoding='linear numeric masks; FBX colors_type=LINEAR',R='unsigned angular-edge variation; not ambient occlusion or signed curvature',G='authored contact polish: hands, work zones, drawer handles and shelf lips',B='authored localized grime: servicing spot, joints, rear shelf corners and feet',A='constant one'),
     assembly=definition.relative_to(ROOT).as_posix(),assemblyPartCount=len(recipe)),indent=2)+'\n',encoding='utf-8',newline='\n')
 print('WORKSHOP COMPLETE',len(assets),'meshes',len(recipe),'parts',flush=True)

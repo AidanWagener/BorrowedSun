@@ -9,146 +9,314 @@
     {
       "name": "SM_WorkshopBench",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopBench.fbx",
-      "sha256": "9ab590a56384f532c56b620028fadc5e788bd5c1455c508a8e89a0291183050e",
+      "sha256": "02037a52ec7e17df23d8adb332f953d0f69a6e4dc147f767078829784ab4a4e5",
       "dimensionsCm": [
         302.0,
         99.0,
         120.0
       ],
-      "triangles": 12728,
-      "collision": true
+      "triangles": 32528,
+      "collision": true,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.858782172203064
+        ],
+        "B": [
+          0.0,
+          0.7200000286102295
+        ]
+      }
     },
     {
       "name": "SM_WorkshopRack",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopRack.fbx",
-      "sha256": "0d18c0a5090c790d0bd87a2690a12f3799727207d385980d7cac4eb8d25aa950",
+      "sha256": "b3a7b60303e81adb1fb35fea83042799a25af2fedb406d54fac9c10d79d0c801",
       "dimensionsCm": [
         322.0,
         65.29000091552734,
         417.0
       ],
-      "triangles": 12528,
-      "collision": true
+      "triangles": 33512,
+      "collision": true,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.5867716073989868
+        ],
+        "B": [
+          0.0,
+          0.6499999761581421
+        ]
+      }
     },
     {
       "name": "SM_WorkshopDeskLamp",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopDeskLamp.fbx",
-      "sha256": "0dd5c224e3da1eefb8d7f20931025f79fd86d8308561f77c3f13c73a5d947717",
+      "sha256": "c4163eb9e42a0ccbec92b6329ed84edbf9f1356e6bb3d5c3612cefae6ccd70c6",
       "dimensionsCm": [
         82.00616455078125,
         70.58985900878906,
         80.0
       ],
       "triangles": 3176,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopPetalLamp",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopPetalLamp.fbx",
-      "sha256": "34b7fc021d73c3c58bfec831961451bf8bb99a40b2ee50cb590accc008285ccd",
+      "sha256": "7af44b729897501c7e915f00a961259c93cf6cc8b577f0ecfba60f09178a4360",
       "dimensionsCm": [
         52.563941955566406,
         52.563941955566406,
         84.19999694824219
       ],
       "triangles": 6912,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopSunCell",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopSunCell.fbx",
-      "sha256": "f4a28ff013e8b098b57d6cd35cc8bfe3255324fe5f45161a1e8ebda06d5aac79",
+      "sha256": "e356782c347ef32d3eb7f4940aa8c53d8ae6a11a317bfdaa9f757a4d95e46e6c",
       "dimensionsCm": [
         17.0,
         17.0,
         38.0
       ],
       "triangles": 1564,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopCellRepair",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopCellRepair.fbx",
-      "sha256": "3c807e8a38a6a5d8fb90345890e890f5a3e367e675fcd6866c5e11ff7850588f",
+      "sha256": "5c60b4873a75b8567de34d37d819ef316e441d267738a193b497d355daf7c084",
       "dimensionsCm": [
         37.0,
         19.899999618530273,
         27.0
       ],
       "triangles": 7328,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopCableReel",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopCableReel.fbx",
-      "sha256": "68d93bad90e6b9adc0916d5cf2647e12e8698a71a7582679ea17df77760defb4",
+      "sha256": "3fb2c772b9f106b43ef081a8c6fad869094aa6ca57fb0e181b5d092f28555ad7",
       "dimensionsCm": [
         67.46762084960938,
         38.0,
         31.0
       ],
       "triangles": 12288,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopToolTray",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopToolTray.fbx",
-      "sha256": "4a37aa79bd2da7c08191e3217037b7d479c40b30ab1d073da199682dbbe266ee",
+      "sha256": "98cd3c10f4f97cbf94d7d0500a23df8f3578ef24ee48866e4231e99f1693597f",
       "dimensionsCm": [
         76.0,
         43.0,
         7.5
       ],
-      "triangles": 2644,
-      "collision": false
+      "triangles": 5644,
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.37144774198532104
+        ],
+        "B": [
+          0.0,
+          0.18710821866989136
+        ]
+      }
     },
     {
       "name": "SM_WorkshopNameplate",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopNameplate.fbx",
-      "sha256": "f51661b12d441fe9fea83c4793b1f3bb48f86b8bedb4285ceaea8cc766af9197",
+      "sha256": "d5d0ea92a7521953e8570a77d4cd168bb96dfde11bd94bf3b36c6d2e9458f4a9",
       "dimensionsCm": [
         252.0,
         11.050000190734863,
         67.0
       ],
       "triangles": 8188,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopTradeSign",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopTradeSign.fbx",
-      "sha256": "0e122aa01c8aab34063906bc05da778c6e903e33149c1e04ec68878cf0efe58e",
+      "sha256": "3d6bdec5637e2411f43eb50d73bc9dd23e30f1ec99f8cadc20d991d3d6d6ceda",
       "dimensionsCm": [
         92.0,
         9.700000762939453,
         159.39999389648438
       ],
       "triangles": 20380,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopHangingRail",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopHangingRail.fbx",
-      "sha256": "e499ff90083cb8211d01af512330788db9e324c9c8236558407aa306ad099f89",
+      "sha256": "c2877b4dc2fa5705ff4a98a0327d99c50d95cef64070ca5bf2a444a38de7042d",
       "dimensionsCm": [
         312.0,
         126.68382263183594,
         48.0
       ],
       "triangles": 792,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          0.1531020700931549,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     },
     {
       "name": "SM_WorkshopSuspension",
       "path": "SourceArt/LanternWorkshop/SM_WorkshopSuspension.fbx",
-      "sha256": "1b5abcd63d558bf1dd141bdc9d06838505191f7cb891735f58a070768549e84b",
+      "sha256": "15ccd083f665184c39d7c70af38d176f0f0fcf92f671bf35d9211efb3a5478a0",
       "dimensionsCm": [
         1.600000023841858,
         1.600000023841858,
         100.0
       ],
       "triangles": 28,
-      "collision": false
+      "collision": false,
+      "surfaceWearRange": {
+        "R": [
+          1.0,
+          1.0
+        ],
+        "G": [
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.0,
+          0.0
+        ]
+      }
     }
   ],
   "files": [
@@ -158,9 +326,23 @@
     },
     {
       "path": "SourceArt/LanternWorkshop/LanternWorkshop.blend",
-      "sha256": "004d1c05e2fc02b1c871144b6802a1f7b62bd5951509366a13c277d22930aebe"
+      "sha256": "ae18df78f604a5166dc37751a4f73dcadbd36359376676ca2d74035fdded194e"
     }
   ],
+  "uv0": {
+    "tileSizeCm": 60.0,
+    "woodGrainAxis": "V follows each board longest axis; end caps use transverse projection",
+    "boardOffsets": "deterministic per construction component"
+  },
+  "vertexColor": {
+    "name": "SurfaceWear",
+    "domain": "CORNER",
+    "encoding": "linear numeric masks; FBX colors_type=LINEAR",
+    "R": "unsigned angular-edge variation; not ambient occlusion or signed curvature",
+    "G": "authored contact polish: hands, work zones, drawer handles and shelf lips",
+    "B": "authored localized grime: servicing spot, joints, rear shelf corners and feet",
+    "A": "constant one"
+  },
   "assembly": "SourceArt/LanternWorkshop/SecondDawn.assembly.json",
   "assemblyPartCount": 39
 }

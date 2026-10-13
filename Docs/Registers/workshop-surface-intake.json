@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "reviewedDate": "2026-10-13",
+  "id": "fine_grained_wood",
+  "name": "Fine Grained Wood",
+  "author": "Rob Tuytel",
+  "source": "https://polyhaven.com/a/fine_grained_wood",
+  "fileMetadata": "https://api.polyhaven.com/files/fine_grained_wood",
+  "infoMetadata": "https://api.polyhaven.com/info/fine_grained_wood",
+  "license": "CC0-1.0",
+  "licenseSource": "https://polyhaven.com/license",
+  "costEUR": 0,
+  "licenseDecision": "CC0 permits commercial use, modification and redistribution; original scan bytes retained.",
+  "apiTerms": "https://github.com/Poly-Haven/Public-API/blob/master/ToS.md",
+  "purpose": "Continuous grain for original Second Dawn joinery; no baked nails or plank seams.",
+  "resolution": "2k",
+  "physicalSizeCm": [
+    60,
+    60
+  ],
+  "grainAxis": "V",
+  "scaleEvidence": "Current asset page width 0.6m and API dimensions about 600x600mm agree; legacy API scale string 30x30CM conflicts and is not used.",
+  "normalConvention": "OpenGL",
+  "flipNormalGreen": true,
+  "maps": {
+    "diff": "SourceArt/PolyHaven/fine_grained_wood/fine_grained_wood_col_2k.png",
+    "normal": "SourceArt/PolyHaven/fine_grained_wood/fine_grained_wood_nor_gl_2k.png",
+    "rough": "SourceArt/PolyHaven/fine_grained_wood/fine_grained_wood_rough_2k.png"
+  },
+  "files": [
+    {
+      "kind": "diff",
+      "path": "SourceArt/PolyHaven/fine_grained_wood/fine_grained_wood_col_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/fine_grained_wood/fine_grained_wood_col_2k.png",
+      "bytes": 5970519,
+      "sourceMD5": "7762bdf53e42e7aa622140788bc5b291",
+      "sha256": "a90e4b26c0fb05b8144c7dacf5f9caa76fc781966ab05b5239b1fc2daad69673"
+    },
+    {
+      "kind": "normal",
+      "path": "SourceArt/PolyHaven/fine_grained_wood/fine_grained_wood_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/fine_grained_wood/fine_grained_wood_nor_gl_2k.png",
+      "bytes": 3210822,
+      "sourceMD5": "c29616d3509274d1ba7c3fa7a111045f",
+      "sha256": "8bf311cca68565541749b32c91960e6e40fd9bfce651b923512394d571e21759"
+    },
+    {
+      "kind": "rough",
+      "path": "SourceArt/PolyHaven/fine_grained_wood/fine_grained_wood_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/fine_grained_wood/fine_grained_wood_rough_2k.png",
+      "bytes": 2103115,
+      "sourceMD5": "470f4054f357efccd166b6683c621c06",
+      "sha256": "135bacfcb37c5aed18bf6374ccff063cbaf7d16ad1029b3f1d5a67258be610f7"
+    }
+  ]
+}

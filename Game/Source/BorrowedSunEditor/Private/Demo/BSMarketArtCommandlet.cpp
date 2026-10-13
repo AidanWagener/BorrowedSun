@@ -119,18 +119,41 @@ NormalOut=normalize(float3(sign(V.x)*sqrt(saturate(1-dot(nx,nx))),nx.x,nx.y)*w.x
 return col*Tint.rgb;
 )HLSL");
         if(Name==TEXT("M_MarketPlaster"))C->Code.ReplaceInline(TEXT("return col*Tint.rgb;"),TEXT("return lerp(col*Tint.rgb,float3(.68,.60,.47),.68);"));
-        if(Name==TEXT("M_WorkshopWood"))
-        {
-            Input(TEXT("Wear"),Expr<UMaterialExpressionVertexColor>(M));
-            // Retain the reviewed grain while lifting its black cracks and softening handled edges.
-            C->Code.ReplaceInline(TEXT("return col*Tint.rgb;"),TEXT("RoughOut=clamp(.46+RoughOut*.27-saturate(Wear.r)*.06,.43,.74); return lerp(col*Tint.rgb,float3(.24,.125,.052),.40)*(1.0+saturate(Wear.r)*.06);"));
-        }
         C->RebuildOutputs();auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,C);E->Roughness.Connect(1,C);E->Normal.Connect(2,C);E->Metallic.Connect(0,Scalar(M,Metal));
         M->PostEditChange();return Save(M)?M:nullptr;
     }
     UMaterial* Solid(const FString& Name,FLinearColor Tint,float Metal,float Rough)
     {
         auto* M=NewMaterial(Name);auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,Color(M,Tint));E->Roughness.Connect(0,Scalar(M,Rough));E->Metallic.Connect(0,Scalar(M,Metal));
+        M->PostEditChange();return Save(M)?M:nullptr;
+    }
+    UMaterial* WorkshopWood(const TMap<FString,UTexture2D*>& Maps)
+    {
+        for(const TCHAR* Kind:{TEXT("diff"),TEXT("normal"),TEXT("rough")})if(!Maps.FindRef(Kind))return nullptr;
+        auto* M=NewMaterial(TEXT("M_WorkshopWood"));
+        auto* C=Expr<UMaterialExpressionCustom>(M);C->OutputType=CMOT_Float3;
+        C->Description=TEXT("Board-aligned UV grain with authored contact polish and dirt pockets");
+        auto Input=[&](const TCHAR* Key,UMaterialExpression* Expression){FCustomInput I;I.InputName=Key;I.Input.Connect(0,Expression);C->Inputs.Add(I);};
+        Input(TEXT("Albedo"),Sample(M,Maps.FindRef(TEXT("diff")),SAMPLERTYPE_Color));
+        Input(TEXT("DetailNormal"),Sample(M,Maps.FindRef(TEXT("normal")),SAMPLERTYPE_Normal));
+        Input(TEXT("RoughSample"),Sample(M,Maps.FindRef(TEXT("rough")),SAMPLERTYPE_LinearGrayscale));
+        Input(TEXT("Wear"),Expr<UMaterialExpressionVertexColor>(M));
+        FCustomOutput R;R.OutputName=TEXT("RoughOut");R.OutputType=CMOT_Float1;C->AdditionalOutputs.Add(R);
+        FCustomOutput N;N.OutputName=TEXT("NormalOut");N.OutputType=CMOT_Float3;C->AdditionalOutputs.Add(N);
+        // UV0 belongs to each piece of timber, so grain rotates with boards and the assembly.
+        // R is angular variation; only G describes handled areas, and B describes dirt pockets.
+        C->Code=TEXT(R"HLSL(
+float contact=saturate(Wear.g); float dirt=saturate(Wear.b);
+float handledEdge=saturate(Wear.r)*contact;
+float3 wood=Albedo.rgb*float3(.85,.72,.56);
+wood=lerp(wood,wood*1.17+float3(.008,.005,.002),contact*.24+handledEdge*.16);
+wood=lerp(wood,float3(.032,.024,.016),dirt*.34);
+RoughOut=clamp(.40+RoughSample.r*.28-contact*.12+dirt*.16,.31,.84);
+float2 n=DetailNormal.xy*.38;
+NormalOut=normalize(float3(n,sqrt(saturate(1-dot(n,n)))));
+return wood;
+)HLSL");
+        C->RebuildOutputs();auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,C);E->Roughness.Connect(1,C);E->Normal.Connect(2,C);E->Metallic.Connect(0,Scalar(M,0));
         M->PostEditChange();return Save(M)?M:nullptr;
     }
     UMaterial* WorkshopSurface(const FString& Name,FLinearColor Tint,FLinearColor EdgeTint,float Metal,float EdgeMetal,float Rough,float RoughVariation,float EdgeStrength,bool MilkGlass=false)
@@ -149,10 +172,11 @@ return col*Tint.rgb;
         C->Code=TEXT(R"HLSL(
 float patch=.5+.5*sin(dot(P,float3(.041,.023,.037)))*sin(dot(P,float3(.019,-.031,.027)));
 float fine=sin(dot(P,float3(1.73,1.19,.91)))*sin(dot(P,float3(.77,-1.37,1.51)));
-float worn=saturate(Wear.r)*EdgeStrength*smoothstep(.22,.78,patch);
-RoughOut=clamp(Rough+(patch-.5)*Variation+fine*.008-worn*.12,.22,.86);
-MetalOut=lerp(Metal,EdgeMetal,worn);
-return lerp(Tint.rgb*(.975+patch*.05),EdgeTint.rgb,worn);
+float contact=saturate(Wear.g); float dirt=saturate(Wear.b);
+float worn=saturate(Wear.r)*EdgeStrength*smoothstep(.22,.78,patch)*(.35+.65*contact);
+RoughOut=clamp(Rough+(patch-.5)*Variation+fine*.008-worn*.12-contact*.10+dirt*.16,.22,.86);
+MetalOut=lerp(Metal,EdgeMetal,worn)*(1-dirt*.65);
+return lerp(lerp(Tint.rgb*(.975+patch*.05),EdgeTint.rgb,worn),float3(.026,.023,.018),dirt*.32);
 )HLSL");
         C->RebuildOutputs();auto* E=M->GetEditorOnlyData();E->BaseColor.Connect(0,C);E->Roughness.Connect(1,C);E->Metallic.Connect(2,C);
         if(MilkGlass)
@@ -212,14 +236,22 @@ return lerp(Tint.rgb*(.975+patch*.05),EdgeTint.rgb,worn);
         }
         TMap<FString,UMaterial*> Materials;
         TMap<FString,UTexture2D*> WoodMaps;
+        const auto WoodIntake=Read(TEXT("Docs/Registers/workshop-surface-intake.json"));
+        if(!WoodIntake)return false;
+        bool FlipWoodNormal=false;
+        if(!WoodIntake->TryGetBoolField(TEXT("flipNormalGreen"),FlipWoodNormal))return false;
+        const TSharedPtr<FJsonObject>* WoodSources=nullptr;
+        if(!WoodIntake->TryGetObjectField(TEXT("maps"),WoodSources))return false;
         for(const TCHAR* Kind:{TEXT("diff"),TEXT("normal"),TEXT("rough")})
         {
-            const FString Name=FString(TEXT("T_medieval_wood_surface_"))+Kind;
-            auto* T=LoadObject<UTexture2D>(nullptr,*(Base+TEXT("Textures/")+Name+TEXT(".")+Name));
-            if(!T){UE_LOG(LogTemp,Error,TEXT("Workshop requires reviewed market wood map %s"),*Name);return false;}
+            const FString Name=FString(TEXT("T_WorkshopWood_"))+Kind;
+            FString Relative;
+            if(!(*WoodSources)->TryGetStringField(Kind,Relative))return false;
+            auto* T=Texture(Name,Relative,Kind,FString(Kind)==TEXT("normal")&&FlipWoodNormal);
+            if(!T){UE_LOG(LogTemp,Error,TEXT("Workshop wood import failed: %s"),*Name);return false;}
             WoodMaps.Add(Kind,T);
         }
-        Materials.Add(TEXT("Wood"),TiledMaterial(TEXT("M_WorkshopWood"),WoodMaps,140,FLinearColor(.90f,.72f,.50f),0,.16f));
+        Materials.Add(TEXT("Wood"),WorkshopWood(WoodMaps));
         Materials.Add(TEXT("Brass"),WorkshopSurface(TEXT("M_WorkshopBrass"),FLinearColor(.48f,.285f,.105f),FLinearColor(.68f,.43f,.19f),.88f,.98f,.42f,.12f,.65f));
         Materials.Add(TEXT("Copper"),WorkshopSurface(TEXT("M_WorkshopCopper"),FLinearColor(.065f,.17f,.13f),FLinearColor(.42f,.20f,.07f),.18f,.92f,.62f,.18f,.62f));
         Materials.Add(TEXT("Enamel"),WorkshopSurface(TEXT("M_WorkshopEnamel"),FLinearColor(.026f,.10f,.125f),FLinearColor(.14f,.11f,.075f),0,.55f,.38f,.10f,.22f));
