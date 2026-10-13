@@ -437,7 +437,8 @@
       "estimateHours": [24, 80],
       "confidence": "low",
       "acceptance": "Ten props carry, rotate, drop, throw, settle and save without duplication; a collection stub accepts or rejects transfers atomically; sunseed custody remains protected.",
-      "evidence": ["Docs/Operations/OBJECT_LEDGER_2026-10-13.md", "Docs/Operations/OBJECT_COURT_2026-10-13.md"]
+      "evidence": ["Docs/Operations/OBJECT_LEDGER_2026-10-13.md", "Docs/Operations/OBJECT_COURT_2026-10-13.md", "Docs/Operations/CITY_OBJECTS_2026-10-13.md"],
+      "handoff": "Development city integration passed; additional qualification and Shipping promotion deferred behind the explicit planet-worldbuilding priority in ADR-013."
     },
     {
       "id": "BS-028",

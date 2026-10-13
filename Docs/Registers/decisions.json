@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "decisions": [
     {
       "id": "ADR-001",
@@ -73,6 +73,13 @@
       "decision": "Author loose props for carrying, throwing and collection; stage later destruction",
       "reason": "User approved staged local destruction followed by selected structural destruction on 2026-10-13; broader collapse remains research. Stable identity, complete geometry and component boundaries are cheaper to establish before large-scale dressing",
       "revisit": "After ten-object persistence proof and a bounded breakage prototype"
+    },
+    {
+      "id": "ADR-013",
+      "decision": "Complete existing city prop integration, then author the full canonical living planet before construction or additional mechanics",
+      "reason": "Explicit user redirection on 2026-10-13 and newly created active goal. Requires deep lore, coherent mapped regions/cities, ecology, cultures, weather, exploration, people, events and asset production requirements. The Development mechanics handoff passed 20 smoke tests and 57 rendered checks.",
+      "revisit": "After the complete bible, atlas and lore have passed coherence review; earlier bounded-release proposals do not limit this world-authoring scope",
+      "evidence": ["Docs/World/README.md", "Docs/World/CANON_RECONCILIATION.md", "Docs/Operations/CITY_OBJECTS_2026-10-13.md"]
     }
   ]
 }
