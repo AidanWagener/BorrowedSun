@@ -1,0 +1,925 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-010",
+  "city_name": "Velis",
+  "region_id": "REG-016",
+  "status": "authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "VELIS.md",
+  "frame": {
+    "origin_lon_deg": -127,
+    "origin_lat_deg": -38,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -10000,
+      -12000,
+      13000,
+      15000
+    ]
+  },
+  "population": 120000,
+  "gross_area_allowance_km2": 64,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "VEL-WATER-01",
+      "name": "Velis water and northern sea approach",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          -10000,
+          15000
+        ],
+        [
+          13000,
+          15000
+        ],
+        [
+          13000,
+          11500
+        ],
+        [
+          6000,
+          10800
+        ],
+        [
+          2000,
+          10600
+        ],
+        [
+          500,
+          10297.442586767487
+        ],
+        [
+          700,
+          8500
+        ],
+        [
+          1000,
+          6200
+        ],
+        [
+          0,
+          4000
+        ],
+        [
+          -400,
+          2000
+        ],
+        [
+          400,
+          0
+        ],
+        [
+          1300,
+          -1300
+        ],
+        [
+          2700,
+          -2800
+        ],
+        [
+          4400,
+          -4900
+        ],
+        [
+          6300,
+          -7200
+        ],
+        [
+          8000,
+          -9300
+        ],
+        [
+          9900,
+          -12000
+        ],
+        [
+          9100,
+          -12000
+        ],
+        [
+          7200,
+          -9300
+        ],
+        [
+          5500,
+          -7200
+        ],
+        [
+          3600,
+          -4900
+        ],
+        [
+          1900,
+          -2800
+        ],
+        [
+          500,
+          -1300
+        ],
+        [
+          -400,
+          0
+        ],
+        [
+          -1400,
+          2000
+        ],
+        [
+          -1000,
+          4000
+        ],
+        [
+          0,
+          6200
+        ],
+        [
+          -300,
+          8500
+        ],
+        [
+          -500,
+          10297.442586767487
+        ],
+        [
+          -2000,
+          10800
+        ],
+        [
+          -6000,
+          11200
+        ],
+        [
+          -10000,
+          11800
+        ],
+        [
+          -10000,
+          15000
+        ]
+      ],
+      "surface_m": 0,
+      "status": "One connected authored river/estuary/sea outline. Zero is the sea reference only; flowing reach heights follow the channel. Local geometry refines watershed controls, not a surveyed shore."
+    }
+  ],
+  "source_river_id": "RIV-008",
+  "channels": [
+    {
+      "id": "VEL-CHANNEL-01",
+      "name": "Velis water: southeast entry to northern outlet",
+      "points_xyz_m": [
+        [
+          9500,
+          -12000,
+          23
+        ],
+        [
+          7600,
+          -9300,
+          21
+        ],
+        [
+          5900,
+          -7200,
+          19
+        ],
+        [
+          4000,
+          -4900,
+          17
+        ],
+        [
+          2300,
+          -2800,
+          15
+        ],
+        [
+          900,
+          -1300,
+          13.5
+        ],
+        [
+          0,
+          0,
+          12
+        ],
+        [
+          -900,
+          2000,
+          9.5
+        ],
+        [
+          -500,
+          4000,
+          7
+        ],
+        [
+          500,
+          6200,
+          4.5
+        ],
+        [
+          200,
+          8500,
+          1.5
+        ],
+        [
+          0,
+          10297.442586767487,
+          0
+        ],
+        [
+          0,
+          15000,
+          0
+        ]
+      ],
+      "surface_polygon_ids": [
+        "VEL-WATER-01"
+      ],
+      "status": "Nonrising nominal controls through source city height and exactly projected source mouth. Tidal penetration, depths, flood levels and bed geometry unmodeled."
+    }
+  ],
+  "districts": [
+    {
+      "id": "VEL-D01",
+      "name": "Crossing Rooms",
+      "center_xyz_m": [
+        -2200,
+        500,
+        32
+      ],
+      "radii_m": [
+        2500,
+        2000
+      ],
+      "altitude_range_m": [
+        12,
+        85
+      ],
+      "population": 22000,
+      "area_allowance_km2": 8,
+      "character": "Mixed domestic courts, bridge approaches and food streets"
+    },
+    {
+      "id": "VEL-D02",
+      "name": "Renewal Ground",
+      "center_xyz_m": [
+        2400,
+        2000,
+        40
+      ],
+      "radii_m": [
+        2400,
+        2300
+      ],
+      "altitude_range_m": [
+        15,
+        110
+      ],
+      "population": 17000,
+      "area_allowance_km2": 8,
+      "character": "Teaching, recovery, warm public rooms and protected cultivation"
+    },
+    {
+      "id": "VEL-D03",
+      "name": "Rainfold",
+      "center_xyz_m": [
+        -4200,
+        4800,
+        90
+      ],
+      "radii_m": [
+        2800,
+        2400
+      ],
+      "altitude_range_m": [
+        25,
+        180
+      ],
+      "population": 14000,
+      "area_allowance_km2": 10,
+      "character": "Native woodland mosaics, homes and craft around sheltered slopes"
+    },
+    {
+      "id": "VEL-D04",
+      "name": "Low Departure",
+      "center_xyz_m": [
+        2500,
+        8200,
+        14
+      ],
+      "radii_m": [
+        2600,
+        2300
+      ],
+      "altitude_range_m": [
+        3,
+        65
+      ],
+      "population": 12000,
+      "area_allowance_km2": 7,
+      "character": "Lower estuary dispatch, working shore and temporary households"
+    },
+    {
+      "id": "VEL-D05",
+      "name": "South Tables",
+      "center_xyz_m": [
+        1700,
+        -5200,
+        75
+      ],
+      "radii_m": [
+        2700,
+        2300
+      ],
+      "altitude_range_m": [
+        30,
+        160
+      ],
+      "population": 16000,
+      "area_allowance_km2": 9,
+      "character": "Introduced food growing, regional markets and freshwater observation"
+    },
+    {
+      "id": "VEL-D06",
+      "name": "Upper Carry",
+      "center_xyz_m": [
+        8700,
+        -5100,
+        130
+      ],
+      "radii_m": [
+        2800,
+        2800
+      ],
+      "altitude_range_m": [
+        45,
+        260
+      ],
+      "population": 13000,
+      "area_allowance_km2": 9,
+      "character": "Regional freight gateway, trial rooms and qualified material work"
+    },
+    {
+      "id": "VEL-D07",
+      "name": "Stillroof",
+      "center_xyz_m": [
+        -4300,
+        8900,
+        85
+      ],
+      "radii_m": [
+        2700,
+        1800
+      ],
+      "altitude_range_m": [
+        15,
+        180
+      ],
+      "population": 15000,
+      "area_allowance_km2": 7,
+      "character": "Leisure, family terraces and sheltered views toward the coast"
+    },
+    {
+      "id": "VEL-D08",
+      "name": "Broken Branch",
+      "center_xyz_m": [
+        8500,
+        4900,
+        185
+      ],
+      "radii_m": [
+        2800,
+        2900
+      ],
+      "altitude_range_m": [
+        70,
+        400
+      ],
+      "population": 11000,
+      "area_allowance_km2": 6,
+      "character": "Older cultivation slopes, current homes and landscape routes"
+    }
+  ],
+  "places": [
+    {
+      "id": "VEL-POI-001",
+      "name": "A House with Two Springs",
+      "district_id": "VEL-D01",
+      "xyz_m": [
+        -2000,
+        1000,
+        35
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-002",
+      "name": "The Long Loaf Window",
+      "district_id": "VEL-D01",
+      "xyz_m": [
+        -1300,
+        -500,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-003",
+      "name": "The Bridge of Small Loads",
+      "district_id": "VEL-D01",
+      "xyz_m": [
+        0,
+        0,
+        18
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 12,
+      "shore_access_xyz_m": [
+        -600,
+        0,
+        22
+      ]
+    },
+    {
+      "id": "VEL-POI-004",
+      "name": "A Garden That Cannot Be Downloaded",
+      "district_id": "VEL-D02",
+      "xyz_m": [
+        1600,
+        1700,
+        35
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-005",
+      "name": "The Shared Warm Room",
+      "district_id": "VEL-D02",
+      "xyz_m": [
+        3200,
+        2700,
+        50
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-006",
+      "name": "The Patient Failure",
+      "district_id": "VEL-D02",
+      "xyz_m": [
+        3600,
+        600,
+        55
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-007",
+      "name": "Rain Through a Hundred Curtains",
+      "district_id": "VEL-D03",
+      "xyz_m": [
+        -5500,
+        4400,
+        110
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-008",
+      "name": "The Copperfold Keeper",
+      "district_id": "VEL-D03",
+      "xyz_m": [
+        -3400,
+        3900,
+        70
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-009",
+      "name": "A Coat for Someone Else",
+      "district_id": "VEL-D03",
+      "xyz_m": [
+        -4200,
+        6200,
+        110
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-010",
+      "name": "The Briefcase Port",
+      "district_id": "VEL-D04",
+      "xyz_m": [
+        900,
+        8300,
+        8
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-011",
+      "name": "A Berth with a Door",
+      "district_id": "VEL-D04",
+      "xyz_m": [
+        2100,
+        9600,
+        9
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-012",
+      "name": "The Race Not Yet Begun",
+      "district_id": "VEL-D04",
+      "xyz_m": [
+        1200,
+        6500,
+        12
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-013",
+      "name": "The Mother Row",
+      "district_id": "VEL-D05",
+      "xyz_m": [
+        2000,
+        -6100,
+        80
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-014",
+      "name": "The Meal at the End of the Table",
+      "district_id": "VEL-D05",
+      "xyz_m": [
+        200,
+        -4400,
+        60
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-015",
+      "name": "A Window Under Running Water",
+      "district_id": "VEL-D05",
+      "xyz_m": [
+        3100,
+        -4900,
+        40
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-016",
+      "name": "The Trial at the Far End",
+      "district_id": "VEL-D06",
+      "xyz_m": [
+        8200,
+        -4000,
+        130
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-017",
+      "name": "The Strings in the Wall",
+      "district_id": "VEL-D06",
+      "xyz_m": [
+        10200,
+        -6000,
+        180
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-018",
+      "name": "The Carrier Who Stayed",
+      "district_id": "VEL-D06",
+      "xyz_m": [
+        7700,
+        -6500,
+        90
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-019",
+      "name": "The Same Left Shoe",
+      "district_id": "VEL-D07",
+      "xyz_m": [
+        -5100,
+        8200,
+        90
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-020",
+      "name": "The Hush Rink",
+      "district_id": "VEL-D07",
+      "xyz_m": [
+        -3500,
+        8500,
+        70
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-021",
+      "name": "The Headland Picnic",
+      "district_id": "VEL-D07",
+      "xyz_m": [
+        -5300,
+        10000,
+        115
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-022",
+      "name": "The Empty Recovery House",
+      "district_id": "VEL-D08",
+      "xyz_m": [
+        7500,
+        5500,
+        170
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-023",
+      "name": "The Stair Outside the Map",
+      "district_id": "VEL-D08",
+      "xyz_m": [
+        10300,
+        5300,
+        270
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "VEL-POI-024",
+      "name": "The Room Beyond the Trellis",
+      "district_id": "VEL-D08",
+      "xyz_m": [
+        7900,
+        3100,
+        150
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "VEL-T01",
+      "name": "Crossing Rooms interchange",
+      "district_id": "VEL-D01",
+      "xyz_m": [
+        -2200,
+        500,
+        32
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "VEL-T02",
+      "name": "Renewal Ground interchange",
+      "district_id": "VEL-D02",
+      "xyz_m": [
+        2400,
+        2000,
+        40
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "VEL-T03",
+      "name": "Rainfold interchange",
+      "district_id": "VEL-D03",
+      "xyz_m": [
+        -4200,
+        4800,
+        90
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "VEL-T04",
+      "name": "Low Departure interchange",
+      "district_id": "VEL-D04",
+      "xyz_m": [
+        2500,
+        8200,
+        14
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "VEL-T05",
+      "name": "South Tables interchange",
+      "district_id": "VEL-D05",
+      "xyz_m": [
+        1700,
+        -5200,
+        75
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "VEL-T06",
+      "name": "Upper Carry interchange",
+      "district_id": "VEL-D06",
+      "xyz_m": [
+        8700,
+        -5100,
+        130
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "VEL-T07",
+      "name": "Stillroof interchange",
+      "district_id": "VEL-D07",
+      "xyz_m": [
+        -4300,
+        8900,
+        85
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "VEL-T08",
+      "name": "Broken Branch interchange",
+      "district_id": "VEL-D08",
+      "xyz_m": [
+        8500,
+        4900,
+        185
+      ],
+      "regional_gateway": false
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "VEL-L01",
+      "from": "VEL-T01",
+      "to": "VEL-T02",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L02",
+      "from": "VEL-T01",
+      "to": "VEL-T03",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L03",
+      "from": "VEL-T03",
+      "to": "VEL-T07",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L04",
+      "from": "VEL-T02",
+      "to": "VEL-T04",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L05",
+      "from": "VEL-T02",
+      "to": "VEL-T08",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L06",
+      "from": "VEL-T01",
+      "to": "VEL-T05",
+      "mode": "tram",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L07",
+      "from": "VEL-T05",
+      "to": "VEL-T06",
+      "mode": "road",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L08",
+      "from": "VEL-T06",
+      "to": "VEL-T08",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L09",
+      "from": "VEL-T03",
+      "to": "VEL-T05",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L10",
+      "from": "VEL-T07",
+      "to": "VEL-T04",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L11",
+      "from": "VEL-T04",
+      "to": "VEL-T08",
+      "mode": "bus",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    },
+    {
+      "id": "VEL-L12",
+      "from": "VEL-T02",
+      "to": "VEL-T06",
+      "mode": "rail",
+      "status": "service dependency; continuous surveyed alignment, bridges, grades, rights and capacity unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 135,
+    "other_potable_m3_per_turn": 13800,
+    "delivered_potable_m3_per_turn": 30000,
+    "network_loss_fraction": 0.2,
+    "network_input_m3_per_turn": 37500,
+    "edible_product_kg_per_person_per_turn": 1.6,
+    "edible_product_tonnes_per_turn": 192,
+    "electric_average_mw": 110,
+    "electric_peak_mw": 220,
+    "scope": "24-hour civil-turn illustrative demand. Network input is treated distribution supply. Regional agriculture, viable stock exports and transient demand separately identified in prose; yields, nutrition, reliability and rights unqualified."
+  },
+  "unresolved": [
+    "River and coast shapes refine the parent concept controls; nonrising water elevations are not hydraulics, navigation, flood, tide, salinity or structural clearance proof.",
+    "The exact source mouth is preserved at projected [0,10297.4426,0]; city center remains [0,0,12]. Upstream profile enters from southeast.",
+    "Transport nodes are dry interchanges. River crossings, bridges, berth approaches and continuous ground alignments require their own engineering and rights.",
+    "Briefcase Port marks the dry dispatch hall near the river; actual berths and navigation through the lower estuary remain separately required.",
+    "Quiet sieves occur only at suitable freshwater patches upstream of sustained salinity, not at the estuary port.",
+    "Native hearthveil, spoolcrumb and copperfold uses retain VCP-01/02 constraints. VCP-03 native oil remains research with no saleable food allocation.",
+    "Introduced viable stocks follow VCP-04; preserved material, partners, viable quantity and recipient recovery conditions remain distinct.",
+    "Selected introduced staple lines have fictional long-cycle adaptation. Sensitive growth retains powered photoperiod and thermal loads; district warmth cannot replace light.",
+    "Food and municipal water accounts are demand screens, not catchment or agricultural capacity. Export stock mass does not feed the resident population.",
+    "No Rauth disc appears in the ordinary sky. Climate remains cool maritime and seasonal, not permanent ice or darkness.",
+    "Broken Branch expedition points are dry approaches; ruin interiors, steep terrain and alternative routes require detailed authoring.",
+    "No runtime city, crop simulation, transport capacity or native product qualification has been implemented."
+  ]
+}

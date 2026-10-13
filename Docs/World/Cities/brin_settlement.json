@@ -1,0 +1,784 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-011",
+  "city_name": "Brin",
+  "region_id": "REG-018",
+  "status": "Authored city proposal; geometry, capacities and runtime not constructed or verified",
+  "source_bible": "BRIN.md",
+  "frame": {
+    "origin_lon_deg": -119,
+    "origin_lat_deg": 61,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -14000,
+      -18000,
+      14000,
+      14000
+    ]
+  },
+  "population": 180000,
+  "gross_area_allowance_km2": 64,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "BRI-WATER-01",
+      "name": "Southern approach and local harbor bight",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          -14000,
+          -18000
+        ],
+        [
+          14000,
+          -18000
+        ],
+        [
+          14000,
+          -13000
+        ],
+        [
+          9000,
+          -11000
+        ],
+        [
+          5000,
+          -10000
+        ],
+        [
+          2000,
+          -7000
+        ],
+        [
+          3000,
+          -5000
+        ],
+        [
+          1000,
+          -3000
+        ],
+        [
+          -1000,
+          -4000
+        ],
+        [
+          -4000,
+          -6000
+        ],
+        [
+          -6000,
+          -10000
+        ],
+        [
+          -11000,
+          -12000
+        ],
+        [
+          -14000,
+          -15000
+        ],
+        [
+          -14000,
+          -18000
+        ]
+      ],
+      "surface_m": 0,
+      "status": "Authored local indentation in the southern approach; not a projected survey or tidal/bathymetric result"
+    }
+  ],
+  "source_river_id": null,
+  "channels": [],
+  "districts": [
+    {
+      "id": "BRI-D01",
+      "name": "Approach Quay",
+      "center_xyz_m": [
+        -200,
+        -2700,
+        25
+      ],
+      "radii_m": [
+        2300,
+        1800
+      ],
+      "altitude_range_m": [
+        8,
+        100
+      ],
+      "population": 28000,
+      "area_allowance_km2": 8,
+      "character": "Seasonal harbor, reception, passenger rooms and coastal observation"
+    },
+    {
+      "id": "BRI-D02",
+      "name": "Weather Rooms",
+      "center_xyz_m": [
+        -3800,
+        -800,
+        58
+      ],
+      "radii_m": [
+        2100,
+        2000
+      ],
+      "altitude_range_m": [
+        30,
+        130
+      ],
+      "population": 26000,
+      "area_allowance_km2": 7,
+      "character": "Compact inhabited courts, miniature makers and cooperative domestic rooms"
+    },
+    {
+      "id": "BRI-D03",
+      "name": "Old Observation",
+      "center_xyz_m": [
+        1800,
+        2500,
+        160
+      ],
+      "radii_m": [
+        2400,
+        2000
+      ],
+      "altitude_range_m": [
+        100,
+        270
+      ],
+      "population": 16000,
+      "area_allowance_km2": 6,
+      "character": "Layered observatory ground, specialist teaching and ordinary housing"
+    },
+    {
+      "id": "BRI-D04",
+      "name": "Joining Yard",
+      "center_xyz_m": [
+        -5300,
+        -4700,
+        35
+      ],
+      "radii_m": [
+        2700,
+        2300
+      ],
+      "altitude_range_m": [
+        12,
+        100
+      ],
+      "population": 28000,
+      "area_allowance_km2": 9,
+      "character": "Repair, fabrication, lay-up yards and working households"
+    },
+    {
+      "id": "BRI-D05",
+      "name": "Warm Side",
+      "center_xyz_m": [
+        -7000,
+        1500,
+        78
+      ],
+      "radii_m": [
+        2600,
+        2300
+      ],
+      "altitude_range_m": [
+        45,
+        160
+      ],
+      "population": 25000,
+      "area_allowance_km2": 8,
+      "character": "Schools, sports, family housing and ground-condition maintenance"
+    },
+    {
+      "id": "BRI-D06",
+      "name": "Paper Harbor",
+      "center_xyz_m": [
+        -1900,
+        2800,
+        98
+      ],
+      "radii_m": [
+        2400,
+        2100
+      ],
+      "altitude_range_m": [
+        60,
+        180
+      ],
+      "population": 21000,
+      "area_allowance_km2": 7,
+      "character": "Publishing, recordings, communication and living language networks"
+    },
+    {
+      "id": "BRI-D07",
+      "name": "North Steps",
+      "center_xyz_m": [
+        -3000,
+        8100,
+        240
+      ],
+      "radii_m": [
+        3100,
+        2600
+      ],
+      "altitude_range_m": [
+        130,
+        350
+      ],
+      "population": 18000,
+      "area_allowance_km2": 9,
+      "character": "Inland transfer, training, refuge services and station-linked families"
+    },
+    {
+      "id": "BRI-D08",
+      "name": "Far Window",
+      "center_xyz_m": [
+        5000,
+        8100,
+        340
+      ],
+      "radii_m": [
+        3300,
+        2800
+      ],
+      "altitude_range_m": [
+        180,
+        620
+      ],
+      "population": 18000,
+      "area_allowance_km2": 10,
+      "character": "Exposed upland observation, air approach and independent crew facilities"
+    }
+  ],
+  "places": [
+    {
+      "id": "BRI-POI-001",
+      "name": "The Last Open Berth",
+      "district_id": "BRI-D01",
+      "xyz_m": [
+        -600,
+        -3620,
+        18
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-002",
+      "name": "Copper Water Window",
+      "district_id": "BRI-D01",
+      "xyz_m": [
+        1000,
+        -3250,
+        9
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 0,
+      "shore_access_xyz_m": [
+        800,
+        -2700,
+        14
+      ]
+    },
+    {
+      "id": "BRI-POI-003",
+      "name": "A Bench Nobody Drew",
+      "district_id": "BRI-D01",
+      "xyz_m": [
+        -1800,
+        -2000,
+        45
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-004",
+      "name": "The Weather for Sola",
+      "district_id": "BRI-D02",
+      "xyz_m": [
+        -4500,
+        -300,
+        60
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-005",
+      "name": "The Door They Chose",
+      "district_id": "BRI-D02",
+      "xyz_m": [
+        -2900,
+        -1100,
+        52
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-006",
+      "name": "The Almost Silent Supper",
+      "district_id": "BRI-D02",
+      "xyz_m": [
+        -3700,
+        -2100,
+        44
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-007",
+      "name": "First Observation",
+      "district_id": "BRI-D03",
+      "xyz_m": [
+        1200,
+        3800,
+        210
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-008",
+      "name": "The Unfinished Signal",
+      "district_id": "BRI-D03",
+      "xyz_m": [
+        3300,
+        3100,
+        225
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-009",
+      "name": "The Room of Unseen Skies",
+      "district_id": "BRI-D03",
+      "xyz_m": [
+        600,
+        1800,
+        154
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-010",
+      "name": "Winter Keel Yard",
+      "district_id": "BRI-D04",
+      "xyz_m": [
+        -3500,
+        -5500,
+        18
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-011",
+      "name": "The Hull with Two Returns",
+      "district_id": "BRI-D04",
+      "xyz_m": [
+        -5100,
+        -4800,
+        42
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-012",
+      "name": "A Good Part Left Over",
+      "district_id": "BRI-D04",
+      "xyz_m": [
+        -6700,
+        -4100,
+        40
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-013",
+      "name": "The Warm Side School",
+      "district_id": "BRI-D05",
+      "xyz_m": [
+        -7500,
+        2600,
+        105
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-014",
+      "name": "Ground That Moved",
+      "district_id": "BRI-D05",
+      "xyz_m": [
+        -9000,
+        900,
+        72
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-015",
+      "name": "The Indoor Running Line",
+      "district_id": "BRI-D05",
+      "xyz_m": [
+        -6100,
+        200,
+        74
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-016",
+      "name": "The Song with Two Endings",
+      "district_id": "BRI-D06",
+      "xyz_m": [
+        -2800,
+        2100,
+        105
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-017",
+      "name": "Paper Harbor Exchange",
+      "district_id": "BRI-D06",
+      "xyz_m": [
+        -700,
+        2700,
+        115
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-018",
+      "name": "The Loaf That Travels",
+      "district_id": "BRI-D06",
+      "xyz_m": [
+        -2400,
+        4400,
+        142
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-019",
+      "name": "Northbound Door",
+      "district_id": "BRI-D07",
+      "xyz_m": [
+        -4100,
+        9500,
+        242
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-020",
+      "name": "The Cabin in the Wrong Season",
+      "district_id": "BRI-D07",
+      "xyz_m": [
+        -1700,
+        9000,
+        294
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-021",
+      "name": "The Ridge Between Reports",
+      "district_id": "BRI-D07",
+      "xyz_m": [
+        -3300,
+        6500,
+        218
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-022",
+      "name": "The Receiver at Far Window",
+      "district_id": "BRI-D08",
+      "xyz_m": [
+        3500,
+        10100,
+        530
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-023",
+      "name": "The Back of the Snow",
+      "district_id": "BRI-D08",
+      "xyz_m": [
+        7100,
+        8700,
+        430
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "BRI-POI-024",
+      "name": "The Departure Nobody Recorded",
+      "district_id": "BRI-D08",
+      "xyz_m": [
+        5800,
+        6200,
+        316
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "BRI-T01",
+      "name": "Approach Quay interchange",
+      "district_id": "BRI-D01",
+      "xyz_m": [
+        -200,
+        -2700,
+        25
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "BRI-T02",
+      "name": "Weather Rooms interchange",
+      "district_id": "BRI-D02",
+      "xyz_m": [
+        -3800,
+        -800,
+        58
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "BRI-T03",
+      "name": "Old Observation interchange",
+      "district_id": "BRI-D03",
+      "xyz_m": [
+        1800,
+        2500,
+        160
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "BRI-T04",
+      "name": "Joining Yard interchange",
+      "district_id": "BRI-D04",
+      "xyz_m": [
+        -5300,
+        -4700,
+        35
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "BRI-T05",
+      "name": "Warm Side interchange",
+      "district_id": "BRI-D05",
+      "xyz_m": [
+        -7000,
+        1500,
+        78
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "BRI-T06",
+      "name": "Paper Harbor interchange",
+      "district_id": "BRI-D06",
+      "xyz_m": [
+        -1900,
+        2800,
+        98
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "BRI-T07",
+      "name": "North Steps interchange",
+      "district_id": "BRI-D07",
+      "xyz_m": [
+        -3000,
+        8100,
+        240
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "BRI-T08",
+      "name": "Far Window interchange",
+      "district_id": "BRI-D08",
+      "xyz_m": [
+        5000,
+        8100,
+        340
+      ],
+      "regional_gateway": true
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "BRI-L01",
+      "from": "BRI-T01",
+      "to": "BRI-T02",
+      "mode": "tram",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L02",
+      "from": "BRI-T01",
+      "to": "BRI-T04",
+      "mode": "road",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L03",
+      "from": "BRI-T02",
+      "to": "BRI-T03",
+      "mode": "tram",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L04",
+      "from": "BRI-T02",
+      "to": "BRI-T04",
+      "mode": "bus",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L05",
+      "from": "BRI-T02",
+      "to": "BRI-T05",
+      "mode": "tram",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L06",
+      "from": "BRI-T02",
+      "to": "BRI-T06",
+      "mode": "walking",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L07",
+      "from": "BRI-T03",
+      "to": "BRI-T06",
+      "mode": "walking",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L08",
+      "from": "BRI-T03",
+      "to": "BRI-T08",
+      "mode": "bus",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L09",
+      "from": "BRI-T04",
+      "to": "BRI-T05",
+      "mode": "road",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L10",
+      "from": "BRI-T05",
+      "to": "BRI-T06",
+      "mode": "bus",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L11",
+      "from": "BRI-T05",
+      "to": "BRI-T07",
+      "mode": "road",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L12",
+      "from": "BRI-T06",
+      "to": "BRI-T07",
+      "mode": "bus",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L13",
+      "from": "BRI-T07",
+      "to": "BRI-T08",
+      "mode": "road",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    },
+    {
+      "id": "BRI-L14",
+      "from": "BRI-T06",
+      "to": "BRI-T08",
+      "mode": "bus",
+      "status": "Service dependency between dry interchanges; actual street, grades, capacity and winter exposure require design"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 125,
+    "other_potable_m3_per_turn": 10500,
+    "delivered_potable_m3_per_turn": 33000,
+    "network_loss_fraction": 0.12,
+    "network_input_m3_per_turn": 37500,
+    "edible_product_kg_per_person_per_turn": 1.65,
+    "edible_product_tonnes_per_turn": 297,
+    "electric_average_mw": 240,
+    "electric_peak_mw": 440,
+    "scope": "24h civil turn; core food only, municipal mixed public/commercial water case; raw abstraction, treatment residual and separate seasonal guests specified in prose. Supply capacity and nutrition not proved."
+  },
+  "unresolved": [
+    "No parent atlas river passes through the city; upland storage and drainage are separate later source sites, not an invented city river.",
+    "The southern harbor indentation is a local proposal inside coarse coastal geography, not a source shoreline projection. Tides, wave exposure, seasonal ice, bathymetry and actual berths remain unengineered.",
+    "Brin is at61N with14.07degree adopted seasonal tilt; no geometric polar night or ordinary Rauth view. Local terrain and cloud alter received light.",
+    "Discontinuous cold ground and ground ice are local working hypotheses, not a blanket claim that all city foundations rest on permafrost.",
+    "Lanternglass does not bioluminesce. Snowthimble refuge and food availability differ; keelhands cannot be treated as rideable animals.",
+    "Cold-storage preserves some food and stock under specified conditions; outside winter air is not a substitute for controlled product storage.",
+    "Source water, desalination recovery, reuse and distribution input are distinct streams; farm water and seasonal vessel provisions are additional.",
+    "Generation demand, heating demand, available electrical capacity and recoverable heat are separate accounts. Spare plant capacity is not itself fuel or energy.",
+    "The24mappedplaces are proposals. No complete streets, working NPC schedules, traversal, snow physics or construction are claimed."
+  ]
+}

@@ -15,7 +15,7 @@ from build_talweir import project, segment_distance
 ROOT = Path(__file__).resolve().parents[2]
 WORLD = ROOT / 'Docs/World'
 CITY = WORLD / 'Cities'
-NAMES = ('marroway', 'aven', 'sola', 'hesh', 'serein', 'dhal')
+NAMES = ('marroway', 'aven', 'sola', 'hesh', 'serein', 'dhal', 'merrow', 'tern', 'velis', 'brin')
 
 
 def number(x):
@@ -300,9 +300,10 @@ def render(d,control_names):
     for i,p in enumerate(d['places']):
         x,y=xy(p['xyz_m']);svg.append(f'<circle data-poi="{p["id"]}" cx="{x}" cy="{y}" r="3.5" fill="#345863"/>');label(x,y,f'{i+1:02}')
     text(1140,161,'DISTRICTS','style="font-size:20px;font-weight:bold"')
+    district_step = 48 if len(d['districts']) == 10 else 54
     for i,r in enumerate(d['districts']):
-        text(1140,198+i*54,r['id'].split('-')[-1]+' '+r['name'])
-        text(1140,217+i*54,f'{r["population"]:,} residents · {r["altitude_range_m"][0]:g}–{r["altitude_range_m"][1]:g} m','class="small"')
+        text(1140,198+i*district_step,r['id'].split('-')[-1]+' '+r['name'])
+        text(1140,217+i*district_step,f'{r["population"]:,} residents · {r["altitude_range_m"][0]:g}–{r["altitude_range_m"][1]:g} m','class="small"')
     text(1140,702,'SURFACE CONTROLS','style="font-size:18px;font-weight:bold"')
     for i,p in enumerate(d['surface_polygons'][:5]):
         text(1140,728+i*18,p['name'],'class="small"')

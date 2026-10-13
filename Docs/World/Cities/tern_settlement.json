@@ -1,0 +1,1037 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-009",
+  "city_name": "Tern",
+  "region_id": "REG-015",
+  "status": "Authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "TERN.md",
+  "frame": {
+    "origin_lon_deg": -98,
+    "origin_lat_deg": -49,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -10000,
+      -11000,
+      16000,
+      12000
+    ]
+  },
+  "population": 360000,
+  "gross_area_allowance_km2": 140,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "TER-WATER-01",
+      "name": "Tern inlet and eastern sea",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          16000,
+          12000
+        ],
+        [
+          16000,
+          -11000
+        ],
+        [
+          10500,
+          -11000
+        ],
+        [
+          9800,
+          -8000
+        ],
+        [
+          10800,
+          -5000
+        ],
+        [
+          9800,
+          -3000
+        ],
+        [
+          9200,
+          -800
+        ],
+        [
+          6300,
+          -1600
+        ],
+        [
+          4700,
+          -2300
+        ],
+        [
+          2300,
+          -2600
+        ],
+        [
+          800,
+          -1800
+        ],
+        [
+          -2200,
+          -1800
+        ],
+        [
+          -3500,
+          -800
+        ],
+        [
+          -3700,
+          900
+        ],
+        [
+          -2700,
+          1800
+        ],
+        [
+          -500,
+          1700
+        ],
+        [
+          900,
+          2400
+        ],
+        [
+          2700,
+          2000
+        ],
+        [
+          4500,
+          1400
+        ],
+        [
+          6600,
+          2000
+        ],
+        [
+          8500,
+          1200
+        ],
+        [
+          9300,
+          2000
+        ],
+        [
+          10300,
+          5200
+        ],
+        [
+          9500,
+          8500
+        ],
+        [
+          10500,
+          12000
+        ],
+        [
+          16000,
+          12000
+        ]
+      ],
+      "surface_m": 0,
+      "status": "One connected authored coastal refinement around unchanged atlas city; zero planning sea reference, no tide or bathymetry model"
+    }
+  ],
+  "source_river_id": null,
+  "channels": [],
+  "districts": [
+    {
+      "id": "TER-D01",
+      "name": "Hearth Quays",
+      "population": 48000,
+      "area_allowance_km2": 12,
+      "center_xyz_m": [
+        -1700,
+        3300,
+        25
+      ],
+      "radii_m": [
+        2400,
+        2200
+      ],
+      "altitude_range_m": [
+        8,
+        60
+      ],
+      "character": "Arrival, mixed waterfront homes and public weather knowledge"
+    },
+    {
+      "id": "TER-D02",
+      "name": "Long Splice",
+      "population": 44000,
+      "area_allowance_km2": 12,
+      "center_xyz_m": [
+        -5000,
+        4200,
+        48
+      ],
+      "radii_m": [
+        2100,
+        2100
+      ],
+      "altitude_range_m": [
+        25,
+        90
+      ],
+      "character": "Dense households, shared heat and working domestic craft"
+    },
+    {
+      "id": "TER-D03",
+      "name": "Upper Mend",
+      "population": 36000,
+      "area_allowance_km2": 16,
+      "center_xyz_m": [
+        -6500,
+        7800,
+        95
+      ],
+      "radii_m": [
+        2500,
+        2300
+      ],
+      "altitude_range_m": [
+        55,
+        150
+      ],
+      "character": "Schools, ordinary upland streets and uncompetitive public play"
+    },
+    {
+      "id": "TER-D04",
+      "name": "Mastless Hall",
+      "population": 38000,
+      "area_allowance_km2": 11,
+      "center_xyz_m": [
+        2400,
+        4200,
+        35
+      ],
+      "radii_m": [
+        2500,
+        2200
+      ],
+      "altitude_range_m": [
+        20,
+        85
+      ],
+      "character": "Theater, model boats, dance and maritime technical creativity"
+    },
+    {
+      "id": "TER-D05",
+      "name": "Outer Measure",
+      "population": 24000,
+      "area_allowance_km2": 14,
+      "center_xyz_m": [
+        6700,
+        3700,
+        48
+      ],
+      "radii_m": [
+        2900,
+        2900
+      ],
+      "altitude_range_m": [
+        10,
+        120
+      ],
+      "character": "Outer observations, shore habitats and modest raised viewpoints"
+    },
+    {
+      "id": "TER-D06",
+      "name": "Return Basin",
+      "population": 42000,
+      "area_allowance_km2": 14,
+      "center_xyz_m": [
+        0,
+        -3800,
+        25
+      ],
+      "radii_m": [
+        2600,
+        4000
+      ],
+      "altitude_range_m": [
+        8,
+        80
+      ],
+      "character": "Rescue agreements, former vessels and present households"
+    },
+    {
+      "id": "TER-D07",
+      "name": "Cradle Works",
+      "population": 36000,
+      "area_allowance_km2": 18,
+      "center_xyz_m": [
+        -4500,
+        -4000,
+        30
+      ],
+      "radii_m": [
+        2600,
+        2500
+      ],
+      "altitude_range_m": [
+        10,
+        75
+      ],
+      "character": "Heavy repair, qualified metal and converted service spaces"
+    },
+    {
+      "id": "TER-D08",
+      "name": "South Weather",
+      "population": 32000,
+      "area_allowance_km2": 17,
+      "center_xyz_m": [
+        1000,
+        -8000,
+        70
+      ],
+      "radii_m": [
+        3000,
+        2500
+      ],
+      "altitude_range_m": [
+        35,
+        145
+      ],
+      "character": "Residential ridges, local departures and geological traces"
+    },
+    {
+      "id": "TER-D09",
+      "name": "Keel Street",
+      "population": 34000,
+      "area_allowance_km2": 14,
+      "center_xyz_m": [
+        6100,
+        -4800,
+        36
+      ],
+      "radii_m": [
+        2500,
+        2600
+      ],
+      "altitude_range_m": [
+        15,
+        100
+      ],
+      "character": "Freight custody, food and the pleasant city between shifts"
+    },
+    {
+      "id": "TER-D10",
+      "name": "Clear Rooms",
+      "population": 26000,
+      "area_allowance_km2": 12,
+      "center_xyz_m": [
+        -7500,
+        1000,
+        50
+      ],
+      "radii_m": [
+        1900,
+        2300
+      ],
+      "altitude_range_m": [
+        20,
+        100
+      ],
+      "character": "Culture-stock handling, clean workshops and private ambitions"
+    }
+  ],
+  "places": [
+    {
+      "id": "TER-POI-001",
+      "name": "Common Landing",
+      "district_id": "TER-D01",
+      "xyz_m": [
+        -1800,
+        2200,
+        10
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-002",
+      "name": "Turnaround House",
+      "district_id": "TER-D01",
+      "xyz_m": [
+        -2300,
+        4000,
+        27
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-003",
+      "name": "Public Weather Room",
+      "district_id": "TER-D01",
+      "xyz_m": [
+        -500,
+        3300,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-004",
+      "name": "Long Splice Court",
+      "district_id": "TER-D02",
+      "xyz_m": [
+        -5500,
+        4200,
+        48
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-005",
+      "name": "Warm Wall Kitchen",
+      "district_id": "TER-D02",
+      "xyz_m": [
+        -4100,
+        4700,
+        45
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-006",
+      "name": "Freestanding School",
+      "district_id": "TER-D03",
+      "xyz_m": [
+        -6800,
+        7900,
+        97
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-007",
+      "name": "No Trophy Park",
+      "district_id": "TER-D03",
+      "xyz_m": [
+        -5200,
+        8800,
+        103
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-008",
+      "name": "The Unreasonable Balcony",
+      "district_id": "TER-D04",
+      "xyz_m": [
+        1900,
+        4100,
+        38
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-009",
+      "name": "Model Water",
+      "district_id": "TER-D04",
+      "xyz_m": [
+        3300,
+        4000,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-010",
+      "name": "Foundry Ballroom",
+      "district_id": "TER-D04",
+      "xyz_m": [
+        2900,
+        5300,
+        42
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-011",
+      "name": "Shelf of Rooms",
+      "district_id": "TER-D05",
+      "xyz_m": [
+        7300,
+        5700,
+        66
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-012",
+      "name": "Outside Line",
+      "district_id": "TER-D05",
+      "xyz_m": [
+        8400,
+        1450,
+        12
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-013",
+      "name": "Return Compact House",
+      "district_id": "TER-D06",
+      "xyz_m": [
+        -1300,
+        -3700,
+        27
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-014",
+      "name": "Second Life Deck",
+      "district_id": "TER-D06",
+      "xyz_m": [
+        700,
+        -300,
+        9
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 0,
+      "shore_access_xyz_m": [
+        700,
+        -2300,
+        15
+      ]
+    },
+    {
+      "id": "TER-POI-015",
+      "name": "Folded Chart Rooms",
+      "district_id": "TER-D06",
+      "xyz_m": [
+        1300,
+        -4800,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-016",
+      "name": "Cradle Seven",
+      "district_id": "TER-D07",
+      "xyz_m": [
+        -4500,
+        -3200,
+        14
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-017",
+      "name": "Verified Metal",
+      "district_id": "TER-D07",
+      "xyz_m": [
+        -6200,
+        -3900,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-018",
+      "name": "Salt Ledger Galleries",
+      "district_id": "TER-D07",
+      "xyz_m": [
+        -3900,
+        -5200,
+        37
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-019",
+      "name": "South Weather Homes",
+      "district_id": "TER-D08",
+      "xyz_m": [
+        700,
+        -7900,
+        72
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-020",
+      "name": "White Line Descent",
+      "district_id": "TER-D08",
+      "xyz_m": [
+        2300,
+        -8900,
+        95
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-021",
+      "name": "Keel Street Exchange",
+      "district_id": "TER-D09",
+      "xyz_m": [
+        5800,
+        -4400,
+        31
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-022",
+      "name": "Between Watches",
+      "district_id": "TER-D09",
+      "xyz_m": [
+        7400,
+        -5600,
+        41
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-023",
+      "name": "Clear Room Stock House",
+      "district_id": "TER-D10",
+      "xyz_m": [
+        -7700,
+        900,
+        49
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    },
+    {
+      "id": "TER-POI-024",
+      "name": "The Rejected Model",
+      "district_id": "TER-D10",
+      "xyz_m": [
+        -6900,
+        -300,
+        37
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "TER-T01",
+      "name": "Hearth Quays interchange",
+      "district_id": "TER-D01",
+      "xyz_m": [
+        -1500,
+        2800,
+        21
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "TER-T02",
+      "name": "Long Splice interchange",
+      "district_id": "TER-D02",
+      "xyz_m": [
+        -4800,
+        4400,
+        49
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "TER-T03",
+      "name": "Upper Mend interchange",
+      "district_id": "TER-D03",
+      "xyz_m": [
+        -6200,
+        7900,
+        93
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "TER-T04",
+      "name": "Mastless Hall interchange",
+      "district_id": "TER-D04",
+      "xyz_m": [
+        2100,
+        4300,
+        38
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "TER-T05",
+      "name": "Outer Measure interchange",
+      "district_id": "TER-D05",
+      "xyz_m": [
+        6700,
+        3800,
+        48
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "TER-T06",
+      "name": "Return Basin interchange",
+      "district_id": "TER-D06",
+      "xyz_m": [
+        500,
+        -3500,
+        25
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "TER-T07",
+      "name": "Cradle Works interchange",
+      "district_id": "TER-D07",
+      "xyz_m": [
+        -4400,
+        -3900,
+        29
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "TER-T08",
+      "name": "South Weather interchange",
+      "district_id": "TER-D08",
+      "xyz_m": [
+        900,
+        -7600,
+        68
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "TER-T09",
+      "name": "Keel Street interchange",
+      "district_id": "TER-D09",
+      "xyz_m": [
+        5900,
+        -4400,
+        32
+      ],
+      "regional_gateway": true
+    },
+    {
+      "id": "TER-T10",
+      "name": "Clear Rooms interchange",
+      "district_id": "TER-D10",
+      "xyz_m": [
+        -7400,
+        1100,
+        51
+      ],
+      "regional_gateway": false
+    },
+    {
+      "id": "TER-T11",
+      "name": "Northwest regional land gateway",
+      "district_id": null,
+      "xyz_m": [
+        -9200,
+        7300,
+        108
+      ],
+      "regional_gateway": true
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "TER-L01",
+      "from": "TER-T01",
+      "to": "TER-T02",
+      "mode": "tram",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L02",
+      "from": "TER-T02",
+      "to": "TER-T03",
+      "mode": "bus",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L03",
+      "from": "TER-T01",
+      "to": "TER-T04",
+      "mode": "tram",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L04",
+      "from": "TER-T04",
+      "to": "TER-T05",
+      "mode": "bus",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L05",
+      "from": "TER-T03",
+      "to": "TER-T04",
+      "mode": "bus",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L06",
+      "from": "TER-T02",
+      "to": "TER-T10",
+      "mode": "tram",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L07",
+      "from": "TER-T10",
+      "to": "TER-T07",
+      "mode": "bus",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L08",
+      "from": "TER-T07",
+      "to": "TER-T06",
+      "mode": "tram",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L09",
+      "from": "TER-T06",
+      "to": "TER-T09",
+      "mode": "tram",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L10",
+      "from": "TER-T06",
+      "to": "TER-T08",
+      "mode": "bus",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L11",
+      "from": "TER-T08",
+      "to": "TER-T09",
+      "mode": "bus",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L12",
+      "from": "TER-T07",
+      "to": "TER-T08",
+      "mode": "road",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L13",
+      "from": "TER-T03",
+      "to": "TER-T11",
+      "mode": "road",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L14",
+      "from": "TER-T10",
+      "to": "TER-T11",
+      "mode": "road",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L15",
+      "from": "TER-T01",
+      "to": "TER-T06",
+      "mode": "ferry",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L16",
+      "from": "TER-T04",
+      "to": "TER-T09",
+      "mode": "ferry",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L17",
+      "from": "TER-T01",
+      "to": "TER-T09",
+      "mode": "ferry",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L18",
+      "from": "TER-T07",
+      "to": "TER-T09",
+      "mode": "road",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    },
+    {
+      "id": "TER-L19",
+      "from": "TER-T02",
+      "to": "TER-T07",
+      "mode": "road",
+      "status": "Service dependency, not an alignment; land routes bend around inlet, ferry berths and water legs unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 130,
+    "other_potable_m3_per_turn": 25200,
+    "delivered_potable_m3_per_turn": 72000,
+    "network_loss_fraction": 0.14,
+    "network_input_m3_per_turn": 83720.93023255814,
+    "edible_product_kg_per_person_per_turn": 1.65,
+    "edible_product_tonnes_per_turn": 594,
+    "electric_average_mw": 440,
+    "electric_peak_mw": 790,
+    "scope": "Core360000 residents and accounted urban work per24h civilturn; illustrative demand, no supply capacity or nutrition certified"
+  },
+  "housing_case": {
+    "units": 145500,
+    "occupied_fraction": 0.956,
+    "people_per_occupied_unit": 2.59,
+    "screening_population": 360263.82,
+    "residential_parcels_km2": 24,
+    "coverage_fraction": 0.27,
+    "effective_floors": 2.8,
+    "gross_floor_m2": 18144000,
+    "usable_fraction": 0.78,
+    "usable_floor_m2": 14152320
+  },
+  "gross_area_categories_km2": {
+    "residential": 24,
+    "industry_freight": 31,
+    "transport_utility": 24,
+    "habitat_public_open": 35,
+    "other_civic_commercial_mixed": 26
+  },
+  "water_screening_case": {
+    "regional_share_of_treated_input": 0.7,
+    "regional_treated_m3_per_turn": 58604.651162790695,
+    "regional_recovery": 0.96,
+    "regional_raw_m3_per_turn": 61046.51162790698,
+    "regional_residual_m3_per_turn": 2441.8604651162823,
+    "desal_share_of_treated_input": 0.3,
+    "desal_product_m3_per_turn": 25116.27906976744,
+    "desal_recovery": 0.45,
+    "sea_intake_m3_per_turn": 55813.953488372084,
+    "desal_reject_m3_per_turn": 30697.674418604645,
+    "network_loss_m3_per_turn": 11720.930232558138,
+    "regional_raw_storage_m3": 1800000,
+    "treated_storage_m3": 250000,
+    "reuse_delivery_m3_per_turn": 18000,
+    "gross_end_use_m3_per_turn": 90000,
+    "sewer_collection_m3_per_turn": 66000,
+    "net_consumption_uncollected_m3_per_turn": 24000,
+    "final_effluent_m3_per_turn": 48000,
+    "wastewater_trains": 3,
+    "train_nominal_capacity_m3_per_turn": 30000,
+    "illustrative_desal_kwh_per_product_m3": 3,
+    "desal_average_mw": 3.13953488372093,
+    "scope": "Nominal water-volume screen; salinity/density/process losses not mass-balance certified. Regional sources unlocated; desal intake/outfall separate from nurseries and potable supply pending study."
+  },
+  "food_screening_case": {
+    "kcal_per_person_per_turn": 2400,
+    "total_kcal_per_turn": 864000000,
+    "protein_g_per_person_per_turn": 75,
+    "total_protein_tonnes_per_turn": 27,
+    "dry_equivalent_kcal_per_kg": 3200,
+    "dry_equivalent_tonnes_per_turn": 270,
+    "reserve_turns": 45,
+    "dry_calorie_equivalent_reserve_tonnes": 12150,
+    "calorie_origin_fractions": {
+      "nearby_sere_production": 0.22,
+      "other_sere": 0.28,
+      "other_continents": 0.48,
+      "urban": 0.02
+    },
+    "scope": "Fictional source-share targets, not proven supply; shares calorie-based not freight mass. Velis living-stock expertise is not assumed bulk staple surplus."
+  },
+  "power_screening_case": {
+    "demand_allocations_mw": {
+      "homes_commerce": 110,
+      "public_water": 35,
+      "core_industry": 190,
+      "transport": 70,
+      "other_services": 35
+    },
+    "candidate_regional_firm_mw": 230,
+    "candidate_local_firm_mw": 250,
+    "wind_mw_installed": 250,
+    "solar_mwp": 160,
+    "storage_usable_gwh": 24,
+    "storage_discharge_limit_mw": 300,
+    "long_night_hours_rounded": 81.1,
+    "deficit_case_mw": 250,
+    "deficit_case_gwh": 20.275,
+    "full_load_night_gwh": 35.684,
+    "scope": "Candidate nameplates/contracts, no adequate generation claim. Full mean load exceeds storage power and energy; peak790 versus proposedfirm480 leaves310MW before other sources/load action."
+  },
+  "other_screening_case": {
+    "municipal_solid_kg_per_person_per_turn": 0.85,
+    "municipal_solid_tonnes_per_turn": 306,
+    "freight_envelope_tonnes_per_turn": [
+      5000,
+      9000
+    ],
+    "scope": "Illustrative core work; ship displacement, visitors, vessel provisions and additional regional exports not silently added or omitted"
+  },
+  "sky_case": {
+    "natural_cycle_hours": 136.7550076,
+    "north_solstice_daylight_hours_rounded": 55.6,
+    "south_solstice_daylight_hours_rounded": 81.1,
+    "rauth_center_altitude_deg": -5.66,
+    "rauth_upper_limb_altitude_deg": -0.69,
+    "parent_view_scope": "Below ordinary reference horizon; no routine giant view or Earthlike polar night"
+  },
+  "unresolved": [
+    "Surveyed coastal refinement, tide/current/wave/surge regimes and port depths",
+    "Turning circles, docking structures, berth loads, collision protection and wave attenuation",
+    "Regional freshwater source provenance, sustainable abstraction and reservoirs; no parent river invented atcity",
+    "Desal process, power, chemistry, marine intake/outfall and salt mass account",
+    "Source agricultural land, yields, diet composition, storage and additional visiting-crew demand",
+    "Regional firm generation, localplant technology/fuel/cooling/waste and achievable storage",
+    "Road/transit alignments around inlet, port separation and accessible vessel boarding",
+    "Habitat demography, nursery recovery, workload/capacity, housing affordability and eventual runtime proof"
+  ]
+}

@@ -14,6 +14,10 @@ const { chromium } = require('playwright');
     hesh:{file:'Cities/hesh_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
     serein:{file:'Cities/serein_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
     dhal:{file:'Cities/dhal_settlement.svg',counts:{'[data-poi]':24,'[data-district]':9}},
+    merrow:{file:'Cities/merrow_settlement.svg',counts:{'[data-poi]':24,'[data-district]':10}},
+    tern:{file:'Cities/tern_settlement.svg',counts:{'[data-poi]':24,'[data-district]':10}},
+    velis:{file:'Cities/velis_settlement.svg',counts:{'[data-poi]':24,'[data-district]':8}},
+    brin:{file:'Cities/brin_settlement.svg',counts:{'[data-poi]':24,'[data-district]':8}},
     production:{file:'Resources/orison_productive_land.svg',counts:{'[data-allocation]':13}}
   };
   const config=sources[process.argv[3]];
@@ -31,13 +35,16 @@ const { chromium } = require('playwright');
       const rects=[...document.querySelectorAll('.map-label-box')].map(e=>e.getBoundingClientRect());
       let labelOverlaps=0;
       rects.forEach((a,i)=>rects.slice(i+1).forEach(b=>{if(a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top)labelOverlaps++;}));
-      return {textOutside,actual,labelOverlaps};
+      const sidebar=[...document.querySelectorAll('text')].map(e=>({text:e.textContent,rect:e.getBoundingClientRect()})).filter(e=>e.rect.left>=1120 && e.rect.top>=140 && e.rect.bottom<=970);
+      const sidebarOverlaps=[];
+      sidebar.forEach((a,i)=>sidebar.slice(i+1).forEach(b=>{if(a.rect.left<b.rect.right&&a.rect.right>b.rect.left&&a.rect.top<b.rect.bottom&&a.rect.bottom>b.rect.top)sidebarOverlaps.push([a.text,b.text]);}));
+      return {textOutside,actual,labelOverlaps,sidebarOverlaps};
     },config.counts);
     const out=path.join(root,'Artifacts/world');await fs.mkdir(out,{recursive:true});
     const stem=path.basename(config.file,'.svg');
     await page.screenshot({path:path.join(out,stem+'.png')});
     await fs.writeFile(path.join(out,stem+'-inspection.json'),JSON.stringify({plate:config.file,...size,...result},null,2)+'\n');
     console.log(JSON.stringify(result));
-    if(result.textOutside.length || result.labelOverlaps || Object.entries(config.counts).some(([k,v])=>result.actual[k]!==v))throw new Error('Plate inspection failed');
+    if(result.textOutside.length || result.labelOverlaps || result.sidebarOverlaps.length || Object.entries(config.counts).some(([k,v])=>result.actual[k]!==v))throw new Error('Plate inspection failed');
   } finally {await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

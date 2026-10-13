@@ -112,7 +112,7 @@ Dhal supports field research, processing, transport and ordinary families. Its a
 
 ### REG-012 — Merrow Estuaries
 
-Merrow sits near 30° S, 158° E at a coastal confluence, with cultivated margins and native tidal nurseries surrounding the city. Water chemistry, salinity and sediment movement connect upstream decisions to coastal life. The Blue Sill hearings remain a central historical reference, but the region includes successful recovery as well as damage.
+Merrow sits near 30° S, 158° E on the lower river, at a 10 m reference water control. Its mapped mouth is about 105 km south-southeast even by direct distance. The city and its cultivated margins belong to a wider estuary region; native tidal nurseries occupy suitable downstream habitats rather than automatically surrounding downtown quays. Water chemistry, salinity and sediment movement connect upstream decisions to coastal life. The Blue Sill hearings remain a central historical reference, but the region includes successful recovery as well as damage.
 
 The city supports food conversion, ship services, education and an ambitious public dining culture. Native ingredients enter cuisine through specific safe processing; imported crops and cultures remain nutritionally essential. Processing yards should be beautiful in their own practical way rather than hidden behind a generic factory wall.
 

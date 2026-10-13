@@ -1,0 +1,1467 @@
+{
+  "schema_version": 1,
+  "city_id": "CITY-008",
+  "city_name": "Merrow",
+  "region_id": "REG-012",
+  "status": "authored city proposal; no terrain, service capacity or runtime validated",
+  "source_bible": "MERROW.md",
+  "frame": {
+    "origin_lon_deg": 158,
+    "origin_lat_deg": -30,
+    "radius_m": 5900000,
+    "bounds_m": [
+      -16000,
+      -15500,
+      15000,
+      13000
+    ]
+  },
+  "population": 610000,
+  "gross_area_allowance_km2": 132,
+  "base_surface": "land",
+  "surface_polygons": [
+    {
+      "id": "MER-WATER-01",
+      "name": "Merrow river: authored local reach",
+      "kind": "water",
+      "points_xy_m": [
+        [
+          -13735.001,
+          9423.999
+        ],
+        [
+          -9757.043,
+          6937.776
+        ],
+        [
+          -5242.132,
+          4752.748
+        ],
+        [
+          -1968.683,
+          2616.508
+        ],
+        [
+          484.497,
+          297.665
+        ],
+        [
+          1414.821,
+          -3117.223
+        ],
+        [
+          3475.925,
+          -6294.75
+        ],
+        [
+          4085.987,
+          -10361.83
+        ],
+        [
+          5418.172,
+          -14299.094
+        ],
+        [
+          4181.828,
+          -14700.906
+        ],
+        [
+          2914.013,
+          -10638.17
+        ],
+        [
+          2324.075,
+          -6705.25
+        ],
+        [
+          585.179,
+          -3482.777
+        ],
+        [
+          -484.497,
+          -297.665
+        ],
+        [
+          -2631.317,
+          1783.492
+        ],
+        [
+          -5757.868,
+          3847.252
+        ],
+        [
+          -10242.957,
+          6062.224
+        ],
+        [
+          -14264.999,
+          8576.001
+        ],
+        [
+          -13735.001,
+          9423.999
+        ]
+      ],
+      "surface_m": 10,
+      "status": "one continuous variable-width river envelope, local authored refinement rather than surveyed banks; surface is origin reference only"
+    }
+  ],
+  "source_river_id": "RIV-006",
+  "channels": [
+    {
+      "id": "MER-CH-01",
+      "name": "Merrow water main reach",
+      "points_xyz_m": [
+        [
+          -14000,
+          9000,
+          12.2
+        ],
+        [
+          -10000,
+          6500,
+          11.6
+        ],
+        [
+          -5500,
+          4300,
+          11
+        ],
+        [
+          -2300,
+          2200,
+          10.5
+        ],
+        [
+          0,
+          0,
+          10
+        ],
+        [
+          1000,
+          -3300,
+          9.5
+        ],
+        [
+          2900,
+          -6500,
+          9
+        ],
+        [
+          3500,
+          -10500,
+          8.5
+        ],
+        [
+          4800,
+          -14500,
+          8
+        ]
+      ],
+      "surface_polygon_ids": [
+        "MER-WATER-01"
+      ],
+      "status": "authored nonrising nominal controls through exact parent city point; not hydraulics, tide or navigable depth"
+    }
+  ],
+  "districts": [
+    {
+      "id": "MER-D01",
+      "name": "Near Bank",
+      "population": 82000,
+      "area_allowance_km2": 12,
+      "center_xyz_m": [
+        -1600,
+        -1200,
+        22
+      ],
+      "radii_m": [
+        2600,
+        2400
+      ],
+      "altitude_range_m": [
+        15,
+        40
+      ],
+      "character": "Dense western arrivals, inhabited passages, bridge approaches and mixed homes"
+    },
+    {
+      "id": "MER-D02",
+      "name": "Cupwall",
+      "population": 78000,
+      "area_allowance_km2": 10,
+      "center_xyz_m": [
+        -4500,
+        -1300,
+        28
+      ],
+      "radii_m": [
+        2100,
+        2200
+      ],
+      "altitude_range_m": [
+        20,
+        48
+      ],
+      "character": "Close-grained apartments, shared courts, dining and dance"
+    },
+    {
+      "id": "MER-D03",
+      "name": "Long Kilns",
+      "population": 60000,
+      "area_allowance_km2": 16,
+      "center_xyz_m": [
+        -5700,
+        -5300,
+        27
+      ],
+      "radii_m": [
+        3000,
+        2700
+      ],
+      "altitude_range_m": [
+        18,
+        48
+      ],
+      "character": "Qualified processing, ceramics, fabrication and ordinary housing"
+    },
+    {
+      "id": "MER-D04",
+      "name": "Tamar Steps",
+      "population": 55000,
+      "area_allowance_km2": 10,
+      "center_xyz_m": [
+        2600,
+        1000,
+        27
+      ],
+      "radii_m": [
+        2300,
+        2300
+      ],
+      "altitude_range_m": [
+        20,
+        45
+      ],
+      "character": "Older raised east bank, homes, teaching and the later Blue Sill collection"
+    },
+    {
+      "id": "MER-D05",
+      "name": "Paper Mile",
+      "population": 62000,
+      "area_allowance_km2": 9,
+      "center_xyz_m": [
+        3000,
+        4800,
+        34
+      ],
+      "radii_m": [
+        2100,
+        2300
+      ],
+      "altitude_range_m": [
+        27,
+        55
+      ],
+      "character": "Publishing, music, studios, education and varied housing"
+    },
+    {
+      "id": "MER-D06",
+      "name": "The Ropes",
+      "population": 56000,
+      "area_allowance_km2": 15,
+      "center_xyz_m": [
+        2300,
+        -3700,
+        20
+      ],
+      "radii_m": [
+        2300,
+        2600
+      ],
+      "altitude_range_m": [
+        15,
+        38
+      ],
+      "character": "Vessel repair, independent crews, ambiguous salvage and inhabited banks"
+    },
+    {
+      "id": "MER-D07",
+      "name": "Vell Strand",
+      "population": 55000,
+      "area_allowance_km2": 17,
+      "center_xyz_m": [
+        5500,
+        -9100,
+        18
+      ],
+      "radii_m": [
+        2400,
+        2800
+      ],
+      "altitude_range_m": [
+        14,
+        34
+      ],
+      "character": "Southern river departure and regional work services; not ocean beachfront"
+    },
+    {
+      "id": "MER-D08",
+      "name": "West Meals",
+      "population": 61000,
+      "area_allowance_km2": 13,
+      "center_xyz_m": [
+        -9000,
+        900,
+        26
+      ],
+      "radii_m": [
+        2800,
+        2600
+      ],
+      "altitude_range_m": [
+        22,
+        50
+      ],
+      "character": "Cultivation services, kitchens, stock rooms and mixed homes"
+    },
+    {
+      "id": "MER-D09",
+      "name": "Calder Houses",
+      "population": 55000,
+      "area_allowance_km2": 14,
+      "center_xyz_m": [
+        -7800,
+        7000,
+        31
+      ],
+      "radii_m": [
+        3000,
+        2400
+      ],
+      "altitude_range_m": [
+        24,
+        58
+      ],
+      "character": "Upper-bank transfers, adapted industry, homes and northern routes"
+    },
+    {
+      "id": "MER-D10",
+      "name": "High Apron",
+      "population": 46000,
+      "area_allowance_km2": 16,
+      "center_xyz_m": [
+        8500,
+        4600,
+        48
+      ],
+      "radii_m": [
+        2900,
+        2800
+      ],
+      "altitude_range_m": [
+        38,
+        75
+      ],
+      "character": "Gently rising northeast, flight services, technical work and quiet outlooks"
+    }
+  ],
+  "places": [
+    {
+      "id": "MER-POI-001",
+      "name": "Turnside Quay",
+      "district_id": "MER-D01",
+      "xyz_m": [
+        -250,
+        -1900,
+        17
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Tessa Vale",
+      "independent_purpose": "Passenger and cargo scheduling; dry point behind a working riverbank",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-002",
+      "name": "The Long Span",
+      "district_id": "MER-D01",
+      "xyz_m": [
+        0,
+        0,
+        24
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 10.0,
+      "shore_access_xyz_m": [
+        -1000,
+        -300,
+        22
+      ],
+      "principal_resident": "Nalin Orr",
+      "independent_purpose": "Crossing, maintenance and ordinary rest above the river",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-003",
+      "name": "House of the Second Meal",
+      "district_id": "MER-D01",
+      "xyz_m": [
+        -1900,
+        -700,
+        24
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Risa Kelm",
+      "independent_purpose": "Independent kitchen, boarding rooms and household hospitality",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-004",
+      "name": "Seven Bowls Court",
+      "district_id": "MER-D02",
+      "xyz_m": [
+        -4400,
+        -300,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Devra Ellin",
+      "independent_purpose": "Culinary craft, affordable and costly meals, tastes and teaching",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-005",
+      "name": "The Small Departure",
+      "district_id": "MER-D02",
+      "xyz_m": [
+        -5300,
+        -1600,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Iren Vol and Asha Nerr",
+      "independent_purpose": "Private home, travel and an ongoing relationship",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-006",
+      "name": "Rainward Hall",
+      "district_id": "MER-D02",
+      "xyz_m": [
+        -3600,
+        -2100,
+        25
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Faro Dren",
+      "independent_purpose": "Dance, rehearsal and coordinated ordinary pleasure",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-007",
+      "name": "Foldhouse Works",
+      "district_id": "MER-D03",
+      "xyz_m": [
+        -4800,
+        -4800,
+        26
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Sela Reth",
+      "independent_purpose": "Qualified preparation and process manufacture with separate residuals",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-008",
+      "name": "The Last Hot Brick",
+      "district_id": "MER-D03",
+      "xyz_m": [
+        -6900,
+        -5700,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Kav Bren",
+      "independent_purpose": "Industrial ceramics and personal evening making",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-009",
+      "name": "Tamar's Empty Gate",
+      "district_id": "MER-D04",
+      "xyz_m": [
+        1300,
+        1400,
+        27
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Una Dask",
+      "independent_purpose": "Public passage, private rooms and bounded clandestine requests",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-010",
+      "name": "Blue Sill Rooms",
+      "district_id": "MER-D04",
+      "xyz_m": [
+        2500,
+        1900,
+        29
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Ama Tess",
+      "independent_purpose": "Source-aware public history; not the original nursery or courtroom",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-011",
+      "name": "The Patient Window",
+      "district_id": "MER-D04",
+      "xyz_m": [
+        3600,
+        400,
+        25
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Iska Renn",
+      "independent_purpose": "Controlled native observation; separate water chemistry and husbandry",
+      "status": "authored focal point, not footprint or implemented interaction",
+      "water_system_scope": "controlled basins inside a land building, separate from city river and potable systems; not mapped wild brackish habitat"
+    },
+    {
+      "id": "MER-POI-012",
+      "name": "Little Weather Studio",
+      "district_id": "MER-D05",
+      "xyz_m": [
+        3100,
+        4300,
+        35
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Jori Ell",
+      "independent_purpose": "Commercial music, private work and selected public sessions",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-013",
+      "name": "A Balcony for Lies",
+      "district_id": "MER-D05",
+      "xyz_m": [
+        4000,
+        5700,
+        37
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Soran Kee",
+      "independent_purpose": "Theater, comedy and backstage craft",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-014",
+      "name": "Twice-Painted Hull",
+      "district_id": "MER-D06",
+      "xyz_m": [
+        2100,
+        -4100,
+        17
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Nessa Torv",
+      "independent_purpose": "Dry vessel-yard arrival, repair and contested ownership",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-015",
+      "name": "Openhand Slip",
+      "district_id": "MER-D06",
+      "xyz_m": [
+        1000,
+        -3300,
+        16
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 9.5,
+      "shore_access_xyz_m": [
+        1750,
+        -3000,
+        19
+      ],
+      "principal_resident": "Varek Oss",
+      "independent_purpose": "Independent crew interface with morally consequential voyage offers",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-016",
+      "name": "The Narrow Houseboat",
+      "district_id": "MER-D06",
+      "xyz_m": [
+        2380,
+        -5700,
+        15
+      ],
+      "placement": "supported_overwater",
+      "water_surface_m": 9.128086642599278,
+      "shore_access_xyz_m": [
+        3200,
+        -5500,
+        21
+      ],
+      "principal_resident": "Olin Vale and Mera Uth",
+      "independent_purpose": "Moored household, paid work and domestic choices",
+      "status": "authored focal point, not footprint or implemented interaction",
+      "placement_detail": "moored vessel at reference pose; operating water levels, mooring excursion and changing access require separate design"
+    },
+    {
+      "id": "MER-POI-017",
+      "name": "Southward Rooms",
+      "district_id": "MER-D07",
+      "xyz_m": [
+        4200,
+        -9700,
+        16
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Celi An",
+      "independent_purpose": "Dry regional travel house with real downstream estuary departures",
+      "status": "authored focal point, not footprint or implemented interaction",
+      "regional_destination_scope": "MOR-E04 and other suitable downstream habitats remain beyond the city plate, with exact sites unresolved"
+    },
+    {
+      "id": "MER-POI-018",
+      "name": "The Low Tournament",
+      "district_id": "MER-D07",
+      "xyz_m": [
+        6500,
+        -8600,
+        22
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Milo Rask",
+      "independent_purpose": "Linefold sport on land with a constructed managed practice basin",
+      "status": "authored focal point, not footprint or implemented interaction",
+      "water_system_scope": "small constructed sport basin on land, not a permanent natural river channel or habitat claim"
+    },
+    {
+      "id": "MER-POI-019",
+      "name": "The Leaf and Ladle",
+      "district_id": "MER-D08",
+      "xyz_m": [
+        -8200,
+        0,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Alen Sorr",
+      "independent_purpose": "Cultivation-service teaching and ordinary meals",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-020",
+      "name": "A Room for Quiet",
+      "district_id": "MER-D08",
+      "xyz_m": [
+        -9400,
+        1900,
+        30
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Rumi Esh",
+      "independent_purpose": "Reading, rest and a separately private home",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-021",
+      "name": "The Old Weight",
+      "district_id": "MER-D09",
+      "xyz_m": [
+        -7600,
+        7700,
+        34
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Keva Dro",
+      "independent_purpose": "Industrial remains, present workshops and inspected exploration",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-022",
+      "name": "Last Fair Weather",
+      "district_id": "MER-D09",
+      "xyz_m": [
+        -8500,
+        6400,
+        28
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Tarin Moss",
+      "independent_purpose": "Dry upper-bank travel and repair approach",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-023",
+      "name": "Unscheduled Departure",
+      "district_id": "MER-D10",
+      "xyz_m": [
+        9000,
+        4200,
+        52
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Sen Ell",
+      "independent_purpose": "Limited flight service and independent travel choices",
+      "status": "authored focal point, not footprint or implemented interaction"
+    },
+    {
+      "id": "MER-POI-024",
+      "name": "The Far-Side Roof",
+      "district_id": "MER-D10",
+      "xyz_m": [
+        8200,
+        5600,
+        58
+      ],
+      "placement": "land",
+      "water_surface_m": null,
+      "shore_access_xyz_m": null,
+      "principal_resident": "Yara Il",
+      "independent_purpose": "Sheltered public outlook, meals and an inhabited far-side sky",
+      "status": "authored focal point, not footprint or implemented interaction"
+    }
+  ],
+  "transport_nodes": [
+    {
+      "id": "MER-T01",
+      "name": "Near Bank public interchange",
+      "district_id": "MER-D01",
+      "xyz_m": [
+        -900,
+        -1800,
+        21
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T02",
+      "name": "Cupwall center stop",
+      "district_id": "MER-D02",
+      "xyz_m": [
+        -4500,
+        -1000,
+        30
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T03",
+      "name": "Long Kilns freight and passenger stop",
+      "district_id": "MER-D03",
+      "xyz_m": [
+        -5300,
+        -5700,
+        30
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T04",
+      "name": "Tamar Steps interchange",
+      "district_id": "MER-D04",
+      "xyz_m": [
+        2500,
+        1200,
+        29
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T05",
+      "name": "Paper Mile stop",
+      "district_id": "MER-D05",
+      "xyz_m": [
+        3200,
+        4900,
+        36
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T06",
+      "name": "The Ropes dry interchange",
+      "district_id": "MER-D06",
+      "xyz_m": [
+        2800,
+        -4000,
+        22
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T07",
+      "name": "Vell Strand regional departure interchange",
+      "district_id": "MER-D07",
+      "xyz_m": [
+        4800,
+        -9700,
+        20
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T08",
+      "name": "West Meals stop",
+      "district_id": "MER-D08",
+      "xyz_m": [
+        -9300,
+        900,
+        28
+      ],
+      "regional_gateway": false,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T09",
+      "name": "Calder Houses upstream interchange",
+      "district_id": "MER-D09",
+      "xyz_m": [
+        -7800,
+        6700,
+        32
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T10",
+      "name": "High Apron regional flight interchange",
+      "district_id": "MER-D10",
+      "xyz_m": [
+        8700,
+        4200,
+        52
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T11",
+      "name": "Northwest regional road gateway",
+      "district_id": null,
+      "xyz_m": [
+        -13800,
+        10800,
+        35
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T12",
+      "name": "Southern regional road and rail gateway",
+      "district_id": null,
+      "xyz_m": [
+        6000,
+        -14000,
+        16
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    },
+    {
+      "id": "MER-T13",
+      "name": "Eastern regional land gateway",
+      "district_id": null,
+      "xyz_m": [
+        13500,
+        3000,
+        58
+      ],
+      "regional_gateway": true,
+      "endpoint_type": "dry_land_interchange",
+      "access_leg_required": true,
+      "access_note": "River services require separately designed shore access, berths and navigable water legs; flight and land services require their actual platforms"
+    }
+  ],
+  "transport_links": [
+    {
+      "id": "MER-L01",
+      "from": "MER-T01",
+      "to": "MER-T02",
+      "mode": "tram",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L02",
+      "from": "MER-T01",
+      "to": "MER-T03",
+      "mode": "tram",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L03",
+      "from": "MER-T01",
+      "to": "MER-T04",
+      "mode": "walking",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved",
+      "crossing_intent": "Long Span corridor; separate pedestrian and transit geometry/capacity still required"
+    },
+    {
+      "id": "MER-L04",
+      "from": "MER-T01",
+      "to": "MER-T04",
+      "mode": "tram",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved",
+      "crossing_intent": "Long Span corridor; separate pedestrian and transit geometry/capacity still required"
+    },
+    {
+      "id": "MER-L05",
+      "from": "MER-T01",
+      "to": "MER-T06",
+      "mode": "ferry",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved",
+      "access_leg_required": true
+    },
+    {
+      "id": "MER-L06",
+      "from": "MER-T01",
+      "to": "MER-T07",
+      "mode": "ferry",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved",
+      "access_leg_required": true
+    },
+    {
+      "id": "MER-L07",
+      "from": "MER-T01",
+      "to": "MER-T09",
+      "mode": "ferry",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved",
+      "access_leg_required": true
+    },
+    {
+      "id": "MER-L08",
+      "from": "MER-T02",
+      "to": "MER-T03",
+      "mode": "bus",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L09",
+      "from": "MER-T02",
+      "to": "MER-T08",
+      "mode": "tram",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L10",
+      "from": "MER-T03",
+      "to": "MER-T08",
+      "mode": "road",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L11",
+      "from": "MER-T03",
+      "to": "MER-T07",
+      "mode": "ferry",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved",
+      "access_leg_required": true
+    },
+    {
+      "id": "MER-L12",
+      "from": "MER-T04",
+      "to": "MER-T05",
+      "mode": "tram",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L13",
+      "from": "MER-T04",
+      "to": "MER-T06",
+      "mode": "tram",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L14",
+      "from": "MER-T04",
+      "to": "MER-T10",
+      "mode": "bus",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L15",
+      "from": "MER-T05",
+      "to": "MER-T10",
+      "mode": "tram",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L16",
+      "from": "MER-T06",
+      "to": "MER-T07",
+      "mode": "road",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L17",
+      "from": "MER-T06",
+      "to": "MER-T10",
+      "mode": "bus",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L18",
+      "from": "MER-T07",
+      "to": "MER-T12",
+      "mode": "rail",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L19",
+      "from": "MER-T07",
+      "to": "MER-T13",
+      "mode": "road",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L20",
+      "from": "MER-T08",
+      "to": "MER-T09",
+      "mode": "bus",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L21",
+      "from": "MER-T09",
+      "to": "MER-T11",
+      "mode": "road",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L22",
+      "from": "MER-T10",
+      "to": "MER-T13",
+      "mode": "road",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L23",
+      "from": "MER-T03",
+      "to": "MER-T12",
+      "mode": "rail",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    },
+    {
+      "id": "MER-L24",
+      "from": "MER-T08",
+      "to": "MER-T11",
+      "mode": "road",
+      "status": "service dependency only; alignment, crossing infrastructure, gradients, capacity and operating rights unresolved"
+    }
+  ],
+  "service_cases": {
+    "domestic_liters_per_person_per_turn": 130,
+    "other_potable_m3_per_turn": 35700,
+    "delivered_potable_m3_per_turn": 115000,
+    "network_loss_fraction": 0.12,
+    "network_input_m3_per_turn": 130681.81818181818,
+    "edible_product_kg_per_person_per_turn": 1.7,
+    "edible_product_tonnes_per_turn": 1037,
+    "electric_average_mw": 410,
+    "electric_peak_mw": 760,
+    "scope": "610000 core residents and accounted urban activity, 24-hour turns; productive yield, affordability, reliability and nutrition unverified"
+  },
+  "unresolved": [
+    "Map local banks, terrain, flood and backwater behavior, salinity intrusion and actual tidal forcing; 10 m reference is not a proven tidal range.",
+    "Survey navigation depth, bends, vessel envelopes, bridge structure and pier clearances, berths, moorings and variable access gradients.",
+    "Qualify upstream raw chemistry, yield, treatment recovery, storage, industrial segregation and downstream effluent load limits.",
+    "Add actual agricultural areas, selected line performance, culture substrates, nutrients, water and lighting to the food demand account.",
+    "Allocate Merrow share of the shared 12 t Orison distant-specialty row without duplicating Dhal or other origins; other food exports remain additional and unquantified.",
+    "Prove firm import/local generation obligations, fuel, cooling, contingencies, renewable yield, storage charging and losses.",
+    "Map downstream native habitat stages and MOR-E04 regional site separately; do not place brackish hero species automatically in the city river.",
+    "Engineer and cost the controlled native observation systems and small sport basin, which are building-scale facilities not atlas channels.",
+    "Refine parcel areas, public/private access, building heights, accessible routes, regional corridors and service sites.",
+    "Integrate proposed local chronology, new institutions and biographies without replacing established 612 AL Blue Sill facts.",
+    "Implement and measure traversal, social response, items, vehicles, streaming, NPC schedules and presentation separately."
+  ],
+  "regional_river_context": {
+    "source_points_lon_lat_elevation_m": [
+      [
+        136,
+        -19,
+        2100
+      ],
+      [
+        145,
+        -25,
+        410
+      ],
+      [
+        151,
+        -28,
+        80
+      ],
+      [
+        158,
+        -30,
+        10
+      ],
+      [
+        158.222222,
+        -31,
+        0
+      ]
+    ],
+    "source_mouth_lon_lat_elevation_m": [
+      158.222222,
+      -31,
+      0
+    ],
+    "projected_mouth_xyz_m": [
+      19615.699285,
+      -102993.637453,
+      0
+    ],
+    "minimum_city_to_mouth_distance_km": 104.84495702767578,
+    "local_centerline_length_m": 32156.725010237384,
+    "scope": "mouth is outside local plate; local city river is not an ocean harbor or proof of marine salinity"
+  },
+  "surface_authoring": {
+    "method": "varying-width straight-control reach, mitered offsets around source-preserving centerline",
+    "half_width_controls_m": [
+      500,
+      500,
+      520,
+      530,
+      550,
+      450,
+      600,
+      600,
+      650
+    ],
+    "source_height_preserved_xyz_m": [
+      0,
+      0,
+      10
+    ],
+    "surface_reference_warning": "10 m is origin reference only; supported placements use closest centerline interpolation"
+  },
+  "housing_screen": {
+    "dwellings": 244000,
+    "occupied_fraction": 0.96,
+    "residents_per_occupied_dwelling": 2.604,
+    "implied_population": 609960.9600000001,
+    "residential_parcels_km2": 25,
+    "coverage_fraction": 0.28,
+    "effective_floors": 3.2,
+    "usable_fraction": 0.8,
+    "usable_floor_m2": 17920000,
+    "usable_m2_per_dwelling": 73.44262295081967,
+    "scope": "illustrative accommodation and floor allowance, not verified stock or affordability"
+  },
+  "land_allocation_km2": {
+    "residential": 25,
+    "employment": 24,
+    "civic": 10,
+    "streets_and_transport": 22,
+    "urban_cultivation_and_service_plots": 8,
+    "parks_and_habitat": 18,
+    "waterfront_facilities": 10,
+    "reserve_and_other_open": 15
+  },
+  "water_process_screen": {
+    "raw_recovery_fraction": 0.96,
+    "raw_abstraction_m3_per_turn": 136126.89393939395,
+    "raw_abstraction_average_m3_per_second": 1.5755427539281708,
+    "raw_process_residual_m3_per_turn": 5445.075757575774,
+    "distribution_loss_m3_per_turn": 15681.818181818177,
+    "raw_storage_target_m3": 2200000,
+    "raw_storage_upper_bound_turns": 16.161391304347823,
+    "treated_storage_target_m3": 260000,
+    "treated_storage_upper_bound_turns": 1.9895652173913043,
+    "raw_treatment_trains": 3,
+    "raw_treatment_train_nominal_m3_per_turn": 75000,
+    "reclaimed_m3_per_turn": 30000,
+    "gross_end_use_m3_per_turn": 145000,
+    "sewer_collection_m3_per_turn": 110000,
+    "consumed_or_uncollected_m3_per_turn": 35000,
+    "final_treated_residual_m3_per_turn": 80000,
+    "wastewater_trains": 3,
+    "wastewater_train_nominal_m3_per_turn": 55000,
+    "scope": "fresh-source treatment assumption requires chemistry and yield; raw plus distribution plus reuse streams are separate; final discharge requires real load limits and process residual handling"
+  },
+  "food_screen": {
+    "resident_basket_tonnes_per_turn": {
+      "introduced_dry": 380,
+      "introduced_fresh": 390,
+      "cultured": 175,
+      "other_preserved": 80,
+      "qualified_native_fractions": 12
+    },
+    "kcal_per_resident_per_turn": 2500,
+    "kcal_total_per_turn": 1525000000,
+    "dry_equivalent_kcal_per_kg": 3200,
+    "dry_calorie_equivalent_tonnes_per_turn": 476.5625,
+    "protein_g_per_resident_per_turn": 75,
+    "protein_tonnes_per_turn": 45.75,
+    "reserve_turns": 60,
+    "reserve_dry_calorie_equivalent_tonnes": 28593.75,
+    "shared_Orison_export_allowance": {
+      "source_record": "SUP-006",
+      "combined_origins_region_ids": [
+        "REG-011",
+        "REG-012",
+        "REG-021"
+      ],
+      "combined_tonnes_per_turn": 12,
+      "combined_native_tonnes_per_turn": 5,
+      "combined_other_preserved_tonnes_per_turn": 7,
+      "Merrow_share_tonnes_per_turn": null,
+      "status": "Merrow share is additional to resident food but unallocated; do not duplicate the combined allowance"
+    },
+    "other_export_relationships": [
+      {
+        "record": "EX-007",
+        "destination_city_id": "CITY-009",
+        "destination": "Tern",
+        "goods": "Specialty preparations and process equipment",
+        "food_tonnes_per_turn": null
+      },
+      {
+        "record": "EX-016",
+        "destination_city_id": "CITY-007",
+        "destination": "Dhal",
+        "goods": "Water-processing equipment and qualification services",
+        "food_tonnes_per_turn": null
+      }
+    ],
+    "scope": "product mass and separate dietary screens; no native fraction automatically qualified and no export or regional resident demand included twice"
+  },
+  "power_screen": {
+    "average_allocation_mw": {
+      "homes_and_ordinary_commerce": 135,
+      "public_services": 55,
+      "controlled_food_and_biological_processes": 80,
+      "other_manufacturing": 85,
+      "transport_and_freight": 35,
+      "distribution_and_other_utilities": 20
+    },
+    "candidate_regional_firm_import_obligation_mw": 300,
+    "candidate_local_firm_generation_obligation_mw": 160,
+    "candidate_photovoltaic_nameplate_mwp": 350,
+    "candidate_wind_nameplate_mw": 220,
+    "candidate_usable_storage_gwh": 20,
+    "candidate_discharge_mw": 320,
+    "longest_nominal_night_hours": 74.7,
+    "residual_deficit_examples": [
+      {
+        "mw": 180,
+        "energy_gwh_before_other_system_losses": 13.446
+      },
+      {
+        "mw": 410,
+        "energy_gwh_before_other_system_losses": 30.627
+      }
+    ],
+    "scope": "desired firm obligations and candidate portfolio, not installed or assured supply; full city load exceeds storage energy and discharge power"
+  },
+  "municipal_waste_screen": {
+    "kg_per_resident_per_turn": 0.75,
+    "tonnes_per_turn": 457.5,
+    "scope": "ordinary municipal only; construction, industrial, native-processing and treatment residuals are additional segregated streams"
+  },
+  "freight_screen": {
+    "distinct_consignments_first_entering_city_handling_tonnes_per_turn_min": 7000,
+    "distinct_consignments_first_entering_city_handling_tonnes_per_turn_max": 11000,
+    "scope": "workload envelope not capacity; rehandling creates handling work but not new mass; resident food is a subset rather than additive duplicate"
+  },
+  "ecological_placement": {
+    "city_reach_status": "river water provisional; no demonstrated marine salinity at 10 m city control",
+    "regional_species_ids": [
+      "ECO-037",
+      "ECO-038",
+      "ECO-039",
+      "ECO-040"
+    ],
+    "wild_regional_locations": "suitable lower-estuary habitat stages outside the city plate, exact sites unresolved",
+    "controlled_city_place_id": "MER-POI-011",
+    "regional_departure_place_id": "MER-POI-017",
+    "regional_story_id": "MOR-E04",
+    "missing_scope": "qualified native urban river and terrestrial assemblages; complete downstream habitat map"
+  },
+  "sky": {
+    "rauth_visibility": "entire disc below ordinary reference horizon",
+    "natural_solar_cycle_hours": 136.755,
+    "nominal_daylight_northern_solstice_hours": 62.1,
+    "nominal_daylight_equinox_hours": 68.4,
+    "nominal_daylight_southern_solstice_hours": 74.7,
+    "civil_turn_hours": 24,
+    "scope": "adopted reference sky; local horizons and atmosphere remain additional"
+  },
+  "sources": [
+    "../00_CANON_AND_ORIENTATION.md",
+    "../02_SKY_WATER_AND_SEASONS.md",
+    "../04_HISTORY_OF_NACRE.md",
+    "../05_LANGUAGES_NAMES_AND_BELONGING.md",
+    "../06_POWER_AND_EXCHANGE.md",
+    "../06b_PRODUCTIVE_LANDSCAPES.md",
+    "../07_REGIONAL_ATLAS.md",
+    "../Atlas/nacre_atlas.json",
+    "../Atlas/nacre_geography.json",
+    "../Exchange/nacre_exchange.json",
+    "../Drafts/MORROW_ECOSYSTEMS.md",
+    "../Drafts/SERE_AND_PALE_ECOSYSTEMS.md",
+    "../Drafts/SOCIETIES_FOUNDATION.md",
+    "../Drafts/PLEASURES_AND_EVERYDAY_LIFE.md",
+    "SETTLEMENT_PLAN_FORMAT.md"
+  ],
+  "biographical_continuity": [
+    {
+      "name": "Tessa Vale",
+      "birth_year_AL": 699,
+      "approximate_age_Earth_standard_years": 38,
+      "age_at_present_if_birth_fraction_ignored": 38.28395071868583
+    },
+    {
+      "name": "Nalin Orr",
+      "birth_year_AL": 685,
+      "approximate_age_Earth_standard_years": 51,
+      "age_at_present_if_birth_fraction_ignored": 50.74849281314168
+    },
+    {
+      "name": "Risa Kelm",
+      "birth_year_AL": 694,
+      "approximate_age_Earth_standard_years": 43,
+      "age_at_present_if_birth_fraction_ignored": 42.7355728952772
+    },
+    {
+      "name": "Devra Ellin",
+      "birth_year_AL": 674,
+      "approximate_age_Earth_standard_years": 61,
+      "age_at_present_if_birth_fraction_ignored": 60.5420616016427
+    },
+    {
+      "name": "Iren Vol",
+      "birth_year_AL": 711,
+      "approximate_age_Earth_standard_years": 28,
+      "age_at_present_if_birth_fraction_ignored": 27.600057494866526
+    },
+    {
+      "name": "Faro Dren",
+      "birth_year_AL": 692,
+      "approximate_age_Earth_standard_years": 45,
+      "age_at_present_if_birth_fraction_ignored": 44.516221765913755
+    },
+    {
+      "name": "Sela Reth",
+      "birth_year_AL": 688,
+      "approximate_age_Earth_standard_years": 48,
+      "age_at_present_if_birth_fraction_ignored": 48.07751950718686
+    },
+    {
+      "name": "Kav Bren",
+      "birth_year_AL": 681,
+      "approximate_age_Earth_standard_years": 54,
+      "age_at_present_if_birth_fraction_ignored": 54.30979055441478
+    },
+    {
+      "name": "Una Dask",
+      "birth_year_AL": 676,
+      "approximate_age_Earth_standard_years": 59,
+      "age_at_present_if_birth_fraction_ignored": 58.76141273100616
+    },
+    {
+      "name": "Ama Tess",
+      "birth_year_AL": 703,
+      "approximate_age_Earth_standard_years": 35,
+      "age_at_present_if_birth_fraction_ignored": 34.72265297741273
+    },
+    {
+      "name": "Iska Renn",
+      "birth_year_AL": 708,
+      "approximate_age_Earth_standard_years": 30,
+      "age_at_present_if_birth_fraction_ignored": 30.27103080082135
+    },
+    {
+      "name": "Jori Ell",
+      "birth_year_AL": 715,
+      "approximate_age_Earth_standard_years": 24,
+      "age_at_present_if_birth_fraction_ignored": 24.03875975359343
+    },
+    {
+      "name": "Soran Kee",
+      "birth_year_AL": 666,
+      "approximate_age_Earth_standard_years": 68,
+      "age_at_present_if_birth_fraction_ignored": 67.66465708418892
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1570" viewBox="0 0 1560 1570" role="img" aria-labelledby="title desc">
+<title id="title">Merrow authored settlement plan</title>
+<desc id="desc">Twenty-four named places and district envelopes. Lines represent service dependencies, not surveyed routes. No constructed city is claimed.</desc>
+<rect width="1560" height="1570" fill="#f3efe2"/>
+<style>text{font-family:Arial,sans-serif;fill:#233e47;font-size:16px}.small{font-size:13px}.tiny{font-size:12px}</style>
+<text x="60.00" y="47.00" style="font-size:29px">MERROW / A PLACE TO ARRIVE</text>
+<text x="60.00" y="79.00" >CITY-008 · 742 AL · 610,000 core residents, authored estimate · settlement proposal v1</text>
+<text x="60.00" y="105.00" class="small">North is up · coordinates in kilometers · z is planning sea-level altitude · no surveyed terrain or operating service capacity</text>
+<rect x="142.41228070175436" y="145.0" width="870.1754385964913" height="800.0" fill="#e3dfce" stroke="#8ca6aa"/>
+<polygon points="205.99,245.38 317.65,315.17 444.39,376.50 536.27,436.47 605.14,501.56 631.25,597.41 689.10,686.61 706.23,800.77 743.62,911.29 708.92,922.57 673.33,808.53 656.77,698.13 607.96,607.67 577.94,518.27 517.67,459.85 429.91,401.92 304.01,339.74 191.11,269.18 205.99,245.38" fill="#bdd9df" stroke="#477f90" stroke-width="1.2"/>
+<line x1="170.48245614035085" y1="145.0" x2="170.48245614035085" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="170.48" y="968.00" class="tiny" text-anchor="middle">-15</text>
+<line x1="310.8333333333333" y1="145.0" x2="310.8333333333333" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="310.83" y="968.00" class="tiny" text-anchor="middle">-10</text>
+<line x1="451.1842105263158" y1="145.0" x2="451.1842105263158" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="451.18" y="968.00" class="tiny" text-anchor="middle">-5</text>
+<line x1="591.5350877192982" y1="145.0" x2="591.5350877192982" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="591.54" y="968.00" class="tiny" text-anchor="middle">0</text>
+<line x1="731.8859649122808" y1="145.0" x2="731.8859649122808" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="731.89" y="968.00" class="tiny" text-anchor="middle">5</text>
+<line x1="872.2368421052631" y1="145.0" x2="872.2368421052631" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="872.24" y="968.00" class="tiny" text-anchor="middle">10</text>
+<line x1="1012.5877192982457" y1="145.0" x2="1012.5877192982457" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="1012.59" y="968.00" class="tiny" text-anchor="middle">15</text>
+<line x1="142.41228070175436" y1="930.9649122807018" x2="1012.5877192982457" y2="930.9649122807018" stroke="#aebfb8" opacity=".35"/>
+<text x="133.41" y="934.96" class="tiny" text-anchor="end">-15</text>
+<line x1="142.41228070175436" y1="790.6140350877193" x2="1012.5877192982457" y2="790.6140350877193" stroke="#aebfb8" opacity=".35"/>
+<text x="133.41" y="794.61" class="tiny" text-anchor="end">-10</text>
+<line x1="142.41228070175436" y1="650.2631578947369" x2="1012.5877192982457" y2="650.2631578947369" stroke="#aebfb8" opacity=".35"/>
+<text x="133.41" y="654.26" class="tiny" text-anchor="end">-5</text>
+<line x1="142.41228070175436" y1="509.9122807017544" x2="1012.5877192982457" y2="509.9122807017544" stroke="#aebfb8" opacity=".35"/>
+<text x="133.41" y="513.91" class="tiny" text-anchor="end">0</text>
+<line x1="142.41228070175436" y1="369.56140350877195" x2="1012.5877192982457" y2="369.56140350877195" stroke="#aebfb8" opacity=".35"/>
+<text x="133.41" y="373.56" class="tiny" text-anchor="end">5</text>
+<line x1="142.41228070175436" y1="229.21052631578948" x2="1012.5877192982457" y2="229.21052631578948" stroke="#aebfb8" opacity=".35"/>
+<text x="133.41" y="233.21" class="tiny" text-anchor="end">10</text>
+<text x="142.41" y="135.00" class="tiny">y north / km</text>
+<text x="1012.59" y="988.00" class="tiny" text-anchor="end">x east / km</text>
+<ellipse data-district="MER-D01" cx="546.6228070175439" cy="543.5964912280701" rx="72.98245614035088" ry="67.36842105263158" fill="#bd9355" fill-opacity=".12" stroke="#bd9355" stroke-opacity=".75"/>
+<ellipse data-district="MER-D02" cx="465.219298245614" cy="546.4035087719299" rx="58.94736842105263" ry="61.75438596491228" fill="#ad7464" fill-opacity=".12" stroke="#ad7464" stroke-opacity=".75"/>
+<ellipse data-district="MER-D03" cx="431.53508771929825" cy="658.6842105263158" rx="84.21052631578948" ry="75.78947368421053" fill="#767da1" fill-opacity=".12" stroke="#767da1" stroke-opacity=".75"/>
+<ellipse data-district="MER-D04" cx="664.5175438596491" cy="481.8421052631579" rx="64.56140350877193" ry="64.56140350877193" fill="#b69a3b" fill-opacity=".12" stroke="#b69a3b" stroke-opacity=".75"/>
+<ellipse data-district="MER-D05" cx="675.7456140350878" cy="375.17543859649123" rx="58.94736842105263" ry="64.56140350877193" fill="#648c66" fill-opacity=".12" stroke="#648c66" stroke-opacity=".75"/>
+<ellipse data-district="MER-D06" cx="656.0964912280701" cy="613.7719298245614" rx="64.56140350877193" ry="72.98245614035088" fill="#527d89" fill-opacity=".12" stroke="#527d89" stroke-opacity=".75"/>
+<ellipse data-district="MER-D07" cx="745.921052631579" cy="765.3508771929825" rx="67.36842105263158" ry="78.59649122807018" fill="#a78163" fill-opacity=".12" stroke="#a78163" stroke-opacity=".75"/>
+<ellipse data-district="MER-D08" cx="338.9035087719298" cy="484.64912280701753" rx="78.59649122807018" ry="72.98245614035088" fill="#4c917e" fill-opacity=".12" stroke="#4c917e" stroke-opacity=".75"/>
+<ellipse data-district="MER-D09" cx="372.5877192982456" cy="313.42105263157896" rx="84.21052631578948" ry="67.36842105263158" fill="#7c90a1" fill-opacity=".12" stroke="#7c90a1" stroke-opacity=".75"/>
+<ellipse data-district="MER-D10" cx="830.1315789473683" cy="380.7894736842105" rx="81.40350877192982" ry="78.59649122807018" fill="#94769d" fill-opacity=".12" stroke="#94769d" stroke-opacity=".75"/>
+<line x1="566.2719298245613" y1="560.438596491228" x2="465.219298245614" y2="537.9824561403509" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="566.2719298245613" y1="560.438596491228" x2="442.7631578947368" y2="669.9122807017544" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="566.2719298245613" y1="560.438596491228" x2="661.7105263157894" y2="476.2280701754386" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="566.2719298245613" y1="560.438596491228" x2="661.7105263157894" y2="476.2280701754386" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="566.2719298245613" y1="560.438596491228" x2="670.1315789473683" y2="622.1929824561404" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="566.2719298245613" y1="560.438596491228" x2="726.2719298245613" y2="782.1929824561404" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="566.2719298245613" y1="560.438596491228" x2="372.5877192982456" y2="321.8421052631579" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="465.219298245614" y1="537.9824561403509" x2="442.7631578947368" y2="669.9122807017544" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="465.219298245614" y1="537.9824561403509" x2="330.48245614035085" y2="484.64912280701753" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="442.7631578947368" y1="669.9122807017544" x2="330.48245614035085" y2="484.64912280701753" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="442.7631578947368" y1="669.9122807017544" x2="726.2719298245613" y2="782.1929824561404" stroke="#247089" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="661.7105263157894" y1="476.2280701754386" x2="681.359649122807" y2="372.36842105263156" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="661.7105263157894" y1="476.2280701754386" x2="670.1315789473683" y2="622.1929824561404" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="661.7105263157894" y1="476.2280701754386" x2="835.7456140350878" y2="392.0175438596491" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="681.359649122807" y1="372.36842105263156" x2="835.7456140350878" y2="392.0175438596491" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="670.1315789473683" y1="622.1929824561404" x2="726.2719298245613" y2="782.1929824561404" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="670.1315789473683" y1="622.1929824561404" x2="835.7456140350878" y2="392.0175438596491" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="726.2719298245613" y1="782.1929824561404" x2="759.9561403508771" y2="902.8947368421053" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="726.2719298245613" y1="782.1929824561404" x2="970.4824561403509" y2="425.70175438596493" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="330.48245614035085" y1="484.64912280701753" x2="372.5877192982456" y2="321.8421052631579" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="372.5877192982456" y1="321.8421052631579" x2="204.16666666666663" y2="206.75438596491227" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="835.7456140350878" y1="392.0175438596491" x2="970.4824561403509" y2="425.70175438596493" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="442.7631578947368" y1="669.9122807017544" x2="759.9561403508771" y2="902.8947368421053" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="330.48245614035085" y1="484.64912280701753" x2="204.16666666666663" y2="206.75438596491227" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="526.1877192982456" y1="489.70175438596493" x2="552.6877192982456" y2="488.70175438596493" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="536.1877192982456" y="476.70175438596493" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="552.69" y="493.70" class="small" text-anchor="middle" style="fill:#fff9e9">D01</text>
+<line x1="448.71403508771925" y1="497.0" x2="475.21403508771925" y2="496.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="458.71403508771925" y="484.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="475.21" y="501.00" class="small" text-anchor="middle" style="fill:#fff9e9">D02</text>
+<line x1="407.95614035087715" y1="598.0526315789474" x2="434.45614035087715" y2="597.0526315789474" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="417.95614035087715" y="585.0526315789474" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="434.46" y="602.05" class="small" text-anchor="middle" style="fill:#fff9e9">D03</text>
+<line x1="646.4403508771929" y1="430.1929824561403" x2="672.9403508771929" y2="429.1929824561403" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="656.4403508771929" y="417.1929824561403" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="672.94" y="434.19" class="small" text-anchor="middle" style="fill:#fff9e9">D04</text>
+<line x1="659.2403508771929" y1="323.5263157894737" x2="685.7403508771929" y2="322.5263157894737" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="669.2403508771929" y="310.5263157894737" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="685.74" y="327.53" class="small" text-anchor="middle" style="fill:#fff9e9">D05</text>
+<line x1="638.019298245614" y1="555.3859649122808" x2="664.519298245614" y2="554.3859649122808" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="648.019298245614" y="542.3859649122808" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="664.52" y="559.39" class="small" text-anchor="middle" style="fill:#fff9e9">D06</text>
+<line x1="727.0578947368422" y1="702.4736842105264" x2="753.5578947368422" y2="701.4736842105264" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="737.0578947368422" y="689.4736842105264" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="753.56" y="706.47" class="small" text-anchor="middle" style="fill:#fff9e9">D07</text>
+<line x1="316.89649122807015" y1="426.2631578947368" x2="343.39649122807015" y2="425.2631578947368" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="326.89649122807015" y="413.2631578947368" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="343.40" y="430.26" class="small" text-anchor="middle" style="fill:#fff9e9">D08</text>
+<line x1="349.00877192982455" y1="259.5263157894737" x2="375.50877192982455" y2="258.5263157894737" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="359.00877192982455" y="246.5263157894737" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="375.51" y="263.53" class="small" text-anchor="middle" style="fill:#fff9e9">D09</text>
+<line x1="807.3385964912281" y1="317.9122807017544" x2="833.8385964912281" y2="316.9122807017544" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="817.3385964912281" y="304.9122807017544" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="833.84" y="321.91" class="small" text-anchor="middle" style="fill:#fff9e9">D10</text>
+<circle data-poi="MER-POI-001" cx="584.5175438596491" cy="563.2456140350878" r="3.5" fill="#345863"/>
+<line x1="584.5175438596491" y1="563.2456140350878" x2="608.0175438596491" y2="562.2456140350878" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="594.5175438596491" y="550.2456140350878" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="608.02" y="567.25" class="small" text-anchor="middle" style="fill:#233e47">01</text>
+<circle data-poi="MER-POI-002" cx="591.5350877192982" cy="509.9122807017544" r="3.5" fill="#345863"/>
+<line x1="591.5350877192982" y1="509.9122807017544" x2="615.0350877192982" y2="508.9122807017544" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="601.5350877192982" y="496.9122807017544" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="615.04" y="513.91" class="small" text-anchor="middle" style="fill:#233e47">02</text>
+<circle data-poi="MER-POI-003" cx="538.2017543859649" cy="529.561403508772" r="3.5" fill="#345863"/>
+<line x1="538.2017543859649" y1="529.561403508772" x2="561.7017543859649" y2="528.561403508772" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="548.2017543859649" y="516.561403508772" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="561.70" y="533.56" class="small" text-anchor="middle" style="fill:#233e47">03</text>
+<circle data-poi="MER-POI-004" cx="468.02631578947364" cy="518.3333333333333" r="3.5" fill="#345863"/>
+<line x1="468.02631578947364" y1="518.3333333333333" x2="491.52631578947364" y2="537.3333333333333" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="478.02631578947364" y="525.3333333333333" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="491.53" y="542.33" class="small" text-anchor="middle" style="fill:#233e47">04</text>
+<circle data-poi="MER-POI-005" cx="442.7631578947368" cy="554.8245614035088" r="3.5" fill="#345863"/>
+<line x1="442.7631578947368" y1="554.8245614035088" x2="419.2631578947368" y2="553.8245614035088" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="405.7631578947368" y="541.8245614035088" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="419.26" y="558.82" class="small" text-anchor="middle" style="fill:#233e47">05</text>
+<circle data-poi="MER-POI-006" cx="490.48245614035085" cy="568.859649122807" r="3.5" fill="#345863"/>
+<line x1="490.48245614035085" y1="568.859649122807" x2="513.9824561403509" y2="567.859649122807" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="500.48245614035085" y="555.859649122807" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="513.98" y="572.86" class="small" text-anchor="middle" style="fill:#233e47">06</text>
+<circle data-poi="MER-POI-007" cx="456.79824561403507" cy="644.6491228070175" r="3.5" fill="#345863"/>
+<line x1="456.79824561403507" y1="644.6491228070175" x2="480.29824561403507" y2="643.6491228070175" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="466.79824561403507" y="631.6491228070175" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="480.30" y="648.65" class="small" text-anchor="middle" style="fill:#233e47">07</text>
+<circle data-poi="MER-POI-008" cx="397.85087719298247" cy="669.9122807017544" r="3.5" fill="#345863"/>
+<line x1="397.85087719298247" y1="669.9122807017544" x2="421.35087719298247" y2="668.9122807017544" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="407.85087719298247" y="656.9122807017544" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="421.35" y="673.91" class="small" text-anchor="middle" style="fill:#233e47">08</text>
+<circle data-poi="MER-POI-009" cx="628.0263157894736" cy="470.6140350877193" r="3.5" fill="#345863"/>
+<line x1="628.0263157894736" y1="470.6140350877193" x2="651.5263157894736" y2="469.6140350877193" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="638.0263157894736" y="457.6140350877193" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="651.53" y="474.61" class="small" text-anchor="middle" style="fill:#233e47">09</text>
+<circle data-poi="MER-POI-010" cx="661.7105263157894" cy="456.57894736842104" r="3.5" fill="#345863"/>
+<line x1="661.7105263157894" y1="456.57894736842104" x2="685.2105263157894" y2="475.57894736842104" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="671.7105263157894" y="463.57894736842104" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="685.21" y="480.58" class="small" text-anchor="middle" style="fill:#233e47">10</text>
+<circle data-poi="MER-POI-011" cx="692.5877192982457" cy="498.6842105263158" r="3.5" fill="#345863"/>
+<line x1="692.5877192982457" y1="498.6842105263158" x2="716.0877192982457" y2="497.6842105263158" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="702.5877192982457" y="485.6842105263158" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="716.09" y="502.68" class="small" text-anchor="middle" style="fill:#233e47">11</text>
+<circle data-poi="MER-POI-012" cx="678.5526315789473" cy="389.2105263157895" r="3.5" fill="#345863"/>
+<line x1="678.5526315789473" y1="389.2105263157895" x2="702.0526315789473" y2="388.2105263157895" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="688.5526315789473" y="376.2105263157895" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="702.05" y="393.21" class="small" text-anchor="middle" style="fill:#233e47">12</text>
+<circle data-poi="MER-POI-013" cx="703.8157894736842" cy="349.9122807017544" r="3.5" fill="#345863"/>
+<line x1="703.8157894736842" y1="349.9122807017544" x2="727.3157894736842" y2="348.9122807017544" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="713.8157894736842" y="336.9122807017544" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="727.32" y="353.91" class="small" text-anchor="middle" style="fill:#233e47">13</text>
+<circle data-poi="MER-POI-014" cx="650.4824561403509" cy="625.0" r="3.5" fill="#345863"/>
+<line x1="650.4824561403509" y1="625.0" x2="673.9824561403509" y2="624.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="660.4824561403509" y="612.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="673.98" y="629.00" class="small" text-anchor="middle" style="fill:#233e47">14</text>
+<circle data-poi="MER-POI-015" cx="619.6052631578948" cy="602.5438596491229" r="3.5" fill="#345863"/>
+<line x1="619.6052631578948" y1="602.5438596491229" x2="643.1052631578948" y2="601.5438596491229" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="629.6052631578948" y="589.5438596491229" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="643.11" y="606.54" class="small" text-anchor="middle" style="fill:#233e47">15</text>
+<circle data-poi="MER-POI-016" cx="658.3421052631579" cy="669.9122807017544" r="3.5" fill="#345863"/>
+<line x1="658.3421052631579" y1="669.9122807017544" x2="681.8421052631579" y2="668.9122807017544" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="668.3421052631579" y="656.9122807017544" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="681.84" y="673.91" class="small" text-anchor="middle" style="fill:#233e47">16</text>
+<circle data-poi="MER-POI-017" cx="709.4298245614034" cy="782.1929824561404" r="3.5" fill="#345863"/>
+<line x1="709.4298245614034" y1="782.1929824561404" x2="732.9298245614034" y2="781.1929824561404" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="719.4298245614034" y="769.1929824561404" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="732.93" y="786.19" class="small" text-anchor="middle" style="fill:#233e47">17</text>
+<circle data-poi="MER-POI-018" cx="773.9912280701753" cy="751.3157894736843" r="3.5" fill="#345863"/>
+<line x1="773.9912280701753" y1="751.3157894736843" x2="797.4912280701753" y2="750.3157894736843" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="783.9912280701753" y="738.3157894736843" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="797.49" y="755.32" class="small" text-anchor="middle" style="fill:#233e47">18</text>
+<circle data-poi="MER-POI-019" cx="361.359649122807" cy="509.9122807017544" r="3.5" fill="#345863"/>
+<line x1="361.359649122807" y1="509.9122807017544" x2="384.859649122807" y2="508.9122807017544" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="371.359649122807" y="496.9122807017544" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="384.86" y="513.91" class="small" text-anchor="middle" style="fill:#233e47">19</text>
+<circle data-poi="MER-POI-020" cx="327.6754385964912" cy="456.57894736842104" r="3.5" fill="#345863"/>
+<line x1="327.6754385964912" y1="456.57894736842104" x2="351.1754385964912" y2="455.57894736842104" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="337.6754385964912" y="443.57894736842104" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="351.18" y="460.58" class="small" text-anchor="middle" style="fill:#233e47">20</text>
+<circle data-poi="MER-POI-021" cx="378.2017543859649" cy="293.7719298245614" r="3.5" fill="#345863"/>
+<line x1="378.2017543859649" y1="293.7719298245614" x2="401.7017543859649" y2="292.7719298245614" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="388.2017543859649" y="280.7719298245614" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="401.70" y="297.77" class="small" text-anchor="middle" style="fill:#233e47">21</text>
+<circle data-poi="MER-POI-022" cx="352.93859649122805" cy="330.2631578947369" r="3.5" fill="#345863"/>
+<line x1="352.93859649122805" y1="330.2631578947369" x2="376.43859649122805" y2="329.2631578947369" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="362.93859649122805" y="317.2631578947369" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="376.44" y="334.26" class="small" text-anchor="middle" style="fill:#233e47">22</text>
+<circle data-poi="MER-POI-023" cx="844.1666666666667" cy="392.0175438596491" r="3.5" fill="#345863"/>
+<line x1="844.1666666666667" y1="392.0175438596491" x2="867.6666666666667" y2="391.0175438596491" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="854.1666666666667" y="379.0175438596491" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="867.67" y="396.02" class="small" text-anchor="middle" style="fill:#233e47">23</text>
+<circle data-poi="MER-POI-024" cx="821.7105263157894" cy="352.719298245614" r="3.5" fill="#345863"/>
+<line x1="821.7105263157894" y1="352.719298245614" x2="845.2105263157894" y2="351.719298245614" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="831.7105263157894" y="339.719298245614" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="845.21" y="356.72" class="small" text-anchor="middle" style="fill:#233e47">24</text>
+<text x="1140.00" y="161.00" style="font-size:20px;font-weight:bold">DISTRICTS</text>
+<text x="1140.00" y="198.00" >D01 Near Bank</text>
+<text x="1140.00" y="217.00" class="small">82,000 residents · 15–40 m</text>
+<text x="1140.00" y="246.00" >D02 Cupwall</text>
+<text x="1140.00" y="265.00" class="small">78,000 residents · 20–48 m</text>
+<text x="1140.00" y="294.00" >D03 Long Kilns</text>
+<text x="1140.00" y="313.00" class="small">60,000 residents · 18–48 m</text>
+<text x="1140.00" y="342.00" >D04 Tamar Steps</text>
+<text x="1140.00" y="361.00" class="small">55,000 residents · 20–45 m</text>
+<text x="1140.00" y="390.00" >D05 Paper Mile</text>
+<text x="1140.00" y="409.00" class="small">62,000 residents · 27–55 m</text>
+<text x="1140.00" y="438.00" >D06 The Ropes</text>
+<text x="1140.00" y="457.00" class="small">56,000 residents · 15–38 m</text>
+<text x="1140.00" y="486.00" >D07 Vell Strand</text>
+<text x="1140.00" y="505.00" class="small">55,000 residents · 14–34 m</text>
+<text x="1140.00" y="534.00" >D08 West Meals</text>
+<text x="1140.00" y="553.00" class="small">61,000 residents · 22–50 m</text>
+<text x="1140.00" y="582.00" >D09 Calder Houses</text>
+<text x="1140.00" y="601.00" class="small">55,000 residents · 24–58 m</text>
+<text x="1140.00" y="630.00" >D10 High Apron</text>
+<text x="1140.00" y="649.00" class="small">46,000 residents · 38–75 m</text>
+<text x="1140.00" y="702.00" style="font-size:18px;font-weight:bold">SURFACE CONTROLS</text>
+<text x="1140.00" y="728.00" class="small">Merrow river: authored local reach</text>
+<text x="1140.00" y="852.00" style="font-size:18px;font-weight:bold">READING THE PLAN</text>
+<text x="1140.00" y="880.00" class="small">Cream labels: places. Dark labels: district</text>
+<text x="1140.00" y="898.00" class="small">envelopes. Dotted lines: transport</text>
+<text x="1140.00" y="916.00" class="small">dependencies, not route alignments. Ferry</text>
+<text x="1140.00" y="934.00" class="small">points are dry interchanges; actual berths</text>
+<text x="1140.00" y="952.00" class="small">and access legs remain to be designed.</text>
+<text x="60.00" y="1016.00" style="font-size:22px;font-weight:bold">PLACES WORTH FINDING</text>
+<text x="60.00" y="1055.00" >01  Turnside Quay</text>
+<text x="60.00" y="1102.00" >02  The Long Span</text>
+<text x="60.00" y="1149.00" >03  House of the Second Meal</text>
+<text x="60.00" y="1196.00" >04  Seven Bowls Court</text>
+<text x="60.00" y="1243.00" >05  The Small Departure</text>
+<text x="60.00" y="1290.00" >06  Rainward Hall</text>
+<text x="60.00" y="1337.00" >07  Foldhouse Works</text>
+<text x="60.00" y="1384.00" >08  The Last Hot Brick</text>
+<text x="550.00" y="1055.00" >09  Tamar&#x27;s Empty Gate</text>
+<text x="550.00" y="1102.00" >10  Blue Sill Rooms</text>
+<text x="550.00" y="1149.00" >11  The Patient Window</text>
+<text x="550.00" y="1196.00" >12  Little Weather Studio</text>
+<text x="550.00" y="1243.00" >13  A Balcony for Lies</text>
+<text x="550.00" y="1290.00" >14  Twice-Painted Hull</text>
+<text x="550.00" y="1337.00" >15  Openhand Slip</text>
+<text x="550.00" y="1384.00" >16  The Narrow Houseboat</text>
+<text x="1040.00" y="1055.00" >17  Southward Rooms</text>
+<text x="1040.00" y="1102.00" >18  The Low Tournament</text>
+<text x="1040.00" y="1149.00" >19  The Leaf and Ladle</text>
+<text x="1040.00" y="1196.00" >20  A Room for Quiet</text>
+<text x="1040.00" y="1243.00" >21  The Old Weight</text>
+<text x="1040.00" y="1290.00" >22  Last Fair Weather</text>
+<text x="1040.00" y="1337.00" >23  Unscheduled Departure</text>
+<text x="1040.00" y="1384.00" >24  The Far-Side Roof</text>
+<text x="60.00" y="1456.00" class="small">132 km² gross allocation; district ellipses overlap and are not measured parcel areas.</text>
+<text x="60.00" y="1480.00" class="small">Local surfaces and heights are authored controls. Floods, depths, gradients, structures and service capacity require separate work.</text>
+<text x="60.00" y="1504.00" class="small">Source: merrow_settlement.json · spherical AEQD at -30° latitude, 158° longitude</text>
+<text x="60.00" y="1528.00" class="small">This plate locates a proposal; it does not show a built or simulated city.</text>
+</svg>

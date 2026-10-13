@@ -1,7 +1,7 @@
 {
-  "edition": "0.5",
+  "edition": "0.6",
   "scope": "Current new foundations including research/review notes; not pages, completion or quality certification",
-  "words": 217861,
+  "words": 267637,
   "chapters": [
     {
       "id": "orientation",
@@ -99,7 +99,7 @@
       "source": "07_REGIONAL_ATLAS.md",
       "title": "07 · Regional atlas",
       "status": "Geographic concept; terrain and climate development pending",
-      "words": 4280
+      "words": 4314
     },
     {
       "id": "orison",
@@ -156,6 +156,34 @@
       "title": "08h · Dhal",
       "status": "Authored inland forest river city: nine districts and 24 places; not a coastal port",
       "words": 11775
+    },
+    {
+      "id": "merrow",
+      "source": "Cities/MERROW.md",
+      "title": "08i · Merrow",
+      "status": "Authored lower-river city: ten districts and 24 places; downstream estuary remains distinct",
+      "words": 11984
+    },
+    {
+      "id": "tern",
+      "source": "Cities/TERN.md",
+      "title": "08j · Tern",
+      "status": "Authored industrial harbor city: ten districts and 24 places; coastal and service capacities remain proposals",
+      "words": 11699
+    },
+    {
+      "id": "velis",
+      "source": "Cities/VELIS.md",
+      "title": "08k · Velis",
+      "status": "Authored river-to-coast city: eight districts and 24 places; stock qualification and source capacities remain open",
+      "words": 12244
+    },
+    {
+      "id": "brin",
+      "source": "Cities/BRIN.md",
+      "title": "08l · Brin",
+      "status": "Authored northern service city: eight districts and 24 places; winter daylight and absent Rauth preserved",
+      "words": 13815
     },
     {
       "id": "journeys",

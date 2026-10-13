@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1570" viewBox="0 0 1560 1570" role="img" aria-labelledby="title desc">
+<title id="title">Brin authored settlement plan</title>
+<desc id="desc">Twenty-four named places and district envelopes. Lines represent service dependencies, not surveyed routes. No constructed city is claimed.</desc>
+<rect width="1560" height="1570" fill="#f3efe2"/>
+<style>text{font-family:Arial,sans-serif;fill:#233e47;font-size:16px}.small{font-size:13px}.tiny{font-size:12px}</style>
+<text x="60.00" y="47.00" style="font-size:29px">BRIN / A PLACE TO ARRIVE</text>
+<text x="60.00" y="79.00" >CITY-011 · 742 AL · 180,000 core residents, authored estimate · settlement proposal v1</text>
+<text x="60.00" y="105.00" class="small">North is up · coordinates in kilometers · z is planning sea-level altitude · no surveyed terrain or operating service capacity</text>
+<rect x="227.5" y="145.0" width="700.0" height="800.0" fill="#e3dfce" stroke="#8ca6aa"/>
+<polygon points="227.50,945.00 927.50,945.00 927.50,820.00 802.50,770.00 702.50,745.00 627.50,670.00 652.50,620.00 602.50,570.00 552.50,595.00 477.50,645.00 427.50,745.00 302.50,795.00 227.50,870.00 227.50,945.00" fill="#bdd9df" stroke="#477f90" stroke-width="1.2"/>
+<line x1="327.5" y1="145.0" x2="327.5" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="327.50" y="968.00" class="tiny" text-anchor="middle">-10</text>
+<line x1="452.5" y1="145.0" x2="452.5" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="452.50" y="968.00" class="tiny" text-anchor="middle">-5</text>
+<line x1="577.5" y1="145.0" x2="577.5" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="577.50" y="968.00" class="tiny" text-anchor="middle">0</text>
+<line x1="702.5" y1="145.0" x2="702.5" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="702.50" y="968.00" class="tiny" text-anchor="middle">5</text>
+<line x1="827.5" y1="145.0" x2="827.5" y2="945.0" stroke="#aebfb8" opacity=".35"/>
+<text x="827.50" y="968.00" class="tiny" text-anchor="middle">10</text>
+<line x1="227.5" y1="870.0" x2="927.5" y2="870.0" stroke="#aebfb8" opacity=".35"/>
+<text x="218.50" y="874.00" class="tiny" text-anchor="end">-15</text>
+<line x1="227.5" y1="745.0" x2="927.5" y2="745.0" stroke="#aebfb8" opacity=".35"/>
+<text x="218.50" y="749.00" class="tiny" text-anchor="end">-10</text>
+<line x1="227.5" y1="620.0" x2="927.5" y2="620.0" stroke="#aebfb8" opacity=".35"/>
+<text x="218.50" y="624.00" class="tiny" text-anchor="end">-5</text>
+<line x1="227.5" y1="495.0" x2="927.5" y2="495.0" stroke="#aebfb8" opacity=".35"/>
+<text x="218.50" y="499.00" class="tiny" text-anchor="end">0</text>
+<line x1="227.5" y1="370.0" x2="927.5" y2="370.0" stroke="#aebfb8" opacity=".35"/>
+<text x="218.50" y="374.00" class="tiny" text-anchor="end">5</text>
+<line x1="227.5" y1="245.0" x2="927.5" y2="245.0" stroke="#aebfb8" opacity=".35"/>
+<text x="218.50" y="249.00" class="tiny" text-anchor="end">10</text>
+<text x="227.50" y="135.00" class="tiny">y north / km</text>
+<text x="927.50" y="988.00" class="tiny" text-anchor="end">x east / km</text>
+<ellipse data-district="BRI-D01" cx="572.5" cy="562.5" rx="57.5" ry="45.0" fill="#bd9355" fill-opacity=".12" stroke="#bd9355" stroke-opacity=".75"/>
+<ellipse data-district="BRI-D02" cx="482.5" cy="515.0" rx="52.5" ry="50.0" fill="#ad7464" fill-opacity=".12" stroke="#ad7464" stroke-opacity=".75"/>
+<ellipse data-district="BRI-D03" cx="622.5" cy="432.5" rx="60.0" ry="50.0" fill="#767da1" fill-opacity=".12" stroke="#767da1" stroke-opacity=".75"/>
+<ellipse data-district="BRI-D04" cx="445.0" cy="612.5" rx="67.5" ry="57.5" fill="#b69a3b" fill-opacity=".12" stroke="#b69a3b" stroke-opacity=".75"/>
+<ellipse data-district="BRI-D05" cx="402.5" cy="457.5" rx="65.0" ry="57.5" fill="#648c66" fill-opacity=".12" stroke="#648c66" stroke-opacity=".75"/>
+<ellipse data-district="BRI-D06" cx="530.0" cy="425.0" rx="60.0" ry="52.5" fill="#527d89" fill-opacity=".12" stroke="#527d89" stroke-opacity=".75"/>
+<ellipse data-district="BRI-D07" cx="502.5" cy="292.5" rx="77.5" ry="65.0" fill="#a78163" fill-opacity=".12" stroke="#a78163" stroke-opacity=".75"/>
+<ellipse data-district="BRI-D08" cx="702.5" cy="292.5" rx="82.5" ry="70.0" fill="#4c917e" fill-opacity=".12" stroke="#4c917e" stroke-opacity=".75"/>
+<line x1="572.5" y1="562.5" x2="482.5" y2="515.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="572.5" y1="562.5" x2="445.0" y2="612.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="482.5" y1="515.0" x2="622.5" y2="432.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="482.5" y1="515.0" x2="445.0" y2="612.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="482.5" y1="515.0" x2="402.5" y2="457.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="482.5" y1="515.0" x2="530.0" y2="425.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="622.5" y1="432.5" x2="530.0" y2="425.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="622.5" y1="432.5" x2="702.5" y2="292.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="445.0" y1="612.5" x2="402.5" y2="457.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="402.5" y1="457.5" x2="530.0" y2="425.0" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="402.5" y1="457.5" x2="502.5" y2="292.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="530.0" y1="425.0" x2="502.5" y2="292.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="502.5" y1="292.5" x2="702.5" y2="292.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="530.0" y1="425.0" x2="702.5" y2="292.5" stroke="#856c50" stroke-dasharray="3 7" stroke-opacity=".5"/>
+<line x1="556.4000000000001" y1="526.5" x2="582.9000000000001" y2="525.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="566.4000000000001" y="513.5" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="582.90" y="530.50" class="small" text-anchor="middle" style="fill:#fff9e9">D01</text>
+<line x1="467.8" y1="475.0" x2="494.3" y2="474.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="477.8" y="462.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="494.30" y="479.00" class="small" text-anchor="middle" style="fill:#fff9e9">D02</text>
+<line x1="605.7" y1="392.5" x2="632.2" y2="391.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="615.7" y="379.5" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="632.20" y="396.50" class="small" text-anchor="middle" style="fill:#fff9e9">D03</text>
+<line x1="426.1" y1="566.5" x2="452.6" y2="565.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="436.1" y="553.5" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="452.60" y="570.50" class="small" text-anchor="middle" style="fill:#fff9e9">D04</text>
+<line x1="384.3" y1="411.5" x2="410.8" y2="410.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="394.3" y="398.5" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="410.80" y="415.50" class="small" text-anchor="middle" style="fill:#fff9e9">D05</text>
+<line x1="513.2" y1="383.0" x2="539.7" y2="382.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="523.2" y="370.0" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="539.70" y="387.00" class="small" text-anchor="middle" style="fill:#fff9e9">D06</text>
+<line x1="480.8" y1="240.5" x2="507.3" y2="239.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="490.8" y="227.5" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="507.30" y="244.50" class="small" text-anchor="middle" style="fill:#fff9e9">D07</text>
+<line x1="679.4000000000001" y1="236.5" x2="705.9000000000001" y2="235.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="689.4000000000001" y="223.5" width="33" height="24" rx="3" fill="#34535d" stroke="#a9b1a3"/>
+<text x="705.90" y="240.50" class="small" text-anchor="middle" style="fill:#fff9e9">D08</text>
+<circle data-poi="BRI-POI-001" cx="562.5" cy="585.5" r="3.5" fill="#345863"/>
+<line x1="562.5" y1="585.5" x2="586.0" y2="584.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="572.5" y="572.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="586.00" y="589.50" class="small" text-anchor="middle" style="fill:#233e47">01</text>
+<circle data-poi="BRI-POI-002" cx="602.5" cy="576.25" r="3.5" fill="#345863"/>
+<line x1="602.5" y1="576.25" x2="626.0" y2="575.25" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="612.5" y="563.25" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="626.00" y="580.25" class="small" text-anchor="middle" style="fill:#233e47">02</text>
+<circle data-poi="BRI-POI-003" cx="532.5" cy="545.0" r="3.5" fill="#345863"/>
+<line x1="532.5" y1="545.0" x2="509.0" y2="544.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="495.5" y="532.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="509.00" y="549.00" class="small" text-anchor="middle" style="fill:#233e47">03</text>
+<circle data-poi="BRI-POI-004" cx="465.0" cy="502.5" r="3.5" fill="#345863"/>
+<line x1="465.0" y1="502.5" x2="488.5" y2="501.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="475.0" y="489.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="488.50" y="506.50" class="small" text-anchor="middle" style="fill:#233e47">04</text>
+<circle data-poi="BRI-POI-005" cx="505.0" cy="522.5" r="3.5" fill="#345863"/>
+<line x1="505.0" y1="522.5" x2="548.5" y2="510.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="535.0" y="498.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="548.50" y="515.50" class="small" text-anchor="middle" style="fill:#233e47">05</text>
+<circle data-poi="BRI-POI-006" cx="485.0" cy="547.5" r="3.5" fill="#345863"/>
+<line x1="485.0" y1="547.5" x2="498.5" y2="582.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="485.0" y="570.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="498.50" y="587.50" class="small" text-anchor="middle" style="fill:#233e47">06</text>
+<circle data-poi="BRI-POI-007" cx="607.5" cy="400.0" r="3.5" fill="#345863"/>
+<line x1="607.5" y1="400.0" x2="584.0" y2="399.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="570.5" y="387.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="584.00" y="404.00" class="small" text-anchor="middle" style="fill:#233e47">07</text>
+<circle data-poi="BRI-POI-008" cx="660.0" cy="417.5" r="3.5" fill="#345863"/>
+<line x1="660.0" y1="417.5" x2="683.5" y2="416.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="670.0" y="404.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="683.50" y="421.50" class="small" text-anchor="middle" style="fill:#233e47">08</text>
+<circle data-poi="BRI-POI-009" cx="592.5" cy="450.0" r="3.5" fill="#345863"/>
+<line x1="592.5" y1="450.0" x2="616.0" y2="449.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="602.5" y="437.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="616.00" y="454.00" class="small" text-anchor="middle" style="fill:#233e47">09</text>
+<circle data-poi="BRI-POI-010" cx="490.0" cy="632.5" r="3.5" fill="#345863"/>
+<line x1="490.0" y1="632.5" x2="513.5" y2="631.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="500.0" y="619.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="513.50" y="636.50" class="small" text-anchor="middle" style="fill:#233e47">10</text>
+<circle data-poi="BRI-POI-011" cx="450.0" cy="615.0" r="3.5" fill="#345863"/>
+<line x1="450.0" y1="615.0" x2="473.5" y2="614.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="460.0" y="602.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="473.50" y="619.00" class="small" text-anchor="middle" style="fill:#233e47">11</text>
+<circle data-poi="BRI-POI-012" cx="410.0" cy="597.5" r="3.5" fill="#345863"/>
+<line x1="410.0" y1="597.5" x2="433.5" y2="596.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="420.0" y="584.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="433.50" y="601.50" class="small" text-anchor="middle" style="fill:#233e47">12</text>
+<circle data-poi="BRI-POI-013" cx="390.0" cy="430.0" r="3.5" fill="#345863"/>
+<line x1="390.0" y1="430.0" x2="366.5" y2="429.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="353.0" y="417.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="366.50" y="434.00" class="small" text-anchor="middle" style="fill:#233e47">13</text>
+<circle data-poi="BRI-POI-014" cx="352.5" cy="472.5" r="3.5" fill="#345863"/>
+<line x1="352.5" y1="472.5" x2="376.0" y2="471.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="362.5" y="459.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="376.00" y="476.50" class="small" text-anchor="middle" style="fill:#233e47">14</text>
+<circle data-poi="BRI-POI-015" cx="425.0" cy="490.0" r="3.5" fill="#345863"/>
+<line x1="425.0" y1="490.0" x2="448.5" y2="489.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="435.0" y="477.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="448.50" y="494.00" class="small" text-anchor="middle" style="fill:#233e47">15</text>
+<circle data-poi="BRI-POI-016" cx="507.5" cy="442.5" r="3.5" fill="#345863"/>
+<line x1="507.5" y1="442.5" x2="531.0" y2="441.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="517.5" y="429.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="531.00" y="446.50" class="small" text-anchor="middle" style="fill:#233e47">16</text>
+<circle data-poi="BRI-POI-017" cx="560.0" cy="427.5" r="3.5" fill="#345863"/>
+<line x1="560.0" y1="427.5" x2="583.5" y2="426.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="570.0" y="414.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="583.50" y="431.50" class="small" text-anchor="middle" style="fill:#233e47">17</text>
+<circle data-poi="BRI-POI-018" cx="517.5" cy="385.0" r="3.5" fill="#345863"/>
+<line x1="517.5" y1="385.0" x2="494.0" y2="384.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="480.5" y="372.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="494.00" y="389.00" class="small" text-anchor="middle" style="fill:#233e47">18</text>
+<circle data-poi="BRI-POI-019" cx="475.0" cy="257.5" r="3.5" fill="#345863"/>
+<line x1="475.0" y1="257.5" x2="451.5" y2="256.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="438.0" y="244.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="451.50" y="261.50" class="small" text-anchor="middle" style="fill:#233e47">19</text>
+<circle data-poi="BRI-POI-020" cx="535.0" cy="270.0" r="3.5" fill="#345863"/>
+<line x1="535.0" y1="270.0" x2="558.5" y2="269.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="545.0" y="257.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="558.50" y="274.00" class="small" text-anchor="middle" style="fill:#233e47">20</text>
+<circle data-poi="BRI-POI-021" cx="495.0" cy="332.5" r="3.5" fill="#345863"/>
+<line x1="495.0" y1="332.5" x2="518.5" y2="331.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="505.0" y="319.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="518.50" y="336.50" class="small" text-anchor="middle" style="fill:#233e47">21</text>
+<circle data-poi="BRI-POI-022" cx="665.0" cy="242.5" r="3.5" fill="#345863"/>
+<line x1="665.0" y1="242.5" x2="641.5" y2="241.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="628.0" y="229.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="641.50" y="246.50" class="small" text-anchor="middle" style="fill:#233e47">22</text>
+<circle data-poi="BRI-POI-023" cx="755.0" cy="277.5" r="3.5" fill="#345863"/>
+<line x1="755.0" y1="277.5" x2="778.5" y2="276.5" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="765.0" y="264.5" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="778.50" y="281.50" class="small" text-anchor="middle" style="fill:#233e47">23</text>
+<circle data-poi="BRI-POI-024" cx="722.5" cy="340.0" r="3.5" fill="#345863"/>
+<line x1="722.5" y1="340.0" x2="746.0" y2="339.0" stroke="#a2aaa0" stroke-width=".7"/>
+<rect class="map-label-box" x="732.5" y="327.0" width="27" height="24" rx="3" fill="#fff9e9" stroke="#a9b1a3"/>
+<text x="746.00" y="344.00" class="small" text-anchor="middle" style="fill:#233e47">24</text>
+<text x="1140.00" y="161.00" style="font-size:20px;font-weight:bold">DISTRICTS</text>
+<text x="1140.00" y="198.00" >D01 Approach Quay</text>
+<text x="1140.00" y="217.00" class="small">28,000 residents · 8–100 m</text>
+<text x="1140.00" y="252.00" >D02 Weather Rooms</text>
+<text x="1140.00" y="271.00" class="small">26,000 residents · 30–130 m</text>
+<text x="1140.00" y="306.00" >D03 Old Observation</text>
+<text x="1140.00" y="325.00" class="small">16,000 residents · 100–270 m</text>
+<text x="1140.00" y="360.00" >D04 Joining Yard</text>
+<text x="1140.00" y="379.00" class="small">28,000 residents · 12–100 m</text>
+<text x="1140.00" y="414.00" >D05 Warm Side</text>
+<text x="1140.00" y="433.00" class="small">25,000 residents · 45–160 m</text>
+<text x="1140.00" y="468.00" >D06 Paper Harbor</text>
+<text x="1140.00" y="487.00" class="small">21,000 residents · 60–180 m</text>
+<text x="1140.00" y="522.00" >D07 North Steps</text>
+<text x="1140.00" y="541.00" class="small">18,000 residents · 130–350 m</text>
+<text x="1140.00" y="576.00" >D08 Far Window</text>
+<text x="1140.00" y="595.00" class="small">18,000 residents · 180–620 m</text>
+<text x="1140.00" y="702.00" style="font-size:18px;font-weight:bold">SURFACE CONTROLS</text>
+<text x="1140.00" y="728.00" class="small">Southern approach and local harbor bight</text>
+<text x="1140.00" y="852.00" style="font-size:18px;font-weight:bold">READING THE PLAN</text>
+<text x="1140.00" y="880.00" class="small">Cream labels: places. Dark labels: district</text>
+<text x="1140.00" y="898.00" class="small">envelopes. Dotted lines: transport</text>
+<text x="1140.00" y="916.00" class="small">dependencies, not route alignments. Ferry</text>
+<text x="1140.00" y="934.00" class="small">points are dry interchanges; actual berths</text>
+<text x="1140.00" y="952.00" class="small">and access legs remain to be designed.</text>
+<text x="60.00" y="1016.00" style="font-size:22px;font-weight:bold">PLACES WORTH FINDING</text>
+<text x="60.00" y="1055.00" >01  The Last Open Berth</text>
+<text x="60.00" y="1102.00" >02  Copper Water Window</text>
+<text x="60.00" y="1149.00" >03  A Bench Nobody Drew</text>
+<text x="60.00" y="1196.00" >04  The Weather for Sola</text>
+<text x="60.00" y="1243.00" >05  The Door They Chose</text>
+<text x="60.00" y="1290.00" >06  The Almost Silent Supper</text>
+<text x="60.00" y="1337.00" >07  First Observation</text>
+<text x="60.00" y="1384.00" >08  The Unfinished Signal</text>
+<text x="550.00" y="1055.00" >09  The Room of Unseen Skies</text>
+<text x="550.00" y="1102.00" >10  Winter Keel Yard</text>
+<text x="550.00" y="1149.00" >11  The Hull with Two Returns</text>
+<text x="550.00" y="1196.00" >12  A Good Part Left Over</text>
+<text x="550.00" y="1243.00" >13  The Warm Side School</text>
+<text x="550.00" y="1290.00" >14  Ground That Moved</text>
+<text x="550.00" y="1337.00" >15  The Indoor Running Line</text>
+<text x="550.00" y="1384.00" >16  The Song with Two Endings</text>
+<text x="1040.00" y="1055.00" >17  Paper Harbor Exchange</text>
+<text x="1040.00" y="1102.00" >18  The Loaf That Travels</text>
+<text x="1040.00" y="1149.00" >19  Northbound Door</text>
+<text x="1040.00" y="1196.00" >20  The Cabin in the Wrong Season</text>
+<text x="1040.00" y="1243.00" >21  The Ridge Between Reports</text>
+<text x="1040.00" y="1290.00" >22  The Receiver at Far Window</text>
+<text x="1040.00" y="1337.00" >23  The Back of the Snow</text>
+<text x="1040.00" y="1384.00" >24  The Departure Nobody Recorded</text>
+<text x="60.00" y="1456.00" class="small">64 km² gross allocation; district ellipses overlap and are not measured parcel areas.</text>
+<text x="60.00" y="1480.00" class="small">Local surfaces and heights are authored controls. Floods, depths, gradients, structures and service capacity require separate work.</text>
+<text x="60.00" y="1504.00" class="small">Source: brin_settlement.json · spherical AEQD at 61° latitude, -119° longitude</text>
+<text x="60.00" y="1528.00" class="small">This plate locates a proposal; it does not show a built or simulated city.</text>
+</svg>
